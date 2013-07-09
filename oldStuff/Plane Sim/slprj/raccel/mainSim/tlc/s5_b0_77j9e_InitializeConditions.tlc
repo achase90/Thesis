@@ -1,0 +1,28 @@
+%implements s5_b0_77j9e_InitializeConditions "C"
+
+%function InitializeConditions(block, system) Output
+%assign tlcInitializeConditionsFcnOfS5B0 = OpaqueTLCBlockFcn("InitializeConditions", 5, 0)
+%assign tlcInitializeConditionsFcnOfS5B21 = OpaqueTLCBlockFcn("InitializeConditions", 5, 21)
+%assign tlcInitializeConditionsFcnOfS5B25 = OpaqueTLCBlockFcn("InitializeConditions", 5, 25)
+%assign tlcInitializeConditionsFcnOfS5B33 = OpaqueTLCBlockFcn("InitializeConditions", 5, 33)
+%assign tlcInitializeConditionsFcnOfS5B34 = OpaqueTLCBlockFcn("InitializeConditions", 5, 34)
+%assign tlcInitializeConditionsFcnOfS5B40 = OpaqueTLCBlockFcn("InitializeConditions", 5, 40)
+%assign tlcInitializeConditionsFcnOfS5B50 = OpaqueTLCBlockFcn("InitializeConditions", 5, 50)
+%assign tlcInitializeConditionsFcnOfS5B65 = OpaqueTLCBlockFcn("InitializeConditions", 5, 65)
+%assign tlcInitializeConditionsFcnOfS5B69 = OpaqueTLCBlockFcn("InitializeConditions", 5, 69)
+%assign tlcInitializeConditionsFcnOfS5B72 = OpaqueTLCBlockFcn("InitializeConditions", 5, 72)
+%<SLibInsertAsyncTaskInitializeCode(system)>
+%<SLibWriteMachineInitialize()>
+%<tlcInitializeConditionsFcnOfS5B0>\
+%<tlcInitializeConditionsFcnOfS5B21>\
+%<tlcInitializeConditionsFcnOfS5B25>\
+%<tlcInitializeConditionsFcnOfS5B33>\
+%<tlcInitializeConditionsFcnOfS5B34>\
+%<SLibCG_SetDWV(25, 0, 5, 1, "", -1, "", 0, "CALL_EVENT")>\
+%<SLibCG_SetDWV(37, 0, 5, 1, "", -1, "", 0, "0U")>\
+%<tlcInitializeConditionsFcnOfS5B40>\
+%<tlcInitializeConditionsFcnOfS5B50>\
+%<tlcInitializeConditionsFcnOfS5B65>\
+%<tlcInitializeConditionsFcnOfS5B69>\
+%<tlcInitializeConditionsFcnOfS5B72>\
+%endfunction

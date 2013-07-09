@@ -1,0 +1,24 @@
+%implements s5_b0_77j9e_ForcingFunction "C"
+
+%function ForcingFunction(block, system) Output
+%assign tlcForcingFunctionFcnOfS5B0 = OpaqueTLCBlockFcn("ForcingFunction", 5, 0)
+%assign tlcForcingFunctionFcnOfS5B21 = OpaqueTLCBlockFcn("ForcingFunction", 5, 21)
+%assign tlcForcingFunctionFcnOfS5B25 = OpaqueTLCBlockFcn("ForcingFunction", 5, 25)
+%assign tlcForcingFunctionFcnOfS5B33 = OpaqueTLCBlockFcn("ForcingFunction", 5, 33)
+%assign tlcForcingFunctionFcnOfS5B34 = OpaqueTLCBlockFcn("ForcingFunction", 5, 34)
+%assign tlcForcingFunctionFcnOfS5B40 = OpaqueTLCBlockFcn("ForcingFunction", 5, 40)
+%assign tlcForcingFunctionFcnOfS5B50 = OpaqueTLCBlockFcn("ForcingFunction", 5, 50)
+%assign tlcForcingFunctionFcnOfS5B65 = OpaqueTLCBlockFcn("ForcingFunction", 5, 65)
+%assign tlcForcingFunctionFcnOfS5B69 = OpaqueTLCBlockFcn("ForcingFunction", 5, 69)
+%assign tlcForcingFunctionFcnOfS5B72 = OpaqueTLCBlockFcn("ForcingFunction", 5, 72)
+%<tlcForcingFunctionFcnOfS5B0>\
+%<tlcForcingFunctionFcnOfS5B21>\
+%<tlcForcingFunctionFcnOfS5B25>\
+%<tlcForcingFunctionFcnOfS5B33>\
+%<tlcForcingFunctionFcnOfS5B34>\
+%<tlcForcingFunctionFcnOfS5B40>\
+%<tlcForcingFunctionFcnOfS5B50>\
+%<tlcForcingFunctionFcnOfS5B65>\
+%<tlcForcingFunctionFcnOfS5B69>\
+%<tlcForcingFunctionFcnOfS5B72>\
+%endfunction

@@ -1,0 +1,11 @@
+For each state:
+    If multiple measurements exist, take a variance-weighted-least-squares of the measurements
+    If derivative information is available, use Kalman Filter to filter results
+        For alpha/beta, on windy day, use the alpha_dot and beta_dot equations
+        which are assuming no wind, and put wind as a variance/error term. 
+        This should be valid over an entire flight, since we fly in circles.
+    
+To fit a line:
+    Variance of each data point drives variance-weighted-least-squares fit
+    Variance-weighted-least-squares fit drives standard deviation of error
+    Standard deviation of error and n_points drive standard error of coefficient

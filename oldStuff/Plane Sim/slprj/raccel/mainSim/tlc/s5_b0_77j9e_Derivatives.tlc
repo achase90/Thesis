@@ -1,0 +1,24 @@
+%implements s5_b0_77j9e_Derivatives "C"
+
+%function Derivatives(block, system) Output
+%assign tlcDerivativesFcnOfS5B0 = OpaqueTLCBlockFcn("Derivatives", 5, 0)
+%assign tlcDerivativesFcnOfS5B21 = OpaqueTLCBlockFcn("Derivatives", 5, 21)
+%assign tlcDerivativesFcnOfS5B25 = OpaqueTLCBlockFcn("Derivatives", 5, 25)
+%assign tlcDerivativesFcnOfS5B33 = OpaqueTLCBlockFcn("Derivatives", 5, 33)
+%assign tlcDerivativesFcnOfS5B34 = OpaqueTLCBlockFcn("Derivatives", 5, 34)
+%assign tlcDerivativesFcnOfS5B40 = OpaqueTLCBlockFcn("Derivatives", 5, 40)
+%assign tlcDerivativesFcnOfS5B50 = OpaqueTLCBlockFcn("Derivatives", 5, 50)
+%assign tlcDerivativesFcnOfS5B65 = OpaqueTLCBlockFcn("Derivatives", 5, 65)
+%assign tlcDerivativesFcnOfS5B69 = OpaqueTLCBlockFcn("Derivatives", 5, 69)
+%assign tlcDerivativesFcnOfS5B72 = OpaqueTLCBlockFcn("Derivatives", 5, 72)
+%<tlcDerivativesFcnOfS5B0>\
+%<tlcDerivativesFcnOfS5B21>\
+%<tlcDerivativesFcnOfS5B25>\
+%<tlcDerivativesFcnOfS5B33>\
+%<tlcDerivativesFcnOfS5B34>\
+%<tlcDerivativesFcnOfS5B40>\
+%<tlcDerivativesFcnOfS5B50>\
+%<tlcDerivativesFcnOfS5B65>\
+%<tlcDerivativesFcnOfS5B69>\
+%<tlcDerivativesFcnOfS5B72>\
+%endfunction

@@ -1,0 +1,668 @@
+%implements s5_b0_77j9e_Outputs "C"
+
+%function Outputs(block, system) Output
+
+%assign localVarDecl = ""
+%openfile localVarDecl
+real_T f5mnqrycch;
+real_T blapy2kf1y;
+real_T kuwptd3jeh;
+real_T afzfu0o2mb;
+real_T bnr10p2k2a;
+real_T mxxv2z25ng;
+real_T gayztje3o0[6];
+real_T dkbuzpspr3[9];
+real_T o2efzvhwec[3];
+real_T mwa3twhng1[9];
+real_T mm4mkpkz3a[9];
+real_T tmp[3];
+int32_T i;
+real_T tmp_0[3];
+int32_T i_0;
+real_T avjzo3ydwb_idx;
+real_T gtvonhikph_idx;
+real_T gtvonhikph_idx_0;
+real_T gtvonhikph_idx_1;
+
+%closefile localVarDecl
+%<LibSetSystemField(system, "CachedOutputLocalVars", localVarDecl)>
+%assign tlcOutputsFcnOfS5B0 = OpaqueTLCBlockFcn("Outputs", 5, 0)
+%assign tlcOutputsFcnOfS5B1 = OpaqueTLCBlockFcn("Outputs", 5, 1)
+%assign tlcOutputsFcnOfS5B21 = OpaqueTLCBlockFcn("Outputs", 5, 21)
+%assign tlcOutputsFcnOfS5B25 = OpaqueTLCBlockFcn("Outputs", 5, 25)
+%assign tlcOutputsFcnOfS5B27 = OpaqueTLCBlockFcn("Outputs", 5, 27)
+%assign tlcOutputsFcnOfS5B28 = OpaqueTLCBlockFcn("Outputs", 5, 28)
+%assign tlcOutputsFcnOfS5B32 = OpaqueTLCBlockFcn("Outputs", 5, 32)
+%assign tlcOutputsFcnOfS5B33 = OpaqueTLCBlockFcn("Outputs", 5, 33)
+%assign tlcOutputsFcnOfS5B34 = OpaqueTLCBlockFcn("Outputs", 5, 34)
+%assign tlcOutputsFcnOfS5B40 = OpaqueTLCBlockFcn("Outputs", 5, 40)
+%assign tlcOutputsFcnOfS5B42 = OpaqueTLCBlockFcn("Outputs", 5, 42)
+%assign tlcOutputsFcnOfS5B43 = OpaqueTLCBlockFcn("Outputs", 5, 43)
+%assign tlcOutputsFcnOfS5B44 = OpaqueTLCBlockFcn("Outputs", 5, 44)
+%assign tlcOutputsFcnOfS5B45 = OpaqueTLCBlockFcn("Outputs", 5, 45)
+%assign tlcOutputsFcnOfS5B48 = OpaqueTLCBlockFcn("Outputs", 5, 48)
+%assign tlcOutputsFcnOfS5B49 = OpaqueTLCBlockFcn("Outputs", 5, 49)
+%assign tlcOutputsFcnOfS5B50 = OpaqueTLCBlockFcn("Outputs", 5, 50)
+%assign tlcOutputsFcnOfS5B51 = OpaqueTLCBlockFcn("Outputs", 5, 51)
+%assign tlcOutputsFcnOfS5B52 = OpaqueTLCBlockFcn("Outputs", 5, 52)
+%assign tlcOutputsFcnOfS5B53 = OpaqueTLCBlockFcn("Outputs", 5, 53)
+%assign tlcOutputsFcnOfS5B54 = OpaqueTLCBlockFcn("Outputs", 5, 54)
+%assign tlcOutputsFcnOfS5B61 = OpaqueTLCBlockFcn("Outputs", 5, 61)
+%assign tlcOutputsFcnOfS5B62 = OpaqueTLCBlockFcn("Outputs", 5, 62)
+%assign tlcOutputsFcnOfS5B63 = OpaqueTLCBlockFcn("Outputs", 5, 63)
+%assign tlcOutputsFcnOfS5B65 = OpaqueTLCBlockFcn("Outputs", 5, 65)
+%assign tlcOutputsFcnOfS5B69 = OpaqueTLCBlockFcn("Outputs", 5, 69)
+%assign tlcOutputsFcnOfS5B72 = OpaqueTLCBlockFcn("Outputs", 5, 72)
+%assign tlcOutputsFcnOfS5B73 = OpaqueTLCBlockFcn("Outputs", 5, 73)
+%assign tlcOutputsFcnOfS5B74 = OpaqueTLCBlockFcn("Outputs", 5, 74)
+%assign tlcOutputsFcnOfS5B75 = OpaqueTLCBlockFcn("Outputs", 5, 75)
+%<SLibCGIRAccessLocalVar(113, 0)> %% efa2bj34ee
+%<SLibCGIRAccessLocalVar(126, 0)> %% f3vpfejp1y
+%<SLibCGIRAccessLocalVar(132, 0)> %% nqsh3gqtcg
+%<SLibCGIRAccessLocalVar(133, 0)> %% j0cq142kco
+%<SLibCGIRAccessLocalVar(25, 0)> %% ienexb0chw
+%<SLibCGIRAccessLocalVar(138, 0)> %% iwj0nompi3
+%<SLibCGIRAccessLocalVar(142, 0)> %% ovjimxmhe2
+%<SLibCGIRAccessLocalVar(139, 0)> %% nuork02qze
+%<SLibGetRootInportsFromFile(system)>
+%<SLibGenerateExtModeOutput(system)>
+%<tlcOutputsFcnOfS5B0>\
+%<tlcOutputsFcnOfS5B1>\
+if (%<(SLibCGIRIsSampleHit(1, 5))>) {
+    muDoubleScalarSinCos(%<(SLibCG_SE(SLibCGIR_PV(19, 0, 5, 1, "", -1, "", 0)))> * %<(SLibCG_SE(SLibCGIR_PV(18, 0, 5, 1, "", -1, "", 0)))>, &avjzo3ydwb_idx, &afzfu0o2mb);
+%<SLibCG_SetBOV(2, 0, 5, 1, "", -1, "", 0, "afzfu0o2mb")>\
+%<SLibCG_SetBOV(1, 0, 5, 1, "", -1, "", 0, "avjzo3ydwb_idx")>\
+}
+f5mnqrycch = %<(SLibCG_SE(SLibCG_BOV(0, 0, 5, 3, "", -1, "", 0)))> * %<(SLibCG_SE(SLibCG_BOV(2, 0, 5, 1, "", -1, "", 0)))>;
+blapy2kf1y = %<(SLibCG_SE(SLibCG_BOV(0, 0, 5, 3, "", -1, "", 1)))> * %<(SLibCG_SE(SLibCG_BOV(1, 0, 5, 1, "", -1, "", 0)))>;
+if (%<(SLibCGIRIsSampleHit(1, 5))>) {
+    kuwptd3jeh = %<(SLibCG_SE(SLibCGIR_PV(25, 0, 5, 1, "", -1, "", 0)))> - %<(SLibCG_SE(SLibCGIR_PV(24, 0, 5, 1, "", -1, "", 0)))>;
+    kuwptd3jeh = %<(SLibCG_SE(SLibCGIR_PV(23, 0, 5, 1, "", -1, "", 0)))> - kuwptd3jeh * kuwptd3jeh;
+    if (%<(LibIsMajorTimeStep())>) {
+        if (%<(SLibCG_SE(SLibCG_DWV(30, 0, 5, 1, "", -1, "", 0)))> != 0) {
+%<SLibCGIRSetSolverNeedsReset()>\
+%<SLibCG_SetDWV(30, 0, 5, 1, "", -1, "", 0, "0")>\
+        }
+        kuwptd3jeh = muDoubleScalarSqrt(kuwptd3jeh);
+    } else {
+        kuwptd3jeh = kuwptd3jeh < 0.0 ? -muDoubleScalarSqrt(muDoubleScalarAbs(kuwptd3jeh)) : muDoubleScalarSqrt(kuwptd3jeh);
+%<SLibCG_SetDWV(30, 0, 5, 1, "", -1, "", 0, "1")>\
+    }
+    afzfu0o2mb = %<(SLibCG_SE(SLibCGIR_PV(27, 0, 5, 1, "", -1, "", 0)))> * %<(SLibCG_SE(SLibCGIR_PV(26, 0, 5, 1, "", -1, "", 0)))>;
+    bnr10p2k2a = muDoubleScalarSin(afzfu0o2mb);
+    bnr10p2k2a = %<(SLibCG_SE(SLibCGIR_PV(22, 0, 5, 1, "", -1, "", 0)))> - kuwptd3jeh * kuwptd3jeh * bnr10p2k2a * bnr10p2k2a;
+    if (%<(LibIsMajorTimeStep())>) {
+        if (%<(SLibCG_SE(SLibCG_DWV(31, 0, 5, 1, "", -1, "", 0)))> != 0) {
+%<SLibCGIRSetSolverNeedsReset()>\
+%<SLibCG_SetDWV(31, 0, 5, 1, "", -1, "", 0, "0")>\
+        }
+        mxxv2z25ng = muDoubleScalarSqrt(bnr10p2k2a);
+    } else {
+        mxxv2z25ng = bnr10p2k2a < 0.0 ? -muDoubleScalarSqrt(muDoubleScalarAbs(bnr10p2k2a)) : muDoubleScalarSqrt(bnr10p2k2a);
+%<SLibCG_SetDWV(31, 0, 5, 1, "", -1, "", 0, "1")>\
+    }
+    mxxv2z25ng = %<(SLibCG_SE(SLibCGIR_PV(21, 0, 5, 1, "", -1, "", 0)))> / mxxv2z25ng;
+%<SLibCG_SetBOV(3, 0, 5, 1, "", -1, "", 0, "muDoubleScalarAtan2(%<(SLibCGIR_PV(20, 0, 5, 1, "", -1, "", 0))>, (%<(SLibCG_SE(SLibCGIR_PV(28, 0, 5, 1, "", -1, "", 0)))> - kuwptd3jeh * kuwptd3jeh) * mxxv2z25ng / bnr10p2k2a)")>\
+%<SLibCG_SetBOV(4, 0, 5, 1, "", -1, "", 0, "muDoubleScalarAtan2(%<(SLibCGIR_PV(29, 0, 5, 1, "", -1, "", 0))>, mxxv2z25ng * muDoubleScalarCos(afzfu0o2mb))")>\
+}
+afzfu0o2mb = (%<(SLibCG_SE(SLibCG_BOV(0, 0, 5, 3, "", -1, "", 0)))> * %<(SLibCG_SE(SLibCG_BOV(1, 0, 5, 1, "", -1, "", 0)))> + %<(SLibCG_SE(SLibCG_BOV(0, 0, 5, 3, "", -1, "", 1)))> * %<(SLibCG_SE(SLibCG_BOV(2, 0, 5, 1, "", -1, "", 0)))>) * %<(SLibCG_SE(SLibCG_BOV(4, 0, 5, 1, "", -1, "", 0)))> * %<(SLibCG_SE(SLibCGIR_PV(30, 0, 5, 1, "", -1, "", 0)))> + %<(SLibCG_SE(SLibCGIR_PV(17, 0, 5, 2, "", -1, "", 1)))>;
+f5mnqrycch = muDoubleScalarRem((f5mnqrycch - blapy2kf1y) * %<(SLibCG_SE(SLibCG_BOV(3, 0, 5, 1, "", -1, "", 0)))> * %<(SLibCG_SE(SLibCGIR_PV(30, 0, 5, 1, "", -1, "", 0)))> + %<(SLibCG_SE(SLibCGIR_PV(17, 0, 5, 2, "", -1, "", 0)))>, %<(SLibCGIR_PV(31, 0, 5, 1, "", -1, "", 0))>);
+avjzo3ydwb_idx = f5mnqrycch / %<(SLibCG_SE(SLibCGIR_PV(32, 0, 5, 1, "", -1, "", 0)))>;
+f5mnqrycch -= (avjzo3ydwb_idx < 0.0 ? muDoubleScalarCeil(avjzo3ydwb_idx) : muDoubleScalarFloor(avjzo3ydwb_idx)) * %<(SLibCG_SE(SLibCGIR_PV(33, 0, 5, 1, "", -1, "", 0)))>;
+blapy2kf1y = f5mnqrycch / %<(SLibCG_SE(SLibCGIR_PV(34, 0, 5, 1, "", -1, "", 0)))>;
+kuwptd3jeh = %<(SLibCG_SE(SLibCGIR_PV(35, 0, 5, 1, "", -1, "", 0)))> * blapy2kf1y;
+kuwptd3jeh *= kuwptd3jeh;
+if (%<(LibIsMajorTimeStep())>) {
+    if (%<(SLibCG_SE(SLibCG_DWV(32, 0, 5, 1, "", -1, "", 0)))> != 0) {
+%<SLibCGIRSetSolverNeedsReset()>\
+%<SLibCG_SetDWV(32, 0, 5, 1, "", -1, "", 0, "0")>\
+    }
+    kuwptd3jeh = muDoubleScalarSqrt(kuwptd3jeh);
+} else {
+    kuwptd3jeh = kuwptd3jeh < 0.0 ? -muDoubleScalarSqrt(muDoubleScalarAbs(kuwptd3jeh)) : muDoubleScalarSqrt(kuwptd3jeh);
+%<SLibCG_SetDWV(32, 0, 5, 1, "", -1, "", 0, "1")>\
+}
+kuwptd3jeh = kuwptd3jeh < 0.0 ? muDoubleScalarCeil(kuwptd3jeh) : muDoubleScalarFloor(kuwptd3jeh);
+kuwptd3jeh *= %<(SLibCG_SE(SLibCGIR_PV(36, 0, 5, 1, "", -1, "", 0)))>;
+nuork02qze = (real_T)(kuwptd3jeh != 0.0);
+nuork02qze = %<(SLibCG_SE(SLibCGIR_PV(37, 0, 5, 1, "", -1, "", 0)))> * nuork02qze + afzfu0o2mb;
+nuork02qze = muDoubleScalarRem(nuork02qze, %<(SLibCGIR_PV(38, 0, 5, 1, "", -1, "", 0))>);
+ovjimxmhe2 = nuork02qze / %<(SLibCG_SE(SLibCGIR_PV(39, 0, 5, 1, "", -1, "", 0)))>;
+ovjimxmhe2 = ovjimxmhe2 < 0.0 ? muDoubleScalarCeil(ovjimxmhe2) : muDoubleScalarFloor(ovjimxmhe2);
+%<SLibCG_SetBOV(5, 0, 5, 1, "", -1, "", 0, "nuork02qze - %<(SLibCG_SE(SLibCGIR_PV(40, 0, 5, 1, "", -1, "", 0)))> * ovjimxmhe2")>\
+blapy2kf1y = blapy2kf1y < 0.0 ? muDoubleScalarCeil(blapy2kf1y) : muDoubleScalarFloor(blapy2kf1y);
+ovjimxmhe2 = muDoubleScalarRem(f5mnqrycch, %<(SLibCGIR_PV(42, 0, 5, 1, "", -1, "", 0))>);
+%<SLibCG_SetBOV(6, 0, 5, 1, "", -1, "", 0, "(f5mnqrycch - %<(SLibCG_SE(SLibCGIR_PV(41, 0, 5, 1, "", -1, "", 0)))> * blapy2kf1y) - kuwptd3jeh * ovjimxmhe2")>\
+%<SLibCG_SetBOV(7, 0, 5, 1, "", -1, "", 0, "(-%<(SLibCG_SE(SLibCG_BOV(0, 0, 5, 3, "", -1, "", 2)))> - %<(SLibCG_SE(SLibCGIR_PV(43, 0, 5, 1, "", -1, "", 0)))>) * %<(SLibCG_SE(SLibCGIR_PV(44, 0, 5, 1, "", -1, "", 0)))>")>\
+if (%<(SLibCGIRIsSampleHit(1, 5))>) {
+    afzfu0o2mb = %<(SLibCG_SE(SLibCGIR_PV(46, 0, 5, 1, "", -1, "", 0)))> * %<(SLibCG_SE(SLibCGIR_PV(45, 0, 5, 3, "", -1, "", 1)))>;
+    avjzo3ydwb_idx = %<(SLibCG_SE(SLibCGIR_PV(46, 0, 5, 1, "", -1, "", 0)))> * %<(SLibCG_SE(SLibCGIR_PV(45, 0, 5, 3, "", -1, "", 0)))>;
+    muDoubleScalarSinCos(%<(SLibCG_SE(SLibCGIR_PV(46, 0, 5, 1, "", -1, "", 0)))> * %<(SLibCG_SE(SLibCGIR_PV(45, 0, 5, 3, "", -1, "", 2)))>, &f5mnqrycch, &blapy2kf1y);
+    bnr10p2k2a = blapy2kf1y;
+    mxxv2z25ng = f5mnqrycch;
+    muDoubleScalarSinCos(afzfu0o2mb, &f5mnqrycch, &blapy2kf1y);
+    kuwptd3jeh = blapy2kf1y;
+    afzfu0o2mb = f5mnqrycch;
+    muDoubleScalarSinCos(avjzo3ydwb_idx, &f5mnqrycch, &blapy2kf1y);
+%<SLibCG_SetBOV(8, 0, 5, 1, "", -1, "", 0, "bnr10p2k2a * kuwptd3jeh * blapy2kf1y + mxxv2z25ng * afzfu0o2mb * f5mnqrycch")>\
+%<SLibCG_SetBOV(9, 0, 5, 1, "", -1, "", 0, "bnr10p2k2a * kuwptd3jeh * f5mnqrycch - mxxv2z25ng * afzfu0o2mb * blapy2kf1y")>\
+%<SLibCG_SetBOV(10, 0, 5, 1, "", -1, "", 0, "bnr10p2k2a * afzfu0o2mb * blapy2kf1y + mxxv2z25ng * kuwptd3jeh * f5mnqrycch")>\
+%<SLibCG_SetBOV(11, 0, 5, 1, "", -1, "", 0, "mxxv2z25ng * kuwptd3jeh * blapy2kf1y - bnr10p2k2a * afzfu0o2mb * f5mnqrycch")>\
+}
+%<tlcOutputsFcnOfS5B21>\
+ovjimxmhe2 = ((f3vpfejp1y[0] * f3vpfejp1y[0] + f3vpfejp1y[1] * f3vpfejp1y[1]) + f3vpfejp1y[2] * f3vpfejp1y[2]) + f3vpfejp1y[3] * f3vpfejp1y[3];
+if (%<(LibIsMajorTimeStep())>) {
+    if (%<(SLibCG_SE(SLibCG_DWV(33, 0, 5, 1, "", -1, "", 0)))> != 0) {
+%<SLibCGIRSetSolverNeedsReset()>\
+%<SLibCG_SetDWV(33, 0, 5, 1, "", -1, "", 0, "0")>\
+    }
+    ovjimxmhe2 = muDoubleScalarSqrt(ovjimxmhe2);
+} else {
+    ovjimxmhe2 = ovjimxmhe2 < 0.0 ? -muDoubleScalarSqrt(muDoubleScalarAbs(ovjimxmhe2)) : muDoubleScalarSqrt(ovjimxmhe2);
+%<SLibCG_SetDWV(33, 0, 5, 1, "", -1, "", 0, "1")>\
+}
+nuork02qze = f3vpfejp1y[0] / ovjimxmhe2;
+kuwptd3jeh = f3vpfejp1y[1] / ovjimxmhe2;
+f5mnqrycch = f3vpfejp1y[2] / ovjimxmhe2;
+ovjimxmhe2 = f3vpfejp1y[3] / ovjimxmhe2;
+iwj0nompi3 = ((nuork02qze * nuork02qze + kuwptd3jeh * kuwptd3jeh) - f5mnqrycch * f5mnqrycch) - ovjimxmhe2 * ovjimxmhe2;
+%<SLibCG_SetBOV(12, 0, 5, 3, "", -1, "", 0, "muDoubleScalarAtan2((kuwptd3jeh * f5mnqrycch + nuork02qze * ovjimxmhe2) * 2.0, iwj0nompi3)")>\
+iwj0nompi3 = (kuwptd3jeh * ovjimxmhe2 - nuork02qze * f5mnqrycch) * -2.0;
+%<SLibCG_SetBOV(12, 0, 5, 3, "", -1, "", 1, "muDoubleScalarAsin(iwj0nompi3 >= 1.0 ? 1.0 : iwj0nompi3 <= -1.0 ? -1.0 : iwj0nompi3)")>\
+iwj0nompi3 = (f5mnqrycch * ovjimxmhe2 + nuork02qze * kuwptd3jeh) * 2.0;
+nuork02qze = ((nuork02qze * nuork02qze - kuwptd3jeh * kuwptd3jeh) - f5mnqrycch * f5mnqrycch) + ovjimxmhe2 * ovjimxmhe2;
+%<SLibCG_SetBOV(12, 0, 5, 3, "", -1, "", 2, "muDoubleScalarAtan2(iwj0nompi3, nuork02qze)")>\
+%<tlcOutputsFcnOfS5B25>\
+%<SLibCG_SetBOV(13, 0, 5, 3, "", -1, "", 0, "%<(SLibCG_SE(SLibCGIR_PV(50, 0, 5, 1, "", -1, "", 0)))> * iwj0nompi3")>\
+%<SLibCG_SetBOV(13, 0, 5, 3, "", -1, "", 1, "%<(SLibCG_SE(SLibCGIR_PV(50, 0, 5, 1, "", -1, "", 0)))> * %<(SLibCG_SE(SLibCGIR_PV(49, 0, 5, 1, "", -1, "", 0)))>")>\
+%<SLibCG_SetBOV(13, 0, 5, 3, "", -1, "", 2, "%<(SLibCG_SE(SLibCGIR_PV(50, 0, 5, 1, "", -1, "", 0)))> * %<(SLibCG_SE(SLibCGIR_PV(49, 0, 5, 1, "", -1, "", 0)))>")>\
+%<tlcOutputsFcnOfS5B27>\
+%<SLibCG_SetBOV(14, 0, 5, 1, "", -1, "", 0, "%<(SLibCG_SE(SLibCGIR_PV(51, 0, 5, 1, "", -1, "", 0)))> * %<(SLibCG_SE(SLibCG_BOV(0, 0, 5, 3, "", -1, "", 2)))>")>\
+if (%<(SLibCGIRIsSampleHit(2, 5))>) {
+%<tlcOutputsFcnOfS5B28>\
+}
+if (%<(SLibCGIRIsSampleHit(1, 5))>) {
+    if (%<(SLibCG_SE(SLibCGIR_PV(115, 0, 5, 1, "", -1, "", 0)))> > %<(SLibCG_SE(SLibCGIR_PV(116, 0, 5, 1, "", -1, "", 0)))>) {
+        gtvonhikph_idx = %<(SLibCG_SE(SLibCG_BOV(15, 0, 5, 1, "", -1, "", 0)))>;
+    } else {
+        gtvonhikph_idx = %<(SLibCG_SE(SLibCGIR_PV(15, 0, 5, 4, "", -1, "", 0)))>;
+    }
+    if (%<(SLibCG_SE(SLibCGIR_PV(115, 0, 5, 1, "", -1, "", 0)))> > %<(SLibCG_SE(SLibCGIR_PV(116, 0, 5, 1, "", -1, "", 0)))>) {
+        gtvonhikph_idx_0 = %<(SLibCG_SE(SLibCG_BOV(16, 0, 5, 1, "", -1, "", 0)))>;
+    } else {
+        gtvonhikph_idx_0 = %<(SLibCG_SE(SLibCGIR_PV(15, 0, 5, 4, "", -1, "", 1)))>;
+    }
+    if (%<(SLibCG_SE(SLibCGIR_PV(115, 0, 5, 1, "", -1, "", 0)))> > %<(SLibCG_SE(SLibCGIR_PV(116, 0, 5, 1, "", -1, "", 0)))>) {
+        gtvonhikph_idx_1 = %<(SLibCG_SE(SLibCG_BOV(17, 0, 5, 1, "", -1, "", 0)))>;
+    } else {
+        gtvonhikph_idx_1 = %<(SLibCG_SE(SLibCGIR_PV(15, 0, 5, 4, "", -1, "", 2)))>;
+    }
+    if (%<(SLibCG_SE(SLibCGIR_PV(115, 0, 5, 1, "", -1, "", 0)))> > %<(SLibCG_SE(SLibCGIR_PV(116, 0, 5, 1, "", -1, "", 0)))>) {
+        avjzo3ydwb_idx = %<(SLibCG_SE(SLibCG_BOV(18, 0, 5, 1, "", -1, "", 0)))>;
+    } else {
+        avjzo3ydwb_idx = %<(SLibCG_SE(SLibCGIR_PV(15, 0, 5, 4, "", -1, "", 3)))>;
+    }
+%<SLibCG_SetBOV(19, 0, 5, 1, "", -1, "", 0, "%<(SLibCG_SE(SLibCGIR_PV(55, 0, 5, 1, "", -1, "", 0)))> * avjzo3ydwb_idx")>\
+}
+if (%<(SLibCG_SE(SLibCGIR_PV(114, 0, 5, 1, "", -1, "", 0)))> > %<(SLibCG_SE(SLibCGIR_PV(117, 0, 5, 1, "", -1, "", 0)))>) {
+%<SLibCG_SetBOV(20, 0, 5, 1, "", -1, "", 0, "%<(SLibCGIR_PV(47, 0, 5, 1, "", -1, "", 0))>")>\
+} else {
+%<SLibCG_SetBOV(20, 0, 5, 1, "", -1, "", 0, "look3_sbinlxpw(ienexb0chw, %<(SLibCG_BOV(14, 0, 5, 1, "", -1, "", 0))>, %<(SLibCG_BOV(19, 0, 5, 1, "", -1, "", 0))>, %<(SLibCG_DWVAddr(24, 0, 5, 3, "", -1, "", 0))>, %<(SLibCGIR_PVAddr(0, 0, 5, 8000, "", -1, "", 0))>, %<(SLibCGIR_PVAddr(103, 0, 5, 3, "", -1, "", 0))>, %<(SLibCGIR_PVAddr(104, 0, 5, 3, "", -1, "", 0))>)")>\
+}
+if (%<(SLibCGIRIsSampleHit(1, 5))>) {
+%<SLibCG_SetBOV(21, 0, 5, 1, "", -1, "", 0, "%<(SLibCGIR_PV(56, 0, 5, 1, "", -1, "", 0))>")>\
+}
+%<tlcOutputsFcnOfS5B32>\
+%<tlcOutputsFcnOfS5B33>\
+%<tlcOutputsFcnOfS5B34>\
+muDoubleScalarSinCos(ovjimxmhe2, &f5mnqrycch, &blapy2kf1y);
+afzfu0o2mb = f5mnqrycch;
+avjzo3ydwb_idx = blapy2kf1y;
+muDoubleScalarSinCos(nuork02qze, &f5mnqrycch, &blapy2kf1y);
+%<SLibCG_SetBOV(22, 0, 5, 9, "", -1, "", 0, "avjzo3ydwb_idx * blapy2kf1y")>\
+%<SLibCG_SetBOV(22, 0, 5, 9, "", -1, "", 1, "-(f5mnqrycch * avjzo3ydwb_idx)")>\
+%<SLibCG_SetBOV(22, 0, 5, 9, "", -1, "", 2, "-afzfu0o2mb")>\
+%<SLibCG_SetBOV(22, 0, 5, 9, "", -1, "", 3, "f5mnqrycch")>\
+%<SLibCG_SetBOV(22, 0, 5, 9, "", -1, "", 4, "blapy2kf1y")>\
+if (%<(SLibCGIRIsSampleHit(1, 5))>) {
+%<SLibCG_SetBOV(22, 0, 5, 9, "", -1, "", 5, "%<(SLibCGIR_PV(59, 0, 5, 1, "", -1, "", 0))>")>\
+}
+%<SLibCG_SetBOV(22, 0, 5, 9, "", -1, "", 6, "afzfu0o2mb * blapy2kf1y")>\
+%<SLibCG_SetBOV(22, 0, 5, 9, "", -1, "", 7, "-(afzfu0o2mb * f5mnqrycch)")>\
+%<SLibCG_SetBOV(22, 0, 5, 9, "", -1, "", 8, "avjzo3ydwb_idx")>\
+%<(SLibCGCallSubFcn(block, 0, 2, 0))>;
+%<SLibCG_SetDWV(25, 0, 5, 1, "", -1, "", 0, "CALL_EVENT")>\
+blapy2kf1y = 0.0003048;
+kuwptd3jeh = 1.0;
+afzfu0o2mb = 0.0;
+if (%<(SLibCG_SE(SLibCGIR_PV(60, 0, 5, 1, "", -1, "", 0)))> == 0.0) {
+    bnr10p2k2a = 288.15;
+    mxxv2z25ng = 1.225;
+    blapy2kf1y = 0.001;
+} else {
+    bnr10p2k2a = 518.67;
+    mxxv2z25ng = 0.0023769;
+}
+f5mnqrycch = blapy2kf1y * %<(SLibCG_SE(SLibCG_BOV(14, 0, 5, 1, "", -1, "", 0)))> / (blapy2kf1y * %<(SLibCG_SE(SLibCG_BOV(14, 0, 5, 1, "", -1, "", 0)))> / 6356.766 + 1.0);
+if (f5mnqrycch < 11.0) {
+    kuwptd3jeh = 288.15 - 6.5 * f5mnqrycch;
+    afzfu0o2mb = muDoubleScalarPower(288.15 / (288.15 - 6.5 * f5mnqrycch), -5.2558761538461543);
+} else if (f5mnqrycch < 20.0) {
+    kuwptd3jeh = 216.65;
+    afzfu0o2mb = muDoubleScalarExp((f5mnqrycch - 11.0) * -34.163195 / 216.65) * 0.22336;
+} else if (f5mnqrycch < 32.0) {
+    kuwptd3jeh = (f5mnqrycch - 20.0) + 216.65;
+    afzfu0o2mb = muDoubleScalarPower(216.65 / ((f5mnqrycch - 20.0) + 216.65), 34.163195) * 0.054032;
+} else if (f5mnqrycch < 47.0) {
+    kuwptd3jeh = (f5mnqrycch - 32.0) * 2.8 + 228.65;
+    afzfu0o2mb = muDoubleScalarPower(228.65 / ((f5mnqrycch - 32.0) * 2.8 + 228.65), 12.201141071428573) * 0.0085666;
+} else if (f5mnqrycch < 51.0) {
+    kuwptd3jeh = 270.65;
+    afzfu0o2mb = muDoubleScalarExp((f5mnqrycch - 47.0) * -34.163195 / 270.65) * 0.0010945;
+} else if (f5mnqrycch < 71.0) {
+    kuwptd3jeh = 270.65 - (f5mnqrycch - 51.0) * 2.8;
+    afzfu0o2mb = muDoubleScalarPower(270.65 / (270.65 - (f5mnqrycch - 51.0) * 2.8), -12.201141071428573) * 0.00066063;
+} else {
+    if (f5mnqrycch < 84.852) {
+        kuwptd3jeh = 214.65 - (f5mnqrycch - 71.0) * 2.0;
+        afzfu0o2mb = muDoubleScalarPower(214.65 / (214.65 - (f5mnqrycch - 71.0) * 2.0), -17.0815975) * 3.9046E-5;
+    }
+}
+%<SLibCG_SetBOV(68, 0, 5, 1, "", -1, "", 0, "kuwptd3jeh / 288.15 * bnr10p2k2a")>\
+%<SLibCG_SetBOV(69, 0, 5, 1, "", -1, "", 0, "afzfu0o2mb / (kuwptd3jeh / 288.15) * mxxv2z25ng")>\
+%<SLibCG_SetBOV(23, 0, 5, 1, "", -1, "", 0, "ienexb0chw * ienexb0chw * %<(SLibCG_SE(SLibCG_BOV(69, 0, 5, 1, "", -1, "", 0)))>")>\
+kuwptd3jeh = %<(SLibCG_SE(SLibCGIR_PV(61, 0, 5, 1, "", -1, "", 0)))> * %<(SLibCG_SE(SLibCG_BOV(23, 0, 5, 1, "", -1, "", 0)))>;
+if (%<(SLibCGIRIsSampleHit(1, 5))>) {
+%<SLibCG_SetBOV(24, 0, 5, 1, "", -1, "", 0, "%<(SLibCG_SE(SLibCGIR_PV(65, 0, 5, 1, "", -1, "", 0)))> * gtvonhikph_idx")>\
+%<SLibCG_SetBOV(25, 0, 5, 1, "", -1, "", 0, "%<(SLibCG_SE(SLibCGIR_PV(66, 0, 5, 1, "", -1, "", 0)))> * gtvonhikph_idx_0")>\
+%<SLibCG_SetBOV(26, 0, 5, 1, "", -1, "", 0, "%<(SLibCG_SE(SLibCGIR_PV(67, 0, 5, 1, "", -1, "", 0)))> * gtvonhikph_idx_1")>\
+}
+%<tlcOutputsFcnOfS5B40>\
+dkbuzpspr3[0] = %<(SLibCG_SE(SLibCG_BOV(24, 0, 5, 1, "", -1, "", 0)))>;
+dkbuzpspr3[1] = %<(SLibCG_SE(SLibCG_BOV(25, 0, 5, 1, "", -1, "", 0)))>;
+dkbuzpspr3[2] = %<(SLibCG_SE(SLibCG_BOV(26, 0, 5, 1, "", -1, "", 0)))>;
+dkbuzpspr3[3] = %<(SLibCG_SE(SLibCG_BOV(19, 0, 5, 1, "", -1, "", 0)))>;
+dkbuzpspr3[4] = ovjimxmhe2;
+dkbuzpspr3[5] = nuork02qze;
+dkbuzpspr3[6] = efa2bj34ee[0];
+dkbuzpspr3[7] = efa2bj34ee[1];
+dkbuzpspr3[8] = efa2bj34ee[2];
+for (i = 0; i < 6; i++) {
+    gayztje3o0[i] = 0.0;
+    for (i_0 = 0; i_0 < 9; i_0++) {
+        gayztje3o0[i] += %<(SLibCG_SE(SLibCGIR_PV(64, 0, 5, 54, "", -1, "6 * i_0 + i", 0)))> * dkbuzpspr3[i_0];
+    }
+}
+%<SLibCG_SetBOV(27, 0, 5, 3, "", -1, "", 0, "%<(SLibCG_SE(SLibCGIR_PV(63, 0, 5, 3, "", -1, "", 0)))> + gayztje3o0[0]")>\
+%<SLibCG_SetBOV(27, 0, 5, 3, "", -1, "", 1, "%<(SLibCG_SE(SLibCGIR_PV(63, 0, 5, 3, "", -1, "", 1)))> + gayztje3o0[1]")>\
+%<SLibCG_SetBOV(27, 0, 5, 3, "", -1, "", 2, "%<(SLibCG_SE(SLibCGIR_PV(63, 0, 5, 3, "", -1, "", 2)))> + gayztje3o0[2]")>\
+%<SLibCG_SetBOV(28, 0, 5, 1, "", -1, "", 0, "%<(SLibCG_SE(SLibCGIR_PV(69, 0, 5, 1, "", -1, "", 0)))> * %<(SLibCG_SE(SLibCG_BOV(27, 0, 5, 3, "", -1, "", 2)))> * %<(SLibCG_SE(SLibCG_BOV(27, 0, 5, 3, "", -1, "", 2)))> + %<(SLibCG_SE(SLibCG_BOV(27, 0, 5, 3, "", -1, "", 0)))>")>\
+%<SLibCG_SetBOV(29, 0, 5, 3, "", -1, "", 0, "kuwptd3jeh * %<(SLibCG_SE(SLibCGIR_PV(62, 0, 5, 1, "", -1, "", 0)))> * %<(SLibCG_SE(SLibCG_BOV(28, 0, 5, 1, "", -1, "", 0)))>")>\
+%<SLibCG_SetBOV(29, 0, 5, 3, "", -1, "", 1, "kuwptd3jeh * %<(SLibCG_SE(SLibCGIR_PV(62, 0, 5, 1, "", -1, "", 0)))> * %<(SLibCG_SE(SLibCG_BOV(27, 0, 5, 3, "", -1, "", 1)))>")>\
+%<SLibCG_SetBOV(29, 0, 5, 3, "", -1, "", 2, "kuwptd3jeh * %<(SLibCG_SE(SLibCGIR_PV(62, 0, 5, 1, "", -1, "", 0)))> * %<(SLibCG_SE(SLibCG_BOV(27, 0, 5, 3, "", -1, "", 2)))>")>\
+for (i = 0; i < 3; i++) {
+    nqsh3gqtcg[i] = 0.0;
+    nqsh3gqtcg[i] += mm4mkpkz3a[i] * %<(SLibCG_SE(SLibCG_BOV(29, 0, 5, 3, "", -1, "", 0)))>;
+    nqsh3gqtcg[i] += mm4mkpkz3a[i + 3] * %<(SLibCG_SE(SLibCG_BOV(29, 0, 5, 3, "", -1, "", 1)))>;
+    nqsh3gqtcg[i] += mm4mkpkz3a[i + 6] * %<(SLibCG_SE(SLibCG_BOV(29, 0, 5, 3, "", -1, "", 2)))>;
+}
+%<SLibCG_SetBOV(30, 0, 5, 3, "", -1, "", 0, "%<(SLibCG_SE(SLibCGIR_PV(70, 0, 5, 3, "", -1, "", 0)))> * nqsh3gqtcg[0]")>\
+%<SLibCG_SetBOV(30, 0, 5, 3, "", -1, "", 1, "%<(SLibCG_SE(SLibCGIR_PV(70, 0, 5, 3, "", -1, "", 1)))> * nqsh3gqtcg[1]")>\
+%<SLibCG_SetBOV(30, 0, 5, 3, "", -1, "", 2, "%<(SLibCG_SE(SLibCGIR_PV(70, 0, 5, 3, "", -1, "", 2)))> * nqsh3gqtcg[2]")>\
+%<tlcOutputsFcnOfS5B42>\
+%<tlcOutputsFcnOfS5B43>\
+%<tlcOutputsFcnOfS5B44>\
+%<SLibCG_SetBOV(31, 0, 5, 2, "", -1, "", 0, "%<(SLibCG_SE(SLibCGIR_PV(71, 0, 5, 1, "", -1, "", 0)))> * ovjimxmhe2")>\
+%<SLibCG_SetBOV(31, 0, 5, 2, "", -1, "", 1, "%<(SLibCG_SE(SLibCGIR_PV(71, 0, 5, 1, "", -1, "", 0)))> * nuork02qze")>\
+%<tlcOutputsFcnOfS5B45>\
+f5mnqrycch = ((f3vpfejp1y[0] * f3vpfejp1y[0] + f3vpfejp1y[1] * f3vpfejp1y[1]) + f3vpfejp1y[2] * f3vpfejp1y[2]) + f3vpfejp1y[3] * f3vpfejp1y[3];
+if (%<(LibIsMajorTimeStep())>) {
+    if (%<(SLibCG_SE(SLibCG_DWV(34, 0, 5, 1, "", -1, "", 0)))> != 0) {
+%<SLibCGIRSetSolverNeedsReset()>\
+%<SLibCG_SetDWV(34, 0, 5, 1, "", -1, "", 0, "0")>\
+    }
+    f5mnqrycch = muDoubleScalarSqrt(f5mnqrycch);
+} else {
+    f5mnqrycch = f5mnqrycch < 0.0 ? -muDoubleScalarSqrt(muDoubleScalarAbs(f5mnqrycch)) : muDoubleScalarSqrt(f5mnqrycch);
+%<SLibCG_SetDWV(34, 0, 5, 1, "", -1, "", 0, "1")>\
+}
+blapy2kf1y = f3vpfejp1y[0] / f5mnqrycch;
+bnr10p2k2a = f3vpfejp1y[1] / f5mnqrycch;
+mxxv2z25ng = f3vpfejp1y[2] / f5mnqrycch;
+f5mnqrycch = f3vpfejp1y[3] / f5mnqrycch;
+dkbuzpspr3[0] = ((blapy2kf1y * blapy2kf1y + bnr10p2k2a * bnr10p2k2a) - mxxv2z25ng * mxxv2z25ng) - f5mnqrycch * f5mnqrycch;
+dkbuzpspr3[1] = (bnr10p2k2a * mxxv2z25ng - f5mnqrycch * blapy2kf1y) * %<(SLibCG_SE(SLibCGIR_PV(72, 0, 5, 1, "", -1, "", 0)))>;
+dkbuzpspr3[2] = (blapy2kf1y * mxxv2z25ng + bnr10p2k2a * f5mnqrycch) * %<(SLibCG_SE(SLibCGIR_PV(73, 0, 5, 1, "", -1, "", 0)))>;
+dkbuzpspr3[3] = (f5mnqrycch * blapy2kf1y + bnr10p2k2a * mxxv2z25ng) * %<(SLibCG_SE(SLibCGIR_PV(74, 0, 5, 1, "", -1, "", 0)))>;
+dkbuzpspr3[4] = ((blapy2kf1y * blapy2kf1y - bnr10p2k2a * bnr10p2k2a) + mxxv2z25ng * mxxv2z25ng) - f5mnqrycch * f5mnqrycch;
+dkbuzpspr3[5] = (mxxv2z25ng * f5mnqrycch - blapy2kf1y * bnr10p2k2a) * %<(SLibCG_SE(SLibCGIR_PV(75, 0, 5, 1, "", -1, "", 0)))>;
+dkbuzpspr3[6] = (bnr10p2k2a * f5mnqrycch - blapy2kf1y * mxxv2z25ng) * %<(SLibCG_SE(SLibCGIR_PV(76, 0, 5, 1, "", -1, "", 0)))>;
+dkbuzpspr3[7] = (blapy2kf1y * bnr10p2k2a + mxxv2z25ng * f5mnqrycch) * %<(SLibCG_SE(SLibCGIR_PV(77, 0, 5, 1, "", -1, "", 0)))>;
+dkbuzpspr3[8] = ((blapy2kf1y * blapy2kf1y - bnr10p2k2a * bnr10p2k2a) - mxxv2z25ng * mxxv2z25ng) + f5mnqrycch * f5mnqrycch;
+for (i = 0; i < 3; i++) {
+%<SLibCG_SetBOV(32, 0, 5, 3, "", -1, "i", 0, "0.0")>\
+%<SLibCG_SetBOV(32, 0, 5, 3, "", -1, "i", 0, "dkbuzpspr3[i] * %<(SLibCG_SE(SLibCGIR_PV(78, 0, 5, 3, "", -1, "", 0)))> + %<(SLibCG_SE(SLibCG_BOV(32, 0, 5, 3, "", -1, "i", 0)))>")>\
+%<SLibCG_SetBOV(32, 0, 5, 3, "", -1, "i", 0, "dkbuzpspr3[i + 3] * %<(SLibCG_SE(SLibCGIR_PV(78, 0, 5, 3, "", -1, "", 1)))> + %<(SLibCG_SE(SLibCG_BOV(32, 0, 5, 3, "", -1, "i", 0)))>")>\
+%<SLibCG_SetBOV(32, 0, 5, 3, "", -1, "i", 0, "dkbuzpspr3[i + 6] * %<(SLibCG_SE(SLibCGIR_PV(78, 0, 5, 3, "", -1, "", 2)))> + %<(SLibCG_SE(SLibCG_BOV(32, 0, 5, 3, "", -1, "i", 0)))>")>\
+}
+%<SLibCG_SetBOV(33, 0, 5, 3, "", -1, "", 0, "(%<(SLibCG_SE(SLibCG_BOV(32, 0, 5, 3, "", -1, "", 0)))> + %<(SLibCG_SE(SLibCG_BOV(30, 0, 5, 3, "", -1, "", 0)))>) + %<(SLibCG_SE(SLibCG_BOV(20, 0, 5, 1, "", -1, "", 0)))>")>\
+%<SLibCG_SetBOV(33, 0, 5, 3, "", -1, "", 1, "(%<(SLibCG_SE(SLibCG_BOV(32, 0, 5, 3, "", -1, "", 1)))> + %<(SLibCG_SE(SLibCG_BOV(30, 0, 5, 3, "", -1, "", 1)))>) + %<(SLibCG_SE(SLibCG_BOV(21, 0, 5, 1, "", -1, "", 0)))>")>\
+%<SLibCG_SetBOV(33, 0, 5, 3, "", -1, "", 2, "(%<(SLibCG_SE(SLibCG_BOV(32, 0, 5, 3, "", -1, "", 2)))> + %<(SLibCG_SE(SLibCG_BOV(30, 0, 5, 3, "", -1, "", 2)))>) + %<(SLibCG_SE(SLibCG_BOV(21, 0, 5, 1, "", -1, "", 0)))>")>\
+nqsh3gqtcg[0] = %<(SLibCG_SE(SLibCG_BOV(33, 0, 5, 3, "", -1, "", 0)))>;
+nqsh3gqtcg[1] = %<(SLibCG_SE(SLibCG_BOV(33, 0, 5, 3, "", -1, "", 1)))>;
+nqsh3gqtcg[2] = %<(SLibCG_SE(SLibCG_BOV(33, 0, 5, 3, "", -1, "", 2)))>;
+%<SLibCG_SetBOV(34, 0, 5, 3, "", -1, "", 0, "nqsh3gqtcg[0] / %<(SLibCG_SE(SLibCGIR_PV(79, 0, 5, 1, "", -1, "", 0)))>")>\
+%<SLibCG_SetBOV(34, 0, 5, 3, "", -1, "", 1, "nqsh3gqtcg[1] / %<(SLibCG_SE(SLibCGIR_PV(79, 0, 5, 1, "", -1, "", 0)))>")>\
+%<SLibCG_SetBOV(34, 0, 5, 3, "", -1, "", 2, "nqsh3gqtcg[2] / %<(SLibCG_SE(SLibCGIR_PV(79, 0, 5, 1, "", -1, "", 0)))>")>\
+%<tlcOutputsFcnOfS5B48>\
+%<tlcOutputsFcnOfS5B49>\
+%<tlcOutputsFcnOfS5B50>\
+%<SLibCG_SetBOV(35, 0, 5, 3, "", -1, "", 0, "%<(SLibCG_SE(SLibCGIR_PV(81, 0, 5, 1, "", -1, "", 0)))> * nqsh3gqtcg[0]")>\
+%<SLibCG_SetBOV(35, 0, 5, 3, "", -1, "", 1, "%<(SLibCG_SE(SLibCGIR_PV(81, 0, 5, 1, "", -1, "", 0)))> * nqsh3gqtcg[1]")>\
+%<SLibCG_SetBOV(35, 0, 5, 3, "", -1, "", 2, "%<(SLibCG_SE(SLibCGIR_PV(81, 0, 5, 1, "", -1, "", 0)))> * nqsh3gqtcg[2]")>\
+%<tlcOutputsFcnOfS5B51>\
+if (%<(SLibCGIRIsSampleHit(1, 5))>) {
+%<tlcOutputsFcnOfS5B52>\
+}
+%<SLibCG_SetBOV(36, 0, 5, 3, "", -1, "", 0, "%<(SLibCG_SE(SLibCGIR_PV(82, 0, 5, 1, "", -1, "", 0)))> * %<(SLibCG_SE(SLibCG_BOV(12, 0, 5, 3, "", -1, "", 2)))>")>\
+%<SLibCG_SetBOV(36, 0, 5, 3, "", -1, "", 1, "%<(SLibCG_SE(SLibCGIR_PV(82, 0, 5, 1, "", -1, "", 0)))> * %<(SLibCG_SE(SLibCG_BOV(12, 0, 5, 3, "", -1, "", 1)))>")>\
+%<SLibCG_SetBOV(36, 0, 5, 3, "", -1, "", 2, "%<(SLibCG_SE(SLibCGIR_PV(82, 0, 5, 1, "", -1, "", 0)))> * %<(SLibCG_SE(SLibCG_BOV(12, 0, 5, 3, "", -1, "", 0)))>")>\
+%<tlcOutputsFcnOfS5B53>\
+%<tlcOutputsFcnOfS5B54>\
+if (%<(SLibCG_SE(SLibCGIR_PV(118, 0, 5, 1, "", -1, "", 0)))> > %<(SLibCG_SE(SLibCGIR_PV(119, 0, 5, 1, "", -1, "", 0)))>) {
+    avjzo3ydwb_idx = look3_sbinlxpw(ienexb0chw, %<(SLibCG_BOV(14, 0, 5, 1, "", -1, "", 0))>, %<(SLibCG_BOV(19, 0, 5, 1, "", -1, "", 0))>, %<(SLibCG_DWVAddr(23, 0, 5, 3, "", -1, "", 0))>, %<(SLibCGIR_PVAddr(4, 0, 5, 8000, "", -1, "", 0))>, %<(SLibCGIR_PVAddr(105, 0, 5, 3, "", -1, "", 0))>, %<(SLibCGIR_PVAddr(106, 0, 5, 3, "", -1, "", 0))>);
+    j0cq142kco[0] = avjzo3ydwb_idx;
+    j0cq142kco[1] = %<(SLibCG_SE(SLibCGIR_PV(83, 0, 5, 1, "", -1, "", 0)))>;
+    j0cq142kco[2] = %<(SLibCG_SE(SLibCGIR_PV(83, 0, 5, 1, "", -1, "", 0)))>;
+} else {
+    j0cq142kco[0] = %<(SLibCG_SE(SLibCGIR_PV(84, 0, 5, 1, "", -1, "", 0)))>;
+    j0cq142kco[1] = %<(SLibCG_SE(SLibCGIR_PV(84, 0, 5, 1, "", -1, "", 0)))>;
+    j0cq142kco[2] = %<(SLibCG_SE(SLibCGIR_PV(84, 0, 5, 1, "", -1, "", 0)))>;
+}
+o2efzvhwec[0] = %<(SLibCG_SE(SLibCGIR_PV(85, 0, 5, 1, "", -1, "", 0)))> * j0cq142kco[0];
+o2efzvhwec[1] = %<(SLibCG_SE(SLibCGIR_PV(85, 0, 5, 1, "", -1, "", 0)))> * j0cq142kco[1];
+o2efzvhwec[2] = %<(SLibCG_SE(SLibCGIR_PV(85, 0, 5, 1, "", -1, "", 0)))> * j0cq142kco[2];
+%<SLibCG_SetBOV(37, 0, 5, 3, "", -1, "", 0, "kuwptd3jeh * %<(SLibCG_SE(SLibCGIR_PV(86, 0, 5, 1, "", -1, "", 0)))> * (%<(SLibCG_SE(SLibCGIR_PV(87, 0, 5, 3, "", -1, "", 0)))> + gayztje3o0[3])")>\
+%<SLibCG_SetBOV(37, 0, 5, 3, "", -1, "", 1, "kuwptd3jeh * %<(SLibCG_SE(SLibCGIR_PV(86, 0, 5, 1, "", -1, "", 0)))> * (%<(SLibCG_SE(SLibCGIR_PV(87, 0, 5, 3, "", -1, "", 1)))> + gayztje3o0[4])")>\
+%<SLibCG_SetBOV(37, 0, 5, 3, "", -1, "", 2, "kuwptd3jeh * %<(SLibCG_SE(SLibCGIR_PV(86, 0, 5, 1, "", -1, "", 0)))> * (%<(SLibCG_SE(SLibCGIR_PV(87, 0, 5, 3, "", -1, "", 2)))> + gayztje3o0[5])")>\
+for (i = 0; i < 3; i++) {
+    j0cq142kco[i] = 0.0;
+    j0cq142kco[i] += mm4mkpkz3a[i] * %<(SLibCG_SE(SLibCG_BOV(37, 0, 5, 3, "", -1, "", 0)))>;
+    j0cq142kco[i] += mm4mkpkz3a[i + 3] * %<(SLibCG_SE(SLibCG_BOV(37, 0, 5, 3, "", -1, "", 1)))>;
+    j0cq142kco[i] += mm4mkpkz3a[i + 6] * %<(SLibCG_SE(SLibCG_BOV(37, 0, 5, 3, "", -1, "", 2)))>;
+}
+%<SLibCG_SetBOV(38, 0, 5, 3, "", -1, "", 0, "o2efzvhwec[0] + j0cq142kco[0]")>\
+%<SLibCG_SetBOV(38, 0, 5, 3, "", -1, "", 1, "o2efzvhwec[1] + j0cq142kco[1]")>\
+%<SLibCG_SetBOV(38, 0, 5, 3, "", -1, "", 2, "o2efzvhwec[2] + j0cq142kco[2]")>\
+%<tlcOutputsFcnOfS5B61>\
+%<tlcOutputsFcnOfS5B62>\
+%<tlcOutputsFcnOfS5B63>\
+mxxv2z25ng = (%<(SLibCG_SE(SLibCGIR_PV(88, 0, 5, 1, "", -1, "", 0)))> - (((f3vpfejp1y[0] * f3vpfejp1y[0] + f3vpfejp1y[1] * f3vpfejp1y[1]) + f3vpfejp1y[2] * f3vpfejp1y[2]) + f3vpfejp1y[3] * f3vpfejp1y[3])) * %<(SLibCG_SE(SLibCGIR_PV(89, 0, 5, 1, "", -1, "", 0)))>;
+%<tlcOutputsFcnOfS5B65>\
+%<SLibCG_SetBOV(39, 0, 5, 1, "", -1, "", 0, "((f3vpfejp1y[1] * j0cq142kco[0] + f3vpfejp1y[2] * j0cq142kco[1]) + f3vpfejp1y[3] * j0cq142kco[2]) * -0.5 + mxxv2z25ng * f3vpfejp1y[0]")>\
+%<SLibCG_SetBOV(40, 0, 5, 1, "", -1, "", 0, "((f3vpfejp1y[0] * j0cq142kco[0] + f3vpfejp1y[2] * j0cq142kco[2]) - f3vpfejp1y[3] * j0cq142kco[1]) * 0.5 + mxxv2z25ng * f3vpfejp1y[1]")>\
+%<SLibCG_SetBOV(41, 0, 5, 1, "", -1, "", 0, "((f3vpfejp1y[0] * j0cq142kco[1] + f3vpfejp1y[3] * j0cq142kco[0]) - f3vpfejp1y[1] * j0cq142kco[2]) * 0.5 + mxxv2z25ng * f3vpfejp1y[2]")>\
+%<SLibCG_SetBOV(42, 0, 5, 1, "", -1, "", 0, "((f3vpfejp1y[0] * j0cq142kco[2] + f3vpfejp1y[1] * j0cq142kco[1]) - f3vpfejp1y[2] * j0cq142kco[0]) * 0.5 + mxxv2z25ng * f3vpfejp1y[3]")>\
+if (%<(SLibCGIRIsSampleHit(1, 5))>) {
+    for (i = 0; i < 3; i++) {
+%<SLibCG_SetBOV(43, 0, 5, 9, "", -1, "3 * i", 0, "%<(SLibCGIR_PV(91, 0, 5, 18, "", -1, "6 * i", 0))>")>\
+%<SLibCG_SetBOV(43, 0, 5, 9, "", -1, "1 + 3 * i", 0, "%<(SLibCGIR_PV(91, 0, 5, 18, "", -1, "6 * i + 1", 0))>")>\
+%<SLibCG_SetBOV(43, 0, 5, 9, "", -1, "2 + 3 * i", 0, "%<(SLibCGIR_PV(91, 0, 5, 18, "", -1, "6 * i + 2", 0))>")>\
+    }
+}
+for (i = 0; i < 3; i++) {
+    o2efzvhwec[i] = %<(SLibCG_SE(SLibCG_BOV(43, 0, 5, 9, "", -1, "i + 6", 0)))> * j0cq142kco[2] + (%<(SLibCG_SE(SLibCG_BOV(43, 0, 5, 9, "", -1, "i + 3", 0)))> * j0cq142kco[1] + %<(SLibCG_SE(SLibCG_BOV(43, 0, 5, 9, "", -1, "i", 0)))> * j0cq142kco[0]);
+}
+if (%<(SLibCGIRIsSampleHit(1, 5))>) {
+    for (i = 0; i < 3; i++) {
+%<SLibCG_SetBOV(44, 0, 5, 9, "", -1, "3 * i", 0, "%<(SLibCGIR_PV(91, 0, 5, 18, "", -1, "6 * i + 3", 0))>")>\
+%<SLibCG_SetBOV(44, 0, 5, 9, "", -1, "1 + 3 * i", 0, "%<(SLibCGIR_PV(91, 0, 5, 18, "", -1, "6 * i + 4", 0))>")>\
+%<SLibCG_SetBOV(44, 0, 5, 9, "", -1, "2 + 3 * i", 0, "%<(SLibCGIR_PV(91, 0, 5, 18, "", -1, "6 * i + 5", 0))>")>\
+    }
+    for (i = 0; i < 3; i++) {
+%<SLibCG_SetBOV(45, 0, 5, 9, "", -1, "3 * i", 0, "%<(SLibCGIR_PV(91, 0, 5, 18, "", -1, "6 * i", 0))>")>\
+%<SLibCG_SetBOV(45, 0, 5, 9, "", -1, "1 + 3 * i", 0, "%<(SLibCGIR_PV(91, 0, 5, 18, "", -1, "6 * i + 1", 0))>")>\
+%<SLibCG_SetBOV(45, 0, 5, 9, "", -1, "2 + 3 * i", 0, "%<(SLibCGIR_PV(91, 0, 5, 18, "", -1, "6 * i + 2", 0))>")>\
+    }
+}
+for (i = 0; i < 3; i++) {
+    tmp_0[i] = %<(SLibCG_SE(SLibCG_BOV(44, 0, 5, 9, "", -1, "i + 6", 0)))> * j0cq142kco[2] + (%<(SLibCG_SE(SLibCG_BOV(44, 0, 5, 9, "", -1, "i + 3", 0)))> * j0cq142kco[1] + %<(SLibCG_SE(SLibCG_BOV(44, 0, 5, 9, "", -1, "i", 0)))> * j0cq142kco[0]);
+}
+tmp[0] = (%<(SLibCG_SE(SLibCG_BOV(38, 0, 5, 3, "", -1, "", 0)))> - tmp_0[0]) - (j0cq142kco[1] * o2efzvhwec[2] - j0cq142kco[2] * o2efzvhwec[1]);
+tmp[1] = (%<(SLibCG_SE(SLibCG_BOV(38, 0, 5, 3, "", -1, "", 1)))> - tmp_0[1]) - (j0cq142kco[2] * o2efzvhwec[0] - j0cq142kco[0] * o2efzvhwec[2]);
+tmp[2] = (%<(SLibCG_SE(SLibCG_BOV(38, 0, 5, 3, "", -1, "", 2)))> - tmp_0[2]) - (j0cq142kco[0] * o2efzvhwec[1] - j0cq142kco[1] * o2efzvhwec[0]);
+%<(SLibCGCallSubFcn(block, 0, 2, 1))>;
+%<SLibCG_SetBOV(47, 0, 5, 3, "", -1, "", 0, "(nqsh3gqtcg[1] * j0cq142kco[2] - nqsh3gqtcg[2] * j0cq142kco[1]) + %<(SLibCG_SE(SLibCG_BOV(34, 0, 5, 3, "", -1, "", 0)))>")>\
+%<SLibCG_SetBOV(47, 0, 5, 3, "", -1, "", 1, "(nqsh3gqtcg[2] * j0cq142kco[0] - nqsh3gqtcg[0] * j0cq142kco[2]) + %<(SLibCG_SE(SLibCG_BOV(34, 0, 5, 3, "", -1, "", 1)))>")>\
+%<SLibCG_SetBOV(47, 0, 5, 3, "", -1, "", 2, "(nqsh3gqtcg[0] * j0cq142kco[1] - nqsh3gqtcg[1] * j0cq142kco[0]) + %<(SLibCG_SE(SLibCG_BOV(34, 0, 5, 3, "", -1, "", 2)))>")>\
+for (i = 0; i < 3; i++) {
+%<SLibCG_SetBOV(48, 0, 5, 3, "", -1, "i", 0, "0.0")>\
+%<SLibCG_SetBOV(48, 0, 5, 3, "", -1, "i", 0, "dkbuzpspr3[3 * i] * nqsh3gqtcg[0] + %<(SLibCG_SE(SLibCG_BOV(48, 0, 5, 3, "", -1, "i", 0)))>")>\
+%<SLibCG_SetBOV(48, 0, 5, 3, "", -1, "i", 0, "dkbuzpspr3[3 * i + 1] * nqsh3gqtcg[1] + %<(SLibCG_SE(SLibCG_BOV(48, 0, 5, 3, "", -1, "i", 0)))>")>\
+%<SLibCG_SetBOV(48, 0, 5, 3, "", -1, "i", 0, "dkbuzpspr3[3 * i + 2] * nqsh3gqtcg[2] + %<(SLibCG_SE(SLibCG_BOV(48, 0, 5, 3, "", -1, "i", 0)))>")>\
+}
+muDoubleScalarSinCos(ovjimxmhe2, &f5mnqrycch, &blapy2kf1y);
+avjzo3ydwb_idx = f5mnqrycch;
+afzfu0o2mb = blapy2kf1y;
+muDoubleScalarSinCos(nuork02qze, &f5mnqrycch, &blapy2kf1y);
+%<SLibCG_SetBOV(49, 0, 5, 9, "", -1, "", 0, "afzfu0o2mb * blapy2kf1y")>\
+%<SLibCG_SetBOV(49, 0, 5, 9, "", -1, "", 6, "avjzo3ydwb_idx * blapy2kf1y")>\
+%<SLibCG_SetBOV(49, 0, 5, 9, "", -1, "", 1, "-(f5mnqrycch * afzfu0o2mb)")>\
+%<SLibCG_SetBOV(49, 0, 5, 9, "", -1, "", 7, "-(avjzo3ydwb_idx * f5mnqrycch)")>\
+%<SLibCG_SetBOV(49, 0, 5, 9, "", -1, "", 2, "-avjzo3ydwb_idx")>\
+if (%<(SLibCGIRIsSampleHit(1, 5))>) {
+%<SLibCG_SetBOV(49, 0, 5, 9, "", -1, "", 5, "%<(SLibCGIR_PV(92, 0, 5, 1, "", -1, "", 0))>")>\
+}
+%<SLibCG_SetBOV(49, 0, 5, 9, "", -1, "", 3, "f5mnqrycch")>\
+%<SLibCG_SetBOV(49, 0, 5, 9, "", -1, "", 4, "blapy2kf1y")>\
+%<SLibCG_SetBOV(49, 0, 5, 9, "", -1, "", 8, "afzfu0o2mb")>\
+if (%<(SLibCGIRIsSampleHit(1, 5))>) {
+    muDoubleScalarSinCos(%<(SLibCGIR_PV(93, 0, 5, 2, "", -1, "", 0))>, &f5mnqrycch, &blapy2kf1y);
+    avjzo3ydwb_idx = f5mnqrycch;
+    afzfu0o2mb = blapy2kf1y;
+    muDoubleScalarSinCos(%<(SLibCGIR_PV(93, 0, 5, 2, "", -1, "", 1))>, &f5mnqrycch, &blapy2kf1y);
+    dkbuzpspr3[0] = afzfu0o2mb * blapy2kf1y;
+    dkbuzpspr3[1] = -(f5mnqrycch * afzfu0o2mb);
+    dkbuzpspr3[2] = -avjzo3ydwb_idx;
+    dkbuzpspr3[3] = f5mnqrycch;
+    dkbuzpspr3[4] = blapy2kf1y;
+    dkbuzpspr3[5] = %<(SLibCG_SE(SLibCGIR_PV(94, 0, 5, 1, "", -1, "", 0)))>;
+    dkbuzpspr3[6] = avjzo3ydwb_idx * blapy2kf1y;
+    dkbuzpspr3[7] = -(avjzo3ydwb_idx * f5mnqrycch);
+    dkbuzpspr3[8] = afzfu0o2mb;
+    muDoubleScalarSinCos(%<(SLibCGIR_PV(95, 0, 5, 3, "", -1, "", 0))>, &f5mnqrycch, &blapy2kf1y);
+    bnr10p2k2a = f5mnqrycch;
+    mxxv2z25ng = blapy2kf1y;
+    muDoubleScalarSinCos(%<(SLibCGIR_PV(95, 0, 5, 3, "", -1, "", 1))>, &f5mnqrycch, &blapy2kf1y);
+    kuwptd3jeh = f5mnqrycch;
+    afzfu0o2mb = blapy2kf1y;
+    muDoubleScalarSinCos(%<(SLibCGIR_PV(95, 0, 5, 3, "", -1, "", 2))>, &f5mnqrycch, &blapy2kf1y);
+    mm4mkpkz3a[0] = afzfu0o2mb * blapy2kf1y;
+    mm4mkpkz3a[1] = blapy2kf1y * bnr10p2k2a * kuwptd3jeh - f5mnqrycch * mxxv2z25ng;
+    mm4mkpkz3a[2] = kuwptd3jeh * mxxv2z25ng * blapy2kf1y + bnr10p2k2a * f5mnqrycch;
+    mm4mkpkz3a[3] = f5mnqrycch * afzfu0o2mb;
+    mm4mkpkz3a[4] = bnr10p2k2a * kuwptd3jeh * f5mnqrycch + mxxv2z25ng * blapy2kf1y;
+    mm4mkpkz3a[5] = kuwptd3jeh * f5mnqrycch * mxxv2z25ng - bnr10p2k2a * blapy2kf1y;
+    mm4mkpkz3a[6] = -kuwptd3jeh;
+    mm4mkpkz3a[7] = bnr10p2k2a * afzfu0o2mb;
+    mm4mkpkz3a[8] = mxxv2z25ng * afzfu0o2mb;
+    for (i = 0; i < 3; i++) {
+        for (i_0 = 0; i_0 < 3; i_0++) {
+            mwa3twhng1[i + 3 * i_0] = 0.0;
+            mwa3twhng1[i + 3 * i_0] = mwa3twhng1[3 * i_0 + i] + dkbuzpspr3[3 * i] * mm4mkpkz3a[3 * i_0];
+            mwa3twhng1[i + 3 * i_0] = dkbuzpspr3[3 * i + 1] * mm4mkpkz3a[3 * i_0 + 1] + mwa3twhng1[3 * i_0 + i];
+            mwa3twhng1[i + 3 * i_0] = dkbuzpspr3[3 * i + 2] * mm4mkpkz3a[3 * i_0 + 2] + mwa3twhng1[3 * i_0 + i];
+        }
+    }
+    avjzo3ydwb_idx = %<(SLibCG_SE(SLibCGIR_PV(96, 0, 5, 1, "", -1, "", 0)))> * mwa3twhng1[6];
+    kuwptd3jeh = muDoubleScalarAsin(avjzo3ydwb_idx >= 1.0 ? 1.0 : avjzo3ydwb_idx <= -1.0 ? -1.0 : avjzo3ydwb_idx) * %<(SLibCG_SE(SLibCGIR_PV(97, 0, 5, 1, "", -1, "", 0)))>;
+    avjzo3ydwb_idx = %<(SLibCG_SE(SLibCGIR_PV(97, 0, 5, 1, "", -1, "", 0)))> * muDoubleScalarAtan2(mwa3twhng1[7], mwa3twhng1[8]);
+    muDoubleScalarSinCos(%<(SLibCG_SE(SLibCGIR_PV(97, 0, 5, 1, "", -1, "", 0)))> * muDoubleScalarAtan2(mwa3twhng1[3], mwa3twhng1[0]), &f5mnqrycch, &blapy2kf1y);
+    mxxv2z25ng = blapy2kf1y;
+    bnr10p2k2a = f5mnqrycch;
+    muDoubleScalarSinCos(kuwptd3jeh, &f5mnqrycch, &blapy2kf1y);
+    afzfu0o2mb = blapy2kf1y;
+    kuwptd3jeh = f5mnqrycch;
+    muDoubleScalarSinCos(avjzo3ydwb_idx, &f5mnqrycch, &blapy2kf1y);
+%<SLibCG_SetBOV(50, 0, 5, 1, "", -1, "", 0, "mxxv2z25ng * afzfu0o2mb * blapy2kf1y + bnr10p2k2a * kuwptd3jeh * f5mnqrycch")>\
+%<SLibCG_SetBOV(51, 0, 5, 1, "", -1, "", 0, "mxxv2z25ng * afzfu0o2mb * f5mnqrycch - bnr10p2k2a * kuwptd3jeh * blapy2kf1y")>\
+%<SLibCG_SetBOV(52, 0, 5, 1, "", -1, "", 0, "mxxv2z25ng * kuwptd3jeh * blapy2kf1y + bnr10p2k2a * afzfu0o2mb * f5mnqrycch")>\
+%<SLibCG_SetBOV(53, 0, 5, 1, "", -1, "", 0, "bnr10p2k2a * afzfu0o2mb * blapy2kf1y - mxxv2z25ng * kuwptd3jeh * f5mnqrycch")>\
+}
+%<tlcOutputsFcnOfS5B69>\
+afzfu0o2mb = ((f3vpfejp1y[0] * f3vpfejp1y[0] + f3vpfejp1y[1] * f3vpfejp1y[1]) + f3vpfejp1y[2] * f3vpfejp1y[2]) + f3vpfejp1y[3] * f3vpfejp1y[3];
+if (%<(LibIsMajorTimeStep())>) {
+    if (%<(SLibCG_SE(SLibCG_DWV(35, 0, 5, 1, "", -1, "", 0)))> != 0) {
+%<SLibCGIRSetSolverNeedsReset()>\
+%<SLibCG_SetDWV(35, 0, 5, 1, "", -1, "", 0, "0")>\
+    }
+    afzfu0o2mb = muDoubleScalarSqrt(afzfu0o2mb);
+} else {
+    afzfu0o2mb = afzfu0o2mb < 0.0 ? -muDoubleScalarSqrt(muDoubleScalarAbs(afzfu0o2mb)) : muDoubleScalarSqrt(afzfu0o2mb);
+%<SLibCG_SetDWV(35, 0, 5, 1, "", -1, "", 0, "1")>\
+}
+mxxv2z25ng = f3vpfejp1y[0] / afzfu0o2mb;
+bnr10p2k2a = f3vpfejp1y[1] / afzfu0o2mb;
+kuwptd3jeh = f3vpfejp1y[2] / afzfu0o2mb;
+afzfu0o2mb = f3vpfejp1y[3] / afzfu0o2mb;
+o2efzvhwec[0] = muDoubleScalarAtan2((bnr10p2k2a * kuwptd3jeh + mxxv2z25ng * afzfu0o2mb) * 2.0, ((mxxv2z25ng * mxxv2z25ng + bnr10p2k2a * bnr10p2k2a) - kuwptd3jeh * kuwptd3jeh) - afzfu0o2mb * afzfu0o2mb);
+avjzo3ydwb_idx = (bnr10p2k2a * afzfu0o2mb - mxxv2z25ng * kuwptd3jeh) * -2.0;
+o2efzvhwec[1] = muDoubleScalarAsin(avjzo3ydwb_idx >= 1.0 ? 1.0 : avjzo3ydwb_idx <= -1.0 ? -1.0 : avjzo3ydwb_idx);
+f5mnqrycch = (kuwptd3jeh * afzfu0o2mb + mxxv2z25ng * bnr10p2k2a) * 2.0;
+mxxv2z25ng = ((mxxv2z25ng * mxxv2z25ng - bnr10p2k2a * bnr10p2k2a) - kuwptd3jeh * kuwptd3jeh) + afzfu0o2mb * afzfu0o2mb;
+o2efzvhwec[2] = muDoubleScalarAtan2(f5mnqrycch, mxxv2z25ng);
+muDoubleScalarSinCos(o2efzvhwec[0], &f5mnqrycch, &blapy2kf1y);
+afzfu0o2mb = blapy2kf1y;
+o2efzvhwec[0] = f5mnqrycch;
+muDoubleScalarSinCos(o2efzvhwec[1], &f5mnqrycch, &blapy2kf1y);
+avjzo3ydwb_idx = blapy2kf1y;
+o2efzvhwec[1] = f5mnqrycch;
+muDoubleScalarSinCos(o2efzvhwec[2], &f5mnqrycch, &blapy2kf1y);
+o2efzvhwec[2] = f5mnqrycch;
+dkbuzpspr3[0] = avjzo3ydwb_idx * afzfu0o2mb;
+dkbuzpspr3[1] = o2efzvhwec[2] * o2efzvhwec[1] * afzfu0o2mb - blapy2kf1y * o2efzvhwec[0];
+dkbuzpspr3[2] = blapy2kf1y * o2efzvhwec[1] * afzfu0o2mb + o2efzvhwec[2] * o2efzvhwec[0];
+dkbuzpspr3[3] = avjzo3ydwb_idx * o2efzvhwec[0];
+dkbuzpspr3[4] = o2efzvhwec[2] * o2efzvhwec[1] * o2efzvhwec[0] + blapy2kf1y * afzfu0o2mb;
+dkbuzpspr3[5] = blapy2kf1y * o2efzvhwec[1] * o2efzvhwec[0] - o2efzvhwec[2] * afzfu0o2mb;
+dkbuzpspr3[6] = -o2efzvhwec[1];
+dkbuzpspr3[7] = o2efzvhwec[2] * avjzo3ydwb_idx;
+dkbuzpspr3[8] = blapy2kf1y * avjzo3ydwb_idx;
+for (i = 0; i < 3; i++) {
+    for (i_0 = 0; i_0 < 3; i_0++) {
+        mm4mkpkz3a[i + 3 * i_0] = 0.0;
+        mm4mkpkz3a[i + 3 * i_0] = mm4mkpkz3a[3 * i_0 + i] + dkbuzpspr3[3 * i_0] * %<(SLibCG_SE(SLibCG_BOV(49, 0, 5, 9, "", -1, "i", 0)))>;
+        mm4mkpkz3a[i + 3 * i_0] = dkbuzpspr3[3 * i_0 + 1] * %<(SLibCG_SE(SLibCG_BOV(49, 0, 5, 9, "", -1, "i + 3", 0)))> + mm4mkpkz3a[3 * i_0 + i];
+        mm4mkpkz3a[i + 3 * i_0] = dkbuzpspr3[3 * i_0 + 2] * %<(SLibCG_SE(SLibCG_BOV(49, 0, 5, 9, "", -1, "i + 6", 0)))> + mm4mkpkz3a[3 * i_0 + i];
+    }
+}
+avjzo3ydwb_idx = %<(SLibCG_SE(SLibCGIR_PV(98, 0, 5, 1, "", -1, "", 0)))> * mm4mkpkz3a[6];
+muDoubleScalarSinCos(muDoubleScalarAtan2(mm4mkpkz3a[7], mm4mkpkz3a[8]), &f5mnqrycch, &blapy2kf1y);
+o2efzvhwec[0] = f5mnqrycch;
+afzfu0o2mb = blapy2kf1y;
+muDoubleScalarSinCos(muDoubleScalarAsin(avjzo3ydwb_idx >= 1.0 ? 1.0 : avjzo3ydwb_idx <= -1.0 ? -1.0 : avjzo3ydwb_idx), &f5mnqrycch, &blapy2kf1y);
+o2efzvhwec[1] = f5mnqrycch;
+avjzo3ydwb_idx = blapy2kf1y;
+muDoubleScalarSinCos(muDoubleScalarAtan2(mm4mkpkz3a[3], mm4mkpkz3a[0]), &f5mnqrycch, &blapy2kf1y);
+o2efzvhwec[2] = f5mnqrycch;
+dkbuzpspr3[0] = avjzo3ydwb_idx * blapy2kf1y;
+dkbuzpspr3[3] = o2efzvhwec[2] * avjzo3ydwb_idx;
+dkbuzpspr3[6] = -o2efzvhwec[1];
+dkbuzpspr3[1] = blapy2kf1y * o2efzvhwec[0] * o2efzvhwec[1] - o2efzvhwec[2] * afzfu0o2mb;
+dkbuzpspr3[4] = o2efzvhwec[0] * o2efzvhwec[1] * o2efzvhwec[2] + afzfu0o2mb * blapy2kf1y;
+dkbuzpspr3[7] = o2efzvhwec[0] * avjzo3ydwb_idx;
+dkbuzpspr3[2] = o2efzvhwec[1] * afzfu0o2mb * blapy2kf1y + o2efzvhwec[0] * o2efzvhwec[2];
+dkbuzpspr3[5] = o2efzvhwec[1] * o2efzvhwec[2] * afzfu0o2mb - o2efzvhwec[0] * blapy2kf1y;
+dkbuzpspr3[8] = afzfu0o2mb * avjzo3ydwb_idx;
+afzfu0o2mb = ((f3vpfejp1y[0] * f3vpfejp1y[0] + f3vpfejp1y[1] * f3vpfejp1y[1]) + f3vpfejp1y[2] * f3vpfejp1y[2]) + f3vpfejp1y[3] * f3vpfejp1y[3];
+if (%<(LibIsMajorTimeStep())>) {
+    if (%<(SLibCG_SE(SLibCG_DWV(36, 0, 5, 1, "", -1, "", 0)))> != 0) {
+%<SLibCGIRSetSolverNeedsReset()>\
+%<SLibCG_SetDWV(36, 0, 5, 1, "", -1, "", 0, "0")>\
+    }
+    afzfu0o2mb = muDoubleScalarSqrt(afzfu0o2mb);
+} else {
+    afzfu0o2mb = afzfu0o2mb < 0.0 ? -muDoubleScalarSqrt(muDoubleScalarAbs(afzfu0o2mb)) : muDoubleScalarSqrt(afzfu0o2mb);
+%<SLibCG_SetDWV(36, 0, 5, 1, "", -1, "", 0, "1")>\
+}
+mxxv2z25ng = f3vpfejp1y[0] / afzfu0o2mb;
+bnr10p2k2a = f3vpfejp1y[1] / afzfu0o2mb;
+kuwptd3jeh = f3vpfejp1y[2] / afzfu0o2mb;
+afzfu0o2mb = f3vpfejp1y[3] / afzfu0o2mb;
+%<SLibCG_SetBOV(54, 0, 5, 1, "", -1, "", 0, "((bnr10p2k2a * efa2bj34ee[0] + kuwptd3jeh * efa2bj34ee[1]) + afzfu0o2mb * efa2bj34ee[2]) * -0.5")>\
+%<SLibCG_SetBOV(55, 0, 5, 1, "", -1, "", 0, "((mxxv2z25ng * efa2bj34ee[0] + kuwptd3jeh * efa2bj34ee[2]) - afzfu0o2mb * efa2bj34ee[1]) * 0.5")>\
+%<SLibCG_SetBOV(56, 0, 5, 1, "", -1, "", 0, "((mxxv2z25ng * efa2bj34ee[1] + afzfu0o2mb * efa2bj34ee[0]) - bnr10p2k2a * efa2bj34ee[2]) * 0.5")>\
+%<SLibCG_SetBOV(57, 0, 5, 1, "", -1, "", 0, "((mxxv2z25ng * efa2bj34ee[2] + bnr10p2k2a * efa2bj34ee[1]) - kuwptd3jeh * efa2bj34ee[0]) * 0.5")>\
+if (%<(SLibCGIRIsSampleHit(1, 5))>) {
+    for (i = 0; i < 3; i++) {
+%<SLibCG_SetBOV(58, 0, 5, 9, "", -1, "3 * i", 0, "%<(SLibCGIR_PV(99, 0, 5, 18, "", -1, "6 * i", 0))>")>\
+%<SLibCG_SetBOV(58, 0, 5, 9, "", -1, "1 + 3 * i", 0, "%<(SLibCGIR_PV(99, 0, 5, 18, "", -1, "6 * i + 1", 0))>")>\
+%<SLibCG_SetBOV(58, 0, 5, 9, "", -1, "2 + 3 * i", 0, "%<(SLibCGIR_PV(99, 0, 5, 18, "", -1, "6 * i + 2", 0))>")>\
+    }
+}
+for (i = 0; i < 3; i++) {
+    o2efzvhwec[i] = %<(SLibCG_SE(SLibCG_BOV(58, 0, 5, 9, "", -1, "i + 6", 0)))> * efa2bj34ee[2] + (%<(SLibCG_SE(SLibCG_BOV(58, 0, 5, 9, "", -1, "i + 3", 0)))> * efa2bj34ee[1] + %<(SLibCG_SE(SLibCG_BOV(58, 0, 5, 9, "", -1, "i", 0)))> * efa2bj34ee[0]);
+}
+if (%<(SLibCGIRIsSampleHit(1, 5))>) {
+    for (i = 0; i < 3; i++) {
+%<SLibCG_SetBOV(59, 0, 5, 9, "", -1, "3 * i", 0, "%<(SLibCGIR_PV(99, 0, 5, 18, "", -1, "6 * i + 3", 0))>")>\
+%<SLibCG_SetBOV(59, 0, 5, 9, "", -1, "1 + 3 * i", 0, "%<(SLibCGIR_PV(99, 0, 5, 18, "", -1, "6 * i + 4", 0))>")>\
+%<SLibCG_SetBOV(59, 0, 5, 9, "", -1, "2 + 3 * i", 0, "%<(SLibCGIR_PV(99, 0, 5, 18, "", -1, "6 * i + 5", 0))>")>\
+    }
+}
+if (%<(SLibCGIRIsSampleHit(1, 5))>) {
+    for (i = 0; i < 3; i++) {
+%<SLibCG_SetBOV(60, 0, 5, 9, "", -1, "3 * i", 0, "%<(SLibCGIR_PV(99, 0, 5, 18, "", -1, "6 * i", 0))>")>\
+%<SLibCG_SetBOV(60, 0, 5, 9, "", -1, "1 + 3 * i", 0, "%<(SLibCGIR_PV(99, 0, 5, 18, "", -1, "6 * i + 1", 0))>")>\
+%<SLibCG_SetBOV(60, 0, 5, 9, "", -1, "2 + 3 * i", 0, "%<(SLibCGIR_PV(99, 0, 5, 18, "", -1, "6 * i + 2", 0))>")>\
+    }
+}
+for (i = 0; i < 3; i++) {
+    tmp_0[i] = %<(SLibCG_SE(SLibCG_BOV(59, 0, 5, 9, "", -1, "i + 6", 0)))> * efa2bj34ee[2] + (%<(SLibCG_SE(SLibCG_BOV(59, 0, 5, 9, "", -1, "i + 3", 0)))> * efa2bj34ee[1] + %<(SLibCG_SE(SLibCG_BOV(59, 0, 5, 9, "", -1, "i", 0)))> * efa2bj34ee[0]);
+}
+tmp[0] = (%<(SLibCG_SE(SLibCG_BOV(38, 0, 5, 3, "", -1, "", 0)))> - tmp_0[0]) - (efa2bj34ee[1] * o2efzvhwec[2] - efa2bj34ee[2] * o2efzvhwec[1]);
+tmp[1] = (%<(SLibCG_SE(SLibCG_BOV(38, 0, 5, 3, "", -1, "", 1)))> - tmp_0[1]) - (efa2bj34ee[2] * o2efzvhwec[0] - efa2bj34ee[0] * o2efzvhwec[2]);
+tmp[2] = (%<(SLibCG_SE(SLibCG_BOV(38, 0, 5, 3, "", -1, "", 2)))> - tmp_0[2]) - (efa2bj34ee[0] * o2efzvhwec[1] - efa2bj34ee[1] * o2efzvhwec[0]);
+%<(SLibCGCallSubFcn(block, 0, 2, 2))>;
+for (i = 0; i < 3; i++) {
+%<SLibCG_SetBOV(62, 0, 5, 3, "", -1, "i", 0, "((%<(SLibCG_SE(SLibCG_BOV(22, 0, 5, 9, "", -1, "i + 3", 0)))> * %<(SLibCG_SE(SLibCG_BOV(33, 0, 5, 3, "", -1, "", 1)))> + %<(SLibCG_SE(SLibCG_BOV(22, 0, 5, 9, "", -1, "i", 0)))> * %<(SLibCG_SE(SLibCG_BOV(33, 0, 5, 3, "", -1, "", 0)))>) + %<(SLibCG_SE(SLibCG_BOV(22, 0, 5, 9, "", -1, "i + 6", 0)))> * %<(SLibCG_SE(SLibCG_BOV(33, 0, 5, 3, "", -1, "", 2)))>) / %<(SLibCG_SE(SLibCGIR_PV(100, 0, 5, 1, "", -1, "", 0)))>")>\
+}
+blapy2kf1y = 1.0 / iwj0nompi3 * %<(SLibCG_SE(SLibCG_BOV(62, 0, 5, 3, "", -1, "", 1)))>;
+f5mnqrycch = 1.0 / muDoubleScalarCos(nuork02qze) * %<(SLibCG_SE(SLibCG_BOV(62, 0, 5, 3, "", -1, "", 2)))> / iwj0nompi3;
+muDoubleScalarSinCos(ovjimxmhe2, &afzfu0o2mb, &mxxv2z25ng);
+%<SLibCG_SetBOV(63, 0, 5, 1, "", -1, "", 0, "(efa2bj34ee[1] - (efa2bj34ee[0] * mxxv2z25ng + efa2bj34ee[2] * afzfu0o2mb) * muDoubleScalarTan(nuork02qze)) + f5mnqrycch")>\
+%<SLibCG_SetBOV(64, 0, 5, 1, "", -1, "", 0, "(efa2bj34ee[0] * afzfu0o2mb - efa2bj34ee[2] * mxxv2z25ng) + blapy2kf1y")>\
+muDoubleScalarSinCos(ovjimxmhe2, &f5mnqrycch, &blapy2kf1y);
+avjzo3ydwb_idx = f5mnqrycch;
+afzfu0o2mb = blapy2kf1y;
+muDoubleScalarSinCos(nuork02qze, &f5mnqrycch, &blapy2kf1y);
+%<SLibCG_SetBOV(65, 0, 5, 9, "", -1, "", 0, "afzfu0o2mb * blapy2kf1y")>\
+%<SLibCG_SetBOV(65, 0, 5, 9, "", -1, "", 6, "avjzo3ydwb_idx * blapy2kf1y")>\
+%<SLibCG_SetBOV(65, 0, 5, 9, "", -1, "", 1, "-(f5mnqrycch * afzfu0o2mb)")>\
+%<SLibCG_SetBOV(65, 0, 5, 9, "", -1, "", 7, "-(avjzo3ydwb_idx * f5mnqrycch)")>\
+%<SLibCG_SetBOV(65, 0, 5, 9, "", -1, "", 2, "-avjzo3ydwb_idx")>\
+if (%<(SLibCGIRIsSampleHit(1, 5))>) {
+%<SLibCG_SetBOV(65, 0, 5, 9, "", -1, "", 5, "%<(SLibCGIR_PV(101, 0, 5, 1, "", -1, "", 0))>")>\
+}
+%<SLibCG_SetBOV(65, 0, 5, 9, "", -1, "", 3, "f5mnqrycch")>\
+%<SLibCG_SetBOV(65, 0, 5, 9, "", -1, "", 4, "blapy2kf1y")>\
+%<SLibCG_SetBOV(65, 0, 5, 9, "", -1, "", 8, "afzfu0o2mb")>\
+for (i = 0; i < 3; i++) {
+%<SLibCG_SetBOV(66, 0, 5, 3, "", -1, "i", 0, "0.0")>\
+%<SLibCG_SetBOV(66, 0, 5, 3, "", -1, "i", 0, "dkbuzpspr3[3 * i] * iwj0nompi3 + %<(SLibCG_SE(SLibCG_BOV(66, 0, 5, 3, "", -1, "i", 0)))>")>\
+%<SLibCG_SetBOV(66, 0, 5, 3, "", -1, "i", 0, "dkbuzpspr3[3 * i + 1] * %<(SLibCG_SE(SLibCGIR_PV(49, 0, 5, 1, "", -1, "", 0)))> + %<(SLibCG_SE(SLibCG_BOV(66, 0, 5, 3, "", -1, "i", 0)))>")>\
+%<SLibCG_SetBOV(66, 0, 5, 3, "", -1, "i", 0, "dkbuzpspr3[3 * i + 2] * %<(SLibCG_SE(SLibCGIR_PV(49, 0, 5, 1, "", -1, "", 0)))> + %<(SLibCG_SE(SLibCG_BOV(66, 0, 5, 3, "", -1, "i", 0)))>")>\
+}
+%<tlcOutputsFcnOfS5B72>\
+%<tlcOutputsFcnOfS5B73>\
+%<tlcOutputsFcnOfS5B74>\
+%<tlcOutputsFcnOfS5B75>\
+iwj0nompi3 = %<(SLibCG_SE(SLibCG_BOV(22, 0, 5, 9, "", -1, "", 2)))> * %<(SLibCG_SE(SLibCG_BOV(22, 0, 5, 9, "", -1, "", 3)))> * %<(SLibCG_SE(SLibCG_BOV(22, 0, 5, 9, "", -1, "", 7)))>;
+ovjimxmhe2 = %<(SLibCG_SE(SLibCG_BOV(22, 0, 5, 9, "", -1, "", 1)))> * %<(SLibCG_SE(SLibCG_BOV(22, 0, 5, 9, "", -1, "", 5)))> * %<(SLibCG_SE(SLibCG_BOV(22, 0, 5, 9, "", -1, "", 6)))>;
+nuork02qze = %<(SLibCG_SE(SLibCG_BOV(22, 0, 5, 9, "", -1, "", 2)))> * %<(SLibCG_SE(SLibCG_BOV(22, 0, 5, 9, "", -1, "", 4)))> * %<(SLibCG_SE(SLibCG_BOV(22, 0, 5, 9, "", -1, "", 6)))>;
+%<SLibCG_SetBOV(67, 0, 5, 1, "", -1, "", 0, "((((%<(SLibCG_SE(SLibCG_BOV(22, 0, 5, 9, "", -1, "", 0)))> * %<(SLibCG_SE(SLibCG_BOV(22, 0, 5, 9, "", -1, "", 4)))> * %<(SLibCG_SE(SLibCG_BOV(22, 0, 5, 9, "", -1, "", 8)))> - %<(SLibCG_SE(SLibCG_BOV(22, 0, 5, 9, "", -1, "", 0)))> * %<(SLibCG_SE(SLibCG_BOV(22, 0, 5, 9, "", -1, "", 5)))> * %<(SLibCG_SE(SLibCG_BOV(22, 0, 5, 9, "", -1, "", 7)))>) - %<(SLibCG_SE(SLibCG_BOV(22, 0, 5, 9, "", -1, "", 1)))> * %<(SLibCG_SE(SLibCG_BOV(22, 0, 5, 9, "", -1, "", 3)))> * %<(SLibCG_SE(SLibCG_BOV(22, 0, 5, 9, "", -1, "", 8)))>) + iwj0nompi3) + ovjimxmhe2) - nuork02qze")>\
+if (%<(SLibCGIRIsSampleHit(1, 5))>) {
+    rtStopExecution(%<(SLibCG_SE(SLibCG_BOV(67, 0, 5, 1, "", -1, "", 0)))> != 0.0);
+}
+%<SLibInsertSolverResetCode()>\
+%endfunction

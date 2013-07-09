@@ -1,0 +1,24 @@
+%implements s5_b0_77j9e_Update "C"
+
+%function Update(block, system) Output
+%assign tlcUpdateFcnOfS5B0 = OpaqueTLCBlockFcn("Update", 5, 0)
+%assign tlcUpdateFcnOfS5B21 = OpaqueTLCBlockFcn("Update", 5, 21)
+%assign tlcUpdateFcnOfS5B25 = OpaqueTLCBlockFcn("Update", 5, 25)
+%assign tlcUpdateFcnOfS5B33 = OpaqueTLCBlockFcn("Update", 5, 33)
+%assign tlcUpdateFcnOfS5B34 = OpaqueTLCBlockFcn("Update", 5, 34)
+%assign tlcUpdateFcnOfS5B40 = OpaqueTLCBlockFcn("Update", 5, 40)
+%assign tlcUpdateFcnOfS5B50 = OpaqueTLCBlockFcn("Update", 5, 50)
+%assign tlcUpdateFcnOfS5B65 = OpaqueTLCBlockFcn("Update", 5, 65)
+%assign tlcUpdateFcnOfS5B69 = OpaqueTLCBlockFcn("Update", 5, 69)
+%assign tlcUpdateFcnOfS5B72 = OpaqueTLCBlockFcn("Update", 5, 72)
+%<tlcUpdateFcnOfS5B0>\
+%<tlcUpdateFcnOfS5B21>\
+%<tlcUpdateFcnOfS5B25>\
+%<tlcUpdateFcnOfS5B33>\
+%<tlcUpdateFcnOfS5B34>\
+%<tlcUpdateFcnOfS5B40>\
+%<tlcUpdateFcnOfS5B50>\
+%<tlcUpdateFcnOfS5B65>\
+%<tlcUpdateFcnOfS5B69>\
+%<tlcUpdateFcnOfS5B72>\
+%endfunction

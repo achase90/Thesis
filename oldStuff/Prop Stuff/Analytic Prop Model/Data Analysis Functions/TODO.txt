@@ -1,0 +1,11 @@
+1) Get Xplane running
+2) Fly Xplane and output data
+3) Add noise to Xplane data
+4) Do a variance-weighted-least-squares average of multiple measuring techniques
+5) Do a kalman filter to get filtered results
+6) Compare to actual data values from Xplane
+7) Calculate CL-CD using best estimates of states
+8) Curve fit CD vs CL^2 using a variance-weighted-least-squares
+9) Assuming this data set is a "normal" set, estimate standard error of coefficients
+
+10) Repeat for multiple error magnitudes on different sensors

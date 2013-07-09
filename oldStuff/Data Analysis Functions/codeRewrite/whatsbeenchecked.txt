@@ -1,0 +1,7 @@
+norm of inertial to body matrix is 1
+norm of body to wind matrix is 1
+norm of thrust vector is equal to total thrust out of xplane
+norm of accel vector from Xplane is one when not moving
+norm of accel vector subtracting out gravity is zero when not moving
+out the nose is the positive Gloadaxial direction, as per accelDirCheck.m
+

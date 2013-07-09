@@ -1,0 +1,75 @@
+%implements s5_b0_77j9e_Start "C"
+
+%function Start(block, system) Output
+%assign tlcStartFcnOfS5B0 = OpaqueTLCBlockFcn("Start", 5, 0)
+%assign tlcStartFcnOfS5B1 = OpaqueTLCBlockFcn("Start", 5, 1)
+%assign tlcStartFcnOfS5B21 = OpaqueTLCBlockFcn("Start", 5, 21)
+%assign tlcStartFcnOfS5B25 = OpaqueTLCBlockFcn("Start", 5, 25)
+%assign tlcStartFcnOfS5B28 = OpaqueTLCBlockFcn("Start", 5, 28)
+%assign tlcStartFcnOfS5B32 = OpaqueTLCBlockFcn("Start", 5, 32)
+%assign tlcStartFcnOfS5B33 = OpaqueTLCBlockFcn("Start", 5, 33)
+%assign tlcStartFcnOfS5B34 = OpaqueTLCBlockFcn("Start", 5, 34)
+%assign tlcStartFcnOfS5B40 = OpaqueTLCBlockFcn("Start", 5, 40)
+%assign tlcStartFcnOfS5B42 = OpaqueTLCBlockFcn("Start", 5, 42)
+%assign tlcStartFcnOfS5B43 = OpaqueTLCBlockFcn("Start", 5, 43)
+%assign tlcStartFcnOfS5B44 = OpaqueTLCBlockFcn("Start", 5, 44)
+%assign tlcStartFcnOfS5B45 = OpaqueTLCBlockFcn("Start", 5, 45)
+%assign tlcStartFcnOfS5B48 = OpaqueTLCBlockFcn("Start", 5, 48)
+%assign tlcStartFcnOfS5B49 = OpaqueTLCBlockFcn("Start", 5, 49)
+%assign tlcStartFcnOfS5B50 = OpaqueTLCBlockFcn("Start", 5, 50)
+%assign tlcStartFcnOfS5B51 = OpaqueTLCBlockFcn("Start", 5, 51)
+%assign tlcStartFcnOfS5B52 = OpaqueTLCBlockFcn("Start", 5, 52)
+%assign tlcStartFcnOfS5B53 = OpaqueTLCBlockFcn("Start", 5, 53)
+%assign tlcStartFcnOfS5B54 = OpaqueTLCBlockFcn("Start", 5, 54)
+%assign tlcStartFcnOfS5B61 = OpaqueTLCBlockFcn("Start", 5, 61)
+%assign tlcStartFcnOfS5B62 = OpaqueTLCBlockFcn("Start", 5, 62)
+%assign tlcStartFcnOfS5B63 = OpaqueTLCBlockFcn("Start", 5, 63)
+%assign tlcStartFcnOfS5B65 = OpaqueTLCBlockFcn("Start", 5, 65)
+%assign tlcStartFcnOfS5B69 = OpaqueTLCBlockFcn("Start", 5, 69)
+%assign tlcStartFcnOfS5B72 = OpaqueTLCBlockFcn("Start", 5, 72)
+%assign tlcStartFcnOfS5B73 = OpaqueTLCBlockFcn("Start", 5, 73)
+%assign tlcStartFcnOfS5B74 = OpaqueTLCBlockFcn("Start", 5, 74)
+%assign tlcStartFcnOfS5B75 = OpaqueTLCBlockFcn("Start", 5, 75)
+%<tlcStartFcnOfS5B0>\
+%<tlcStartFcnOfS5B1>\
+%<SLibCG_SetDWV(30, 0, 5, 1, "", -1, "", 0, "0")>\
+%<SLibCG_SetDWV(31, 0, 5, 1, "", -1, "", 0, "0")>\
+%<SLibCG_SetDWV(32, 0, 5, 1, "", -1, "", 0, "0")>\
+%<tlcStartFcnOfS5B21>\
+%<SLibCG_SetDWV(33, 0, 5, 1, "", -1, "", 0, "0")>\
+%<tlcStartFcnOfS5B25>\
+%<tlcStartFcnOfS5B28>\
+%<SLibCG_SetDWV(24, 0, 5, 3, "", -1, "", 0, "(void *)%<(SLibCG_SE(SLibCGIR_PVAddr(1, 0, 5, 20, "", -1, "", 0)))>")>\
+%<SLibCG_SetDWV(24, 0, 5, 3, "", -1, "", 1, "(void *)%<(SLibCG_SE(SLibCGIR_PVAddr(2, 0, 5, 20, "", -1, "", 0)))>")>\
+%<SLibCG_SetDWV(24, 0, 5, 3, "", -1, "", 2, "(void *)%<(SLibCG_SE(SLibCGIR_PVAddr(3, 0, 5, 20, "", -1, "", 0)))>")>\
+%<tlcStartFcnOfS5B32>\
+%<tlcStartFcnOfS5B33>\
+%<tlcStartFcnOfS5B34>\
+%<tlcStartFcnOfS5B40>\
+%<tlcStartFcnOfS5B42>\
+%<tlcStartFcnOfS5B43>\
+%<tlcStartFcnOfS5B44>\
+%<tlcStartFcnOfS5B45>\
+%<SLibCG_SetDWV(34, 0, 5, 1, "", -1, "", 0, "0")>\
+%<tlcStartFcnOfS5B48>\
+%<tlcStartFcnOfS5B49>\
+%<tlcStartFcnOfS5B50>\
+%<tlcStartFcnOfS5B51>\
+%<tlcStartFcnOfS5B52>\
+%<tlcStartFcnOfS5B53>\
+%<tlcStartFcnOfS5B54>\
+%<SLibCG_SetDWV(23, 0, 5, 3, "", -1, "", 0, "(void *)%<(SLibCG_SE(SLibCGIR_PVAddr(5, 0, 5, 20, "", -1, "", 0)))>")>\
+%<SLibCG_SetDWV(23, 0, 5, 3, "", -1, "", 1, "(void *)%<(SLibCG_SE(SLibCGIR_PVAddr(6, 0, 5, 20, "", -1, "", 0)))>")>\
+%<SLibCG_SetDWV(23, 0, 5, 3, "", -1, "", 2, "(void *)%<(SLibCG_SE(SLibCGIR_PVAddr(7, 0, 5, 20, "", -1, "", 0)))>")>\
+%<tlcStartFcnOfS5B61>\
+%<tlcStartFcnOfS5B62>\
+%<tlcStartFcnOfS5B63>\
+%<tlcStartFcnOfS5B65>\
+%<tlcStartFcnOfS5B69>\
+%<SLibCG_SetDWV(35, 0, 5, 1, "", -1, "", 0, "0")>\
+%<SLibCG_SetDWV(36, 0, 5, 1, "", -1, "", 0, "0")>\
+%<tlcStartFcnOfS5B72>\
+%<tlcStartFcnOfS5B73>\
+%<tlcStartFcnOfS5B74>\
+%<tlcStartFcnOfS5B75>\
+%endfunction
