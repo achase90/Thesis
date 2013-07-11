@@ -1,126 +1,59 @@
-int bitIn=0;
+byte comm[60];
 
 void setup() {
   // put your setup code here, to run once:
   Serial.begin(9600);
-
+while (!Serial);
   Serial.println("Serial port opened");
 
-  Serial1.begin(9600,8,1,'N');
-  Serial.println();
-  Serial.println();
-  Serial.println("Few lines added");
+  Serial1.begin(9600);
+while(!Serial1);
+Serial.println("Serial1 open");
+Serial1.print('*99C\r');
+Serial.println();
+Serial.println();
+comm[0]=0x2a;
+comm[1]= 0x39;
+comm[2]=0x39;
+comm[3]=0x43;
+comm[4]=0x0D;
+comm[5] = 0x0A;
+Serial1.write(comm,6);
+Serial.write(comm,6);
+Serial1.println("*99C");
+Serial1.print('*99C');
+Serial1.print(comm[4]);
 }
 
 void loop() {
+  int i=0;
   // put your main code here, to run repeatedly: 
-  while (Serial1.available())
+  if (Serial.available()>0)
   {
-   /*
-   int countByte = 0;
-    bitIn = Serial1.read();
-    if (bitIn == 0x0d)
+    while (Serial.available()>0)
     {
-      Serial.println("Received 0x0d");
-      while (!Serial1.available())
-      {
-       // Serial.println( "Waiting for data"); 
-      }
-      countByte +=bitIn;
-      bitIn = Serial1.read();
-      //Serial.println(bitIn);
-      if (bitIn == 0x0a)
-      {
-        Serial.println("Received 0x0a");
-        while (!Serial1.available())
-        {
-          Serial.println( "Waiting for data"); 
-        }
-        countByte +=bitIn;
-        bitIn = Serial1.read();
-        Serial.println(bitIn);
-
-        if (bitIn == 0x7e)
-        {
-          countByte +=bitIn;
-          int nBytesData = Serial1.read();
-          Serial.print("Expected data bytes :   ");
-          Serial.println(nBytesData);
-          int data[80];
-          //Serial.println("Data received");
-          int i=0;
-          while (i<nBytesData) //TODO: add timer here
-          {
-            if (Serial.available())
-            {
-              data[i]=Serial1.read();
-              countByte +=data[i];
-              i++;
-            }
-          }
-          int checkSum = Serial1.read();
-          i=0;
-          if (i<nBytesData)
-          {
-            i++;
-            Serial.print(data[i]);
-            Serial.print(",");
-          }
-          else
-          {
-            Serial.print(data[i]);
-            Serial.print(",");
-            Serial.println(checkSum == countByte%256);
-          }
-        }
-      }
+      comm[i] = Serial.read();
+      delay(5);
+      i++;
     }
-    */
-    Serial.println(Serial1.read());
   }
-
-
-
-
-
-
-  if (Serial.available())
+  if (i>0)
   {
-    while (Serial.available())
-    {
-      bitIn=Serial.read();
-      if (bitIn == 'p')
-      {
-        byte MESSAGE_ID = 0x44;
-        Serial.println("Print command received");
-        Serial1.write((byte)0x0d); //start 1
-        Serial1.write((byte)0x0a); //start 2
-        Serial1.write((byte)0x7e); //start 3
-        Serial1.write(MESSAGE_ID); //id
-        int x = 5000;
-        byte lsb = x;
-        byte msb = (x >> 8);
-        Serial1.write((byte)0); //number of data bytes
-        //Serial1.write(lsb); //data byte 1
-        // Serial1.write(msb); //data byte 2
-        Serial.println(x,BIN);
-        Serial.println(msb,BIN);
-        Serial.println(lsb,BIN);
-        int checkSum = 0x0d;
-        checkSum += 0x0a;
-        checkSum += 0x7e;
-        checkSum += MESSAGE_ID;
-        checkSum += 0x02;
-        //checkSum += lsb;
-        //checkSum += msb;
-        checkSum = checkSum%256;
-        Serial.println(checkSum,HEX);
-        Serial1.write((byte) checkSum); //checksum 
-        Serial.println("data supposedly written");
-      }
-    } 
+    Serial.write(comm,i-1);
+    Serial.println();
+    Serial1.write(comm,i-1);
+    Serial1.println();
   }
+delay(5);
+//Serial1.print('*99C\r');
+//Serial.print('*99C\r');
+while (Serial1.available()>0)
+{
+  //Serial.println("Data was available");
+ Serial.println(Serial1.read()); 
 }
+}
+
 
 
 
