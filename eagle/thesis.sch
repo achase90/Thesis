@@ -1847,6 +1847,170 @@ IC-11297</description>
 </deviceset>
 </devicesets>
 </library>
+<library name="VideoConnectors">
+<packages>
+<package name="DB-15-F90+SHIELD-BIG_PADS">
+<wire x1="-15.748" y1="16.002" x2="15.748" y2="16.002" width="0.127" layer="21"/>
+<wire x1="15.748" y1="16.002" x2="15.748" y2="0" width="0.127" layer="21"/>
+<wire x1="15.748" y1="0" x2="-15.748" y2="0" width="0.127" layer="21" style="shortdash"/>
+<wire x1="-15.748" y1="0" x2="-15.748" y2="16.002" width="0.127" layer="21"/>
+<wire x1="8.382" y1="0" x2="8.382" y2="-5.08" width="0.127" layer="51" style="shortdash"/>
+<wire x1="8.382" y1="-5.08" x2="-8.382" y2="-5.08" width="0.127" layer="51" style="shortdash"/>
+<wire x1="-8.382" y1="-5.08" x2="-8.382" y2="0" width="0.127" layer="51" style="shortdash"/>
+<wire x1="15.748" y1="0.635" x2="-15.748" y2="0.635" width="0.127" layer="21"/>
+<pad name="3" x="-0.254" y="14.224" drill="1.1938" shape="offset" rot="R90"/>
+<pad name="4" x="-2.54" y="14.224" drill="1.1938" shape="offset" rot="R90"/>
+<pad name="5" x="-4.826" y="14.224" drill="1.1938" shape="offset" rot="R90"/>
+<pad name="2" x="2.032" y="14.224" drill="1.1938" shape="offset" rot="R90"/>
+<pad name="1" x="4.318" y="14.224" drill="1.1938" shape="offset" rot="R90"/>
+<pad name="11" x="4.318" y="9.144" drill="1.1938" shape="offset" rot="R270"/>
+<pad name="12" x="2.032" y="9.144" drill="1.1938" shape="offset" rot="R270"/>
+<pad name="13" x="-0.254" y="9.144" drill="1.1938" shape="offset" rot="R270"/>
+<pad name="14" x="-2.54" y="9.144" drill="1.1938" shape="offset" rot="R270"/>
+<pad name="15" x="-4.826" y="9.144" drill="1.1938" shape="offset" rot="R270"/>
+<pad name="8" x="0.889" y="11.684" drill="1.1938" rot="R180"/>
+<pad name="7" x="3.175" y="11.684" drill="1.1938" rot="R180"/>
+<pad name="6" x="5.461" y="11.684" drill="1.1938" rot="R180"/>
+<pad name="9" x="-1.397" y="11.684" drill="1.1938" rot="R180"/>
+<pad name="10" x="-3.683" y="11.684" drill="1.1938" rot="R180"/>
+<pad name="SHIELD@1" x="-12.4968" y="11.684" drill="3.175" diameter="5.08"/>
+<pad name="SHIELD@2" x="12.4968" y="11.684" drill="3.175" diameter="5.08"/>
+<text x="-10.16" y="5.334" size="1.27" layer="25">&gt;NAME</text>
+</package>
+<package name="DB-15-F90+SHIELD-SMALL_PADS">
+<wire x1="-15.748" y1="16.002" x2="15.748" y2="16.002" width="0.127" layer="21"/>
+<wire x1="15.748" y1="16.002" x2="15.748" y2="0" width="0.127" layer="21"/>
+<wire x1="15.748" y1="0" x2="-15.748" y2="0" width="0.127" layer="49" style="shortdash"/>
+<wire x1="-15.748" y1="0" x2="-15.748" y2="16.002" width="0.127" layer="21"/>
+<wire x1="8.382" y1="0" x2="8.382" y2="-5.08" width="0.127" layer="49" style="shortdash"/>
+<wire x1="8.382" y1="-5.08" x2="-8.382" y2="-5.08" width="0.127" layer="49" style="shortdash"/>
+<wire x1="-8.382" y1="-5.08" x2="-8.382" y2="0" width="0.127" layer="49" style="shortdash"/>
+<wire x1="15.748" y1="0.635" x2="-15.748" y2="0.635" width="0.127" layer="21"/>
+<pad name="3" x="-0.254" y="14.224" drill="1.2" diameter="1.524" rot="R90"/>
+<pad name="4" x="-2.54" y="14.224" drill="1.2" diameter="1.524" rot="R90"/>
+<pad name="5" x="-4.826" y="14.224" drill="1.2" diameter="1.524" rot="R90"/>
+<pad name="2" x="2.032" y="14.224" drill="1.2" diameter="1.524" rot="R90"/>
+<pad name="1" x="4.318" y="14.224" drill="1.2" diameter="1.524" rot="R90"/>
+<pad name="11" x="4.318" y="9.144" drill="1.2" diameter="1.524" rot="R270"/>
+<pad name="12" x="2.032" y="9.144" drill="1.2" diameter="1.524" rot="R270"/>
+<pad name="13" x="-0.254" y="9.144" drill="1.2" diameter="1.524" rot="R270"/>
+<pad name="14" x="-2.54" y="9.144" drill="1.2" diameter="1.524" rot="R270"/>
+<pad name="15" x="-4.826" y="9.144" drill="1.2" diameter="1.524" rot="R270"/>
+<pad name="8" x="0.889" y="11.684" drill="1.2" diameter="1.524" rot="R180"/>
+<pad name="7" x="3.175" y="11.684" drill="1.2" diameter="1.524" rot="R180"/>
+<pad name="6" x="5.461" y="11.684" drill="1.2" diameter="1.524" rot="R180"/>
+<pad name="9" x="-1.397" y="11.684" drill="1.2" diameter="1.524" rot="R180"/>
+<pad name="10" x="-3.683" y="11.684" drill="1.2" diameter="1.524" rot="R180"/>
+<pad name="SHIELD@1" x="-12.4968" y="11.684" drill="3.175" diameter="5.08"/>
+<pad name="SHIELD@2" x="12.4968" y="11.684" drill="3.175" diameter="5.08"/>
+<text x="-10.16" y="5.334" size="1.27" layer="25">&gt;NAME</text>
+</package>
+</packages>
+<symbols>
+<symbol name="CON-VGA-15">
+<wire x1="-20.32" y1="12.7" x2="20.32" y2="12.7" width="0.254" layer="94"/>
+<wire x1="20.32" y1="12.7" x2="20.32" y2="-10.16" width="0.254" layer="94"/>
+<wire x1="20.32" y1="-10.16" x2="-20.32" y2="-10.16" width="0.254" layer="94"/>
+<wire x1="-20.32" y1="-10.16" x2="-20.32" y2="12.7" width="0.254" layer="94"/>
+<text x="-15.24" y="9.525" size="1.27" layer="94">Red</text>
+<text x="-15.24" y="6.985" size="1.27" layer="94">Green</text>
+<text x="-15.24" y="4.445" size="1.27" layer="94">Blue</text>
+<text x="-15.24" y="-5.715" size="1.27" layer="94">ID2/RES</text>
+<text x="-1.905" y="-5.08" size="1.27" layer="94" rot="R90">GND (Hsync)</text>
+<text x="15.24" y="9.525" size="1.27" layer="94" rot="MR0">Red Return</text>
+<text x="15.24" y="6.985" size="1.27" layer="94" rot="MR0">Green Return</text>
+<text x="15.24" y="4.445" size="1.27" layer="94" rot="MR0">Blue Return</text>
+<text x="-0.635" y="7.62" size="1.27" layer="94" rot="R270">+5V</text>
+<text x="3.175" y="-5.08" size="1.27" layer="94" rot="R90">GND (Vsync, DDC)</text>
+<text x="-15.24" y="-0.635" size="1.27" layer="94">ID0/RES</text>
+<text x="-15.24" y="-3.175" size="1.27" layer="94">ID1/SDA</text>
+<text x="15.24" y="-3.175" size="1.27" layer="94" rot="MR0">Hsync</text>
+<text x="15.24" y="-5.715" size="1.27" layer="94" rot="MR0">Vsync</text>
+<text x="-15.24" y="-8.255" size="1.27" layer="94">ID3/SCL</text>
+<text x="-17.78" y="13.97" size="1.27" layer="95">&gt;NAME</text>
+<text x="-17.78" y="-12.7" size="1.27" layer="96">&gt;VALUE</text>
+<pin name="VGA-R" x="-22.86" y="10.16" visible="pad" length="short"/>
+<pin name="VGA-G" x="-22.86" y="7.62" visible="pad" length="short"/>
+<pin name="VGA-B" x="-22.86" y="5.08" visible="pad" length="short"/>
+<pin name="ID2/RES" x="-22.86" y="-5.08" visible="pad" length="short" direction="pas"/>
+<pin name="GND@0" x="-2.54" y="-12.7" visible="pad" length="short" direction="pas" rot="R90"/>
+<pin name="VGA-R-" x="22.86" y="10.16" visible="pad" length="short" direction="pas" function="dot" rot="R180"/>
+<pin name="VGA-G-" x="22.86" y="7.62" visible="pad" length="short" direction="pas" function="dot" rot="R180"/>
+<pin name="VGA-B-" x="22.86" y="5.08" visible="pad" length="short" direction="pas" function="dot" rot="R180"/>
+<pin name="+5V" x="0" y="15.24" visible="pad" length="short" direction="pwr" rot="R270"/>
+<pin name="GND@1" x="2.54" y="-12.7" visible="pad" length="short" direction="pas" rot="R90"/>
+<pin name="ID0/RES" x="-22.86" y="0" visible="pad" length="short" direction="pas"/>
+<pin name="ID1/SDA" x="-22.86" y="-2.54" visible="pad" length="short"/>
+<pin name="VGA-HSYNC" x="22.86" y="-2.54" visible="pad" length="short" function="clk" rot="R180"/>
+<pin name="VGA-VSYNC" x="22.86" y="-5.08" visible="pad" length="short" function="clk" rot="R180"/>
+<pin name="ID3/SCL" x="-22.86" y="-7.62" visible="pad" length="short" function="clk"/>
+</symbol>
+<symbol name="SHIELD">
+<circle x="5.08" y="0" radius="2.54" width="0.254" layer="94"/>
+<text x="0" y="3.175" size="1.778" layer="95">&gt;PART</text>
+<pin name="SHIELD" x="0" y="0" visible="off" length="short" direction="pas"/>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="VGA-*" prefix="VGA">
+<gates>
+<gate name="G$1" symbol="CON-VGA-15" x="0" y="0"/>
+<gate name="G$2" symbol="SHIELD" x="-12.7" y="30.48" swaplevel="1"/>
+<gate name="G$3" symbol="SHIELD" x="2.54" y="30.48" swaplevel="1"/>
+</gates>
+<devices>
+<device name="F90B" package="DB-15-F90+SHIELD-BIG_PADS">
+<connects>
+<connect gate="G$1" pin="+5V" pad="9"/>
+<connect gate="G$1" pin="GND@0" pad="5"/>
+<connect gate="G$1" pin="GND@1" pad="10"/>
+<connect gate="G$1" pin="ID0/RES" pad="11"/>
+<connect gate="G$1" pin="ID1/SDA" pad="12"/>
+<connect gate="G$1" pin="ID2/RES" pad="4"/>
+<connect gate="G$1" pin="ID3/SCL" pad="15"/>
+<connect gate="G$1" pin="VGA-B" pad="3"/>
+<connect gate="G$1" pin="VGA-B-" pad="8"/>
+<connect gate="G$1" pin="VGA-G" pad="2"/>
+<connect gate="G$1" pin="VGA-G-" pad="7"/>
+<connect gate="G$1" pin="VGA-HSYNC" pad="13"/>
+<connect gate="G$1" pin="VGA-R" pad="1"/>
+<connect gate="G$1" pin="VGA-R-" pad="6"/>
+<connect gate="G$1" pin="VGA-VSYNC" pad="14"/>
+<connect gate="G$2" pin="SHIELD" pad="SHIELD@1"/>
+<connect gate="G$3" pin="SHIELD" pad="SHIELD@2"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="F90S" package="DB-15-F90+SHIELD-SMALL_PADS">
+<connects>
+<connect gate="G$1" pin="+5V" pad="9"/>
+<connect gate="G$1" pin="GND@0" pad="5"/>
+<connect gate="G$1" pin="GND@1" pad="10"/>
+<connect gate="G$1" pin="ID0/RES" pad="11"/>
+<connect gate="G$1" pin="ID1/SDA" pad="12"/>
+<connect gate="G$1" pin="ID2/RES" pad="4"/>
+<connect gate="G$1" pin="ID3/SCL" pad="15"/>
+<connect gate="G$1" pin="VGA-B" pad="3"/>
+<connect gate="G$1" pin="VGA-B-" pad="8"/>
+<connect gate="G$1" pin="VGA-G" pad="2"/>
+<connect gate="G$1" pin="VGA-G-" pad="7"/>
+<connect gate="G$1" pin="VGA-HSYNC" pad="13"/>
+<connect gate="G$1" pin="VGA-R" pad="1"/>
+<connect gate="G$1" pin="VGA-R-" pad="6"/>
+<connect gate="G$1" pin="VGA-VSYNC" pad="14"/>
+<connect gate="G$2" pin="SHIELD" pad="SHIELD@1"/>
+<connect gate="G$3" pin="SHIELD" pad="SHIELD@2"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -1863,6 +2027,7 @@ IC-11297</description>
 <part name="C1" library="SparkFun-Capacitors" deviceset="CAP" device="KIT" value="0.1uF"/>
 <part name="C2" library="SparkFun-Capacitors" deviceset="CAP" device="KIT" value="2.2nF"/>
 <part name="U2" library="SparkFun-Sensors" deviceset="ADXL362" device="" value="ADXL362"/>
+<part name="VGA1" library="VideoConnectors" deviceset="VGA-*" device="F90S"/>
 </parts>
 <sheets>
 <sheet>
@@ -1875,90 +2040,11 @@ IC-11297</description>
 <instance part="C1" gate="G$1" x="0" y="109.22"/>
 <instance part="C2" gate="G$1" x="10.16" y="109.22"/>
 <instance part="U2" gate="G$1" x="-142.24" y="132.08" rot="R180"/>
+<instance part="VGA1" gate="G$1" x="-106.68" y="170.18"/>
 </instances>
 <busses>
 </busses>
 <nets>
-<net name="N$2" class="0">
-<segment>
-<pinref part="U$2" gate="G$1" pin="CLK"/>
-<wire x1="-134.62" y1="99.06" x2="-104.14" y2="99.06" width="0.1524" layer="91"/>
-<wire x1="-104.14" y1="99.06" x2="-104.14" y2="127" width="0.1524" layer="91"/>
-<pinref part="U$1" gate="G$1" pin="SCK_ICSP"/>
-<wire x1="-104.14" y1="127" x2="-104.14" y2="129.54" width="0.1524" layer="91"/>
-<wire x1="-104.14" y1="129.54" x2="-93.98" y2="129.54" width="0.1524" layer="91"/>
-<pinref part="U2" gate="G$1" pin="SCLK"/>
-<wire x1="-127" y1="127" x2="-104.14" y2="127" width="0.1524" layer="91"/>
-<junction x="-104.14" y="127"/>
-</segment>
-</net>
-<net name="N$3" class="0">
-<segment>
-<pinref part="U$1" gate="G$1" pin="MISO_ICSP"/>
-<wire x1="-93.98" y1="127" x2="-101.6" y2="127" width="0.1524" layer="91"/>
-<wire x1="-101.6" y1="127" x2="-101.6" y2="93.98" width="0.1524" layer="91"/>
-<pinref part="U$2" gate="G$1" pin="DO"/>
-<wire x1="-134.62" y1="93.98" x2="-101.6" y2="93.98" width="0.1524" layer="91"/>
-<pinref part="U2" gate="G$1" pin="MISO"/>
-<wire x1="-127" y1="132.08" x2="-93.98" y2="132.08" width="0.1524" layer="91"/>
-<wire x1="-93.98" y1="132.08" x2="-93.98" y2="127" width="0.1524" layer="91"/>
-<junction x="-93.98" y="127"/>
-</segment>
-</net>
-<net name="N$4" class="0">
-<segment>
-<pinref part="U$2" gate="G$1" pin="DI"/>
-<wire x1="-134.62" y1="104.14" x2="-99.06" y2="104.14" width="0.1524" layer="91"/>
-<wire x1="-99.06" y1="104.14" x2="-99.06" y2="124.46" width="0.1524" layer="91"/>
-<pinref part="U$1" gate="G$1" pin="MOSI_ICSP"/>
-<wire x1="-93.98" y1="124.46" x2="-99.06" y2="124.46" width="0.1524" layer="91"/>
-<pinref part="U2" gate="G$1" pin="MOSI"/>
-<wire x1="-127" y1="129.54" x2="-106.68" y2="129.54" width="0.1524" layer="91"/>
-<wire x1="-106.68" y1="129.54" x2="-106.68" y2="124.46" width="0.1524" layer="91"/>
-<wire x1="-106.68" y1="124.46" x2="-93.98" y2="124.46" width="0.1524" layer="91"/>
-<junction x="-93.98" y="124.46"/>
-</segment>
-</net>
-<net name="N$5" class="0">
-<segment>
-<pinref part="U$2" gate="G$1" pin="/CS"/>
-<wire x1="-134.62" y1="106.68" x2="-116.84" y2="106.68" width="0.1524" layer="91"/>
-<wire x1="-116.84" y1="106.68" x2="-116.84" y2="43.18" width="0.1524" layer="91"/>
-<wire x1="-116.84" y1="43.18" x2="10.16" y2="43.18" width="0.1524" layer="91"/>
-<wire x1="10.16" y1="43.18" x2="10.16" y2="58.42" width="0.1524" layer="91"/>
-<pinref part="U$1" gate="G$1" pin="53"/>
-<wire x1="10.16" y1="58.42" x2="-22.86" y2="58.42" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$1" class="0">
-<segment>
-<pinref part="U$2" gate="G$1" pin="VDD"/>
-<wire x1="-134.62" y1="101.6" x2="-111.76" y2="101.6" width="0.1524" layer="91"/>
-<wire x1="-111.76" y1="101.6" x2="-111.76" y2="63.5" width="0.1524" layer="91"/>
-<pinref part="U$1" gate="G$1" pin="GND_1"/>
-<wire x1="-111.76" y1="63.5" x2="-93.98" y2="63.5" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$7" class="0">
-<segment>
-<pinref part="U1" gate="G$1" pin="SDA"/>
-<wire x1="50.8" y1="129.54" x2="66.04" y2="129.54" width="0.1524" layer="91"/>
-<wire x1="66.04" y1="129.54" x2="66.04" y2="154.94" width="0.1524" layer="91"/>
-<wire x1="66.04" y1="154.94" x2="-81.28" y2="154.94" width="0.1524" layer="91"/>
-<pinref part="U$1" gate="G$1" pin="SDA1"/>
-<wire x1="-81.28" y1="154.94" x2="-81.28" y2="142.24" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$8" class="0">
-<segment>
-<pinref part="U1" gate="G$1" pin="SCL"/>
-<wire x1="50.8" y1="124.46" x2="73.66" y2="124.46" width="0.1524" layer="91"/>
-<wire x1="73.66" y1="124.46" x2="73.66" y2="157.48" width="0.1524" layer="91"/>
-<pinref part="U$1" gate="G$1" pin="SCL1"/>
-<wire x1="73.66" y1="157.48" x2="-83.82" y2="157.48" width="0.1524" layer="91"/>
-<wire x1="-83.82" y1="157.48" x2="-83.82" y2="142.24" width="0.1524" layer="91"/>
-</segment>
-</net>
 <net name="N$10" class="0">
 <segment>
 <pinref part="U1" gate="G$1" pin="GND"/>
@@ -1986,17 +2072,9 @@ IC-11297</description>
 </net>
 <net name="N$6" class="0">
 <segment>
-<pinref part="U$1" gate="G$1" pin="3V3"/>
-<wire x1="-109.22" y1="68.58" x2="-93.98" y2="68.58" width="0.1524" layer="91"/>
-<pinref part="U$2" gate="G$1" pin="VSS"/>
-<wire x1="-134.62" y1="96.52" x2="-109.22" y2="96.52" width="0.1524" layer="91"/>
-<wire x1="-109.22" y1="96.52" x2="-109.22" y2="68.58" width="0.1524" layer="91"/>
-<wire x1="-109.22" y1="152.4" x2="-109.22" y2="96.52" width="0.1524" layer="91"/>
-<junction x="-109.22" y="96.52"/>
 <pinref part="U1" gate="G$1" pin="VDD"/>
 <wire x1="22.86" y1="129.54" x2="15.24" y2="129.54" width="0.1524" layer="91"/>
 <wire x1="15.24" y1="129.54" x2="15.24" y2="152.4" width="0.1524" layer="91"/>
-<wire x1="15.24" y1="152.4" x2="-109.22" y2="152.4" width="0.1524" layer="91"/>
 <pinref part="U1" gate="G$1" pin="VLOGIC"/>
 <wire x1="22.86" y1="124.46" x2="15.24" y2="124.46" width="0.1524" layer="91"/>
 <wire x1="15.24" y1="124.46" x2="15.24" y2="129.54" width="0.1524" layer="91"/>
@@ -2005,16 +2083,6 @@ IC-11297</description>
 <wire x1="50.8" y1="109.22" x2="60.96" y2="109.22" width="0.1524" layer="91"/>
 <wire x1="60.96" y1="109.22" x2="60.96" y2="152.4" width="0.1524" layer="91"/>
 <wire x1="60.96" y1="152.4" x2="15.24" y2="152.4" width="0.1524" layer="91"/>
-<junction x="15.24" y="152.4"/>
-<wire x1="-109.22" y1="152.4" x2="-165.1" y2="152.4" width="0.1524" layer="91"/>
-<wire x1="-165.1" y1="152.4" x2="-165.1" y2="129.54" width="0.1524" layer="91"/>
-<junction x="-109.22" y="152.4"/>
-<pinref part="U2" gate="G$1" pin="VDDIO"/>
-<wire x1="-165.1" y1="129.54" x2="-165.1" y2="127" width="0.1524" layer="91"/>
-<wire x1="-165.1" y1="127" x2="-157.48" y2="127" width="0.1524" layer="91"/>
-<pinref part="U2" gate="G$1" pin="VS"/>
-<wire x1="-157.48" y1="129.54" x2="-165.1" y2="129.54" width="0.1524" layer="91"/>
-<junction x="-165.1" y="129.54"/>
 </segment>
 </net>
 <net name="N$9" class="0">
@@ -2032,25 +2100,10 @@ IC-11297</description>
 <wire x1="22.86" y1="114.3" x2="10.16" y2="114.3" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$13" class="0">
+<net name="N$1" class="0">
 <segment>
 <pinref part="U2" gate="G$1" pin="GND"/>
-<wire x1="-157.48" y1="137.16" x2="-160.02" y2="137.16" width="0.1524" layer="91"/>
-<wire x1="-160.02" y1="137.16" x2="-160.02" y2="142.24" width="0.1524" layer="91"/>
-<wire x1="-160.02" y1="142.24" x2="-104.14" y2="142.24" width="0.1524" layer="91"/>
-<wire x1="-104.14" y1="142.24" x2="-104.14" y2="134.62" width="0.1524" layer="91"/>
-<pinref part="U$1" gate="G$1" pin="5V_ICSP"/>
-<wire x1="-104.14" y1="134.62" x2="-93.98" y2="134.62" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$12" class="0">
-<segment>
-<pinref part="U2" gate="G$1" pin="!CS"/>
-<wire x1="-127" y1="134.62" x2="-114.3" y2="134.62" width="0.1524" layer="91"/>
-<wire x1="-114.3" y1="134.62" x2="-114.3" y2="165.1" width="0.1524" layer="91"/>
-<pinref part="U$1" gate="G$1" pin="10"/>
-<wire x1="-114.3" y1="165.1" x2="-40.64" y2="165.1" width="0.1524" layer="91"/>
-<wire x1="-40.64" y1="165.1" x2="-40.64" y2="142.24" width="0.1524" layer="91"/>
+<wire x1="-157.48" y1="137.16" x2="-167.64" y2="137.16" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
