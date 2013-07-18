@@ -22,7 +22,9 @@ void setup(void) {
   Serial.print("zeroCalibrating...");
   gyro.zeroCalibrate(2500, 2);
   Serial.println("done.");
-  gyro.setOffsets(-65489,-37,-4);
+  //gyro.setOffsets(-65489,-37,-4);
+  byte x = gyro.setFilterBW((byte) 1);
+  Serial.println(x);
 }
 
 void loop(void) {
@@ -40,24 +42,24 @@ void loop(void) {
      
     
     // Reads calibrated raw values from the sensor 
-    gyro.readGyroRawCal(&ix,&iy,&iz); 
+   /* gyro.readGyroRawCal(&ix,&iy,&iz); 
     Serial.print(ix); 
     Serial.print("  "); 
     Serial.print(iy); 
     Serial.print("  "); 
     Serial.println(iz); 
-    
+    */
      
     /*
     // Reads calibrated values in deg/sec    
     gyro.readGyro(&x,&y,&z); 
     Serial.print("  "); 
-    Serial.print(x); 
+    Serial.print(x,5); 
     Serial.print("  "); 
-    Serial.print(y); 
+    Serial.print(y,5); 
     Serial.print("  "); 
-    Serial.println(z);
-    Serial.println(1 << 4);
+    Serial.println(z,5);
+    //Serial.println(1 << 4);
   */
 }
 }

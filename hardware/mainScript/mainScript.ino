@@ -1,6 +1,8 @@
+#include <ITG3200.h>
 #include <SPI.h>
 #include <SD.h>
 
+byte pressHigh;
 
 void setup() {
   Serial.begin(9600); //begin serial communication for debugging
@@ -13,9 +15,12 @@ void setup() {
 
 void loop() {
   //start timer
-unsigned long time = millis();
+  unsigned long time = millis();
   //read pressure transducer
-
+for (int i=0,i<4,i++)
+{
+  readPress (pressAddress,CS, byte &highByte, byte &lowByte)
+}
   //read temperature of each pressure transducer
 
   //read magnetometer
@@ -26,11 +31,14 @@ unsigned long time = millis();
 
   //read GPS
 
-  //end timer
-
   //format packet to be sent to SD card
 
   //write to SD card
 }
 
+void readPress (pressAddress,CS, byte &highByte, byte &lowByte)
+{
+  //send pressAddress to CS
+  
+}
 
