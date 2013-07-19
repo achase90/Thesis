@@ -30,7 +30,7 @@ for (int i=0,i<4,i++)
   //read accel
 
   //read GPS
-
+readGPS();
   //format packet to be sent to SD card
 
   //write to SD card
@@ -42,3 +42,8 @@ void readPress (pressAddress,CS, byte &highByte, byte &lowByte)
   
 }
 
+
+void readGPS()
+{
+  
+}
