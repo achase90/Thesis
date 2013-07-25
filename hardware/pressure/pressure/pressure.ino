@@ -7,8 +7,9 @@ void setup() {
 void loop() {
   byte x;
   char comm[20];
-//  char bytesIn[20]={0x00};
-  char bytesIn[50]={0x00};
+  //  char bytesIn[20]={0x00};
+  char bytesIn[80]={
+    0x00  };
 
   int nchars;
   int16_t pressure;
@@ -19,9 +20,9 @@ void loop() {
    delay(10);
    */
   /*comm[0] = 0x52;
-  comm[1] = 0x53;
-  comm[2] = 0x0d;
-*/
+   comm[1] = 0x53;
+   comm[2] = 0x0d;
+   */
   //Serial3.write((byte *)comm,3);
   comm[0] = 0x55;
   comm[1] = 0x34;
@@ -41,32 +42,30 @@ void loop() {
   comm[15] = 0x0d;
   //char comm[] = {"U4F15-01-A213RH"};
   //Serial3.write((byte*)comm,16);
-  Serial3.println("U4F15-01-A213RH");
+  Serial3.print("WC\r");
   //Serial3.write((byte *) '\r',1);
   delay(50);
-
-  // put your main code here, to run repeatedly: 
-  if (Serial3.available()>0)
-  {
-    /*
-    int i=0;
-    while (Serial3.available()>0)
-    {
-      bytesIn[i] = Serial3.read();
-      i++;
-      //delay(5);
-    }*/
-        //Serial.write((byte *)bytesIn,nchars);
-    nchars = Serial3.readBytesUntil('=',bytesIn,20);
+     Serial3.print("U4F15-01-A213RC\r");
+    nchars = Serial3.readBytesUntil('=',bytesIn,80);
     nchars = Serial3.readBytesUntil(0x20,bytesIn,20);
+    //Serial.write((byte *) bytesIn,nchars);
+    //Serial.print('\t');
+    pressure = (int16_t)strtol(bytesIn,NULL,16);
+    Serial.print(pressure);
+    Serial.print('\t');
+    Serial3.print("UR10F30-04-A1RC\r");
+    delay(10);
+    nchars = Serial3.readBytesUntil('=',bytesIn,80);
+    nchars = Serial3.readBytesUntil(0x20,bytesIn,20);
+    // Serial.write((byte *) bytesIn,nchars);
+    // Serial.println();
     pressure = (int16_t)strtol(bytesIn,NULL,16);
     Serial.println(pressure);
-        nchars = Serial3.readBytesUntil('\r',bytesIn,20);
-  //Serial.write(bytesIn);
-  //Serial.println();
+    //nchars = Serial3.readBytesUntil('\r',bytesIn,20);
+    /*Serial.write(bytesIn);
+     Serial.println();*/
 }
-  delay(500);
-}
+
 
 
 
