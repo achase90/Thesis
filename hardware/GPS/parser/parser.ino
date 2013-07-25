@@ -29,7 +29,7 @@ void loop() {
     Serial.write((byte *)msgID,nchars);
     Serial.print('\t');
     nchars = Serial2.readBytesUntil(',',utcTime,64);
-    Serial.print(int32_t (1000*atof(utcTime)));
+    Serial.print(int32_t (100*atof(utcTime)));
     Serial.print('\t');
     nchars = Serial2.readBytesUntil(',',gpsStatus,64);
     Serial.write((byte *)gpsStatus,nchars);
