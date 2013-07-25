@@ -1,4 +1,4 @@
-uint16_t multFact = 10000;
+
 void setup() {
   Serial.begin(9600);
   Serial2.begin(9600);
@@ -64,13 +64,6 @@ void loop() {
     Serial.println(int32_t (atoi(CS)));
 
     Serial2.read(); //remove line feed character
-
-    //Serial.println(nchars);
-    //Serial.write((byte*) comm,nchars);
-
-    //int32_t tempOutInt = 100000*atof(temp);
-    //Serial.println(tempOutInt);
-
   }
 }
 
