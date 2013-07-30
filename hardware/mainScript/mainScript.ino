@@ -12,6 +12,7 @@ int pressBaud = 9600;
 USARTClass &magSerial = Serial1;
 USARTClass &gpsSerial = Serial2;
 USARTClass &pressureSerial = Serial3;
+ITG3200 gyro = ITG3200(); //construct gyro object
 
 char pressSN0[13] = "4F15-01-A213";
 char pressSN1[13] = "R10F30-04-A1";
@@ -25,13 +26,17 @@ void setup() {
   serialDeviceInit(Serial, magSerial, magBaud,"mag"); //initialize magnetometer on Serial1
   //serialDeviceInit(Serial, gpsSerial, gpsBaud,"gps"); //initialize gps on Serial2
   serialDeviceInit(Serial, pressureSerial, pressBaud,"pre"); //initialize pressure sensors on Serial3
-
+Wire.begin(); //begin wire transmission
+  delay(1000);
+  gyro.init(ITG3200_ADDR_AD0_HIGH); //initialize gyro with address pulled high
 }
 
 void loop() {
   int16_t pressure[4]; //pressure sensor data
   int16_t magReading[3]; //magnetometer data
-
+int16_t gyroX;
+int16_t gyroY;
+int16_t gyroZ;
   //start timer
   unsigned long time = millis();
 
@@ -49,9 +54,16 @@ void loop() {
   Serial.print(magReading[1]);
   Serial.print('\t');
   Serial.print(magReading[2]);
-  
-  //read gyro
 
+  //read gyro
+  readGyroData(gyroX,gyroY,gyroZ);
+  Serial.print('\t');
+  Serial.print(gyroX);
+  Serial.print('\t');
+  Serial.print(gyroY);
+  Serial.print('\t');
+  Serial.print(gyroZ);
+  Serial.print('\t');
   //read accel
 
   //read GPS
@@ -78,6 +90,19 @@ void readMagnetometer(USARTClass &magSerial,int16_t *magReading)
     magReading[2] = buff[5] + (buff[4]  << 8);
   }
 }
+
+void readGyroData(int16_t &gyroX,int16_t &gyroY,int16_t &gyroZ)
+{
+  if (gyro.isRawDataReady())
+  {
+    gyro.readGyroRaw(&gyroX,&gyroY,&gyroZ);
+  } 
+  else{
+    gyroX = NAN;
+    gyroY = NAN;
+    gyroZ = NAN;
+  }
+}
 void readAllPress (USARTClass &pressureSerial,char add0[], char add1[], char add2[], char add3[], int16_t *pressure)
 {
   pressureSerial.print("WC\r");
@@ -90,9 +115,9 @@ void readAllPress (USARTClass &pressureSerial,char add0[], char add1[], char add
 int16_t readUniquePress(USARTClass &pressureSerial,char address[])
 {
   char bytesIn[80]={
-    0x00  };
+    0x00      };
   char readComm[80]={
-    0x00  };
+    0x00      };
 
   int nchars;
   strcat(readComm,"U");
@@ -156,6 +181,8 @@ void serialDeviceInit(UARTClass& mainSerial, USARTClass& deviceSerial, int devic
     mainSerial.println(" serial port not responding.");
   }
 }
+
+
 
 
 

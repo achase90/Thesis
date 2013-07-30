@@ -8,7 +8,7 @@
 
 ITG3200 gyro = ITG3200();
 float  x,y,z;
-int ix, iy, iz;
+int16_t ix, iy, iz;
 
 void setup(void) {
   Serial.begin(9600);
