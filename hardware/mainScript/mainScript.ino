@@ -4,15 +4,24 @@
 #include <ITG3200.h>
 #include <SPI.h>
 #include <SD.h>
+#include <ADXL362.h>
 
-int magBaud = 9600;
-int gpsBaud = 9600;
-int pressBaud = 9600;
+const uint32_t magBaud = 9600;
+const uint32_t gpsBaud = 9600;
+const uint32_t pressBaud = 9600;
 
+unsigned long startTime;
+
+// set up communication with sensors
 USARTClass &magSerial = Serial1;
 USARTClass &gpsSerial = Serial2;
 USARTClass &pressureSerial = Serial3;
+
+
 ITG3200 gyro = ITG3200(); //construct gyro object
+
+
+ADXL362 accel; //construct accel object
 
 char pressSN0[13] = "4F15-01-A213";
 char pressSN1[13] = "R10F30-04-A1";
@@ -20,25 +29,35 @@ char pressSN2[13] = "R11L7-20-A50"; //not sure this serial number is correct
 char pressSN3[13] = "R11L7-20-A51"; //not sure this serial number is correct
 
 void setup() {
+
   Serial.begin(9600); //begin serial communication for debugging
   Serial.println("Serial port initialized.");
 
   serialDeviceInit(Serial, magSerial, magBaud,"mag"); //initialize magnetometer on Serial1
   //serialDeviceInit(Serial, gpsSerial, gpsBaud,"gps"); //initialize gps on Serial2
   serialDeviceInit(Serial, pressureSerial, pressBaud,"pre"); //initialize pressure sensors on Serial3
-Wire.begin(); //begin wire transmission
+
+
+  //set up gyro
+  Wire.begin(); //begin wire transmission
   delay(1000);
   gyro.init(ITG3200_ADDR_AD0_HIGH); //initialize gyro with address pulled high
+
+
+  //set up accelerometer
+  accel.begin();
+  accel.beginMeasure();
+  startTime = millis();
 }
 
 void loop() {
+    unsigned long time = millis();
   int16_t pressure[4]; //pressure sensor data
   int16_t magReading[3]; //magnetometer data
-int16_t gyroX;
-int16_t gyroY;
-int16_t gyroZ;
+  int16_t gyroX, gyroY, gyroZ;
+  int16_t accelX, accelY, accelZ, accelT;
+
   //start timer
-  unsigned long time = millis();
 
   //read pressure transducers
   readAllPress (pressureSerial,pressSN0,pressSN1,pressSN2,pressSN3,pressure);
@@ -64,17 +83,30 @@ int16_t gyroZ;
   Serial.print('\t');
   Serial.print(gyroZ);
   Serial.print('\t');
+  
   //read accel
-
+accel.readXYZTData(accelX,accelY,accelZ,accelT);
+  Serial.print(accelX);
+  Serial.print('\t');
+  Serial.print(accelY);
+  Serial.print('\t');
+  Serial.print(accelZ);
+  Serial.print('\t');
+  
   //read GPS
   readGPS();
   //format packet to be sent to SD card
 
   //write to SD card
-  Serial.println();
-  delay(10);
+    unsigned long now = millis()-time;
+  Serial.println(now);
 }
 
+/*
+void readAccel(int16_t &accelX,int16_t &accelY, int16_t &accelZ)
+{
+  accel.readXYZData(&accelX,&accelY, &accelZ);  	 
+}*/
 void readMagnetometer(USARTClass &magSerial,int16_t *magReading)
 {
   magSerial.print("*99P\r"); //TODO: add checking if data is actually available for all sensors
@@ -115,9 +147,9 @@ void readAllPress (USARTClass &pressureSerial,char add0[], char add1[], char add
 int16_t readUniquePress(USARTClass &pressureSerial,char address[])
 {
   char bytesIn[80]={
-    0x00      };
+    0x00        };
   char readComm[80]={
-    0x00      };
+    0x00        };
 
   int nchars;
   strcat(readComm,"U");
@@ -181,6 +213,7 @@ void serialDeviceInit(UARTClass& mainSerial, USARTClass& deviceSerial, int devic
     mainSerial.println(" serial port not responding.");
   }
 }
+
 
 
 

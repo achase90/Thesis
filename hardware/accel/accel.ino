@@ -6,7 +6,7 @@ ADXL362 xl;
 
 int16_t XValue, YValue, ZValue, Temperature;
 
-
+uint8_t FS = 10000;
 void setup(){
   Serial.begin(9600);
   xl.begin();                   // Setup SPI protocol, issue device soft reset
