@@ -1,0 +1,24 @@
+Partlist
+
+Exported from thesis.brd at 7/29/2013 1:38:49 PM
+
+EAGLE Version 6.4.0 Copyright (c) 1988-2013 CadSoft
+
+Assembly variant: 
+
+Part     Value                Package                     Library               Position (inch)       Orientation
+
+C3       4.7uF                SPARKFUN_0402-CAP           HMC5883L_Breakout-v11 (2.35 1.855)          R0
+C4       0.1uF                SPARKFUN_0402-CAP           HMC5883L_Breakout-v11 (2.49 1.755)          R90
+C5       0.22uF               SPARKFUN_0402-CAP           HMC5883L_Breakout-v11 (2.35 1.935)          R180
+J1       RJ11-6PTH            RJ11-6                      SparkFun-Connectors   (0.495 2.095)         R180
+R1       4.7K                 SPARKFUN_0402-RES           HMC5883L_Breakout-v11 (2.345 1.565)         R0
+R2       4.7K                 SPARKFUN_0402-RES           HMC5883L_Breakout-v11 (2.485 1.6)           R270
+U$1      DUE(NORMAL)          DUE(NORMAL)                 DUElib130425          (2.85 1)              R0
+U$2      MICROSD_SPI_MODE     MICRO_SD_CONNECTOR          con-molex-microsd     (3.035 1.72)          R0
+U$3      VGA-F90S             DB-15-F90+SHIELD-SMALL_PADS VideoConnectors       (0.025 1.03)          R270
+U$4      SPARKFUN_HMC5883LSMD SPARKFUN_16LPCC             HMC5883L_Breakout-v11 (2.345 1.715)         R90
+U$5      HEADER-3X8SERVO      3X8RA                       pixhawk2              (0.455 0.135)         R90
+U$6      UBLOXLEA6TBOB        UBLOXLEA6TBOB               csgshop               (0.88 2.095)          R270
+U1       ITG-3200             QFN-24                      SparkFun              (2.345 0.5)           R270
+U2       ADXL362              ADXL362                     SparkFun-Sensors      (3.67 0.31)           R0

@@ -1,0 +1,20 @@
+Partlist
+
+Exported from satellite.brd at 7/29/2013 1:40:08 PM
+
+EAGLE Version 6.4.0 Copyright (c) 1988-2013 CadSoft
+
+Assembly variant: 
+
+Part     Value          Package                     Library         Position (inch)       Orientation
+
+/CS                     1X05                        pinhead         (2.5 0.15)            R180
+BR                      1X02                        pinhead         (2.95 0.15)           R180
+I2C                     1X03                        pinhead         (2 0.15)              R0
+JP1                     1X06                        pinhead         (0.15 2.5)            R90
+JP2                     1X06                        pinhead         (3 1.4)               R90
+JP3                     1X06                        pinhead         (3 2.5)               R270
+JP4                     1X06                        pinhead         (0.15 1.4)            R90
+R1       4.7K           0204/5                      rcl             (2.9 0.35)            R0
+SPI                     2X03                        pinhead         (1.6 0.2)             R0
+VGA1     VGA-F90S       DB-15-F90+SHIELD-SMALL_PADS VideoConnectors (0.65 0)              R0

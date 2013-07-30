@@ -1,0 +1,19 @@
+Partlist
+
+Exported from magBoard.brd at 7/29/2013 1:40:32 PM
+
+EAGLE Version 6.4.0 Copyright (c) 1988-2013 CadSoft
+
+Assembly variant: 
+
+Part     Value          Package              Library             Position (inch)       Orientation
+
+C2       10uF           CPOL-RADIAL-10UF-25V SparkFun-Capacitors (0.965 1.25)          R180
+C3       100nF          CAP-PTH-SMALL-KIT    SparkFun-Capacitors (0.105 0.7)           R270
+C4       100nF          CAP-PTH-SMALL-KIT    SparkFun-Capacitors (0.995 0.735)         R180
+C5       100nF          CAP-PTH-SMALL-KIT    SparkFun-Capacitors (0.665 0.735)         R180
+C6       100nF          CAP-PTH-SMALL-KIT    SparkFun-Capacitors (0.105 0.415)         R270
+J1       RJ11-6PTH      RJ11-6               SparkFun-Connectors (0.365 1.335)         R270
+MAG      RS232          DB9                  SparkFun-Connectors (1.3 0.805)           R270
+R1       1K             0204/5               rcl                 (0.98 1.03)           R0
+U3       MAX232PTH      DIL16                SparkFun-DigitalIC  (0.67 0.435)          R180
