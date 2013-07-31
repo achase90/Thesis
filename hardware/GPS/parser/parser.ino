@@ -20,16 +20,15 @@ void loop() {
     char cog[10] = {0x00};
     char date[6] = {0x00};
     char mode[1] = {0x00};
-    char CS[3] = {0x00}
-    ;
+    char CS[3] = {0x00};
 
     int nchars;
     nchars = Serial2.readBytesUntil('$',bytesIn,64); //read until beginning of GPS string
     nchars = Serial2.readBytesUntil(',',msgID,64);
     Serial.write((byte *)msgID,nchars);
     Serial.print('\t');
-    nchars = Serial2.readBytesUntil(',',utcTime,64);
-    Serial.print(int32_t (100*atof(utcTime)));
+    nchars = Serial2.readBytesUntil(',',utcTime,64); 
+    Serial.print(uint32_t (1000*atof(utcTime)));
     Serial.print('\t');
     nchars = Serial2.readBytesUntil(',',gpsStatus,64);
     Serial.write((byte *)gpsStatus,nchars);
@@ -41,19 +40,19 @@ void loop() {
     Serial.write((byte *)nsInd,nchars);
     Serial.print('\t');
     nchars = Serial2.readBytesUntil(',',gpsLong,64);
-    Serial.print(int32_t (100000*atof(gpsLong)));
+    Serial.print(uint32_t (100000*atof(gpsLong)));
     Serial.print('\t');
     nchars = Serial2.readBytesUntil(',',ewInd,64);
     Serial.write((byte *)ewInd,nchars);
     Serial.print('\t');
     nchars = Serial2.readBytesUntil(',',spd,64);
-    Serial.print(int32_t (100000*atof(spd)));
+    Serial.print(int32_t (10000*atof(spd)));
     Serial.print('\t');
     nchars = Serial2.readBytesUntil(',',cog,64);
-    Serial.print(int32_t (100000*atof(cog)));
+    Serial.print(int32_t (10000*atof(cog)));
     Serial.print('\t');
     nchars = Serial2.readBytesUntil(',',date,64);
-    Serial.print(int32_t (atoi(date)));
+    Serial.print(uint32_t (atoi(date)));
     Serial.print('\t');
     nchars = Serial2.readBytesUntil(',',bytesIn,64);
     nchars = Serial2.readBytesUntil(',',bytesIn,64);
@@ -61,7 +60,7 @@ void loop() {
     Serial.write((byte *)mode,nchars);
     Serial.print('\t');
     nchars = Serial2.readBytesUntil('\r',CS,64);
-    Serial.println(int32_t (atoi(CS)));
+    Serial.println(uint32_t (atoi(CS)));
 
     Serial2.read(); //remove line feed character
   }

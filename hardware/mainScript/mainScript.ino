@@ -1,4 +1,6 @@
 //TODO: add checking if data is actually available for all sensors, especially serial sensors
+//TODO: change to if GPS not available, reset all values to zeros
+//TODO: get rid of readBytesUntil and write your own gps parser
 
 #include <Wire.h>
 #include <ITG3200.h>
@@ -34,9 +36,9 @@ void setup() {
   Serial.println("Serial port initialized.");
 
   serialDeviceInit(Serial, magSerial, magBaud,"mag"); //initialize magnetometer on Serial1
-  //serialDeviceInit(Serial, gpsSerial, gpsBaud,"gps"); //initialize gps on Serial2
+  serialDeviceInit(Serial, gpsSerial, gpsBaud,"gps"); //initialize gps on Serial2
   serialDeviceInit(Serial, pressureSerial, pressBaud,"pre"); //initialize pressure sensors on Serial3
-
+gpsSerial.setTimeout(200);
 
   //set up gyro
   Wire.begin(); //begin wire transmission
@@ -48,15 +50,29 @@ void setup() {
   accel.begin();
   accel.beginMeasure();
   startTime = millis();
+  gpsSerial.flush();
 }
 
 void loop() {
-    unsigned long time = millis();
+  unsigned long time = millis();
   int16_t pressure[4]; //pressure sensor data
   int16_t magReading[3]; //magnetometer data
   int16_t gyroX, gyroY, gyroZ;
   int16_t accelX, accelY, accelZ, accelT;
-
+  char msgID[5] = {0x00};
+  char utcTime[9] = {0x00};
+  char gpsStatus[1] = {0x00};
+  char lat[9] = {0x00};
+  char nsInd[1] = {0x00};
+  char gpsLong[10] = {0x00};
+  char ewInd[1] = {0x00};
+  char spd[10] = {0x00};
+  char cog[10] = {0x00};
+  char date[6] = {0x00};
+  char mode[1] = {0x00};
+  char CS[3] = {0x00};
+  int32_t latInt,gpsLongInt,spdInt,cogInt=0;
+  uint32_t utcTimeInt,dateInt,CSInt=0;
   //start timer
 
   //read pressure transducers
@@ -83,30 +99,63 @@ void loop() {
   Serial.print('\t');
   Serial.print(gyroZ);
   Serial.print('\t');
-  
+
   //read accel
-accel.readXYZTData(accelX,accelY,accelZ,accelT);
+  accel.readXYZTData(accelX,accelY,accelZ,accelT);
   Serial.print(accelX);
   Serial.print('\t');
   Serial.print(accelY);
   Serial.print('\t');
   Serial.print(accelZ);
   Serial.print('\t');
-  
-  //read GPS
-  readGPS();
-  //format packet to be sent to SD card
 
+  //read GPS
+  if (gpsSerial.available()>0)
+  {
+  readGPS(gpsSerial,msgID,utcTimeInt,gpsStatus, latInt,nsInd,gpsLongInt,ewInd,spdInt,cogInt,dateInt,mode,CSInt);
+  }//format packet to be sent to SD card
+
+    Serial.write((byte *)msgID,5);
+    Serial.print('\t');
+
+  Serial.print(utcTimeInt);
+ Serial.print('\t');
+
+  Serial.write((byte *)gpsStatus,1);
+  Serial.print('\t');
+
+  Serial.print(latInt);
+  Serial.print('\t');
+
+ Serial.write((byte *)nsInd,1);
+ Serial.print('\t');
+
+ Serial.print(gpsLongInt);
+  Serial.print('\t');
+
+  Serial.write((byte *)ewInd,1);
+  Serial.print('\t');
+  
+ Serial.print(spdInt);
+Serial.print('\t');
+
+ Serial.print(cogInt);
+ Serial.print('\t');
+
+Serial.print(dateInt);
+ Serial.print('\t');
+ 
+ 
   //write to SD card
-    unsigned long now = millis()-time;
+  unsigned long now = millis()-time;
   Serial.println(now);
 }
 
 /*
 void readAccel(int16_t &accelX,int16_t &accelY, int16_t &accelZ)
-{
-  accel.readXYZData(&accelX,&accelY, &accelZ);  	 
-}*/
+ {
+ accel.readXYZData(&accelX,&accelY, &accelZ);  	 
+ }*/
 void readMagnetometer(USARTClass &magSerial,int16_t *magReading)
 {
   magSerial.print("*99P\r"); //TODO: add checking if data is actually available for all sensors
@@ -146,10 +195,8 @@ void readAllPress (USARTClass &pressureSerial,char add0[], char add1[], char add
 
 int16_t readUniquePress(USARTClass &pressureSerial,char address[])
 {
-  char bytesIn[80]={
-    0x00        };
-  char readComm[80]={
-    0x00        };
+  char bytesIn[80]={0x00};
+  char readComm[80]={0x00};
 
   int nchars;
   strcat(readComm,"U");
@@ -162,11 +209,87 @@ int16_t readUniquePress(USARTClass &pressureSerial,char address[])
   return pressure;
 }
 
-void readGPS()
+void readGPS(USARTClass &gpsSerial,char *msgID,uint32_t &utcTimeInt,char *gpsStatus, int32_t &latInt,char *nsInd,int32_t &gpsLongInt,char *ewInd,int32_t &spdInt,int32_t &cogInt,uint32_t &dateInt,char *mode,uint32_t &CSInt)
 {
 
-}
+    char bytesIn[128] = {0x00};
+    char utcTime[9] = {0x00};
+    char lat[9] = {0x00};
+    char gpsLong[10] = {0x00};
+    char spd[10] = {0x00};
+    char cog[10] = {0x00};
+    char date[6] = {0x00};
+    char CS[3] = {0x00};
+    utcTimeInt = 0x00;
+    latInt = 0x00;
+    gpsLongInt = 0x00;
+    spdInt = 0x00;
+    cogInt = 0x00;
+    dateInt = 0x00;
+    CSInt = 0x00;
 
+    int nchars;
+    nchars = gpsSerial.readBytesUntil('$',bytesIn,128); //read until beginning of GPS string
+
+    nchars = gpsSerial.readBytesUntil(',',msgID,128);
+    // Serial.write((byte *)msgID,nchars);
+    // Serial.print('\t');
+
+    nchars = gpsSerial.readBytesUntil(',',utcTime,128);
+    utcTimeInt = 1000*atof(utcTime);
+ // Serial.print(utcTimeInt);
+ //Serial.print('\t');
+
+    nchars = gpsSerial.readBytesUntil(',',gpsStatus,128);
+ // Serial.write((byte *)gpsStatus,nchars);
+ // Serial.print('\t');
+
+    nchars = gpsSerial.readBytesUntil(',',lat,128);
+    latInt = 100000*atof(lat);
+ // Serial.print(latInt);
+ // Serial.print('\t');
+
+    nchars = gpsSerial.readBytesUntil(',',nsInd,128);
+ //Serial.write((byte *)nsInd,nchars);
+  //Serial.print('\t');
+
+    nchars = gpsSerial.readBytesUntil(',',gpsLong,128);
+    gpsLongInt = 100000*atof(gpsLong);
+ // Serial.print(gpsLongInt);
+ // Serial.print('\t');
+
+    nchars = gpsSerial.readBytesUntil(',',ewInd,128);
+ // Serial.write((byte *)ewInd,nchars);
+ // Serial.print('\t');
+
+    nchars = gpsSerial.readBytesUntil(',',spd,128);
+    spdInt = int32_t(10000*atof(spd));
+ // Serial.print(spdInt);
+ //Serial.print('\t');
+
+    nchars = gpsSerial.readBytesUntil(',',cog,128);
+    cogInt = 10000*atof(cog);
+ // Serial.print(cogInt);
+// Serial.print('\t');
+
+    nchars = gpsSerial.readBytesUntil(',',date,128);
+    dateInt = atoi(date);
+ //Serial.print(dateInt);
+ // Serial.print('\t');
+
+    while (gpsSerial.available()>0)
+ {
+    gpsSerial.read();
+}
+    //mode={0x00};
+    //    nchars=0;
+    //nchars = gpsSerial.readBytesUntil('*',mode,128);
+    //   Serial2.flush(); //remove any more characters in buffer
+
+   // Serial.print("Is this the problem???");
+ // Serial.write((byte *)mode,nchars);
+  //Serial.print('\t');
+}
 void serialDeviceInit(UARTClass& mainSerial, USARTClass& deviceSerial, int deviceBaud,char ID[])
 {
   deviceSerial.begin(deviceBaud); //begin magnetometer serial communication
@@ -213,15 +336,3 @@ void serialDeviceInit(UARTClass& mainSerial, USARTClass& deviceSerial, int devic
     mainSerial.println(" serial port not responding.");
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
