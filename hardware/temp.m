@@ -1,7 +1,9 @@
 clear all
 %# type and size in byte of the record fields
-recordType = {'int32' 'long' 'ulong'};
-recordLen = [4 4 4];
+            % time    accelx   accely  accelz  gyrox   gyroy   gyroz   magx    magy    magz   press1 press2 press3 press4   gps deltaT
+
+recordType = {'ulong' 'int16' 'int16' 'int16' 'int16' 'int16' 'int16' 'int16' 'int16' 'int16' 'int16' 'int16' 'int16' 'int16' 'uchar' 'uchar' 'uchar' 'uchar' 'uchar' 'uint32' 'uchar' 'int32' 'uchar' 'int32' 'uchar' 'int32' 'int32' 'uint32' 'uchar' 'uint32' 'ulong'};                                                     
+recordLen = [4           2      2         2      2       2       2       2       2       2      2       2      2       2      1       1       1       1        1   4        1      4         1       4       1        4       4      4 1 4 4];
 R = cell(1,numel(recordType));
 
 %# read column-by-column

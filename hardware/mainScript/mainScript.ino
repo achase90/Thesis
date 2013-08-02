@@ -52,8 +52,6 @@ void setup() {
 }
 
 void loop() {
-  //start timer
-  unsigned long time = millis();
   int16_t pressure[4]; //pressure sensor data
   int16_t magReading[3]; //magnetometer data
   int16_t gyroX, gyroY, gyroZ;
@@ -62,23 +60,21 @@ void loop() {
   char *gpsStatus={"?"},*nsInd={"?"},*ewInd={"?"},*mode={"?"};
   int32_t gpsLat=0,gpsLong=0,gpsSpd=0,gpsCrs={0};
   uint32_t utcTime=0,date=0,CS={0};
-
-  //read pressure transducers
-  readAllPress (pressureSerial,pressSN0,pressSN1,pressSN2,pressSN3,pressure);
-  Serial.print(pressure[0]);
+  //start timer
+  unsigned long time = millis();
+  Serial.print(time);
   Serial.print('\t');
-  Serial.print(pressure[1]);
-
-  //read magnetometer
-  readMagnetometer(magSerial,magReading);
+  
+    //read accel
+  accel.readXYZTData(accelX,accelY,accelZ,accelT);
+  Serial.print(accelX);
   Serial.print('\t');
-  Serial.print(magReading[0]);
+  Serial.print(accelY);
   Serial.print('\t');
-  Serial.print(magReading[1]);
+  Serial.print(accelZ);
   Serial.print('\t');
-  Serial.print(magReading[2]);
-
-  //read gyro
+  
+    //read gyro
   readGyroData(gyroX,gyroY,gyroZ);
   Serial.print('\t');
   Serial.print(gyroX);
@@ -87,15 +83,23 @@ void loop() {
   Serial.print('\t');
   Serial.print(gyroZ);
   Serial.print('\t');
+  
+    //read magnetometer
+  readMagnetometer(magSerial,magReading);
+  Serial.print('\t');
+  Serial.print(magReading[0]);
+  Serial.print('\t');
+  Serial.print(magReading[1]);
+  Serial.print('\t');
+  Serial.print(magReading[2]);
+  
+  
+  //read pressure transducers
+  readAllPress (pressureSerial,pressSN0,pressSN1,pressSN2,pressSN3,pressure);
+  Serial.print(pressure[0]);
+  Serial.print('\t');
+  Serial.print(pressure[1]);
 
-  //read accel
-  accel.readXYZTData(accelX,accelY,accelZ,accelT);
-  Serial.print(accelX);
-  Serial.print('\t');
-  Serial.print(accelY);
-  Serial.print('\t');
-  Serial.print(accelZ);
-  Serial.print('\t');
 
   //read GPS
   if (gpsSerial.available()>0)
