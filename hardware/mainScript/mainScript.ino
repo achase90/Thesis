@@ -220,7 +220,7 @@ void readGPS(USARTClass &gpsSerial,char *msgID,uint32_t &utcTime,char **gpsStatu
       char *pt;
       pt = strsep(&s1,",*");
 
-      for (int j=0;j<8;j++)
+      for (int j=0;j<5;j++)
       {
         msgID[j] = (char )pt[j];
       }
