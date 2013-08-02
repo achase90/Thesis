@@ -9,7 +9,11 @@
 const uint32_t magBaud = 9600;
 const uint32_t gpsBaud = 9600;
 const uint32_t pressBaud = 9600;
-
+const uint8_t sdChipSelect = 53;
+boolean printSerialOut = true;
+char filename[80]={0};
+File dataFile;
+boolean logData=true;
 unsigned long startTime;
 
 // set up communication with sensors
@@ -20,7 +24,6 @@ USARTClass &pressureSerial = Serial3;
 
 ITG3200 gyro = ITG3200(); //construct gyro object
 
-
 ADXL362 accel; //construct accel object
 
 char pressSN0[13] = "4F15-01-A213";
@@ -29,14 +32,50 @@ char pressSN2[13] = "R11L7-20-A50"; //not sure this serial number is correct
 char pressSN3[13] = "R11L7-20-A51"; //not sure this serial number is correct
 
 void setup() {
+  char msgID[6]="?????";
+  char *gpsStatus={"?"},*nsInd={"?"},*ewInd={"?"},*mode={"?"};
+  int32_t gpsLat=0,gpsLong=0,gpsSpd=0,gpsCrs=0;
+  uint32_t utcTime=0,date=0,CS={0};
 
   Serial.begin(9600); //begin serial communication for debugging
   Serial.println("Serial port initialized.");
 
+  // initialize SD card
+  Serial.println("Initializing SD Card...");
+  initSDCard(Serial,sdChipSelect);
+  
+  
+  Serial.println("Initializing magnetometer...");
   serialDeviceInit(Serial, magSerial, magBaud,"mag"); //initialize magnetometer on Serial1
+  Serial.println("Initializing GPS...");
   serialDeviceInit(Serial, gpsSerial, gpsBaud,"gps"); //initialize gps on Serial2
+  gpsSerial.setTimeout(100);
+  Serial.println("Initializing pressure sensors...");
   serialDeviceInit(Serial, pressureSerial, pressBaud,"pre"); //initialize pressure sensors on Serial3
-  gpsSerial.setTimeout(200);
+
+  unsigned long time=millis();
+  unsigned long now=time;
+  while (!gpsSerial.available()>0)
+  {
+    if (now>time+5000)
+    {
+      break;
+    } 
+  }
+
+  readGPS(gpsSerial,msgID,utcTime,&gpsStatus, gpsLat,&nsInd,gpsLong,&ewInd,gpsSpd,gpsCrs,date,&mode,CS);
+  Serial.println(filename);
+  strcpy(filename,"flight_");
+  char str[20];
+  sprintf(str,"%06d",date);
+  strcat(filename,str);
+  strcat(filename,"_");
+  sprintf(str,"%d",utcTime);
+  strcat(filename,str);
+  strcat(filename,".txt");
+  Serial.println(filename);
+
+  dataFile = SD.open(filename,FILE_WRITE);
 
   //set up gyro
   Wire.begin(); //begin wire transmission
@@ -58,48 +97,23 @@ void loop() {
   int16_t accelX, accelY, accelZ, accelT;
   char msgID[6]="?????";
   char *gpsStatus={"?"},*nsInd={"?"},*ewInd={"?"},*mode={"?"};
-  int32_t gpsLat=0,gpsLong=0,gpsSpd=0,gpsCrs={0};
+  int32_t gpsLat=0,gpsLong=0,gpsSpd=0,gpsCrs=0;
   uint32_t utcTime=0,date=0,CS={0};
+
   //start timer
   unsigned long time = millis();
-  Serial.print(time);
-  Serial.print('\t');
-  
-    //read accel
+
+  //read accel
   accel.readXYZTData(accelX,accelY,accelZ,accelT);
-  Serial.print(accelX);
-  Serial.print('\t');
-  Serial.print(accelY);
-  Serial.print('\t');
-  Serial.print(accelZ);
-  Serial.print('\t');
-  
-    //read gyro
+
+  //read gyro
   readGyroData(gyroX,gyroY,gyroZ);
-  Serial.print('\t');
-  Serial.print(gyroX);
-  Serial.print('\t');
-  Serial.print(gyroY);
-  Serial.print('\t');
-  Serial.print(gyroZ);
-  Serial.print('\t');
-  
-    //read magnetometer
+
+  //read magnetometer
   readMagnetometer(magSerial,magReading);
-  Serial.print('\t');
-  Serial.print(magReading[0]);
-  Serial.print('\t');
-  Serial.print(magReading[1]);
-  Serial.print('\t');
-  Serial.print(magReading[2]);
-  
-  
+
   //read pressure transducers
   readAllPress (pressureSerial,pressSN0,pressSN1,pressSN2,pressSN3,pressure);
-  Serial.print(pressure[0]);
-  Serial.print('\t');
-  Serial.print(pressure[1]);
-
 
   //read GPS
   if (gpsSerial.available()>0)
@@ -108,48 +122,92 @@ void loop() {
   }
 
   //format packet to be sent to SD card
-
-  Serial.print(msgID);
-  Serial.print("\t");
-
-  Serial.print(utcTime);
-  Serial.print("\t");
-
-  Serial.print(gpsStatus);
-  Serial.print("\t");
-
-  Serial.print(gpsLat);
-  Serial.print('\t');
-
-  Serial.print(nsInd);
-  Serial.print('\t');
-
-  Serial.print(gpsLong);
-  Serial.print('\t');
-
-  Serial.print(ewInd);
-  Serial.print('\t');
-
-  Serial.print(gpsSpd);
-  Serial.print('\t');
-
-  Serial.print(gpsCrs);
-  Serial.print('\t');
-
-  Serial.print(date);
-  Serial.print('\t');
-
-  Serial.print(mode);
-  Serial.print('\t');
-
-  Serial.print(CS);
-  Serial.print('\t');
-
-  //write to SD card
   unsigned long now = millis()-time;
-  Serial.println(now);
-}
+  //write to SD card
 
+
+  if (logData)
+  {
+    dataFile.print(time,BIN);
+    dataFile.print(accelX,BIN);
+    dataFile.print(accelY,BIN);
+    dataFile.print(accelZ,BIN);
+    dataFile.print(gyroX,BIN);
+    dataFile.print(gyroY,BIN);
+    dataFile.print(gyroZ,BIN);
+    dataFile.print(magReading[0],BIN);
+    dataFile.print(magReading[1],BIN);
+    dataFile.print(magReading[2],BIN);
+    dataFile.print(pressure[0],BIN);
+    dataFile.print(pressure[1],BIN);
+    dataFile.print(*msgID,BIN);
+    dataFile.print(utcTime,BIN);
+    dataFile.print(*gpsStatus,BIN);
+    dataFile.print(gpsLat,BIN);
+    dataFile.print(*nsInd,BIN);
+    dataFile.print(gpsLong,BIN);
+    dataFile.print(*ewInd,BIN);
+    dataFile.print(gpsSpd,BIN);
+    dataFile.print(gpsCrs,BIN);
+    dataFile.print(date,BIN);
+    dataFile.print(*mode,BIN);
+    dataFile.print(CS,BIN);
+    dataFile.println(now,BIN);
+  }
+  
+  
+  if (true)
+  {
+    Serial.print(time);
+    Serial.print('\t');
+    Serial.print(accelX);
+    Serial.print('\t');
+    Serial.print(accelY);
+    Serial.print('\t');
+    Serial.print(accelZ);
+    Serial.print('\t');
+    Serial.print(gyroX);
+    Serial.print('\t');
+    Serial.print(gyroY);
+    Serial.print('\t');
+    Serial.print(gyroZ);
+    Serial.print('\t');
+    Serial.print(magReading[0]);
+    Serial.print('\t');
+    Serial.print(magReading[1]);
+    Serial.print('\t');
+    Serial.print(magReading[2]);
+    Serial.print(pressure[0]);
+    Serial.print('\t');
+    Serial.print(pressure[1]);
+    Serial.print('\t');
+    Serial.print(msgID);
+    Serial.print('\t');
+    Serial.print(utcTime);
+    Serial.print('\t');
+    Serial.print(gpsStatus);
+    Serial.print('\t');
+    Serial.print(gpsLat);
+    Serial.print('\t');
+    Serial.print(nsInd);
+    Serial.print('\t');
+    Serial.print(gpsLong);
+    Serial.print('\t');
+    Serial.print(ewInd);
+    Serial.print('\t');
+    Serial.print(gpsSpd);
+    Serial.print('\t');
+    Serial.print(gpsCrs);
+    Serial.print('\t');
+    Serial.print(date);
+    Serial.print('\t');
+    Serial.print(mode);
+    Serial.print('\t');
+    Serial.print(CS);
+    Serial.print('\t');
+    Serial.println(now);
+  }
+}
 void readMagnetometer(USARTClass &magSerial,int16_t *magReading)
 {
   magSerial.print("*99P\r");
@@ -179,9 +237,6 @@ void readGyroData(int16_t &gyroX,int16_t &gyroY,int16_t &gyroZ)
   }
 }
 
-
-
-
 void readAllPress (USARTClass &pressureSerial,char add0[], char add1[], char add2[], char add3[], int16_t *pressure)
 {
   pressureSerial.print("WC\r");
@@ -190,8 +245,6 @@ void readAllPress (USARTClass &pressureSerial,char add0[], char add1[], char add
   //pressure[2] = readUniquePress(pressureSerial,add2);
   //pressure[3] = readUniquePress(pressureSerial,add3);
 }
-
-
 
 int16_t readUniquePress(USARTClass &pressureSerial,char address[])
 {
@@ -223,7 +276,7 @@ void readGPS(USARTClass &gpsSerial,char *msgID,uint32_t &utcTime,char **gpsStatu
       char *s1=bytesIn;
       char *pt;
       pt = strsep(&s1,",*");
-
+      //Serial.println(pt);
       for (int j=0;j<5;j++)
       {
         msgID[j] = (char )pt[j];
@@ -233,6 +286,7 @@ void readGPS(USARTClass &gpsSerial,char *msgID,uint32_t &utcTime,char **gpsStatu
       int i=0;
       while (pt = strsep( &s1,",*"))
       {
+        //Serial.println(pt);
         switch (i++)
         {
         case 0:
@@ -291,12 +345,14 @@ void readGPS(USARTClass &gpsSerial,char *msgID,uint32_t &utcTime,char **gpsStatu
             break;
           }
         case 11:
-          {                    
+          {
             *mode = pt;
+       //     Serial.print("got here : ");
+//Serial.println(*mode);
             break;
           }
         case 12:
-          {                    
+          {
             CS = atoi(pt);
             break;
           }
@@ -309,7 +365,7 @@ void readGPS(USARTClass &gpsSerial,char *msgID,uint32_t &utcTime,char **gpsStatu
     // if the character that was read then flush the rest of the data
     while (gpsSerial.available()>0)
     {
-      gpsSerial.read(); 
+      gpsSerial.read();
     }
   }
 }
@@ -366,5 +422,29 @@ void serialDeviceInit(UARTClass& mainSerial, USARTClass& deviceSerial, int devic
   }
 }
 
+
+void initSDCard(UARTClass &serial,uint8_t sdCardChipSelect)
+{
+  unsigned long time = millis();
+  unsigned long now = time;
+  boolean sdCardOpen = true;
+  while (!SD.begin(sdCardChipSelect))
+  {
+    now = millis();
+    if (now > time+10000)
+    {
+      sdCardOpen = false;
+      break; 
+    }
+  }
+  if (!sdCardOpen)
+  {
+    serial.print("ERROR : SD Card not responding.");
+  }
+  else
+  {
+   Serial.println("SD card initialized."); 
+  }
+}
 
 
