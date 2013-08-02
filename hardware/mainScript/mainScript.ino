@@ -1,6 +1,4 @@
 //TODO: add checking if data is actually available for all sensors, especially serial sensors
-//TODO: change to if GPS not available, reset all values to zeros
-//TODO: get rid of readBytesUntil and write your own gps parser
 
 #include <Wire.h>
 #include <ITG3200.h>
@@ -61,18 +59,9 @@ void loop() {
   int16_t gyroX, gyroY, gyroZ;
   int16_t accelX, accelY, accelZ, accelT;
   char msgID[6]="?????";
-  char *gpsStatus={
-    "?"  }
-  ,*nsInd={
-    "?"  }
-  ,*ewInd={
-    "?"  }
-  ,*mode={
-    "?"  };
-  int32_t gpsLat=0,gpsLong=0,gpsSpd=0,gpsCrs={
-    0  };
-  uint32_t utcTime=0,date=0,CS={
-    0  };
+  char *gpsStatus={"?"},*nsInd={"?"},*ewInd={"?"},*mode={"?"};
+  int32_t gpsLat=0,gpsLong=0,gpsSpd=0,gpsCrs={0};
+  uint32_t utcTime=0,date=0,CS={0};
 
   //read pressure transducers
   readAllPress (pressureSerial,pressSN0,pressSN1,pressSN2,pressSN3,pressure);
@@ -157,14 +146,9 @@ void loop() {
   Serial.println(now);
 }
 
-/*
-void readAccel(int16_t &accelX,int16_t &accelY, int16_t &accelZ)
- {
- accel.readXYZData(&accelX,&accelY, &accelZ);  	 
- }*/
 void readMagnetometer(USARTClass &magSerial,int16_t *magReading)
 {
-  magSerial.print("*99P\r"); //TODO: add checking if data is actually available for all sensors
+  magSerial.print("*99P\r");
   if (magSerial.available()>0)
   {
     byte buff[70];
@@ -207,10 +191,8 @@ void readAllPress (USARTClass &pressureSerial,char add0[], char add1[], char add
 
 int16_t readUniquePress(USARTClass &pressureSerial,char address[])
 {
-  char bytesIn[80]={
-    0x00      };
-  char readComm[80]={
-    0x00  };
+  char bytesIn[80]={0x00};
+  char readComm[80]={0x00};
 
   int nchars;
   strcat(readComm,"U");
@@ -225,8 +207,7 @@ int16_t readUniquePress(USARTClass &pressureSerial,char address[])
 
 void readGPS(USARTClass &gpsSerial,char *msgID,uint32_t &utcTime,char **gpsStatus, int32_t &gpsLat,char **nsInd,int32_t &gpsLong,char **ewInd,int32_t &gpsSpd,int32_t &gpsCrs,uint32_t &date,char **mode,uint32_t &CS)
 {
-  char bytesIn[200] = {
-    0  };
+  char bytesIn[200] = {0};
   int nchars;
   if (gpsSerial.available()>0)
   {
@@ -238,28 +219,16 @@ void readGPS(USARTClass &gpsSerial,char *msgID,uint32_t &utcTime,char **gpsStatu
       char *s1=bytesIn;
       char *pt;
       pt = strsep(&s1,",*");
-      //  Serial.println();
-      //    Serial.println();
 
-      // Serial.print(pt);
-      // Serial.print('\t');
-      //Serial.print(msgID);
-      //Serial.println();
-      // Serial.println();
       for (int j=0;j<8;j++)
       {
         msgID[j] = (char )pt[j];
-        //  Serial.print(pt[j]);
-        // Serial.print('\t');
-        //  Serial.print(msgID[j]);
-        // Serial.print('\t');
       }
-      //Serial.println(msgID);
-      //msgID = pt;
+
+
       int i=0;
       while (pt = strsep( &s1,",*"))
       {
-        //delay(5);
         switch (i++)
         {
         case 0:
@@ -334,7 +303,6 @@ void readGPS(USARTClass &gpsSerial,char *msgID,uint32_t &utcTime,char **gpsStatu
 
 
     // if the character that was read then flush the rest of the data
-
     while (gpsSerial.available()>0)
     {
       gpsSerial.read(); 
