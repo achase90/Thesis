@@ -1,11 +1,11 @@
 void setup() {
   Serial.begin(9600);
-  Serial3.begin(9600);
+  Serial3.begin(19200);
   Serial.println("Serial ports open");
 }
 
 void loop() {
-  char bytesIn[80]={0x00};
+  char bytesIn[80]={0x00}; 
   int nchars;
   int16_t pressure;
   
