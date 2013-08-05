@@ -5,15 +5,23 @@
 #include <SPI.h>
 #include <SD.h>
 #include <ADXL362.h>
+#include<OneWire.h>
+#include<DallasTemperature.h>
 
+#define magInstalled 1
+#define gpsInstalled 0
+#define pressureInstalled 1
+#define ONE_WIRE_BUS 49
+#define TEMPERATURE_PRECISION 9
 
 const uint32_t magBaud = 19200;
-const uint32_t gpsBaud = 9600;
+const uint32_t gpsBaud = 57600;
 const uint32_t pressBaud = 19200;
 const uint8_t sdChipSelect = 53;
-boolean printSerialOut = false;
+boolean printSerialOut = true;
 
-char filename[80]={0};
+char filename[80]={
+  0};
 //File dataFile;
 boolean logData=false;
 unsigned long startTime;
@@ -23,33 +31,40 @@ USARTClass &magSerial = Serial1;
 USARTClass &gpsSerial = Serial2;
 USARTClass &pressureSerial = Serial3;
 
-
+//Constructors
 ITG3200 gyro = ITG3200(); //construct gyro object
 
 ADXL362 accel; //construct accel object
+
+OneWire oneWire(ONE_WIRE_BUS);
+
+// Pass oneWire reference to Dallas Temperature. 
+DallasTemperature sensors(&oneWire);
+
+DeviceAddress tempDeviceAddress; // temperature sensor device address
 
 char pressSN0[13] = "4F15-01-A213";
 char pressSN1[13] = "R10F30-04-A1";
 char pressSN2[13] = "R11L7-20-A50"; //not sure this serial number is correct
 char pressSN3[13] = "R11L7-20-A51"; //not sure this serial number is correct
 
-byte writeBuff[256];
+byte writeBuff[1028];
 uint16_t writeBuffLoc=0;
-const uint8_t nBytesPerSample = 29;
+const uint8_t nBytesPerSample = 31;
 
 void setup() {
   char msgID[6]="?????";
   char *gpsStatus={
-    "?"      }
+    "?"          }
   ,*nsInd={
-    "?"      }
+    "?"          }
   ,*ewInd={
-    "?"      }
+    "?"          }
   ,*mode={
-    "?"      };
+    "?"          };
   int32_t gpsLat=0,gpsLong=0,gpsSpd=0,gpsCrs=0;
   uint32_t utcTime=0,date=0,CS={
-    0      };
+    0          };
 
   Serial.begin(19200); //begin serial communication for debugging
   Serial.println("Serial port initialized.");
@@ -71,16 +86,27 @@ void setup() {
   else {
     Serial.println("off.");
   }
+#if (magInstalled)
   Serial.println("Initializing magnetometer...");
   serialDeviceInit(Serial, magSerial, magBaud,"mag"); //initialize magnetometer on Serial1
+#endif
+
+#if(gpsInstalled)
   Serial.println("Initializing GPS...");
   serialDeviceInit(Serial, gpsSerial, gpsBaud,"gps"); //initialize gps on Serial2
   gpsSerial.setTimeout(50);
+#endif
+
+#if (pressureInstalled)
   Serial.println("Initializing pressure sensors...");
   serialDeviceInit(Serial, pressureSerial, pressBaud,"pre"); //initialize pressure sensors on Serial3
-pressureSerial.setTimeout(50);
+  pressureSerial.setTimeout(50);
+#endif
+
   unsigned long time=millis();
   now=time;
+
+#if (gpsInstalled)
   while (!gpsSerial.available()>0)
   {
     if (now>time+5000)
@@ -88,7 +114,6 @@ pressureSerial.setTimeout(50);
       break;
     } 
   }
-
   readGPS(gpsSerial,msgID,utcTime,&gpsStatus, gpsLat,&nsInd,gpsLong,&ewInd,gpsSpd,gpsCrs,date,&mode,CS);
   Serial.println(filename);
   char str[20];
@@ -96,7 +121,14 @@ pressureSerial.setTimeout(50);
   strcpy(filename,str);
   strcat(filename,".txt");
   Serial.println(filename);
-
+#else
+  Serial.print("No GPS installed. Filename : ");
+  char str[20];
+  sprintf(str,"%d",rand()%10000000);
+  strcpy(filename,str);
+  strcat(filename,".txt");
+  Serial.println(filename);
+#endif
 
   //set up gyro
   Wire.begin(); //begin wire transmission
@@ -108,7 +140,23 @@ pressureSerial.setTimeout(50);
   accel.begin();
   accel.beginMeasure();
   startTime = millis();
-  gpsSerial.flush();
+
+  // set up gps
+#if (gpsInstalled)
+  {
+    gpsSerial.flush();
+  }
+#endif
+
+  //set up temp sensor
+  sensors.begin();
+  // Serial.println("Temperature sensor set up : ");
+
+  if(sensors.getAddress(tempDeviceAddress, 0))
+  {
+    sensors.setResolution(tempDeviceAddress, TEMPERATURE_PRECISION);
+  }
+  else Serial.println("No temperature sensors found.");
 }
 
 
@@ -118,21 +166,22 @@ void loop() {
   byte buff4[4];
   byte buff2[2];
   int16_t pressure[4]; //pressure sensor data
+  int16_t temperature=0;
   int16_t magReading[3]; //magnetometer data
   int16_t gyroX, gyroY, gyroZ;
   int16_t accelX, accelY, accelZ, accelT;
   char msgID[6]="?????";
   char *gpsStatus={
-    "?"      }
+    "?"          }
   ,*nsInd={
-    "?"      }
+    "?"          }
   ,*ewInd={
-    "?"      }
+    "?"          }
   ,*mode={
-    "?"      };
+    "?"          };
   int32_t gpsLat=0,gpsLong=0,gpsSpd=0,gpsCrs=0;
   uint32_t utcTime=0,date=0,CS={
-    0      };
+    0          };
 
   while(Serial.available()>0)
   {
@@ -158,16 +207,26 @@ void loop() {
   readGyroData(gyroX,gyroY,gyroZ);
 
   //read magnetometer
+#if (magInstalled)
   readMagnetometer(magSerial,magReading);
+#endif
 
   //read pressure transducers
+#if (pressureInstalled)
   readAllPress (pressureSerial,pressSN0,pressSN1,pressSN2,pressSN3,pressure);
+#endif
 
   //read GPS
+#if (gpsInstalled)
   if (gpsSerial.available()>0 && true)
   {
     readGPS(gpsSerial,msgID,utcTime,&gpsStatus, gpsLat,&nsInd,gpsLong,&ewInd,gpsSpd,gpsCrs,date,&mode,CS);
   }
+#endif
+
+  sensors.requestTemperatures(); // Send the command to get temperatures
+  temperature = int16_t (100*sensors.getTempF(tempDeviceAddress));
+  //temperature = sensors.getTempF(tempDeviceAddress);
 
   //format packet to be sent to SD card
   unsigned long tDiff = millis()-time;
@@ -186,12 +245,8 @@ void loop() {
       dataFile.close();
       writeBuffLoc = 0;
     }
-Serial.println(writeBuffLoc);
-Serial.println(writeBuff[writeBuffLoc]);
     parseToBinUInt32(writeBuff,time,writeBuffLoc);
     //dataFile.write(buff4,4);
-    Serial.println(writeBuffLoc);
-    Serial.println(writeBuff[writeBuffLoc]);
 
     parseToBinInt16(writeBuff,accelX,writeBuffLoc);
     //dataFile.write(buff2,2);
@@ -264,6 +319,8 @@ Serial.println(writeBuff[writeBuffLoc]);
     parseToBinUInt32(writeBuff,CS,writeBuffLoc);
     //dataFile.write(buff4,nchars);
 
+    parseToBinInt16(writeBuff,temperature,writeBuffLoc);
+
     parseToBinUInt32(writeBuff,tDiff,writeBuffLoc);
     //dataFile.write(buff4,nchars);
   }
@@ -327,6 +384,8 @@ Serial.println(writeBuff[writeBuffLoc]);
     Serial.print('\t');
     Serial.print(CS);
     Serial.print('\t');
+    Serial.print(temperature);
+    Serial.print('\t');
     Serial.println(tDiff);
   }
 }
@@ -371,9 +430,9 @@ void readAllPress (USARTClass &pressureSerial,char add0[], char add1[], char add
 int16_t readUniquePress(USARTClass &pressureSerial,char address[])
 {
   char bytesIn[80]={
-    0x00      };
+    0x00          };
   char readComm[80]={
-    0x00      };
+    0x00          };
 
   int nchars;
   strcat(readComm,"U");
@@ -389,7 +448,7 @@ int16_t readUniquePress(USARTClass &pressureSerial,char address[])
 void readGPS(USARTClass &gpsSerial,char *msgID,uint32_t &utcTime,char **gpsStatus, int32_t &gpsLat,char **nsInd,int32_t &gpsLong,char **ewInd,int32_t &gpsSpd,int32_t &gpsCrs,uint32_t &date,char **mode,uint32_t &CS)
 {
   char bytesIn[200] = {
-    0      };
+    0          };
   int nchars;
   if (gpsSerial.available()>0)
   {
@@ -602,6 +661,5 @@ void parseToBinUInt32(byte buff[],uint32_t var,uint16_t &loc)
   }
   loc=loc+i;
 }
-
 
 
