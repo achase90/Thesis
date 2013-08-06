@@ -1,0 +1,6 @@
+baro pressure sensor y = mx+b where m = 500mbar/(2^15-1) and b = 549.2, based on calibration. Alternatively, subtract 3330 from the bit reading.
+temp sensor actual : 71.3, reading: 73.4.
+
+pressr11l7-20-a508: zero reading: 200.7
+
+pressr10f30-4-a104: zero reading: -100.5

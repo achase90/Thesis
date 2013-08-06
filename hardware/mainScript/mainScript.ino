@@ -8,7 +8,7 @@
 #include<OneWire.h>
 #include<DallasTemperature.h>
 
-#define magInstalled 1
+#define magInstalled 0
 #define gpsInstalled 0
 #define pressureInstalled 1
 #define ONE_WIRE_BUS 49
@@ -45,7 +45,7 @@ DeviceAddress tempDeviceAddress; // temperature sensor device address
 
 char pressSN0[13] = "4F15-01-A213";
 char pressSN1[13] = "R10F30-04-A1";
-char pressSN2[13] = "R11L7-20-A50"; //not sure this serial number is correct
+char pressSN2[13] = "R11L07-20-A5"; //not sure this serial number is correct
 char pressSN3[13] = "R11L7-20-A51"; //not sure this serial number is correct
 
 byte writeBuff[1028];
@@ -55,28 +55,22 @@ const uint8_t nBytesPerSample = 31;
 void setup() {
   char msgID[6]="?????";
   char *gpsStatus={
-    "?"          }
+    "?"                    }
   ,*nsInd={
-    "?"          }
+    "?"                    }
   ,*ewInd={
-    "?"          }
+    "?"                    }
   ,*mode={
-    "?"          };
+    "?"                    };
   int32_t gpsLat=0,gpsLong=0,gpsSpd=0,gpsCrs=0;
   uint32_t utcTime=0,date=0,CS={
-    0          };
+    0                    };
 
   Serial.begin(19200); //begin serial communication for debugging
   Serial.println("Serial port initialized.");
   unsigned long now = millis();
-  Serial.println("Please insert SD card...");
-  while( logData && millis()<now+10000)
-  {
 
-  }
   // initialize SD card
-  Serial.println("Initializing SD Card...");
-  initSDCard(Serial,sdChipSelect);
 
   Serial.print("Data logging : ");
   if (logData)
@@ -172,39 +166,31 @@ void loop() {
   int16_t accelX, accelY, accelZ, accelT;
   char msgID[6]="?????";
   char *gpsStatus={
-    "?"          }
+    "?"                    }
   ,*nsInd={
-    "?"          }
+    "?"                    }
   ,*ewInd={
-    "?"          }
+    "?"                    }
   ,*mode={
-    "?"          };
+    "?"                    };
   int32_t gpsLat=0,gpsLong=0,gpsSpd=0,gpsCrs=0;
   uint32_t utcTime=0,date=0,CS={
-    0          };
-
-  while(Serial.available()>0)
+    0                    };
+  if (Serial.available()>0)
   {
-    Serial.read();
-    logData = !logData;
-    Serial.print("Data logging : ");
-    if (logData)
-    {
-      Serial.println("on.");
-    }
-    else {
-      Serial.println("off.");
-    }
-
+    parseInput();
   }
   //start timer
   unsigned long time = millis();
+  int i=0;
 
   //read accel
   accel.readXYZTData(accelX,accelY,accelZ,accelT);
+  //Serial.println(i++);
 
   //read gyro
   readGyroData(gyroX,gyroY,gyroZ);
+  //Serial.println(i++);
 
   //read magnetometer
 #if (magInstalled)
@@ -215,6 +201,7 @@ void loop() {
 #if (pressureInstalled)
   readAllPress (pressureSerial,pressSN0,pressSN1,pressSN2,pressSN3,pressure);
 #endif
+  //Serial.println(i++);
 
   //read GPS
 #if (gpsInstalled)
@@ -223,9 +210,14 @@ void loop() {
     readGPS(gpsSerial,msgID,utcTime,&gpsStatus, gpsLat,&nsInd,gpsLong,&ewInd,gpsSpd,gpsCrs,date,&mode,CS);
   }
 #endif
+  // Serial.println(i++);
 
   sensors.requestTemperatures(); // Send the command to get temperatures
+  // Serial.println(i++);
+
   temperature = int16_t (100*sensors.getTempF(tempDeviceAddress));
+  //Serial.println(i++);
+
   //temperature = sensors.getTempF(tempDeviceAddress);
 
   //format packet to be sent to SD card
@@ -421,8 +413,8 @@ void readGyroData(int16_t &gyroX,int16_t &gyroY,int16_t &gyroZ)
 void readAllPress (USARTClass &pressureSerial,char add0[], char add1[], char add2[], char add3[], int16_t *pressure)
 {
   pressureSerial.print("WC\r");
-  pressure[0] = readUniquePress(pressureSerial,add0);
-  pressure[1] = readUniquePress(pressureSerial,add1);
+  pressure[0] = readUniquePress(pressureSerial,add1);
+  pressure[1] = readUniquePress(pressureSerial,add2);
   //pressure[2] = readUniquePress(pressureSerial,add2);
   //pressure[3] = readUniquePress(pressureSerial,add3);
 }
@@ -430,9 +422,9 @@ void readAllPress (USARTClass &pressureSerial,char add0[], char add1[], char add
 int16_t readUniquePress(USARTClass &pressureSerial,char address[])
 {
   char bytesIn[80]={
-    0x00          };
+    0x00                    };
   char readComm[80]={
-    0x00          };
+    0x00                    };
 
   int nchars;
   strcat(readComm,"U");
@@ -441,14 +433,14 @@ int16_t readUniquePress(USARTClass &pressureSerial,char address[])
   pressureSerial.print(readComm); //issue "read captured pressure" command to device 1
   nchars = pressureSerial.readBytesUntil('=',bytesIn,80);
   nchars = pressureSerial.readBytesUntil(0x20,bytesIn,20);
-  int16_t pressure = strtol(bytesIn,NULL,16);
+  int16_t pressure = int16_t (strtol(bytesIn,NULL,16));
   return pressure;
 }
 
 void readGPS(USARTClass &gpsSerial,char *msgID,uint32_t &utcTime,char **gpsStatus, int32_t &gpsLat,char **nsInd,int32_t &gpsLong,char **ewInd,int32_t &gpsSpd,int32_t &gpsCrs,uint32_t &date,char **mode,uint32_t &CS)
 {
   char bytesIn[200] = {
-    0          };
+    0                    };
   int nchars;
   if (gpsSerial.available()>0)
   {
@@ -628,7 +620,6 @@ void initSDCard(UARTClass &serial,uint8_t sdCardChipSelect)
   else
   {
     Serial.println("SD card initialized."); 
-    SD.remove("datalog.txt");
   }
 }
 
@@ -661,5 +652,88 @@ void parseToBinUInt32(byte buff[],uint32_t var,uint16_t &loc)
   }
   loc=loc+i;
 }
+
+
+void parseInput()
+{
+  char comm[80] = {
+    0        };
+  if (Serial.read() == '#')
+  {
+    while(Serial.available()>0)
+    {
+      comm[i++] = Serial.read();
+
+      if (comm[i-1] == '&')
+      {
+        break;  
+      }
+    }
+    if (comm == 'dataOn')
+    {
+      logData = true;
+      Serial.println("Data logging : on.");
+    }
+    else if (comm == 'dataOff')
+    {
+      logData = false;
+      Serial.println("Data logging : off.");
+    }
+
+    else if (comm == 'initSD')
+    {
+      Serial.println("Initializing SD Card...");
+      initSDCard(Serial,sdChipSelect);
+
+    }
+    else if (comm == 'deleteFile')
+    {
+      Serial.println("Are you sure you want to delete the current file? Y for yes, N for no.");
+      unsigned long time = millis();
+      char x=0;
+      if (logData)
+      {
+        Serial.println("Please turn data logging off first.");
+      }
+      else
+      {
+        while (x != 'Y' | x != 'N' | x != 'y' | x != 'n')
+        {
+          x = Serial.read();
+          if (millis > time+10000)
+          {
+            x = 'N'
+          }
+        }
+        if (x == 'N' | x == 'n')
+        {
+          Serial.println("Will not delete file.")
+          }
+        else if (x == 'Y' | x == 'y')
+        {
+          Serial.print("Deleting file...  ") 
+            int didWork = dataFile.remove(filename);
+          if (didWork)
+          {
+            Serial.println("File deleted.");
+          }
+          else
+            Serial.println("An error occured, file not deleted.");
+        }
+      }
+    }
+  }
+  else
+  {
+    Serial.print("Improprer serial command. Flushing data...  ")
+      while (Serial.available()>0)
+      {
+        Serial.read();
+      }
+    Serial.println("Serial data flushed.")
+  }
+}
+
+
 
 
