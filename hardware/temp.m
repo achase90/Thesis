@@ -5,11 +5,12 @@ clear all
 % recordLen = [   4       2        2       2      2        2        2      2       2       2       2       2      1      1       1      1      1      4       1       4       1       4       1      4       4       4       1       4       4];
 recordType = {'ulong' 'int16' 'int16' 'int16' 'int16' 'int16' 'int16' 'int16' 'int16' 'int16' 'int16' 'int16' 'char' 'char' 'char' 'char' 'char' 'uint32' 'char' 'int32' 'char' 'int32' 'char' 'int32' 'int32' 'char' 'uint32'  'uint32' 'int16' 'uint32'};
 recordLen = [   4       2        2       2      2        2        2      2       2       2       2       2      1      1       1      1      1      4        1      4       1     4        1      4       4       1       4         4        2      4];
-copyfile('G:\*',cd);
+% copyfile('G:\*',cd);
+files=dir;
 R = cell(1,numel(recordType));
 
 %# read column-by-column
-fid = fopen('1765933.txt','rb');
+fid = fopen('18545949.txt','rb');
 for i=1:numel(recordType)
     %# seek to the first field of the first record
     fseek(fid, sum(recordLen(1:i-1)), 'bof');
@@ -20,4 +21,23 @@ end
 fclose(fid);
 %delete('DATALOG.TXT');
 
-delete('G:\*');
+%delete('G:\*');
+headers={'time' 'accelX' 'accelY' 'accelZ' 'gyroX' 'gyroY' 'gyroZ' 'magX' 'magY' 'magZ' ...
+    'press0' 'press1' 'msgID1' 'msgID2' 'msgID3' 'msgID4' 'msgID5'...
+    'utcTime' 'gpsStatus' 'gpsLat' 'nsInd' 'gpsLong' 'ewInd' 'gpsSpd' 'gpsCrs'...
+    'date' 'mode' 'CS' 'temperature' 'deltaT'};
+% svals=zeros(1,length(headers));
+for i=1:length(headers)
+data.(headers{i})=[];
+end
+for i=1:length(headers)
+    data.(headers{i}) = cell2mat(R(:,i));
+end
+data.msgID=[data.msgID1 data.msgID2 data.msgID3 data.msgID4 data.msgID5];
+data=rmfield(data,{'msgID1' 'msgID2' 'msgID3' 'msgID4' 'msgID5'});
+validGPS = data.gpsLat~=0;
+data.gpsLat = double(data.gpsLat(validGPS))/100000;
+data.gpsLong = double(data.gpsLong(validGPS))/100000;
+data.utcTime = double(data.utcTime(validGPS))/100;
+data.gpsSpd = double(data.gpsSpd(validGPS))/1000;
+data.gpsCrs = double(data.gpsCrs(validGPS))/1000;
