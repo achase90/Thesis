@@ -21,17 +21,17 @@ raw = raw(:,2);
 
 %% Allocate imported array to column variable names
 Thetadeg = data(:,1);
-Phideg = data(:,1);
-P1Torr = data(:,2);
-P2Torr = data(:,3);
-P3Torr = data(:,4);
-P4Torr = data(:,5);
-P5Torr = data(:,6);
-P6Torr = data(:,7);
-PtTorr = data(:,8);
-PsAbsTorr = data(:,9);
-TsC = data(:,10);
-PrefAbsTorr = data(:,11);
+Phideg = data(:,2);
+P1Torr = data(:,3);
+P2Torr = data(:,4);
+P3Torr = data(:,5);
+P4Torr = data(:,6);
+P5Torr = data(:,7);
+P6Torr = data(:,8);
+PtTorr = data(:,9);
+PsAbsTorr = data(:,10);
+TsC = data(:,11);
+PrefAbsTorr = data(:,12);
 
 %% Clear temporary variables
 clearvars data raw cellVectors;
