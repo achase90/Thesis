@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/W32TeX) (format=pdflatex 2013.6.1)  5 JUN 2013 15:07
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/W32TeX) (format=pdflatex 2013.6.1)  14 AUG 2013 15:40
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -963,11 +963,11 @@ Chapter 4.
 
 ]
 Package epstopdf Info: Source file: <figures/heteroskedasticity.eps>
-(epstopdf)                    date: 2013-06-02 13:10:17
+(epstopdf)                    date: 2013-07-16 20:48:33
 (epstopdf)                    size: 538759 bytes
 (epstopdf)             Output file: <figures/heteroskedasticity-eps-converted-t
 o.pdf>
-(epstopdf)                    date: 2013-06-02 13:10:44
+(epstopdf)                    date: 2013-07-16 20:48:33
 (epstopdf)                    size: 357631 bytes
 (epstopdf)             Command: <repstopdf --outfile=figures/heteroskedasticity
 -eps-converted-to.pdf figures/heteroskedasticity.eps>
@@ -987,12 +987,12 @@ Chapter 5.
 
 ]
 Package epstopdf Info: Source file: <figures/dragPolarNoNoise.eps>
-(epstopdf)                    date: 2013-06-01 17:55:33
-(epstopdf)                    size: 790461 bytes
+(epstopdf)                    date: 2013-07-16 20:48:33
+(epstopdf)                    size: 1668341 bytes
 (epstopdf)             Output file: <figures/dragPolarNoNoise-eps-converted-to.
 pdf>
-(epstopdf)                    date: 2013-06-03 16:35:33
-(epstopdf)                    size: 392450 bytes
+(epstopdf)                    date: 2013-07-16 20:48:33
+(epstopdf)                    size: 762327 bytes
 (epstopdf)             Command: <repstopdf --outfile=figures/dragPolarNoNoise-e
 ps-converted-to.pdf figures/dragPolarNoNoise.eps>
 (epstopdf)             \includegraphics on input line 485.
@@ -1006,16 +1006,22 @@ Package pdftex.def Info: figures/dragPolarNoNoise-eps-converted-to.pdf used on
 input line 485.
 (pdftex.def)             Requested size: 234.8775pt x 176.57784pt.
 Package epstopdf Info: Source file: <figures/simDragPolarNoise.eps>
-(epstopdf)                    date: 2013-06-03 16:33:56
+(epstopdf)                    date: 2013-07-16 20:48:34
 (epstopdf)                    size: 7814310 bytes
 (epstopdf)             Output file: <figures/simDragPolarNoise-eps-converted-to
 .pdf>
-(epstopdf)                    date: 2013-06-03 16:35:47
+(epstopdf)                    date: 2013-07-16 20:48:33
 (epstopdf)                    size: 3513317 bytes
 (epstopdf)             Command: <repstopdf --outfile=figures/simDragPolarNoise-
 eps-converted-to.pdf figures/simDragPolarNoise.eps>
 (epstopdf)             \includegraphics on input line 492.
-Package epstopdf Info: Output file is already uptodate.
+runsystem(repstopdf --outfile=figures/simDragPolarNoise-eps-converted-to.pdf fi
+gures/simDragPolarNoise.eps)...executed safely (allowed).
+
+Package epstopdf Info: Result file: <figures/simDragPolarNoise-eps-converted-to
+.pdf>
+(epstopdf)                    date: 2013-08-14 15:41:16
+(epstopdf)                    size: 3513316 bytes.
 
 <figures/simDragPolarNoise-eps-converted-to.pdf, id=451, 420.57124pt x 316.1812
 4pt>
@@ -1142,7 +1148,7 @@ pfb><c:/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/tex
 live/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2012
 /texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><c:/texlive/2012/texmf-dis
 t/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on thesis.pdf (41 pages, 6057161 bytes).
+Output written on thesis.pdf (41 pages, 6427041 bytes).
 PDF statistics:
  638 PDF objects out of 1000 (max. 8388607)
  556 compressed objects within 6 object streams
