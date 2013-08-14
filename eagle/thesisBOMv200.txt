@@ -1,0 +1,28 @@
+Partlist
+
+Exported from thesis.brd at 8/14/2013 10:22:41 AM
+
+EAGLE Version 6.4.0 Copyright (c) 1988-2013 CadSoft
+
+Assembly variant: 
+
+Part     Value                Package                     Library               Position (inch)       Orientation
+
+/C1       0.1uF                C0603K                      rcl                   (1.485 1.755)         R90
+/C2       2.2nF                C0603K                      rcl                   (1.93 1.73)           R90
+/C3       4.7uF                C0603K                      rcl                   (2.36 1.905)          R180
+/C4       0.1uF                C0603K                      rcl                   (2.515 1.715)         R270
+/C5       0.22uF               C0603K                      rcl                   (2.515 1.905)         R180
+/C6       0.1uF                C0603K                      rcl                   (1.71 1.585)          R180
+/C7       10nF                 C0603K                      rcl                   (1.69 1.925)          R180
+/J1       RJ11-6PTH            RJ11-6                      SparkFun-Connectors   (0.485 2.015)         R180
+/R1       4.7K                 R0603                       rcl                   (2.36 1.56)           R0
+/R2       4.7K                 R0603                       rcl                   (2.21 1.835)          R90
+/U$1      DUE(NORMAL)          DUE(NORMAL)                 DUElib130425          (2.84 0.92)           R0
+/U$2      MICROSD_SPI_MODE     MICRO_SD_CONNECTOR          con-molex-microsd     (3.025 1.64)          R0
+/U$3      VGA-F90S             DB-15-F90+SHIELD-SMALL_PADS VideoConnectors       (0.015 0.95)          R270
+/U$4      SPARKFUN_HMC5883LSMD SPARKFUN_16LPCC             HMC5883L_Breakout-v11 (2.365 1.725)         R90
+/U$5      HEADER-3X8SERVO      3X8RA                       pixhawk2              (1.115 0.855)         R180
+/U$6      UBLOXLEA6TBOB        UBLOXLEA6TBOB               csgshop               (1.34 2.005)          R270
+/U1       ITG-3200             QFN-24                      SparkFun              (1.705 1.765)         R270
+/U2       ADXL362              ADXL362                     SparkFun-Sensors      (3.66 0.23)           R0
