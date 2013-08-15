@@ -1,6 +1,6 @@
 \chapter{Flight Test}
 \label{flight-test}
-The goal of flight testing was to validate the performance of the final system design. The drag polar estimation was chosen as the validation case, and was approached from each of the three coefficients. To this end, the final system was flown on multiple vehicles which each had a different roll in the validation routine.
+Flight testing was done at Cal Poly's Educational Flight Range (EFR). The goal of flight testing was to validate the performance of the final system design. The drag polar estimation was chosen as the validation case, and was approached from each of the three coefficients. To this end, the final system was flown on multiple vehicles which each had a different role in the validation routine.
 
 \section{$C_{D_0}$ Validation}
 Validation of the parasite drag coefficient was completed using a Finwing Universal Penguin FPV R/C aircraft\cite{penguinRC}. 
@@ -11,3 +11,10 @@ This model was selected because it has a large internal payload bay which has pl
 \section{$K_1$ Validation}
 The $K_1$ term of the drag polar is mainly driven by the $C_L$ for minimum drag. To validate this coefficient, a custom test vehicle was manufactured with two different wings of equal area. One wing had a NACA 63-014 airfoil cross section, which is a symmetric airfoil, meaning the vehicles $K_1$ value should be zero. The next wing had a NACA 63-614 airfoil, which has a design $C_L$ for minimum drag of 0.6. The validation method was flying both of these wings on the same vehicle, and seeing the vertical shift in the drag polar.
 \section{$K_2$ Validation}
+The $K_2$ drag polar coefficient is the inviscid drag due to lift term. This form of drag comes from the wing tip vortices of a finite wing, and is affected by both wing aspect ratio and lift distribution. Prandtl showed experimentally\cite{prandtl1923applications} that, for rectangular wings with aspect ratios between one and seven, the drag coefficient corresponding to one aspect ratio can be scaled to that of a different aspect ratio using the equation
+
+\begin{align}
+C_{D,1} &= C_{D,2} + \frac{C^2_L}{\pi e}(\frac{1}{AR_1} - \frac{1}{AR_2})
+\end{align}
+
+The $K_2$ validation uses this fact by flying the same test aircraft with two different sets of wings with the same area. The first wing has an aspect ratio of three, while the second wing has an aspect ratio of seven. The $AR = 3$ wing was then corrected to the $AR = 7$ wing and the resulting drag polar should fall on top of each other.

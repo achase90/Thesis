@@ -16,7 +16,7 @@ Some basic assumptions will apply throughout the modeling of dynamics in thesis.
 \item Coriolis effects are negligible.
 \item Thrust will be assumed to be 0.
 \end{enumerate}
-Note that a stationary atmosphere is not assumed.
+Note that a stationary atmosphere is not assumed. The fixed mass assumption is consistent with the electric aircraft used to test the system. At the altitude and speed at which the vehicles will be tested, Coriolis effects can be ignored\cite{klein2006aircraft}. The zero-thrust assumption is in place to minimize drag error. Any error in a measured state will decrease the accuracy of the drag measurement, and the accuracy of the drag measurement can be no better than the worst state measurement error. In-flight thrust is difficult to measure accurately, so a folding propeller will be used, and the motor will be turned off during data acquisition. This will allow the propeller to fold back, eliminating most of the wind-mill drag associated with a stalled propeller. 
 
 \section{Reference Frames}
 For this thesis, the reference frames used will follow those described in \cite{klein2006aircraft}, and will be repeated here for clarity.
@@ -50,31 +50,25 @@ The applied forces on the vehicle are
 \vec{F} &= \vec{F}_{A}+\vec{F}_{G}+\vec{F}_{T}
 \end{align}
 
-where $\vec{F_{A}}$ accounts for all aerodynamic forces acting on the vehicle, $\vec{F_{G}}$ is the force due to gravity, and $\vec{F_{T}}$ accounts for forces from the propulsion system. Each of these forces will be discussed next.
-
-\subsection*{Aerodynamic Forces}
+where $\vec{F_{A}}$ accounts for all aerodynamic forces acting on the vehicle, $\vec{F_{G}}$ is the force due to gravity, and $\vec{F_{T}}$ accounts for forces from the propulsion system.\\
 Aerodynamic forces are described in the stability reference frame. In general, they are defined as
 
 \begin{align}
 \vec{F}_{A_S} &= D \hat{i}_s+Y \hat{j}_s+L \hat{k}_s
 \end{align}
 
-where $D$ is drag force, $Y$ is side force, and $L$ is lift force. 
-
-\subsection*{Gravitational Forces}
+where $D$ is drag force, $Y$ is side force, and $L$ is lift force. \\
 The gravitational force on the vehicle acts in the $+z_{ned}$ direction and is equal in magnitude to the vehicle's weight $W$, leading to
 \begin{align}
 \vec{F}_{G_{ned}} &= 0\hat{i}_{ned}+0\hat{j}_{ned}+W\hat{k}_{ned}
 \end{align}
-
-\subsection*{Propulsive Forces}
+\\
 In general, propulsive forces are modeled as
 \begin{align}
 \vec{F}_{T_b} &= T_x \hat{i}_b+T_y \hat{j}_b +T_z \hat{k}_b
 \end{align}
-where $T_x$, $T_y$, and $T_z$ are components of thrust in their respective body axis directions. However, as previously mentioned, propulsive forces are assumed to be $\vec{0}$ for this thesis.
+where $T_x$, $T_y$, and $T_z$ are components of thrust in their respective body axis directions. However, as previously mentioned, propulsive forces are assumed to be $\vec{0}$ for this thesis.\\
 
-\subsection{Combined Forces in Body Axes}
 The forces are combined and transformed into the body axes reference frame so that they align with the output of body mounted accelerometers. The combined equations of motion are then
 
 \begin{align}
@@ -118,7 +112,7 @@ P^-_k &= AP_{k-1}A^T+Q
 
 where Q the process noise covariance matrix.
 
-The Kalman gain is calculated by combining the predicted, \textit{a priori} covariance matrix with the measurement noise covariance matrix $Q$
+The Kalman gain is calculated by combining the predicted, \textit{a priori} covariance matrix with the measurement noise covariance matrix $R$
 
 \begin{align}
 K_k &=P^-_kH^T(HP^-_kH^T + R)^{-1}

@@ -27,7 +27,7 @@ The Euler angles of the aircraft can be estimated using either an 3-d electronic
   \centering
     \includegraphics[width=0.5\textwidth]{figures/hmr2300.jpg}
 \end{figure}
-
+%todo:take gauss to angles
 This magnetometer provides a RMS error of 0.01 Gauss for all axes, using the 1 Gauss full-scale setting\cite{hmr2300DataSheet}. 
 
 The HMR-2300 can be supplied with power between 6V and 15V, so the 3-cell 11.1V nominal LiPo battery that powers the Arduino also passes through to power the magnetometer. Additionally, the HMR-2300 operates using an RS-232 serial interface. To properly interface with the Arduino Due, which uses 3.3V TTL logic levels, a Max-3232 integrated circuit (IC) was used. This IC, when combined with charge pump capacitors, translates TTL levels between 3V and 5.5V to RS-232 logic levels of $\pm6$V.

@@ -14,53 +14,52 @@ Database file #1: bibliography.bib
 Warning--entry type for "penguinRC" isn't style-file defined
 --line 97 of file bibliography.bib
 Warning--entry type for "ubloxDemo" isn't style-file defined
---line 569 of file bibliography.bib
-Warning--I didn't find a database entry for "Auman2001"
+--line 585 of file bibliography.bib
 Warning--empty journal in stevens2003aircraft
 Warning--empty institution in adxl362DataSheet
 Warning--empty year in U-Line
 Warning--empty institution in itg3200DataSheet
 Warning--empty year in allsensorsDDO
 Warning--empty year in allSensorsBaroDatasheet
-You've used 21 entries,
+You've used 23 entries,
             1791 wiz_defined-function locations,
-            557 strings with 5772 characters,
-and the built_in function-call counts, 2943 in all, are:
-= -- 266
-> -- 100
+            566 strings with 5981 characters,
+and the built_in function-call counts, 3240 in all, are:
+= -- 291
+> -- 112
 < -- 3
-+ -- 46
-- -- 25
-* -- 98
-:= -- 538
-add.period$ -- 61
-call.type$ -- 21
-change.case$ -- 29
++ -- 51
+- -- 28
+* -- 107
+:= -- 589
+add.period$ -- 67
+call.type$ -- 23
+change.case$ -- 30
 chr.to.int$ -- 0
-cite$ -- 27
-duplicate$ -- 145
-empty$ -- 307
-format.name$ -- 25
-if$ -- 639
+cite$ -- 29
+duplicate$ -- 163
+empty$ -- 340
+format.name$ -- 28
+if$ -- 707
 int.to.chr$ -- 0
-int.to.str$ -- 21
-missing$ -- 6
-newline$ -- 106
-num.names$ -- 21
-pop$ -- 70
+int.to.str$ -- 23
+missing$ -- 9
+newline$ -- 116
+num.names$ -- 23
+pop$ -- 78
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 48
+skip$ -- 55
 stack$ -- 0
 substring$ -- 50
-swap$ -- 15
+swap$ -- 17
 text.length$ -- 3
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 6
-while$ -- 26
-width$ -- 23
-write$ -- 217
-(There were 9 warnings)
+while$ -- 28
+width$ -- 25
+write$ -- 238
+(There were 8 warnings)

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/W32TeX) (format=pdflatex 2013.6.1)  14 AUG 2013 18:26
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/W32TeX) (format=pdflatex 2013.6.1)  15 AUG 2013 11:42
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -883,7 +883,7 @@ Package caption Info: End \AtBeginDocument code.
  [1
 
 {c:/texlive/2012/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-<cp_logo.pdf, id=158, 1055.62177pt x 1037.44203pt>
+<cp_logo.pdf, id=166, 1055.62177pt x 1037.44203pt>
 File: cp_logo.pdf Graphic file (type pdf)
  <use cp_logo.pdf>
 Package pdftex.def Info: cp_logo.pdf used on input line 38.
@@ -951,7 +951,12 @@ l.9
 Chapter 2.
 [3
 
-] [4] [5] [6] [7] [8]) [9]
+] [4]
+Underfull \hbox (badness 10000) in paragraph at lines 69--71
+
+ []
+
+[5] [6] [7] [8]) [9]
 \openout2 = `regression.aux'.
 
  (./regression.tex
@@ -986,7 +991,7 @@ o.pdf>
 (epstopdf)             \includegraphics on input line 42.
 Package epstopdf Info: Output file is already uptodate.
 
-<figures/heteroskedasticity-eps-converted-to.pdf, id=390, 420.57124pt x 316.181
+<figures/heteroskedasticity-eps-converted-to.pdf, id=401, 420.57124pt x 316.181
 24pt>
 File: figures/heteroskedasticity-eps-converted-to.pdf Graphic file (type pdf)
  <use figures/heteroskedasticity-eps-converted-to.pdf>
@@ -1012,15 +1017,15 @@ pdf>
 (epstopdf)                    size: 762327 bytes
 (epstopdf)             Command: <repstopdf --outfile=figures/dragPolarNoNoise-e
 ps-converted-to.pdf figures/dragPolarNoNoise.eps>
-(epstopdf)             \includegraphics on input line 23.
+(epstopdf)             \includegraphics on input line 22.
 Package epstopdf Info: Output file is already uptodate.
 
-<figures/dragPolarNoNoise-eps-converted-to.pdf, id=441, 420.57124pt x 316.18124
+<figures/dragPolarNoNoise-eps-converted-to.pdf, id=452, 420.57124pt x 316.18124
 pt>
 File: figures/dragPolarNoNoise-eps-converted-to.pdf Graphic file (type pdf)
  <use figures/dragPolarNoNoise-eps-converted-to.pdf>
 Package pdftex.def Info: figures/dragPolarNoNoise-eps-converted-to.pdf used on 
-input line 23.
+input line 22.
 (pdftex.def)             Requested size: 234.8775pt x 176.57784pt.
 Package epstopdf Info: Source file: <figures/simDragPolarNoise.eps>
 (epstopdf)                    date: 2013-07-16 20:48:34
@@ -1031,15 +1036,15 @@ Package epstopdf Info: Source file: <figures/simDragPolarNoise.eps>
 (epstopdf)                    size: 3513316 bytes
 (epstopdf)             Command: <repstopdf --outfile=figures/simDragPolarNoise-
 eps-converted-to.pdf figures/simDragPolarNoise.eps>
-(epstopdf)             \includegraphics on input line 30.
+(epstopdf)             \includegraphics on input line 29.
 Package epstopdf Info: Output file is already uptodate.
 
-<figures/simDragPolarNoise-eps-converted-to.pdf, id=444, 420.57124pt x 316.1812
+<figures/simDragPolarNoise-eps-converted-to.pdf, id=455, 420.57124pt x 316.1812
 4pt>
 File: figures/simDragPolarNoise-eps-converted-to.pdf Graphic file (type pdf)
  <use figures/simDragPolarNoise-eps-converted-to.pdf>
 Package pdftex.def Info: figures/simDragPolarNoise-eps-converted-to.pdf used on
- input line 30.
+ input line 29.
 (pdftex.def)             Requested size: 234.8775pt x 176.57784pt.
  [19 <./figures/dragPolarNoNoise-eps-converted-to.pdf>]
 
@@ -1051,7 +1056,7 @@ e 33.
 
  (./hardware.tex
 Chapter 6.
-<figures/arduinoDue.jpg, id=470, 1027.84pt x 548.0475pt>
+<figures/arduinoDue.jpg, id=481, 1027.84pt x 548.0475pt>
 File: figures/arduinoDue.jpg Graphic file (type jpg)
 
 <use figures/arduinoDue.jpg>
@@ -1062,28 +1067,28 @@ Package pdftex.def Info: figures/arduinoDue.jpg used on input line 11.
 
 
 ] [22 <./figures/arduinoDue.jpg>]
-<figures/hmr2300.jpg, id=488, 298.11375pt x 255.95625pt>
+<figures/hmr2300.jpg, id=499, 298.11375pt x 255.95625pt>
 File: figures/hmr2300.jpg Graphic file (type jpg)
 
 <use figures/hmr2300.jpg>
 Package pdftex.def Info: figures/hmr2300.jpg used on input line 28.
 (pdftex.def)             Requested size: 234.8775pt x 201.66425pt.
  [23 <./figures/hmr2300.jpg>] [24]
-<figures/allsensorsPressure.jpg, id=509, 213.79875pt x 213.79875pt>
+<figures/allsensorsPressure.jpg, id=520, 213.79875pt x 213.79875pt>
 File: figures/allsensorsPressure.jpg Graphic file (type jpg)
 
 <use figures/allsensorsPressure.jpg>
 Package pdftex.def Info: figures/allsensorsPressure.jpg used on input line 79.
 (pdftex.def)             Requested size: 234.8775pt x 234.87595pt.
  [25 <./figures/allsensorsPressure.jpg>]
-[26] <figures/gpsBoard.jpg, id=529, 451.6875pt x 316.18124pt>
+[26] <figures/gpsBoard.jpg, id=540, 451.6875pt x 316.18124pt>
 File: figures/gpsBoard.jpg Graphic file (type jpg)
 
 <use figures/gpsBoard.jpg>
 Package pdftex.def Info: figures/gpsBoard.jpg used on input line 125.
 (pdftex.def)             Requested size: 234.8775pt x 164.41519pt.
 
-<figures/ds18b20Picture.jpg, id=531, 200.75pt x 200.75pt>
+<figures/ds18b20Picture.jpg, id=542, 200.75pt x 200.75pt>
 File: figures/ds18b20Picture.jpg Graphic file (type jpg)
 
 <use figures/ds18b20Picture.jpg>
@@ -1111,19 +1116,40 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 5.
 
 
-Package natbib Warning: Citation `Auman2001' on page 29 undefined on input line
- 6.
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 11.
 
-) [29
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `subscript' on input line 11.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 11.
+
+[29
 
 
 
 ]
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 13.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `subscript' on input line 13.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 13.
+
+) [30]
 \openout2 = `results.aux'.
 
  (./results.tex
 Chapter 8.
-) [30
+) [31
 
 
 
@@ -1132,7 +1158,7 @@ Chapter 8.
 
  (./summary.tex
 Chapter 9.
-) [31
+) [32
 
 
 
@@ -1144,25 +1170,28 @@ Missing character: There is no – in font cmr12!
 Missing character: There is no ± in font cmr12!
 Missing character: There is no ± in font cmr12!
 Missing character: There is no ± in font cmr12!
- [32
+ [33
 
 
 
 ])
-
-Package natbib Warning: There were undefined citations.
-
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 101.
-[33]
+ [34]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 101.
- (./thesis.aux (./intro.aux) (./regression.aux) (./error.aux)
-(./simulation.aux) (./hardware.aux) (./flightTest.aux) (./results.aux)
-(./summary.aux))
+ (./thesis.aux (./intro.aux) (./regression.aux)
+(./error.aux) (./simulation.aux) (./hardware.aux) (./flightTest.aux)
+(./results.aux) (./summary.aux))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 101.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 101.
-Package rerunfilecheck Info: File `thesis.out' has not changed.
-(rerunfilecheck)             Checksum: 274B4C9BBF3D9FE29C5D097D3179A74D;2343.
 
+
+Package rerunfilecheck Warning: File `thesis.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `thesis.out':
+(rerunfilecheck)             Before: 84ECFA7BEBC412E8937E19E3D8587469;2469
+(rerunfilecheck)             After:  BE6BE174573C60C672D92D295DB399A4;2381.
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 0.74pt have occurred.
@@ -1173,29 +1202,32 @@ LaTeX Warning: There were undefined references.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 101.
  ) 
 Here is how much of TeX's memory you used:
- 16697 strings out of 493488
- 263208 string characters out of 3144749
- 395288 words of memory out of 3000000
- 19376 multiletter control sequences out of 15000+200000
- 18462 words of font info for 113 fonts, out of 3000000 for 9000
+ 16708 strings out of 493488
+ 263438 string characters out of 3144749
+ 395314 words of memory out of 3000000
+ 19383 multiletter control sequences out of 15000+200000
+ 18413 words of font info for 112 fonts, out of 3000000 for 9000
  957 hyphenation exceptions out of 8191
  51i,16n,44p,1334b,484s stack positions out of 5000i,500n,10000p,200000b,50000s
-<c:/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/tex
-live/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2012
-/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2012/texmf-di
-st/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/texlive/2012/texmf-dist/fonts/
-type1/public/amsfonts/cm/cmmi6.pfb><c:/texlive/2012/texmf-dist/fonts/type1/publ
-ic/amsfonts/cm/cmmi8.pfb><c:/texlive/2012/texmf-dist/fonts/type1/public/amsfont
-s/cm/cmr10.pfb><c:/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12
-.pfb><c:/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb><c:/te
-xlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2012/
-texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2012/texmf-dis
-t/fonts/type1/public/amsfonts/cm/cmsy8.pfb><c:/texlive/2012/texmf-dist/fonts/ty
-pe1/public/amsfonts/cm/cmti12.pfb>
-Output written on thesis.pdf (42 pages, 6257967 bytes).
+pdfTeX warning (dest): name{subsection.2.2.1} has been referenced but does no
+t exist, replaced by a fixed one
+
+<c:/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texli
+ve/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2012/t
+exmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2012/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/texlive/2012/texmf-dist/fonts/ty
+pe1/public/amsfonts/cm/cmmi6.pfb><c:/texlive/2012/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmmi8.pfb><c:/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmr10.pfb><c:/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.p
+fb><c:/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb><c:/texl
+ive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2012/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2012/texmf-dist/
+fonts/type1/public/amsfonts/cm/cmsy8.pfb><c:/texlive/2012/texmf-dist/fonts/type
+1/public/amsfonts/cm/cmti12.pfb>
+Output written on thesis.pdf (43 pages, 6262034 bytes).
 PDF statistics:
- 655 PDF objects out of 1000 (max. 8388607)
- 572 compressed objects within 6 object streams
- 181 named destinations out of 1000 (max. 500000)
- 16214 words of extra memory for PDF output out of 17280 (max. 10000000)
+ 677 PDF objects out of 1000 (max. 8388607)
+ 593 compressed objects within 6 object streams
+ 187 named destinations out of 1000 (max. 500000)
+ 16230 words of extra memory for PDF output out of 17280 (max. 10000000)
 
