@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/W32TeX) (format=pdflatex 2013.6.1)  14 AUG 2013 15:40
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/W32TeX) (format=pdflatex 2013.6.1)  14 AUG 2013 18:01
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -761,7 +761,9 @@ Package: natbib 2010/09/13 8.31b (PWD, AO)
 \bibsep=\skip76
 LaTeX Info: Redefining \cite on input line 694.
 \c@NAT@ctr=\count301
-)) (./thesis.aux)
+)) (./thesis.aux
+(./intro.aux) (./regression.aux) (./error.aux) (./simulation.aux)
+(./hardware.aux) (./flightTest.aux) (./results.aux) (./summary.aux))
 \openout1 = `thesis.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 32.
@@ -881,7 +883,7 @@ Package caption Info: End \AtBeginDocument code.
  [1
 
 {c:/texlive/2012/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-<cp_logo.pdf, id=162, 1055.62177pt x 1037.44203pt>
+<cp_logo.pdf, id=154, 1055.62177pt x 1037.44203pt>
 File: cp_logo.pdf Graphic file (type pdf)
  <use cp_logo.pdf>
 Package pdftex.def Info: cp_logo.pdf used on input line 38.
@@ -926,40 +928,50 @@ LaTeX Font Warning: Font shape `OT1/cmr/bx/n' in size <20> not available
 
  [8
 
-] (./thesis.lof
-Missing character: There is no â in font cmr12!
-Missing character: There is no „ in font cmr12!
-Missing character: There is no ¢ in font cmr12!
-)
+] (./thesis.lof)
 \tf@lof=\write7
 \openout7 = `thesis.lof'.
 
  [9
 
 ]
+\openout2 = `intro.aux'.
+
+ (./intro.tex
 Chapter 1.
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.84 
-      [1
+l.9 
+     [1
+
 
 ] [2]
 Chapter 2.
 [3
 
-] [4] [5] [6] [7] [8] [9]
+] [4] [5] [6] [7] [8]) [9]
+\openout2 = `regression.aux'.
+
+ (./regression.tex
 Chapter 3.
 [10
 
+
+
 ] [11]
 
-LaTeX Warning: Reference `pointError' on page 12 undefined on input line 376.
+LaTeX Warning: Reference `pointError' on page 12 undefined on input line 99.
 
-[12]
+) [12]
+\openout2 = `error.aux'.
+
+ (./error.tex
 Chapter 4.
 [13
+
+
 
 ]
 Package epstopdf Info: Source file: <figures/heteroskedasticity.eps>
@@ -971,19 +983,24 @@ o.pdf>
 (epstopdf)                    size: 357631 bytes
 (epstopdf)             Command: <repstopdf --outfile=figures/heteroskedasticity
 -eps-converted-to.pdf figures/heteroskedasticity.eps>
-(epstopdf)             \includegraphics on input line 419.
+(epstopdf)             \includegraphics on input line 42.
 Package epstopdf Info: Output file is already uptodate.
 
-<figures/heteroskedasticity-eps-converted-to.pdf, id=397, 420.57124pt x 316.181
+<figures/heteroskedasticity-eps-converted-to.pdf, id=385, 420.57124pt x 316.181
 24pt>
 File: figures/heteroskedasticity-eps-converted-to.pdf Graphic file (type pdf)
  <use figures/heteroskedasticity-eps-converted-to.pdf>
 Package pdftex.def Info: figures/heteroskedasticity-eps-converted-to.pdf used o
-n input line 419.
+n input line 42.
 (pdftex.def)             Requested size: 234.8775pt x 176.57784pt.
- [14] [15 <./figures/heteroskedasticity-eps-converted-to.pdf>] [16] [17]
+ [14] [15 <./figures/heteroskedasticity-eps-converted-to.pdf>] [16]) [17]
+\openout2 = `simulation.aux'.
+
+ (./simulation.tex
 Chapter 5.
 [18
+
+
 
 ]
 Package epstopdf Info: Source file: <figures/dragPolarNoNoise.eps>
@@ -995,131 +1012,134 @@ pdf>
 (epstopdf)                    size: 762327 bytes
 (epstopdf)             Command: <repstopdf --outfile=figures/dragPolarNoNoise-e
 ps-converted-to.pdf figures/dragPolarNoNoise.eps>
-(epstopdf)             \includegraphics on input line 485.
+(epstopdf)             \includegraphics on input line 23.
 Package epstopdf Info: Output file is already uptodate.
 
-<figures/dragPolarNoNoise-eps-converted-to.pdf, id=448, 420.57124pt x 316.18124
+<figures/dragPolarNoNoise-eps-converted-to.pdf, id=436, 420.57124pt x 316.18124
 pt>
 File: figures/dragPolarNoNoise-eps-converted-to.pdf Graphic file (type pdf)
  <use figures/dragPolarNoNoise-eps-converted-to.pdf>
 Package pdftex.def Info: figures/dragPolarNoNoise-eps-converted-to.pdf used on 
-input line 485.
+input line 23.
 (pdftex.def)             Requested size: 234.8775pt x 176.57784pt.
 Package epstopdf Info: Source file: <figures/simDragPolarNoise.eps>
 (epstopdf)                    date: 2013-07-16 20:48:34
 (epstopdf)                    size: 7814310 bytes
 (epstopdf)             Output file: <figures/simDragPolarNoise-eps-converted-to
 .pdf>
-(epstopdf)                    date: 2013-07-16 20:48:33
-(epstopdf)                    size: 3513317 bytes
+(epstopdf)                    date: 2013-08-14 15:41:16
+(epstopdf)                    size: 3513316 bytes
 (epstopdf)             Command: <repstopdf --outfile=figures/simDragPolarNoise-
 eps-converted-to.pdf figures/simDragPolarNoise.eps>
-(epstopdf)             \includegraphics on input line 492.
-runsystem(repstopdf --outfile=figures/simDragPolarNoise-eps-converted-to.pdf fi
-gures/simDragPolarNoise.eps)...executed safely (allowed).
+(epstopdf)             \includegraphics on input line 30.
+Package epstopdf Info: Output file is already uptodate.
 
-Package epstopdf Info: Result file: <figures/simDragPolarNoise-eps-converted-to
-.pdf>
-(epstopdf)                    date: 2013-08-14 15:41:16
-(epstopdf)                    size: 3513316 bytes.
-
-<figures/simDragPolarNoise-eps-converted-to.pdf, id=451, 420.57124pt x 316.1812
+<figures/simDragPolarNoise-eps-converted-to.pdf, id=439, 420.57124pt x 316.1812
 4pt>
 File: figures/simDragPolarNoise-eps-converted-to.pdf Graphic file (type pdf)
  <use figures/simDragPolarNoise-eps-converted-to.pdf>
 Package pdftex.def Info: figures/simDragPolarNoise-eps-converted-to.pdf used on
- input line 492.
+ input line 30.
 (pdftex.def)             Requested size: 234.8775pt x 176.57784pt.
  [19 <./figures/dragPolarNoNoise-eps-converted-to.pdf>]
 
 LaTeX Warning: Reference `simCoeffErrorTable' on page 20 undefined on input lin
-e 495.
+e 33.
 
-[20 <./figures/simDragPolarNoise-eps-converted-to.pdf>]
+) [20 <./figures/simDragPolarNoise-eps-converted-to.pdf>]
+\openout2 = `hardware.aux'.
+
+ (./hardware.tex
 Chapter 6.
-Missing character: There is no â in font cmbx12!
-Missing character: There is no „ in font cmbx12!
-Missing character: There is no ¢ in font cmbx12!
-<figures/hmr3500.jpg, id=476, 376.40625pt x 271.0125pt>
-File: figures/hmr3500.jpg Graphic file (type jpg)
-
-<use figures/hmr3500.jpg>
-Package pdftex.def Info: figures/hmr3500.jpg used on input line 528.
-(pdftex.def)             Requested size: 234.8775pt x 169.11772pt.
- [21
-
-]
-<figures/itg3200.jpg, id=485, 144.54pt x 97.8054pt>
-File: figures/itg3200.jpg Graphic file (type jpg)
- <use figures/itg3200.jpg>
-Package pdftex.def Info: figures/itg3200.jpg used on input line 539.
-(pdftex.def)             Requested size: 234.8775pt x 158.9423pt.
-
-[22 <./figures/hmr3500.jpg>] [23 <./figures/itg3200.jpg>]
-<figures/honeywellIPT.jpg, id=503, 644.4075pt x 352.31625pt>
-File: figures/honeywellIPT.jpg Graphic file (type jpg)
-
-<use figures/honeywellIPT.jpg>
-Package pdftex.def Info: figures/honeywellIPT.jpg used on input line 579.
-(pdftex.def)             Requested size: 234.8775pt x 128.41426pt.
- [24 <./figures/honeywellIPT.jpg>]
-<figures/arduinoDue.jpg, id=513, 1027.84pt x 548.0475pt>
+<figures/arduinoDue.jpg, id=465, 1027.84pt x 548.0475pt>
 File: figures/arduinoDue.jpg Graphic file (type jpg)
 
 <use figures/arduinoDue.jpg>
-Package pdftex.def Info: figures/arduinoDue.jpg used on input line 622.
+Package pdftex.def Info: figures/arduinoDue.jpg used on input line 11.
 (pdftex.def)             Requested size: 234.8775pt x 125.2371pt.
- [25]
-<figures/logicLevelConverter.jpg, id=522, 451.6875pt x 347.79938pt>
-File: figures/logicLevelConverter.jpg Graphic file (type jpg)
+ [21
 
-<use figures/logicLevelConverter.jpg>
-Package pdftex.def Info: figures/logicLevelConverter.jpg used on input line 630
-.
-(pdftex.def)             Requested size: 234.8775pt x 180.8567pt.
- [26 <./figures/arduinoDue.jpg> <./figures/logicLevelConverter.jpg>]
-<figures/gpsBoard.jpg, id=528, 451.6875pt x 316.18124pt>
+
+
+] [22 <./figures/arduinoDue.jpg>]
+<figures/hmr2300.jpg, id=483, 298.11375pt x 255.95625pt>
+File: figures/hmr2300.jpg Graphic file (type jpg)
+
+<use figures/hmr2300.jpg>
+Package pdftex.def Info: figures/hmr2300.jpg used on input line 28.
+(pdftex.def)             Requested size: 234.8775pt x 201.66425pt.
+ [23 <./figures/hmr2300.jpg>] [24]
+<figures/allsensorsPressure.jpg, id=504, 213.79875pt x 213.79875pt>
+File: figures/allsensorsPressure.jpg Graphic file (type jpg)
+
+<use figures/allsensorsPressure.jpg>
+Package pdftex.def Info: figures/allsensorsPressure.jpg used on input line 79.
+(pdftex.def)             Requested size: 234.8775pt x 234.87595pt.
+ [25 <./figures/allsensorsPressure.jpg>]
+[26] <figures/gpsBoard.jpg, id=524, 451.6875pt x 316.18124pt>
 File: figures/gpsBoard.jpg Graphic file (type jpg)
 
 <use figures/gpsBoard.jpg>
-Package pdftex.def Info: figures/gpsBoard.jpg used on input line 641.
+Package pdftex.def Info: figures/gpsBoard.jpg used on input line 125.
 (pdftex.def)             Requested size: 234.8775pt x 164.41519pt.
- [27 <./figures/gpsBoard.jpg>]
+
+<figures/ds18b20Picture.jpg, id=526, 200.75pt x 200.75pt>
+File: figures/ds18b20Picture.jpg Graphic file (type jpg)
+
+<use figures/ds18b20Picture.jpg>
+Package pdftex.def Info: figures/ds18b20Picture.jpg used on input line 134.
+(pdftex.def)             Requested size: 117.43875pt x 117.44286pt.
+ [27 <./figures/gpsBoard.jpg>]) [28 <./figures/ds18b20Picture.jpg>]
+\openout2 = `flightTest.aux'.
+
+ (./flightTest.tex
 Chapter 7.
-[28
+) [29
+
+
 
 ]
+\openout2 = `results.aux'.
+
+ (./results.tex
 Chapter 8.
-[29
+) [30
+
+
 
 ]
+\openout2 = `summary.aux'.
+
+ (./summary.tex
 Chapter 9.
-[30
+) [31
+
+
 
 ] (./thesis.bbl
+Missing character: There is no – in font cmr12!
+Missing character: There is no – in font cmr12!
+Missing character: There is no – in font cmr12!
+Missing character: There is no – in font cmr12!
 Missing character: There is no ± in font cmr12!
 Missing character: There is no ± in font cmr12!
 Missing character: There is no ± in font cmr12!
-Missing character: There is no ™ in font cmr12!
- [31
+ [32
+
 
 
 ])
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 675.
- [32]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 675.
- (./thesis.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 675.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 675.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 101.
+ [33]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 101.
+ (./thesis.aux (./intro.aux) (./regression.aux)
+(./error.aux) (./simulation.aux) (./hardware.aux) (./flightTest.aux)
+(./results.aux) (./summary.aux))
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 101.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 101.
+Package rerunfilecheck Info: File `thesis.out' has not changed.
+(rerunfilecheck)             Checksum: 42EF5383A2A9E2BEE2BD9DB7A6D8D2A1;2279.
 
-
-Package rerunfilecheck Warning: File `thesis.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `thesis.out':
-(rerunfilecheck)             Before: 9849987CA2F2F45EB88E9156EFEE964D;2435
-(rerunfilecheck)             After:  2FB8A645034593A6985F07B7F9EF400B;2397.
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 0.74pt have occurred.
@@ -1127,16 +1147,16 @@ LaTeX Font Warning: Size substitutions with differences
 
 LaTeX Warning: There were undefined references.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 675.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 101.
  ) 
 Here is how much of TeX's memory you used:
- 16604 strings out of 493488
- 261792 string characters out of 3144749
- 388852 words of memory out of 3000000
- 19344 multiletter control sequences out of 15000+200000
- 17215 words of font info for 108 fonts, out of 3000000 for 9000
+ 16678 strings out of 493488
+ 262881 string characters out of 3144749
+ 395269 words of memory out of 3000000
+ 19361 multiletter control sequences out of 15000+200000
+ 17166 words of font info for 107 fonts, out of 3000000 for 9000
  957 hyphenation exceptions out of 8191
- 51i,16n,44p,1318b,484s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 51i,16n,44p,1334b,484s stack positions out of 5000i,500n,10000p,200000b,50000s
 <c:/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/tex
 live/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2012
 /texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2012/texmf-di
@@ -1148,10 +1168,10 @@ pfb><c:/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/tex
 live/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2012
 /texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><c:/texlive/2012/texmf-dis
 t/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on thesis.pdf (41 pages, 6427041 bytes).
+Output written on thesis.pdf (42 pages, 6248371 bytes).
 PDF statistics:
- 638 PDF objects out of 1000 (max. 8388607)
- 556 compressed objects within 6 object streams
- 175 named destinations out of 1000 (max. 500000)
- 16227 words of extra memory for PDF output out of 17280 (max. 10000000)
+ 642 PDF objects out of 1000 (max. 8388607)
+ 560 compressed objects within 6 object streams
+ 179 named destinations out of 1000 (max. 500000)
+ 16206 words of extra memory for PDF output out of 17280 (max. 10000000)
 
