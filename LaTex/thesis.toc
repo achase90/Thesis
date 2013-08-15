@@ -31,5 +31,6 @@
 \contentsline {section}{\numberline {6.6}Additional Sensors}{27}{section.6.6}
 \contentsline {subsection}{\numberline {6.6.1}Data Acquisition Integration}{28}{subsection.6.6.1}
 \contentsline {chapter}{\numberline {7}Flight Test}{29}{chapter.7}
+\contentsline {section}{\numberline {7.1}$C_{D_0}$ Validation}{29}{section.7.1}
 \contentsline {chapter}{\numberline {8}Results}{30}{chapter.8}
 \contentsline {chapter}{\numberline {9}Summary}{31}{chapter.9}

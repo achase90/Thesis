@@ -11,53 +11,56 @@ A level-1 auxiliary file: results.aux
 A level-1 auxiliary file: summary.aux
 The style file: unsrt.bst
 Database file #1: bibliography.bib
+Warning--entry type for "penguinRC" isn't style-file defined
+--line 97 of file bibliography.bib
 Warning--entry type for "ubloxDemo" isn't style-file defined
---line 529 of file bibliography.bib
+--line 569 of file bibliography.bib
+Warning--I didn't find a database entry for "Auman2001"
 Warning--empty journal in stevens2003aircraft
 Warning--empty institution in adxl362DataSheet
 Warning--empty year in U-Line
 Warning--empty institution in itg3200DataSheet
 Warning--empty year in allsensorsDDO
 Warning--empty year in allSensorsBaroDatasheet
-You've used 20 entries,
+You've used 21 entries,
             1791 wiz_defined-function locations,
-            550 strings with 5678 characters,
-and the built_in function-call counts, 2814 in all, are:
-= -- 255
-> -- 96
+            557 strings with 5772 characters,
+and the built_in function-call counts, 2943 in all, are:
+= -- 266
+> -- 100
 < -- 3
-+ -- 44
-- -- 24
-* -- 97
-:= -- 518
-add.period$ -- 58
-call.type$ -- 20
-change.case$ -- 28
++ -- 46
+- -- 25
+* -- 98
+:= -- 538
+add.period$ -- 61
+call.type$ -- 21
+change.case$ -- 29
 chr.to.int$ -- 0
-cite$ -- 26
-duplicate$ -- 140
-empty$ -- 289
-format.name$ -- 24
-if$ -- 608
+cite$ -- 27
+duplicate$ -- 145
+empty$ -- 307
+format.name$ -- 25
+if$ -- 639
 int.to.chr$ -- 0
-int.to.str$ -- 20
+int.to.str$ -- 21
 missing$ -- 6
-newline$ -- 101
-num.names$ -- 20
-pop$ -- 64
+newline$ -- 106
+num.names$ -- 21
+pop$ -- 70
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 45
+skip$ -- 48
 stack$ -- 0
 substring$ -- 50
-swap$ -- 14
+swap$ -- 15
 text.length$ -- 3
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 6
-while$ -- 25
-width$ -- 22
-write$ -- 207
-(There were 7 warnings)
+while$ -- 26
+width$ -- 23
+write$ -- 217
+(There were 9 warnings)
