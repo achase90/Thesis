@@ -7874,8 +7874,8 @@ www.SparkFun.com SKU : Comp-SMDS</description>
 <wire x1="0" y1="20.32" x2="30.48" y2="20.32" width="0.254" layer="94"/>
 <text x="0" y="22.86" size="1.27" layer="94">&gt;NAME</text>
 <text x="22.86" y="22.86" size="1.27" layer="94">&gt;VALUE</text>
-<text x="12.7" y="2.54" size="1.27" layer="94" rot="R90">SERVO</text>
-<text x="17.78" y="2.54" size="1.27" layer="94" rot="R90">CONNECTOR</text>
+<text x="10.16" y="5.08" size="1.27" layer="94">SERVO</text>
+<text x="10.16" y="2.54" size="1.27" layer="94">CONNECTOR</text>
 <pin name="PPM8" x="-5.08" y="15.24" length="middle"/>
 <pin name="PPM7" x="-5.08" y="12.7" length="middle"/>
 <pin name="PPM6" x="-5.08" y="10.16" length="middle"/>

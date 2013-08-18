@@ -3,6 +3,8 @@
 %=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 \documentclass[12pt]{ucthesis}
 \usepackage{thesis_preamble}
+\usepackage{verbatim}
+\usepackage{listings}
 \usepackage{float}
 \title{Flight Testing Small UAVs for Drag Polar Estimation}
 \author{Adam Chase}
@@ -65,8 +67,6 @@
 \pagestyle{plain}
 
 
-
-
 \renewcommand{\baselinestretch}{1.66}
 
 
@@ -83,7 +83,6 @@
 
 \include{hardware}
 
-
 \include{flightTest}
 
 \include{results}
@@ -91,6 +90,12 @@
 \include{summary}
 
 % ------------- End main chapters ----------------------
+\clearpage
+\begin{appendices}
+\include{wiringSchematics}
+%\include{sourceCode}
+\end{appendices}
+
 
 \clearpage
 \bibliographystyle{unsrt}

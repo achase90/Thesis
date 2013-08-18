@@ -57,6 +57,16 @@ Honeywell~Magnetic Sensors.
 \newblock Smart digital magnetometer - hmr2300.
 \newblock Technical report, Honeywell, 2006.
 
+\bibitem{hmc5883LDatasheet}
+Honeywell.
+\newblock 3-axis digital compass ic hmc5883l.
+\newblock Technical report, Honeywell.
+
+\bibitem{hmc5883LSchematic}
+Sparkfun.
+\newblock Hmc5883l-breakout-v11.
+\newblock Technical report, Sparkfun, 2011.
+
 \bibitem{itg3200DataSheet}
 InvenSense.
 \newblock Itg-3200 product specification revision 1.4.

@@ -24,14 +24,15 @@
 \contentsline {section}{\numberline {6.2}Accelerations}{22}{section.6.2}
 \contentsline {section}{\numberline {6.3}Vehicle Mass}{22}{section.6.3}
 \contentsline {section}{\numberline {6.4}Euler Angles}{23}{section.6.4}
-\contentsline {section}{\numberline {6.5}Wind Angles}{24}{section.6.5}
-\contentsline {subsection}{\numberline {6.5.1}Calibration}{26}{subsection.6.5.1}
-\contentsline {subsection}{\numberline {6.5.2}Wind Angle Kalman Filter}{26}{subsection.6.5.2}
-\contentsline {section}{\numberline {6.6}Additional Sensors}{27}{section.6.6}
-\contentsline {subsection}{\numberline {6.6.1}Data Acquisition Integration}{28}{subsection.6.6.1}
-\contentsline {chapter}{\numberline {7}Flight Test}{29}{chapter.7}
-\contentsline {section}{\numberline {7.1}$C_{D_0}$ Validation}{29}{section.7.1}
-\contentsline {section}{\numberline {7.2}$K_1$ Validation}{29}{section.7.2}
-\contentsline {section}{\numberline {7.3}$K_2$ Validation}{30}{section.7.3}
-\contentsline {chapter}{\numberline {8}Results}{31}{chapter.8}
-\contentsline {chapter}{\numberline {9}Summary}{32}{chapter.9}
+\contentsline {section}{\numberline {6.5}Wind Angles}{26}{section.6.5}
+\contentsline {subsection}{\numberline {6.5.1}Calibration}{28}{subsection.6.5.1}
+\contentsline {subsection}{\numberline {6.5.2}Wind Angle Kalman Filter}{28}{subsection.6.5.2}
+\contentsline {section}{\numberline {6.6}Additional Sensors}{29}{section.6.6}
+\contentsline {section}{\numberline {6.7}Data Acquisition Integration}{30}{section.6.7}
+\contentsline {chapter}{\numberline {7}Flight Test}{32}{chapter.7}
+\contentsline {section}{\numberline {7.1}$C_{D_0}$ Validation}{32}{section.7.1}
+\contentsline {section}{\numberline {7.2}$K_1$ Validation}{32}{section.7.2}
+\contentsline {section}{\numberline {7.3}$K_2$ Validation}{33}{section.7.3}
+\contentsline {chapter}{\numberline {8}Results}{34}{chapter.8}
+\contentsline {chapter}{\numberline {9}Summary}{35}{chapter.9}
+\contentsline {chapter}{\numberline {A}Wiring Schematics}{36}{Appendix.1.A}
