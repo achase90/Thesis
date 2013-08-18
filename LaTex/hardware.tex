@@ -70,7 +70,7 @@ For increased accuracy, a discrete linear Kalman filter is applied. This necessi
     \includegraphics[width=0.6\textwidth]{figures/itg3200Schematic.eps}
 \end{figure}
 
-The gyroscope was calibrated using a two-step process similar to that of the accelerometer. First, zero-offset noise was removed from each axis by acquiring data for 10 seconds and subtracting the simple average from future readings. Second, the gyro was placed on a turn table which was set to $33 \frac{1}{3}$ RPM. Each axis was first lined up in the positive direction and next in the negative direction, and a linear fit was applied between the two data points.
+The gyroscope was calibrated using a two-step process similar to that of the accelerometer. First, zero-offset noise was removed from each axis by acquiring data for 10 seconds and subtracting the simple average from future readings. Second, the gyro was placed on a turn table which was set to $33 \frac{1}{3}$ RPM. Each axis was first lined up in the positive direction and next in the negative direction, and a linear fit was applied between the two data points.\\
 
 With the angular rates available from the gyroscope, the system equations for the Kalman filter are
 \begin{align}
@@ -102,10 +102,12 @@ z_k & = \begin{bmatrix}
 The measurement covariance noise matrix was calculated using the standard deviation of the error between the magnetometer's ellipsoid fit and the acquired, calibrated data itself. The process noise covariance matrix was calculated using the standard deviation of the zero offset calibration data for the rate gyroscope.
 
 \section{Wind Angles}
-The accuracy at which the aerodynamic wind angles are calculated is critical to the overall prediction accuracy. In keeping with the goal of minimizing the number of required sensors, an attempt was made to estimate aerodynamic angles without directly measuring them. There has been a plethora of work conducted on this subject. One of the first available papers on the subject was from the Air Force Institute of Technology \cite{joseph1988}. In that paper, two methods were developed: one for in flight estimation, and the other for post-flight estimation. Both methods relied on either estimated or known stability derivatives. Since the purpose of this thesis is to estimate part of the dynamics, this estimating scheme will not work. Other techniques assume linearization about an operating condition \cite{morelli2012real}. For R/C aircraft this assumption generally cannot be made due to visual flight rules. Other work \cite{Lie2013} combined a dynamics model and a no-vertical-wind assumption. The overarching theme of this previous estimation work was that too many assumptions needed to be made to get results that were not accurate enough ($\approx1^\circ-2^\circ$) for drag polar estimation. For this reason, it was necessary to directly measure airflow angles.
+The accuracy at which the aerodynamic wind angles are calculated is critical to the overall prediction accuracy. In keeping with the goal of minimizing the number of required sensors, an attempt was made to estimate aerodynamic angles without directly measuring them. There has been a plethora of work conducted on this subject. One of the first available papers on the subject was from the Air Force Institute of Technology \cite{joseph1988}. In that paper, two methods were developed: one for in flight estimation, and the other for post-flight estimation. Both methods relied on either estimated or known stability derivatives. Since the purpose of this thesis is to estimate part of the dynamics, this estimating scheme will not work. Other techniques assume linearization about an operating condition \cite{morelli2012real}. For R/C aircraft this assumption generally cannot be made due to visual flight rules. Other work \cite{Lie2013} combined a dynamics model and a no-vertical-wind assumption. The overarching theme of this previous estimation work was that too many assumptions needed to be made to get results that were not accurate enough ($\approx1^\circ-2^\circ$) for drag polar estimation. For this reason, it was necessary to directly measure airflow angles.\\
 
-\indent
-A five-hole probe was chosen to measure aerodynamic angles as they do not contain moving parts and can provide very accurate, repeatable data. The five-hole probe selected was the Aeroprobe Air Data probe. It has a length of 6 inches and a diameter of 1/8 inch and comes calibrated to pressures. Each pair of lines of the air data probe is connected to an All Sensors digital differential pressure sensor with a full scale range of $\pm$5"-H$_2$O\cite{allsensorsDDO}.
+A five-hole probe was chosen to measure aerodynamic angles as they do not contain moving parts and can provide very accurate, repeatable data. The five-hole probe selected was the Aeroprobe Air Data probe. It has a length of 6 inches and a diameter of 1/8 inch and comes calibrated to pressures.
+%todo:document calibration process
+
+ Each pair of lines of the air data probe is connected to an All Sensors digital differential pressure sensor with a full scale range of $\pm$5"-H$_2$O\cite{allsensorsDDO}.
 
 \begin{figure}[H]
   \caption{All Sensors 5-INCH-D-DO Pressure Sensor} \label{allsensorsPressurePic}
@@ -113,10 +115,9 @@ A five-hole probe was chosen to measure aerodynamic angles as they do not contai
     \includegraphics[width=0.5\textwidth]{figures/allsensorsPressure.jpg}
 \end{figure}
 
-These pressure sensors have a total error band of 0.25\% of full scale. They use a UART serial interface that operates on a 5V logic level, but the logic levels are compatible with the 3.3V interface of the Arduino Due. The serial interface includes addressable read commands, which allows multiples devices on a single bus, and ensures all devices record pressure at the same time. The sensor can output both a 14-bit pressure reading and a 12-bit temperature reading, which the devices uses to correct its pressure measurement.
+These pressure sensors have a total error band of 0.25\% of full scale. They use a UART serial interface that operates on a 5V logic level, but the logic levels are compatible with the 3.3V interface of the Arduino Due. The serial interface includes addressable read commands, which allows multiples devices on a single bus, and ensures all devices record pressure at the same time. The sensor can output both a 14-bit pressure reading and a 12-bit temperature reading, which the devices uses to correct its pressure measurement.\\
 
-\subsection{Calibration}
-The five-hole air-data probe is calibrated using a Cal-Jet.
+The pressure sensors were calibrated using the same two step process as the gyroscope and accelerometer. The zero offset was obtained by connecting port A to port B and taking data for 10 seconds. Pressure was applied for the linear fit using a %todo:cite vacuum gun Russ uses to calibrate
 
 \subsection{Wind Angle Kalman Filter}
 
@@ -147,7 +148,7 @@ z_k & = \begin{bmatrix}
 \end{bmatrix}+\hat{v}_{k-1}
 \end{align}
 
-The process covariance matrix was calculated using the error propogation discussed in Section \ref{pointErrorSection} and the standard deviation data from calibration of each of the sensors. The measurement noise covariance matrix was calculated based on the standard deviation data for the 5-hole probe calibration.
+The process covariance matrix was calculated using the error propagation discussed in Section \ref{pointErrorSection} and the standard deviation data from the zero offset calibration of each of the sensors. The measurement noise covariance matrix was calculated based on the standard deviation data for the zero offset pressure transducers connected to the five-hole probe.
 
 
 \section{Additional Sensors}
@@ -159,7 +160,7 @@ A uBlox LEA-6T GPS receiver was included in the data acquisition system to aid i
     \includegraphics[width=0.5\textwidth]{figures/gpsBoard.jpg}
 \end{figure}
 
-A barometric altitude sensor was also included the data acquisiton system. The model chosen was an All Sensors BARO-DO, which has a range of 600 mBar to 1100 mBar\cite{allSensorsBaroDatasheet}. It has a nominal error of 1.0 mBar. It has the same packaging and communication protocol as the All Sensors 5-INCH-D-DO used for wind angle measurement, which simplified integration.
+A barometric altitude sensor was also included the data acquisiton system. The model chosen was an All Sensors BARO-DO, which has a range of 600 mBar to 1100 mBar\cite{allSensorsBaroDatasheet}. It has a nominal error of 1.0 mBar. It has the same packaging and communication protocol as the All Sensors 5-INCH-D-DO used for wind angle measurement, which simplified integration. It was calibrated to remove zero offset, but was not checked for linearity. The zero offset was removed by comparing the output data to a %todo:cite Russ's lab atmospheric pressure gauge.
 
 A digital temperature sensor was combined with the barometric altitude sensor to estimate the air density.
 \begin{figure}[H]
@@ -167,7 +168,7 @@ A digital temperature sensor was combined with the barometric altitude sensor to
   \centering
     \includegraphics[width=0.25\textwidth]{figures/ds18b20Picture.jpg}
 \end{figure}
- The DS18B20 from Dallas Semiconductors was chosen for its relatively simple One-Wire interface. The device can be powered with the communication line and has a $\pm$0.5$^\circ$C nominal accuracy\cite{DS18B20Datasheet}.
+ The DS18B20 from Dallas Semiconductors was chosen for its relatively simple One-Wire interface. The device can be powered with the communication line and has a $\pm$0.5$^\circ$C nominal accuracy\cite{DS18B20Datasheet}. It was calibrated across multiple measurements using the %todo:cite Russ's lab atmopsheric temp gauge.\\
 
 Header pins capable of reading commanded PWM signals to servos were also added. Future work could include stability derivative estimation, and the header pins provide PWM measurement, which can map to servo angles, if it is assumed the servo is not stalled. 
 
