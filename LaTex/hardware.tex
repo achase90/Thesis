@@ -56,10 +56,8 @@ The HMR-2300 can be supplied with power between 6V and 15V, so the 3-cell 11.1V 
  The HMC-5883L has an accuracy of 2 milliGauss on each axis, which corresponds to a accuracy.\\
  %todo:calc gauss to angles
 
- Both magnetometers were calibrated for bot soft-iron and hard-iron effects using a method developed in. 
- %todo:cite diy drones mag calibration
- To do this, data was acquired for one minute with the magnetometer being swept through all directions. An ellipsoid was fit to the data using a ordinary least squares method available from the Matlab file exchange.
- %todo:cite ellipsoid fit function
+ Both magnetometers were calibrated for bot soft-iron and hard-iron effects using a method documented in\cite{magCalibration}.
+ To do this, data was acquired for one minute with the magnetometer being swept through all directions. An ellipsoid was fit to the data using a ordinary least squares method available from the Matlab file exchange\cite{ellipsoidFit}.
  The least squares fit estimates the center and radius of each axis. The center values for each axis are subtracted from the readings to remove hard-iron effects. Each $i$-th axis is then scaled by $\frac{1}{R_i}$ to ``squish" the ellipse into a circle, which removes soft-iron effects.
 \subsection*{Euler Angle Kalman Filter}
 For increased accuracy, a discrete linear Kalman filter is applied. This necessitated adding a three-axis gyroscope to the system. The gyroscope chosen was the Invensense ITG-3200, which comes in a QFN package. This gyroscope has a total error of $0.38^\circ/$s-rms\cite{itg3200DataSheet}, and uses a digital I$^2$C interface on a 3.3V operating voltage. The gyroscope has a full-scale span of $\pm2000^\circ/$s. The gyroscope was integrated into the main sensor board using a circuit based on that of Sparkfun's ITG-3200 breakout board\cite{itg3200BOBSchematic}.

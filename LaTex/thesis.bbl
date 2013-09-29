@@ -59,13 +59,24 @@ Honeywell~Magnetic Sensors.
 
 \bibitem{hmc5883LDatasheet}
 Honeywell.
-\newblock 3-axis digital compass ic hmc5883l.
+\newblock 3 axis digital compass ic hmc5883l.
 \newblock Technical report, Honeywell.
 
 \bibitem{hmc5883LSchematic}
 Sparkfun.
-\newblock Hmc5883l-breakout-v11.
+\newblock Hmc5883l breakout v11.
 \newblock Technical report, Sparkfun, 2011.
+
+\bibitem{magCalibration}
+Talat Ozyagcilar.
+\newblock {\em Calibrating an eCompass in the Presence of Hard and Soft-Iron
+  Interference}.
+\newblock Freescale Semiconductors, rev 3.0 edition, 04 2013.
+
+\bibitem{ellipsoidFit}
+Yury Petrov.
+\newblock Ellipsoid fit.
+\newblock Matlab File Exchange, 08 2013.
 
 \bibitem{itg3200DataSheet}
 InvenSense.
@@ -105,7 +116,7 @@ Doug Weibel.
   with a ublox 6t module., December 2012.
 
 \bibitem{allSensorsBaroDatasheet}
-All S.
+All Sensors.
 \newblock Ds-0010.
 \newblock Technical report, All Sensors.
 
