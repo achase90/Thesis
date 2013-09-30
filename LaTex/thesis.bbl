@@ -26,25 +26,67 @@ Stephen~R Osborne.
   uav}.
 \newblock PhD thesis, Citeseer, 2007.
 
+\bibitem{Atmel2012}
+Atmel.
+\newblock Sam3x-sam3a series summary.
+\newblock Data Sheet 11057BS–ATARM–13-Jul-12, Atmel, 2012.
+
+\bibitem{Atmel2012atmega}
+Atmel.
+\newblock 8-bit atmel microcontroller with 64k/128k/256k bytes
+  in-systemprogrammable flash.
+\newblock Data Sheet 2549P–AVR–10/2012, Atmel, 2012.
+
 \bibitem{adxl362DataSheet}
 Analog Devices.
 \newblock Micropower, 3-axis,±2 g/±4 g/±8 g digital output mems accelerometer.
 \newblock Technical report, 2012.
+
+\bibitem{Sparkfunadxl362BOB}
+Sparkfun.
+\newblock Adxl362 bob v01.
+\newblock Technical report, Sparkfun, 2012.
 
 \bibitem{U-Line}
 U-Line.
 \newblock Easy-count counting scale data sheet.
 \newblock Technical report, U-Line.
 
-\bibitem{honeywellHMR3500}
+\bibitem{hmr2300DataSheet}
+Honeywell~Magnetic Sensors.
+\newblock Smart digital magnetometer - hmr2300.
+\newblock Technical report, Honeywell, 2006.
+
+\bibitem{hmc5883LDatasheet}
 Honeywell.
-\newblock Truepoint™ compass module hmr3500.
-\newblock Technical report, 2008.
+\newblock 3 axis digital compass ic hmc5883l.
+\newblock Technical report, Honeywell.
+
+\bibitem{hmc5883LSchematic}
+Sparkfun.
+\newblock Hmc5883l breakout v11.
+\newblock Technical report, Sparkfun, 2011.
+
+\bibitem{magCalibration}
+Talat Ozyagcilar.
+\newblock {\em Calibrating an eCompass in the Presence of Hard and Soft-Iron
+  Interference}.
+\newblock Freescale Semiconductors, rev 3.0 edition, 04 2013.
+
+\bibitem{ellipsoidFit}
+Yury Petrov.
+\newblock Ellipsoid fit.
+\newblock Matlab File Exchange, 08 2013.
 
 \bibitem{itg3200DataSheet}
 InvenSense.
 \newblock Itg-3200 product specification revision 1.4.
 \newblock Technical report, 2010.
+
+\bibitem{itg3200BOBSchematic}
+Sparkfun.
+\newblock Itg-3200-v10.
+\newblock Schematic, Sparkfun, 2010.
 
 \bibitem{joseph1988}
 E~Joseph.
@@ -63,14 +105,39 @@ F.~Adhika~Pradipta Lie and Demoz Gebre-Egziabher.
 \newblock Synthetic air data system.
 \newblock {\em Journal of Aircraft}, pages 1--16, May 2013.
 
-\bibitem{HoneywellIPTDataSheet}
-Honeywell.
-\newblock Integrated pressure transducer ipt data sheet.
-\newblock Technical report, 2012.
+\bibitem{allsensorsDDO}
+All Sensors.
+\newblock Ds-0012 rev a.
+\newblock Technical report, All Sensors.
 
 \bibitem{ubloxDemo}
 Doug Weibel.
 \newblock Proof of concept test - extremely accurate 3d velocity measurement
   with a ublox 6t module., December 2012.
+
+\bibitem{allSensorsBaroDatasheet}
+All Sensors.
+\newblock Ds-0010.
+\newblock Technical report, All Sensors.
+
+\bibitem{DS18B20Datasheet}
+Maxim Integrated.
+\newblock Ds18b20 programmable resolution 1-wire digital thermometer.
+\newblock Technical report, Maxim Integrated, 2008.
+
+\bibitem{penguinRC}
+Finwing Hobby.
+\newblock Finwing universal penguin fpv airplane.
+\newblock Website, 2012.
+
+\bibitem{Auman2001}
+Dahlke Auman and CW~Dahlke.
+\newblock Drag characteristics of ribbons.
+\newblock {\em AIAA Paper}, 2011, 2001.
+
+\bibitem{prandtl1923applications}
+Ludwig Prandtl.
+\newblock {\em Applications of modern hydrodynamics to aeronautics}.
+\newblock National Advisory Committee for Aeronautics, 1923.
 
 \end{thebibliography}
