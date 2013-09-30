@@ -1,18 +1,12 @@
 function [alpha,beta] = pressureToAngles(data)
 
-torr2psf = 2.784495557;
 load probeCalibData.mat
 
-P1 = P1Torr*torr2psf;
-P2 = P2Torr*torr2psf;
-P3 = P3Torr*torr2psf;
-P4 = P4Torr*torr2psf;
-P5 = P5Torr*torr2psf;
-P6 = P6Torr*torr2psf;
-PrefAbs = PrefAbsTorr*torr2psf;
-PsAbs = PsAbsTorr*torr2psf;
-Pt = PtTorr*torr2psf;
-T = 9*TsC/5 + 32.2;
+% P16 = P1 - P6;
+% P23 = P2 - P6;
+% P45 = P3 - P6;
+cAlpha = P45./P16;
+cBeta = P23./P16;
 
-alpha = 0;
-beta = 0;
+alpha = interp1(cAlphaCalib,alphaCalib,cAlpha);
+beta = interp1(cBetaCalib,betaCalib,cBeta);
