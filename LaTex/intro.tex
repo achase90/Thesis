@@ -6,7 +6,7 @@ Additionally, it is difficult to impossible to exactly scale down a vehicle, esp
 %todo:cite scaling laws
 inevitably leads to aerodynamic flight tests that attempt to quantify the as-built drag and lift characteristics of the vehicle.
 \\
-The flight test of full scale aircraft for drag polar prediction is generally conducted about a trimmed condition. That is, the aircraft is flown to an operating conditions dictated by the test plan, and sets the control surfaces such that there are no accelerations and no moments. Data is then collected for a set amount of time, without changing the operating condition. After the data is collected, the operating point is changed, the aircraft is trimmed at this new flight condition, and data is again collected. This process is repeated at various points in the aircraft's flight envelope until enough data is collected to estimate a drag polar.\\
+The flight test of full scale aircraft for drag polar prediction is generally conducted about a trimmed condition. That is, the aircraft is flown to an operating condition dictated by the test plan, and sets the control surfaces such that there are no accelerations and no moments. Data is then collected for a set amount of time, without changing the operating condition. After the data is collected, the operating point is changed, the aircraft is trimmed at this new flight condition, and data is again collected. This process is repeated at various points in the aircraft's flight envelope until enough data is collected to estimate a drag polar.\\
 Unfortunately, for many R/C aircraft and small UAVs, this procedure isn't feasible. First, these aircraft typically operate close to ground level, meaning there could potentially be both unsteady and turbulent winds, and a steady wind. R/C aircraft and small UAVs typically have much lower moments of inertias and mass than their full-scale counterparts, which means they will be affected much more by atmospheric disturbances than full-scale vehicles. Second, many of these aircraft have a line-of-sight communication link, and R/C aircraft in particular are flown in small patterns at a flight field. Even in the case of a steady atmosphere, R/C aircraft usually are not well trimmed, because by the time the pilot can see if the vehicle is trimmed, he has to turn around in the pattern. This thesis attempts to fix these problems, by allowing the pilot to fly in a more generic flight path, and not relying on a still atmosphere assumption.
 
 \chapter{Method}
@@ -22,7 +22,7 @@ Note that a stationary atmosphere is not assumed. The fixed mass assumption is c
 
 \section{Reference Frames}
 For this thesis, the reference frames used will follow those described in \cite{klein2006aircraft}, and will be repeated here for clarity.
-
+%todo:make reference frame vector graphics
 \subsection*{North-East-Down (NED) Axes ($x_{ned}$, $y_{ned}$, $z_{ned}$)}
 The NED axis system defines a local tangent plane on the Earth's surface, with the origin coinciding with the vehicle's center of gravity. The $\hat{i}$ vector points due north, the $\hat{j}$ vector points due east, and the $\hat{k}$ vector points towards the center of the earth, in accordance with the right-hand rule. This coordinate system is vehicle carried, meaning the origin is fixed, but the axis directions are independent of vehicle orientation.
 
@@ -59,12 +59,12 @@ Aerodynamic forces are described in the stability reference frame. In general, t
 \vec{F}_{A_S} &= D \hat{i}_s+Y \hat{j}_s+L \hat{k}_s
 \end{align}
 
-where $D$ is drag force, $Y$ is side force, and $L$ is lift force. \\
+where $D$ is drag force, $Y$ is side force, and $L$ is lift force.\\
 The gravitational force on the vehicle acts in the $+z_{ned}$ direction and is equal in magnitude to the vehicle's weight $W$, leading to
 \begin{align}
 \vec{F}_{G_{ned}} &= 0\hat{i}_{ned}+0\hat{j}_{ned}+W\hat{k}_{ned}
 \end{align}
-\\
+
 In general, propulsive forces are modeled as
 \begin{align}
 \vec{F}_{T_b} &= T_x \hat{i}_b+T_y \hat{j}_b +T_z \hat{k}_b
@@ -74,16 +74,18 @@ where $T_x$, $T_y$, and $T_z$ are components of thrust in their respective body 
 The forces are combined and transformed into the body axes reference frame so that they align with the output of body mounted accelerometers. The combined equations of motion are then
 
 \begin{align}
-\vec{F}_{AERO_W} = DCM_{bw}^{-1}(m\vec{a} - DCM_{ib}\vec{F}_{GRAVITY_i})
+\label{equationsOfMotion}
+\vec{F}_{AERO_W} = DCM_{bw}^{-1}(m\vec{a} - DCM_{ib}\vec{F}_{G_{ned}})
 \end{align}
 
+The first term in Equation \ref{equationsOfMotion}, $DCM_{bw}$, is a rotation matrix that rotates a vector in body axes into wind axes, through the wind angles $\alpha$ and $\beta$. The vehicle mass and weight are $m$ and $\vec{F}_G$, respectfully. Accelerations are shown by the variable $\vec{a}$. The rotation matrix $DCM_{ib}$ requires the Euler angles between the NED frame and the body frame. These states, when taken together, are the minimum required states for drag polar estimation.
 
 \section{Kalman Filter Usage}
 \label{kalman-filter}
-This thesis utilizes multiple Kalman Filters to estimate both regression coefficients and improved states. The Kalman filter operates recursively on a time-series and provides an optimal estimate of the system state.
+This thesis utilizes multiple Kalman filters to estimate both regression coefficients and improved states. As a brief overview, the Kalman filter combines the measured state with a predicted state to give an optimal\cite{kalman60} estimate of the actual system state.
 
 \subsection{Linear Kalman Filter}
-A linear Kalman filter can be applied where the system in question can be described in the form \cite{welch1995introduction}
+A linear Kalman filter can be applied\cite{welch1995introduction} where the system in question can be described in the form 
 
 \begin{align}
 x_k &= Ax_{k-1} + Bu_{k-1}+w_{k-1}
@@ -95,16 +97,13 @@ The measured state is then
 z_k &= Hx_k+v_k
 \end{align} 
 
-where $H$ is the output matrix and $v_k$ is measurement noise.
+where $H$ is the output matrix and $v_k$ is measurement noise.\\
 
-\indent
 The Kalman filter operates in a predictor-corrector manner, where the predictor step is often called the \textit{a priori} estimate, and the corrector step is often called the \textit{a posteriori} estimate. The \textit{a priori} state estimate is calculated using prior states and inputs, while assuming no process noise
 
 \begin{align}
 \hat{x}^-_k &= A\hat{x}_{k-1}+Bu_{k-1}
 \end{align}
-
-
 
 The \textit{a priori} estimate of the covariance matrix is projected in a similar manner
 
@@ -135,7 +134,7 @@ where $y_k$ is the predicted value of $z_k$ found using the output matrix $H$ an
 \begin{align}
 y_k &= H\hat{x}^-_k
 \end{align}
-Note that Equation \ref{kalmanStateUpdate} is essentially a weighted average of a measured state and an expected state. The weighting is the Kalman gain, which is related to the ratio of confidence in the measured state and the expected state. For a 1-D case with equal confidence between the measured state and the expected state, the Kalman gain $K_k = 0.5$, and the Kalman filter becomes a simple and straight-forward average.
+Note that Equation \ref{kalmanStateUpdate} is essentially a weighted average of a measured state and an expected state. The weighting is the Kalman gain, which is related to the ratio of confidence in the measured state and the expected state. For a 1-D case with equal confidence between the measured state and the expected state, the Kalman gain $K_k = 0.5$, and the Kalman Filter becomes a simple and straight-forward average.
 
 
 \subsection{Extended Kalman Filter}
@@ -169,7 +168,7 @@ H &= \frac{\partial h_i}{\partial x_j}(\hat{x}_{k},0)\\
 V &= \frac{\partial h_i}{\partial v_j}(\hat{x}_{k},0)
 \end{align}
 
-The Extended Kalman Filter uses these linearized equations to perform the same process as the linear Kalman Filter. Again, the first step is to calculate the \textit{a priori} estimate of the state and the covariance matrix
+The Extended Kalman filter uses these linearized equations to perform the same process as the linear Kalman filter. Again, the first step is to calculate the \textit{a priori} estimate of the state and the covariance matrix
 \begin{align}
 \hat{x}^-_k &=f(\hat{x}_{k-1},u_{k-1},0)\\
 P^-_k  &= A_kP_{k-1}A^T_{k-1}+W_kQ_{k-1}W^T_k

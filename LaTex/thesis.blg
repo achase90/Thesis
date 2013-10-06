@@ -12,58 +12,61 @@ A level-1 auxiliary file: summary.aux
 A level-1 auxiliary file: wiringSchematics.aux
 The style file: unsrt.bst
 Database file #1: bibliography.bib
+Warning--entry type for "737wingTipVortices" isn't style-file defined
+--line 79 of file bibliography.bib
 Warning--entry type for "penguinRC" isn't style-file defined
---line 97 of file bibliography.bib
+--line 137 of file bibliography.bib
 Warning--entry type for "ellipsoidFit" isn't style-file defined
---line 409 of file bibliography.bib
+--line 511 of file bibliography.bib
 Warning--entry type for "ubloxDemo" isn't style-file defined
---line 673 of file bibliography.bib
+--line 793 of file bibliography.bib
 Warning--empty journal in stevens2003aircraft
 Warning--empty institution in adxl362DataSheet
 Warning--empty year in U-Line
 Warning--empty year in hmc5883LDatasheet
 Warning--empty institution in itg3200DataSheet
 Warning--empty year in allsensorsDDO
+Warning--empty year in pressureStandard
 Warning--empty year in allSensorsBaroDatasheet
-You've used 27 entries,
+You've used 32 entries,
             1791 wiz_defined-function locations,
-            585 strings with 6340 characters,
-and the built_in function-call counts, 3748 in all, are:
-= -- 338
-> -- 128
-< -- 3
-+ -- 59
-- -- 32
-* -- 123
-:= -- 680
-add.period$ -- 79
-call.type$ -- 27
-change.case$ -- 36
+            615 strings with 6940 characters,
+and the built_in function-call counts, 4666 in all, are:
+= -- 426
+> -- 152
+< -- 5
++ -- 70
+- -- 38
+* -- 163
+:= -- 822
+add.period$ -- 95
+call.type$ -- 32
+change.case$ -- 43
 chr.to.int$ -- 0
-cite$ -- 34
-duplicate$ -- 187
-empty$ -- 397
-format.name$ -- 32
-if$ -- 819
+cite$ -- 40
+duplicate$ -- 234
+empty$ -- 502
+format.name$ -- 38
+if$ -- 1034
 int.to.chr$ -- 0
-int.to.str$ -- 27
-missing$ -- 9
-newline$ -- 136
-num.names$ -- 27
-pop$ -- 92
+int.to.str$ -- 32
+missing$ -- 13
+newline$ -- 161
+num.names$ -- 32
+pop$ -- 114
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 61
+skip$ -- 79
 stack$ -- 0
-substring$ -- 50
-swap$ -- 20
-text.length$ -- 3
+substring$ -- 88
+swap$ -- 29
+text.length$ -- 5
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
-warning$ -- 7
-while$ -- 32
-width$ -- 29
-write$ -- 280
-(There were 10 warnings)
+warning$ -- 8
+while$ -- 42
+width$ -- 34
+write$ -- 334
+(There were 12 warnings)

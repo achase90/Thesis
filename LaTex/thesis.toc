@@ -1,6 +1,6 @@
-\contentsline {chapter}{Contents}{vi}{figure.caption.1}
-\contentsline {chapter}{List of Tables}{viii}{chapter*.3}
-\contentsline {chapter}{List of Figures}{ix}{chapter*.4}
+\contentsline {chapter}{TABLE OF CONTENTS}{vi}{figure.caption.1}
+\contentsline {chapter}{LIST OF TABLES}{viii}{chapter*.3}
+\contentsline {chapter}{LIST OF FIGURES}{ix}{chapter*.4}
 \contentsline {chapter}{\numberline {1}Introduction and Motivation}{1}{chapter.1}
 \contentsline {chapter}{\numberline {2}Method}{3}{chapter.2}
 \contentsline {section}{\numberline {2.1}Reference Frames}{3}{section.2.1}
@@ -8,30 +8,30 @@
 \contentsline {section}{\numberline {2.3}Kalman Filter Usage}{6}{section.2.3}
 \contentsline {subsection}{\numberline {2.3.1}Linear Kalman Filter}{6}{subsection.2.3.1}
 \contentsline {subsection}{\numberline {2.3.2}Extended Kalman Filter}{8}{subsection.2.3.2}
-\contentsline {chapter}{\numberline {3}Regression Model}{10}{chapter.3}
-\contentsline {section}{\numberline {3.1}Regression Model - Least Squares Fit}{10}{section.3.1}
-\contentsline {section}{\numberline {3.2}Regression Model - Kalman Filter}{11}{section.3.2}
-\contentsline {chapter}{\numberline {4}Error Analysis}{13}{chapter.4}
-\contentsline {section}{\numberline {4.1}Random Error}{13}{section.4.1}
-\contentsline {section}{\numberline {4.2}Least Squares Model Error}{15}{section.4.2}
-\contentsline {section}{\numberline {4.3}Kalman Filter Error}{17}{section.4.3}
-\contentsline {chapter}{\numberline {5}Simulation}{18}{chapter.5}
-\contentsline {section}{\numberline {5.1}Simulation Environment}{18}{section.5.1}
-\contentsline {section}{\numberline {5.2}Simulation Inputs}{18}{section.5.2}
-\contentsline {section}{\numberline {5.3}Simulation Results}{19}{section.5.3}
-\contentsline {chapter}{\numberline {6}Hardware}{21}{chapter.6}
-\contentsline {section}{\numberline {6.1}Flight Computer}{21}{section.6.1}
-\contentsline {section}{\numberline {6.2}Accelerations}{22}{section.6.2}
-\contentsline {section}{\numberline {6.3}Vehicle Mass}{23}{section.6.3}
-\contentsline {section}{\numberline {6.4}Euler Angles}{23}{section.6.4}
-\contentsline {section}{\numberline {6.5}Wind Angles}{27}{section.6.5}
-\contentsline {subsection}{\numberline {6.5.1}Wind Angle Kalman Filter}{30}{subsection.6.5.1}
-\contentsline {section}{\numberline {6.6}Additional Sensors}{30}{section.6.6}
-\contentsline {section}{\numberline {6.7}Data Acquisition Integration}{32}{section.6.7}
-\contentsline {chapter}{\numberline {7}Flight Test}{33}{chapter.7}
-\contentsline {section}{\numberline {7.1}$C_{D_0}$ Validation}{33}{section.7.1}
-\contentsline {section}{\numberline {7.2}$K_1$ Validation}{33}{section.7.2}
-\contentsline {section}{\numberline {7.3}$K_2$ Validation}{34}{section.7.3}
-\contentsline {chapter}{\numberline {8}Results}{35}{chapter.8}
-\contentsline {chapter}{\numberline {9}Summary}{36}{chapter.9}
-\contentsline {chapter}{\numberline {A}Wiring Schematics}{37}{Appendix.1.A}
+\contentsline {chapter}{\numberline {3}Drag Meta-Modeling}{10}{chapter.3}
+\contentsline {section}{\numberline {3.1}Regression Model - Least Squares Fit}{13}{section.3.1}
+\contentsline {section}{\numberline {3.2}Regression Model - Kalman Filter}{14}{section.3.2}
+\contentsline {chapter}{\numberline {4}Error Analysis}{16}{chapter.4}
+\contentsline {section}{\numberline {4.1}Random Error}{16}{section.4.1}
+\contentsline {section}{\numberline {4.2}Least Squares Model Error}{18}{section.4.2}
+\contentsline {section}{\numberline {4.3}Kalman Filter Error}{20}{section.4.3}
+\contentsline {chapter}{\numberline {5}Simulation}{21}{chapter.5}
+\contentsline {section}{\numberline {5.1}Simulation Environment}{21}{section.5.1}
+\contentsline {section}{\numberline {5.2}Simulation Inputs}{21}{section.5.2}
+\contentsline {section}{\numberline {5.3}Simulation Results}{22}{section.5.3}
+\contentsline {chapter}{\numberline {6}Hardware}{24}{chapter.6}
+\contentsline {section}{\numberline {6.1}Flight Computer}{24}{section.6.1}
+\contentsline {section}{\numberline {6.2}Accelerations}{25}{section.6.2}
+\contentsline {section}{\numberline {6.3}Vehicle Mass}{26}{section.6.3}
+\contentsline {section}{\numberline {6.4}Euler Angles}{26}{section.6.4}
+\contentsline {section}{\numberline {6.5}Wind Angles}{30}{section.6.5}
+\contentsline {subsection}{\numberline {6.5.1}Wind Angle Kalman Filter}{33}{subsection.6.5.1}
+\contentsline {section}{\numberline {6.6}Additional Sensors}{33}{section.6.6}
+\contentsline {section}{\numberline {6.7}Data Acquisition Integration}{35}{section.6.7}
+\contentsline {chapter}{\numberline {7}Flight Test}{36}{chapter.7}
+\contentsline {section}{\numberline {7.1}$C_{D_0}$ Validation}{36}{section.7.1}
+\contentsline {section}{\numberline {7.2}$K_1$ Validation}{36}{section.7.2}
+\contentsline {section}{\numberline {7.3}$K_2$ Validation}{37}{section.7.3}
+\contentsline {chapter}{\numberline {8}Results}{38}{chapter.8}
+\contentsline {chapter}{\numberline {9}Summary}{39}{chapter.9}
+\contentsline {chapter}{\numberline {A}Wiring Schematics}{40}{APPENDIX.1.A}

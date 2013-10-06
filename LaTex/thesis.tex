@@ -6,31 +6,40 @@
 \usepackage{verbatim}
 \usepackage{listings}
 \usepackage{float}
-\title{Flight Testing Small UAVs for Drag Polar Estimation}
+\usepackage{titlesec}
+\widowpenalty 10000
+\clubpenalty 10000
+
+\title{FLIGHT TESTING SMALL UAVS FOR AERODYNAMIC PARAMETER ESTIMATION}
 \author{Adam Chase}
 \degreemonth{September} \degreeyear{2013} \degree{Master of Science}
 \defensemonth{September} \defenseyear{2013}
-\numberofmembers{4} \chair{Rob McDonald, Ph.D.} \othermemberA{Eric Mehiel, Ph.D.} \othermemberB{Russell Westphal, Ph.D.} \othermemberC{Kurt Colvin, Ph.D.}
+\numberofmembers{4} \chair{Robert McDonald, Ph.D.} \othermemberA{Eric Mehiel, Ph.D.} \othermemberB{Russell Westphal, Ph.D.} \othermemberC{Kurt Colvin, Ph.D.}
 \field{Aerospace Engineering} \campus{San Luis Obispo} \copyrightyears{seven}
 
 %=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 % Document
 %=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 \makeatletter
+
 \def\@makechapterhead#1{%
   \vspace*{2\p@}%
   {\parindent \z@ \raggedright \normalfont
-    %\ifnum \c@secnumdepth >\m@ne
-    %    \huge\bfseries \@chapapp\space \thechapter
-    %    \par\nobreak
-    %    \vskip 20\p@
-    %\fi
+    \ifnum \c@secnumdepth >\m@ne
+        \normalfont\normalsize\bfseries \thechapter
+.0~ %NOTE: this is supes jenky. might give problems later.
+    \fi
     \interlinepenalty\@M
-    \huge \bfseries #1\par\nobreak
+    \normalsize \bfseries #1\par\nobreak
     \vskip 1\p@
   }}
   \makeatother
   
+  %redefine cite to be a superscript
+  \let\oldcite\cite
+  \renewcommand{\cite}[1]{\textsuperscript{\oldcite{#1}}}
+  
+
 \begin{document}
 
 \maketitle
@@ -54,7 +63,7 @@
 \end{acknowledgements}
 
 
-\addcontentsline{toc}{chapter}{Contents}
+\addcontentsline{toc}{chapter}{TABLE OF CONTENTS}
 \tableofcontents
 
 
@@ -68,6 +77,7 @@
 
 
 \renewcommand{\baselinestretch}{1.66}
+
 
 
 % ------------- Main chapters here --------------------

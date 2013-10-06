@@ -189,15 +189,16 @@
 % supporting the title and approval pages.
 %
 % \tableofcontents:
-\def\contentsname{Contents}
+\def\contentsname{TABLE OF CONTENTS}
+%
 %                 ~~~~~~~~
 %
 % \listoffigures:
-\def\listfigurename{List of Figures}
+\def\listfigurename{LIST OF FIGURES}
 %                   ~~~~~~~~~~~~~~~
 %
 % \listoftables:
-\def\listtablename{List of Tables}
+\def\listtablename{LIST OF TABLES}
 %                  ~~~~~~~~~~~~~~
 %
 % \thebibliography:
@@ -220,17 +221,17 @@
 \def\chaptername{Chapter}
 %                ~~~~~~~
 % \appendix:
-\def\appendixname{Appendix}
+\def\appendixname{APPENDIX}
 %                 ~~~~~~~~
 % \part
 \def\partname{Part}
 %             ~~~~
 % abstract environment:
-\def\abstractname{Abstract}
+\def\abstractname{ABSTRACT}
 %                 ~~~~~~~~
 %
 % acknowledge environment:
-\def\acknowledgename{Acknowledgements}
+\def\acknowledgename{ACKNOWLEDGMENTS}
 %                    ~~~~~~~~~~~~~~~~
 % vitae environment:
 \def\vitaename{Curriculum Vit\ae}
@@ -314,8 +315,8 @@
 % joint (e.g. UCSD/SDSU) degrees.
 
 % Set the font that will be used in the front matter headings
-\def\fmfont{\fontsize\@xiipt{14.5}\selectfont}
-\def\fmsmallfont{\fontsize\@xiipt{14pt}\selectfont}
+\def\fmfont{\fontsize\@xiipt{12pt}\selectfont}
+\def\fmsmallfont{\fontsize\@xiipt{12pt}\selectfont}
 
 
 % TITLE PAGE - Cal Poly (Added by Mark Barry 2/07)
@@ -417,17 +418,21 @@ DATE SUBMITTED: \@degreemonth~\@degreeyear
 \par
 \vspace*{0.5in}
 
-\begin{tabular}{lp{3in}}
+\begin{tabular}{lp{4in}}
 TITLE:  & FLIGHT TESTING SMALL UAVS FOR DRAG POLAR ESTIMATION     \par\\
 AUTHOR: &\@author     \par\\
 DATE SUBMITTED: &\@degreemonth~\@degreeyear  \par\\
 
-\par\\
+\par \\
 
-COMMITTEE CHAIR:  &\@chair     \par\\
-COMMITTEE MEMBER: &\@othermemberA     \par\\
-COMMITTEE MEMBER: &\@othermemberB     \par\\
-COMMITTEE MEMBER: &\@othermemberC     \par\\
+COMMITTEE CHAIR:  &\@chair \\
+& Associate Professsor, Aerospace Engineering   \par\\\\
+COMMITTEE MEMBER: &\@othermemberA \\
+& Associate Professor, Aerospace Engineering   \par\\\\
+COMMITTEE MEMBER: &\@othermemberB \\
+& Professor, Mechanical Engineering    \par\\\\
+COMMITTEE MEMBER: &\@othermemberC \\
+& Professor, Industrial and Manufacturing Engineering   \par\\
 \end{tabular}
 
 \end{alwayssingle}
@@ -472,9 +477,9 @@ ALL RIGHTS RESERVED
 %\setcounter{page}{1}
 \begin{center}
 {\fmfont
-{\bfseries 
+{ 
 \abstractname}\par
-Nonlinear UAV Flight Control Using Command Filtered Backstepping\par
+FLIGHT TESTING SMALL UAVS FOR AERODYNAMIC PARAMETER ESTIMATION\par
 \vspace{.1in}
 \@author\par
 %{\@degree} in \@field\par
@@ -512,7 +517,7 @@ Thesis Committee Chair
 
 \newenvironment{acknowledgements}{\begin{alwayssingle}
 \begin{center}
-{\large \bfseries \acknowledgename}
+{\acknowledgename}
 \end{center}
 }{\end{alwayssingle}}
 
@@ -935,7 +940,7 @@ Thesis Committee Chair
 
 \def\tableofcontents{\@restonecolfalse
   \if@twocolumn\@restonecoltrue\onecolumn\fi
-  \chapter*{\contentsname
+  \chapter*{\centerline{\normalfont{\contentsname}}
         \@mkboth{\uppercase{\contentsname}}{\uppercase{\contentsname}}}%
   {\ssp\@starttoc{toc}}\if@restonecol\twocolumn\fi}
 
@@ -945,7 +950,7 @@ Thesis Committee Chair
    \@tempdima 3em         % width of box holding part number, used by
      \parindent \z@ \rightskip \@pnumwidth             %% \numberline
      \parfillskip -\@pnumwidth
-     {\large \bfseries          % set line in \large boldface
+     {          % set line in \large boldface
      \leavevmode          % TeX command to enter horizontal mode.
      #1\hfil \hbox to\@pnumwidth{\hss #2}}\par
      \nobreak             % Never break after part entry
@@ -983,7 +988,7 @@ Thesis Committee Chair
 % Single-space list of figures, add it to the table of contents.
 \def\listoffigures{\@restonecolfalse
   \if@twocolumn\@restonecoltrue\onecolumn\fi
-  \chapter*{\listfigurename\@mkboth{\uppercase{\listfigurename}}%
+  \chapter*{\centerline{\normalfont{\normalsize{\listfigurename}}}\@mkboth{\uppercase{\listfigurename}}%
 {\uppercase{\listfigurename}}}
    \addcontentsline{toc}{chapter}{\listfigurename}
    {\ssp\@starttoc{lof}}\if@restonecol
@@ -995,12 +1000,12 @@ Thesis Committee Chair
 %
 \def\listoftables{\@restonecolfalse
   \if@twocolumn\@restonecoltrue\onecolumn\fi
-  \chapter*{\listtablename\@mkboth{\uppercase{\listtablename}}%
+  \chapter*{\centerline{\normalfont{\normalsize{\listtablename}}}\@mkboth{\uppercase{\listtablename}}%
    {\uppercase{\listtablename}}}\@starttoc{lot}\if@restonecol
   \twocolumn\fi}
 \def\listoftables{\@restonecolfalse
   \if@twocolumn\@restonecoltrue\onecolumn\fi
-  \chapter*{\listtablename\@mkboth{\uppercase{\listtablename}}%
+  \chapter*{\centerline{\normalfont{\normalsize{\listtablename}}}\@mkboth{\uppercase{\listtablename}}%
 {\uppercase{\listtablename}}}
    \addcontentsline{toc}{chapter}{\listtablename}
    {\ssp\@starttoc{lot}}\if@restonecol
@@ -1032,11 +1037,14 @@ Thesis Committee Chair
 %%               as it says in the comment in latex.tex
 %% RmS 92/01/14: Set \p@enumiv to {} and \theenumiv to \arabic{enumiv}
 %%               to get correct references
-\def\thebibliography#1{\chapter*{\bibname\@mkboth{%
+
+\def\thebibliography#1{
+\chapter*{\centerline{\bibname}\@mkboth{%
 \uppercase{\bibname}}{\uppercase{\bibname}}}
   \addcontentsline{toc}{chapter}{\bibname}
   \list{\@biblabel{\arabic{enumiv}}}{\settowidth\labelwidth{\@biblabel{#1}}%
     \leftmargin\labelwidth
+    
     \advance\leftmargin\labelsep
     \usecounter{enumiv}%
     \let\p@enumiv\@empty
@@ -1075,7 +1083,7 @@ Thesis Committee Chair
 
 \def\theindex{\@restonecoltrue\if@twocolumn\@restonecolfalse\fi
 \columnseprule \z@
-\columnsep 35\p@\twocolumn[\@makeschapterhead{\indexname}]%
+\columnsep 35\p@\twocolumn[\@makesterhead{\indexname}]%
     \@mkboth{\uppercase{\indexname}}{\uppercase{\indexname}}%
     \thispagestyle{plain}\parindent\z@
     \parskip\z@ plus .3\p@\relax\let\item\@idxitem}
