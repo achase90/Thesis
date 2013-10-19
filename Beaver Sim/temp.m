@@ -1,23 +1,35 @@
 clear all,close all,clc
 
+secondDerivBnd = .1;
+
 load 64a716.mat
-ii=(CL>0);
-CLmin = CL(CD==min(CD));
 
-plot((CL(ii)-CLmin).^2,CD(ii),'-k')
+CLmin = CL(CD==min(CD));
+linPts = secondDer(alpha,CL);
+p1=polyfit((CL(linPts)-CLmin).^2,CD(linPts),1);
+
+
+plot((CL-CLmin).^2,CD,'-k')
 hold all
-
+plot((CL(linPts)-CLmin).^2,polyval(p1,(CL(linPts)-CLmin).^2),'--k')
+%%
 load 64a216.mat
-ii=(CL>0);
 CLmin = CL(CD==min(CD));
+linPts = secondDer(alpha,CL);
+p2=polyfit((CL(linPts)-CLmin).^2,CD(linPts),1);
 
-plot((CL(ii)-CLmin).^2,CD(ii),'-r')
+plot((CL-CLmin).^2,CD,'-r')
+plot((CL(linPts)-CLmin).^2,polyval(p2,(CL(linPts)-CLmin).^2),'--r')
 
+%%
 load 4412.mat
 
 CLmin = CL(CD==min(CD));
-ii=(CL>0);
+linPts = secondDer(alpha,CL);
+p3=polyfit((CL(linPts)-CLmin).^2,CD(linPts),1);
 
-plot((CL(ii)-CLmin).^2,CD(ii),'-b')
+plot((CL-CLmin).^2,CD,'-b')
+
+plot((CL(linPts)-CLmin).^2,polyval(p3,(CL(linPts)-CLmin).^2),'--b')
 
 legend('63716','63216','4412')

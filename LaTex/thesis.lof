@@ -1,31 +1,35 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {2.1}{\ignorespaces NED Frame of Reference\textsuperscript {\cite {nedAxes}}\relax }}{4}{figure.caption.5}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Body Axes Definition\textsuperscript {\cite {hawkerThreeView}}\relax }}{5}{figure.caption.6}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Stability Axes Definition\relax }}{5}{figure.caption.7}
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Wind Axes Definition\relax }}{6}{figure.caption.8}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Drag Contribution Types\relax }}{10}{figure.caption.5}
-\contentsline {figure}{\numberline {3.2}{\ignorespaces NACA 4412 Lift Curve\relax }}{11}{figure.caption.6}
-\contentsline {figure}{\numberline {3.3}{\ignorespaces NACA 4412 Drag Polar\relax }}{11}{figure.caption.6}
-\contentsline {figure}{\numberline {3.4}{\ignorespaces NACA 4412 $K_1$ Estimation\relax }}{11}{figure.caption.7}
-\contentsline {figure}{\numberline {3.5}{\ignorespaces Downwash Caused By Wingtip Vortices\textsuperscript {\cite {737wingTipVortices}}\relax }}{12}{figure.caption.8}
-\contentsline {figure}{\numberline {3.6}{\ignorespaces Induced Drag Free Body Diagram\relax }}{12}{figure.caption.9}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Drag Contribution Types\relax }}{12}{figure.caption.9}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces NACA 4412 Lift Curve\relax }}{13}{figure.caption.10}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces NACA 4412 Drag Polar\relax }}{13}{figure.caption.10}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces NACA 4412 $K_1$ Estimation\relax }}{13}{figure.caption.11}
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Downwash Caused By Wingtip Vortices\textsuperscript {\cite {737wingTipVortices}}\relax }}{14}{figure.caption.12}
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Induced Drag Free Body Diagram\relax }}{14}{figure.caption.13}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Heteroskedastic Error from Simulated Flight\relax }}{18}{figure.caption.10}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Heteroskedastic Error from Simulated Flight\relax }}{20}{figure.caption.14}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces Data Analysis Verification (No Noise)\relax }}{22}{figure.caption.11}
-\contentsline {figure}{\numberline {5.2}{\ignorespaces Drag Polar Prediction of Simulated Test Flight\relax }}{23}{figure.caption.12}
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Data Analysis Verification (No Noise)\relax }}{24}{figure.caption.15}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Drag Polar Prediction of Simulated Test Flight\relax }}{25}{figure.caption.16}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {6.1}{\ignorespaces Arduino Due Flight Computer\relax }}{25}{figure.caption.14}
-\contentsline {figure}{\numberline {6.2}{\ignorespaces ADXL-362 Schematic\relax }}{26}{figure.caption.15}
-\contentsline {figure}{\numberline {6.3}{\ignorespaces Honeywell HMR-2300 3-d Magnetometer \relax }}{27}{figure.caption.16}
-\contentsline {figure}{\numberline {6.4}{\ignorespaces HMR-2300 Adapter Board Schematic\relax }}{28}{figure.caption.17}
-\contentsline {figure}{\numberline {6.5}{\ignorespaces HMC-5883L Schematic\relax }}{29}{figure.caption.18}
-\contentsline {figure}{\numberline {6.6}{\ignorespaces ITG-3200 Eagle Schematic\relax }}{30}{figure.caption.19}
-\contentsline {figure}{\numberline {6.7}{\ignorespaces All Sensors 5-INCH-D-DO Pressure Sensor\relax }}{32}{figure.caption.20}
-\contentsline {figure}{\numberline {6.8}{\ignorespaces CGS Shop Board for uBlox LEA-6T\relax }}{34}{figure.caption.21}
-\contentsline {figure}{\numberline {6.9}{\ignorespaces Dallas Semiconductors' DS18B20 Digital Temperature Sensors\relax }}{34}{figure.caption.22}
-\addvspace {10\p@ }
-\addvspace {10\p@ }
+\contentsline {figure}{\numberline {6.1}{\ignorespaces Arduino Due Flight Computer\relax }}{27}{figure.caption.18}
+\contentsline {figure}{\numberline {6.2}{\ignorespaces ADXL-362 Schematic\relax }}{28}{figure.caption.19}
+\contentsline {figure}{\numberline {6.3}{\ignorespaces Honeywell HMR-2300 3-d Magnetometer \relax }}{29}{figure.caption.20}
+\contentsline {figure}{\numberline {6.4}{\ignorespaces HMR-2300 Adapter Board Schematic\relax }}{30}{figure.caption.21}
+\contentsline {figure}{\numberline {6.5}{\ignorespaces HMC-5883L Schematic\relax }}{31}{figure.caption.22}
+\contentsline {figure}{\numberline {6.6}{\ignorespaces ITG-3200 Eagle Schematic\relax }}{32}{figure.caption.23}
+\contentsline {figure}{\numberline {6.7}{\ignorespaces All Sensors 5-INCH-D-DO Pressure Sensor\relax }}{34}{figure.caption.24}
+\contentsline {figure}{\numberline {6.8}{\ignorespaces CGS Shop Board for uBlox LEA-6T\relax }}{36}{figure.caption.25}
+\contentsline {figure}{\numberline {6.9}{\ignorespaces Dallas Semiconductors' DS18B20 Digital Temperature Sensors\relax }}{36}{figure.caption.26}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {A.1}{\ignorespaces Arduino Due Flight Data Recorder Shield\relax }}{40}{figure.caption.23}
-\contentsline {figure}{\numberline {A.2}{\ignorespaces Pressure Satellite Board Schematic\relax }}{41}{figure.caption.24}
-\contentsline {figure}{\numberline {A.3}{\ignorespaces HMR-2300 Adapter Board Schematic\relax }}{42}{figure.caption.25}
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {A.1}{\ignorespaces Arduino Due Flight Data Recorder Shield\relax }}{42}{figure.caption.27}
+\contentsline {figure}{\numberline {A.2}{\ignorespaces Pressure Satellite Board Schematic\relax }}{43}{figure.caption.28}
+\contentsline {figure}{\numberline {A.3}{\ignorespaces HMR-2300 Adapter Board Schematic\relax }}{44}{figure.caption.29}

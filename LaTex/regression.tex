@@ -83,10 +83,10 @@ The standard model for a polynomial regression is
 
 When Equation \ref{parabolicDragEqn} is expanded and like-terms of $C_L$ are combined, equation \ref{polyRegress} becomes
 \begin{align}
-C_D = (C_{D_{min}} + K_1 C_{L_{min}}) -2K_1C_{L_{min}}C_L+(K_1+K_2)C^2_L
+C_D = (C_{D_{min}} + K_1 C^2_{L_{min}}) -2K_1C_{L_{min}}C_L+(K_1+K_2)C^2_L
 \end{align}
 
-The value $(C_{D_{min}}+K_1C_{L_{min}})$ is referred to as the parasite drag coefficient, and is represented by $C_{D_0}$\cite{raymer}.
+The value $(C_{D_{min}}+K_1C^2_{L_{min}})$ is referred to as the parasite drag coefficient, and is represented by $C_{D_0}$\cite{raymer}.
 These coefficients can be estimated using an Ordinary Least Squares fit. The Ordinary Least Squares problem statement is as follows
 \begin{align}
 \bar{A}\vec{x} &= \vec{b}
@@ -175,4 +175,4 @@ H_k = \begin{bmatrix}
 \end{align}
 
 
-With the $H$ matrix calculated, the EKF algorithim can be implemented as described in Section \ref{EKFTheory}. The measurement noise covariance at each instant was calculated by doing error propagation as described in Section \ref{pointErrorSection} and the process noise covariance was set to zero because the coefficients should be exactly constant.
+With the $H$ matrix calculated, the EKF algorithim can be implemented as described in Section \ref{EKFTheory}. The measurement noise covariance at each instant was calculated by doing error propagation as described in Section \ref{pointErrorSection} and the process noise covariance was set to zero because the parabolic regression coefficients should be exactly constant.
