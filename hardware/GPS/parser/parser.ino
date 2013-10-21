@@ -16,7 +16,7 @@ void loop() {
   {
     if (Serial3.read() == '$')
     {
-      char msgID[5];
+      char msgID[6]={0x00};
       uint32_t utcTime;
       char gpsStatus;
       int32_t gpsLat;
@@ -31,7 +31,8 @@ void loop() {
 
       nchars = Serial3.readBytesUntil(0x0a,bytesIn,128);
       //process gps string
-      char *s1=bytesIn,*pt;
+      char *s1=bytesIn;
+      char *pt;
       pt = strsep(&s1,",*");
       for (int j=0;j<5;j++)
       {
