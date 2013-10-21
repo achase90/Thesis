@@ -3,18 +3,18 @@
 
 void setup() {
   Serial.begin(9600);
-  Serial2.begin(9600);
-  Serial2.flush();
-  Serial2.setTimeout(200);
+  Serial3.begin(57600);
+  Serial3.flush();
+  Serial3.setTimeout(200);
 }
 
 void loop() {
   char bytesIn[80] = {
     0x00    };
   int nchars;
-  if (Serial2.available()>0)
+  if (Serial3.available()>0)
   {
-    if (Serial2.read() == '$')
+    if (Serial3.read() == '$')
     {
       char msgID[5];
       uint32_t utcTime;
@@ -29,7 +29,7 @@ void loop() {
       char mode;
       uint32_t CS;
 
-      nchars = Serial2.readBytesUntil(0x0a,bytesIn,128);
+      nchars = Serial3.readBytesUntil(0x0a,bytesIn,128);
       //process gps string
       char *s1=bytesIn,*pt;
       pt = strsep(&s1,",*");
@@ -188,9 +188,9 @@ void loop() {
     // if the character that was read then flush the rest of the data
     else
     {
-      while (Serial2.available()>0)
+      while (Serial3.available()>0)
       {
-        Serial2.read(); 
+        Serial3.read(); 
       }
     }
   }
