@@ -1200,7 +1200,7 @@
 <pad name="TIMEOUT1" x="29.21" y="2.54" drill="0.8" shape="octagon"/>
 <text x="21.59" y="11.43" size="1.27" layer="25">uBlox LEA-6T</text>
 <pad name="TIMEOUT2" x="31.75" y="2.54" drill="0.8" shape="octagon"/>
-<hole x="39.37" y="26.67" drill="3.175"/>
+<hole x="38.1" y="27.94" drill="3.175"/>
 <wire x1="0" y1="0" x2="0" y2="30.48" width="0.127" layer="51"/>
 <wire x1="0" y1="30.48" x2="43.18" y2="30.48" width="0.127" layer="51"/>
 <wire x1="43.18" y1="30.48" x2="43.18" y2="0" width="0.127" layer="51"/>
@@ -1216,9 +1216,9 @@
 <pin name="TIMEOUT1" x="2.54" y="0" length="middle"/>
 <pin name="GND" x="2.54" y="12.7" length="middle"/>
 <pin name="5V" x="2.54" y="15.24" length="middle"/>
-<wire x1="7.62" y1="17.78" x2="20.32" y2="17.78" width="0.254" layer="94"/>
-<wire x1="20.32" y1="17.78" x2="20.32" y2="-5.08" width="0.254" layer="94"/>
-<wire x1="20.32" y1="-5.08" x2="7.62" y2="-5.08" width="0.254" layer="94"/>
+<wire x1="7.62" y1="17.78" x2="22.86" y2="17.78" width="0.254" layer="94"/>
+<wire x1="22.86" y1="17.78" x2="22.86" y2="-5.08" width="0.254" layer="94"/>
+<wire x1="22.86" y1="-5.08" x2="7.62" y2="-5.08" width="0.254" layer="94"/>
 <wire x1="7.62" y1="-5.08" x2="7.62" y2="17.78" width="0.254" layer="94"/>
 <pin name="TIMEOUT2" x="2.54" y="-2.54" length="middle"/>
 </symbol>
@@ -1347,7 +1347,7 @@ https://www.sparkfun.com/products/8745</description>
 <wire x1="12.7" y1="0.0254" x2="12.7" y2="10.1854" width="0.2032" layer="20"/>
 <wire x1="12.7" y1="10.1854" x2="0" y2="10.1854" width="0.2032" layer="20"/>
 <wire x1="0" y1="10.1854" x2="0" y2="0.0254" width="0.2032" layer="20"/>
-<text x="16.129" y="8.4074" size="1.016" layer="22" font="vector" ratio="15" rot="MR0">V+</text>
+<text x="14.859" y="8.4074" size="1.016" layer="22" font="vector" ratio="15" rot="MR0">V+</text>
 <text x="16.129" y="5.8674" size="1.016" layer="22" font="vector" ratio="15" rot="MR0">GND</text>
 <text x="16.129" y="3.3274" size="1.016" layer="22" font="vector" ratio="15" rot="MR0">INT1</text>
 <text x="16.129" y="0.7874" size="1.016" layer="22" font="vector" ratio="15" rot="MR0">INT2</text>
@@ -3037,6 +3037,60 @@ Basic schematic elements and footprints for 0603, 1206, and PTH resistors.</desc
 </deviceset>
 </devicesets>
 </library>
+<library name="RJ11V">
+<packages>
+<package name="RJ11V">
+<pad name="P$1" x="5.08" y="1.27" drill="0.8"/>
+<pad name="P$2" x="7.62" y="1.27" drill="0.8"/>
+<pad name="P$3" x="10.16" y="1.27" drill="0.8"/>
+<pad name="P$4" x="6.35" y="3.81" drill="0.8"/>
+<pad name="P$5" x="8.89" y="3.81" drill="0.8"/>
+<pad name="P$6" x="11.43" y="3.81" drill="0.8"/>
+<hole x="3.175" y="10.16" drill="3.25"/>
+<hole x="13.335" y="10.16" drill="3.25"/>
+<wire x1="0" y1="0" x2="16.51" y2="0" width="0.127" layer="21"/>
+<wire x1="16.51" y1="0" x2="16.51" y2="12.7" width="0.127" layer="21"/>
+<wire x1="16.51" y1="12.7" x2="0" y2="12.7" width="0.127" layer="21"/>
+<wire x1="0" y1="12.7" x2="0" y2="0" width="0.127" layer="21"/>
+</package>
+</packages>
+<symbols>
+<symbol name="RJ11">
+<wire x1="0" y1="0" x2="0" y2="30.48" width="0.254" layer="94"/>
+<wire x1="0" y1="30.48" x2="12.7" y2="30.48" width="0.254" layer="94"/>
+<wire x1="12.7" y1="30.48" x2="12.7" y2="0" width="0.254" layer="94"/>
+<wire x1="12.7" y1="0" x2="0" y2="0" width="0.254" layer="94"/>
+<pin name="P$1" x="-5.08" y="2.54" length="middle"/>
+<pin name="P$2" x="-5.08" y="7.62" length="middle"/>
+<pin name="P$3" x="-5.08" y="12.7" length="middle"/>
+<pin name="P$4" x="-5.08" y="17.78" length="middle"/>
+<pin name="P$5" x="-5.08" y="22.86" length="middle"/>
+<pin name="P$6" x="-5.08" y="27.94" length="middle"/>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="RJ11V">
+<gates>
+<gate name="G$1" symbol="RJ11" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="RJ11V">
+<connects>
+<connect gate="G$1" pin="P$1" pad="P$1"/>
+<connect gate="G$1" pin="P$2" pad="P$2"/>
+<connect gate="G$1" pin="P$3" pad="P$3"/>
+<connect gate="G$1" pin="P$4" pad="P$4"/>
+<connect gate="G$1" pin="P$5" pad="P$5"/>
+<connect gate="G$1" pin="P$6" pad="P$6"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -3060,6 +3114,7 @@ Basic schematic elements and footprints for 0603, 1206, and PTH resistors.</desc
 <part name="C3" library="SparkFun-Passives" deviceset="CAP" device="KIT" value="100nF"/>
 <part name="C4" library="SparkFun-Passives" deviceset="CAP" device="KIT" value="100nF"/>
 <part name="R1" library="SparkFun-Resistors" deviceset="RESISTOR" device="AXIAL-0.3" value="1K"/>
+<part name="U$8" library="RJ11V" deviceset="RJ11V" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -3079,6 +3134,7 @@ Basic schematic elements and footprints for 0603, 1206, and PTH resistors.</desc
 <instance part="C3" gate="G$1" x="129.54" y="48.26"/>
 <instance part="C4" gate="G$1" x="142.24" y="48.26"/>
 <instance part="R1" gate="G$1" x="177.8" y="50.8"/>
+<instance part="U$8" gate="G$1" x="45.72" y="104.14"/>
 </instances>
 <busses>
 </busses>
@@ -3166,6 +3222,11 @@ Basic schematic elements and footprints for 0603, 1206, and PTH resistors.</desc
 <wire x1="86.36" y1="160.02" x2="96.52" y2="160.02" width="0.1524" layer="91"/>
 <label x="91.44" y="160.02" size="1.778" layer="95"/>
 </segment>
+<segment>
+<pinref part="U$8" gate="G$1" pin="P$3"/>
+<wire x1="27.94" y1="116.84" x2="40.64" y2="116.84" width="0.1524" layer="91"/>
+<label x="27.94" y="116.84" size="1.778" layer="95"/>
+</segment>
 </net>
 <net name="TX3" class="0">
 <segment>
@@ -3173,12 +3234,22 @@ Basic schematic elements and footprints for 0603, 1206, and PTH resistors.</desc
 <wire x1="-10.16" y1="55.88" x2="-2.54" y2="55.88" width="0.1524" layer="91"/>
 <label x="-12.7" y="55.88" size="1.778" layer="95"/>
 </segment>
+<segment>
+<pinref part="U$2" gate="G$1" pin="LV_TXI_1"/>
+<wire x1="48.26" y1="165.1" x2="35.56" y2="165.1" width="0.1524" layer="91"/>
+<label x="35.56" y="165.1" size="1.778" layer="95"/>
+</segment>
 </net>
 <net name="RX3" class="0">
 <segment>
 <pinref part="U$1" gate="G$1" pin="RX3"/>
 <wire x1="-10.16" y1="53.34" x2="-2.54" y2="53.34" width="0.1524" layer="91"/>
 <label x="-12.7" y="53.34" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="U$2" gate="G$1" pin="LV_RXO_1"/>
+<wire x1="48.26" y1="162.56" x2="35.56" y2="162.56" width="0.1524" layer="91"/>
+<label x="35.56" y="162.56" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="MISO" class="0">
@@ -3217,9 +3288,9 @@ Basic schematic elements and footprints for 0603, 1206, and PTH resistors.</desc
 </net>
 <net name="RX2" class="0">
 <segment>
-<pinref part="U$6" gate="G$1" pin="TTLDO"/>
-<wire x1="119.38" y1="78.74" x2="124.46" y2="78.74" width="0.1524" layer="91"/>
-<label x="124.46" y="78.74" size="1.778" layer="95"/>
+<pinref part="U$2" gate="G$1" pin="LV_RXO_2"/>
+<wire x1="35.56" y1="154.94" x2="48.26" y2="154.94" width="0.1524" layer="91"/>
+<label x="35.56" y="154.94" size="1.778" layer="95"/>
 </segment>
 <segment>
 <pinref part="U$1" gate="G$1" pin="RX2"/>
@@ -3275,9 +3346,9 @@ Basic schematic elements and footprints for 0603, 1206, and PTH resistors.</desc
 </net>
 <net name="TX2" class="0">
 <segment>
-<pinref part="U$6" gate="G$1" pin="TTLDI"/>
-<wire x1="124.46" y1="81.28" x2="119.38" y2="81.28" width="0.1524" layer="91"/>
-<label x="124.46" y="81.28" size="1.778" layer="95"/>
+<pinref part="U$2" gate="G$1" pin="LV_TXI_2"/>
+<wire x1="35.56" y1="152.4" x2="48.26" y2="152.4" width="0.1524" layer="91"/>
+<label x="35.56" y="152.4" size="1.778" layer="95"/>
 </segment>
 <segment>
 <pinref part="U$1" gate="G$1" pin="TX2"/>
@@ -3457,6 +3528,11 @@ Basic schematic elements and footprints for 0603, 1206, and PTH resistors.</desc
 <wire x1="86.36" y1="157.48" x2="96.52" y2="157.48" width="0.1524" layer="91"/>
 <label x="91.44" y="157.48" size="1.778" layer="95"/>
 </segment>
+<segment>
+<pinref part="U$8" gate="G$1" pin="P$6"/>
+<wire x1="27.94" y1="132.08" x2="40.64" y2="132.08" width="0.1524" layer="91"/>
+<label x="27.94" y="132.08" size="1.778" layer="95"/>
+</segment>
 </net>
 <net name="V-" class="0">
 <segment>
@@ -3622,6 +3698,54 @@ Basic schematic elements and footprints for 0603, 1206, and PTH resistors.</desc
 <pinref part="U$7" gate="G$1" pin="SDA"/>
 <wire x1="190.5" y1="71.12" x2="203.2" y2="71.12" width="0.1524" layer="91"/>
 <label x="198.12" y="71.12" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="RX3H" class="0">
+<segment>
+<pinref part="U$8" gate="G$1" pin="P$5"/>
+<wire x1="27.94" y1="127" x2="40.64" y2="127" width="0.1524" layer="91"/>
+<label x="27.94" y="127" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="TX3H" class="0">
+<segment>
+<pinref part="U$8" gate="G$1" pin="P$2"/>
+<wire x1="40.64" y1="111.76" x2="27.94" y2="111.76" width="0.1524" layer="91"/>
+<label x="27.94" y="111.76" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="U$2" gate="G$1" pin="HV_TXO_1"/>
+<wire x1="86.36" y1="165.1" x2="96.52" y2="165.1" width="0.1524" layer="91"/>
+<label x="91.44" y="165.1" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="U$2" gate="G$1" pin="HV_RXI_1"/>
+<wire x1="86.36" y1="162.56" x2="96.52" y2="162.56" width="0.1524" layer="91"/>
+<label x="91.44" y="162.56" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="RX2H" class="0">
+<segment>
+<pinref part="U$2" gate="G$1" pin="HV_RXI_2"/>
+<wire x1="96.52" y1="154.94" x2="86.36" y2="154.94" width="0.1524" layer="91"/>
+<label x="93.98" y="154.94" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="U$6" gate="G$1" pin="TTLDO"/>
+<wire x1="119.38" y1="78.74" x2="124.46" y2="78.74" width="0.1524" layer="91"/>
+<label x="124.46" y="78.74" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="TX2H" class="0">
+<segment>
+<pinref part="U$2" gate="G$1" pin="HV_TXO_2"/>
+<wire x1="96.52" y1="152.4" x2="86.36" y2="152.4" width="0.1524" layer="91"/>
+<label x="91.44" y="152.4" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="U$6" gate="G$1" pin="TTLDI"/>
+<wire x1="124.46" y1="81.28" x2="119.38" y2="81.28" width="0.1524" layer="91"/>
+<label x="124.46" y="81.28" size="1.778" layer="95"/>
 </segment>
 </net>
 </nets>
