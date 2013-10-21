@@ -16,7 +16,7 @@ void loop() {
   {
     if (Serial2.read() == '$')
     {
-      char msgID[5];
+      char msgID[6]={0x00};
       uint32_t utcTime;
       char gpsStatus;
       int32_t gpsLat;
