@@ -2,24 +2,24 @@ EAGLE AutoRouter Statistics:
 
 Job           : C:/Users/mufasa/Documents/Thesis/eagle/thesis.brd
 
-Start at      : 12:20:34 (10/21/2013)
-End at        : 12:21:45 (10/21/2013)
-Elapsed time  : 00:01:11
+Start at      : 12:39:07 (10/21/2013)
+End at        : 12:39:51 (10/21/2013)
+Elapsed time  : 00:00:43
 
-Signals       :    42   RoutingGrid: 5 mil  Layers: 2
-Connections   :    63   predefined:  0 ( 0 Vias )
+Signals       :    44   RoutingGrid: 5 mil  Layers: 2
+Connections   :    62   predefined:  45 ( 4 Vias )
 
-Router memory :   1610480
+Router memory :   1695760
 
-Passname          :    Busses     Route Optimize1 Optimize2 Optimize3 Optimize4
+Passname          :     Route Optimize1 Optimize2 Optimize3 Optimize4
 
-Time per pass     :  00:00:00  00:00:39  00:00:09  00:00:07  00:00:08  00:00:08
-Number of Ripups  :         0         0         0         0         0         0
-max. Level        :         0         9         0         0         0         0
-max. Total        :         0         9         0         0         0         0
+Time per pass     :  00:00:33  00:00:03  00:00:02  00:00:03  00:00:02
+Number of Ripups  :         0         0         0         0         0
+max. Level        :         1         0         0         0         0
+max. Total        :         0         0         0         0         0
 
-Routed            :         8        46        46        46        46        46
-Vias              :         0        82        20        11        10         7
-Resolution        :    12.7 %    73.0 %    73.0 %    73.0 %    73.0 %    73.0 %
+Routed            :         0         0         0         0         0
+Vias              :         0         0         0         0         0
+Resolution        :    72.6 %    72.6 %    72.6 %    72.6 %    72.6 %
 
-Final             : 73.0% finished
+Final             : 72.6% finished
