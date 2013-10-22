@@ -609,10 +609,6 @@
 <text x="0.635" y="-19.685" size="1.27" layer="21" rot="R270">A9</text>
 <text x="3.175" y="-19.685" size="1.27" layer="21" rot="R270">A10</text>
 <text x="5.715" y="-19.685" size="1.27" layer="21" rot="R270">A11</text>
-<text x="8.255" y="-19.685" size="1.27" layer="21" rot="R270">DAC0</text>
-<text x="10.795" y="-19.685" size="1.27" layer="21" rot="R270">DAC1</text>
-<text x="13.335" y="-19.685" size="1.27" layer="21" rot="R270">cnRX</text>
-<text x="15.875" y="-19.685" size="1.27" layer="21" rot="R270">cnTX</text>
 <text x="-50.165" y="32.385" size="1.27" layer="21" rot="R90">Aref</text>
 <text x="-47.625" y="32.385" size="1.27" layer="21" rot="R90">Gnd</text>
 <text x="-45.085" y="32.385" size="1.27" layer="21" rot="R90">13</text>
@@ -629,14 +625,14 @@
 <text x="-15.875" y="32.385" size="1.27" layer="21" rot="R90">2</text>
 <text x="-13.335" y="32.385" size="1.27" layer="21" rot="R90">Tx0</text>
 <text x="-10.795" y="32.385" size="1.27" layer="21" rot="R90">Rx0</text>
-<text x="-5.715" y="32.385" size="1.27" layer="21" rot="R90">Tx3(14)</text>
-<text x="-3.175" y="32.385" size="1.27" layer="21" rot="R90">Rx3(15)</text>
-<text x="-0.635" y="32.385" size="1.27" layer="21" rot="R90">Tx2(16)</text>
-<text x="1.905" y="32.385" size="1.27" layer="21" rot="R90">Rx2(17)</text>
-<text x="4.445" y="32.385" size="1.27" layer="21" rot="R90">Tx1(18)</text>
-<text x="6.985" y="32.385" size="1.27" layer="21" rot="R90">Rx1(19)</text>
-<text x="12.065" y="32.385" size="1.27" layer="21" rot="R90">SCL(21)</text>
-<text x="9.525" y="32.385" size="1.27" layer="21" rot="R90">SDA(20)</text>
+<text x="-5.715" y="32.385" size="1.27" layer="21" rot="R90">Tx3</text>
+<text x="-3.175" y="32.385" size="1.27" layer="21" rot="R90">Rx3</text>
+<text x="-0.635" y="32.385" size="1.27" layer="21" rot="R90">Tx2</text>
+<text x="1.905" y="32.385" size="1.27" layer="21" rot="R90">Rx2</text>
+<text x="4.445" y="32.385" size="1.27" layer="21" rot="R90">Tx1</text>
+<text x="6.985" y="32.385" size="1.27" layer="21" rot="R90">Rx1</text>
+<text x="12.065" y="32.385" size="1.27" layer="21" rot="R90">SCL</text>
+<text x="9.525" y="32.385" size="1.27" layer="21" rot="R90">SDA</text>
 <text x="17.145" y="31.115" size="1.27" layer="21" rot="R180">5v</text>
 <text x="17.145" y="28.575" size="1.27" layer="21" rot="R180">22</text>
 <text x="17.145" y="26.035" size="1.27" layer="21" rot="R180">24</text>
@@ -3063,7 +3059,7 @@ Basic schematic elements and footprints for 0603, 1206, and PTH resistors.</desc
 <part name="U$5" library="SparkFun-DigitalIC" deviceset="ICL3232" device=""/>
 <part name="C3" library="SparkFun-Passives" deviceset="CAP" device="KIT" value="100nF"/>
 <part name="C4" library="SparkFun-Passives" deviceset="CAP" device="KIT" value="100nF"/>
-<part name="R1" library="SparkFun-Resistors" deviceset="RESISTOR" device="AXIAL-0.3" value="1K"/>
+<part name="R1" library="SparkFun-Resistors" deviceset="RESISTOR" device="AXIAL-0.3" value="2.2K"/>
 <part name="U$8" library="RJ11V" deviceset="RJ11V" device=""/>
 </parts>
 <sheets>
@@ -3255,9 +3251,9 @@ Basic schematic elements and footprints for 0603, 1206, and PTH resistors.</desc
 <label x="-7.62" y="2.54" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="X1" gate="G$1" pin="9"/>
-<wire x1="203.2" y1="0" x2="195.58" y2="0" width="0.1524" layer="91"/>
-<label x="195.58" y="0" size="1.778" layer="95"/>
+<pinref part="X1" gate="G$1" pin="6"/>
+<wire x1="195.58" y1="7.62" x2="203.2" y2="7.62" width="0.1524" layer="91"/>
+<label x="198.12" y="7.62" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="SCL" class="0">
@@ -3444,11 +3440,6 @@ Basic schematic elements and footprints for 0603, 1206, and PTH resistors.</desc
 <label x="129.54" y="40.64" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="X1" gate="G$1" pin="5"/>
-<wire x1="180.34" y1="0" x2="172.72" y2="0" width="0.1524" layer="91"/>
-<label x="170.18" y="0" size="1.778" layer="95"/>
-</segment>
-<segment>
 <pinref part="U$3" gate="G$1" pin="GND"/>
 <wire x1="-38.1" y1="114.3" x2="-27.94" y2="114.3" width="0.1524" layer="91"/>
 <label x="-38.1" y="114.3" size="1.778" layer="95"/>
@@ -3477,6 +3468,11 @@ Basic schematic elements and footprints for 0603, 1206, and PTH resistors.</desc
 <pinref part="U$8" gate="G$1" pin="P$6"/>
 <wire x1="27.94" y1="132.08" x2="40.64" y2="132.08" width="0.1524" layer="91"/>
 <label x="27.94" y="132.08" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="X1" gate="G$1" pin="1"/>
+<wire x1="180.34" y1="10.16" x2="170.18" y2="10.16" width="0.1524" layer="91"/>
+<label x="170.18" y="10.16" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="V-" class="0">
@@ -3558,9 +3554,9 @@ Basic schematic elements and footprints for 0603, 1206, and PTH resistors.</desc
 <label x="177.8" y="30.48" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="X1" gate="G$1" pin="2"/>
-<wire x1="180.34" y1="7.62" x2="172.72" y2="7.62" width="0.1524" layer="91"/>
-<label x="170.18" y="7.62" size="1.778" layer="95"/>
+<pinref part="X1" gate="G$1" pin="4"/>
+<wire x1="180.34" y1="2.54" x2="172.72" y2="2.54" width="0.1524" layer="91"/>
+<label x="170.18" y="2.54" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="RS232SI" class="0">
