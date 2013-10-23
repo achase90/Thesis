@@ -2,12 +2,12 @@ EAGLE AutoRouter Statistics:
 
 Job           : C:/Users/mufasa/Documents/Thesis/eagle/thesis.brd
 
-Start at      : 12:55:56 (10/22/2013)
-End at        : 12:55:57 (10/22/2013)
+Start at      : 18:16:22 (10/22/2013)
+End at        : 18:16:23 (10/22/2013)
 Elapsed time  : 00:00:01
 
 Signals       :    44   RoutingGrid: 5 mil  Layers: 2
-Connections   :    62   predefined:  60 ( 26 Vias )
+Connections   :    62   predefined:  61 ( 23 Vias )
 
 Router memory :   1620320
 
@@ -18,8 +18,8 @@ Number of Ripups  :         0         0         0         0         0
 max. Level        :         0         0         0         0         0
 max. Total        :         0         0         0         0         0
 
-Routed            :         2         2         2         2         2
-Vias              :         2         0         0         0         0
+Routed            :         1         1         1         1         1
+Vias              :         1         1         0         0         0
 Resolution        :   100.0 %   100.0 %   100.0 %   100.0 %   100.0 %
 
 Final             : 100.0% finished

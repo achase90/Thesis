@@ -1289,18 +1289,18 @@ https://www.sparkfun.com/products/8745</description>
 <library name="adxl362">
 <packages>
 <package name="ADXL362">
-<wire x1="0" y1="0.0254" x2="12.7" y2="0.0254" width="0.2032" layer="20"/>
-<wire x1="12.7" y1="0.0254" x2="12.7" y2="10.1854" width="0.2032" layer="20"/>
-<wire x1="12.7" y1="10.1854" x2="0" y2="10.1854" width="0.2032" layer="20"/>
-<wire x1="0" y1="10.1854" x2="0" y2="0.0254" width="0.2032" layer="20"/>
-<text x="14.859" y="8.4074" size="1.016" layer="22" font="vector" ratio="15" rot="MR0">V+</text>
-<text x="16.129" y="5.8674" size="1.016" layer="22" font="vector" ratio="15" rot="MR0">GND</text>
-<text x="16.129" y="3.3274" size="1.016" layer="22" font="vector" ratio="15" rot="MR0">INT1</text>
-<text x="16.129" y="0.7874" size="1.016" layer="22" font="vector" ratio="15" rot="MR0">INT2</text>
-<text x="-0.635" y="0.7874" size="1.016" layer="22" font="vector" ratio="15" rot="MR0">!CS</text>
-<text x="-0.508" y="3.3274" size="1.016" layer="22" font="vector" ratio="15" rot="MR0">MISO</text>
-<text x="-0.635" y="5.8674" size="1.016" layer="22" font="vector" ratio="15" rot="MR0">MOSI</text>
-<text x="-1.27" y="8.4074" size="1.016" layer="22" font="vector" ratio="15" rot="MR0">SCK</text>
+<wire x1="0" y1="0.0254" x2="12.7" y2="0.0254" width="0.2032" layer="21"/>
+<wire x1="12.7" y1="0.0254" x2="12.7" y2="10.1854" width="0.2032" layer="21"/>
+<wire x1="12.7" y1="10.1854" x2="0" y2="10.1854" width="0.2032" layer="21"/>
+<wire x1="0" y1="10.1854" x2="0" y2="0.0254" width="0.2032" layer="21"/>
+<text x="9.779" y="8.4074" size="1.016" layer="21" font="vector" ratio="15" rot="MR0">V+</text>
+<text x="9.779" y="5.8674" size="1.016" layer="21" font="vector" ratio="15" rot="MR0">GND</text>
+<text x="9.779" y="3.3274" size="1.016" layer="21" font="vector" ratio="15" rot="MR0">INT1</text>
+<text x="9.779" y="0.7874" size="1.016" layer="21" font="vector" ratio="15" rot="MR0">INT2</text>
+<text x="4.445" y="0.7874" size="1.016" layer="21" font="vector" ratio="15" rot="MR0">!CS</text>
+<text x="5.842" y="3.3274" size="1.016" layer="21" font="vector" ratio="15" rot="MR0">MISO</text>
+<text x="5.715" y="5.8674" size="1.016" layer="21" font="vector" ratio="15" rot="MR0">MOSI</text>
+<text x="5.08" y="8.4074" size="1.016" layer="21" font="vector" ratio="15" rot="MR0">SCK</text>
 <pad name="SCK" x="1.27" y="8.89" drill="1.016" diameter="1.8796"/>
 <pad name="MOSI" x="1.27" y="6.35" drill="1.016" diameter="1.8796"/>
 <pad name="MISO" x="1.27" y="3.81" drill="1.016" diameter="1.8796"/>
@@ -1355,10 +1355,10 @@ https://www.sparkfun.com/products/8745</description>
 <library name="ITG3200">
 <packages>
 <package name="ITG3200">
-<wire x1="0" y1="0" x2="0" y2="13.97" width="0.2032" layer="20"/>
-<wire x1="0" y1="13.97" x2="17.78" y2="13.97" width="0.2032" layer="20"/>
-<wire x1="17.78" y1="13.97" x2="17.78" y2="0" width="0.2032" layer="20"/>
-<wire x1="17.78" y1="0" x2="0" y2="0" width="0.2032" layer="20"/>
+<wire x1="0" y1="0" x2="0" y2="13.97" width="0.2032" layer="21"/>
+<wire x1="0" y1="13.97" x2="17.78" y2="13.97" width="0.2032" layer="21"/>
+<wire x1="17.78" y1="13.97" x2="17.78" y2="0" width="0.2032" layer="21"/>
+<wire x1="17.78" y1="0" x2="0" y2="0" width="0.2032" layer="21"/>
 <text x="0.762" y="11.43" size="1.016" layer="21" font="vector" ratio="15" rot="R270">VDD</text>
 <text x="3.302" y="11.43" size="1.016" layer="21" font="vector" ratio="15" rot="R270">VIO</text>
 <text x="5.842" y="11.43" size="1.016" layer="21" font="vector" ratio="15" rot="R270">GND</text>
@@ -1417,14 +1417,14 @@ https://www.sparkfun.com/products/8745</description>
 <library name="MICROSD">
 <packages>
 <package name="MICROSD">
-<wire x1="32.004" y1="2.413" x2="30.099" y2="0.508" width="0" layer="20" curve="-90"/>
-<wire x1="30.099" y1="0.508" x2="2.159" y2="0.508" width="0" layer="20"/>
-<wire x1="2.159" y1="0.508" x2="0.254" y2="2.413" width="0" layer="20" curve="-90"/>
-<wire x1="0.254" y1="2.413" x2="0.254" y2="24.003" width="0" layer="20"/>
-<wire x1="0.254" y1="24.003" x2="2.159" y2="25.908" width="0" layer="20" curve="-90"/>
-<wire x1="2.159" y1="25.908" x2="30.099" y2="25.908" width="0" layer="20"/>
-<wire x1="30.099" y1="25.908" x2="32.004" y2="24.003" width="0" layer="20" curve="-90"/>
-<wire x1="32.004" y1="24.003" x2="32.004" y2="2.413" width="0" layer="20"/>
+<wire x1="32.004" y1="2.413" x2="30.099" y2="0.508" width="0" layer="21" curve="-90"/>
+<wire x1="30.099" y1="0.508" x2="2.159" y2="0.508" width="0" layer="21"/>
+<wire x1="2.159" y1="0.508" x2="0.254" y2="2.413" width="0" layer="21" curve="-90"/>
+<wire x1="0.254" y1="2.413" x2="0.254" y2="24.003" width="0" layer="21"/>
+<wire x1="0.254" y1="24.003" x2="2.159" y2="25.908" width="0" layer="21" curve="-90"/>
+<wire x1="2.159" y1="25.908" x2="30.099" y2="25.908" width="0" layer="21"/>
+<wire x1="30.099" y1="25.908" x2="32.004" y2="24.003" width="0" layer="21" curve="-90"/>
+<wire x1="32.004" y1="24.003" x2="32.004" y2="2.413" width="0" layer="21"/>
 <text x="29.21" y="19.939" size="1.016" layer="25" font="vector" rot="R180">CS</text>
 <text x="29.337" y="17.526" size="1.016" layer="25" font="vector" rot="R180">DI</text>
 <text x="29.337" y="14.986" size="1.016" layer="25" font="vector" rot="R180">DO</text>
@@ -3056,7 +3056,7 @@ Basic schematic elements and footprints for 0603, 1206, and PTH resistors.</desc
 <part name="X1" library="con-subd" deviceset="F09" device="V"/>
 <part name="C1" library="SparkFun-Passives" deviceset="CAP" device="KIT" value="100nF"/>
 <part name="C2" library="SparkFun-Passives" deviceset="CAP" device="KIT" value="100nF"/>
-<part name="U$5" library="SparkFun-DigitalIC" deviceset="ICL3232" device=""/>
+<part name="MAX3232" library="SparkFun-DigitalIC" deviceset="ICL3232" device=""/>
 <part name="C3" library="SparkFun-Passives" deviceset="CAP" device="KIT" value="100nF"/>
 <part name="C4" library="SparkFun-Passives" deviceset="CAP" device="KIT" value="100nF"/>
 <part name="R1" library="SparkFun-Resistors" deviceset="RESISTOR" device="AXIAL-0.3" value="2.2K"/>
@@ -3073,10 +3073,13 @@ Basic schematic elements and footprints for 0603, 1206, and PTH resistors.</desc
 <instance part="U$4" gate="G$1" x="144.78" y="109.22"/>
 <instance part="U$7" gate="G$1" x="162.56" y="71.12"/>
 <instance part="U$3" gate="G$1" x="-22.86" y="104.14"/>
-<instance part="X1" gate="G$1" x="187.96" y="5.08"/>
+<instance part="X1" gate="G$1" x="187.96" y="5.08" smashed="yes">
+<attribute name="VALUE" x="184.15" y="-5.715" size="1.778" layer="96"/>
+<attribute name="NAME" x="184.15" y="13.97" size="1.778" layer="95"/>
+</instance>
 <instance part="C1" gate="G$1" x="121.92" y="33.02"/>
 <instance part="C2" gate="G$1" x="124.46" y="15.24"/>
-<instance part="U$5" gate="G$1" x="160.02" y="27.94"/>
+<instance part="MAX3232" gate="G$1" x="160.02" y="27.94"/>
 <instance part="C3" gate="G$1" x="129.54" y="48.26"/>
 <instance part="C4" gate="G$1" x="142.24" y="48.26"/>
 <instance part="R1" gate="G$1" x="177.8" y="50.8"/>
@@ -3092,7 +3095,7 @@ Basic schematic elements and footprints for 0603, 1206, and PTH resistors.</desc
 <label x="-7.62" y="12.7" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="U$5" gate="G$1" pin="VCC"/>
+<pinref part="MAX3232" gate="G$1" pin="VCC"/>
 <wire x1="180.34" y1="35.56" x2="175.26" y2="35.56" width="0.1524" layer="91"/>
 <label x="177.8" y="35.56" size="1.778" layer="95"/>
 </segment>
@@ -3430,7 +3433,7 @@ Basic schematic elements and footprints for 0603, 1206, and PTH resistors.</desc
 <label x="124.46" y="76.2" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="U$5" gate="G$1" pin="GND"/>
+<pinref part="MAX3232" gate="G$1" pin="GND"/>
 <wire x1="180.34" y1="33.02" x2="175.26" y2="33.02" width="0.1524" layer="91"/>
 <label x="177.8" y="33.02" size="1.778" layer="95"/>
 </segment>
@@ -3477,7 +3480,7 @@ Basic schematic elements and footprints for 0603, 1206, and PTH resistors.</desc
 </net>
 <net name="V-" class="0">
 <segment>
-<pinref part="U$5" gate="G$1" pin="V-"/>
+<pinref part="MAX3232" gate="G$1" pin="V-"/>
 <wire x1="142.24" y1="22.86" x2="147.32" y2="22.86" width="0.1524" layer="91"/>
 <label x="139.7" y="22.86" size="1.778" layer="95"/>
 </segment>
@@ -3494,7 +3497,7 @@ Basic schematic elements and footprints for 0603, 1206, and PTH resistors.</desc
 <label x="121.92" y="40.64" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="U$5" gate="G$1" pin="C1+"/>
+<pinref part="MAX3232" gate="G$1" pin="C1+"/>
 <wire x1="147.32" y1="35.56" x2="142.24" y2="35.56" width="0.1524" layer="91"/>
 <label x="142.24" y="35.56" size="1.778" layer="95"/>
 </segment>
@@ -3506,7 +3509,7 @@ Basic schematic elements and footprints for 0603, 1206, and PTH resistors.</desc
 <label x="121.92" y="25.4" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="U$5" gate="G$1" pin="C1-"/>
+<pinref part="MAX3232" gate="G$1" pin="C1-"/>
 <wire x1="142.24" y1="30.48" x2="147.32" y2="30.48" width="0.1524" layer="91"/>
 <label x="139.7" y="30.48" size="1.778" layer="95"/>
 </segment>
@@ -3518,7 +3521,7 @@ Basic schematic elements and footprints for 0603, 1206, and PTH resistors.</desc
 <label x="127" y="20.32" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="U$5" gate="G$1" pin="C2+"/>
+<pinref part="MAX3232" gate="G$1" pin="C2+"/>
 <wire x1="142.24" y1="27.94" x2="147.32" y2="27.94" width="0.1524" layer="91"/>
 <label x="139.7" y="27.94" size="1.778" layer="95"/>
 </segment>
@@ -3530,14 +3533,14 @@ Basic schematic elements and footprints for 0603, 1206, and PTH resistors.</desc
 <label x="124.46" y="10.16" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="U$5" gate="G$1" pin="C2-"/>
+<pinref part="MAX3232" gate="G$1" pin="C2-"/>
 <wire x1="142.24" y1="25.4" x2="147.32" y2="25.4" width="0.1524" layer="91"/>
 <label x="139.7" y="25.4" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="V+" class="0">
 <segment>
-<pinref part="U$5" gate="G$1" pin="V+"/>
+<pinref part="MAX3232" gate="G$1" pin="V+"/>
 <wire x1="147.32" y1="33.02" x2="142.24" y2="33.02" width="0.1524" layer="91"/>
 <label x="139.7" y="33.02" size="1.778" layer="95"/>
 </segment>
@@ -3549,7 +3552,7 @@ Basic schematic elements and footprints for 0603, 1206, and PTH resistors.</desc
 </net>
 <net name="RS232SO" class="0">
 <segment>
-<pinref part="U$5" gate="G$1" pin="T1OUT"/>
+<pinref part="MAX3232" gate="G$1" pin="T1OUT"/>
 <wire x1="175.26" y1="30.48" x2="180.34" y2="30.48" width="0.1524" layer="91"/>
 <label x="177.8" y="30.48" size="1.778" layer="95"/>
 </segment>
@@ -3561,7 +3564,7 @@ Basic schematic elements and footprints for 0603, 1206, and PTH resistors.</desc
 </net>
 <net name="RS232SI" class="0">
 <segment>
-<pinref part="U$5" gate="G$1" pin="R1IN"/>
+<pinref part="MAX3232" gate="G$1" pin="R1IN"/>
 <wire x1="175.26" y1="27.94" x2="180.34" y2="27.94" width="0.1524" layer="91"/>
 <label x="177.8" y="27.94" size="1.778" layer="95"/>
 </segment>
@@ -3573,7 +3576,7 @@ Basic schematic elements and footprints for 0603, 1206, and PTH resistors.</desc
 </net>
 <net name="MAGSI" class="0">
 <segment>
-<pinref part="U$5" gate="G$1" pin="T1IN"/>
+<pinref part="MAX3232" gate="G$1" pin="T1IN"/>
 <wire x1="175.26" y1="22.86" x2="180.34" y2="22.86" width="0.1524" layer="91"/>
 <label x="177.8" y="22.86" size="1.778" layer="95"/>
 </segment>
@@ -3590,7 +3593,7 @@ Basic schematic elements and footprints for 0603, 1206, and PTH resistors.</desc
 </net>
 <net name="MAGSO" class="0">
 <segment>
-<pinref part="U$5" gate="G$1" pin="R1OUT"/>
+<pinref part="MAX3232" gate="G$1" pin="R1OUT"/>
 <wire x1="175.26" y1="25.4" x2="180.34" y2="25.4" width="0.1524" layer="91"/>
 <label x="177.8" y="25.4" size="1.778" layer="95"/>
 </segment>

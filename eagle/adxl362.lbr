@@ -103,18 +103,18 @@
 <library>
 <packages>
 <package name="ADXL362">
-<wire x1="0" y1="0.0254" x2="12.7" y2="0.0254" width="0.2032" layer="20"/>
-<wire x1="12.7" y1="0.0254" x2="12.7" y2="10.1854" width="0.2032" layer="20"/>
-<wire x1="12.7" y1="10.1854" x2="0" y2="10.1854" width="0.2032" layer="20"/>
-<wire x1="0" y1="10.1854" x2="0" y2="0.0254" width="0.2032" layer="20"/>
-<text x="14.859" y="8.4074" size="1.016" layer="22" font="vector" ratio="15" rot="MR0">V+</text>
-<text x="16.129" y="5.8674" size="1.016" layer="22" font="vector" ratio="15" rot="MR0">GND</text>
-<text x="16.129" y="3.3274" size="1.016" layer="22" font="vector" ratio="15" rot="MR0">INT1</text>
-<text x="16.129" y="0.7874" size="1.016" layer="22" font="vector" ratio="15" rot="MR0">INT2</text>
-<text x="-0.635" y="0.7874" size="1.016" layer="22" font="vector" ratio="15" rot="MR0">!CS</text>
-<text x="-0.508" y="3.3274" size="1.016" layer="22" font="vector" ratio="15" rot="MR0">MISO</text>
-<text x="-0.635" y="5.8674" size="1.016" layer="22" font="vector" ratio="15" rot="MR0">MOSI</text>
-<text x="-1.27" y="8.4074" size="1.016" layer="22" font="vector" ratio="15" rot="MR0">SCK</text>
+<wire x1="0" y1="0.0254" x2="12.7" y2="0.0254" width="0.2032" layer="21"/>
+<wire x1="12.7" y1="0.0254" x2="12.7" y2="10.1854" width="0.2032" layer="21"/>
+<wire x1="12.7" y1="10.1854" x2="0" y2="10.1854" width="0.2032" layer="21"/>
+<wire x1="0" y1="10.1854" x2="0" y2="0.0254" width="0.2032" layer="21"/>
+<text x="9.779" y="8.4074" size="1.016" layer="21" font="vector" ratio="15" rot="MR0">V+</text>
+<text x="9.779" y="5.8674" size="1.016" layer="21" font="vector" ratio="15" rot="MR0">GND</text>
+<text x="9.779" y="3.3274" size="1.016" layer="21" font="vector" ratio="15" rot="MR0">INT1</text>
+<text x="9.779" y="0.7874" size="1.016" layer="21" font="vector" ratio="15" rot="MR0">INT2</text>
+<text x="4.445" y="0.7874" size="1.016" layer="21" font="vector" ratio="15" rot="MR0">!CS</text>
+<text x="5.842" y="3.3274" size="1.016" layer="21" font="vector" ratio="15" rot="MR0">MISO</text>
+<text x="5.715" y="5.8674" size="1.016" layer="21" font="vector" ratio="15" rot="MR0">MOSI</text>
+<text x="5.08" y="8.4074" size="1.016" layer="21" font="vector" ratio="15" rot="MR0">SCK</text>
 <pad name="SCK" x="1.27" y="8.89" drill="1.016" diameter="1.8796"/>
 <pad name="MOSI" x="1.27" y="6.35" drill="1.016" diameter="1.8796"/>
 <pad name="MISO" x="1.27" y="3.81" drill="1.016" diameter="1.8796"/>
