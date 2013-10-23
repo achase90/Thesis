@@ -2,8 +2,8 @@ EAGLE AutoRouter Statistics:
 
 Job           : C:/Users/mufasa/Documents/Thesis/eagle/satellitev2.brd
 
-Start at      : 11:58:27 (10/21/2013)
-End at        : 11:58:27 (10/21/2013)
+Start at      : 17:25:54 (10/22/2013)
+End at        : 17:25:54 (10/22/2013)
 Elapsed time  : 00:00:00
 
 Signals       :     9   RoutingGrid: 50 mil  Layers: 2

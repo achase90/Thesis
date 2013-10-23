@@ -4063,7 +4063,7 @@ These are standard reverse protection diodes and small signal diodes. SMA packag
 <part name="D2" library="SparkFun-DiscreteSemi" deviceset="DIODE" device="PTH"/>
 <part name="D3" library="SparkFun-DiscreteSemi" deviceset="DIODE" device="PTH"/>
 <part name="D4" library="SparkFun-DiscreteSemi" deviceset="DIODE" device="PTH"/>
-<part name="JP1" library="pinhead" deviceset="PINHD-1X2" device=""/>
+<part name="BR" library="pinhead" deviceset="PINHD-1X2" device=""/>
 <part name="R2" library="rcl" deviceset="R-US_" device="0309/12" value="2.2K"/>
 </parts>
 <sheets>
@@ -4081,7 +4081,7 @@ These are standard reverse protection diodes and small signal diodes. SMA packag
 <instance part="D2" gate="G$1" x="-20.32" y="-2.54"/>
 <instance part="D3" gate="G$1" x="86.36" y="55.88"/>
 <instance part="D4" gate="G$1" x="83.82" y="20.32"/>
-<instance part="JP1" gate="G$1" x="119.38" y="-7.62"/>
+<instance part="BR" gate="G$1" x="119.38" y="-7.62"/>
 <instance part="R2" gate="G$1" x="88.9" y="-7.62"/>
 </instances>
 <busses>
@@ -4107,7 +4107,7 @@ These are standard reverse protection diodes and small signal diodes. SMA packag
 <label x="-7.62" y="-7.62" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="JP1" gate="G$1" pin="1"/>
+<pinref part="BR" gate="G$1" pin="1"/>
 <wire x1="116.84" y1="-5.08" x2="99.06" y2="-5.08" width="0.1524" layer="91"/>
 <label x="104.14" y="-5.08" size="1.778" layer="95"/>
 </segment>
@@ -4239,7 +4239,7 @@ These are standard reverse protection diodes and small signal diodes. SMA packag
 <label x="-7.62" y="2.54" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="JP1" gate="G$1" pin="2"/>
+<pinref part="BR" gate="G$1" pin="2"/>
 <pinref part="R2" gate="G$1" pin="2"/>
 <wire x1="116.84" y1="-7.62" x2="93.98" y2="-7.62" width="0.1524" layer="91"/>
 <label x="101.6" y="-10.16" size="1.778" layer="95"/>
