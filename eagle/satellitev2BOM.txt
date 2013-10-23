@@ -1,0 +1,7 @@
+"Qty";"Value";"Device";"Package";"Parts";"Description";"";
+"4";"";"DIODEPTH";"DIODE-1N4001";"D1, D2, D3, D4";"Diode";"";
+"1";"";"PINHD-1X2";"1X02";"BR";"PIN HEADER";"";
+"2";"1X6SMDPINS";"1X6SMDPINS";"1X6SMDPINS";"U$1, U$2";"";"";
+"2";"1X6SMDPINSB";"1X6SMDPINSB";"1X6SMDPINSB";"U$3, U$4";"";"";
+"2";"2.2K";"R-US_0309/12";"0309/12";"R1, R2";"RESISTOR, American symbol";"";
+"1";"RJ11-6PTH";"RJ11-6PTH";"RJ11-6";"J1";"RJ11 Jack";"";
