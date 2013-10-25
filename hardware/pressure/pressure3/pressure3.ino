@@ -2,8 +2,6 @@ void setup() {
   Serial.begin(9600);
   Serial3.begin(9600);
   Serial.println("Serial ports open");
-  pinMode(15,INPUT);
-  digitalWrite(15,LOW);
 }
 
 void loop() {

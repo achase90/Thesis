@@ -5,18 +5,18 @@
 #include <SPI.h>
 #include <SD.h>
 #include <ADXL362.h>
-#include<OneWire.h>
-#include<DallasTemperature.h>
+#include <OneWire.h>
+#include <DallasTemperature.h>
 
 #define magInstalled 1
 #define gpsInstalled 1
-#define pressureInstalled 0
+#define pressureInstalled 1
 #define ONE_WIRE_BUS 49
 #define TEMPERATURE_PRECISION 9
 
 const uint32_t magBaud = 19200;
 const uint32_t gpsBaud = 57600;
-const uint32_t pressBaud = 19200;
+const uint32_t pressBaud = 9600;
 const uint8_t sdChipSelect = 53;
 boolean printSerialOut = false;
 boolean sdCardClosed = true;

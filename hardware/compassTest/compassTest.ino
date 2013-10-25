@@ -2,7 +2,7 @@ void setup() {
   Serial.begin(9600);
   Serial.println("Serial port opened");
 
-  Serial1.begin(9600);
+  Serial1.begin(19200);
   Serial.println("Serial1 open");
   Serial.println();
 }
