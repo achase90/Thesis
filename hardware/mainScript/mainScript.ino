@@ -17,7 +17,7 @@
 const uint32_t magBaud = 19200;
 const uint32_t gpsBaud = 57600;
 const uint32_t pressBaud = 9600;
-const uint8_t sdChipSelect = 53;
+const uint8_t sdChipSelect = 52;
 boolean printSerialOut = false;
 boolean sdCardClosed = true;
 
@@ -50,7 +50,7 @@ DeviceAddress tempDeviceAddress; // temperature sensor device address
 char pressSN0[13] = "4F15-01-A213";
 char pressSN1[13] = "R10F30-04-A1";
 char pressSN2[13] = "R11L07-20-A5"; //not sure this serial number is correct
-char pressSN3[13] = "R11L7-20-A51"; //not sure this serial number is correct
+char pressSN3[13] = "R11L07-20-A4"; //not sure this serial number is correct
 
 byte writeBuff[1028];
 uint16_t writeBuffLoc=0;
@@ -116,14 +116,14 @@ void setup() {
   char str[20];
   sprintf(str,"%d",utcTime);
   strcpy(filename,str);
-  strcat(filename,".txt");
+  strcat(filename,".bin");
   Serial.println(filename);
 #else
   Serial.print("No GPS installed. Filename : ");
   char str[20];
   sprintf(str,"%d",rand()%10000000);
   strcpy(filename,str);
-  strcat(filename,".txt");
+  strcat(filename,".bin");
   Serial.println(filename);
 #endif
 
@@ -267,6 +267,10 @@ void loop() {
 
     parseToBinInt16(writeBuff,pressure[1],writeBuffLoc);
 
+	parseToBinInt16(writeBuff,pressure[2],writeBuffLoc);
+
+    parseToBinInt16(writeBuff,pressure[3],writeBuffLoc);
+
     for (int i=0;i<5;i++)
     {
       writeBuff[writeBuffLoc++] = byte (msgID[i]);
@@ -300,14 +304,17 @@ void loop() {
   else if(writeBuffLoc != 0) //we're not logging data, but theres data in the buffer. write it out to SD
   {
     dataFile = SD.open(filename,FILE_WRITE);
+	Serial.println(dataFile);
     int bytesWritten = dataFile.write(writeBuff,writeBuffLoc);
     Serial.println();
     if (bytesWritten>0)
     {
+		Serial.println("check1");
       Serial.println("Data buffer written to SD card.");
     }
     else
     {
+		Serial.println("check2");
       Serial.println("Data NOT written to SD card.");
     }
     Serial.println();
@@ -339,6 +346,10 @@ void loop() {
     Serial.print(pressure[0]);
     Serial.print('\t');
     Serial.print(pressure[1]);
+    Serial.print('\t');
+	Serial.print(pressure[2]);
+    Serial.print('\t');
+    Serial.print(pressure[3]);
     Serial.print('\t');
     Serial.print(msgID);
     Serial.print('\t');
@@ -403,8 +414,8 @@ void readAllPress (USARTClass &pressureSerial,char add0[], char add1[], char add
   pressureSerial.print("WC\r");
   pressure[0] = readUniquePress(pressureSerial,add1);
   pressure[1] = readUniquePress(pressureSerial,add2);
-  //pressure[2] = readUniquePress(pressureSerial,add2);
-  //pressure[3] = readUniquePress(pressureSerial,add3);
+  pressure[2] = readUniquePress(pressureSerial,add2);
+  pressure[3] = readUniquePress(pressureSerial,add3);
 }
 
 int16_t readUniquePress(USARTClass &pressureSerial,char address[])

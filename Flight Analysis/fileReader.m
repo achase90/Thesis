@@ -22,7 +22,7 @@ function varargout = fileReader(varargin)
 
 % Edit the above text to modify the response to help fileReader
 
-% Last Modified by GUIDE v2.5 26-Oct-2013 11:27:33
+% Last Modified by GUIDE v2.5 26-Oct-2013 15:17:57
 
 % Begin initialization code - DO NOT EDIT
 gui_Singleton = 1;
@@ -174,7 +174,7 @@ function loadData_Callback(hObject, eventdata, handles)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
 
-[handles.fileName,handles.filePath] = uigetfile({'*.binfdr;*.fdr','All Data Files (*.binfdr,*.fdr)';'*.fdr','ASCII Data Files';'*.binfdr','Binary Data Files'});
+[handles.fileName,handles.filePath] = uigetfile({'*.bin;*.fdr','All Data Files (*.bin,*.fdr)';'*.fdr','ASCII Data Files';'*.bin','Binary Data Files'});
 if ischar(handles.fileName) && ischar(handles.filePath)
     
     handles.fullFilePath = [handles.filePath handles.fileName];
@@ -285,12 +285,12 @@ fclose(fid);
 
 function [data,units] = fileToStruct(input)
 headers={'time' 'accelX' 'accelY' 'accelZ' 'gyroX' 'gyroY' 'gyroZ' 'magX' 'magY' 'magZ' ...
-    'press0' 'press1' 'msgID1' 'msgID2' 'msgID3' 'msgID4' 'msgID5'...
+    'press0' 'press1' 'press2' 'press3' 'msgID1' 'msgID2' 'msgID3' 'msgID4' 'msgID5'...
     'utcTime' 'gpsStatus' 'gpsLat' 'nsInd' 'gpsLong' 'ewInd' 'gpsSpd' 'gpsCrs'...
     'date' 'mode' 'CS' 'temperature' 'deltaT'};
 
 units={'sec' 'ft/s^2' 'ft/s^2' 'ft/s^2' 'deg/s' 'deg/s' 'deg/s' 'deg' 'deg' 'deg' ...
-    'press0' 'press1' '-' '-' '-' '-' '-'...
+    'press0' 'press1' 'press2' 'press3' '-' '-' '-' '-' '-'...
     'utcTime' '-' 'deg' '-' 'deg' '-' 'ft/s' 'gpsCrs'...
     'date' '-' 'CS' 'temperature' 'sec'};
 
@@ -358,6 +358,7 @@ if get(hObject,'Value')
     end
 else
     if isfield(handles,'regPlot')
+        delete(handles.regPlot);
         normBC = get(gcf,'Color');
         set(handles.quadFormula,'foregroundcolor',normBC)
         %         set(handles.quadFormula,'visible','off');
@@ -438,4 +439,28 @@ function popupmenu4_CreateFcn(hObject, eventdata, handles)
 %       See ISPC and COMPUTER.
 if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColor'))
     set(hObject,'BackgroundColor','white');
+end
+
+
+% --- Executes on button press in plotGE.
+function plotGE_Callback(hObject, eventdata, handles)
+% hObject    handle to plotGE (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+
+if ispc
+    % handles    structure with handles and user data (see GUIDATA)
+        [kmlSaveName,kmlPathName] = uiputfile('.kml');
+        if ischar(kmlSaveName) && ischar(kmlPathName)
+            handles.kmlSavePath = [kmlPathName kmlSaveName];
+        end       
+    kmlwrite(handles.kmlSavePath, handles.data.gpsLat.data, handles.data.gpsLong.data);
+    try
+    pathToGE = winqueryreg('HKEY_CURRENT_USER', 'SOFTWARE\Google\Google Earth Plus\', 'InstallLocation');
+    status = system(['"' pathToGE 'client\googleearth.exe" "' handles.kmlSavePath '"']);
+    catch
+        set(handles.outputText,'String','Error finding Google Earth, not able to display GPS data.');
+    end
+else
+    !which googleearth
 end

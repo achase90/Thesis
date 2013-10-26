@@ -43,8 +43,21 @@ minLatInt = floor(minLat);
 minLongInt = floor(minLong);
 secLat = 60*(minLat - minLatInt);
 secLong = 60*(minLong - minLongInt);
-output.gpsLat.data = dms2degrees([degLat minLatInt secLat]);
-output.gpsLong.data = dms2degrees([degLong minLongInt secLong]);
+if minLongInt == 60
+    degLong = degLong+1;
+    minLongInt = zeros(size(minLongInt));
+end
+if strcmpi(handles.data.ewInd.data(1),'w') %assume we're not crossing prime meridian
+    output.gpsLong.data = dms2degrees([-degLong minLongInt secLong]);
+else
+    output.gpsLong.data = dms2degrees([degLong minLongInt secLong]);
+end
+
+if strcmpi(handles.data.nsInd.data(1),'n')
+    output.gpsLat.data = dms2degrees([degLat minLatInt secLat]);
+else
+    output.gpsLat.data = dms2degrees([degLat minLatInt secLat]);
+end
 
 %% convert gps utcTime, gpsSpd and gpsCrs into real values
 output.utcTime.data = double(input.utcTime.data(validGPS))/100;
