@@ -60,6 +60,12 @@ handles.xAxisDefined = false;
 handles.yAxisDefined = false;
 handles.fileName = 0;
 handles.filePath = 0;
+% --- Read in NASA logo image
+beaverJpg = imread('beaver.jpg');
+% Put the image array into the pause button
+axes(handles.beaver); %focus on exsci logo axes
+imshow(beaverJpg); %display exsci image
+
 guidata(hObject, handles);
 clc
 % UIWAIT makes fileReader wait for user response (see UIRESUME)
