@@ -22,7 +22,7 @@ function varargout = fileReader(varargin)
 
 % Edit the above text to modify the response to help fileReader
 
-% Last Modified by GUIDE v2.5 25-Oct-2013 23:12:32
+% Last Modified by GUIDE v2.5 26-Oct-2013 11:27:33
 
 % Begin initialization code - DO NOT EDIT
 gui_Singleton = 1;
@@ -60,16 +60,17 @@ handles.xAxisDefined = false;
 handles.yAxisDefined = false;
 handles.fileName = 0;
 handles.filePath = 0;
-% --- Read in NASA logo image
-beaverJpg = imread('beaver.jpg');
-% Put the image array into the pause button
-axes(handles.beaver); %focus on exsci logo axes
-imshow(beaverJpg); %display exsci image
+
+% % --- Read in beaver image
+% beaverJpg = imread('beaver.jpg');
+% % Put the image array into the pause button
+% axes(handles.beaver); %focus on beaver axes
+% imshow(beaverJpg); %display beaver image
 
 guidata(hObject, handles);
 clc
 % UIWAIT makes fileReader wait for user response (see UIRESUME)
-% uiwait(handles.figure1);
+% uiwait(handles.mainGuiWindow);
 
 
 % --- Outputs from this function are returned to the command line.
@@ -174,21 +175,22 @@ function loadData_Callback(hObject, eventdata, handles)
 % handles    structure with handles and user data (see GUIDATA)
 
 [handles.fileName,handles.filePath] = uigetfile({'*.binfdr;*.fdr','All Data Files (*.binfdr,*.fdr)';'*.fdr','ASCII Data Files';'*.binfdr','Binary Data Files'});
-if strcmp(class(handles.fileName),'char') && strcmp(class(handles.filePath),'char')
+if ischar(handles.fileName) && ischar(handles.filePath)
     
-handles.fullFilePath = [handles.filePath handles.fileName];
-
-binaryFile = isFileBinary(handles.fullFilePath);
-if binaryFile
-input = parseData(handles.fullFilePath);
-[handles.data,handles.units] = fileToStruct(input);
-%todo:convert units here
-else
-input = dlmread(filename, delimiter);
-[handles.data,handles.units] = fileToStruct(input);
-end
-set(handles.xAxisVar,'String',fieldnames(handles.data));
-set(handles.yAxisVar,'String',fieldnames(handles.data));
+    handles.fullFilePath = [handles.filePath handles.fileName];
+    
+    binaryFile = isFileBinary(handles.fullFilePath);
+    if binaryFile
+        input = parseBinary(handles.fullFilePath);
+        [handles.data,handles.units] = fileToStruct(input);
+        [handles] = convertUnits(handles);
+        %todo:convert units here
+    else
+        input = dlmread(filename, delimiter);
+        [handles.data,handles.units] = fileToStruct(input);
+    end
+    set(handles.xAxisVar,'String',fieldnames(handles.data));
+    set(handles.yAxisVar,'String',fieldnames(handles.data));
 end
 guidata(hObject, handles);
 
@@ -233,19 +235,29 @@ function ignoreThrust_Callback(hObject, eventdata, handles)
 function [xAxis,yAxis,xUnit,yUnit] = getAxisNames(handles)
     xAxisVarName = get(handles.xAxisVar,'String');
     xAxis = char(xAxisVarName(get(handles.xAxisVar,'Value')));
-    xUnit = char(handles.units(get(handles.xAxisVar,'Value')));
+    xUnit = handles.data.(xAxis).units;
+%     xUnit = char(handles.units(get(handles.xAxisVar,'Value')));
     yAxisVarName = get(handles.yAxisVar,'String');
     yAxis = char(yAxisVarName(get(handles.yAxisVar,'Value')));
-    yUnit = char(handles.units(get(handles.yAxisVar,'Value')));
+%     yUnit = char(handles.units(get(handles.yAxisVar,'Value')));
+        yUnit = handles.data.(yAxis).units;
+
 
 function plotInGui(hObject,eventdata,handles)
 [xAxis,yAxis,xUnit,yUnit] = getAxisNames(handles);
-xIsNumeric = isnumeric(handles.data.(xAxis));
-yIsNumeric = isnumeric(handles.data.(yAxis));
+xIsNumeric = isnumeric(handles.data.(xAxis).data);
+yIsNumeric = isnumeric(handles.data.(yAxis).data);
 if xIsNumeric && yIsNumeric
-    plot(handles.dataAxis,handles.data.(xAxis),handles.data.(yAxis))
-                ylabel([yAxis ' [' yUnit ']']);
-                            xlabel([xAxis ' [' xUnit ']']);
+    if length(handles.data.(xAxis).data) ~= length(handles.data.(yAxis).data)
+        set(handles.outputText,'String',['Plot vectors must be the same length. HINT: GPS signals can only be plotted against other GPS signals.']);
+    else
+        %todo:switch to scatter
+        plot(handles.dataAxis,handles.data.(xAxis).data,handles.data.(yAxis).data)
+        ylabel(handles.dataAxis,[yAxis ' [' yUnit ']']);
+        xlabel(handles.dataAxis,[xAxis ' [' xUnit ']']);
+        set(handles.outputText,'String','');
+        set(handles.dataAxis,'YColor',[1 1 1],'XColor',[1 1 1]);
+    end
 else
     if ~xIsNumeric
         set(handles.outputText,'String',['Variable ''' xAxis ''' is not numeric. Please choose a numeric variable to plot.']);
@@ -277,22 +289,27 @@ headers={'time' 'accelX' 'accelY' 'accelZ' 'gyroX' 'gyroY' 'gyroZ' 'magX' 'magY'
     'utcTime' 'gpsStatus' 'gpsLat' 'nsInd' 'gpsLong' 'ewInd' 'gpsSpd' 'gpsCrs'...
     'date' 'mode' 'CS' 'temperature' 'deltaT'};
 
-units={'time' 'accelX' 'accelY' 'accelZ' 'gyroX' 'gyroY' 'gyroZ' 'magX' 'magY' 'magZ' ...
-    'press0' 'press1' 'msgID1' 'msgID2' 'msgID3' 'msgID4' 'msgID5'...
-    'utcTime' 'gpsStatus' 'gpsLat' 'nsInd' 'gpsLong' 'ewInd' 'gpsSpd' 'gpsCrs'...
-    'date' 'mode' 'CS' 'temperature' 'deltaT'};
+units={'sec' 'ft/s^2' 'ft/s^2' 'ft/s^2' 'deg/s' 'deg/s' 'deg/s' 'deg' 'deg' 'deg' ...
+    'press0' 'press1' '-' '-' '-' '-' '-'...
+    'utcTime' '-' 'deg' '-' 'deg' '-' 'ft/s' 'gpsCrs'...
+    'date' '-' 'CS' 'temperature' 'sec'};
 
 for i=1:length(headers)
     data.(headers{i})=[];
+    data.(headers{i}).data=[];
+    data.(headers{i}).units=[];
 end
 
-if strcmp(class(input),'struct')
+if isstruct(input)
     for i=1:length(headers)
         data.(headers{i}) = input(:,i);
+                data.(headers{i}).units = units{i};
     end
-elseif strcmp(class(input),'cell');
+elseif iscell(input);
     for i=1:length(headers)
-        data.(headers{i}) = cell2mat(input(:,i));
+%todo:modify data struct. for each field, should have data and units
+        data.(headers{i}).data = cell2mat(input(:,i));
+        data.(headers{i}).units = units{i};
     end
 end
 
@@ -302,3 +319,123 @@ function calcForces_Callback(hObject, eventdata, handles)
 % hObject    handle to calcForces (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
+
+
+% --- Executes on button press in quadFit.
+function quadFit_Callback(hObject, eventdata, handles)
+% hObject    handle to quadFit (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+
+% Hint: get(hObject,'Value') returns toggle state of quadFit
+if get(hObject,'Value')
+    [xAxis,yAxis] = getAxisNames(handles);
+    xIsNumeric = isnumeric(handles.data.(xAxis).data);
+    yIsNumeric = isnumeric(handles.data.(yAxis).data);
+    if handles.xAxisDefined && handles.yAxisDefined
+        if length(handles.data.(xAxis).data) ~= length(handles.data.(yAxis).data)
+            set(handles.quadFormula,'String','Vectors must be the same length.','Foregroundcolor',[1 1 1]);
+        elseif ~xIsNumeric
+            set(handles.quadFormula,'String',['Variable ''' xAxis ''' is not numeric.'],'Foregroundcolor',[1 1 1]);
+        elseif ~yIsNumeric
+            set(handles.quadFormula,'String',['Variable ''' yAxis ''' is not numeric.'],'Foregroundcolor',[1 1 1]);
+        else
+            [xAxis,yAxis] = getAxisNames(handles);
+            xData = double(handles.data.(xAxis).data);
+            yData = double(handles.data.(yAxis).data);
+            p1 = polyfit(xData,yData,2);
+            xVec = linspace(min(xData),max(xData));
+            yVec = polyval(p1,xVec);
+            axes(handles.dataAxis);
+            hold on
+            handles.regPlot = plot(xVec,yVec,'--k');
+            hold off
+            regStr = sprintf('%5.3fX^2+%5.3fX+%5.3f',p1);
+            %         xLimits = get(handles.dataAxis,'xlim');
+            %         yLimits = get(handles.dataAxis,'ylim');
+            set(handles.quadFormula,'String',regStr,'foregroundcolor',[1 1 1]);
+        end
+    end
+else
+    if isfield(handles,'regPlot')
+        normBC = get(gcf,'Color');
+        set(handles.quadFormula,'foregroundcolor',normBC)
+        %         set(handles.quadFormula,'visible','off');
+    end
+end
+guidata(hObject, handles);
+
+
+function SRefBox_Callback(hObject, eventdata, handles)
+% hObject    handle to SRefBox (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+
+% Hints: get(hObject,'String') returns contents of SRefBox as text
+%        str2double(get(hObject,'String')) returns contents of SRefBox as a double
+
+
+% --- Executes during object creation, after setting all properties.
+function SRefBox_CreateFcn(hObject, eventdata, handles)
+% hObject    handle to SRefBox (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    empty - handles not created until after all CreateFcns called
+
+% Hint: edit controls usually have a white background on Windows.
+%       See ISPC and COMPUTER.
+if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColor'))
+    set(hObject,'BackgroundColor','white');
+end
+
+
+
+function weightBox_Callback(hObject, eventdata, handles)
+% hObject    handle to weightBox (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+
+% Hints: get(hObject,'String') returns contents of weightBox as text
+%        str2double(get(hObject,'String')) returns contents of weightBox as a double
+
+
+% --- Executes during object creation, after setting all properties.
+function weightBox_CreateFcn(hObject, eventdata, handles)
+% hObject    handle to weightBox (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    empty - handles not created until after all CreateFcns called
+
+% Hint: edit controls usually have a white background on Windows.
+%       See ISPC and COMPUTER.
+if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColor'))
+    set(hObject,'BackgroundColor','white');
+end
+
+
+% --- Executes during object creation, after setting all properties.
+function quadFormula_CreateFcn(hObject, eventdata, handles)
+% hObject    handle to quadFormula (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    empty - handles not created until after all CreateFcns called
+
+
+% --- Executes on selection change in popupmenu4.
+function popupmenu4_Callback(hObject, eventdata, handles)
+% hObject    handle to popupmenu4 (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+
+% Hints: contents = cellstr(get(hObject,'String')) returns popupmenu4 contents as cell array
+%        contents{get(hObject,'Value')} returns selected item from popupmenu4
+
+
+% --- Executes during object creation, after setting all properties.
+function popupmenu4_CreateFcn(hObject, eventdata, handles)
+% hObject    handle to popupmenu4 (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    empty - handles not created until after all CreateFcns called
+
+% Hint: popupmenu controls usually have a white background on Windows.
+%       See ISPC and COMPUTER.
+if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColor'))
+    set(hObject,'BackgroundColor','white');
+end

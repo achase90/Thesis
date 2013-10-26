@@ -2,3 +2,4 @@ GUI for file read-in
 GUI to plot any variable against any variable - +instant drag polar plot
 How to separate into times with and without thrust?
 UI to operate Arduino
+write "collect zero offset" routine for Arduino

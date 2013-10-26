@@ -1,4 +1,4 @@
-function [R] = parseData(filepath)
+function [R] = parseBinary(filepath)
 recordType = {'ulong' 'int16' 'int16' 'int16' 'int16' 'int16' 'int16' 'int16' 'int16' 'int16' 'int16' 'int16' 'char' 'char' 'char' 'char' 'char' 'uint32' 'char' 'int32' 'char' 'int32' 'char' 'int32' 'int32' 'char' 'uint32'  'uint32' 'int16' 'uint32'};
 recordLen = [   4       2        2       2      2        2        2      2       2       2       2       2      1      1       1      1      1      4        1      4       1     4        1      4       4       1       4         4        2      4];
 
