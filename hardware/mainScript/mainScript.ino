@@ -215,6 +215,7 @@ void loop() {
   {
     readGPS(gpsSerial,msgID,utcTime,&gpsStatus, gpsLat,&nsInd,gpsLong,&ewInd,gpsSpd,gpsCrs,date,&mode,CS);
   }
+  //todo:it seems like you never actually output the GPS date. might be messing up your data structures.
 #endif
   // Serial.println(i++);
 
@@ -493,7 +494,8 @@ void readGPS(USARTClass &gpsSerial,char *msgID,uint32_t &utcTime,char **gpsStatu
             break;
           }
         case 8:
-          {                    
+          {      
+//todo:check if this is right. might have a problem
             date = atoi(pt);
             break;
           }

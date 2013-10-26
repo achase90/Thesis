@@ -2,9 +2,9 @@
 <VisualStudioProject
 	ProjectType="Visual C++"
 	Version="9.00"
-	Name="mainScript"
-	ProjectGUID="{24A0C686-AF73-447A-A360-72A8B65BF28C}"
-	RootNamespace="mainScript"
+	Name="parser"
+	ProjectGUID="{D05375C1-E584-42F2-B7DB-916511357F43}"
+	RootNamespace="parser"
 	TargetFrameworkVersion="196613"
 	>
 	<Platforms>
@@ -40,7 +40,7 @@
 			<Tool
 				Name="VCCLCompilerTool"
 				Optimization="0"
-				AdditionalIncludeDirectories="C:\Users\mufasa\Documents\arduino-nightly\hardware\arduino\sam\cores\arduino;C:\Users\mufasa\Documents\arduino-nightly\hardware\arduino\sam\variants\arduino_due_x;C:\Users\mufasa\Documents\arduino-nightly\hardware\arduino\sam\libraries\Wire;C:\Users\mufasa\Documents\arduino-nightly\hardware\arduino\sam\libraries\Wire\utility;C:\Users\mufasa\Documents\arduino-nightly\libraries\itg3200;C:\Users\mufasa\Documents\arduino-nightly\libraries\itg3200\utility;C:\Users\mufasa\Documents\arduino-nightly\hardware\arduino\sam\libraries\SPI;C:\Users\mufasa\Documents\arduino-nightly\hardware\arduino\sam\libraries\SPI\utility;C:\Users\mufasa\Documents\arduino-nightly\libraries\SD;C:\Users\mufasa\Documents\arduino-nightly\libraries\SD\utility;C:\Users\mufasa\Documents\arduino-nightly\libraries\ADXL362;C:\Users\mufasa\Documents\arduino-nightly\libraries\ADXL362\utility;C:\Users\mufasa\Documents\arduino-nightly\libraries\OneWire;C:\Users\mufasa\Documents\arduino-nightly\libraries\OneWire\utility;C:\Users\mufasa\Documents\arduino-nightly\libraries\DallasTemperature;C:\Users\mufasa\Documents\arduino-nightly\libraries\DallasTemperature\utility;C:\Users\mufasa\Documents\arduino-nightly\hardware\arduino\sam\system\CMSIS\CMSIS\Include\;C:\Users\mufasa\Documents\arduino-nightly\hardware\arduino\sam\system\CMSIS\Device\ATMEL\;C:\Users\mufasa\Documents\arduino-nightly\hardware\arduino\sam\system\libsam;C:\Users\mufasa\Documents\arduino-nightly\hardware\arduino\sam\system\libsam\include;C:\Users\mufasa\Documents\arduino-nightly/hardware/tools/g++_arm_none_eabi\arm-none-eabi\include;C:\Users\mufasa\Documents\arduino-nightly/hardware/tools/g++_arm_none_eabi\arm_none_eabi\include\;C:\Users\mufasa\Documents\arduino-nightly/hardware/tools/g++_arm_none_eabi\lib\gcc\arm-none-eabi\4.4.1\include;C:\Users\mufasa\Documents\arduino-nightly/hardware/tools/g++_arm_none_eabi\lib\gcc\arm-none-eabi\4.4.1\include\"
+				AdditionalIncludeDirectories="C:\Users\mufasa\Documents\arduino-nightly\hardware\arduino\sam\cores\arduino;C:\Users\mufasa\Documents\arduino-nightly\hardware\arduino\sam\variants\arduino_due_x;C:\Users\mufasa\Documents\arduino-nightly\hardware\arduino\sam\system\CMSIS\CMSIS\Include\;C:\Users\mufasa\Documents\arduino-nightly\hardware\arduino\sam\system\CMSIS\Device\ATMEL\;C:\Users\mufasa\Documents\arduino-nightly\hardware\arduino\sam\system\libsam;C:\Users\mufasa\Documents\arduino-nightly\hardware\arduino\sam\system\libsam\include;C:\Users\mufasa\Documents\arduino-nightly/hardware/tools/g++_arm_none_eabi\arm-none-eabi\include;C:\Users\mufasa\Documents\arduino-nightly/hardware/tools/g++_arm_none_eabi\arm_none_eabi\include\;C:\Users\mufasa\Documents\arduino-nightly/hardware/tools/g++_arm_none_eabi\lib\gcc\arm-none-eabi\4.4.1\include;C:\Users\mufasa\Documents\arduino-nightly/hardware/tools/g++_arm_none_eabi\lib\gcc\arm-none-eabi\4.4.1\include\"
 				PreprocessorDefinitions="__SAM3X8E__;USB_PID=0x003e;USB_VID=0x2341;USBCON;;ARDUINO=150;ARDUINO_MAIN;printf=iprintf;__SAM__;F_CPU=84000000L;__cplusplus"
 				IgnoreStandardIncludePath="true"
 				MinimalRebuild="true"
@@ -48,7 +48,7 @@
 				RuntimeLibrary="3"
 				WarningLevel="3"
 				DebugInformationFormat="4"
-				ForcedIncludeFiles="C:\Users\mufasa\Documents\Thesis\hardware\mainScript\Visual Micro\.mainScript.vsarduino.h"
+				ForcedIncludeFiles="C:\Users\mufasa\Documents\Thesis\hardware\GPS\parser\Visual Micro\.parser.vsarduino.h"
 			/>
 			<Tool
 				Name="VCManagedResourceCompilerTool"
@@ -172,12 +172,7 @@
 			UniqueIdentifier="{93995380-89BD-4b04-88EB-625FBE52EBFB}"
 			>
 			<File
-				RelativePath=".\Visual Micro\.mainScript.vsarduino.h"
-				>
-			</File>
-			<File
-				RelativePath=".\template.h"
-				FileType="0"
+				RelativePath=".\Visual Micro\.parser.vsarduino.h"
 				>
 			</File>
 		</Filter>
@@ -188,7 +183,7 @@
 			>
 		</Filter>
 		<File
-			RelativePath=".\mainScript.ino"
+			RelativePath=".\parser.ino"
 			FileType="0"
 			>
 		</File>
