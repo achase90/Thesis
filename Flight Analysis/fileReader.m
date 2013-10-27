@@ -22,7 +22,7 @@ function varargout = fileReader(varargin)
 
 % Edit the above text to modify the response to help fileReader
 
-% Last Modified by GUIDE v2.5 26-Oct-2013 15:17:57
+% Last Modified by GUIDE v2.5 27-Oct-2013 11:57:15
 
 % Begin initialization code - DO NOT EDIT
 gui_Singleton = 1;
@@ -53,6 +53,9 @@ function fileReader_OpeningFcn(hObject, eventdata, handles, varargin)
 % varargin   command line arguments to fileReader (see VARARGIN)
 
 % Choose default command line output for fileReader
+
+% set(get(handles.dataAxis,'children'),'Xdata',[]);
+% set(get(handles.dataAxis,'children'),'ydata',[]);
 handles.output = hObject;
 
 % Update handles structure
@@ -68,7 +71,7 @@ handles.filePath = 0;
 % imshow(beaverJpg); %display beaver image
 
 guidata(hObject, handles);
-clc
+% clc
 % UIWAIT makes fileReader wait for user response (see UIRESUME)
 % uiwait(handles.mainGuiWindow);
 
@@ -135,7 +138,8 @@ function stripChartPlotSave_Callback(hObject, eventdata, handles)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
 if strcmp(class(handles.fileName),'char') && strcmp(class(handles.filePath),'char')
-stripChartCreator(hObject,eventdata,handles)
+    handles.stripSaveDir = uigetdir;
+    stripChartCreator(hObject,eventdata,handles)
 else
     set(handles.outputText,'String','Please load data before outputting strip charts.');
 end
@@ -464,3 +468,19 @@ if ispc
 else
     !which googleearth
 end
+
+
+% --- Executes during object creation, after setting all properties.
+function mainGuiWindow_CreateFcn(hObject, eventdata, handles)
+% hObject    handle to mainGuiWindow (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    empty - handles not created until after all CreateFcns called
+
+
+% --- Executes during object creation, after setting all properties.
+function dataAxis_CreateFcn(hObject, eventdata, handles)
+% hObject    handle to dataAxis (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    empty - handles not created until after all CreateFcns called
+
+% Hint: place code in OpeningFcn to populate dataAxis

@@ -34,4 +34,9 @@
 \contentsline {section}{\numberline {7.3}$K_2$ Validation}{39}{section.7.3}
 \contentsline {chapter}{\numberline {8}Results}{40}{chapter.8}
 \contentsline {chapter}{\numberline {9}Summary}{41}{chapter.9}
-\contentsline {chapter}{\numberline {A}Wiring Schematics}{42}{APPENDIX.1.A}
+\contentsline {chapter}{\numberline {A}Flight Test Procedure}{42}{APPENDIX.1.A}
+\contentsline {section}{\numberline {A.1}Pre-Flight Preparation}{42}{section.1.A.1}
+\contentsline {subsection}{\numberline {A.1.1}Day Before Test}{42}{subsection.1.A.1.1}
+\contentsline {subsection}{\numberline {A.1.2}Day Of Test}{43}{subsection.1.A.1.2}
+\contentsline {section}{\numberline {A.2}Flying Field Procedure}{44}{section.1.A.2}
+\contentsline {chapter}{\numberline {B}Wiring Schematics}{45}{APPENDIX.1.B}

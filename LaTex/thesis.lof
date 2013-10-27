@@ -30,6 +30,7 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {A.1}{\ignorespaces Arduino Due Flight Data Recorder Shield\relax }}{42}{figure.caption.27}
-\contentsline {figure}{\numberline {A.2}{\ignorespaces Pressure Satellite Board Schematic\relax }}{43}{figure.caption.28}
-\contentsline {figure}{\numberline {A.3}{\ignorespaces HMR-2300 Adapter Board Schematic\relax }}{44}{figure.caption.29}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {B.1}{\ignorespaces Arduino Due Flight Data Recorder Shield\relax }}{45}{figure.caption.27}
+\contentsline {figure}{\numberline {B.2}{\ignorespaces Pressure Satellite Board Schematic\relax }}{46}{figure.caption.28}
+\contentsline {figure}{\numberline {B.3}{\ignorespaces HMR-2300 Adapter Board Schematic\relax }}{47}{figure.caption.29}
