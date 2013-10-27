@@ -31,6 +31,36 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {B.1}{\ignorespaces Arduino Due Flight Data Recorder Shield\relax }}{45}{figure.caption.27}
-\contentsline {figure}{\numberline {B.2}{\ignorespaces Pressure Satellite Board Schematic\relax }}{46}{figure.caption.28}
-\contentsline {figure}{\numberline {B.3}{\ignorespaces HMR-2300 Adapter Board Schematic\relax }}{47}{figure.caption.29}
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {E.1}{\ignorespaces accelX vs. Time\relax }}{49}{figure.caption.27}
+\contentsline {figure}{\numberline {E.2}{\ignorespaces accelY vs. Time\relax }}{49}{figure.caption.28}
+\contentsline {figure}{\numberline {E.3}{\ignorespaces accelZ vs. Time\relax }}{49}{figure.caption.29}
+\contentsline {figure}{\numberline {E.4}{\ignorespaces gyroX vs. Time\relax }}{50}{figure.caption.30}
+\contentsline {figure}{\numberline {E.5}{\ignorespaces gyroY vs. Time\relax }}{50}{figure.caption.31}
+\contentsline {figure}{\numberline {E.6}{\ignorespaces gyroZ vs. Time\relax }}{50}{figure.caption.32}
+\contentsline {figure}{\numberline {E.7}{\ignorespaces magX vs. Time\relax }}{51}{figure.caption.33}
+\contentsline {figure}{\numberline {E.8}{\ignorespaces magY vs. Time\relax }}{51}{figure.caption.34}
+\contentsline {figure}{\numberline {E.9}{\ignorespaces magZ vs. Time\relax }}{51}{figure.caption.35}
+\contentsline {figure}{\numberline {E.10}{\ignorespaces press0 vs. Time\relax }}{52}{figure.caption.36}
+\contentsline {figure}{\numberline {E.11}{\ignorespaces press1 vs. Time\relax }}{52}{figure.caption.37}
+\contentsline {figure}{\numberline {E.12}{\ignorespaces press2 vs. Time\relax }}{52}{figure.caption.38}
+\contentsline {figure}{\numberline {E.13}{\ignorespaces press3 vs. Time\relax }}{53}{figure.caption.39}
+\contentsline {figure}{\numberline {E.14}{\ignorespaces gpsLat vs. Time\relax }}{53}{figure.caption.40}
+\contentsline {figure}{\numberline {E.15}{\ignorespaces gpsLong vs. Time\relax }}{53}{figure.caption.41}
+\contentsline {figure}{\numberline {E.16}{\ignorespaces gpsSpd vs. Time\relax }}{54}{figure.caption.42}
+\contentsline {figure}{\numberline {E.17}{\ignorespaces gpsCrs vs. Time\relax }}{54}{figure.caption.43}
+\contentsline {figure}{\numberline {E.18}{\ignorespaces date vs. Time\relax }}{54}{figure.caption.44}
+\contentsline {figure}{\numberline {E.19}{\ignorespaces CS vs. Time\relax }}{55}{figure.caption.45}
+\contentsline {figure}{\numberline {E.20}{\ignorespaces temperature vs. Time\relax }}{55}{figure.caption.46}
+\contentsline {figure}{\numberline {E.21}{\ignorespaces deltaT vs. Time\relax }}{55}{figure.caption.47}
+\contentsline {figure}{\numberline {E.22}{\ignorespaces alpha vs. Time\relax }}{56}{figure.caption.48}
+\contentsline {figure}{\numberline {E.23}{\ignorespaces beta vs. Time\relax }}{56}{figure.caption.49}
+\contentsline {figure}{\numberline {E.24}{\ignorespaces ang1 vs. Time\relax }}{56}{figure.caption.50}
+\contentsline {figure}{\numberline {E.25}{\ignorespaces ang2 vs. Time\relax }}{57}{figure.caption.51}
+\contentsline {figure}{\numberline {E.26}{\ignorespaces ang3 vs. Time\relax }}{57}{figure.caption.52}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {F.1}{\ignorespaces Arduino Due Flight Data Recorder Shield\relax }}{58}{figure.caption.53}
+\contentsline {figure}{\numberline {F.2}{\ignorespaces Pressure Satellite Board Schematic\relax }}{59}{figure.caption.54}
+\contentsline {figure}{\numberline {F.3}{\ignorespaces HMR-2300 Adapter Board Schematic\relax }}{60}{figure.caption.55}

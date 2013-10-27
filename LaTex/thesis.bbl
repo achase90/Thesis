@@ -1,5 +1,11 @@
 \begin{thebibliography}{10}
 
+\bibitem{klein2006aircraft}
+Vladislav Klein and Eugene~A Morelli.
+\newblock {\em Aircraft system identification: theory and practice}.
+\newblock American Institute of Aeronautics and Astronautics Reston, VA, USA,
+  2006.
+
 \bibitem{nedAxes}
 Mike1024.
 \newblock Ecec enu longitude latitude relationships.
@@ -9,17 +15,6 @@ Mike1024.
 MLWatts.
 \newblock Hawker tempest mark ii three view.
 \newblock Wikipedia, September 2012.
-
-\bibitem{737wingTipVortices}
-Olivier Clynen.
-\newblock 737 ng winglet effect simplified.
-\newblock Wikipedia, June 2012.
-
-\bibitem{klein2006aircraft}
-Vladislav Klein and Eugene~A Morelli.
-\newblock {\em Aircraft system identification: theory and practice}.
-\newblock American Institute of Aeronautics and Astronautics Reston, VA, USA,
-  2006.
 
 \bibitem{roskam2001airplane}
 Jan Roskam.
@@ -52,6 +47,11 @@ Mark Drela.
   airfoils.
 \newblock In {\em Low Reynolds number aerodynamics}, pages 1--12. Springer,
   1989.
+
+\bibitem{737wingTipVortices}
+Olivier Clynen.
+\newblock 737 ng winglet effect simplified.
+\newblock Wikipedia, June 2012.
 
 \bibitem{prandtl1923applications}
 Ludwig Prandtl.

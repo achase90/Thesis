@@ -137,8 +137,8 @@ function stripChartPlotSave_Callback(hObject, eventdata, handles)
 % hObject    handle to stripChartPlotSave (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
-if strcmp(class(handles.fileName),'char') && strcmp(class(handles.filePath),'char')
-    handles.stripSaveDir = uigetdir;
+if ischar(handles.fileName) && ischar(handles.filePath)
+    handles.stripSaveDir = uigetdir('C:\Users\mufasa\Documents\Thesis\LaTex\figures\sampleOutput');
     stripChartCreator(hObject,eventdata,handles)
 else
     set(handles.outputText,'String','Please load data before outputting strip charts.');
@@ -288,15 +288,18 @@ end
 fclose(fid);
 
 function [data,units] = fileToStruct(input)
-headers={'time' 'accelX' 'accelY' 'accelZ' 'gyroX' 'gyroY' 'gyroZ' 'magX' 'magY' 'magZ' ...
-    'press0' 'press1' 'press2' 'press3' 'msgID1' 'msgID2' 'msgID3' 'msgID4' 'msgID5'...
-    'utcTime' 'gpsStatus' 'gpsLat' 'nsInd' 'gpsLong' 'ewInd' 'gpsSpd' 'gpsCrs'...
-    'date' 'mode' 'CS' 'temperature' 'deltaT'};
+headers = {'time' 'accelX' 'accelY' 'accelZ' 'gyroX' 'gyroY' 'gyroZ' ...
+    'magX'   'magY'  'magZ' 'press0' 'press1' 'press2' 'press3' 'msgid1'...
+    'msgid2' 'msgid3' 'msgid4' 'msgid5' 'utcTime' 'gpsStatus' 'gpsLat' ...
+    'nsInd' 'gpsLong' 'ewInd' 'gpsSpd' 'gpsCrs' 'date'  'mode'     'CS'  ...
+    'temperature'   'deltaT'};
 
-units={'sec' 'ft/s^2' 'ft/s^2' 'ft/s^2' 'deg/s' 'deg/s' 'deg/s' 'deg' 'deg' 'deg' ...
-    'press0' 'press1' 'press2' 'press3' '-' '-' '-' '-' '-'...
-    'utcTime' '-' 'deg' '-' 'deg' '-' 'ft/s' 'gpsCrs'...
-    'date' '-' 'CS' 'temperature' 'sec'};
+
+units = {'sec' 'ft/s^2' 'ft/s^2' 'ft/s^2' 'deg/s' 'deg/s' 'deg/s' ...
+    'bits'   'bits'  'bits' 'lb/ft^2' 'lb/ft^2' 'lb/ft^2' 'lb/ft^2' '-'...
+    '-' '-' '-' '-' '??' '-' 'deg' ...
+    '-' 'deg' '-' 'ft/s' 'deg' '??'  '-'     '-'  ...
+    'degF'   'sec'};
 
 for i=1:length(headers)
     data.(headers{i})=[];
@@ -466,7 +469,7 @@ if ispc
         set(handles.outputText,'String','Error finding Google Earth, not able to display GPS data.');
     end
 else
-    !which googleearth
+        set(handles.outputText,'String','Google Earth not supported for *nix file systems, not able to display GPS data.');
 end
 
 

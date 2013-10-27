@@ -1,18 +1,18 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/W32TeX) (format=pdflatex 2013.6.1)  6 OCT 2013 13:22
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/W32TeX) (format=pdflatex 2013.6.1)  27 OCT 2013 14:27
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**ucthesis.tex
+**thesis_preamble.tex
 
 ! Emergency stop.
-<*> ucthesis.tex
-                
+<*> thesis_preamble.tex
+                       
 *** (job aborted, file error in nonstop mode)
 
  
 Here is how much of TeX's memory you used:
  3 strings out of 493488
- 109 string characters out of 3144749
+ 116 string characters out of 3144749
  49432 words of memory out of 3000000
  3412 multiletter control sequences out of 15000+200000
  3640 words of font info for 14 fonts, out of 3000000 for 9000

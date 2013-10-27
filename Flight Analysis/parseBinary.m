@@ -1,7 +1,7 @@
 function [R] = parseBinary(filepath)
-%recordType = {'time' 'accelX' 'accelY' 'accelZ' 'gyroX' 'gyroY' 'gyroZ' 'magX'   'magY'  'magZ' 'press0' 'press1' 'press2' 'press3' 'msgid1' 'msgid2' 'msgid3' 'msgid4' 'msgid5' 'utcTime' 'gpsStatus' 'gpsLat' 'nsInd' 'gpsLong' 'ewInd' 'gpsSpd' 'gpsCrs' 'date'  'mode'     'CS'   'temperature'   'deltaT'};
- recordType = {'ulong' 'int16'  'int16'  'int16' 'int16' 'int16' 'int16' 'int16'  'int16' 'int16' 'int16'  'int16'  'int16'  'int16' 'char'    'char'   'char'   'char'  'char'    'uint32'    'char'    'int32'  'char'   'int32'  'char'  'int32' 'int32'  'char' 'uint32'  'uint32'    'int16'     'uint32'};
- recordLen = [   4       2        2         2        2      2        2      2       2       2       2         2        2        2       1         1       1         1       1          4         1           4      1         4       1        4       4       1       4          4           2            4];
+%recordType = {'time' 'accelX' 'accelY' 'accelZ' 'gyroX' 'gyroY' 'gyroZ' 'magX'   'magY'  'magZ' 'press0' 'press1' 'press2' 'press3' 'msgid1' 'msgid2' 'msgid3' 'msgid4' 'msgid5' 'utcTime' 'gpsStatus' 'gpsLat' 'nsInd' 'gpsLong' 'ewInd' 'gpsSpd' 'gpsCrs'   'date'   'mode'     'CS'   'temperature'   'deltaT'};
+ recordType = {'ulong' 'int16'  'int16'  'int16' 'int16' 'int16' 'int16' 'int16'  'int16' 'int16' 'int16'  'int16'  'int16'  'int16' 'char'    'char'   'char'   'char'  'char'    'uint32'    'char'    'int32'  'char'   'int32'  'char'  'int32' 'int32'  'uint32'   'char'  'uint32'    'int16'     'uint32'};
+ recordLen = [   4       2        2         2        2      2        2      2       2       2       2         2        2        2       1         1       1         1       1          4         1           4      1         4       1        4       4          4       1          4           2            4];
 
  
 %  %recordType = {'time' 'accelX' 'accelY' 'accelZ' 'gyroX' 'gyroY' 'gyroZ' 'magX'   'magY'  'magZ' 'press0' 'press1' 'msgid1' 'msgid2' 'msgid3' 'msgid4' 'msgid5' 'utcTime' 'gpsStatus' 'gpsLat' 'nsInd' 'gpsLong' 'ewInd' 'gpsSpd' 'gpsCrs' 'date'  'mode'     'CS'   'temperature'   'deltaT'};
