@@ -9,10 +9,10 @@
 #include <DallasTemperature.h>
 
 #define magInstalled 1
-#define gpsInstalled 0
+#define gpsInstalled 1
 #define pressureInstalled 1
 #define ONE_WIRE_BUS 49
-#define tempInstalled 1
+#define tempInstalled 0
 #define TEMPERATURE_PRECISION 9
 
 #define serialBaud 19200
@@ -34,7 +34,6 @@ USARTClass &pressureSerial = Serial3;
 
 //Constructors
 ITG3200 gyro = ITG3200(); //construct gyro object
-
 ADXL362 accel; //construct accel object
 
 #if (tempInstalled)
@@ -140,9 +139,8 @@ void setup() {
 
 	//set up gyro
 	Wire.begin(); //begin wire transmission
-	delay(1000);
+	delay(1000); //todo:check if this is necessary
 	gyro.init(ITG3200_ADDR_AD0_HIGH); //initialize gyro with address pulled high
-
 
 	//set up accelerometer
 	accel.begin();
@@ -205,22 +203,22 @@ void loop() {
 	char *gpsStatus={"?"},*nsInd={"?"},*ewInd={"?"},*mode={"?"};
 	int32_t gpsLat,gpsLong,gpsSpd,gpsCrs=0;
 	uint32_t utcTime,date,CS=0;
-	if (Serial.available()>0)
+
+	if (Serial.available()>0) //check if there's serial data available
 	{
 		parseInput();
 	}
 
-	//start timer
+	//start timer for tDiff data
 	unsigned long time = millis();
-	int i=0;
 
-	//read accel
+	//read accel data
 	accel.readXYZTData(accelX,accelY,accelZ,accelT);
 
-	//read gyro
+	//read gyro data
 	readGyroData(gyroX,gyroY,gyroZ);
 
-	//read magnetometer
+	//read magnetometer data
 #if (magInstalled)
 	readMagnetometer(magSerial,magReading);
 #endif
@@ -240,19 +238,17 @@ void loop() {
 
 #if (tempInstalled)
 	sensors.requestTemperatures(); // Send the command to get temperatures
-
 	temperature = int16_t (100*sensors.getTempF(tempDeviceAddress));
-
-	//temperature = sensors.getTempF(tempDeviceAddress);
 #endif
 
 	//format packet to be sent to SD card
-	unsigned long tDiff = millis()-time;
-	//write to SD card
 
-	if (logData)
+	unsigned long tDiff = millis()-time; //end tDiff timer
+	
+	//write to SD card
+	if (logData) //if we're storing data
 	{
-		if (writeBuffLoc + nBytesPerSample > sizeof(writeBuff))
+		if (writeBuffLoc + nBytesPerSample > sizeof(writeBuff)) //if there's not enough room in the buffer, right it to the card first
 		{
 			File dataFile = SD.open(filename,FILE_WRITE);
 			dataFile.write(writeBuff,writeBuffLoc);
@@ -262,64 +258,39 @@ void loop() {
 			dataFile.close();
 			writeBuffLoc = 0;
 		}
-		parseToBinUInt32(writeBuff,time,writeBuffLoc);
-
+		parseToBinUInt32(writeBuff,time,writeBuffLoc); //split data into bytes for binary storage
 		parseToBinInt16(writeBuff,accelX,writeBuffLoc);
-
 		parseToBinInt16(writeBuff,accelY,writeBuffLoc);
-
 		parseToBinInt16(writeBuff,accelZ,writeBuffLoc);
-
 		parseToBinInt16(writeBuff,gyroX,writeBuffLoc);
-
 		parseToBinInt16(writeBuff,gyroY,writeBuffLoc);
-
 		parseToBinInt16(writeBuff,gyroZ,writeBuffLoc);
-
 		parseToBinInt16(writeBuff,magReading[0],writeBuffLoc);
-
 		parseToBinInt16(writeBuff,magReading[1],writeBuffLoc);
-
 		parseToBinInt16(writeBuff,magReading[2],writeBuffLoc);
-
 		parseToBinInt16(writeBuff,pressure[0],writeBuffLoc);
-
 		parseToBinInt16(writeBuff,pressure[1],writeBuffLoc);
-
 		parseToBinInt16(writeBuff,pressure[2],writeBuffLoc);
-
 		parseToBinInt16(writeBuff,pressure[3],writeBuffLoc);
-
 		for (int i=0;i<5;i++)
 		{
 			writeBuff[writeBuffLoc++] = byte (msgID[i]);
 		}
 		parseToBinUInt32(writeBuff,utcTime,writeBuffLoc);
-
 		writeBuff[writeBuffLoc++] = (byte) gpsStatus[0];
-
 		parseToBinInt32(writeBuff,gpsLat,writeBuffLoc);
-
 		writeBuff[writeBuffLoc++] = (byte) *nsInd;
-
 		parseToBinInt32(writeBuff,gpsLong,writeBuffLoc);
-
 		writeBuff[writeBuffLoc++] = (byte) *ewInd;
-
 		parseToBinInt32(writeBuff,gpsSpd,writeBuffLoc);
-
 		parseToBinInt32(writeBuff,gpsCrs,writeBuffLoc);
-
 		parseToBinUInt32(writeBuff,date,writeBuffLoc);
-
 		writeBuff[writeBuffLoc++] = (byte) *mode;
-
 		parseToBinUInt32(writeBuff,CS,writeBuffLoc);
-
 		parseToBinInt16(writeBuff,temperature,writeBuffLoc);
-
 		parseToBinUInt32(writeBuff,tDiff,writeBuffLoc);
 	}
+
 	else if(writeBuffLoc != 0) //we're not logging data, but theres data in the buffer. write it out to SD
 	{
 		dataFile = SD.open(filename,FILE_WRITE);
@@ -338,7 +309,7 @@ void loop() {
 		dataFile.close();
 		writeBuffLoc = 0;
 	}
-	if (printSerialOut)
+	if (printSerialOut) //if the user wants to see the data (should be off by default for increased speed)
 	{
 		Serial.print(time);
 		Serial.print('\t');
@@ -397,6 +368,7 @@ void loop() {
 		Serial.println(tDiff);
 	}
 }
+
 void readMagnetometer(USARTClass &magSerial,int16_t *magReading)
 {
 	magSerial.print("*99P\r");
@@ -457,23 +429,22 @@ void readGPS(USARTClass &gpsSerial,char *msgID,uint32_t &utcTime,char **gpsStatu
 	int nchars;
 	if (gpsSerial.available()>0)
 	{
-		if (gpsSerial.read() == '$')
+		if (gpsSerial.read() == '$') //if we received the first character of a legitimate gps message
 		{
-			nchars = gpsSerial.readBytesUntil(0x0a,bytesIn,200);
+			nchars = gpsSerial.readBytesUntil(0x0a,bytesIn,200); //read until the end of the message
 
 			//process gps string
-			char *s1=bytesIn;
-			char *pt;
-			pt = strsep(&s1,",*");
-			//Serial.println(pt);
-			for (int j=0;j<5;j++)
+			char *s1=bytesIn; //copy to a new variable so we don't mess the data up;
+			char *pt; //create container to store separated variable into
+			pt = strsep(&s1,",*"); //pull of first delimted strings, based on either a , or a *
+
+			for (int j=0;j<5;j++) //we know it's the msg field, so parse it into characters so we can write binary
 			{
 				msgID[j] = (char )pt[j];
 			}
 
-
-			int i=0;
-			while (pt = strsep( &s1,",*"))
+			int i=0; //variable for which section of delimited code we're in
+			while (pt = strsep( &s1,",*")) //loop over string, delimiting it as we go
 			{
 				//Serial.println(pt);
 				switch (i++)
@@ -520,7 +491,6 @@ void readGPS(USARTClass &gpsSerial,char *msgID,uint32_t &utcTime,char **gpsStatu
 					}
 				case 8:
 					{      
-						//todo:check if this is right. might have a problem
 						date = atoi(pt);
 						break;
 					}
@@ -537,8 +507,6 @@ void readGPS(USARTClass &gpsSerial,char *msgID,uint32_t &utcTime,char **gpsStatu
 				case 11:
 					{
 						*mode = pt;
-						//     Serial.print("got here : ");
-						//Serial.println(*mode);
 						break;
 					}
 				case 12:
@@ -551,7 +519,7 @@ void readGPS(USARTClass &gpsSerial,char *msgID,uint32_t &utcTime,char **gpsStatu
 
 		}
 
-		// if the character that was read then flush the rest of the data
+		// if the character that was read was not the beginning of a message, then flush the rest of the data
 		while (gpsSerial.available()>0)
 		{
 			gpsSerial.read();
