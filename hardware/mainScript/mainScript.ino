@@ -14,10 +14,10 @@
 #define ONE_WIRE_BUS 49
 #define TEMPERATURE_PRECISION 9
 
-const uint32_t magBaud = 19200;
-const uint32_t gpsBaud = 57600;
-const uint32_t pressBaud = 9600;
-const uint8_t sdChipSelect = 52;
+#define magBaud 19200
+#define gpsBaud 57600
+#define pressBaud 9600
+#define sdChipSelect 52
 boolean printSerialOut = false;
 boolean sdCardClosed = true;
 
@@ -56,19 +56,44 @@ byte writeBuff[1028];
 uint16_t writeBuffLoc=0;
 const uint8_t nBytesPerSample = 31;
 
+volatile unsigned long trig0=0;
+volatile unsigned long pwm0 = 0;
+#define pwmPin0 38
+volatile unsigned long trig1=0;
+volatile unsigned long pwm1 = 0;
+#define pwmPin1 39
+volatile unsigned long trig2=0;
+volatile unsigned long pwm2 = 0;
+#define pwmPin2 40
+volatile unsigned long trig3=0;
+volatile unsigned long pwm3 = 0;
+#define pwmPin3 41
+volatile unsigned long trig4=0;
+volatile unsigned long pwm4 = 0;
+#define pwmPin4 42
+volatile unsigned long trig5=0;
+volatile unsigned long pwm5 = 0;
+#define pwmPin5 43
+volatile unsigned long trig6=0;
+volatile unsigned long pwm6 = 0;
+#define pwmPin6 44
+volatile unsigned long trig7=0;
+volatile unsigned long pwm7 = 0;
+#define pwmPin7 45
+
 void setup() {
   char msgID[6]="?????";
   char *gpsStatus={
-    "?"                              }
+    "?"                                }
   ,*nsInd={
-    "?"                              }
+    "?"                                }
   ,*ewInd={
-    "?"                              }
+    "?"                                }
   ,*mode={
-    "?"                              };
+    "?"                                };
   int32_t gpsLat=0,gpsLong=0,gpsSpd=0,gpsCrs=0;
   uint32_t utcTime=0,date=0,CS={
-    0                              };
+    0                                };
 
   Serial.begin(19200); //begin serial communication for debugging
   Serial.println("Serial port initialized.");
@@ -158,14 +183,23 @@ void setup() {
   }
   else Serial.println("No temperature sensors found.");
 
-  pinMode(servoPin0, INPUT);
-  pinMode(servoPin1, INPUT);
-  pinMode(servoPin2, INPUT);
-  pinMode(servoPin3, INPUT);
-  pinMode(servoPin4, INPUT);
-  pinMode(servoPin5, INPUT);
-  pinMode(servoPin6, INPUT);
-  pinMode(servoPin7, INPUT);
+  pinMode(pwmPin0, INPUT);
+  pinMode(pwmPin1, INPUT);
+  pinMode(pwmPin2, INPUT);
+  pinMode(pwmPin3, INPUT);
+  pinMode(pwmPin4, INPUT);
+  pinMode(pwmPin5, INPUT);
+  pinMode(pwmPin6, INPUT);
+  pinMode(pwmPin7, INPUT);
+
+  attachInterrupt(pwmPin0,intHandler0,CHANGE);
+  attachInterrupt(pwmPin1,intHandler1,CHANGE);
+  attachInterrupt(pwmPin2,intHandler2,CHANGE);
+  attachInterrupt(pwmPin3,intHandler3,CHANGE);
+  attachInterrupt(pwmPin4,intHandler4,CHANGE);
+  attachInterrupt(pwmPin5,intHandler5,CHANGE);
+  attachInterrupt(pwmPin6,intHandler6,CHANGE);
+  attachInterrupt(pwmPin7,intHandler7,CHANGE);
 }
 
 
@@ -179,16 +213,16 @@ void loop() {
   int16_t accelX, accelY, accelZ, accelT;
   char msgID[6]="?????";
   char *gpsStatus={
-    "?"                              }
+    "?"                                }
   ,*nsInd={
-    "?"                              }
+    "?"                                }
   ,*ewInd={
-    "?"                              }
+    "?"                                }
   ,*mode={
-    "?"                              };
+    "?"                                };
   int32_t gpsLat=0,gpsLong=0,gpsSpd=0,gpsCrs=0;
   uint32_t utcTime=0,date=0,CS={
-    0                              };
+    0                                };
   if (Serial.available()>0)
   {
     parseInput();
@@ -428,9 +462,9 @@ void readAllPress (USARTClass &pressureSerial,char add0[], char add1[], char add
 int16_t readUniquePress(USARTClass &pressureSerial,char address[])
 {
   char bytesIn[80]={
-    0x00                              };
+    0x00                                };
   char readComm[80]={
-    0x00                              };
+    0x00                                };
 
   int nchars;
   strcat(readComm,"U");
@@ -446,7 +480,7 @@ int16_t readUniquePress(USARTClass &pressureSerial,char address[])
 void readGPS(USARTClass &gpsSerial,char *msgID,uint32_t &utcTime,char **gpsStatus, int32_t &gpsLat,char **nsInd,int32_t &gpsLong,char **ewInd,int32_t &gpsSpd,int32_t &gpsCrs,uint32_t &date,char **mode,uint32_t &CS)
 {
   char bytesIn[200] = {
-    0                              };
+    0                                };
   int nchars;
   if (gpsSerial.available()>0)
   {
@@ -660,7 +694,7 @@ void parseToBinUInt32(byte buff[],uint32_t var,uint16_t &loc)
 void parseInput()
 {
   char comm[80] = {
-    0                  };
+    0                    };
   if (Serial.read() == '#')
   {
     int i = 0;
@@ -726,43 +760,105 @@ void parseInput()
     Serial.println("Serial data flushed.");
   }
 
+}
+
+
 void intHandler0()
 {
+    if(digitalRead(pwmPin0))
+  {
+    trig0 = micros();
+  }
+  else
+  {
+    pwm0 = micros()-trig0;
+  }
 }
 
 void intHandler1()
 {
+    if(digitalRead(pwmPin1))
+  {
+    trig1 = micros();
+  }
+  else
+  {
+    pwm1 = micros()-trig1;
+  }
 }
 
 void intHandler2()
 {
+    if(digitalRead(pwmPin2))
+  {
+    trig2 = micros();
+  }
+  else
+  {
+    pwm2 = micros()-trig2;
+  }
 }
 
 void intHandler3()
 {
+    if(digitalRead(pwmPin3))
+  {
+    trig3 = micros();
+  }
+  else
+  {
+    pwm3 = micros()-trig3;
+  }
 }
 
 void intHandler4()
 {
+  
+    if(digitalRead(pwmPin4))
+  {
+    trig4 = micros();
+  }
+  else
+  {
+    pwm4 = micros()-trig4;
+  }
 }
 
 void intHandler5()
 {
+    if(digitalRead(pwmPin5))
+  {
+    trig5 = micros();
+  }
+  else
+  {
+    pwm5 = micros()-trig5;
+  }
 }
 
 void intHandler6()
 {
+    if(digitalRead(pwmPin6))
+  {
+    trig6 = micros();
+  }
+  else
+  {
+    pwm6 = micros()-trig6;
+  }
 }
 
 void intHandler7()
 {
+    if(digitalRead(pwmPin7))
+  {
+    trig7 = micros();
+  }
+  else
+  {
+    pwm7 = micros()-trig7;
+  }
 }
-}
-
-
-
-
-
 
 
 

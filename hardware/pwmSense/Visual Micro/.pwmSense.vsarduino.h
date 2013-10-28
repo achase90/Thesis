@@ -38,7 +38,14 @@ extern "C" void __cxa_pure_virtual() {;}
 
 
 
-void myHandler();
+void intHandler0();
+void intHandler1();
+void intHandler2();
+void intHandler3();
+void intHandler4();
+void intHandler5();
+void intHandler6();
+void intHandler7();
 //
 //
 
