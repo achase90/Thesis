@@ -1,12 +1,17 @@
 \chapter{System Usage}
 This section documents the steps required for correct usage of the data acquisition system.
 
-\begin{enumerate}
-\item Install Visual Studio
+\item Install Visual Studio	
 \item Install Visual Micro For Arduino
 \item Compile and upload software
-\item Take zero offset readings of pressure sensors
-\end{enumerate}
+\section{Zero Offset Calibration}
+\label{preflightZeroCalib}
+Before installing the data acqusition system in the aircraft, wind-off zero calibration should be acquired for the pressure sensors. To do this, connect one port to the other on each of the differential pressure sensors, then acquire data for some amount of time. Take note of these values.
+
+
+\section{Post Flight Zero Offset Calibration}
+After the flight is complete, a second round of zero offset calibration data should be acquired. This set ensures that any drift that occurred during the flight is accounted for. Repeat the steps outlined in Section \ref{preflightZeroCalib}.
+
 
 \section{Software Usage}
 Let's talk about how to use that sweet GUI of yours.

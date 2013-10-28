@@ -45,10 +45,10 @@ DallasTemperature sensors(&oneWire);
 DeviceAddress tempDeviceAddress; // temperature sensor device address
 #endif
 
-char pressSN0[13] = "4F15-01-A213";
+char pressSN0[13] = "R11L07-20-A4";
 char pressSN1[13] = "R10F30-04-A1";
 char pressSN2[13] = "R11L07-20-A5";
-char pressSN3[13] = "R11L07-20-A4";
+char pressSN3[13] = "4F15-01-A213";
 
 byte writeBuff[1028];
 uint16_t writeBuffLoc=0;
