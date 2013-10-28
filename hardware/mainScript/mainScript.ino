@@ -59,16 +59,16 @@ const uint8_t nBytesPerSample = 31;
 void setup() {
   char msgID[6]="?????";
   char *gpsStatus={
-    "?"                            }
+    "?"                              }
   ,*nsInd={
-    "?"                            }
+    "?"                              }
   ,*ewInd={
-    "?"                            }
+    "?"                              }
   ,*mode={
-    "?"                            };
+    "?"                              };
   int32_t gpsLat=0,gpsLong=0,gpsSpd=0,gpsCrs=0;
   uint32_t utcTime=0,date=0,CS={
-    0                            };
+    0                              };
 
   Serial.begin(19200); //begin serial communication for debugging
   Serial.println("Serial port initialized.");
@@ -158,7 +158,14 @@ void setup() {
   }
   else Serial.println("No temperature sensors found.");
 
-
+  pinMode(servoPin0, INPUT);
+  pinMode(servoPin1, INPUT);
+  pinMode(servoPin2, INPUT);
+  pinMode(servoPin3, INPUT);
+  pinMode(servoPin4, INPUT);
+  pinMode(servoPin5, INPUT);
+  pinMode(servoPin6, INPUT);
+  pinMode(servoPin7, INPUT);
 }
 
 
@@ -172,16 +179,16 @@ void loop() {
   int16_t accelX, accelY, accelZ, accelT;
   char msgID[6]="?????";
   char *gpsStatus={
-    "?"                            }
+    "?"                              }
   ,*nsInd={
-    "?"                            }
+    "?"                              }
   ,*ewInd={
-    "?"                            }
+    "?"                              }
   ,*mode={
-    "?"                            };
+    "?"                              };
   int32_t gpsLat=0,gpsLong=0,gpsSpd=0,gpsCrs=0;
   uint32_t utcTime=0,date=0,CS={
-    0                            };
+    0                              };
   if (Serial.available()>0)
   {
     parseInput();
@@ -267,7 +274,7 @@ void loop() {
 
     parseToBinInt16(writeBuff,pressure[1],writeBuffLoc);
 
-	parseToBinInt16(writeBuff,pressure[2],writeBuffLoc);
+    parseToBinInt16(writeBuff,pressure[2],writeBuffLoc);
 
     parseToBinInt16(writeBuff,pressure[3],writeBuffLoc);
 
@@ -304,17 +311,17 @@ void loop() {
   else if(writeBuffLoc != 0) //we're not logging data, but theres data in the buffer. write it out to SD
   {
     dataFile = SD.open(filename,FILE_WRITE);
-	Serial.println(dataFile);
+    Serial.println(dataFile);
     int bytesWritten = dataFile.write(writeBuff,writeBuffLoc);
     Serial.println();
     if (bytesWritten>0)
     {
-		Serial.println("check1");
+      Serial.println("check1");
       Serial.println("Data buffer written to SD card.");
     }
     else
     {
-		Serial.println("check2");
+      Serial.println("check2");
       Serial.println("Data NOT written to SD card.");
     }
     Serial.println();
@@ -347,7 +354,7 @@ void loop() {
     Serial.print('\t');
     Serial.print(pressure[1]);
     Serial.print('\t');
-	Serial.print(pressure[2]);
+    Serial.print(pressure[2]);
     Serial.print('\t');
     Serial.print(pressure[3]);
     Serial.print('\t');
@@ -421,9 +428,9 @@ void readAllPress (USARTClass &pressureSerial,char add0[], char add1[], char add
 int16_t readUniquePress(USARTClass &pressureSerial,char address[])
 {
   char bytesIn[80]={
-    0x00                            };
+    0x00                              };
   char readComm[80]={
-    0x00                            };
+    0x00                              };
 
   int nchars;
   strcat(readComm,"U");
@@ -439,7 +446,7 @@ int16_t readUniquePress(USARTClass &pressureSerial,char address[])
 void readGPS(USARTClass &gpsSerial,char *msgID,uint32_t &utcTime,char **gpsStatus, int32_t &gpsLat,char **nsInd,int32_t &gpsLong,char **ewInd,int32_t &gpsSpd,int32_t &gpsCrs,uint32_t &date,char **mode,uint32_t &CS)
 {
   char bytesIn[200] = {
-    0                            };
+    0                              };
   int nchars;
   if (gpsSerial.available()>0)
   {
@@ -506,7 +513,7 @@ void readGPS(USARTClass &gpsSerial,char *msgID,uint32_t &utcTime,char **gpsStatu
           }
         case 8:
           {      
-//todo:check if this is right. might have a problem
+            //todo:check if this is right. might have a problem
             date = atoi(pt);
             break;
           }
@@ -653,7 +660,7 @@ void parseToBinUInt32(byte buff[],uint32_t var,uint16_t &loc)
 void parseInput()
 {
   char comm[80] = {
-    0                };
+    0                  };
   if (Serial.read() == '#')
   {
     int i = 0;
@@ -718,7 +725,40 @@ void parseInput()
     }
     Serial.println("Serial data flushed.");
   }
+
+void intHandler0()
+{
 }
+
+void intHandler1()
+{
+}
+
+void intHandler2()
+{
+}
+
+void intHandler3()
+{
+}
+
+void intHandler4()
+{
+}
+
+void intHandler5()
+{
+}
+
+void intHandler6()
+{
+}
+
+void intHandler7()
+{
+}
+}
+
 
 
 
