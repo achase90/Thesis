@@ -194,5 +194,9 @@
 		</File>
 	</Files>
 	<Globals>
+		<Global
+			Name="arduino.upload.port"
+			Value="COM7"
+		/>
 	</Globals>
 </VisualStudioProject>

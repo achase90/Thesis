@@ -20,30 +20,24 @@
 #define gpsBaud 57600
 #define pressBaud 9600
 #define sdChipSelect 52
+#define pwmPin0 38
+#define pwmPin1 39
+#define pwmPin2 40
+#define pwmPin3 41
+#define pwmPin4 42
+#define pwmPin5 43
+#define pwmPin6 44
+#define pwmPin7 45
+
+volatile unsigned long trig0,trig1,trig2,trig3,trig4,trig5,trig6,trig7=0;
+volatile unsigned long pwm0,pwm1,pwm2,pwm3,pwm4,pwm5,pwm6,pwm7 = 0;
+
 boolean printSerialOut = false;
 boolean sdCardClosed = true;
 
 char filename[80]={0};
 File dataFile;
 boolean logData=false;
-
-// set up communication with sensors
-USARTClass &magSerial = Serial1;
-USARTClass &gpsSerial = Serial2;
-USARTClass &pressureSerial = Serial3;
-
-//Constructors
-ITG3200 gyro = ITG3200(); //construct gyro object
-ADXL362 accel; //construct accel object
-
-#if (tempInstalled)
-OneWire oneWire(ONE_WIRE_BUS);
-
-// Pass oneWire reference to Dallas Temperature. 
-DallasTemperature sensors(&oneWire);
-
-DeviceAddress tempDeviceAddress; // temperature sensor device address
-#endif
 
 char pressSN0[13] = "R11L07-20-A4";
 char pressSN1[13] = "R10F30-04-A1";
@@ -54,48 +48,40 @@ byte writeBuff[1028];
 uint16_t writeBuffLoc=0;
 const uint8_t nBytesPerSample = 31;
 
-volatile unsigned long trig0=0;
-volatile unsigned long pwm0 = 0;
-#define pwmPin0 38
-volatile unsigned long trig1=0;
-volatile unsigned long pwm1 = 0;
-#define pwmPin1 39
-volatile unsigned long trig2=0;
-volatile unsigned long pwm2 = 0;
-#define pwmPin2 40
-volatile unsigned long trig3=0;
-volatile unsigned long pwm3 = 0;
-#define pwmPin3 41
-volatile unsigned long trig4=0;
-volatile unsigned long pwm4 = 0;
-#define pwmPin4 42
-volatile unsigned long trig5=0;
-volatile unsigned long pwm5 = 0;
-#define pwmPin5 43
-volatile unsigned long trig6=0;
-volatile unsigned long pwm6 = 0;
-#define pwmPin6 44
-volatile unsigned long trig7=0;
-volatile unsigned long pwm7 = 0;
-#define pwmPin7 45
+// set up communication with sensors
+USARTClass &magSerial = Serial1;
+USARTClass &gpsSerial = Serial2;
+USARTClass &pressureSerial = Serial3;
+
+//Constructors
+ITG3200 gyro = ITG3200(); //construct gyro object
+ADXL362 accel; //construct accel object
+
+OneWire oneWire(ONE_WIRE_BUS);
+
+// Pass oneWire reference to Dallas Temperature. 
+DallasTemperature sensors(&oneWire);
+
+DeviceAddress tempDeviceAddress; // temperature sensor device address
 
 void setup() {
 	char msgID[6]="?????";
 	char *gpsStatus,*nsInd,*ewInd,*mode={"?"};
 	int32_t gpsLat,gpsLong,gpsSpd,gpsCrs=0;
 	uint32_t utcTime,date,CS=0;
+	unsigned long time=millis();
 
 	Serial.begin(serialBaud); //begin serial communication for debugging
 	Serial.println("Serial port initialized.");
 
 	Serial.print("Data logging : ");
 	if (logData)
-	{
+		{
 		Serial.println("on.");
-	}
+		}
 	else {
 		Serial.println("off.");
-	}
+		}
 #if (magInstalled)
 	Serial.println("Initializing magnetometer...");
 	serialDeviceInit(Serial, magSerial, magBaud,"mag"); //initialize magnetometer on Serial1
@@ -115,12 +101,12 @@ void setup() {
 
 #if (gpsInstalled)
 	while (!gpsSerial.available()>0)
-	{
-		if (millis()>time+5000)
 		{
+		if (millis()>time+5000)
+			{
 			break;
-		} 
-	}
+			} 
+		}
 	readGPS(gpsSerial,msgID,utcTime,&gpsStatus, gpsLat,&nsInd,gpsLong,&ewInd,gpsSpd,gpsCrs,date,&mode,CS);
 	Serial.println(filename);
 	char str[20];
@@ -152,9 +138,9 @@ void setup() {
 	// Serial.println("Temperature sensor set up : ");
 
 	if(sensors.getAddress(tempDeviceAddress, 0))
-	{
+		{
 		sensors.setResolution(tempDeviceAddress, TEMPERATURE_PRECISION);
-	}
+		}
 	else Serial.println("No temperature sensors found.");
 
 #else
@@ -181,14 +167,14 @@ void setup() {
 
 #if (gpsInstalled)
 	//flush any data that has accumulated between turning on the device and starting the main loop.
-	{
-		while(gpsSerial.available()>0)
 		{
+		while(gpsSerial.available()>0)
+			{
 			gpsSerial.read();
+			}
 		}
-	}
 #endif
-}
+	}
 
 
 void loop() {
@@ -205,9 +191,9 @@ void loop() {
 	uint32_t utcTime,date,CS=0;
 
 	if (Serial.available()>0) //check if there's serial data available
-	{
+		{
 		parseInput();
-	}
+		}
 
 	//start timer for tDiff data
 	unsigned long time = millis();
@@ -231,9 +217,9 @@ void loop() {
 	//read GPS
 #if (gpsInstalled)
 	if (gpsSerial.available()>0 && true)
-	{
+		{
 		readGPS(gpsSerial,msgID,utcTime,&gpsStatus, gpsLat,&nsInd,gpsLong,&ewInd,gpsSpd,gpsCrs,date,&mode,CS);
-	}
+		}
 #endif
 
 #if (tempInstalled)
@@ -244,12 +230,12 @@ void loop() {
 	//format packet to be sent to SD card
 
 	unsigned long tDiff = millis()-time; //end tDiff timer
-	
+
 	//write to SD card
 	if (logData) //if we're storing data
-	{
-		if (writeBuffLoc + nBytesPerSample > sizeof(writeBuff)) //if there's not enough room in the buffer, right it to the card first
 		{
+		if (writeBuffLoc + nBytesPerSample > sizeof(writeBuff)) //if there's not enough room in the buffer, right it to the card first
+			{
 			File dataFile = SD.open(filename,FILE_WRITE);
 			dataFile.write(writeBuff,writeBuffLoc);
 			Serial.println();
@@ -257,7 +243,7 @@ void loop() {
 			Serial.println();
 			dataFile.close();
 			writeBuffLoc = 0;
-		}
+			}
 		parseToBinUInt32(writeBuff,time,writeBuffLoc); //split data into bytes for binary storage
 		parseToBinInt16(writeBuff,accelX,writeBuffLoc);
 		parseToBinInt16(writeBuff,accelY,writeBuffLoc);
@@ -273,9 +259,9 @@ void loop() {
 		parseToBinInt16(writeBuff,pressure[2],writeBuffLoc);
 		parseToBinInt16(writeBuff,pressure[3],writeBuffLoc);
 		for (int i=0;i<5;i++)
-		{
+			{
 			writeBuff[writeBuffLoc++] = byte (msgID[i]);
-		}
+			}
 		parseToBinUInt32(writeBuff,utcTime,writeBuffLoc);
 		writeBuff[writeBuffLoc++] = (byte) gpsStatus[0];
 		parseToBinInt32(writeBuff,gpsLat,writeBuffLoc);
@@ -289,28 +275,28 @@ void loop() {
 		parseToBinUInt32(writeBuff,CS,writeBuffLoc);
 		parseToBinInt16(writeBuff,temperature,writeBuffLoc);
 		parseToBinUInt32(writeBuff,tDiff,writeBuffLoc);
-	}
+		}
 
 	else if(writeBuffLoc != 0) //we're not logging data, but theres data in the buffer. write it out to SD
-	{
+		{
 		dataFile = SD.open(filename,FILE_WRITE);
 		Serial.println(dataFile);
 		int bytesWritten = dataFile.write(writeBuff,writeBuffLoc);
 		Serial.println();
 		if (bytesWritten>0)
-		{
+			{
 			Serial.println("Data buffer written to SD card.");
-		}
+			}
 		else
-		{
+			{
 			Serial.println("Data NOT written to SD card.");
-		}
+			}
 		Serial.println();
 		dataFile.close();
 		writeBuffLoc = 0;
-	}
+		}
 	if (printSerialOut) //if the user wants to see the data (should be off by default for increased speed)
-	{
+		{
 		Serial.print(time);
 		Serial.print('\t');
 		Serial.print(accelX);
@@ -366,49 +352,49 @@ void loop() {
 		Serial.print(temperature);
 		Serial.print('\t');
 		Serial.println(tDiff);
+		}
 	}
-}
 
 void readMagnetometer(USARTClass &magSerial,int16_t *magReading)
-{
+	{
 	magSerial.print("*99P\r");
 	if (magSerial.available()>0)
-	{
+		{
 		byte buff[6];
 		for (int i=0;i<7;i++)
-		{
+			{
 			buff[i]=magSerial.read(); 
-		}
+			}
 		magReading[0] = buff[1]  + (buff[0] << 8);
 		magReading[1] = buff[3] + (buff[2] << 8);
 		magReading[2] = buff[5] + (buff[4]  << 8);
+		}
 	}
-}
 
 void readGyroData(int16_t &gyroX,int16_t &gyroY,int16_t &gyroZ)
-{
-	if (gyro.isRawDataReady())
 	{
+	if (gyro.isRawDataReady())
+		{
 		gyro.readGyroRaw(&gyroX,&gyroY,&gyroZ);
-	} 
+		} 
 	else{
 		gyroX = NAN;
 		gyroY = NAN;
 		gyroZ = NAN;
+		}
 	}
-}
 
 void readAllPress (USARTClass &pressureSerial,char add0[], char add1[], char add2[], char add3[], int16_t *pressure)
-{
+	{
 	pressureSerial.print("WC\r");
 	pressure[0] = readUniquePress(pressureSerial,add1);
 	pressure[1] = readUniquePress(pressureSerial,add2);
 	pressure[2] = readUniquePress(pressureSerial,add2);
 	pressure[3] = readUniquePress(pressureSerial,add3);
-}
+	}
 
 int16_t readUniquePress(USARTClass &pressureSerial,char address[])
-{
+	{
 	char bytesIn[80]={0x00};
 	char readComm[80]={0x00};
 
@@ -421,16 +407,16 @@ int16_t readUniquePress(USARTClass &pressureSerial,char address[])
 	nchars = pressureSerial.readBytesUntil(0x20,bytesIn,20);
 	int16_t pressure = int16_t (strtol(bytesIn,NULL,16));
 	return pressure;
-}
+	}
 
 void readGPS(USARTClass &gpsSerial,char *msgID,uint32_t &utcTime,char **gpsStatus, int32_t &gpsLat,char **nsInd,int32_t &gpsLong,char **ewInd,int32_t &gpsSpd,int32_t &gpsCrs,uint32_t &date,char **mode,uint32_t &CS)
-{
+	{
 	char bytesIn[200] = {0};
 	int nchars;
 	if (gpsSerial.available()>0)
-	{
-		if (gpsSerial.read() == '$') //if we received the first character of a legitimate gps message
 		{
+		if (gpsSerial.read() == '$') //if we received the first character of a legitimate gps message
+			{
 			nchars = gpsSerial.readBytesUntil(0x0a,bytesIn,200); //read until the end of the message
 
 			//process gps string
@@ -439,246 +425,246 @@ void readGPS(USARTClass &gpsSerial,char *msgID,uint32_t &utcTime,char **gpsStatu
 			pt = strsep(&s1,",*"); //pull of first delimted strings, based on either a , or a *
 
 			for (int j=0;j<5;j++) //we know it's the msg field, so parse it into characters so we can write binary
-			{
+				{
 				msgID[j] = (char )pt[j];
-			}
+				}
 
 			int i=0; //variable for which section of delimited code we're in
 			while (pt = strsep( &s1,",*")) //loop over string, delimiting it as we go
-			{
+				{
 				//Serial.println(pt);
 				switch (i++)
-				{
-				case 0:
 					{
+					case 0:
+						{
 						utcTime = 100*atof(pt);
 						break;
-					}
-				case 1:
-					{
+						}
+					case 1:
+						{
 						*gpsStatus = pt;
 						break;
-					}
-				case 2:
-					{                    
+						}
+					case 2:
+						{                    
 						gpsLat = 100000*atof(pt);
 						break;
-					}
-				case 3:
-					{                    
+						}
+					case 3:
+						{                    
 						*nsInd = pt;
 						break;
-					}
-				case 4:
-					{                    
+						}
+					case 4:
+						{                    
 						gpsLong = 100000*atof(pt);
 						break;
-					}
-				case 5:
-					{                    
+						}
+					case 5:
+						{                    
 						* ewInd = pt;
 						break;
-					}
-				case 6:
-					{                    
+						}
+					case 6:
+						{                    
 						gpsSpd = 1000*atof(pt);
 						break;
-					}
-				case 7:
-					{                    
+						}
+					case 7:
+						{                    
 						gpsCrs = 1000*atof(pt);
 						break;
-					}
-				case 8:
-					{      
+						}
+					case 8:
+						{      
 						date = atoi(pt);
 						break;
-					}
-				case 9:
-					{                    
+						}
+					case 9:
+						{                    
 						//magnetic variation, not available
 						break;
-					}
-				case 10:
-					{                    
+						}
+					case 10:
+						{                    
 						//magnetic variation indicator, not available
 						break;
-					}
-				case 11:
-					{
+						}
+					case 11:
+						{
 						*mode = pt;
 						break;
-					}
-				case 12:
-					{
+						}
+					case 12:
+						{
 						CS = atoi(pt);
 						break;
+						}
 					}
 				}
-			}
 
-		}
+			}
 
 		// if the character that was read was not the beginning of a message, then flush the rest of the data
 		while (gpsSerial.available()>0)
-		{
+			{
 			gpsSerial.read();
+			}
 		}
 	}
-}
 
 void serialDeviceInit(UARTClass& mainSerial, USARTClass& deviceSerial, int deviceBaud,char ID[])
-{
+	{
 	deviceSerial.begin(deviceBaud); //begin magnetometer serial communication
 	if (ID == "mag")
-	{
+		{
 		deviceSerial.print("*99ID\r"); //send ID command to check if serial port is open
-	}
+		}
 	else if (ID == "gps")
-	{
-	}
+		{
+		}
 	else if (ID == "pre")
-	{
+		{
 		deviceSerial.print("RS\r"); //send "Read Serial Number" command and wait for a response
-	}
+		}
 
 	else
-	{
+		{
 		mainSerial.println("Incorrect device ID for serial port initialization."); 
-	}
+		}
 
 	int start = millis();
 	int time = start;
 	boolean deviceSerialOpen = true; //assume it will open
 	while (!deviceSerial.available())
-	{
+		{
 		time = millis(); //wait for device to respond
 
 		if (time > start + 10000)
-		{
+			{
 			deviceSerialOpen = false; // if it doesn't open, set to false
 			break; 
+			}
 		}
-	}
 	if (deviceSerialOpen)
-	{
+		{
 		delay(20); //wait for all serial communication to come across before flushing
 		while (deviceSerial.available()>0)
-		{
+			{
 			deviceSerial.read(); 
-		}
+			}
 		mainSerial.print(ID);
 		mainSerial.println(" serial port initiliazed.");
-	}
+		}
 	else{
 		mainSerial.print("ERROR : ");
 		mainSerial.print(ID);
 		mainSerial.println(" serial port not responding.");
+		}
 	}
-}
 
 
 void initSDCard(UARTClass &serial,uint8_t sdCardChipSelect)
-{
+	{
 	unsigned long time = millis();
 	while (millis() < time+10000)
-	{
+		{
 		boolean didWork = SD.begin(sdCardChipSelect);
 		if (didWork)
-		{
+			{
 			sdCardClosed = false;
 			break; 
-		}    
-	}
+			}    
+		}
 	if (sdCardClosed)
-	{
+		{
 		serial.println("ERROR : SD Card not responding.");
-	}
+		}
 	else
-	{
+		{
 		Serial.println("SD card initialized."); 
+		}
 	}
-}
 
 void parseToBinInt16(byte buff[],int16_t var,uint16_t &loc)
-{
+	{
 	int i=0;
 	for (i;i<2;i++)
-	{
+		{
 		buff[i+loc] = byte (var >> (8*i));
-	}
+		}
 	loc=loc+i;
-}
+	}
 
 void parseToBinInt32(byte buff[],int32_t var,uint16_t &loc)
-{
+	{
 	int i=0;
 	for (i;i<4;i++)
-	{
+		{
 		buff[i+loc] = byte (var >> (8*i));
-	}
+		}
 	loc=loc+i;
-}
+	}
 
 void parseToBinUInt32(byte buff[],uint32_t var,uint16_t &loc)
-{
+	{
 	int i=0;
 	for (i;i<4;i++)
-	{
+		{
 		buff[i+loc] = byte (var >> (8*i));
-	}
+		}
 	loc=loc+i;
-}
+	}
 
 
 void parseInput()
-{
+	{
 	char comm[80] = {0};
 	if (Serial.read() == '#')
-	{
+		{
 		int i = 0;
 		while(Serial.available()>0)
-		{
+			{
 			comm[i++] = Serial.read();
 
 			if (comm[i-1] == '&')
-			{
+				{
 				break;  
+				}
 			}
-		}
 		if (!strcmp(comm,"dataOn&"))
-		{
+			{
 			if (!sdCardClosed)
-			{      
+				{      
 				logData = true;
 				Serial.println("Data logging : on.");
-			}
+				}
 			else
-			{
+				{
 				Serial.println("Please initialize SD card first.");
+				}
 			}
-		}
 		else if (!strcmp(comm, "dataOff&"))
-		{
+			{
 			logData = false;
 			Serial.println("Data logging : off.");
-		}
+			}
 		else if (!strcmp(comm,"serialOn&"))
-		{
+			{
 			printSerialOut = true;
-		}
+			}
 		else if (!strcmp(comm,"serialOff&"))
-		{
+			{
 			printSerialOut = false;
-		}
+			}
 		else if (!strcmp(comm,"initSD&"))
-		{
+			{
 			// initialize SD card
 			Serial.println("Initializing SD Card...");
 			initSDCard(Serial,sdChipSelect);
-		}
+			}
 		else if (!strcmp(comm,"?&"))
-		{
+			{
 			Serial.println("Help menu");
 			Serial.println("List of commands : ");
 			Serial.println("dataOn :\tturn on data logging to SD card.");
@@ -687,114 +673,114 @@ void parseInput()
 			Serial.println("serialOn :\tturn on serial output.");
 			Serial.println("serialOff :\tturn off serial output.");
 			Serial.println("? :\t help menu.");
+			}
 		}
-	}
 	else
-	{
+		{
 		Serial.print("Improprer serial command. Flushing data...  ");
 		while (Serial.available()>0)
-		{
+			{
 			Serial.read();
-		}
+			}
 		Serial.println("Serial data flushed.");
-	}
+		}
 
-}
+	}
 
 
 void intHandler0()
-{
+	{
 	if(digitalRead(pwmPin0))
-	{
+		{
 		trig0 = micros();
-	}
+		}
 	else
-	{
+		{
 		pwm0 = micros()-trig0;
+		}
 	}
-}
 
 void intHandler1()
-{
+	{
 	if(digitalRead(pwmPin1))
-	{
+		{
 		trig1 = micros();
-	}
+		}
 	else
-	{
+		{
 		pwm1 = micros()-trig1;
+		}
 	}
-}
 
 void intHandler2()
-{
+	{
 	if(digitalRead(pwmPin2))
-	{
+		{
 		trig2 = micros();
-	}
+		}
 	else
-	{
+		{
 		pwm2 = micros()-trig2;
+		}
 	}
-}
 
 void intHandler3()
-{
+	{
 	if(digitalRead(pwmPin3))
-	{
+		{
 		trig3 = micros();
-	}
+		}
 	else
-	{
+		{
 		pwm3 = micros()-trig3;
+		}
 	}
-}
 
 void intHandler4()
-{
+	{
 
 	if(digitalRead(pwmPin4))
-	{
+		{
 		trig4 = micros();
-	}
+		}
 	else
-	{
+		{
 		pwm4 = micros()-trig4;
+		}
 	}
-}
 
 void intHandler5()
-{
+	{
 	if(digitalRead(pwmPin5))
-	{
+		{
 		trig5 = micros();
-	}
+		}
 	else
-	{
+		{
 		pwm5 = micros()-trig5;
+		}
 	}
-}
 
 void intHandler6()
-{
+	{
 	if(digitalRead(pwmPin6))
-	{
+		{
 		trig6 = micros();
-	}
+		}
 	else
-	{
+		{
 		pwm6 = micros()-trig6;
+		}
 	}
-}
 
 void intHandler7()
-{
+	{
 	if(digitalRead(pwmPin7))
-	{
+		{
 		trig7 = micros();
-	}
+		}
 	else
-	{
+		{
 		pwm7 = micros()-trig7;
+		}
 	}
-}
