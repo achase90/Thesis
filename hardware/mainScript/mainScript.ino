@@ -26,7 +26,6 @@ boolean sdCardClosed = true;
 char filename[80]={0};
 File dataFile;
 boolean logData=false;
-unsigned long startTime;
 
 // set up communication with sensors
 USARTClass &magSerial = Serial1;
@@ -148,18 +147,8 @@ void setup() {
 	//set up accelerometer
 	accel.begin();
 	accel.beginMeasure();
-	startTime = millis();
 
-	// set up gps
-#if (gpsInstalled)
-	{
-		while(gpsSerial.available()>0)
-		{
-			gpsSerial.read();
-		}
-	}
-#endif
-
+#if (tempInstalled)
 	//set up temp sensor
 	sensors.begin();
 	// Serial.println("Temperature sensor set up : ");
@@ -169,6 +158,10 @@ void setup() {
 		sensors.setResolution(tempDeviceAddress, TEMPERATURE_PRECISION);
 	}
 	else Serial.println("No temperature sensors found.");
+
+#else
+	Serial.println("Temperature sensor not installed.");
+#endif
 
 	pinMode(pwmPin0, INPUT);
 	pinMode(pwmPin1, INPUT);
@@ -187,6 +180,16 @@ void setup() {
 	attachInterrupt(pwmPin5,intHandler5,CHANGE);
 	attachInterrupt(pwmPin6,intHandler6,CHANGE);
 	attachInterrupt(pwmPin7,intHandler7,CHANGE);
+
+#if (gpsInstalled)
+	//flush any data that has accumulated between turning on the device and starting the main loop.
+	{
+		while(gpsSerial.available()>0)
+		{
+			gpsSerial.read();
+		}
+	}
+#endif
 }
 
 
