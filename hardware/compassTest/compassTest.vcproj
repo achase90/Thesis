@@ -3,7 +3,7 @@
 	ProjectType="Visual C++"
 	Version="9.00"
 	Name="compassTest"
-	ProjectGUID="{43C71F3B-ECCE-4971-ADD4-091741BE1548}"
+	ProjectGUID="{CA849A4D-EDAA-476C-88D9-ACF68508842C}"
 	RootNamespace="compassTest"
 	TargetFrameworkVersion="196613"
 	>
