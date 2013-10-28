@@ -51,6 +51,14 @@ void parseToBinInt16(byte buff[],int16_t var,uint16_t &loc);
 void parseToBinInt32(byte buff[],int32_t var,uint16_t &loc);
 void parseToBinUInt32(byte buff[],uint32_t var,uint16_t &loc);
 void parseInput();
+void intHandler0();
+void intHandler1();
+void intHandler2();
+void intHandler3();
+void intHandler4();
+void intHandler5();
+void intHandler6();
+void intHandler7();
 
 #include "C:\Users\mufasa\Documents\arduino-nightly\hardware\arduino\sam\variants\arduino_due_x\pins_arduino.h" 
 #include "C:\Users\mufasa\Documents\arduino-nightly\hardware\arduino\sam\variants\arduino_due_x\variant.h" 

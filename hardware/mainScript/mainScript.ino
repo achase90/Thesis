@@ -21,8 +21,7 @@
 boolean printSerialOut = false;
 boolean sdCardClosed = true;
 
-char filename[80]={
-  0};
+char filename[80]={0};
 File dataFile;
 boolean logData=false;
 unsigned long startTime;
@@ -49,8 +48,8 @@ DeviceAddress tempDeviceAddress; // temperature sensor device address
 
 char pressSN0[13] = "4F15-01-A213";
 char pressSN1[13] = "R10F30-04-A1";
-char pressSN2[13] = "R11L07-20-A5"; //not sure this serial number is correct
-char pressSN3[13] = "R11L07-20-A4"; //not sure this serial number is correct
+char pressSN2[13] = "R11L07-20-A5";
+char pressSN3[13] = "R11L07-20-A4";
 
 byte writeBuff[1028];
 uint16_t writeBuffLoc=0;
@@ -83,23 +82,12 @@ volatile unsigned long pwm7 = 0;
 
 void setup() {
   char msgID[6]="?????";
-  char *gpsStatus={
-    "?"                                }
-  ,*nsInd={
-    "?"                                }
-  ,*ewInd={
-    "?"                                }
-  ,*mode={
-    "?"                                };
+  char *gpsStatus={"?"},*nsInd={"?"},*ewInd={"?"},*mode={"?"};
   int32_t gpsLat=0,gpsLong=0,gpsSpd=0,gpsCrs=0;
-  uint32_t utcTime=0,date=0,CS={
-    0                                };
+  uint32_t utcTime=0,date=0,CS={0};
 
   Serial.begin(19200); //begin serial communication for debugging
   Serial.println("Serial port initialized.");
-  unsigned long now = millis();
-
-
 
   Serial.print("Data logging : ");
   if (logData)
@@ -125,8 +113,6 @@ void setup() {
   serialDeviceInit(Serial, pressureSerial, pressBaud,"pre"); //initialize pressure sensors on Serial3
   pressureSerial.setTimeout(50);
 #endif
-
-  unsigned long time=millis();
 
 #if (gpsInstalled)
   while (!gpsSerial.available()>0)
