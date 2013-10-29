@@ -9,12 +9,30 @@ void setup() {
 }
 
 void loop() {
-  char bytesIn[80] = {
-    0x00    };
+  char bytesIn[100] = {0x00};
   int nchars;
   if (Serial2.available()>0)
   {
-    if (Serial2.read() == '$')
+  //Serial.println("Was available");
+  unsigned long now = millis();
+  unsigned long timeOut = 1000;
+  int i=0;
+  while(true)
+	  {
+	  if (Serial2.available()>0)
+		  {
+			bytesIn[i] = Serial2.read();
+			if (bytesIn[i] == '\n')
+				break;
+			i++;
+	  }
+		}
+  Serial.write(bytesIn);
+ int csCalc =  getCheckSum(bytesIn);
+ Serial.println(csCalc,HEX);
+  //Serial.write(bytesIn);
+    }
+    /*if (Serial2.read() == '$')
     {
       char msgID[6]={0x00};
       uint32_t utcTime;
@@ -192,7 +210,20 @@ void loop() {
       {
         Serial2.read(); 
       }
-    }
-  }
+    }*/
 }
 
+// Calculates the checksum for a given string
+// returns as integer
+int getCheckSum(char *string) {
+int i;
+int XOR;
+int c;
+// Calculate checksum ignoring any $'s in the string
+for (XOR = 0, i = 0; i < strlen(string); i++) {
+c = (unsigned char)string[i];
+if (c == '*') break;
+if (c != '$') XOR ^= c;
+}
+return XOR;
+}

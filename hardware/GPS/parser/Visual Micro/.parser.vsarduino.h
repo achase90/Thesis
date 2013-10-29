@@ -40,6 +40,7 @@ extern "C" void __cxa_pure_virtual() {;}
 
 //
 //
+int getCheckSum(char *string);
 
 #include "C:\Users\mufasa\Documents\arduino-nightly\hardware\arduino\sam\variants\arduino_due_x\pins_arduino.h" 
 #include "C:\Users\mufasa\Documents\arduino-nightly\hardware\arduino\sam\variants\arduino_due_x\variant.h" 
