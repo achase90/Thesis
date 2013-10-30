@@ -387,8 +387,8 @@ void readGyroData(int16_t &gyroX,int16_t &gyroY,int16_t &gyroZ)
 void readAllPress (USARTClass &pressureSerial,char add0[], char add1[], char add2[], char add3[], int16_t *pressure)
 	{
 	pressureSerial.print("WC\r");
-	pressure[0] = readUniquePress(pressureSerial,add1);
-	pressure[1] = readUniquePress(pressureSerial,add2);
+	pressure[0] = readUniquePress(pressureSerial,add0);
+	pressure[1] = readUniquePress(pressureSerial,add1);
 	pressure[2] = readUniquePress(pressureSerial,add2);
 	pressure[3] = readUniquePress(pressureSerial,add3);
 	}
