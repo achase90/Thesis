@@ -8,6 +8,7 @@
 #include <OneWire.h>
 #include <DallasTemperature.h>
 
+#define profiling 1
 #define magInstalled 1
 #define gpsInstalled 1
 #define pressureInstalled 1
@@ -197,13 +198,10 @@ void loop() {
 
 	//start timer for tDiff data
 	unsigned long time = millis();
-
 	//read accel data
-	accel.readXYZTData(accelX,accelY,accelZ,accelT);
-
+	readAccelData(accelX,accelY,accelZ);
 	//read gyro data
 	readGyroData(gyroX,gyroY,gyroZ);
-
 	//read magnetometer data
 #if (magInstalled)
 	readMagnetometer(magSerial,magReading);
@@ -216,7 +214,7 @@ void loop() {
 
 	//read GPS
 #if (gpsInstalled)
-	if (gpsSerial.available()>0 && true)
+	if (gpsSerial.available()>0)
 		{
 		readGPS(gpsSerial,msgID,utcTime,&gpsStatus, gpsLat,&nsInd,gpsLong,&ewInd,gpsSpd,gpsCrs,date,&mode,CS);
 		}
@@ -234,6 +232,7 @@ void loop() {
 	//write to SD card
 	if (logData) //if we're storing data
 		{
+		unsigned long profile = micros();
 		if (writeBuffLoc + nBytesPerSample > sizeof(writeBuff)) //if there's not enough room in the buffer, right it to the card first
 			{
 			File dataFile = SD.open(filename,FILE_WRITE);
@@ -275,13 +274,32 @@ void loop() {
 		parseToBinUInt32(writeBuff,CS,writeBuffLoc);
 		parseToBinInt16(writeBuff,temperature,writeBuffLoc);
 		parseToBinUInt32(writeBuff,tDiff,writeBuffLoc);
+#if (profiling)
+		Serial.print("parsing into binary : ");
+		Serial.print(micros()-profile);
+		Serial.println(" usec");
+		profile = micros();
+#endif
 		}
 
 	else if(writeBuffLoc != 0) //we're not logging data, but theres data in the buffer. write it out to SD
 		{
+		unsigned long profile = micros();
 		dataFile = SD.open(filename,FILE_WRITE);
+#if (profiling)
+		Serial.print("opening SD : ");
+		Serial.print(micros()-profile);
+		Serial.println(" usec");
+		profile = micros();
+#endif
 		Serial.println(dataFile);
 		int bytesWritten = dataFile.write(writeBuff,writeBuffLoc);
+#if (profiling)
+		Serial.print("writing to SD : ");
+		Serial.print(micros()-profile);
+		Serial.println(" usec");
+		profile = micros();
+#endif
 		Serial.println();
 		if (bytesWritten>0)
 			{
@@ -357,6 +375,7 @@ void loop() {
 
 void readMagnetometer(USARTClass &magSerial,int16_t *magReading)
 	{
+	unsigned long profile = micros();
 	magSerial.print("*99P\r");
 	if (magSerial.available()>0)
 		{
@@ -369,10 +388,16 @@ void readMagnetometer(USARTClass &magSerial,int16_t *magReading)
 		magReading[1] = buff[3] + (buff[2] << 8);
 		magReading[2] = buff[5] + (buff[4]  << 8);
 		}
+	#if (profiling)
+		Serial.print("magnetometer : ");
+	Serial.print(micros()-profile);
+	Serial.println(" usec");
+#endif
 	}
 
 void readGyroData(int16_t &gyroX,int16_t &gyroY,int16_t &gyroZ)
 	{
+	unsigned long profile = micros();
 	if (gyro.isRawDataReady())
 		{
 		gyro.readGyroRaw(&gyroX,&gyroY,&gyroZ);
@@ -382,15 +407,61 @@ void readGyroData(int16_t &gyroX,int16_t &gyroY,int16_t &gyroZ)
 		gyroY = NAN;
 		gyroZ = NAN;
 		}
+#if (profiling)
+		Serial.print("gyro : ");
+	Serial.print(micros()-profile);
+	Serial.println(" usec");
+#endif
 	}
-
+void readAccelData(int16_t &accelX,int16_t &accelY,int16_t &accelZ)
+	{
+	unsigned long profile = micros();
+	int16_t accelT = 0;
+	accel.readXYZTData(accelX,accelY,accelZ,accelT);
+#if (profiling)
+		Serial.print("accel : ");
+	Serial.print(micros()-profile);
+	Serial.println(" usec");
+#endif
+	}
 void readAllPress (USARTClass &pressureSerial,char add0[], char add1[], char add2[], char add3[], int16_t *pressure)
 	{
 	pressureSerial.print("WC\r");
+#if (profiling)
+	unsigned long profile = micros();
+	Serial.print("writing to pressure : ");
+	Serial.print(micros()-profile);
+	Serial.println(" usec");
+	profile = micros();
+#endif
 	pressure[0] = readUniquePress(pressureSerial,add0);
+#if (profiling)
+	Serial.print("press0 : ");
+	Serial.print(micros()-profile);
+	Serial.println(" usec");
+	profile = micros();
+#endif
 	pressure[1] = readUniquePress(pressureSerial,add1);
+#if (profiling)
+	Serial.print("press1 : ");
+	Serial.print(micros()-profile);
+	Serial.println(" usec");
+	profile = micros();
+#endif
 	pressure[2] = readUniquePress(pressureSerial,add2);
+#if (profiling)
+	Serial.print("press2 : ");
+	Serial.print(micros()-profile);
+	Serial.println(" usec");
+	profile = micros();
+#endif
 	pressure[3] = readUniquePress(pressureSerial,add3);
+#if (profiling)
+	Serial.print("press3 : ");
+	Serial.print(micros()-profile);
+	Serial.println(" usec");
+	profile = micros();
+#endif
 	}
 
 int16_t readUniquePress(USARTClass &pressureSerial,char address[])
@@ -411,6 +482,8 @@ int16_t readUniquePress(USARTClass &pressureSerial,char address[])
 
 void readGPS(USARTClass &gpsSerial,char *msgID,uint32_t &utcTime,char **gpsStatus, int32_t &gpsLat,char **nsInd,int32_t &gpsLong,char **ewInd,int32_t &gpsSpd,int32_t &gpsCrs,uint32_t &date,char **mode,uint32_t &CS)
 	{
+	unsigned long profile = micros();
+
 	char bytesIn[200] = {0};
 	int csCalc;
 	int csSentHex;
@@ -436,7 +509,7 @@ void readGPS(USARTClass &gpsSerial,char *msgID,uint32_t &utcTime,char **gpsStatu
 				if (millis()-now>timeOut)
 					{
 					//Serial.println("timed out #1");
-				break;
+					break;
 					}
 				}
 			}
@@ -450,12 +523,12 @@ void readGPS(USARTClass &gpsSerial,char *msgID,uint32_t &utcTime,char **gpsStatu
 				if (bytesIn[i++] == '\n')
 					{
 					//Serial.println("found '\n'");
-				break;
+					break;
 					}
 				if (millis()-now>timeOut)
 					{
 					//Serial.println("timed out #2");
-				break;
+					break;
 					}
 				}
 			}
@@ -581,7 +654,13 @@ void readGPS(USARTClass &gpsSerial,char *msgID,uint32_t &utcTime,char **gpsStatu
 		while (gpsSerial.available()>0)
 			gpsSerial.read();
 		}
-	}
+#if (profiling)
+	Serial.print("writing to pressure : ");
+	Serial.print(micros()-profile);
+	Serial.println(" usec");
+	profile = micros();	
+#endif
+}
 
 void serialDeviceInit(UARTClass& mainSerial, USARTClass& deviceSerial, int deviceBaud,char ID[])
 	{

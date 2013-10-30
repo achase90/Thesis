@@ -42,6 +42,7 @@ extern "C" void __cxa_pure_virtual() {;}
 //
 void readMagnetometer(USARTClass &magSerial,int16_t *magReading);
 void readGyroData(int16_t &gyroX,int16_t &gyroY,int16_t &gyroZ);
+void readAccelData(int16_t &accelX,int16_t &accelY,int16_t &accelZ);
 void readAllPress (USARTClass &pressureSerial,char add0[], char add1[], char add2[], char add3[], int16_t *pressure);
 int16_t readUniquePress(USARTClass &pressureSerial,char address[]);
 void readGPS(USARTClass &gpsSerial,char *msgID,uint32_t &utcTime,char **gpsStatus, int32_t &gpsLat,char **nsInd,int32_t &gpsLong,char **ewInd,int32_t &gpsSpd,int32_t &gpsCrs,uint32_t &date,char **mode,uint32_t &CS);
