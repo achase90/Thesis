@@ -14,6 +14,11 @@ output.alpha.units = 'deg';
 output.beta.units = 'beta';
 
 %% Gyro
+% assume gyro is lined up with accelerometer
+
+% apply rotation matrix to gyro to line up readings with roll/pitch/yaw
+%about gravity
+
 output.gyroX.data = (input.gyroX.data-zeroOffSet)/14.375; %todo:everywhere you convert to real units use calibration data
 output.gyroY.data = (input.gyroY.data-zeroOffSet)/14.375;
 output.gyroZ.data = (input.gyroZ.data-zeroOffSet)/14.375;
@@ -24,6 +29,17 @@ output.accelY.data = 0.1*(input.accelY.data-zeroOffSet);
 output.accelZ.data = 0.1*(input.accelZ.data-zeroOffSet);
 
 %% Mag to Euler
+% calibrate magnetometer for hard iron and soft iron
+
+% with airplane sitting on ground, use rotation matrix to align magnetometer
+%with accelerometer.
+
+% assume gyro is lined up with accelerometer -> lined up with magnetometer
+
+% correlate gyro axes to magnetometer axes for kalman filter (is magX ==
+%gyroX?)
+
+%translate bits to angles
 for i=1:length(input.magX.data)
     output.ang1.data(i) = input.magX.data(i)/norm(double([input.magX.data(i) input.magY.data(i) input.magZ.data(i)]));
     output.ang2.data(i) = input.magY.data(i)/norm(double([input.magX.data(i) input.magY.data(i) input.magZ.data(i)]));
