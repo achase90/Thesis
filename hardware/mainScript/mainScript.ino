@@ -412,104 +412,174 @@ int16_t readUniquePress(USARTClass &pressureSerial,char address[])
 void readGPS(USARTClass &gpsSerial,char *msgID,uint32_t &utcTime,char **gpsStatus, int32_t &gpsLat,char **nsInd,int32_t &gpsLong,char **ewInd,int32_t &gpsSpd,int32_t &gpsCrs,uint32_t &date,char **mode,uint32_t &CS)
 	{
 	char bytesIn[200] = {0};
-	int nchars;
-	if (gpsSerial.available()>0)
+	int csCalc;
+	int csSentHex;
+
+
+	if (Serial2.available()>0)
 		{
-		if (gpsSerial.read() == '$') //if we received the first character of a legitimate gps message
+		//Serial.println("Was available");
+		unsigned long now = millis();
+		unsigned long timeOut = 500;
+		int i=0;
+		while(true) //read bytes until we get to a start byte or timeout
 			{
-			nchars = gpsSerial.readBytesUntil(0x0a,bytesIn,200); //read until the end of the message
-
-			//process gps string
-			char *s1=bytesIn; //copy to a new variable so we don't mess the data up;
-			char *pt; //create container to store separated variable into
-			pt = strsep(&s1,",*"); //pull of first delimted strings, based on either a , or a *
-
-			for (int j=0;j<5;j++) //we know it's the msg field, so parse it into characters so we can write binary
+			//Serial.println("in loop #1");
+			if (gpsSerial.available()>0)
 				{
-				msgID[j] = (char )pt[j];
-				}
-
-			int i=0; //variable for which section of delimited code we're in
-			while (pt = strsep( &s1,",*")) //loop over string, delimiting it as we go
-				{
-				//Serial.println(pt);
-				switch (i++)
+				//bytesIn[i] = gpsSerial.read();
+				if (gpsSerial.read() == '$')
 					{
-					case 0:
-						{
-						utcTime = 100*atof(pt);
-						break;
-						}
-					case 1:
-						{
-						*gpsStatus = pt;
-						break;
-						}
-					case 2:
-						{                    
-						gpsLat = 100000*atof(pt);
-						break;
-						}
-					case 3:
-						{                    
-						*nsInd = pt;
-						break;
-						}
-					case 4:
-						{                    
-						gpsLong = 100000*atof(pt);
-						break;
-						}
-					case 5:
-						{                    
-						* ewInd = pt;
-						break;
-						}
-					case 6:
-						{                    
-						gpsSpd = 1000*atof(pt);
-						break;
-						}
-					case 7:
-						{                    
-						gpsCrs = 1000*atof(pt);
-						break;
-						}
-					case 8:
-						{      
-						date = atoi(pt);
-						break;
-						}
-					case 9:
-						{                    
-						//magnetic variation, not available
-						break;
-						}
-					case 10:
-						{                    
-						//magnetic variation indicator, not available
-						break;
-						}
-					case 11:
-						{
-						*mode = pt;
-						break;
-						}
-					case 12:
-						{
-						CS = atoi(pt);
-						break;
-						}
+					//Serial.println("found '$'");
+					break;
+					}
+				if (millis()-now>timeOut)
+					{
+					//Serial.println("timed out #1");
+				break;
 					}
 				}
-
 			}
-
-		// if the character that was read was not the beginning of a message, then flush the rest of the data
-		while (gpsSerial.available()>0)
+		now = millis();
+		while(true) //read data until a stop byte or until timeout
 			{
+			//Serial.println("in loop #2");
+			if (gpsSerial.available()>0)
+				{
+				bytesIn[i] = gpsSerial.read();
+				if (bytesIn[i++] == '\n')
+					{
+					//Serial.println("found '\n'");
+				break;
+					}
+				if (millis()-now>timeOut)
+					{
+					//Serial.println("timed out #2");
+				break;
+					}
+				}
+			}
+		//if we've read a start
+		//byte through an end byte, or timed out twice, just
+		//flush everything on there and try again next time
+		now = millis();
+		while(gpsSerial.available()>0)
+			{
+			//Serial.println("in loop #3");
 			gpsSerial.read();
 			}
+
+		csCalc =  getCheckSum(bytesIn);
+		int j=i-4;
+		char csSent[3] = {0};
+		//Serial.println("Next char is bytesIn[j]");
+		for (int k=0;k<2;k++)
+			{
+			//Serial.println(bytesIn[j]);
+			csSent[k] = bytesIn[j++];
+			}
+		//Serial.println("next char is csSent");
+		//Serial.println(csSent);
+		csSentHex = strtol(csSent,NULL,HEX);
+		}
+	if (csSentHex == csCalc)
+		{
+		//process gps string
+		char *s1=bytesIn; //copy to a new variable so we don't mess the data up;
+		char *pt; //create container to store separated variable into
+		pt = strsep(&s1,",*"); //pull of first delimted strings, based on either a , or a *
+
+		for (int j=0;j<5;j++) //we know it's the msg field, so parse it into characters so we can write binary
+			{
+			msgID[j] = (char )pt[j];
+			}
+
+		int i=0; //variable for which section of delimited code we're in
+		while (pt = strsep( &s1,",*")) //loop over string, delimiting it as we go
+			{
+			//Serial.println(pt);
+			switch (i++)
+				{
+				case 0:
+					{
+					utcTime = 100*atof(pt);
+					break;
+					}
+				case 1:
+					{
+					*gpsStatus = pt;
+					break;
+					}
+				case 2:
+					{                    
+					gpsLat = 100000*atof(pt);
+					break;
+					}
+				case 3:
+					{                    
+					*nsInd = pt;
+					break;
+					}
+				case 4:
+					{                    
+					gpsLong = 100000*atof(pt);
+					break;
+					}
+				case 5:
+					{                    
+					* ewInd = pt;
+					break;
+					}
+				case 6:
+					{                    
+					gpsSpd = 1000*atof(pt);
+					break;
+					}
+				case 7:
+					{                    
+					gpsCrs = 1000*atof(pt);
+					break;
+					}
+				case 8:
+					{      
+					date = atoi(pt);
+					break;
+					}
+				case 9:
+					{                    
+					//magnetic variation, not available
+					break;
+					}
+				case 10:
+					{                    
+					//magnetic variation indicator, not available
+					break;
+					}
+				case 11:
+					{
+					*mode = pt;
+					break;
+					}
+				case 12:
+					{
+					CS = atoi(pt);
+					break;
+					}
+				}
+			}
+		}
+	// if the check sum wasn't correct, empty all data
+	else
+		{
+		//Serial.println("bad CS, flushing gps buffer");
+		//Serial.print("Calc-ed CS : ");
+		//Serial.println(csCalc);
+		//Serial.print("Calc-ed received CS : ");
+		//Serial.println(csSentHex);
+		//Serial.write(bytesIn);
+		//Serial.println();
+		while (gpsSerial.available()>0)
+			gpsSerial.read();
 		}
 	}
 
