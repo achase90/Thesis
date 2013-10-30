@@ -17,7 +17,7 @@
 
 #define serialBaud 19200
 #define magBaud 19200
-#define gpsBaud 57600
+#define gpsBaud 115200
 #define pressBaud 9600
 #define sdChipSelect 52
 #define pwmPin0 38
@@ -783,4 +783,18 @@ void intHandler7()
 		{
 		pwm7 = micros()-trig7;
 		}
+	}
+
+// Calculates the checksum for a given string returns as integer
+int getCheckSum(char *string) {
+	int i;
+	int XOR;
+	int c;
+	// Calculate checksum ignoring any $'s in the string
+	for (XOR = 0, i = 0; i < strlen(string); i++) {
+		c = (unsigned char)string[i];
+		if (c == '*') break;
+		if (c != '$') XOR ^= c;
+		}
+	return XOR;
 	}

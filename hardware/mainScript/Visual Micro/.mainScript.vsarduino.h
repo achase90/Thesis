@@ -59,6 +59,7 @@ void intHandler4();
 void intHandler5();
 void intHandler6();
 void intHandler7();
+int getCheckSum(char *string);
 
 #include "C:\Users\mufasa\Documents\arduino-nightly\hardware\arduino\sam\variants\arduino_due_x\pins_arduino.h" 
 #include "C:\Users\mufasa\Documents\arduino-nightly\hardware\arduino\sam\variants\arduino_due_x\variant.h" 
