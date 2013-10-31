@@ -189,33 +189,19 @@ function calcForces_Callback(hObject, eventdata, handles)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
 
-%% Noise settings
-noise.eulerAngles = .5; %deg
-noise.eulerRates = .0875; %deg/s
-noise.windAngles = .5; %deg
-noise.accel = .0483; %ft/s/s
-noise.qbar = .008; %psf
-noise.gravity = .01; %ft/s/s
-noise.W = 0.001;
-% % kalman filter euler angles
-% state = eulerKalman(state,noise);
-% % kalman filter wind angles
-% state = windKalman(state,noise);
-%
-% [cAero,fAero,cAeroBody]=plant(state,plane);
-%
-% CD = -cAero(:,1);
-% CY = -cAero(:,2);
-% CL = -cAero(:,3);
-% drag = -fAero(:,1);
-% side = -fAero(:,2);
-% lift = -fAero(:,3);
-handles.data.CD.data = zeros(size(handles.data.time.data));
-handles.data.CD.units = '-';
-handles.data.CL.data = zeros(size(handles.data.time.data));
-handles.data.CL.units = '-';
-handles.data.CY.data = zeros(size(handles.data.time.data));
-handles.data.CY.units = '-';
+%buildState - convert handles.data to handles.state and handles.plane
+[handles.state,handles.plane] = buildState(handles);
+% kalman filter euler angles
+handles.state = eulerKalman(handles.state,handles.noise); %todo:build noise matrix somehow
+% kalman filter wind angles
+handles.state = windKalman(state,noise);
+% pass to plant function
+[cAero,fAeroWind,cAeroBody]=plant(state,plane); %todo: modify plant function to input/output structures
+%todo: modify all plotting things to check whether we're using handles.data
+%or handles.state (based on "plantDataOnly" ) when plotting and outputting strip charts
+
+% update handles
+guidata(hObject,handles);
 
 % --- Executes on button press in quadFit.
 function quadFit_Callback(hObject, eventdata, handles)
