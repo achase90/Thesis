@@ -5,14 +5,13 @@ if ischar(handles.fileName) && ischar(handles.filePath)
         handles.fullFileSavePath = [filePathName fileSaveName];
         fid = fopen(handles.fullFileSavePath,'w');
 fn = fieldnames(handles.data);
-        for i=1:length(handles.data.(fn{1}).data)
-% it's fuck-this-shit-o-clock, deal with this later, and don't save files
-% for now.
+cellData = struct2cell(handles.data.(fn{1}));
+dn = fieldnames(handles.data.(fn{1}));
+        for i=1:length(handles.data.(fn{1}).(dn{1}).data)
 
-%             output = cellfun(@(x) x.data.(type)(i), cellData,'UniformOutput',false);
-%             fprintf(fid,'%u\t%i\t%i\t%i\t%i\t%i\t%i\t%i\t%i\t%i\t%i\t%i\t%i\t%i\t%c\t%c\t%c\t%c\t%c\t%u\t%c\t%d\t%c\t%d\t%c\t%d\t%d\t%u\t%c\t%u\t%d\t%u\t%u\n',output{:});
+            output = cellfun(@(x) x.data(i), cellData,'UniformOutput',false);
+            fprintf(fid,'%u\t%i\t%i\t%i\t%i\t%i\t%i\t%i\t%i\t%i\t%i\t%i\t%i\t%i\t%c\t%c\t%c\t%c\t%c\t%u\t%c\t%d\t%c\t%d\t%c\t%d\t%d\t%u\t%c\t%u\t%d\t%u\t%u\n',output{:});
         end
-warning('not saving files, because you''re a pussy that doesn''t want to deal with cellfuns of structfuns.');
         fclose(fid);
         
     end

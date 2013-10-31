@@ -106,16 +106,21 @@ if minLongInt == 60
     degLong = degLong+1;
     minLongInt = zeros(size(minLongInt));
 end
-if strcmpi(input.ewInd.data(1),'w') %assume we're not crossing prime meridian
-    output.gpsLong.data = dms2degrees([-degLong minLongInt secLong]);
-else
-    output.gpsLong.data = dms2degrees([degLong minLongInt secLong]);
-end
-
-if strcmpi(input.nsInd.data(1),'n')
-    output.gpsLat.data = dms2degrees([degLat minLatInt secLat]);
-else
-    output.gpsLat.data = dms2degrees([degLat minLatInt secLat]);
+if max(validGPS) %check if there's any valid gps data. if there is, use it
+    if strcmpi(input.ewInd.data(1),'w') %assume we're not crossing prime meridian
+        output.gpsLong.data = dms2degrees([-degLong minLongInt secLong]);
+    else
+        output.gpsLong.data = dms2degrees([degLong minLongInt secLong]);
+    end
+    
+    if strcmpi(input.nsInd.data(1),'n')
+        output.gpsLat.data = dms2degrees([degLat minLatInt secLat]);
+    else
+        output.gpsLat.data = dms2degrees([degLat minLatInt secLat]);
+    end
+else %if there isn't valid gps data, set gps equal to zero
+    output.gpsLat.data = zeros(size(input.gpsLat.data));
+    output.gpsLong.data = zeros(size(input.gpsLong.data));
 end
 
 % convert gps utcTime, gpsSpd and gpsCrs into real values

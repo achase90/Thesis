@@ -271,10 +271,11 @@ if ispc
     [kmlSaveName,kmlPathName] = uiputfile('.kml');
     if ischar(kmlSaveName) && ischar(kmlPathName) %check if the path actually got defined
         handles.kmlSavePath = [kmlPathName kmlSaveName];
-        kmlwrite(handles.kmlSavePath, handles.(type).gpsLat.data, handles.(Type).gpsLong.data);
+        kmlwrite(handles.kmlSavePath, handles.data.Units.gpsLat.data, handles.data.Units.gpsLong.data);
         try
             pathToGE = winqueryreg('HKEY_CURRENT_USER', 'SOFTWARE\Google\Google Earth Plus\', 'InstallLocation');
             status = system(['"' pathToGE 'client\googleearth.exe" "' handles.kmlSavePath '"']);
+            set(handles.outputText,'String','Google Earth launched.');
         catch
             set(handles.outputText,'String','Error finding Google Earth, not able to display GPS data.');
         end
