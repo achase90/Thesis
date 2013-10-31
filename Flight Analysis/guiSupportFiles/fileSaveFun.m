@@ -1,20 +1,18 @@
 function fileSaveFun(handles)
-if strcmp(class(handles.fileName),'char') && strcmp(class(handles.filePath),'char')
+if ischar(handles.fileName) && ischar(handles.filePath)
     [fileSaveName,filePathName] = uiputfile('.fdr');
-    if strcmp(class(fileSaveName),'char') && strcmp(class(filePathName),'char')
-        
+    if ischar(fileSaveName) && ischar(filePathName)
         handles.fullFileSavePath = [filePathName fileSaveName];
-        %todo:just use a struct fun. dumbass
-        cellData = struct2cell(handles.data);
         fid = fopen(handles.fullFileSavePath,'w');
-        for i=1:length(cellData{1,:}.data)
-            output = cellfun(@(x) x.data(i), cellData,'UniformOutput',false);
-            if i==29
-                keyboard
-            end
-            %todo:fix fields.
-            fprintf(fid,'%u\t%i\t%i\t%i\t%i\t%i\t%i\t%i\t%i\t%i\t%i\t%i\t%i\t%i\t%c\t%c\t%c\t%c\t%c\t%u\t%c\t%d\t%c\t%d\t%c\t%d\t%d\t%u\t%c\t%u\t%d\t%u\t%u\n',output{:});
+fn = fieldnames(handles.data);
+        for i=1:length(handles.data.(fn{1}).data)
+% it's fuck-this-shit-o-clock, deal with this later, and don't save files
+% for now.
+
+%             output = cellfun(@(x) x.data.(type)(i), cellData,'UniformOutput',false);
+%             fprintf(fid,'%u\t%i\t%i\t%i\t%i\t%i\t%i\t%i\t%i\t%i\t%i\t%i\t%i\t%i\t%c\t%c\t%c\t%c\t%c\t%u\t%c\t%d\t%c\t%d\t%c\t%d\t%d\t%u\t%c\t%u\t%d\t%u\t%u\n',output{:});
         end
+warning('not saving files, because you''re a pussy that doesn''t want to deal with cellfuns of structfuns.');
         fclose(fid);
         
     end

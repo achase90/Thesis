@@ -1,17 +1,19 @@
 function plotInGui(hObject,eventdata,handles)
+[type] = getDataType(handles);
 [xAxis,yAxis,xUnit,yUnit] = getAxisNames(handles);
-xIsNumeric = isnumeric(handles.data.(xAxis).data);
-yIsNumeric = isnumeric(handles.data.(yAxis).data);
+xIsNumeric = isnumeric(handles.data.(type).(xAxis).data);
+yIsNumeric = isnumeric(handles.data.(type).(yAxis).data);
 if xIsNumeric && yIsNumeric
-    if length(handles.data.(xAxis).data) ~= length(handles.data.(yAxis).data)
+    if length(handles.data.(type).(xAxis).data) ~= length(handles.data.(type).(yAxis).data)
         set(handles.outputText,'String',['Plot vectors must be the same length. HINT: GPS signals can only be plotted against other GPS signals.']);
     else
         %todo:switch to scatter (for some? strip charts are vs time, so
         %maybe all as scatters are fine)
         if get(handles.ignoreThrust,'Value'); %check if we're ignore data with thrust
-            plot(handles.dataAxis,handles.data.(xAxis).data(handles.data.hasThrust.data),handles.data.(yAxis).data(handles.data.hasThrust.data))            
+            TFHasThrust = handles.hasThrust;
+            plot(handles.dataAxis,handles.data.(type).(xAxis).data(TFHasThrust),handles.data.(type).(yAxis).data(TFHasThrust))            
         else
-            plot(handles.dataAxis,handles.data.(xAxis).data,handles.data.(yAxis).data)
+            plot(handles.dataAxis,handles.data.(type).(xAxis).data,handles.data.(type).(yAxis).data)
         end
         ylabel(handles.dataAxis,[yAxis ' [' yUnit ']']);
         xlabel(handles.dataAxis,[xAxis ' [' xUnit ']']);

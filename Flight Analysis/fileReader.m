@@ -22,7 +22,7 @@ function varargout = fileReader(varargin)
 
 % Edit the above text to modify the response to help fileReader
 
-% Last Modified by GUIDE v2.5 28-Oct-2013 12:43:00
+% Last Modified by GUIDE v2.5 30-Oct-2013 21:21:33
 
 % Begin initialization code - DO NOT EDIT
 gui_Singleton = 1;
@@ -53,8 +53,6 @@ function fileReader_OpeningFcn(hObject, eventdata, handles, varargin)
 
 % Choose default command line output for fileReader
 
-% set(get(handles.dataAxis,'children'),'Xdata',[]);
-% set(get(handles.dataAxis,'children'),'ydata',[]);
 addpath('plantFuns');
 addpath('guiSupportFiles');
 handles.output = hObject;
@@ -80,13 +78,6 @@ function varargout = fileReader_OutputFcn(hObject, eventdata, handles)
 % Get default command line output from handles structure
 varargout{1} = handles.output;
 
-% --- Executes on button press in fileSave.
-function fileSave_Callback(hObject, eventdata, handles)
-% hObject    handle to fileSave (see GCBO)
-% eventdata  reserved - to be defined in a future version of MATLAB
-% handles    structure with handles and user data (see GUIDATA)
-
-% guidata(hObject, handles);
 
 % --- Executes on button press in stripChartPlotSave.
 function stripChartPlotSave_Callback(hObject, eventdata, handles)
@@ -124,28 +115,29 @@ function loadData_Callback(hObject, eventdata, handles)
 
 [handles.fileName,handles.filePath] = uigetfile({'*.bin;*.fdr','All Data Files (*.bin,*.fdr)';'*.fdr','ASCII Data Files';'*.bin','Binary Data Files'},'Select data file to load.');
 if ischar(handles.fileName) && ischar(handles.filePath)
+
+    % read in file
+    [handles] = readInFile(handles);
     
-    handles.fullFilePath = [handles.filePath handles.fileName];
+    %convert raw data to data with units
+    [handles.data.Units] = convertUnits(handles.data.Raw);
+    rpmThreshold = 1000;
+    handles.hasThrust = handles.data.Units.rpm.data > rpmThreshold;
+    % units to state
+    [handles.data.State] = unitsToState(handles.data.Units);
     
-    binaryFile = isFileBinary(handles.fullFilePath);
-    if binaryFile
-        input = parseBinary(handles.fullFilePath);
-        [handles.data] = fileToStruct(input);
-        answer = questdlg('Save ASCII data file?');
-        if strcmpi(answer,'yes');
-            fileSaveFun(handles);
-        end
-    else
-        input = dlmread(filename, delimiter);
-        [handles.data] = fileToStruct(input);
-        answer = questdlg('Save ASCII data file?');
-        if strcmpi(answer,'yes');
-            fileSaveFun(handles);
-        end
-    end
-    [handles] = convertUnits(handles);
-    set(handles.xAxisVar,'String',fieldnames(handles.data));
-    set(handles.yAxisVar,'String',fieldnames(handles.data));
+    %filter data
+    [handles.data.Filtered] = filterData(handles.data.State);
+       
+    % set the data type options box to whatever we just called those
+    % structures
+    set(handles.plotDataType,'String',fieldnames(handles.data));
+
+    % set the data type options box to the first option
+    set(handles.plotDataType,'Value',1);
+    
+    % set the plot options box to contain the field names of that data type
+handles = updateAxesOptions(handles);
 end
 guidata(hObject, handles);
 
@@ -189,17 +181,37 @@ function calcForces_Callback(hObject, eventdata, handles)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
 
-%buildState - convert handles.data to handles.state and handles.plane
-[handles.state,handles.plane] = buildState(handles);
-% kalman filter euler angles
-handles.state = eulerKalman(handles.state,handles.noise); %todo:build noise matrix somehow
-% kalman filter wind angles
-handles.state = windKalman(state,noise);
 % pass to plant function
-[cAero,fAeroWind,cAeroBody]=plant(state,plane); %todo: modify plant function to input/output structures
-%todo: modify all plotting things to check whether we're using handles.data
-%or handles.state (based on "plantDataOnly" ) when plotting and outputting strip charts
+[type] = getDataType(handles);
 
+%todo: instead of outputting the coefficients, output a copy of the input
+%struct so it's available to plot
+if ~isfield(handles,'SRef')
+    set(handles.outputText,'String','Please define SRef before calculating forces.');
+elseif ~isfield(handles,'weight')
+    set(handles.outputText,'String','Please define Weight before calculating forces.');
+else
+    plane.W = handles.weight;
+    plane.SRef = handles.SRef;
+    if strcmpi(type,'filtered')
+        [handles.data.Filtered]=plant(handles.data.Filtered,plane); % only pass filtered data into the plant
+    set(handles.outputText,'String','Forces calculated. To plot, use drop-down menus.');
+
+handles = updateAxesOptions(handles);
+    elseif strcmpi(type,'state')
+        [handles.data.State]=plant(handles.data.State,plane); % only pass filtered data into the plant
+    set(handles.outputText,'String','Forces calculated. To plot, use drop-down menus.');
+handles = updateAxesOptions(handles);
+    else
+%todo: the data axes don't seem to be updating when you press this.
+        set(handles.outputText,'String','Setting "Data Type" to filtered and passing data to plant.');
+        set(handles.plotDataType,'Value',4); %todo: when this is up and working,figure out how to query which one is "Filtered" and pass that instead of "4"
+        [handles.data.Filtered]=plant(handles.data.Filtered,plane); % only pass filtered data into the plant
+handles = updateAxesOptions(handles);
+        set(handles.outputText,'String','Setting "Data Type" to filtered and passing data to plant. Forces calculated. To plot, use drop-down menus.');
+
+    end
+end
 % update handles
 guidata(hObject,handles);
 
@@ -232,7 +244,7 @@ function SRefBox_Callback(hObject, eventdata, handles)
 
 % Hints: get(hObject,'String') returns contents of SRefBox as text
 %        str2double(get(hObject,'String')) returns contsents of SRefBox as a double
-handles.sRef = sscanf(get(hObject,'string'),'%f');
+handles.SRef = sscanf(get(hObject,'string'),'%f');
 guidata(hObject, handles);
 
 
@@ -254,11 +266,12 @@ function plotGE_Callback(hObject, eventdata, handles)
 % handles    structure with handles and user data (see GUIDATA)
 
 if ispc
+    set(handles.outputText,'String','Starting Google Earth...');
     % handles    structure with handles and user data (see GUIDATA)
     [kmlSaveName,kmlPathName] = uiputfile('.kml');
     if ischar(kmlSaveName) && ischar(kmlPathName) %check if the path actually got defined
         handles.kmlSavePath = [kmlPathName kmlSaveName];
-        kmlwrite(handles.kmlSavePath, handles.data.gpsLat.data, handles.data.gpsLong.data);
+        kmlwrite(handles.kmlSavePath, handles.(type).gpsLat.data, handles.(Type).gpsLong.data);
         try
             pathToGE = winqueryreg('HKEY_CURRENT_USER', 'SOFTWARE\Google\Google Earth Plus\', 'InstallLocation');
             status = system(['"' pathToGE 'client\googleearth.exe" "' handles.kmlSavePath '"']);
@@ -271,10 +284,27 @@ else
 end
 
 
-% --- Executes on button press in plantDataOnly.
-function plantDataOnly_Callback(hObject, eventdata, handles)
-% hObject    handle to plantDataOnly (see GCBO)
+% --- Executes on selection change in plotDataType.
+function plotDataType_Callback(hObject, eventdata, handles)
+% hObject    handle to plotDataType (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
 
-% Hint: get(hObject,'Value') returns toggle state of plantDataOnly
+% Hints: contents = cellstr(get(hObject,'String')) returns plotDataType contents as cell array
+%        contents{get(hObject,'Value')} returns selected item from plotDataType
+
+%todo: make hitting this button update plot axes options, plots
+%themselves, and regressions
+handles = updateAxesOptions(handles);
+guidata(hObject,handles);
+% --- Executes during object creation, after setting all properties.
+function plotDataType_CreateFcn(hObject, eventdata, handles)
+% hObject    handle to plotDataType (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    empty - handles not created until after all CreateFcns called
+
+% Hint: popupmenu controls usually have a white background on Windows.
+%       See ISPC and COMPUTER.
+if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColor'))
+    set(hObject,'BackgroundColor','white');
+end

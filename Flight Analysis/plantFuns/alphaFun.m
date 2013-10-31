@@ -15,6 +15,8 @@ betaDot = (1/V)*(-ax*cos(alpha)*sin(beta) + ay*cos(beta)-az*sin(alpha)*sin(beta)
 A = [ deltaT*(p*cos(alpha) - (az*cos(alpha)*sin(beta) - ax*sin(alpha)*sin(beta))/V + r*sin(alpha)), 1 - (deltaT*(ay*sin(beta) + ax*cos(alpha)*cos(beta) + az*cos(beta)*sin(alpha)))/V;
      deltaT*(p*cos(alpha) - (az*cos(alpha)*sin(beta) - ax*sin(alpha)*sin(beta))/V + r*sin(alpha)), 1 - (deltaT*(ay*sin(beta) + ax*cos(alpha)*cos(beta) + az*cos(beta)*sin(alpha)))/V];
 
+A = double(A);
 
   x_ = [alpha + deltaT*(q - tan(beta)*(p*cos(alpha) + r*sin(alpha)) + (az*cos(alpha) - ax*sin(alpha))/(V*cos(beta)));
       beta - deltaT*(r*cos(alpha) - p*sin(alpha) + (ax*cos(alpha)*sin(beta) - ay*cos(beta) + az*sin(alpha)*sin(beta))/V)];
+x_ = double(x_);
