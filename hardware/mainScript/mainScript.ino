@@ -8,7 +8,7 @@
 #include <OneWire.h>
 #include <DallasTemperature.h>
 
-#define profiling 1
+#define profiling 0
 #define magInstalled 1
 #define gpsInstalled 1
 #define pressureInstalled 1
@@ -18,7 +18,7 @@
 
 #define serialBaud 19200
 #define magBaud 19200
-#define gpsBaud 115200
+#define gpsBaud 57600
 #define pressBaud 9600
 #define sdChipSelect 52
 #define pwmPin0 38
@@ -236,9 +236,12 @@ void loop() {
 		if (writeBuffLoc + nBytesPerSample > sizeof(writeBuff)) //if there's not enough room in the buffer, right it to the card first
 			{
 			File dataFile = SD.open(filename,FILE_WRITE);
-			dataFile.write(writeBuff,writeBuffLoc);
+			int bytesWritten = dataFile.write(writeBuff,writeBuffLoc);
 			Serial.println();
+			if (bytesWritten>0)
 			Serial.println("Data buffer written to SD card.");
+			else
+				Serial.println("Error : Data buffer NOT written to SD card.");
 			Serial.println();
 			dataFile.close();
 			writeBuffLoc = 0;
@@ -292,7 +295,6 @@ void loop() {
 		Serial.println(" usec");
 		profile = micros();
 #endif
-		Serial.println(dataFile);
 		int bytesWritten = dataFile.write(writeBuff,writeBuffLoc);
 #if (profiling)
 		Serial.print("writing to SD : ");
@@ -307,7 +309,7 @@ void loop() {
 			}
 		else
 			{
-			Serial.println("Data NOT written to SD card.");
+			Serial.println("ERROR : Data buffer NOT written to SD card.");
 			}
 		Serial.println();
 		dataFile.close();
