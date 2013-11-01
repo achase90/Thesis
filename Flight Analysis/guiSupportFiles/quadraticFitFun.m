@@ -17,12 +17,17 @@ function handles = quadraticFitFun(handles)
             yData = double(handles.data.(type).(yAxis).data);
             if get(handles.ignoreThrust,'Value')
                 hasThrust = handles.hasThrust;
+                if length(hasThrust(hasThrust == true))>2 %if there's enough data to fit a polynomial to
                 p1 = polyfit(xData(hasThrust),yData(hasThrust),2);
                 xVec = linspace(min(xData(hasThrust)),max(xData(hasThrust)));
+                else
+                    set(handles.outputText,'String','Not enough data to fit a parabola to. Please deselect "Ignore data with thrust".');
+                end
             else
                 p1 = polyfit(xData,yData,2);
                 xVec = linspace(min(xData),max(xData));
             end
+            if(exist('p1','var')) %check if we actually made the polynomial or if there wasn't enough data
             yVec = polyval(p1,xVec);
             axes(handles.dataAxis);
             hold on
@@ -32,5 +37,6 @@ function handles = quadraticFitFun(handles)
             %         xLimits = get(handles.dataAxis,'xlim');
             %         yLimits = get(handles.dataAxis,'ylim');
             set(handles.quadFormula,'String',regStr,'foregroundcolor',[1 1 1]);
+            end
         end
     end

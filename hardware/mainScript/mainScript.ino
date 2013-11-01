@@ -47,7 +47,7 @@ char pressSN3[13] = "4F15-01-A213";
 
 byte writeBuff[1028];
 uint16_t writeBuffLoc=0;
-const uint8_t nBytesPerSample = 31;
+const uint8_t nBytesPerSample = 31; //todo:check if this is correct
 
 // set up communication with sensors
 USARTClass &magSerial = Serial1;
@@ -277,6 +277,7 @@ void loop() {
 		parseToBinUInt32(writeBuff,CS,writeBuffLoc);
 		parseToBinInt16(writeBuff,temperature,writeBuffLoc);
 		parseToBinUInt32(writeBuff,tDiff,writeBuffLoc);
+		parseToBinUInt32(writeBuff,pwm7,writeBuffLoc);
 #if (profiling)
 		Serial.print("parsing into binary : ");
 		Serial.print(micros()-profile);
@@ -371,7 +372,9 @@ void loop() {
 		Serial.print('\t');
 		Serial.print(temperature);
 		Serial.print('\t');
-		Serial.println(tDiff);
+		Serial.print(tDiff);
+		Serial.print('\t');
+		Serial.println(pwm7);
 		}
 	}
 

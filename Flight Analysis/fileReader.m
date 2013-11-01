@@ -53,6 +53,7 @@ function fileReader_OpeningFcn(hObject, eventdata, handles, varargin)
 
 % Choose default command line output for fileReader
 
+%todo:update the regression when a new variable is selected
 addpath('plantFuns');
 addpath('guiSupportFiles');
 handles.output = hObject;
@@ -102,7 +103,7 @@ function xAxisVar_Callback(hObject, eventdata, handles)
 
 handles.xAxisDefined = true;
 if (handles.yAxisDefined)
-    plotInGui(hObject,eventdata,handles);
+    [handles] = plotInGui(hObject,eventdata,handles);
 end
 guidata(hObject, handles);
 
@@ -121,8 +122,10 @@ if ischar(handles.fileName) && ischar(handles.filePath)
     
     %convert raw data to data with units
     [handles.data.Units] = convertUnits(handles.data.Raw);
-    rpmThreshold = 1000;
-    handles.hasThrust = handles.data.Units.rpm.data > rpmThreshold;
+    
+    rpmThreshold = 1000;    
+    handles.hasThrust = handles.data.Units.rpmPwm.data > rpmThreshold;
+    
     % units to state
     [handles.data.State] = unitsToState(handles.data.Units);
     
@@ -153,7 +156,7 @@ function yAxisVar_Callback(hObject, eventdata, handles)
 
 handles.yAxisDefined = true;
 if (handles.xAxisDefined)
-    plotInGui(hObject,eventdata,handles);
+    [handles] = plotInGui(hObject,eventdata,handles);
 end
 guidata(hObject, handles);
 
@@ -166,7 +169,7 @@ function ignoreThrust_Callback(hObject, eventdata, handles)
 % Hint: get(hObject,'Value') returns toggle state of ignoreThrust
 %redraw plot
 if handles.yAxisDefined && handles.xAxisDefined
-    plotInGui(hObject,eventdata,handles)
+    handles = plotInGui(hObject,eventdata,handles);
 end
 %recalc reg
 % set(handles.quadFit,'Value',get(handles.quadFit

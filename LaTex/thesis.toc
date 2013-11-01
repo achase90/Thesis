@@ -45,5 +45,9 @@
 \contentsline {section}{\numberline {B.2}Flying Field Procedure}{45}{section.1.B.2}
 \contentsline {chapter}{\numberline {C}$C_{D_0}$ Flight Test Card}{46}{APPENDIX.1.C}
 \contentsline {chapter}{\numberline {D}$K_2$ Flight Test Card}{47}{APPENDIX.1.D}
-\contentsline {chapter}{\numberline {E}Sample System Ouputs}{48}{APPENDIX.1.E}
-\contentsline {chapter}{\numberline {F}Wiring Schematics}{58}{APPENDIX.1.F}
+\contentsline {chapter}{\numberline {E}Sample System Ouput}{48}{APPENDIX.1.E}
+\contentsline {section}{\numberline {E.1}Sample System Ouput - Raw Data}{48}{section.1.E.1}
+\contentsline {section}{\numberline {E.2}Sample System Ouput - Units Data}{51}{section.1.E.2}
+\contentsline {section}{\numberline {E.3}Sample System Ouput - State Data}{59}{section.1.E.3}
+\contentsline {section}{\numberline {E.4}Sample System Ouput - Filtered Data}{68}{section.1.E.4}
+\contentsline {chapter}{\numberline {F}Wiring Schematics}{77}{APPENDIX.1.F}
