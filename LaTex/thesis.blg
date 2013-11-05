@@ -2,6 +2,7 @@ This is BibTeX, Version 0.99d (TeX Live 2012/W32TeX)
 Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: thesis.aux
 A level-1 auxiliary file: intro.aux
+A level-1 auxiliary file: method.aux
 A level-1 auxiliary file: regression.aux
 A level-1 auxiliary file: error.aux
 A level-1 auxiliary file: simulation.aux
@@ -9,61 +10,72 @@ A level-1 auxiliary file: hardware.aux
 A level-1 auxiliary file: flightTest.aux
 A level-1 auxiliary file: results.aux
 A level-1 auxiliary file: summary.aux
-A level-1 auxiliary file: wiringSchematics.aux
+A level-1 auxiliary file: systemManual.aux
+A level-1 auxiliary file: flightTestDocs.aux
+A level-1 auxiliary file: cd0FlightTest.aux
+A level-1 auxiliary file: K2FlightTest.aux
+A level-1 auxiliary file: futureWork.aux
 The style file: unsrt.bst
 Database file #1: bibliography.bib
+Warning--entry type for "737wingTipVortices" isn't style-file defined
+--line 79 of file bibliography.bib
 Warning--entry type for "penguinRC" isn't style-file defined
---line 97 of file bibliography.bib
+--line 137 of file bibliography.bib
+Warning--entry type for "nedAxes" isn't style-file defined
+--line 375 of file bibliography.bib
+Warning--entry type for "hawkerThreeView" isn't style-file defined
+--line 397 of file bibliography.bib
 Warning--entry type for "ellipsoidFit" isn't style-file defined
---line 409 of file bibliography.bib
+--line 555 of file bibliography.bib
 Warning--entry type for "ubloxDemo" isn't style-file defined
---line 673 of file bibliography.bib
+--line 837 of file bibliography.bib
 Warning--empty journal in stevens2003aircraft
 Warning--empty institution in adxl362DataSheet
 Warning--empty year in U-Line
 Warning--empty year in hmc5883LDatasheet
 Warning--empty institution in itg3200DataSheet
 Warning--empty year in allsensorsDDO
+Warning--empty year in pressureStandard
 Warning--empty year in allSensorsBaroDatasheet
-You've used 27 entries,
+You've used 34 entries,
             1791 wiz_defined-function locations,
-            585 strings with 6340 characters,
-and the built_in function-call counts, 3748 in all, are:
-= -- 338
-> -- 128
-< -- 3
-+ -- 59
-- -- 32
-* -- 123
-:= -- 680
-add.period$ -- 79
-call.type$ -- 27
-change.case$ -- 36
+            628 strings with 7138 characters,
+and the built_in function-call counts, 4928 in all, are:
+= -- 448
+> -- 160
+< -- 5
++ -- 74
+- -- 40
+* -- 169
+:= -- 862
+add.period$ -- 101
+call.type$ -- 34
+change.case$ -- 45
 chr.to.int$ -- 0
-cite$ -- 34
-duplicate$ -- 187
-empty$ -- 397
-format.name$ -- 32
-if$ -- 819
+cite$ -- 42
+duplicate$ -- 244
+empty$ -- 538
+format.name$ -- 40
+if$ -- 1096
 int.to.chr$ -- 0
-int.to.str$ -- 27
-missing$ -- 9
-newline$ -- 136
-num.names$ -- 27
-pop$ -- 92
+int.to.str$ -- 34
+missing$ -- 13
+newline$ -- 171
+num.names$ -- 34
+pop$ -- 126
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 61
+skip$ -- 85
 stack$ -- 0
-substring$ -- 50
-swap$ -- 20
-text.length$ -- 3
+substring$ -- 88
+swap$ -- 31
+text.length$ -- 5
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
-warning$ -- 7
-while$ -- 32
-width$ -- 29
-write$ -- 280
-(There were 10 warnings)
+warning$ -- 8
+while$ -- 44
+width$ -- 36
+write$ -- 354
+(There were 14 warnings)

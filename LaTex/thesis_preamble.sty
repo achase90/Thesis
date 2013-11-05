@@ -2,6 +2,7 @@
 % Page Formatting
 %=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 \usepackage[letterpaper]{geometry}
+\usepackage{morefloats}
 \usepackage[overload]{textcase} 						%required for ucthesis
 \usepackage[protrusion=true,expansion=true]{microtype} 	%cleaner typography
 \usepackage[pdftex,
@@ -25,7 +26,7 @@
 %    \begin{adjustwidth}{-1in}{-1in}    % adjust the L and R margins by 1 inch
 
 \pdfinfo {
-	/Title (Flight Testing Small UAVs for Drag Polar Estimation)
+	/Title (Flight Testing Small UAVs for Aerodynamic Parameter Estimation)
 	/Author (Adam Chase)
 	/CreationDate (D:20130901000000) %D:YYYYMMDDHHmmss
 	/Subject (Unmanned Aircraft Flight Testing)
@@ -37,7 +38,7 @@
 % Front Matter
 %=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 \usepackage{thesis_nomenclature} 							%write18 executable on run
-\renewcommand{\contentsname}{Table of Contents} 			%TOC name
+\renewcommand{\contentsname}{TABLE OF CONTENTS} 			%TOC name
 \setcounter{tocdepth}{3}									%TOC depth, {3} = subsubsection
 \setcounter{secnumdepth}{4}									%5 makes \paragraph subsubsubsec
 
@@ -66,8 +67,8 @@
 % Titles
 %=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 \usepackage[compact]{titlesec}
-\titleformat{\chapter}[display]
-{\normalfont\fontsize{20}{14}\bfseries}{\chaptertitlename\ \thechapter}{1em}{} 
+\titleformat{\chapter}
+{\normalfont\fontsize{12}{12}}{\chaptertitlename\ \thechapter}{1em}{} 
 %\titleformat{\section}
 %{\normalfont\large\bfseries}{\thesection}{1em}{}
 %\titleformat{\subsection}
@@ -78,13 +79,21 @@
 %{\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
 %\titleformat{\subparagraph}[runin]
 %{\normalfont\normalsize\bfseries}{\thesubparagraph}{1em}{}
-\titlespacing*{\chapter} {0pt}{30pt}{20pt}
+% % % % % %\titlespacing*{\chapter} {0pt}{12pt}{20pt}
 %\titlespacing*{\section} {0pt}{3.5ex plus 1ex minus .2ex}{2.3ex plus .2ex}
 %\titlespacing*{\subsection} {0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
 %\titlespacing*{\subsubsection}{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
 %\titlespacing*{\paragraph} {0pt}{3.25ex plus 1ex minus .2ex}{1em}
 %\titlespacing*{\subparagraph} {\parindent}{3.25ex plus 1ex minus .2ex}{1em}
+\titleformat{\chapter}{\normalfont\normalsize\bfseries}{\c@chapter\thechapter}{1em}{}
 
+\titlespacing{\chapter}{0pt}{3.5ex plus 1ex minus .2ex}{2.3 ex plus .2ex}
+
+\titleformat{\section}{\normalfont\normalsize\bfseries}{\thesection}{1em}{}
+\titlespacing{\section}{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+
+\titleformat{\subsection}{\normalfont\normalsize\bfseries}{\thesubsection}{1em}{}
+\titlespacing{\subsection}{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
 %=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 % Floats: Captions
 %=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=

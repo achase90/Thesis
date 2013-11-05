@@ -1,6 +1,6 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/W32TeX) (format=pdflatex 2013.6.1)  30 AUG 2013 09:22
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/W32TeX) (format=pdflatex 2013.6.1)  31 OCT 2013 18:30
 entering extended mode
- restricted \write18 enabled.
+ \write18 enabled.
  %&-line parsing enabled.
 **thesis.tex
 (./thesis.tex
@@ -64,6 +64,57 @@ Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 \Gm@layoutvoffset=\dimen110
 \Gm@dimlist=\toks15
 )
+(c:/texlive/2012/texmf-dist/tex/latex/morefloats/morefloats.sty
+Package: morefloats 2012/01/28 v1.0f Raise limit of unprocessed floats (HMM; DH
+)
+
+(c:/texlive/2012/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
+
+(c:/texlive/2012/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
+)
+(c:/texlive/2012/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
+Package: kvsetkeys 2012/04/25 v1.16 Key value parser (HO)
+
+(c:/texlive/2012/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
+)
+(c:/texlive/2012/texmf-dist/tex/generic/oberdiek/etexcmds.sty
+Package: etexcmds 2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
+
+(c:/texlive/2012/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+)))
+Package morefloats Info: Maximum number of possible floats asked for: 36.
+(morefloats)             LaTeX might run out of memory before this
+(morefloats)             (in which case it will notify you).
+(morefloats)              on input line 171.
+\bx@S=\insert233
+\bx@T=\insert232
+\bx@U=\insert231
+\bx@V=\insert230
+\bx@W=\insert229
+\bx@X=\insert228
+\bx@Y=\insert227
+\bx@Z=\insert226
+\bx@AA=\insert225
+\bx@AB=\insert224
+\bx@AC=\insert223
+\bx@AD=\insert222
+\bx@AE=\insert221
+\bx@AF=\insert220
+\bx@AG=\insert219
+\bx@AH=\insert218
+\bx@AI=\insert217
+\bx@AJ=\insert216
+)
 (c:/texlive/2012/texmf-dist/tex/latex/textcase/textcase.sty
 Package: textcase 2004/10/07 v0.07 Text only upper/lower case changing (DPC)
 )
@@ -92,19 +143,14 @@ Package: hobsub-hyperref 2012/05/28 v1.13 Bundle oberdiek, subset hyperref (HO)
 (c:/texlive/2012/texmf-dist/tex/generic/oberdiek/hobsub-generic.sty
 Package: hobsub-generic 2012/05/28 v1.13 Bundle oberdiek, subset generic (HO)
 Package: hobsub 2012/05/28 v1.13 Construct package bundles (HO)
-Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
-Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
-Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
-Package ifluatex Info: LuaTeX not detected.
+Package hobsub Info: Skipping package `infwarerr' (already loaded).
+Package hobsub Info: Skipping package `ltxcmds' (already loaded).
+Package hobsub Info: Skipping package `ifluatex' (already loaded).
 Package hobsub Info: Skipping package `ifvtex' (already loaded).
 Package: intcalc 2007/09/27 v1.1 Expandable calculations with integers (HO)
 Package hobsub Info: Skipping package `ifpdf' (already loaded).
-Package: etexcmds 2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
-Package etexcmds Info: Could not find \expanded.
-(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
-(etexcmds)             that some package has redefined \expanded.
-(etexcmds)             In the latter case, load this package earlier.
-Package: kvsetkeys 2012/04/25 v1.16 Key value parser (HO)
+Package hobsub Info: Skipping package `etexcmds' (already loaded).
+Package hobsub Info: Skipping package `kvsetkeys' (already loaded).
 Package: kvdefinekeys 2011/04/07 v1.3 Define keys (HO)
 Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
 )
@@ -127,9 +173,6 @@ Package atveryend Info: \enddocument detected (standard20110627).
 Package: atbegshi 2011/10/05 v1.16 At begin shipout hook (HO)
 Package: refcount 2011/10/16 v3.4 Data extraction from label references (HO)
 Package: hycolor 2011/01/30 v1.7 Color options for hyperref/bookmark (HO)
-)
-(c:/texlive/2012/texmf-dist/tex/latex/oberdiek/kvoptions.sty
-Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
 )
 \@linkdim=\dimen112
 \Hy@linkcounter=\count92
@@ -232,8 +275,7 @@ Package: nomencl 2005/09/22 v4.2 Nomenclature package (LN)
 (c:/texlive/2012/texmf-dist/tex/latex/base/ifthen.sty
 Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
 )
-runsystem(makeindex thesis.nlo -s nomencl.ist -o thesis.nls)...executed safely 
-(allowed).
+runsystem(makeindex thesis.nlo -s nomencl.ist -o thesis.nls)...executed.
 
 \@nomenclaturefile=\write3
 \openout3 = `thesis.nlo'.
@@ -635,33 +677,33 @@ Package: l3fp 2012/03/04 v3490 L3 Experimental floating-point operations
 \l_fp_input_b_exponent_int=\count181
 \l_fp_input_a_extended_int=\count182
 \l_fp_input_b_extended_int=\count183
-\l_fp_mul_a_i_int=\count184
-\l_fp_mul_a_ii_int=\count185
-\l_fp_mul_a_iii_int=\count186
-\l_fp_mul_a_iv_int=\count187
-\l_fp_mul_a_v_int=\count188
-\l_fp_mul_a_vi_int=\count189
-\l_fp_mul_b_i_int=\count190
-\l_fp_mul_b_ii_int=\count191
-\l_fp_mul_b_iii_int=\count192
-\l_fp_mul_b_iv_int=\count193
-\l_fp_mul_b_v_int=\count194
-\l_fp_mul_b_vi_int=\count195
-\l_fp_mul_output_int=\count196
-\l_fp_output_sign_int=\count197
-\l_fp_output_integer_int=\count198
-\l_fp_output_decimal_int=\count199
-\l_fp_output_exponent_int=\count200
-\l_fp_output_extended_int=\count201
 Normal \count register pool exhausted, switching to extended pool.
-\l_fp_round_position_int=\count277
-\l_fp_round_target_int=\count278
-\l_fp_split_sign_int=\count279
-\l_fp_internal_int=\count280
-\l_fp_trig_octant_int=\count281
-\l_fp_trig_sign_int=\count282
-\l_fp_trig_decimal_int=\count283
-\l_fp_trig_extended_int=\count284
+\l_fp_mul_a_i_int=\count277
+\l_fp_mul_a_ii_int=\count278
+\l_fp_mul_a_iii_int=\count279
+\l_fp_mul_a_iv_int=\count280
+\l_fp_mul_a_v_int=\count281
+\l_fp_mul_a_vi_int=\count282
+\l_fp_mul_b_i_int=\count283
+\l_fp_mul_b_ii_int=\count284
+\l_fp_mul_b_iii_int=\count285
+\l_fp_mul_b_iv_int=\count286
+\l_fp_mul_b_v_int=\count287
+\l_fp_mul_b_vi_int=\count288
+\l_fp_mul_output_int=\count289
+\l_fp_output_sign_int=\count290
+\l_fp_output_integer_int=\count291
+\l_fp_output_decimal_int=\count292
+\l_fp_output_exponent_int=\count293
+\l_fp_output_extended_int=\count294
+\l_fp_round_position_int=\count295
+\l_fp_round_target_int=\count296
+\l_fp_split_sign_int=\count297
+\l_fp_internal_int=\count298
+\l_fp_trig_octant_int=\count299
+\l_fp_trig_sign_int=\count300
+\l_fp_trig_decimal_int=\count301
+\l_fp_trig_extended_int=\count302
 \l_fp_internal_dim=\dimen173
 \l_fp_internal_skip=\skip71
 )
@@ -683,53 +725,53 @@ Package: l3coffins 2012/03/03 v3482 L3 Experimental coffin code layer
 \l_coffin_internal_box=\box39
 \l_coffin_internal_dim=\dimen182
 \l_coffin_offset_x_dim=\dimen183
-\l_coffin_offset_y_dim=\dimen184
-\l_coffin_x_dim=\dimen185
-\l_coffin_y_dim=\dimen186
-\l_coffin_x_prime_dim=\dimen187
-\l_coffin_y_prime_dim=\dimen188
-\l_coffin_Depth_dim=\dimen189
-\l_coffin_Height_dim=\dimen190
-\l_coffin_TotalHeight_dim=\dimen191
-\l_coffin_Width_dim=\dimen192
+Normal \dimen register pool exhausted, switching to extended pool.
+\l_coffin_offset_y_dim=\dimen256
+\l_coffin_x_dim=\dimen257
+\l_coffin_y_dim=\dimen258
+\l_coffin_x_prime_dim=\dimen259
+\l_coffin_y_prime_dim=\dimen260
+\l_coffin_Depth_dim=\dimen261
+\l_coffin_Height_dim=\dimen262
+\l_coffin_TotalHeight_dim=\dimen263
+\l_coffin_Width_dim=\dimen264
 \c_empty_coffin=\box40
 \l_coffin_aligned_coffin=\box41
 \l_coffin_aligned_internal_coffin=\box42
-\l_coffin_bounding_shift_dim=\dimen193
-\l_coffin_left_corner_dim=\dimen194
-\l_coffin_right_corner_dim=\dimen195
-\l_coffin_bottom_corner_dim=\dimen196
-\l_coffin_top_corner_dim=\dimen197
-\l_coffin_scaled_total_height_dim=\dimen198
-\l_coffin_scaled_width_dim=\dimen199
+\l_coffin_bounding_shift_dim=\dimen265
+\l_coffin_left_corner_dim=\dimen266
+\l_coffin_right_corner_dim=\dimen267
+\l_coffin_bottom_corner_dim=\dimen268
+\l_coffin_top_corner_dim=\dimen269
+\l_coffin_scaled_total_height_dim=\dimen270
+\l_coffin_scaled_width_dim=\dimen271
 \l_coffin_display_coffin=\box43
 \l_coffin_display_coord_coffin=\box44
 \l_coffin_display_pole_coffin=\box45
-\l_coffin_display_offset_dim=\dimen200
-\l_coffin_display_x_dim=\dimen201
-Normal \dimen register pool exhausted, switching to extended pool.
-\l_coffin_display_y_dim=\dimen256
+\l_coffin_display_offset_dim=\dimen272
+\l_coffin_display_x_dim=\dimen273
+\l_coffin_display_y_dim=\dimen274
 )
 (c:/texlive/2012/texmf-dist/tex/latex/l3kernel/l3color.sty
 Package: l3color 2011/09/07 v2776 L3 Experimental colour support
 )
 (c:/texlive/2012/texmf-dist/tex/latex/l3kernel/l3luatex.sty
 Package: l3luatex 2012/02/09 v3355 L3 Experimental LuaTeX-specific functions
-\g_cctab_allocate_int=\count285
-\g_cctab_stack_int=\count286
+\g_cctab_allocate_int=\count303
+\g_cctab_stack_int=\count304
 ))
 Package: xparse 2012/04/23 v3570 L3 Experimental document command parser
-\l_xparse_current_arg_int=\count287
-\l_xparse_m_args_int=\count288
-\l_xparse_mandatory_args_int=\count289
-\l_xparse_processor_int=\count290
-\l_xparse_v_nesting_int=\count291
+\l_xparse_current_arg_int=\count305
+\l_xparse_m_args_int=\count306
+\l_xparse_mandatory_args_int=\count307
+\l_xparse_processor_int=\count308
+\l_xparse_v_nesting_int=\count309
 )
 (./thesis_commands.sty
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining document command \manref with arg. spec. ' m m o ' on line 34.
+. Defining document command \manref with arg. spec. ' m m o ' on line 35.
 .................................................
 ) (c:/texlive/2012/texmf-dist/tex/latex/amscls/amsthm.sty
 Package: amsthm 2009/07/02 v2.20.1
@@ -743,24 +785,24 @@ Package: amsthm 2009/07/02 v2.20.1
 \thm@headsep=\skip74
 \dth@everypar=\toks37
 )
-\c@ass=\count292
-\c@defn=\count293
-\c@eg=\count294
-\c@thm=\count295
-\c@cor=\count296
-\c@lem=\count297
+\c@ass=\count310
+\c@defn=\count311
+\c@eg=\count312
+\c@thm=\count313
+\c@cor=\count314
+\c@lem=\count315
  (c:/texlive/2012/texmf-dist/tex/latex/appendix/appendix.sty
 Package: appendix 2009/09/02 v1.2b extra appendix facilities
-\c@@pps=\count298
-\c@@ppsavesec=\count299
-\c@@ppsaveapp=\count300
+\c@@pps=\count316
+\c@@ppsavesec=\count317
+\c@@ppsaveapp=\count318
 )
 (c:/texlive/2012/texmf-dist/tex/latex/natbib/natbib.sty
 Package: natbib 2010/09/13 8.31b (PWD, AO)
 \bibhang=\skip75
 \bibsep=\skip76
 LaTeX Info: Redefining \cite on input line 694.
-\c@NAT@ctr=\count301
+\c@NAT@ctr=\count319
 ))
 (c:/texlive/2012/texmf-dist/tex/latex/tools/verbatim.sty
 Package: verbatim 2003/08/22 v1.5q LaTeX2e package for verbatim enhancements
@@ -769,23 +811,23 @@ Package: verbatim 2003/08/22 v1.5q LaTeX2e package for verbatim enhancements
 \verbatim@in@stream=\read2
 )
 (c:/texlive/2012/texmf-dist/tex/latex/listings/listings.sty
-\lst@mode=\count302
+\lst@mode=\count320
 \lst@gtempboxa=\box46
 \lst@token=\toks40
-\lst@length=\count303
-\lst@currlwidth=\dimen257
-\lst@column=\count304
-\lst@pos=\count305
-\lst@lostspace=\dimen258
-\lst@width=\dimen259
-\lst@newlines=\count306
-\lst@lineno=\count307
-\lst@maxwidth=\dimen260
+\lst@length=\count321
+\lst@currlwidth=\dimen275
+\lst@column=\count322
+\lst@pos=\count323
+\lst@lostspace=\dimen276
+\lst@width=\dimen277
+\lst@newlines=\count324
+\lst@lineno=\count325
+\lst@maxwidth=\dimen278
 
 (c:/texlive/2012/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2007/02/22 1.4 (Carsten Heinz)
-\c@lstnumber=\count308
-\lst@skipnumbers=\count309
+\c@lstnumber=\count326
+\lst@skipnumbers=\count327
 \lst@framebox=\box47
 )
 (c:/texlive/2012/texmf-dist/tex/latex/listings/listings.cfg
@@ -793,25 +835,27 @@ File: listings.cfg 2007/02/22 1.4 listings configuration
 ))
 Package: listings 2007/02/22 1.4 (Carsten Heinz)
  (./thesis.aux
-(./intro.aux) (./regression.aux) (./error.aux) (./simulation.aux)
-(./hardware.aux) (./flightTest.aux) (./results.aux) (./summary.aux)
-(./wiringSchematics.aux))
+(./intro.aux) (./method.aux) (./regression.aux) (./error.aux) (./simulation.aux
+) (./hardware.aux) (./flightTest.aux) (./results.aux) (./summary.aux)
+(./systemManual.aux) (./flightTestDocs.aux) (./cd0FlightTest.aux)
+(./K2FlightTest.aux) (./dataGraphs.aux) (./wiringSchematics.aux)
+(./futureWork.aux))
 \openout1 = `thesis.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 34.
-LaTeX Font Info:    ... okay on input line 34.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 34.
-LaTeX Font Info:    ... okay on input line 34.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 34.
-LaTeX Font Info:    ... okay on input line 34.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 34.
-LaTeX Font Info:    ... okay on input line 34.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 34.
-LaTeX Font Info:    ... okay on input line 34.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 34.
-LaTeX Font Info:    ... okay on input line 34.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 34.
-LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 43.
+LaTeX Font Info:    ... okay on input line 43.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 43.
+LaTeX Font Info:    ... okay on input line 43.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 43.
+LaTeX Font Info:    ... okay on input line 43.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 43.
+LaTeX Font Info:    ... okay on input line 43.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 43.
+LaTeX Font Info:    ... okay on input line 43.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 43.
+LaTeX Font Info:    ... okay on input line 43.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 43.
+LaTeX Font Info:    ... okay on input line 43.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -847,7 +891,7 @@ LaTeX Font Info:    ... okay on input line 34.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-LaTeX Info: Redefining \microtypecontext on input line 34.
+LaTeX Info: Redefining \microtypecontext on input line 43.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
@@ -862,7 +906,7 @@ File: mt-cmr.cfg 2009/11/09 v2.0 microtype config. file: Computer Modern Roman
 (RS)
 )
 \AtBeginShipoutBox=\box48
-Package hyperref Info: Link coloring ON on input line 34.
+Package hyperref Info: Link coloring ON on input line 43.
 
 (c:/texlive/2012/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2010/04/30 v2.40 Cross-referencing by name of section
@@ -870,11 +914,11 @@ Package: nameref 2010/04/30 v2.40 Cross-referencing by name of section
 (c:/texlive/2012/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
-\c@section@level=\count310
+\c@section@level=\count328
 )
-LaTeX Info: Redefining \ref on input line 34.
-LaTeX Info: Redefining \pageref on input line 34.
-LaTeX Info: Redefining \nameref on input line 34.
+LaTeX Info: Redefining \ref on input line 43.
+LaTeX Info: Redefining \pageref on input line 43.
+LaTeX Info: Redefining \nameref on input line 43.
 
 (./thesis.out) (./thesis.out)
 \@outlinefile=\write4
@@ -883,16 +927,16 @@ LaTeX Info: Redefining \nameref on input line 34.
 
 (c:/texlive/2012/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count311
-\scratchdimen=\dimen261
+\scratchcounter=\count329
+\scratchdimen=\dimen279
 \scratchbox=\box49
-\nofMPsegments=\count312
-\nofMParguments=\count313
+\nofMPsegments=\count330
+\nofMParguments=\count331
 \everyMPshowfont=\toks41
-\MPscratchCnt=\count314
-\MPscratchDim=\dimen262
-\MPnumerator=\count315
-\makeMPintoPDFobject=\count316
+\MPscratchCnt=\count332
+\MPscratchDim=\dimen280
+\MPnumerator=\count333
+\makeMPintoPDFobject=\count334
 \everyMPtoPDFconversion=\toks42
 ) (c:/texlive/2012/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
@@ -913,24 +957,24 @@ Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: subfig package v1.3 is loaded.
 Package caption Info: listings package is loaded.
 Package caption Info: End \AtBeginDocument code.
-\c@lstlisting=\count317
+\c@lstlisting=\count335
  [1
 
 {c:/texlive/2012/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-<cp_logo.pdf, id=162, 1055.62177pt x 1037.44203pt>
+<cp_logo.pdf, id=227, 1055.62177pt x 1037.44203pt>
 File: cp_logo.pdf Graphic file (type pdf)
  <use cp_logo.pdf>
-Package pdftex.def Info: cp_logo.pdf used on input line 40.
+Package pdftex.def Info: cp_logo.pdf used on input line 49.
 (pdftex.def)             Requested size: 294.1385pt x 289.07999pt.
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 40.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 49.
 
 (c:/texlive/2012/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 40.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 49.
  [2 <./cp_logo.pdf>]
-LaTeX Font Info:    Try loading font information for U+msa on input line 42.
+LaTeX Font Info:    Try loading font information for U+msa on input line 51.
 
 (c:/texlive/2012/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2009/06/22 v3.00 AMS symbols A
@@ -938,7 +982,7 @@ File: umsa.fd 2009/06/22 v3.00 AMS symbols A
 (c:/texlive/2012/texmf-dist/tex/latex/microtype/mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 42.
+LaTeX Font Info:    Try loading font information for U+msb on input line 51.
 
 (c:/texlive/2012/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2009/06/22 v3.00 AMS symbols B
@@ -946,10 +990,6 @@ File: umsb.fd 2009/06/22 v3.00 AMS symbols B
 (c:/texlive/2012/texmf-dist/tex/latex/microtype/mt-msb.cfg
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 ) [3] [4] [5]
-
-LaTeX Font Warning: Font shape `OT1/cmr/bx/n' in size <20> not available
-(Font)              size <20.74> substituted on input line 58.
-
 (./thesis.toc [6
 
 ])
@@ -962,53 +1002,253 @@ LaTeX Font Warning: Font shape `OT1/cmr/bx/n' in size <20> not available
 
  [8
 
-] (./thesis.lof)
+] (./thesis.lof [9
+
+] [10] [11])
 \tf@lof=\write7
 \openout7 = `thesis.lof'.
 
- [9
-
-]
+ [12]
 \openout2 = `intro.aux'.
 
- (./intro.tex
+
+(./intro.tex
 Chapter 1.
-pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
-been already used, duplicate ignored
+)pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
+ been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.11 
-      [1
+l.86 \include{intro}
+                     [1
 
 
 ] [2]
+\openout2 = `method.aux'.
+
+ (./method.tex
 Chapter 2.
 [3
 
-] [4]
-Underfull \hbox (badness 10000) in paragraph at lines 71--73
+
+
+]
+Package epstopdf Info: Source file: <figures/nedAxes.eps>
+(epstopdf)                    date: 2013-10-06 14:53:17
+(epstopdf)                    size: 716434 bytes
+(epstopdf)             Output file: <figures/nedAxes-eps-converted-to.pdf>
+(epstopdf)                    date: 2013-10-06 14:55:32
+(epstopdf)                    size: 23996 bytes
+(epstopdf)             Command: <epstopdf --outfile=figures/nedAxes-eps-convert
+ed-to.pdf figures/nedAxes.eps>
+(epstopdf)             \includegraphics on input line 21.
+Package epstopdf Info: Output file is already uptodate.
+ <figures/nedAxes-eps-converted-to.pdf, id=574, 445.665pt x 443.6575pt>
+File: figures/nedAxes-eps-converted-to.pdf Graphic file (type pdf)
+
+<use figures/nedAxes-eps-converted-to.pdf>
+Package pdftex.def Info: figures/nedAxes-eps-converted-to.pdf used on input lin
+e 21.
+(pdftex.def)             Requested size: 187.89914pt x 187.05246pt.
+Package epstopdf Info: Source file: <figures/bodyAxes.eps>
+(epstopdf)                    date: 2013-10-06 15:51:07
+(epstopdf)                    size: 797026 bytes
+(epstopdf)             Output file: <figures/bodyAxes-eps-converted-to.pdf>
+(epstopdf)                    date: 2013-10-06 15:51:15
+(epstopdf)                    size: 24467 bytes
+(epstopdf)             Command: <epstopdf --outfile=figures/bodyAxes-eps-conver
+ted-to.pdf figures/bodyAxes.eps>
+(epstopdf)             \includegraphics on input line 29.
+Package epstopdf Info: Output file is already uptodate.
+
+<figures/bodyAxes-eps-converted-to.pdf, id=576, 575.14874pt x 188.705pt>
+File: figures/bodyAxes-eps-converted-to.pdf Graphic file (type pdf)
+
+<use figures/bodyAxes-eps-converted-to.pdf>
+Package pdftex.def Info: figures/bodyAxes-eps-converted-to.pdf used on input li
+ne 29.
+(pdftex.def)             Requested size: 422.77664pt x 138.71521pt.
+ [4 <./figures/nedAxes-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <figures/pitchStability.eps>
+(epstopdf)                    date: 2013-10-06 16:37:51
+(epstopdf)                    size: 576054 bytes
+(epstopdf)             Output file: <figures/pitchStability-eps-converted-to.pd
+f>
+(epstopdf)                    date: 2013-10-06 16:48:40
+(epstopdf)                    size: 18771 bytes
+(epstopdf)             Command: <epstopdf --outfile=figures/pitchStability-eps-
+converted-to.pdf figures/pitchStability.eps>
+(epstopdf)             \includegraphics on input line 39.
+Package epstopdf Info: Output file is already uptodate.
+
+<figures/pitchStability-eps-converted-to.pdf, id=590, 190.7125pt x 147.55125pt>
+File: figures/pitchStability-eps-converted-to.pdf Graphic file (type pdf)
+<use figures/pitchStability-eps-converted-to.pdf>
+Package pdftex.def Info: figures/pitchStability-eps-converted-to.pdf used on in
+put line 39.
+(pdftex.def)             Requested size: 187.89914pt x 145.38046pt.
+ [5 <./figures/bodyAxes-eps-converted-to.pdf> <./figures/pitchStability-eps-con
+verted-to.pdf>]
+Package epstopdf Info: Source file: <figures/windAxes.eps>
+(epstopdf)                    date: 2013-10-06 16:47:53
+(epstopdf)                    size: 325174 bytes
+(epstopdf)             Output file: <figures/windAxes-eps-converted-to.pdf>
+(epstopdf)                    date: 2013-10-06 16:48:42
+(epstopdf)                    size: 17731 bytes
+(epstopdf)             Command: <epstopdf --outfile=figures/windAxes-eps-conver
+ted-to.pdf figures/windAxes.eps>
+(epstopdf)             \includegraphics on input line 48.
+Package epstopdf Info: Output file is already uptodate.
+
+<figures/windAxes-eps-converted-to.pdf, id=613, 231.86626pt x 117.43875pt>
+File: figures/windAxes-eps-converted-to.pdf Graphic file (type pdf)
+
+<use figures/windAxes-eps-converted-to.pdf>
+Package pdftex.def Info: figures/windAxes-eps-converted-to.pdf used on input li
+ne 48.
+(pdftex.def)             Requested size: 281.85587pt x 142.7715pt.
+ [6 <./figures/windAxes-eps-converted-to.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 87--89
 
  []
 
-[5] [6] [7] [8]) [9]
+[7] [8] [9] [10]) [11]
 \openout2 = `regression.aux'.
 
  (./regression.tex
 Chapter 3.
-[10
+Package epstopdf Info: Source file: <figures/dragDefinition.eps>
+(epstopdf)                    date: 2013-10-03 18:56:50
+(epstopdf)                    size: 794382 bytes
+(epstopdf)             Output file: <figures/dragDefinition-eps-converted-to.pd
+f>
+(epstopdf)                    date: 2013-10-03 18:59:26
+(epstopdf)                    size: 20102 bytes
+(epstopdf)             Command: <epstopdf --outfile=figures/dragDefinition-eps-
+converted-to.pdf figures/dragDefinition.eps>
+(epstopdf)             \includegraphics on input line 5.
+Package epstopdf Info: Output file is already uptodate.
+
+<figures/dragDefinition-eps-converted-to.pdf, id=693, 443.6575pt x 282.05376pt>
+File: figures/dragDefinition-eps-converted-to.pdf Graphic file (type pdf)
+<use figures/dragDefinition-eps-converted-to.pdf>
+Package pdftex.def Info: figures/dragDefinition-eps-converted-to.pdf used on in
+put line 5.
+(pdftex.def)             Requested size: 281.85587pt x 179.1882pt.
+Package epstopdf Info: Source file: <figures/naca4412liftcurve.eps>
+(epstopdf)                    date: 2013-10-01 18:33:55
+(epstopdf)                    size: 92476 bytes
+(epstopdf)             Output file: <figures/naca4412liftcurve-eps-converted-to
+.pdf>
+(epstopdf)                    date: 2013-10-01 18:34:22
+(epstopdf)                    size: 7193 bytes
+(epstopdf)             Command: <epstopdf --outfile=figures/naca4412liftcurve-e
+ps-converted-to.pdf figures/naca4412liftcurve.eps>
+(epstopdf)             \includegraphics on input line 15.
+Package epstopdf Info: Output file is already uptodate.
+
+<figures/naca4412liftcurve-eps-converted-to.pdf, id=695, 420.57124pt x 316.1812
+4pt>
+File: figures/naca4412liftcurve-eps-converted-to.pdf Graphic file (type pdf)
+ <use figures/naca4412liftcurve-eps-converted-to.pdf>
+Package pdftex.def Info: figures/naca4412liftcurve-eps-converted-to.pdf used on
+ input line 15.
+(pdftex.def)             Requested size: 211.3883pt x 158.92004pt.
+Package epstopdf Info: Source file: <figures/naca4412dragpolar.eps>
+(epstopdf)                    date: 2013-10-01 18:33:22
+(epstopdf)                    size: 63378 bytes
+(epstopdf)             Output file: <figures/naca4412dragpolar-eps-converted-to
+.pdf>
+(epstopdf)                    date: 2013-10-01 18:34:24
+(epstopdf)                    size: 6336 bytes
+(epstopdf)             Command: <epstopdf --outfile=figures/naca4412dragpolar-e
+ps-converted-to.pdf figures/naca4412dragpolar.eps>
+(epstopdf)             \includegraphics on input line 21.
+Package epstopdf Info: Output file is already uptodate.
+
+<figures/naca4412dragpolar-eps-converted-to.pdf, id=696, 420.57124pt x 316.1812
+4pt>
+File: figures/naca4412dragpolar-eps-converted-to.pdf Graphic file (type pdf)
+ <use figures/naca4412dragpolar-eps-converted-to.pdf>
+Package pdftex.def Info: figures/naca4412dragpolar-eps-converted-to.pdf used on
+ input line 21.
+(pdftex.def)             Requested size: 211.3883pt x 158.92004pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[12
 
 
 
-] [11]
+ <./figures/dragDefinition-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <figures/naca4412cdmin.eps>
+(epstopdf)                    date: 2013-10-01 19:05:32
+(epstopdf)                    size: 134480 bytes
+(epstopdf)             Output file: <figures/naca4412cdmin-eps-converted-to.pdf
+>
+(epstopdf)                    date: 2013-10-01 19:07:05
+(epstopdf)                    size: 11137 bytes
+(epstopdf)             Command: <epstopdf --outfile=figures/naca4412cdmin-eps-c
+onverted-to.pdf figures/naca4412cdmin.eps>
+(epstopdf)             \includegraphics on input line 37.
+Package epstopdf Info: Output file is already uptodate.
 
-LaTeX Warning: Reference `pointError' on page 12 undefined on input line 99.
+<figures/naca4412cdmin-eps-converted-to.pdf, id=718, 420.57124pt x 316.18124pt>
+File: figures/naca4412cdmin-eps-converted-to.pdf Graphic file (type pdf)
+<use figures/naca4412cdmin-eps-converted-to.pdf>
+Package pdftex.def Info: figures/naca4412cdmin-eps-converted-to.pdf used on inp
+ut line 37.
+(pdftex.def)             Requested size: 281.85587pt x 211.89822pt.
+Package epstopdf Info: Source file: <figures/downwash.eps>
+(epstopdf)                    date: 2013-10-01 19:56:06
+(epstopdf)                    size: 5505362 bytes
+(epstopdf)             Output file: <figures/downwash-eps-converted-to.pdf>
+(epstopdf)                    date: 2013-10-01 19:56:13
+(epstopdf)                    size: 22170 bytes
+(epstopdf)             Command: <epstopdf --outfile=figures/downwash-eps-conver
+ted-to.pdf figures/downwash.eps>
+(epstopdf)             \includegraphics on input line 45.
+Package epstopdf Info: Output file is already uptodate.
 
-) [12]
+<figures/downwash-eps-converted-to.pdf, id=720, 2821.54124pt x 1208.515pt>
+File: figures/downwash-eps-converted-to.pdf Graphic file (type pdf)
+
+<use figures/downwash-eps-converted-to.pdf>
+Package pdftex.def Info: figures/downwash-eps-converted-to.pdf used on input li
+ne 45.
+(pdftex.def)             Requested size: 281.85587pt x 120.71104pt.
+ [13 <./figures/naca4412liftcurve-eps-converted-to.pdf> <./figures/naca4412drag
+polar-eps-converted-to.pdf> <./figures/naca4412cdmin-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <figures/inducedDrag.eps>
+(epstopdf)                    date: 2013-10-01 19:41:02
+(epstopdf)                    size: 738938 bytes
+(epstopdf)             Output file: <figures/inducedDrag-eps-converted-to.pdf>
+(epstopdf)                    date: 2013-10-01 19:51:31
+(epstopdf)                    size: 14900 bytes
+(epstopdf)             Command: <epstopdf --outfile=figures/inducedDrag-eps-con
+verted-to.pdf figures/inducedDrag.eps>
+(epstopdf)             \includegraphics on input line 54.
+Package epstopdf Info: Output file is already uptodate.
+
+<figures/inducedDrag-eps-converted-to.pdf, id=766, 481.8pt x 235.88126pt>
+File: figures/inducedDrag-eps-converted-to.pdf Graphic file (type pdf)
+
+<use figures/inducedDrag-eps-converted-to.pdf>
+Package pdftex.def Info: figures/inducedDrag-eps-converted-to.pdf used on input
+ line 54.
+(pdftex.def)             Requested size: 281.85587pt x 137.99538pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 59--60
+
+ []
+
+[14 <./figures/downwash-eps-converted-to.pdf> <./figures/inducedDrag-eps-conver
+ted-to.pdf>] [15] [16]) [17]
 \openout2 = `error.aux'.
 
  (./error.tex
 Chapter 4.
-[13
+[18
 
 
 
@@ -1020,24 +1260,24 @@ Package epstopdf Info: Source file: <figures/heteroskedasticity.eps>
 o.pdf>
 (epstopdf)                    date: 2013-07-16 20:48:33
 (epstopdf)                    size: 357631 bytes
-(epstopdf)             Command: <repstopdf --outfile=figures/heteroskedasticity
--eps-converted-to.pdf figures/heteroskedasticity.eps>
+(epstopdf)             Command: <epstopdf --outfile=figures/heteroskedasticity-
+eps-converted-to.pdf figures/heteroskedasticity.eps>
 (epstopdf)             \includegraphics on input line 42.
 Package epstopdf Info: Output file is already uptodate.
 
-<figures/heteroskedasticity-eps-converted-to.pdf, id=410, 420.57124pt x 316.181
+<figures/heteroskedasticity-eps-converted-to.pdf, id=831, 420.57124pt x 316.181
 24pt>
 File: figures/heteroskedasticity-eps-converted-to.pdf Graphic file (type pdf)
  <use figures/heteroskedasticity-eps-converted-to.pdf>
 Package pdftex.def Info: figures/heteroskedasticity-eps-converted-to.pdf used o
 n input line 42.
 (pdftex.def)             Requested size: 234.8775pt x 176.57784pt.
- [14] [15 <./figures/heteroskedasticity-eps-converted-to.pdf>] [16]) [17]
+ [19] [20 <./figures/heteroskedasticity-eps-converted-to.pdf>] [21]) [22]
 \openout2 = `simulation.aux'.
 
  (./simulation.tex
 Chapter 5.
-[18
+[23
 
 
 
@@ -1049,12 +1289,12 @@ Package epstopdf Info: Source file: <figures/dragPolarNoNoise.eps>
 pdf>
 (epstopdf)                    date: 2013-07-16 20:48:33
 (epstopdf)                    size: 762327 bytes
-(epstopdf)             Command: <repstopdf --outfile=figures/dragPolarNoNoise-e
-ps-converted-to.pdf figures/dragPolarNoNoise.eps>
+(epstopdf)             Command: <epstopdf --outfile=figures/dragPolarNoNoise-ep
+s-converted-to.pdf figures/dragPolarNoNoise.eps>
 (epstopdf)             \includegraphics on input line 22.
 Package epstopdf Info: Output file is already uptodate.
 
-<figures/dragPolarNoNoise-eps-converted-to.pdf, id=461, 420.57124pt x 316.18124
+<figures/dragPolarNoNoise-eps-converted-to.pdf, id=880, 420.57124pt x 316.18124
 pt>
 File: figures/dragPolarNoNoise-eps-converted-to.pdf Graphic file (type pdf)
  <use figures/dragPolarNoNoise-eps-converted-to.pdf>
@@ -1068,35 +1308,31 @@ Package epstopdf Info: Source file: <figures/simDragPolarNoise.eps>
 .pdf>
 (epstopdf)                    date: 2013-08-14 15:41:16
 (epstopdf)                    size: 3513316 bytes
-(epstopdf)             Command: <repstopdf --outfile=figures/simDragPolarNoise-
-eps-converted-to.pdf figures/simDragPolarNoise.eps>
-(epstopdf)             \includegraphics on input line 29.
+(epstopdf)             Command: <epstopdf --outfile=figures/simDragPolarNoise-e
+ps-converted-to.pdf figures/simDragPolarNoise.eps>
+(epstopdf)             \includegraphics on input line 30.
 Package epstopdf Info: Output file is already uptodate.
 
-<figures/simDragPolarNoise-eps-converted-to.pdf, id=464, 420.57124pt x 316.1812
+<figures/simDragPolarNoise-eps-converted-to.pdf, id=883, 420.57124pt x 316.1812
 4pt>
 File: figures/simDragPolarNoise-eps-converted-to.pdf Graphic file (type pdf)
  <use figures/simDragPolarNoise-eps-converted-to.pdf>
 Package pdftex.def Info: figures/simDragPolarNoise-eps-converted-to.pdf used on
- input line 29.
+ input line 30.
 (pdftex.def)             Requested size: 234.8775pt x 176.57784pt.
- [19 <./figures/dragPolarNoNoise-eps-converted-to.pdf>]
-
-LaTeX Warning: Reference `simCoeffErrorTable' on page 20 undefined on input lin
-e 33.
-
-) [20 <./figures/simDragPolarNoise-eps-converted-to.pdf>]
+ [24 <./figures/dragPolarNoNoise-eps-converted-to.pdf>]) [25 <./figures/simDrag
+PolarNoise-eps-converted-to.pdf>]
 \openout2 = `hardware.aux'.
 
  (./hardware.tex
 Chapter 6.
-<figures/arduinoDue.jpg, id=490, 1027.84pt x 548.0475pt>
+<figures/arduinoDue.jpg, id=912, 1027.84pt x 548.0475pt>
 File: figures/arduinoDue.jpg Graphic file (type jpg)
 
 <use figures/arduinoDue.jpg>
 Package pdftex.def Info: figures/arduinoDue.jpg used on input line 11.
 (pdftex.def)             Requested size: 234.8775pt x 125.2371pt.
- [21
+ [26
 
 
 
@@ -1107,12 +1343,12 @@ Package epstopdf Info: Source file: <figures/adxl362.eps>
 (epstopdf)             Output file: <figures/adxl362-eps-converted-to.pdf>
 (epstopdf)                    date: 2013-08-15 15:19:39
 (epstopdf)                    size: 17631 bytes
-(epstopdf)             Command: <repstopdf --outfile=figures/adxl362-eps-conver
-ted-to.pdf figures/adxl362.eps>
+(epstopdf)             Command: <epstopdf --outfile=figures/adxl362-eps-convert
+ed-to.pdf figures/adxl362.eps>
 (epstopdf)             \includegraphics on input line 21.
 Package epstopdf Info: Output file is already uptodate.
 
-<figures/adxl362-eps-converted-to.pdf, id=499, 347.2975pt x 147.55125pt>
+<figures/adxl362-eps-converted-to.pdf, id=921, 347.2975pt x 147.55125pt>
 File: figures/adxl362-eps-converted-to.pdf Graphic file (type pdf)
 
 <use figures/adxl362-eps-converted-to.pdf>
@@ -1123,34 +1359,34 @@ e 21.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[22 <./figures/arduinoDue.jpg>]
-<figures/hmr2300.jpg, id=508, 298.11375pt x 255.95625pt>
+[27 <./figures/arduinoDue.jpg>]
+<figures/hmr2300.jpg, id=929, 298.11375pt x 255.95625pt>
 File: figures/hmr2300.jpg Graphic file (type jpg)
 
 <use figures/hmr2300.jpg>
 Package pdftex.def Info: figures/hmr2300.jpg used on input line 34.
 (pdftex.def)             Requested size: 234.8775pt x 201.66425pt.
- [23 <./figures/adxl362-eps-converted-to.pdf>]
+ [28 <./figures/adxl362-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <figures/magBoard.eps>
 (epstopdf)                    date: 2013-08-15 16:22:20
 (epstopdf)                    size: 727818 bytes
 (epstopdf)             Output file: <figures/magBoard-eps-converted-to.pdf>
 (epstopdf)                    date: 2013-08-15 16:22:30
 (epstopdf)                    size: 32538 bytes
-(epstopdf)             Command: <repstopdf --outfile=figures/magBoard-eps-conve
-rted-to.pdf figures/magBoard.eps>
-(epstopdf)             \includegraphics on input line 44.
+(epstopdf)             Command: <epstopdf --outfile=figures/magBoard-eps-conver
+ted-to.pdf figures/magBoard.eps>
+(epstopdf)             \includegraphics on input line 45.
 Package epstopdf Info: Output file is already uptodate.
 
-<figures/magBoard-eps-converted-to.pdf, id=517, 368.37625pt x 391.4625pt>
+<figures/magBoard-eps-converted-to.pdf, id=938, 368.37625pt x 391.4625pt>
 File: figures/magBoard-eps-converted-to.pdf Graphic file (type pdf)
 
 <use figures/magBoard-eps-converted-to.pdf>
 Package pdftex.def Info: figures/magBoard-eps-converted-to.pdf used on input li
-ne 44.
+ne 45.
 (pdftex.def)             Requested size: 234.8775pt x 249.59734pt.
- [24 <./figures/hmr2300.jpg>]
-Underfull \hbox (badness 10000) in paragraph at lines 46--47
+ [29 <./figures/hmr2300.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 47--48
 
  []
 
@@ -1161,28 +1397,28 @@ Package epstopdf Info: Source file: <figures/hmc5883LSchematic.eps>
 .pdf>
 (epstopdf)                    date: 2013-08-15 16:02:49
 (epstopdf)                    size: 23783 bytes
-(epstopdf)             Command: <repstopdf --outfile=figures/hmc5883LSchematic-
-eps-converted-to.pdf figures/hmc5883LSchematic.eps>
-(epstopdf)             \includegraphics on input line 53.
+(epstopdf)             Command: <epstopdf --outfile=figures/hmc5883LSchematic-e
+ps-converted-to.pdf figures/hmc5883LSchematic.eps>
+(epstopdf)             \includegraphics on input line 54.
 Package epstopdf Info: Output file is already uptodate.
 
-<figures/hmc5883LSchematic-eps-converted-to.pdf, id=525, 243.91125pt x 128.48pt
+<figures/hmc5883LSchematic-eps-converted-to.pdf, id=946, 243.91125pt x 128.48pt
 >
 File: figures/hmc5883LSchematic-eps-converted-to.pdf Graphic file (type pdf)
  <use figures/hmc5883LSchematic-eps-converted-to.pdf>
 Package pdftex.def Info: figures/hmc5883LSchematic-eps-converted-to.pdf used on
- input line 53.
+ input line 54.
 (pdftex.def)             Requested size: 234.8775pt x 123.72363pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 56--58
+Underfull \hbox (badness 10000) in paragraph at lines 57--59
 
  []
 
-[25 <./figures/magBoard-eps-converted-to.pdf>]
+[30 <./figures/magBoard-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <figures/itg3200Schematic.eps>
 (epstopdf)                    date: 2013-08-15 15:19:16
 (epstopdf)                    size: 1110930 bytes
@@ -1190,63 +1426,69 @@ Package epstopdf Info: Source file: <figures/itg3200Schematic.eps>
 pdf>
 (epstopdf)                    date: 2013-08-15 15:19:41
 (epstopdf)                    size: 27439 bytes
-(epstopdf)             Command: <repstopdf --outfile=figures/itg3200Schematic-e
-ps-converted-to.pdf figures/itg3200Schematic.eps>
-(epstopdf)             \includegraphics on input line 68.
+(epstopdf)             Command: <epstopdf --outfile=figures/itg3200Schematic-ep
+s-converted-to.pdf figures/itg3200Schematic.eps>
+(epstopdf)             \includegraphics on input line 69.
 Package epstopdf Info: Output file is already uptodate.
 
-<figures/itg3200Schematic-eps-converted-to.pdf, id=539, 601.24625pt x 384.43625
+<figures/itg3200Schematic-eps-converted-to.pdf, id=960, 601.24625pt x 384.43625
 pt>
 File: figures/itg3200Schematic-eps-converted-to.pdf Graphic file (type pdf)
  <use figures/itg3200Schematic-eps-converted-to.pdf>
 Package pdftex.def Info: figures/itg3200Schematic-eps-converted-to.pdf used on 
-input line 68.
+input line 69.
 (pdftex.def)             Requested size: 281.85587pt x 180.22163pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 71--72
+Underfull \hbox (badness 10000) in paragraph at lines 72--73
 
  []
 
-[26 <./figures/hmc5883LSchematic-eps-converted-to.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 103--104
+[31 <./figures/hmc5883LSchematic-eps-converted-to.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 104--105
 
  []
 
-[27 <./figures/itg3200Schematic-eps-converted-to.pdf>]
-<figures/allsensorsPressure.jpg, id=564, 213.79875pt x 213.79875pt>
+[32 <./figures/itg3200Schematic-eps-converted-to.pdf>]
+<figures/allsensorsPressure.jpg, id=985, 213.79875pt x 213.79875pt>
 File: figures/allsensorsPressure.jpg Graphic file (type jpg)
 
 <use figures/allsensorsPressure.jpg>
-Package pdftex.def Info: figures/allsensorsPressure.jpg used on input line 113.
+Package pdftex.def Info: figures/allsensorsPressure.jpg used on input line 114.
 
 (pdftex.def)             Requested size: 234.8775pt x 234.87595pt.
- [28]
-Underfull \hbox (badness 10000) in paragraph at lines 116--117
+ [33]
+Underfull \hbox (badness 10000) in paragraph at lines 117--118
 
  []
 
-[29 <./figures/allsensorsPressure.jpg>]
-<figures/gpsBoard.jpg, id=581, 451.6875pt x 316.18124pt>
+[34 <./figures/allsensorsPressure.jpg>]
+<figures/gpsBoard.jpg, id=1003, 451.6875pt x 316.18124pt>
 File: figures/gpsBoard.jpg Graphic file (type jpg)
 
 <use figures/gpsBoard.jpg>
-Package pdftex.def Info: figures/gpsBoard.jpg used on input line 158.
+Package pdftex.def Info: figures/gpsBoard.jpg used on input line 159.
 (pdftex.def)             Requested size: 234.8775pt x 164.41519pt.
- [30]
-<figures/ds18b20Picture.jpg, id=592, 200.75pt x 200.75pt>
+ [35]
+<figures/ds18b20Picture.jpg, id=1014, 200.75pt x 200.75pt>
 File: figures/ds18b20Picture.jpg Graphic file (type jpg)
 
 <use figures/ds18b20Picture.jpg>
-Package pdftex.def Info: figures/ds18b20Picture.jpg used on input line 167.
+Package pdftex.def Info: figures/ds18b20Picture.jpg used on input line 168.
 (pdftex.def)             Requested size: 117.43875pt x 117.44286pt.
- [31 <./figures/gpsBoard.jpg> <./figures/ds18b20Picture.jpg>]) [32]
+
+Underfull \hbox (badness 10000) in paragraph at lines 170--171
+
+ []
+
+[36 <./figures/gpsBoard.jpg> <./figures/ds18b20Picture.jpg>]) [37]
 \openout2 = `flightTest.aux'.
 
- (./flightTest.tex
+
+(./flightTest.tex
 Chapter 7.
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
@@ -1276,7 +1518,7 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 11.
 
-[33
+[38
 
 
 
@@ -1293,12 +1535,12 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 13.
 
-) [34]
+) [39]
 \openout2 = `results.aux'.
 
  (./results.tex
 Chapter 8.
-) [35
+) [40
 
 
 
@@ -1307,15 +1549,2391 @@ Chapter 8.
 
  (./summary.tex
 Chapter 9.
-) [36
+) [41
 
 
 
 ]
+\openout2 = `systemManual.aux'.
+
+ (./systemManual.tex
+APPENDIX A.
+) [42
+
+
+
+
+]
+\openout2 = `flightTestDocs.aux'.
+
+ (./flightTestDocs.tex
+APPENDIX B.
+[43
+
+
+
+] [44]) [45]
+\openout2 = `cd0FlightTest.aux'.
+
+ (./cd0FlightTest.tex
+APPENDIX C.
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 1.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `subscript' on input line 1.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `subscript' on input line 1.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 1.
+
+) [46
+
+
+
+]
+\openout2 = `K2FlightTest.aux'.
+
+ (./K2FlightTest.tex
+APPENDIX D.
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 1.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `subscript' on input line 1.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 1.
+
+) [47
+
+
+
+]
+\openout2 = `dataGraphs.aux'.
+
+ (./dataGraphs.tex
+APPENDIX E.
+(./figures/sampleOutput/Raw/sampleOutput.tex
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 2.
+
+Package epstopdf Info: Source file: <C:/Users/mufasa/Documents/Thesis/LaTex/fig
+ures/sampleOutput/Raw/accelX.eps>
+(epstopdf)                    date: 2013-10-31 18:29:35
+(epstopdf)                    size: 10118 bytes
+(epstopdf)             Output file: <C:/Users/mufasa/Documents/Thesis/LaTex/fig
+ures/sampleOutput/Raw/accelX-eps-converted-to.pdf>
+(epstopdf)                    date: 2013-10-31 18:30:02
+(epstopdf)                    size: 6635 bytes
+(epstopdf)             Command: <epstopdf --outfile=C:/Users/mufasa/Documents/T
+hesis/LaTex/figures/sampleOutput/Raw/accelX-eps-converted-to.pdf C:/Users/mufas
+a/Documents/Thesis/LaTex/figures/sampleOutput/Raw/accelX.eps>
+(epstopdf)             \includegraphics on input line 5.
+Package epstopdf Info: Output file is already uptodate.
+
+<C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/Raw/accelX-eps-con
+verted-to.pdf, id=1103, 387.4475pt x 209.78375pt>
+File: C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/Raw/accelX-ep
+s-converted-to.pdf Graphic file (type pdf)
+
+<use C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/Raw/accelX-eps
+-converted-to.pdf>
+Package pdftex.def Info: C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleO
+utput/Raw/accelX-eps-converted-to.pdf used on input line 5.
+(pdftex.def)             Requested size: 328.82707pt x 178.04492pt.
+
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 7.
+
+Package epstopdf Info: Source file: <C:/Users/mufasa/Documents/Thesis/LaTex/fig
+ures/sampleOutput/Raw/accelY.eps>
+(epstopdf)                    date: 2013-10-31 18:29:36
+(epstopdf)                    size: 10279 bytes
+(epstopdf)             Output file: <C:/Users/mufasa/Documents/Thesis/LaTex/fig
+ures/sampleOutput/Raw/accelY-eps-converted-to.pdf>
+(epstopdf)                    date: 2013-10-31 18:30:03
+(epstopdf)                    size: 6675 bytes
+(epstopdf)             Command: <epstopdf --outfile=C:/Users/mufasa/Documents/T
+hesis/LaTex/figures/sampleOutput/Raw/accelY-eps-converted-to.pdf C:/Users/mufas
+a/Documents/Thesis/LaTex/figures/sampleOutput/Raw/accelY.eps>
+(epstopdf)             \includegraphics on input line 10.
+Package epstopdf Info: Output file is already uptodate.
+
+<C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/Raw/accelY-eps-con
+verted-to.pdf, id=1104, 382.42876pt x 209.78375pt>
+File: C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/Raw/accelY-ep
+s-converted-to.pdf Graphic file (type pdf)
+
+<use C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/Raw/accelY-eps
+-converted-to.pdf>
+Package pdftex.def Info: C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleO
+utput/Raw/accelY-eps-converted-to.pdf used on input line 10.
+(pdftex.def)             Requested size: 328.82707pt x 180.38808pt.
+
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 12.
+
+Package epstopdf Info: Source file: <C:/Users/mufasa/Documents/Thesis/LaTex/fig
+ures/sampleOutput/Raw/accelZ.eps>
+(epstopdf)                    date: 2013-10-31 18:29:36
+(epstopdf)                    size: 10193 bytes
+(epstopdf)             Output file: <C:/Users/mufasa/Documents/Thesis/LaTex/fig
+ures/sampleOutput/Raw/accelZ-eps-converted-to.pdf>
+(epstopdf)                    date: 2013-10-31 18:30:03
+(epstopdf)                    size: 6715 bytes
+(epstopdf)             Command: <epstopdf --outfile=C:/Users/mufasa/Documents/T
+hesis/LaTex/figures/sampleOutput/Raw/accelZ-eps-converted-to.pdf C:/Users/mufas
+a/Documents/Thesis/LaTex/figures/sampleOutput/Raw/accelZ.eps>
+(epstopdf)             \includegraphics on input line 15.
+Package epstopdf Info: Output file is already uptodate.
+
+<C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/Raw/accelZ-eps-con
+verted-to.pdf, id=1105, 393.47pt x 209.78375pt>
+File: C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/Raw/accelZ-ep
+s-converted-to.pdf Graphic file (type pdf)
+
+<use C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/Raw/accelZ-eps
+-converted-to.pdf>
+Package pdftex.def Info: C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleO
+utput/Raw/accelZ-eps-converted-to.pdf used on input line 15.
+(pdftex.def)             Requested size: 328.82707pt x 175.31764pt.
+
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 17.
+
+Package epstopdf Info: Source file: <C:/Users/mufasa/Documents/Thesis/LaTex/fig
+ures/sampleOutput/Raw/gyroX.eps>
+(epstopdf)                    date: 2013-10-31 18:29:36
+(epstopdf)                    size: 9941 bytes
+(epstopdf)             Output file: <C:/Users/mufasa/Documents/Thesis/LaTex/fig
+ures/sampleOutput/Raw/gyroX-eps-converted-to.pdf>
+(epstopdf)                    date: 2013-10-31 18:30:04
+(epstopdf)                    size: 6707 bytes
+(epstopdf)             Command: <epstopdf --outfile=C:/Users/mufasa/Documents/T
+hesis/LaTex/figures/sampleOutput/Raw/gyroX-eps-converted-to.pdf C:/Users/mufasa
+/Documents/Thesis/LaTex/figures/sampleOutput/Raw/gyroX.eps>
+(epstopdf)             \includegraphics on input line 20.
+Package epstopdf Info: Output file is already uptodate.
+
+<C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/Raw/gyroX-eps-conv
+erted-to.pdf, id=1106, 384.43625pt x 209.78375pt>
+File: C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/Raw/gyroX-eps
+-converted-to.pdf Graphic file (type pdf)
+
+<use C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/Raw/gyroX-eps-
+converted-to.pdf>
+Package pdftex.def Info: C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleO
+utput/Raw/gyroX-eps-converted-to.pdf used on input line 20.
+(pdftex.def)             Requested size: 328.82707pt x 179.45018pt.
+
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 22.
+
+Package epstopdf Info: Source file: <C:/Users/mufasa/Documents/Thesis/LaTex/fig
+ures/sampleOutput/Raw/gyroY.eps>
+(epstopdf)                    date: 2013-10-31 18:29:36
+(epstopdf)                    size: 10000 bytes
+(epstopdf)             Output file: <C:/Users/mufasa/Documents/Thesis/LaTex/fig
+ures/sampleOutput/Raw/gyroY-eps-converted-to.pdf>
+(epstopdf)                    date: 2013-10-31 18:30:05
+(epstopdf)                    size: 6571 bytes
+(epstopdf)             Command: <epstopdf --outfile=C:/Users/mufasa/Documents/T
+hesis/LaTex/figures/sampleOutput/Raw/gyroY-eps-converted-to.pdf C:/Users/mufasa
+/Documents/Thesis/LaTex/figures/sampleOutput/Raw/gyroY.eps>
+(epstopdf)             \includegraphics on input line 25.
+Package epstopdf Info: Output file is already uptodate.
+
+<C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/Raw/gyroY-eps-conv
+erted-to.pdf, id=1107, 378.41376pt x 209.78375pt>
+File: C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/Raw/gyroY-eps
+-converted-to.pdf Graphic file (type pdf)
+
+<use C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/Raw/gyroY-eps-
+converted-to.pdf>
+Package pdftex.def Info: C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleO
+utput/Raw/gyroY-eps-converted-to.pdf used on input line 25.
+(pdftex.def)             Requested size: 328.82707pt x 182.2959pt.
+ [48
+
+
+
+] [49 <c:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/Raw/accelX-e
+ps-converted-to.pdf> <c:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutp
+ut/Raw/accelY-eps-converted-to.pdf> <c:/Users/mufasa/Documents/Thesis/LaTex/fig
+ures/sampleOutput/Raw/accelZ-eps-converted-to.pdf>]
+[50 <c:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/Raw/gyroX-eps-
+converted-to.pdf> <c:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/
+Raw/gyroY-eps-converted-to.pdf>]
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 28.
+
+Package epstopdf Info: Source file: <C:/Users/mufasa/Documents/Thesis/LaTex/fig
+ures/sampleOutput/Raw/gyroZ.eps>
+(epstopdf)                    date: 2013-10-31 18:29:36
+(epstopdf)                    size: 10140 bytes
+(epstopdf)             Output file: <C:/Users/mufasa/Documents/Thesis/LaTex/fig
+ures/sampleOutput/Raw/gyroZ-eps-converted-to.pdf>
+(epstopdf)                    date: 2013-10-31 18:30:06
+(epstopdf)                    size: 7009 bytes
+(epstopdf)             Command: <epstopdf --outfile=C:/Users/mufasa/Documents/T
+hesis/LaTex/figures/sampleOutput/Raw/gyroZ-eps-converted-to.pdf C:/Users/mufasa
+/Documents/Thesis/LaTex/figures/sampleOutput/Raw/gyroZ.eps>
+(epstopdf)             \includegraphics on input line 31.
+Package epstopdf Info: Output file is already uptodate.
+
+<C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/Raw/gyroZ-eps-conv
+erted-to.pdf, id=1150, 384.43625pt x 209.78375pt>
+File: C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/Raw/gyroZ-eps
+-converted-to.pdf Graphic file (type pdf)
+
+<use C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/Raw/gyroZ-eps-
+converted-to.pdf>
+Package pdftex.def Info: C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleO
+utput/Raw/gyroZ-eps-converted-to.pdf used on input line 31.
+(pdftex.def)             Requested size: 328.82707pt x 179.45018pt.
+
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 33.
+
+Package epstopdf Info: Source file: <C:/Users/mufasa/Documents/Thesis/LaTex/fig
+ures/sampleOutput/Raw/magX.eps>
+(epstopdf)                    date: 2013-10-31 18:29:36
+(epstopdf)                    size: 9738 bytes
+(epstopdf)             Output file: <C:/Users/mufasa/Documents/Thesis/LaTex/fig
+ures/sampleOutput/Raw/magX-eps-converted-to.pdf>
+(epstopdf)                    date: 2013-10-31 18:30:06
+(epstopdf)                    size: 6580 bytes
+(epstopdf)             Command: <epstopdf --outfile=C:/Users/mufasa/Documents/T
+hesis/LaTex/figures/sampleOutput/Raw/magX-eps-converted-to.pdf C:/Users/mufasa/
+Documents/Thesis/LaTex/figures/sampleOutput/Raw/magX.eps>
+(epstopdf)             \includegraphics on input line 36.
+Package epstopdf Info: Output file is already uptodate.
+
+<C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/Raw/magX-eps-conve
+rted-to.pdf, id=1151, 402.50375pt x 209.78375pt>
+File: C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/Raw/magX-eps-
+converted-to.pdf Graphic file (type pdf)
+
+<use C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/Raw/magX-eps-c
+onverted-to.pdf>
+Package pdftex.def Info: C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleO
+utput/Raw/magX-eps-converted-to.pdf used on input line 36.
+(pdftex.def)             Requested size: 328.82707pt x 171.38356pt.
+
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 38.
+
+Package epstopdf Info: Source file: <C:/Users/mufasa/Documents/Thesis/LaTex/fig
+ures/sampleOutput/Raw/magY.eps>
+(epstopdf)                    date: 2013-10-31 18:29:37
+(epstopdf)                    size: 9871 bytes
+(epstopdf)             Output file: <C:/Users/mufasa/Documents/Thesis/LaTex/fig
+ures/sampleOutput/Raw/magY-eps-converted-to.pdf>
+(epstopdf)                    date: 2013-10-31 18:30:07
+(epstopdf)                    size: 6495 bytes
+(epstopdf)             Command: <epstopdf --outfile=C:/Users/mufasa/Documents/T
+hesis/LaTex/figures/sampleOutput/Raw/magY-eps-converted-to.pdf C:/Users/mufasa/
+Documents/Thesis/LaTex/figures/sampleOutput/Raw/magY.eps>
+(epstopdf)             \includegraphics on input line 41.
+Package epstopdf Info: Output file is already uptodate.
+
+<C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/Raw/magY-eps-conve
+rted-to.pdf, id=1152, 398.48875pt x 209.78375pt>
+File: C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/Raw/magY-eps-
+converted-to.pdf Graphic file (type pdf)
+
+<use C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/Raw/magY-eps-c
+onverted-to.pdf>
+Package pdftex.def Info: C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleO
+utput/Raw/magY-eps-converted-to.pdf used on input line 41.
+(pdftex.def)             Requested size: 328.82707pt x 173.11853pt.
+
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 43.
+
+Package epstopdf Info: Source file: <C:/Users/mufasa/Documents/Thesis/LaTex/fig
+ures/sampleOutput/Raw/magZ.eps>
+(epstopdf)                    date: 2013-10-31 18:29:37
+(epstopdf)                    size: 10018 bytes
+(epstopdf)             Output file: <C:/Users/mufasa/Documents/Thesis/LaTex/fig
+ures/sampleOutput/Raw/magZ-eps-converted-to.pdf>
+(epstopdf)                    date: 2013-10-31 18:30:08
+(epstopdf)                    size: 6602 bytes
+(epstopdf)             Command: <epstopdf --outfile=C:/Users/mufasa/Documents/T
+hesis/LaTex/figures/sampleOutput/Raw/magZ-eps-converted-to.pdf C:/Users/mufasa/
+Documents/Thesis/LaTex/figures/sampleOutput/Raw/magZ.eps>
+(epstopdf)             \includegraphics on input line 46.
+Package epstopdf Info: Output file is already uptodate.
+
+<C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/Raw/magZ-eps-conve
+rted-to.pdf, id=1153, 402.50375pt x 220.825pt>
+File: C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/Raw/magZ-eps-
+converted-to.pdf Graphic file (type pdf)
+
+<use C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/Raw/magZ-eps-c
+onverted-to.pdf>
+Package pdftex.def Info: C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleO
+utput/Raw/magZ-eps-converted-to.pdf used on input line 46.
+(pdftex.def)             Requested size: 328.82707pt x 180.40375pt.
+
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 48.
+
+Package epstopdf Info: Source file: <C:/Users/mufasa/Documents/Thesis/LaTex/fig
+ures/sampleOutput/Raw/press0.eps>
+(epstopdf)                    date: 2013-10-31 18:29:37
+(epstopdf)                    size: 10359 bytes
+(epstopdf)             Output file: <C:/Users/mufasa/Documents/Thesis/LaTex/fig
+ures/sampleOutput/Raw/press0-eps-converted-to.pdf>
+(epstopdf)                    date: 2013-10-31 18:30:08
+(epstopdf)                    size: 6768 bytes
+(epstopdf)             Command: <epstopdf --outfile=C:/Users/mufasa/Documents/T
+hesis/LaTex/figures/sampleOutput/Raw/press0-eps-converted-to.pdf C:/Users/mufas
+a/Documents/Thesis/LaTex/figures/sampleOutput/Raw/press0.eps>
+(epstopdf)             \includegraphics on input line 51.
+Package epstopdf Info: Output file is already uptodate.
+
+<C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/Raw/press0-eps-con
+verted-to.pdf, id=1154, 382.42876pt x 209.78375pt>
+File: C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/Raw/press0-ep
+s-converted-to.pdf Graphic file (type pdf)
+
+<use C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/Raw/press0-eps
+-converted-to.pdf>
+Package pdftex.def Info: C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleO
+utput/Raw/press0-eps-converted-to.pdf used on input line 51.
+(pdftex.def)             Requested size: 328.82707pt x 180.38808pt.
+
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 53.
+
+Package epstopdf Info: Source file: <C:/Users/mufasa/Documents/Thesis/LaTex/fig
+ures/sampleOutput/Raw/press1.eps>
+(epstopdf)                    date: 2013-10-31 18:29:37
+(epstopdf)                    size: 10338 bytes
+(epstopdf)             Output file: <C:/Users/mufasa/Documents/Thesis/LaTex/fig
+ures/sampleOutput/Raw/press1-eps-converted-to.pdf>
+(epstopdf)                    date: 2013-10-31 18:30:09
+(epstopdf)                    size: 6674 bytes
+(epstopdf)             Command: <epstopdf --outfile=C:/Users/mufasa/Documents/T
+hesis/LaTex/figures/sampleOutput/Raw/press1-eps-converted-to.pdf C:/Users/mufas
+a/Documents/Thesis/LaTex/figures/sampleOutput/Raw/press1.eps>
+(epstopdf)             \includegraphics on input line 56.
+Package epstopdf Info: Output file is already uptodate.
+
+<C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/Raw/press1-eps-con
+verted-to.pdf, id=1155, 393.47pt x 209.78375pt>
+File: C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/Raw/press1-ep
+s-converted-to.pdf Graphic file (type pdf)
+
+<use C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/Raw/press1-eps
+-converted-to.pdf>
+Package pdftex.def Info: C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleO
+utput/Raw/press1-eps-converted-to.pdf used on input line 56.
+(pdftex.def)             Requested size: 328.82707pt x 175.31764pt.
+
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 58.
+
+Package epstopdf Info: Source file: <C:/Users/mufasa/Documents/Thesis/LaTex/fig
+ures/sampleOutput/Raw/press2.eps>
+(epstopdf)                    date: 2013-10-31 18:29:37
+(epstopdf)                    size: 10241 bytes
+(epstopdf)             Output file: <C:/Users/mufasa/Documents/Thesis/LaTex/fig
+ures/sampleOutput/Raw/press2-eps-converted-to.pdf>
+(epstopdf)                    date: 2013-10-31 18:30:10
+(epstopdf)                    size: 6500 bytes
+(epstopdf)             Command: <epstopdf --outfile=C:/Users/mufasa/Documents/T
+hesis/LaTex/figures/sampleOutput/Raw/press2-eps-converted-to.pdf C:/Users/mufas
+a/Documents/Thesis/LaTex/figures/sampleOutput/Raw/press2.eps>
+(epstopdf)             \includegraphics on input line 61.
+Package epstopdf Info: Output file is already uptodate.
+
+<C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/Raw/press2-eps-con
+verted-to.pdf, id=1156, 382.42876pt x 209.78375pt>
+File: C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/Raw/press2-ep
+s-converted-to.pdf Graphic file (type pdf)
+
+<use C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/Raw/press2-eps
+-converted-to.pdf>
+Package pdftex.def Info: C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleO
+utput/Raw/press2-eps-converted-to.pdf used on input line 61.
+(pdftex.def)             Requested size: 328.82707pt x 180.38808pt.
+
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 63.
+
+Package epstopdf Info: Source file: <C:/Users/mufasa/Documents/Thesis/LaTex/fig
+ures/sampleOutput/Raw/press3.eps>
+(epstopdf)                    date: 2013-10-31 18:29:38
+(epstopdf)                    size: 10315 bytes
+(epstopdf)             Output file: <C:/Users/mufasa/Documents/Thesis/LaTex/fig
+ures/sampleOutput/Raw/press3-eps-converted-to.pdf>
+(epstopdf)                    date: 2013-10-31 18:30:10
+(epstopdf)                    size: 6642 bytes
+(epstopdf)             Command: <epstopdf --outfile=C:/Users/mufasa/Documents/T
+hesis/LaTex/figures/sampleOutput/Raw/press3-eps-converted-to.pdf C:/Users/mufas
+a/Documents/Thesis/LaTex/figures/sampleOutput/Raw/press3.eps>
+(epstopdf)             \includegraphics on input line 66.
+Package epstopdf Info: Output file is already uptodate.
+
+<C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/Raw/press3-eps-con
+verted-to.pdf, id=1157, 401.5pt x 220.825pt>
+File: C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/Raw/press3-ep
+s-converted-to.pdf Graphic file (type pdf)
+
+<use C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/Raw/press3-eps
+-converted-to.pdf>
+Package pdftex.def Info: C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleO
+utput/Raw/press3-eps-converted-to.pdf used on input line 66.
+(pdftex.def)             Requested size: 328.82707pt x 180.86537pt.
+
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 68.
+
+Package epstopdf Info: Source file: <C:/Users/mufasa/Documents/Thesis/LaTex/fig
+ures/sampleOutput/Raw/gpsLat.eps>
+(epstopdf)                    date: 2013-10-31 18:29:38
+(epstopdf)                    size: 9640 bytes
+(epstopdf)             Output file: <C:/Users/mufasa/Documents/Thesis/LaTex/fig
+ures/sampleOutput/Raw/gpsLat-eps-converted-to.pdf>
+(epstopdf)                    date: 2013-10-31 18:30:11
+(epstopdf)                    size: 6298 bytes
+(epstopdf)             Command: <epstopdf --outfile=C:/Users/mufasa/Documents/T
+hesis/LaTex/figures/sampleOutput/Raw/gpsLat-eps-converted-to.pdf C:/Users/mufas
+a/Documents/Thesis/LaTex/figures/sampleOutput/Raw/gpsLat.eps>
+(epstopdf)             \includegraphics on input line 71.
+Package epstopdf Info: Output file is already uptodate.
+
+<C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/Raw/gpsLat-eps-con
+verted-to.pdf, id=1158, 387.4475pt x 209.78375pt>
+File: C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/Raw/gpsLat-ep
+s-converted-to.pdf Graphic file (type pdf)
+
+<use C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/Raw/gpsLat-eps
+-converted-to.pdf>
+Package pdftex.def Info: C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleO
+utput/Raw/gpsLat-eps-converted-to.pdf used on input line 71.
+(pdftex.def)             Requested size: 328.82707pt x 178.04492pt.
+
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 73.
+
+Package epstopdf Info: Source file: <C:/Users/mufasa/Documents/Thesis/LaTex/fig
+ures/sampleOutput/Raw/gpsLong.eps>
+(epstopdf)                    date: 2013-10-31 18:29:38
+(epstopdf)                    size: 9642 bytes
+(epstopdf)             Output file: <C:/Users/mufasa/Documents/Thesis/LaTex/fig
+ures/sampleOutput/Raw/gpsLong-eps-converted-to.pdf>
+(epstopdf)                    date: 2013-10-31 18:30:12
+(epstopdf)                    size: 6212 bytes
+(epstopdf)             Command: <epstopdf --outfile=C:/Users/mufasa/Documents/T
+hesis/LaTex/figures/sampleOutput/Raw/gpsLong-eps-converted-to.pdf C:/Users/mufa
+sa/Documents/Thesis/LaTex/figures/sampleOutput/Raw/gpsLong.eps>
+(epstopdf)             \includegraphics on input line 76.
+Package epstopdf Info: Output file is already uptodate.
+
+<C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/Raw/gpsLong-eps-co
+nverted-to.pdf, id=1159, 387.4475pt x 209.78375pt>
+File: C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/Raw/gpsLong-e
+ps-converted-to.pdf Graphic file (type pdf)
+
+<use C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/Raw/gpsLong-ep
+s-converted-to.pdf>
+Package pdftex.def Info: C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleO
+utput/Raw/gpsLong-eps-converted-to.pdf used on input line 76.
+(pdftex.def)             Requested size: 328.82707pt x 178.04492pt.
+
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 78.
+
+Package epstopdf Info: Source file: <C:/Users/mufasa/Documents/Thesis/LaTex/fig
+ures/sampleOutput/Raw/gpsSpd.eps>
+(epstopdf)                    date: 2013-10-31 18:29:38
+(epstopdf)                    size: 9641 bytes
+(epstopdf)             Output file: <C:/Users/mufasa/Documents/Thesis/LaTex/fig
+ures/sampleOutput/Raw/gpsSpd-eps-converted-to.pdf>
+(epstopdf)                    date: 2013-10-31 18:30:13
+(epstopdf)                    size: 6346 bytes
+(epstopdf)             Command: <epstopdf --outfile=C:/Users/mufasa/Documents/T
+hesis/LaTex/figures/sampleOutput/Raw/gpsSpd-eps-converted-to.pdf C:/Users/mufas
+a/Documents/Thesis/LaTex/figures/sampleOutput/Raw/gpsSpd.eps>
+(epstopdf)             \includegraphics on input line 81.
+Package epstopdf Info: Output file is already uptodate.
+
+<C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/Raw/gpsSpd-eps-con
+verted-to.pdf, id=1160, 387.4475pt x 209.78375pt>
+File: C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/Raw/gpsSpd-ep
+s-converted-to.pdf Graphic file (type pdf)
+
+<use C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/Raw/gpsSpd-eps
+-converted-to.pdf>
+Package pdftex.def Info: C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleO
+utput/Raw/gpsSpd-eps-converted-to.pdf used on input line 81.
+(pdftex.def)             Requested size: 328.82707pt x 178.04492pt.
+
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 83.
+
+Package epstopdf Info: Source file: <C:/Users/mufasa/Documents/Thesis/LaTex/fig
+ures/sampleOutput/Raw/gpsCrs.eps>
+(epstopdf)                    date: 2013-10-31 18:29:38
+(epstopdf)                    size: 9640 bytes
+(epstopdf)             Output file: <C:/Users/mufasa/Documents/Thesis/LaTex/fig
+ures/sampleOutput/Raw/gpsCrs-eps-converted-to.pdf>
+(epstopdf)                    date: 2013-10-31 18:30:13
+(epstopdf)                    size: 6220 bytes
+(epstopdf)             Command: <epstopdf --outfile=C:/Users/mufasa/Documents/T
+hesis/LaTex/figures/sampleOutput/Raw/gpsCrs-eps-converted-to.pdf C:/Users/mufas
+a/Documents/Thesis/LaTex/figures/sampleOutput/Raw/gpsCrs.eps>
+(epstopdf)             \includegraphics on input line 86.
+Package epstopdf Info: Output file is already uptodate.
+
+<C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/Raw/gpsCrs-eps-con
+verted-to.pdf, id=1161, 387.4475pt x 209.78375pt>
+File: C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/Raw/gpsCrs-ep
+s-converted-to.pdf Graphic file (type pdf)
+
+<use C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/Raw/gpsCrs-eps
+-converted-to.pdf>
+Package pdftex.def Info: C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleO
+utput/Raw/gpsCrs-eps-converted-to.pdf used on input line 86.
+(pdftex.def)             Requested size: 328.82707pt x 178.04492pt.
+
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 88.
+
+Package epstopdf Info: Source file: <C:/Users/mufasa/Documents/Thesis/LaTex/fig
+ures/sampleOutput/Raw/date.eps>
+(epstopdf)                    date: 2013-10-31 18:29:39
+(epstopdf)                    size: 9862 bytes
+(epstopdf)             Output file: <C:/Users/mufasa/Documents/Thesis/LaTex/fig
+ures/sampleOutput/Raw/date-eps-converted-to.pdf>
+(epstopdf)                    date: 2013-10-31 18:30:14
+(epstopdf)                    size: 6164 bytes
+(epstopdf)             Command: <epstopdf --outfile=C:/Users/mufasa/Documents/T
+hesis/LaTex/figures/sampleOutput/Raw/date-eps-converted-to.pdf C:/Users/mufasa/
+Documents/Thesis/LaTex/figures/sampleOutput/Raw/date.eps>
+(epstopdf)             \includegraphics on input line 91.
+Package epstopdf Info: Output file is already uptodate.
+
+<C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/Raw/date-eps-conve
+rted-to.pdf, id=1162, 398.48875pt x 220.825pt>
+File: C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/Raw/date-eps-
+converted-to.pdf Graphic file (type pdf)
+
+<use C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/Raw/date-eps-c
+onverted-to.pdf>
+Package pdftex.def Info: C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleO
+utput/Raw/date-eps-converted-to.pdf used on input line 91.
+(pdftex.def)             Requested size: 328.82707pt x 182.23003pt.
+
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 93.
+
+Package epstopdf Info: Source file: <C:/Users/mufasa/Documents/Thesis/LaTex/fig
+ures/sampleOutput/Raw/CS.eps>
+(epstopdf)                    date: 2013-10-31 18:29:39
+(epstopdf)                    size: 10151 bytes
+(epstopdf)             Output file: <C:/Users/mufasa/Documents/Thesis/LaTex/fig
+ures/sampleOutput/Raw/CS-eps-converted-to.pdf>
+(epstopdf)                    date: 2013-10-31 18:30:15
+(epstopdf)                    size: 6602 bytes
+(epstopdf)             Command: <epstopdf --outfile=C:/Users/mufasa/Documents/T
+hesis/LaTex/figures/sampleOutput/Raw/CS-eps-converted-to.pdf C:/Users/mufasa/Do
+cuments/Thesis/LaTex/figures/sampleOutput/Raw/CS.eps>
+(epstopdf)             \includegraphics on input line 96.
+Package epstopdf Info: Output file is already uptodate.
+
+<C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/Raw/CS-eps-convert
+ed-to.pdf, id=1163, 378.41376pt x 209.78375pt>
+File: C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/Raw/CS-eps-co
+nverted-to.pdf Graphic file (type pdf)
+
+<use C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/Raw/CS-eps-con
+verted-to.pdf>
+Package pdftex.def Info: C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleO
+utput/Raw/CS-eps-converted-to.pdf used on input line 96.
+(pdftex.def)             Requested size: 328.82707pt x 182.2959pt.
+
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 98.
+
+Package epstopdf Info: Source file: <C:/Users/mufasa/Documents/Thesis/LaTex/fig
+ures/sampleOutput/Raw/temperature.eps>
+(epstopdf)                    date: 2013-10-31 18:29:39
+(epstopdf)                    size: 9651 bytes
+(epstopdf)             Output file: <C:/Users/mufasa/Documents/Thesis/LaTex/fig
+ures/sampleOutput/Raw/temperature-eps-converted-to.pdf>
+(epstopdf)                    date: 2013-10-31 18:30:15
+(epstopdf)                    size: 6446 bytes
+(epstopdf)             Command: <epstopdf --outfile=C:/Users/mufasa/Documents/T
+hesis/LaTex/figures/sampleOutput/Raw/temperature-eps-converted-to.pdf C:/Users/
+mufasa/Documents/Thesis/LaTex/figures/sampleOutput/Raw/temperature.eps>
+(epstopdf)             \includegraphics on input line 101.
+Package epstopdf Info: Output file is already uptodate.
+
+<C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/Raw/temperature-ep
+s-converted-to.pdf, id=1164, 387.4475pt x 209.78375pt>
+File: C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/Raw/temperatu
+re-eps-converted-to.pdf Graphic file (type pdf)
+
+<use C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/Raw/temperatur
+e-eps-converted-to.pdf>
+Package pdftex.def Info: C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleO
+utput/Raw/temperature-eps-converted-to.pdf used on input line 101.
+(pdftex.def)             Requested size: 328.82707pt x 178.04492pt.
+
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 103.
+
+Package epstopdf Info: Source file: <C:/Users/mufasa/Documents/Thesis/LaTex/fig
+ures/sampleOutput/Raw/deltaT.eps>
+(epstopdf)                    date: 2013-10-31 18:29:39
+(epstopdf)                    size: 10080 bytes
+(epstopdf)             Output file: <C:/Users/mufasa/Documents/Thesis/LaTex/fig
+ures/sampleOutput/Raw/deltaT-eps-converted-to.pdf>
+(epstopdf)                    date: 2013-10-31 18:30:16
+(epstopdf)                    size: 6484 bytes
+(epstopdf)             Command: <epstopdf --outfile=C:/Users/mufasa/Documents/T
+hesis/LaTex/figures/sampleOutput/Raw/deltaT-eps-converted-to.pdf C:/Users/mufas
+a/Documents/Thesis/LaTex/figures/sampleOutput/Raw/deltaT.eps>
+(epstopdf)             \includegraphics on input line 106.
+Package epstopdf Info: Output file is already uptodate.
+
+<C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/Raw/deltaT-eps-con
+verted-to.pdf, id=1165, 392.46625pt x 209.78375pt>
+File: C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/Raw/deltaT-ep
+s-converted-to.pdf Graphic file (type pdf)
+
+<use C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/Raw/deltaT-eps
+-converted-to.pdf>
+Package pdftex.def Info: C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleO
+utput/Raw/deltaT-eps-converted-to.pdf used on input line 106.
+(pdftex.def)             Requested size: 328.82707pt x 175.77858pt.
+
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 108.
+
+Package epstopdf Info: Source file: <C:/Users/mufasa/Documents/Thesis/LaTex/fig
+ures/sampleOutput/Raw/rpmPwm.eps>
+(epstopdf)                    date: 2013-10-31 18:29:39
+(epstopdf)                    size: 9641 bytes
+(epstopdf)             Output file: <C:/Users/mufasa/Documents/Thesis/LaTex/fig
+ures/sampleOutput/Raw/rpmPwm-eps-converted-to.pdf>
+(epstopdf)                    date: 2013-10-31 18:30:17
+(epstopdf)                    size: 6100 bytes
+(epstopdf)             Command: <epstopdf --outfile=C:/Users/mufasa/Documents/T
+hesis/LaTex/figures/sampleOutput/Raw/rpmPwm-eps-converted-to.pdf C:/Users/mufas
+a/Documents/Thesis/LaTex/figures/sampleOutput/Raw/rpmPwm.eps>
+(epstopdf)             \includegraphics on input line 111.
+Package epstopdf Info: Output file is already uptodate.
+
+<C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/Raw/rpmPwm-eps-con
+verted-to.pdf, id=1166, 387.4475pt x 209.78375pt>
+File: C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/Raw/rpmPwm-ep
+s-converted-to.pdf Graphic file (type pdf)
+
+<use C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/Raw/rpmPwm-eps
+-converted-to.pdf>
+Package pdftex.def Info: C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleO
+utput/Raw/rpmPwm-eps-converted-to.pdf used on input line 111.
+(pdftex.def)             Requested size: 328.82707pt x 178.04492pt.
+) (./figures/sampleOutput/Units/sampleOutput.tex
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 2.
+
+Package epstopdf Info: Source file: <C:/Users/mufasa/Documents/Thesis/LaTex/fig
+ures/sampleOutput/Units/accelX.eps>
+(epstopdf)                    date: 2013-10-31 18:29:39
+(epstopdf)                    size: 10041 bytes
+(epstopdf)             Output file: <C:/Users/mufasa/Documents/Thesis/LaTex/fig
+ures/sampleOutput/Units/accelX-eps-converted-to.pdf>
+(epstopdf)                    date: 2013-10-31 18:30:17
+(epstopdf)                    size: 6527 bytes
+(epstopdf)             Command: <epstopdf --outfile=C:/Users/mufasa/Documents/T
+hesis/LaTex/figures/sampleOutput/Units/accelX-eps-converted-to.pdf C:/Users/muf
+asa/Documents/Thesis/LaTex/figures/sampleOutput/Units/accelX.eps>
+(epstopdf)             \includegraphics on input line 5.
+Package epstopdf Info: Output file is already uptodate.
+
+<C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/Units/accelX-eps-c
+onverted-to.pdf, id=1167, 390.45876pt x 209.78375pt>
+File: C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/Units/accelX-
+eps-converted-to.pdf Graphic file (type pdf)
+
+<use C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/Units/accelX-e
+ps-converted-to.pdf>
+Package pdftex.def Info: C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleO
+utput/Units/accelX-eps-converted-to.pdf used on input line 5.
+(pdftex.def)             Requested size: 328.82707pt x 176.67807pt.
+
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 7.
+
+Package epstopdf Info: Source file: <C:/Users/mufasa/Documents/Thesis/LaTex/fig
+ures/sampleOutput/Units/accelY.eps>
+(epstopdf)                    date: 2013-10-31 18:29:40
+(epstopdf)                    size: 9975 bytes
+(epstopdf)             Output file: <C:/Users/mufasa/Documents/Thesis/LaTex/fig
+ures/sampleOutput/Units/accelY-eps-converted-to.pdf>
+(epstopdf)                    date: 2013-10-31 18:30:18
+(epstopdf)                    size: 6192 bytes
+(epstopdf)             Command: <epstopdf --outfile=C:/Users/mufasa/Documents/T
+hesis/LaTex/figures/sampleOutput/Units/accelY-eps-converted-to.pdf C:/Users/muf
+asa/Documents/Thesis/LaTex/figures/sampleOutput/Units/accelY.eps>
+(epstopdf)             \includegraphics on input line 10.
+Package epstopdf Info: Output file is already uptodate.
+
+<C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/Units/accelY-eps-c
+onverted-to.pdf, id=1168, 384.43625pt x 209.78375pt>
+File: C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/Units/accelY-
+eps-converted-to.pdf Graphic file (type pdf)
+
+<use C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/Units/accelY-e
+ps-converted-to.pdf>
+Package pdftex.def Info: C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleO
+utput/Units/accelY-eps-converted-to.pdf used on input line 10.
+(pdftex.def)             Requested size: 328.82707pt x 179.45018pt.
+
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 12.
+
+Package epstopdf Info: Source file: <C:/Users/mufasa/Documents/Thesis/LaTex/fig
+ures/sampleOutput/Units/accelZ.eps>
+(epstopdf)                    date: 2013-10-31 18:29:40
+(epstopdf)                    size: 10130 bytes
+(epstopdf)             Output file: <C:/Users/mufasa/Documents/Thesis/LaTex/fig
+ures/sampleOutput/Units/accelZ-eps-converted-to.pdf>
+(epstopdf)                    date: 2013-10-31 18:30:19
+(epstopdf)                    size: 6576 bytes
+(epstopdf)             Command: <epstopdf --outfile=C:/Users/mufasa/Documents/T
+hesis/LaTex/figures/sampleOutput/Units/accelZ-eps-converted-to.pdf C:/Users/muf
+asa/Documents/Thesis/LaTex/figures/sampleOutput/Units/accelZ.eps>
+(epstopdf)             \includegraphics on input line 15.
+Package epstopdf Info: Output file is already uptodate.
+
+<C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/Units/accelZ-eps-c
+onverted-to.pdf, id=1169, 396.48125pt x 209.78375pt>
+File: C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/Units/accelZ-
+eps-converted-to.pdf Graphic file (type pdf)
+
+<use C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/Units/accelZ-e
+ps-converted-to.pdf>
+Package pdftex.def Info: C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleO
+utput/Units/accelZ-eps-converted-to.pdf used on input line 15.
+(pdftex.def)             Requested size: 328.82707pt x 173.98921pt.
+
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 17.
+
+Package epstopdf Info: Source file: <C:/Users/mufasa/Documents/Thesis/LaTex/fig
+ures/sampleOutput/Units/gyroX.eps>
+(epstopdf)                    date: 2013-10-31 18:29:40
+(epstopdf)                    size: 9864 bytes
+(epstopdf)             Output file: <C:/Users/mufasa/Documents/Thesis/LaTex/fig
+ures/sampleOutput/Units/gyroX-eps-converted-to.pdf>
+(epstopdf)                    date: 2013-10-31 18:30:20
+(epstopdf)                    size: 6541 bytes
+(epstopdf)             Command: <epstopdf --outfile=C:/Users/mufasa/Documents/T
+hesis/LaTex/figures/sampleOutput/Units/gyroX-eps-converted-to.pdf C:/Users/mufa
+sa/Documents/Thesis/LaTex/figures/sampleOutput/Units/gyroX.eps>
+(epstopdf)             \includegraphics on input line 20.
+Package epstopdf Info: Output file is already uptodate.
+
+<C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/Units/gyroX-eps-co
+nverted-to.pdf, id=1170, 387.4475pt x 209.78375pt>
+File: C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/Units/gyroX-e
+ps-converted-to.pdf Graphic file (type pdf)
+
+<use C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/Units/gyroX-ep
+s-converted-to.pdf>
+Package pdftex.def Info: C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleO
+utput/Units/gyroX-eps-converted-to.pdf used on input line 20.
+(pdftex.def)             Requested size: 328.82707pt x 178.04492pt.
+
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 22.
+
+Package epstopdf Info: Source file: <C:/Users/mufasa/Documents/Thesis/LaTex/fig
+ures/sampleOutput/Units/gyroY.eps>
+(epstopdf)                    date: 2013-10-31 18:29:40
+(epstopdf)                    size: 9732 bytes
+(epstopdf)             Output file: <C:/Users/mufasa/Documents/Thesis/LaTex/fig
+ures/sampleOutput/Units/gyroY-eps-converted-to.pdf>
+(epstopdf)                    date: 2013-10-31 18:30:20
+(epstopdf)                    size: 6192 bytes
+(epstopdf)             Command: <epstopdf --outfile=C:/Users/mufasa/Documents/T
+hesis/LaTex/figures/sampleOutput/Units/gyroY-eps-converted-to.pdf C:/Users/mufa
+sa/Documents/Thesis/LaTex/figures/sampleOutput/Units/gyroY.eps>
+(epstopdf)             \includegraphics on input line 25.
+Package epstopdf Info: Output file is already uptodate.
+
+<C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/Units/gyroY-eps-co
+nverted-to.pdf, id=1171, 381.425pt x 209.78375pt>
+File: C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/Units/gyroY-e
+ps-converted-to.pdf Graphic file (type pdf)
+
+<use C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/Units/gyroY-ep
+s-converted-to.pdf>
+Package pdftex.def Info: C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleO
+utput/Units/gyroY-eps-converted-to.pdf used on input line 25.
+(pdftex.def)             Requested size: 328.82707pt x 180.86183pt.
+
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 27.
+
+Package epstopdf Info: Source file: <C:/Users/mufasa/Documents/Thesis/LaTex/fig
+ures/sampleOutput/Units/gyroZ.eps>
+(epstopdf)                    date: 2013-10-31 18:29:40
+(epstopdf)                    size: 9645 bytes
+(epstopdf)             Output file: <C:/Users/mufasa/Documents/Thesis/LaTex/fig
+ures/sampleOutput/Units/gyroZ-eps-converted-to.pdf>
+(epstopdf)                    date: 2013-10-31 18:30:21
+(epstopdf)                    size: 6380 bytes
+(epstopdf)             Command: <epstopdf --outfile=C:/Users/mufasa/Documents/T
+hesis/LaTex/figures/sampleOutput/Units/gyroZ-eps-converted-to.pdf C:/Users/mufa
+sa/Documents/Thesis/LaTex/figures/sampleOutput/Units/gyroZ.eps>
+(epstopdf)             \includegraphics on input line 30.
+Package epstopdf Info: Output file is already uptodate.
+
+<C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/Units/gyroZ-eps-co
+nverted-to.pdf, id=1172, 387.4475pt x 209.78375pt>
+File: C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/Units/gyroZ-e
+ps-converted-to.pdf Graphic file (type pdf)
+
+<use C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/Units/gyroZ-ep
+s-converted-to.pdf>
+Package pdftex.def Info: C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleO
+utput/Units/gyroZ-eps-converted-to.pdf used on input line 30.
+(pdftex.def)             Requested size: 328.82707pt x 178.04492pt.
+ [51
+
+ <c:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/Raw/gyroZ-eps-con
+verted-to.pdf> <c:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/Raw
+/magX-eps-converted-to.pdf>] [52 <c:/Users/mufasa/Documents/Thesis/LaTex/figure
+s/sampleOutput/Raw/magY-eps-converted-to.pdf> <c:/Users/mufasa/Documents/Thesis
+/LaTex/figures/sampleOutput/Raw/magZ-eps-converted-to.pdf> <c:/Users/mufasa/Doc
+uments/Thesis/LaTex/figures/sampleOutput/Raw/press0-eps-converted-to.pdf>] [53 
+<c:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/Raw/press1-eps-con
+verted-to.pdf> <c:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/Raw
+/press2-eps-converted-to.pdf> <c:/Users/mufasa/Documents/Thesis/LaTex/figures/s
+ampleOutput/Raw/press3-eps-converted-to.pdf>] [54 <c:/Users/mufasa/Documents/Th
+esis/LaTex/figures/sampleOutput/Raw/gpsLat-eps-converted-to.pdf> <c:/Users/mufa
+sa/Documents/Thesis/LaTex/figures/sampleOutput/Raw/gpsLong-eps-converted-to.pdf
+> <c:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/Raw/gpsSpd-eps-c
+onverted-to.pdf>] [55 <c:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOut
+put/Raw/gpsCrs-eps-converted-to.pdf> <c:/Users/mufasa/Documents/Thesis/LaTex/fi
+gures/sampleOutput/Raw/date-eps-converted-to.pdf> <c:/Users/mufasa/Documents/Th
+esis/LaTex/figures/sampleOutput/Raw/CS-eps-converted-to.pdf>] [56 <c:/Users/muf
+asa/Documents/Thesis/LaTex/figures/sampleOutput/Raw/temperature-eps-converted-t
+o.pdf> <c:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/Raw/deltaT-
+eps-converted-to.pdf> <c:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOut
+put/Raw/rpmPwm-eps-converted-to.pdf>] [57 <c:/Users/mufasa/Documents/Thesis/LaT
+ex/figures/sampleOutput/Units/accelX-eps-converted-to.pdf> <c:/Users/mufasa/Doc
+uments/Thesis/LaTex/figures/sampleOutput/Units/accelY-eps-converted-to.pdf> <c:
+/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/Units/accelZ-eps-conv
+erted-to.pdf>] [58 <c:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput
+/Units/gyroX-eps-converted-to.pdf> <c:/Users/mufasa/Documents/Thesis/LaTex/figu
+res/sampleOutput/Units/gyroY-eps-converted-to.pdf> <c:/Users/mufasa/Documents/T
+hesis/LaTex/figures/sampleOutput/Units/gyroZ-eps-converted-to.pdf>]
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 33.
+
+Package epstopdf Info: Source file: <C:/Users/mufasa/Documents/Thesis/LaTex/fig
+ures/sampleOutput/Units/magX.eps>
+(epstopdf)                    date: 2013-10-31 18:29:41
+(epstopdf)                    size: 9740 bytes
+(epstopdf)             Output file: <C:/Users/mufasa/Documents/Thesis/LaTex/fig
+ures/sampleOutput/Units/magX-eps-converted-to.pdf>
+(epstopdf)                    date: 2013-10-31 18:30:22
+(epstopdf)                    size: 6584 bytes
+(epstopdf)             Command: <epstopdf --outfile=C:/Users/mufasa/Documents/T
+hesis/LaTex/figures/sampleOutput/Units/magX-eps-converted-to.pdf C:/Users/mufas
+a/Documents/Thesis/LaTex/figures/sampleOutput/Units/magX.eps>
+(epstopdf)             \includegraphics on input line 36.
+Package epstopdf Info: Output file is already uptodate.
+
+<C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/Units/magX-eps-con
+verted-to.pdf, id=1337, 402.50375pt x 209.78375pt>
+File: C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/Units/magX-ep
+s-converted-to.pdf Graphic file (type pdf)
+
+<use C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/Units/magX-eps
+-converted-to.pdf>
+Package pdftex.def Info: C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleO
+utput/Units/magX-eps-converted-to.pdf used on input line 36.
+(pdftex.def)             Requested size: 328.82707pt x 171.38356pt.
+
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 38.
+
+Package epstopdf Info: Source file: <C:/Users/mufasa/Documents/Thesis/LaTex/fig
+ures/sampleOutput/Units/magY.eps>
+(epstopdf)                    date: 2013-10-31 18:29:41
+(epstopdf)                    size: 9873 bytes
+(epstopdf)             Output file: <C:/Users/mufasa/Documents/Thesis/LaTex/fig
+ures/sampleOutput/Units/magY-eps-converted-to.pdf>
+(epstopdf)                    date: 2013-10-31 18:30:23
+(epstopdf)                    size: 6499 bytes
+(epstopdf)             Command: <epstopdf --outfile=C:/Users/mufasa/Documents/T
+hesis/LaTex/figures/sampleOutput/Units/magY-eps-converted-to.pdf C:/Users/mufas
+a/Documents/Thesis/LaTex/figures/sampleOutput/Units/magY.eps>
+(epstopdf)             \includegraphics on input line 41.
+Package epstopdf Info: Output file is already uptodate.
+
+<C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/Units/magY-eps-con
+verted-to.pdf, id=1338, 398.48875pt x 209.78375pt>
+File: C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/Units/magY-ep
+s-converted-to.pdf Graphic file (type pdf)
+
+<use C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/Units/magY-eps
+-converted-to.pdf>
+Package pdftex.def Info: C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleO
+utput/Units/magY-eps-converted-to.pdf used on input line 41.
+(pdftex.def)             Requested size: 328.82707pt x 173.11853pt.
+
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 43.
+
+Package epstopdf Info: Source file: <C:/Users/mufasa/Documents/Thesis/LaTex/fig
+ures/sampleOutput/Units/magZ.eps>
+(epstopdf)                    date: 2013-10-31 18:29:41
+(epstopdf)                    size: 10020 bytes
+(epstopdf)             Output file: <C:/Users/mufasa/Documents/Thesis/LaTex/fig
+ures/sampleOutput/Units/magZ-eps-converted-to.pdf>
+(epstopdf)                    date: 2013-10-31 18:30:23
+(epstopdf)                    size: 6606 bytes
+(epstopdf)             Command: <epstopdf --outfile=C:/Users/mufasa/Documents/T
+hesis/LaTex/figures/sampleOutput/Units/magZ-eps-converted-to.pdf C:/Users/mufas
+a/Documents/Thesis/LaTex/figures/sampleOutput/Units/magZ.eps>
+(epstopdf)             \includegraphics on input line 46.
+Package epstopdf Info: Output file is already uptodate.
+
+<C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/Units/magZ-eps-con
+verted-to.pdf, id=1339, 402.50375pt x 220.825pt>
+File: C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/Units/magZ-ep
+s-converted-to.pdf Graphic file (type pdf)
+
+<use C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/Units/magZ-eps
+-converted-to.pdf>
+Package pdftex.def Info: C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleO
+utput/Units/magZ-eps-converted-to.pdf used on input line 46.
+(pdftex.def)             Requested size: 328.82707pt x 180.40375pt.
+
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 48.
+
+Package epstopdf Info: Source file: <C:/Users/mufasa/Documents/Thesis/LaTex/fig
+ures/sampleOutput/Units/press0.eps>
+(epstopdf)                    date: 2013-10-31 18:29:41
+(epstopdf)                    size: 10361 bytes
+(epstopdf)             Output file: <C:/Users/mufasa/Documents/Thesis/LaTex/fig
+ures/sampleOutput/Units/press0-eps-converted-to.pdf>
+(epstopdf)                    date: 2013-10-31 18:30:24
+(epstopdf)                    size: 6772 bytes
+(epstopdf)             Command: <epstopdf --outfile=C:/Users/mufasa/Documents/T
+hesis/LaTex/figures/sampleOutput/Units/press0-eps-converted-to.pdf C:/Users/muf
+asa/Documents/Thesis/LaTex/figures/sampleOutput/Units/press0.eps>
+(epstopdf)             \includegraphics on input line 51.
+Package epstopdf Info: Output file is already uptodate.
+
+<C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/Units/press0-eps-c
+onverted-to.pdf, id=1340, 382.42876pt x 209.78375pt>
+File: C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/Units/press0-
+eps-converted-to.pdf Graphic file (type pdf)
+
+<use C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/Units/press0-e
+ps-converted-to.pdf>
+Package pdftex.def Info: C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleO
+utput/Units/press0-eps-converted-to.pdf used on input line 51.
+(pdftex.def)             Requested size: 328.82707pt x 180.38808pt.
+
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 53.
+
+Package epstopdf Info: Source file: <C:/Users/mufasa/Documents/Thesis/LaTex/fig
+ures/sampleOutput/Units/press1.eps>
+(epstopdf)                    date: 2013-10-31 18:29:41
+(epstopdf)                    size: 10340 bytes
+(epstopdf)             Output file: <C:/Users/mufasa/Documents/Thesis/LaTex/fig
+ures/sampleOutput/Units/press1-eps-converted-to.pdf>
+(epstopdf)                    date: 2013-10-31 18:30:25
+(epstopdf)                    size: 6678 bytes
+(epstopdf)             Command: <epstopdf --outfile=C:/Users/mufasa/Documents/T
+hesis/LaTex/figures/sampleOutput/Units/press1-eps-converted-to.pdf C:/Users/muf
+asa/Documents/Thesis/LaTex/figures/sampleOutput/Units/press1.eps>
+(epstopdf)             \includegraphics on input line 56.
+Package epstopdf Info: Output file is already uptodate.
+
+<C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/Units/press1-eps-c
+onverted-to.pdf, id=1341, 393.47pt x 209.78375pt>
+File: C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/Units/press1-
+eps-converted-to.pdf Graphic file (type pdf)
+
+<use C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/Units/press1-e
+ps-converted-to.pdf>
+Package pdftex.def Info: C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleO
+utput/Units/press1-eps-converted-to.pdf used on input line 56.
+(pdftex.def)             Requested size: 328.82707pt x 175.31764pt.
+
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 58.
+
+Package epstopdf Info: Source file: <C:/Users/mufasa/Documents/Thesis/LaTex/fig
+ures/sampleOutput/Units/press2.eps>
+(epstopdf)                    date: 2013-10-31 18:29:41
+(epstopdf)                    size: 10243 bytes
+(epstopdf)             Output file: <C:/Users/mufasa/Documents/Thesis/LaTex/fig
+ures/sampleOutput/Units/press2-eps-converted-to.pdf>
+(epstopdf)                    date: 2013-10-31 18:30:25
+(epstopdf)                    size: 6504 bytes
+(epstopdf)             Command: <epstopdf --outfile=C:/Users/mufasa/Documents/T
+hesis/LaTex/figures/sampleOutput/Units/press2-eps-converted-to.pdf C:/Users/muf
+asa/Documents/Thesis/LaTex/figures/sampleOutput/Units/press2.eps>
+(epstopdf)             \includegraphics on input line 61.
+Package epstopdf Info: Output file is already uptodate.
+
+<C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/Units/press2-eps-c
+onverted-to.pdf, id=1342, 382.42876pt x 209.78375pt>
+File: C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/Units/press2-
+eps-converted-to.pdf Graphic file (type pdf)
+
+<use C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/Units/press2-e
+ps-converted-to.pdf>
+Package pdftex.def Info: C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleO
+utput/Units/press2-eps-converted-to.pdf used on input line 61.
+(pdftex.def)             Requested size: 328.82707pt x 180.38808pt.
+
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 63.
+
+Package epstopdf Info: Source file: <C:/Users/mufasa/Documents/Thesis/LaTex/fig
+ures/sampleOutput/Units/press3.eps>
+(epstopdf)                    date: 2013-10-31 18:29:42
+(epstopdf)                    size: 10317 bytes
+(epstopdf)             Output file: <C:/Users/mufasa/Documents/Thesis/LaTex/fig
+ures/sampleOutput/Units/press3-eps-converted-to.pdf>
+(epstopdf)                    date: 2013-10-31 18:30:26
+(epstopdf)                    size: 6646 bytes
+(epstopdf)             Command: <epstopdf --outfile=C:/Users/mufasa/Documents/T
+hesis/LaTex/figures/sampleOutput/Units/press3-eps-converted-to.pdf C:/Users/muf
+asa/Documents/Thesis/LaTex/figures/sampleOutput/Units/press3.eps>
+(epstopdf)             \includegraphics on input line 66.
+Package epstopdf Info: Output file is already uptodate.
+
+<C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/Units/press3-eps-c
+onverted-to.pdf, id=1343, 401.5pt x 220.825pt>
+File: C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/Units/press3-
+eps-converted-to.pdf Graphic file (type pdf)
+
+<use C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/Units/press3-e
+ps-converted-to.pdf>
+Package pdftex.def Info: C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleO
+utput/Units/press3-eps-converted-to.pdf used on input line 66.
+(pdftex.def)             Requested size: 328.82707pt x 180.86537pt.
+
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 68.
+
+Package epstopdf Info: Source file: <C:/Users/mufasa/Documents/Thesis/LaTex/fig
+ures/sampleOutput/Units/gpsLat.eps>
+(epstopdf)                    date: 2013-10-31 18:29:42
+(epstopdf)                    size: 9642 bytes
+(epstopdf)             Output file: <C:/Users/mufasa/Documents/Thesis/LaTex/fig
+ures/sampleOutput/Units/gpsLat-eps-converted-to.pdf>
+(epstopdf)                    date: 2013-10-31 18:30:27
+(epstopdf)                    size: 6302 bytes
+(epstopdf)             Command: <epstopdf --outfile=C:/Users/mufasa/Documents/T
+hesis/LaTex/figures/sampleOutput/Units/gpsLat-eps-converted-to.pdf C:/Users/muf
+asa/Documents/Thesis/LaTex/figures/sampleOutput/Units/gpsLat.eps>
+(epstopdf)             \includegraphics on input line 71.
+Package epstopdf Info: Output file is already uptodate.
+
+<C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/Units/gpsLat-eps-c
+onverted-to.pdf, id=1344, 387.4475pt x 209.78375pt>
+File: C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/Units/gpsLat-
+eps-converted-to.pdf Graphic file (type pdf)
+
+<use C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/Units/gpsLat-e
+ps-converted-to.pdf>
+Package pdftex.def Info: C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleO
+utput/Units/gpsLat-eps-converted-to.pdf used on input line 71.
+(pdftex.def)             Requested size: 328.82707pt x 178.04492pt.
+
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 73.
+
+Package epstopdf Info: Source file: <C:/Users/mufasa/Documents/Thesis/LaTex/fig
+ures/sampleOutput/Units/gpsLong.eps>
+(epstopdf)                    date: 2013-10-31 18:29:42
+(epstopdf)                    size: 9644 bytes
+(epstopdf)             Output file: <C:/Users/mufasa/Documents/Thesis/LaTex/fig
+ures/sampleOutput/Units/gpsLong-eps-converted-to.pdf>
+(epstopdf)                    date: 2013-10-31 18:30:28
+(epstopdf)                    size: 6216 bytes
+(epstopdf)             Command: <epstopdf --outfile=C:/Users/mufasa/Documents/T
+hesis/LaTex/figures/sampleOutput/Units/gpsLong-eps-converted-to.pdf C:/Users/mu
+fasa/Documents/Thesis/LaTex/figures/sampleOutput/Units/gpsLong.eps>
+(epstopdf)             \includegraphics on input line 76.
+Package epstopdf Info: Output file is already uptodate.
+
+<C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/Units/gpsLong-eps-
+converted-to.pdf, id=1345, 387.4475pt x 209.78375pt>
+File: C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/Units/gpsLong
+-eps-converted-to.pdf Graphic file (type pdf)
+
+<use C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/Units/gpsLong-
+eps-converted-to.pdf>
+Package pdftex.def Info: C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleO
+utput/Units/gpsLong-eps-converted-to.pdf used on input line 76.
+(pdftex.def)             Requested size: 328.82707pt x 178.04492pt.
+
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 78.
+
+Package epstopdf Info: Source file: <C:/Users/mufasa/Documents/Thesis/LaTex/fig
+ures/sampleOutput/Units/gpsSpd.eps>
+(epstopdf)                    date: 2013-10-31 18:29:42
+(epstopdf)                    size: 9647 bytes
+(epstopdf)             Output file: <C:/Users/mufasa/Documents/Thesis/LaTex/fig
+ures/sampleOutput/Units/gpsSpd-eps-converted-to.pdf>
+(epstopdf)                    date: 2013-10-31 18:30:28
+(epstopdf)                    size: 6528 bytes
+(epstopdf)             Command: <epstopdf --outfile=C:/Users/mufasa/Documents/T
+hesis/LaTex/figures/sampleOutput/Units/gpsSpd-eps-converted-to.pdf C:/Users/muf
+asa/Documents/Thesis/LaTex/figures/sampleOutput/Units/gpsSpd.eps>
+(epstopdf)             \includegraphics on input line 81.
+Package epstopdf Info: Output file is already uptodate.
+
+<C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/Units/gpsSpd-eps-c
+onverted-to.pdf, id=1346, 387.4475pt x 209.78375pt>
+File: C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/Units/gpsSpd-
+eps-converted-to.pdf Graphic file (type pdf)
+
+<use C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/Units/gpsSpd-e
+ps-converted-to.pdf>
+Package pdftex.def Info: C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleO
+utput/Units/gpsSpd-eps-converted-to.pdf used on input line 81.
+(pdftex.def)             Requested size: 328.82707pt x 178.04492pt.
+
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 83.
+
+Package epstopdf Info: Source file: <C:/Users/mufasa/Documents/Thesis/LaTex/fig
+ures/sampleOutput/Units/gpsCrs.eps>
+(epstopdf)                    date: 2013-10-31 18:29:42
+(epstopdf)                    size: 9646 bytes
+(epstopdf)             Output file: <C:/Users/mufasa/Documents/Thesis/LaTex/fig
+ures/sampleOutput/Units/gpsCrs-eps-converted-to.pdf>
+(epstopdf)                    date: 2013-10-31 18:30:29
+(epstopdf)                    size: 6538 bytes
+(epstopdf)             Command: <epstopdf --outfile=C:/Users/mufasa/Documents/T
+hesis/LaTex/figures/sampleOutput/Units/gpsCrs-eps-converted-to.pdf C:/Users/muf
+asa/Documents/Thesis/LaTex/figures/sampleOutput/Units/gpsCrs.eps>
+(epstopdf)             \includegraphics on input line 86.
+Package epstopdf Info: Output file is already uptodate.
+
+<C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/Units/gpsCrs-eps-c
+onverted-to.pdf, id=1347, 387.4475pt x 209.78375pt>
+File: C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/Units/gpsCrs-
+eps-converted-to.pdf Graphic file (type pdf)
+
+<use C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/Units/gpsCrs-e
+ps-converted-to.pdf>
+Package pdftex.def Info: C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleO
+utput/Units/gpsCrs-eps-converted-to.pdf used on input line 86.
+(pdftex.def)             Requested size: 328.82707pt x 178.04492pt.
+
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 88.
+
+Package epstopdf Info: Source file: <C:/Users/mufasa/Documents/Thesis/LaTex/fig
+ures/sampleOutput/Units/date.eps>
+(epstopdf)                    date: 2013-10-31 18:29:43
+(epstopdf)                    size: 9864 bytes
+(epstopdf)             Output file: <C:/Users/mufasa/Documents/Thesis/LaTex/fig
+ures/sampleOutput/Units/date-eps-converted-to.pdf>
+(epstopdf)                    date: 2013-10-31 18:30:30
+(epstopdf)                    size: 6168 bytes
+(epstopdf)             Command: <epstopdf --outfile=C:/Users/mufasa/Documents/T
+hesis/LaTex/figures/sampleOutput/Units/date-eps-converted-to.pdf C:/Users/mufas
+a/Documents/Thesis/LaTex/figures/sampleOutput/Units/date.eps>
+(epstopdf)             \includegraphics on input line 91.
+Package epstopdf Info: Output file is already uptodate.
+
+<C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/Units/date-eps-con
+verted-to.pdf, id=1348, 398.48875pt x 220.825pt>
+File: C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/Units/date-ep
+s-converted-to.pdf Graphic file (type pdf)
+
+<use C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/Units/date-eps
+-converted-to.pdf>
+Package pdftex.def Info: C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleO
+utput/Units/date-eps-converted-to.pdf used on input line 91.
+(pdftex.def)             Requested size: 328.82707pt x 182.23003pt.
+
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 93.
+
+Package epstopdf Info: Source file: <C:/Users/mufasa/Documents/Thesis/LaTex/fig
+ures/sampleOutput/Units/CS.eps>
+(epstopdf)                    date: 2013-10-31 18:29:43
+(epstopdf)                    size: 10153 bytes
+(epstopdf)             Output file: <C:/Users/mufasa/Documents/Thesis/LaTex/fig
+ures/sampleOutput/Units/CS-eps-converted-to.pdf>
+(epstopdf)                    date: 2013-10-31 18:30:31
+(epstopdf)                    size: 6606 bytes
+(epstopdf)             Command: <epstopdf --outfile=C:/Users/mufasa/Documents/T
+hesis/LaTex/figures/sampleOutput/Units/CS-eps-converted-to.pdf C:/Users/mufasa/
+Documents/Thesis/LaTex/figures/sampleOutput/Units/CS.eps>
+(epstopdf)             \includegraphics on input line 96.
+Package epstopdf Info: Output file is already uptodate.
+
+<C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/Units/CS-eps-conve
+rted-to.pdf, id=1349, 378.41376pt x 209.78375pt>
+File: C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/Units/CS-eps-
+converted-to.pdf Graphic file (type pdf)
+
+<use C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/Units/CS-eps-c
+onverted-to.pdf>
+Package pdftex.def Info: C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleO
+utput/Units/CS-eps-converted-to.pdf used on input line 96.
+(pdftex.def)             Requested size: 328.82707pt x 182.2959pt.
+
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 98.
+
+Package epstopdf Info: Source file: <C:/Users/mufasa/Documents/Thesis/LaTex/fig
+ures/sampleOutput/Units/temperature.eps>
+(epstopdf)                    date: 2013-10-31 18:29:43
+(epstopdf)                    size: 9653 bytes
+(epstopdf)             Output file: <C:/Users/mufasa/Documents/Thesis/LaTex/fig
+ures/sampleOutput/Units/temperature-eps-converted-to.pdf>
+(epstopdf)                    date: 2013-10-31 18:30:32
+(epstopdf)                    size: 6450 bytes
+(epstopdf)             Command: <epstopdf --outfile=C:/Users/mufasa/Documents/T
+hesis/LaTex/figures/sampleOutput/Units/temperature-eps-converted-to.pdf C:/User
+s/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/Units/temperature.eps>
+(epstopdf)             \includegraphics on input line 101.
+Package epstopdf Info: Output file is already uptodate.
+
+<C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/Units/temperature-
+eps-converted-to.pdf, id=1350, 387.4475pt x 209.78375pt>
+File: C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/Units/tempera
+ture-eps-converted-to.pdf Graphic file (type pdf)
+
+<use C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/Units/temperat
+ure-eps-converted-to.pdf>
+Package pdftex.def Info: C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleO
+utput/Units/temperature-eps-converted-to.pdf used on input line 101.
+(pdftex.def)             Requested size: 328.82707pt x 178.04492pt.
+
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 103.
+
+Package epstopdf Info: Source file: <C:/Users/mufasa/Documents/Thesis/LaTex/fig
+ures/sampleOutput/Units/deltaT.eps>
+(epstopdf)                    date: 2013-10-31 18:29:43
+(epstopdf)                    size: 10082 bytes
+(epstopdf)             Output file: <C:/Users/mufasa/Documents/Thesis/LaTex/fig
+ures/sampleOutput/Units/deltaT-eps-converted-to.pdf>
+(epstopdf)                    date: 2013-10-31 18:30:32
+(epstopdf)                    size: 6488 bytes
+(epstopdf)             Command: <epstopdf --outfile=C:/Users/mufasa/Documents/T
+hesis/LaTex/figures/sampleOutput/Units/deltaT-eps-converted-to.pdf C:/Users/muf
+asa/Documents/Thesis/LaTex/figures/sampleOutput/Units/deltaT.eps>
+(epstopdf)             \includegraphics on input line 106.
+Package epstopdf Info: Output file is already uptodate.
+
+<C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/Units/deltaT-eps-c
+onverted-to.pdf, id=1351, 392.46625pt x 209.78375pt>
+File: C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/Units/deltaT-
+eps-converted-to.pdf Graphic file (type pdf)
+
+<use C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/Units/deltaT-e
+ps-converted-to.pdf>
+Package pdftex.def Info: C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleO
+utput/Units/deltaT-eps-converted-to.pdf used on input line 106.
+(pdftex.def)             Requested size: 328.82707pt x 175.77858pt.
+
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 108.
+
+Package epstopdf Info: Source file: <C:/Users/mufasa/Documents/Thesis/LaTex/fig
+ures/sampleOutput/Units/rpmPwm.eps>
+(epstopdf)                    date: 2013-10-31 18:29:43
+(epstopdf)                    size: 9643 bytes
+(epstopdf)             Output file: <C:/Users/mufasa/Documents/Thesis/LaTex/fig
+ures/sampleOutput/Units/rpmPwm-eps-converted-to.pdf>
+(epstopdf)                    date: 2013-10-31 18:30:33
+(epstopdf)                    size: 6104 bytes
+(epstopdf)             Command: <epstopdf --outfile=C:/Users/mufasa/Documents/T
+hesis/LaTex/figures/sampleOutput/Units/rpmPwm-eps-converted-to.pdf C:/Users/muf
+asa/Documents/Thesis/LaTex/figures/sampleOutput/Units/rpmPwm.eps>
+(epstopdf)             \includegraphics on input line 111.
+Package epstopdf Info: Output file is already uptodate.
+
+<C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/Units/rpmPwm-eps-c
+onverted-to.pdf, id=1352, 387.4475pt x 209.78375pt>
+File: C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/Units/rpmPwm-
+eps-converted-to.pdf Graphic file (type pdf)
+
+<use C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/Units/rpmPwm-e
+ps-converted-to.pdf>
+Package pdftex.def Info: C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleO
+utput/Units/rpmPwm-eps-converted-to.pdf used on input line 111.
+(pdftex.def)             Requested size: 328.82707pt x 178.04492pt.
+
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 113.
+
+Package epstopdf Info: Source file: <C:/Users/mufasa/Documents/Thesis/LaTex/fig
+ures/sampleOutput/Units/ang2300X.eps>
+(epstopdf)                    date: 2013-10-31 18:29:43
+(epstopdf)                    size: 9646 bytes
+(epstopdf)             Output file: <C:/Users/mufasa/Documents/Thesis/LaTex/fig
+ures/sampleOutput/Units/ang2300X-eps-converted-to.pdf>
+(epstopdf)                    date: 2013-10-31 18:30:34
+(epstopdf)                    size: 6360 bytes
+(epstopdf)             Command: <epstopdf --outfile=C:/Users/mufasa/Documents/T
+hesis/LaTex/figures/sampleOutput/Units/ang2300X-eps-converted-to.pdf C:/Users/m
+ufasa/Documents/Thesis/LaTex/figures/sampleOutput/Units/ang2300X.eps>
+(epstopdf)             \includegraphics on input line 116.
+Package epstopdf Info: Output file is already uptodate.
+
+<C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/Units/ang2300X-eps
+-converted-to.pdf, id=1353, 387.4475pt x 209.78375pt>
+File: C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/Units/ang2300
+X-eps-converted-to.pdf Graphic file (type pdf)
+
+<use C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/Units/ang2300X
+-eps-converted-to.pdf>
+Package pdftex.def Info: C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleO
+utput/Units/ang2300X-eps-converted-to.pdf used on input line 116.
+(pdftex.def)             Requested size: 328.82707pt x 178.04492pt.
+
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 118.
+
+Package epstopdf Info: Source file: <C:/Users/mufasa/Documents/Thesis/LaTex/fig
+ures/sampleOutput/Units/ang2300Y.eps>
+(epstopdf)                    date: 2013-10-31 18:29:44
+(epstopdf)                    size: 9646 bytes
+(epstopdf)             Output file: <C:/Users/mufasa/Documents/Thesis/LaTex/fig
+ures/sampleOutput/Units/ang2300Y-eps-converted-to.pdf>
+(epstopdf)                    date: 2013-10-31 18:30:35
+(epstopdf)                    size: 6352 bytes
+(epstopdf)             Command: <epstopdf --outfile=C:/Users/mufasa/Documents/T
+hesis/LaTex/figures/sampleOutput/Units/ang2300Y-eps-converted-to.pdf C:/Users/m
+ufasa/Documents/Thesis/LaTex/figures/sampleOutput/Units/ang2300Y.eps>
+(epstopdf)             \includegraphics on input line 121.
+Package epstopdf Info: Output file is already uptodate.
+
+<C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/Units/ang2300Y-eps
+-converted-to.pdf, id=1354, 387.4475pt x 209.78375pt>
+File: C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/Units/ang2300
+Y-eps-converted-to.pdf Graphic file (type pdf)
+
+<use C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/Units/ang2300Y
+-eps-converted-to.pdf>
+Package pdftex.def Info: C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleO
+utput/Units/ang2300Y-eps-converted-to.pdf used on input line 121.
+(pdftex.def)             Requested size: 328.82707pt x 178.04492pt.
+
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 123.
+
+Package epstopdf Info: Source file: <C:/Users/mufasa/Documents/Thesis/LaTex/fig
+ures/sampleOutput/Units/ang2300Z.eps>
+(epstopdf)                    date: 2013-10-31 18:29:44
+(epstopdf)                    size: 9648 bytes
+(epstopdf)             Output file: <C:/Users/mufasa/Documents/Thesis/LaTex/fig
+ures/sampleOutput/Units/ang2300Z-eps-converted-to.pdf>
+(epstopdf)                    date: 2013-10-31 18:30:36
+(epstopdf)                    size: 6350 bytes
+(epstopdf)             Command: <epstopdf --outfile=C:/Users/mufasa/Documents/T
+hesis/LaTex/figures/sampleOutput/Units/ang2300Z-eps-converted-to.pdf C:/Users/m
+ufasa/Documents/Thesis/LaTex/figures/sampleOutput/Units/ang2300Z.eps>
+(epstopdf)             \includegraphics on input line 126.
+Package epstopdf Info: Output file is already uptodate.
+
+<C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/Units/ang2300Z-eps
+-converted-to.pdf, id=1355, 387.4475pt x 209.78375pt>
+File: C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/Units/ang2300
+Z-eps-converted-to.pdf Graphic file (type pdf)
+
+<use C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/Units/ang2300Z
+-eps-converted-to.pdf>
+Package pdftex.def Info: C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleO
+utput/Units/ang2300Z-eps-converted-to.pdf used on input line 126.
+(pdftex.def)             Requested size: 328.82707pt x 178.04492pt.
+
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 128.
+
+Package epstopdf Info: Source file: <C:/Users/mufasa/Documents/Thesis/LaTex/fig
+ures/sampleOutput/Units/ang5883X.eps>
+(epstopdf)                    date: 2013-10-31 18:29:44
+(epstopdf)                    size: 9646 bytes
+(epstopdf)             Output file: <C:/Users/mufasa/Documents/Thesis/LaTex/fig
+ures/sampleOutput/Units/ang5883X-eps-converted-to.pdf>
+(epstopdf)                    date: 2013-10-31 18:30:37
+(epstopdf)                    size: 6362 bytes
+(epstopdf)             Command: <epstopdf --outfile=C:/Users/mufasa/Documents/T
+hesis/LaTex/figures/sampleOutput/Units/ang5883X-eps-converted-to.pdf C:/Users/m
+ufasa/Documents/Thesis/LaTex/figures/sampleOutput/Units/ang5883X.eps>
+(epstopdf)             \includegraphics on input line 131.
+Package epstopdf Info: Output file is already uptodate.
+
+<C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/Units/ang5883X-eps
+-converted-to.pdf, id=1356, 387.4475pt x 209.78375pt>
+File: C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/Units/ang5883
+X-eps-converted-to.pdf Graphic file (type pdf)
+
+<use C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/Units/ang5883X
+-eps-converted-to.pdf>
+Package pdftex.def Info: C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleO
+utput/Units/ang5883X-eps-converted-to.pdf used on input line 131.
+(pdftex.def)             Requested size: 328.82707pt x 178.04492pt.
+
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 133.
+
+Package epstopdf Info: Source file: <C:/Users/mufasa/Documents/Thesis/LaTex/fig
+ures/sampleOutput/Units/ang5883Y.eps>
+(epstopdf)                    date: 2013-10-31 18:29:44
+(epstopdf)                    size: 9646 bytes
+(epstopdf)             Output file: <C:/Users/mufasa/Documents/Thesis/LaTex/fig
+ures/sampleOutput/Units/ang5883Y-eps-converted-to.pdf>
+(epstopdf)                    date: 2013-10-31 18:30:37
+(epstopdf)                    size: 6354 bytes
+(epstopdf)             Command: <epstopdf --outfile=C:/Users/mufasa/Documents/T
+hesis/LaTex/figures/sampleOutput/Units/ang5883Y-eps-converted-to.pdf C:/Users/m
+ufasa/Documents/Thesis/LaTex/figures/sampleOutput/Units/ang5883Y.eps>
+(epstopdf)             \includegraphics on input line 136.
+Package epstopdf Info: Output file is already uptodate.
+
+<C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/Units/ang5883Y-eps
+-converted-to.pdf, id=1357, 387.4475pt x 209.78375pt>
+File: C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/Units/ang5883
+Y-eps-converted-to.pdf Graphic file (type pdf)
+
+<use C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/Units/ang5883Y
+-eps-converted-to.pdf>
+Package pdftex.def Info: C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleO
+utput/Units/ang5883Y-eps-converted-to.pdf used on input line 136.
+(pdftex.def)             Requested size: 328.82707pt x 178.04492pt.
+
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 138.
+
+Package epstopdf Info: Source file: <C:/Users/mufasa/Documents/Thesis/LaTex/fig
+ures/sampleOutput/Units/ang5883Z.eps>
+(epstopdf)                    date: 2013-10-31 18:29:44
+(epstopdf)                    size: 9648 bytes
+(epstopdf)             Output file: <C:/Users/mufasa/Documents/Thesis/LaTex/fig
+ures/sampleOutput/Units/ang5883Z-eps-converted-to.pdf>
+(epstopdf)                    date: 2013-10-31 18:30:38
+(epstopdf)                    size: 6351 bytes
+(epstopdf)             Command: <epstopdf --outfile=C:/Users/mufasa/Documents/T
+hesis/LaTex/figures/sampleOutput/Units/ang5883Z-eps-converted-to.pdf C:/Users/m
+ufasa/Documents/Thesis/LaTex/figures/sampleOutput/Units/ang5883Z.eps>
+(epstopdf)             \includegraphics on input line 141.
+Package epstopdf Info: Output file is already uptodate.
+
+<C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/Units/ang5883Z-eps
+-converted-to.pdf, id=1358, 387.4475pt x 209.78375pt>
+File: C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/Units/ang5883
+Z-eps-converted-to.pdf Graphic file (type pdf)
+
+<use C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/Units/ang5883Z
+-eps-converted-to.pdf>
+Package pdftex.def Info: C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleO
+utput/Units/ang5883Z-eps-converted-to.pdf used on input line 141.
+(pdftex.def)             Requested size: 328.82707pt x 178.04492pt.
+) (./figures/sampleOutput/State/sampleOutput.tex
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 2.
+
+Package epstopdf Info: Source file: <C:/Users/mufasa/Documents/Thesis/LaTex/fig
+ures/sampleOutput/State/qbar.eps>
+(epstopdf)                    date: 2013-10-31 18:29:45
+(epstopdf)                    size: 10357 bytes
+(epstopdf)             Output file: <C:/Users/mufasa/Documents/Thesis/LaTex/fig
+ures/sampleOutput/State/qbar-eps-converted-to.pdf>
+(epstopdf)                    date: 2013-10-31 18:30:39
+(epstopdf)                    size: 6918 bytes
+(epstopdf)             Command: <epstopdf --outfile=C:/Users/mufasa/Documents/T
+hesis/LaTex/figures/sampleOutput/State/qbar-eps-converted-to.pdf C:/Users/mufas
+a/Documents/Thesis/LaTex/figures/sampleOutput/State/qbar.eps>
+(epstopdf)             \includegraphics on input line 5.
+Package epstopdf Info: Output file is already uptodate.
+
+<C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/State/qbar-eps-con
+verted-to.pdf, id=1359, 382.42876pt x 209.78375pt>
+File: C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/State/qbar-ep
+s-converted-to.pdf Graphic file (type pdf)
+
+<use C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/State/qbar-eps
+-converted-to.pdf>
+Package pdftex.def Info: C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleO
+utput/State/qbar-eps-converted-to.pdf used on input line 5.
+(pdftex.def)             Requested size: 328.82707pt x 180.38808pt.
+
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 7.
+
+Package epstopdf Info: Source file: <C:/Users/mufasa/Documents/Thesis/LaTex/fig
+ures/sampleOutput/State/rho.eps>
+(epstopdf)                    date: 2013-10-31 18:29:45
+(epstopdf)                    size: 10113 bytes
+(epstopdf)             Output file: <C:/Users/mufasa/Documents/Thesis/LaTex/fig
+ures/sampleOutput/State/rho-eps-converted-to.pdf>
+(epstopdf)                    date: 2013-10-31 18:30:40
+(epstopdf)                    size: 6418 bytes
+(epstopdf)             Command: <epstopdf --outfile=C:/Users/mufasa/Documents/T
+hesis/LaTex/figures/sampleOutput/State/rho-eps-converted-to.pdf C:/Users/mufasa
+/Documents/Thesis/LaTex/figures/sampleOutput/State/rho.eps>
+(epstopdf)             \includegraphics on input line 10.
+Package epstopdf Info: Output file is already uptodate.
+
+<C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/State/rho-eps-conv
+erted-to.pdf, id=1360, 401.5pt x 220.825pt>
+File: C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/State/rho-eps
+-converted-to.pdf Graphic file (type pdf)
+
+<use C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/State/rho-eps-
+converted-to.pdf>
+Package pdftex.def Info: C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleO
+utput/State/rho-eps-converted-to.pdf used on input line 10.
+(pdftex.def)             Requested size: 328.82707pt x 180.86537pt.
+ [59
+
+ <c:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/Units/magX-eps-co
+nverted-to.pdf> <c:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/Un
+its/magY-eps-converted-to.pdf>] [60 <c:/Users/mufasa/Documents/Thesis/LaTex/fig
+ures/sampleOutput/Units/magZ-eps-converted-to.pdf> <c:/Users/mufasa/Documents/T
+hesis/LaTex/figures/sampleOutput/Units/press0-eps-converted-to.pdf> <c:/Users/m
+ufasa/Documents/Thesis/LaTex/figures/sampleOutput/Units/press1-eps-converted-to
+.pdf>] [61 <c:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/Units/p
+ress2-eps-converted-to.pdf> <c:/Users/mufasa/Documents/Thesis/LaTex/figures/sam
+pleOutput/Units/press3-eps-converted-to.pdf> <c:/Users/mufasa/Documents/Thesis/
+LaTex/figures/sampleOutput/Units/gpsLat-eps-converted-to.pdf>] [62 <c:/Users/mu
+fasa/Documents/Thesis/LaTex/figures/sampleOutput/Units/gpsLong-eps-converted-to
+.pdf> <c:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/Units/gpsSpd
+-eps-converted-to.pdf> <c:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOu
+tput/Units/gpsCrs-eps-converted-to.pdf>] [63 <c:/Users/mufasa/Documents/Thesis/
+LaTex/figures/sampleOutput/Units/date-eps-converted-to.pdf> <c:/Users/mufasa/Do
+cuments/Thesis/LaTex/figures/sampleOutput/Units/CS-eps-converted-to.pdf> <c:/Us
+ers/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/Units/temperature-eps-co
+nverted-to.pdf>] [64 <c:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutp
+ut/Units/deltaT-eps-converted-to.pdf> <c:/Users/mufasa/Documents/Thesis/LaTex/f
+igures/sampleOutput/Units/rpmPwm-eps-converted-to.pdf> <c:/Users/mufasa/Documen
+ts/Thesis/LaTex/figures/sampleOutput/Units/ang2300X-eps-converted-to.pdf>] [65 
+<c:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/Units/ang2300Y-eps
+-converted-to.pdf> <c:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput
+/Units/ang2300Z-eps-converted-to.pdf> <c:/Users/mufasa/Documents/Thesis/LaTex/f
+igures/sampleOutput/Units/ang5883X-eps-converted-to.pdf>]
+[66 <c:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/Units/ang5883Y
+-eps-converted-to.pdf> <c:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOu
+tput/Units/ang5883Z-eps-converted-to.pdf> <c:/Users/mufasa/Documents/Thesis/LaT
+ex/figures/sampleOutput/State/qbar-eps-converted-to.pdf>] [67 <c:/Users/mufasa/
+Documents/Thesis/LaTex/figures/sampleOutput/State/rho-eps-converted-to.pdf>]
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 13.
+
+Package epstopdf Info: Source file: <C:/Users/mufasa/Documents/Thesis/LaTex/fig
+ures/sampleOutput/State/alpha.eps>
+(epstopdf)                    date: 2013-10-31 18:29:45
+(epstopdf)                    size: 9640 bytes
+(epstopdf)             Output file: <C:/Users/mufasa/Documents/Thesis/LaTex/fig
+ures/sampleOutput/State/alpha-eps-converted-to.pdf>
+(epstopdf)                    date: 2013-10-31 18:30:40
+(epstopdf)                    size: 6293 bytes
+(epstopdf)             Command: <epstopdf --outfile=C:/Users/mufasa/Documents/T
+hesis/LaTex/figures/sampleOutput/State/alpha-eps-converted-to.pdf C:/Users/mufa
+sa/Documents/Thesis/LaTex/figures/sampleOutput/State/alpha.eps>
+(epstopdf)             \includegraphics on input line 16.
+Package epstopdf Info: Output file is already uptodate.
+
+<C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/State/alpha-eps-co
+nverted-to.pdf, id=1537, 387.4475pt x 209.78375pt>
+File: C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/State/alpha-e
+ps-converted-to.pdf Graphic file (type pdf)
+
+<use C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/State/alpha-ep
+s-converted-to.pdf>
+Package pdftex.def Info: C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleO
+utput/State/alpha-eps-converted-to.pdf used on input line 16.
+(pdftex.def)             Requested size: 328.82707pt x 178.04492pt.
+
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 18.
+
+Package epstopdf Info: Source file: <C:/Users/mufasa/Documents/Thesis/LaTex/fig
+ures/sampleOutput/State/beta.eps>
+(epstopdf)                    date: 2013-10-31 18:29:45
+(epstopdf)                    size: 9638 bytes
+(epstopdf)             Output file: <C:/Users/mufasa/Documents/Thesis/LaTex/fig
+ures/sampleOutput/State/beta-eps-converted-to.pdf>
+(epstopdf)                    date: 2013-10-31 18:30:41
+(epstopdf)                    size: 6246 bytes
+(epstopdf)             Command: <epstopdf --outfile=C:/Users/mufasa/Documents/T
+hesis/LaTex/figures/sampleOutput/State/beta-eps-converted-to.pdf C:/Users/mufas
+a/Documents/Thesis/LaTex/figures/sampleOutput/State/beta.eps>
+(epstopdf)             \includegraphics on input line 21.
+Package epstopdf Info: Output file is already uptodate.
+
+<C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/State/beta-eps-con
+verted-to.pdf, id=1538, 387.4475pt x 209.78375pt>
+File: C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/State/beta-ep
+s-converted-to.pdf Graphic file (type pdf)
+
+<use C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/State/beta-eps
+-converted-to.pdf>
+Package pdftex.def Info: C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleO
+utput/State/beta-eps-converted-to.pdf used on input line 21.
+(pdftex.def)             Requested size: 328.82707pt x 178.04492pt.
+
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 23.
+
+Package epstopdf Info: Source file: <C:/Users/mufasa/Documents/Thesis/LaTex/fig
+ures/sampleOutput/State/roll.eps>
+(epstopdf)                    date: 2013-10-31 18:29:45
+(epstopdf)                    size: 9638 bytes
+(epstopdf)             Output file: <C:/Users/mufasa/Documents/Thesis/LaTex/fig
+ures/sampleOutput/State/roll-eps-converted-to.pdf>
+(epstopdf)                    date: 2013-10-31 18:30:42
+(epstopdf)                    size: 6123 bytes
+(epstopdf)             Command: <epstopdf --outfile=C:/Users/mufasa/Documents/T
+hesis/LaTex/figures/sampleOutput/State/roll-eps-converted-to.pdf C:/Users/mufas
+a/Documents/Thesis/LaTex/figures/sampleOutput/State/roll.eps>
+(epstopdf)             \includegraphics on input line 26.
+Package epstopdf Info: Output file is already uptodate.
+
+<C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/State/roll-eps-con
+verted-to.pdf, id=1539, 387.4475pt x 209.78375pt>
+File: C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/State/roll-ep
+s-converted-to.pdf Graphic file (type pdf)
+
+<use C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/State/roll-eps
+-converted-to.pdf>
+Package pdftex.def Info: C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleO
+utput/State/roll-eps-converted-to.pdf used on input line 26.
+(pdftex.def)             Requested size: 328.82707pt x 178.04492pt.
+
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 28.
+
+Package epstopdf Info: Source file: <C:/Users/mufasa/Documents/Thesis/LaTex/fig
+ures/sampleOutput/State/pitch.eps>
+(epstopdf)                    date: 2013-10-31 18:29:45
+(epstopdf)                    size: 9640 bytes
+(epstopdf)             Output file: <C:/Users/mufasa/Documents/Thesis/LaTex/fig
+ures/sampleOutput/State/pitch-eps-converted-to.pdf>
+(epstopdf)                    date: 2013-10-31 18:30:43
+(epstopdf)                    size: 6183 bytes
+(epstopdf)             Command: <epstopdf --outfile=C:/Users/mufasa/Documents/T
+hesis/LaTex/figures/sampleOutput/State/pitch-eps-converted-to.pdf C:/Users/mufa
+sa/Documents/Thesis/LaTex/figures/sampleOutput/State/pitch.eps>
+(epstopdf)             \includegraphics on input line 31.
+Package epstopdf Info: Output file is already uptodate.
+
+<C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/State/pitch-eps-co
+nverted-to.pdf, id=1540, 387.4475pt x 209.78375pt>
+File: C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/State/pitch-e
+ps-converted-to.pdf Graphic file (type pdf)
+
+<use C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/State/pitch-ep
+s-converted-to.pdf>
+Package pdftex.def Info: C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleO
+utput/State/pitch-eps-converted-to.pdf used on input line 31.
+(pdftex.def)             Requested size: 328.82707pt x 178.04492pt.
+
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 33.
+
+Package epstopdf Info: Source file: <C:/Users/mufasa/Documents/Thesis/LaTex/fig
+ures/sampleOutput/State/yaw.eps>
+(epstopdf)                    date: 2013-10-31 18:29:46
+(epstopdf)                    size: 9636 bytes
+(epstopdf)             Output file: <C:/Users/mufasa/Documents/Thesis/LaTex/fig
+ures/sampleOutput/State/yaw-eps-converted-to.pdf>
+(epstopdf)                    date: 2013-10-31 18:30:43
+(epstopdf)                    size: 6237 bytes
+(epstopdf)             Command: <epstopdf --outfile=C:/Users/mufasa/Documents/T
+hesis/LaTex/figures/sampleOutput/State/yaw-eps-converted-to.pdf C:/Users/mufasa
+/Documents/Thesis/LaTex/figures/sampleOutput/State/yaw.eps>
+(epstopdf)             \includegraphics on input line 36.
+Package epstopdf Info: Output file is already uptodate.
+
+<C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/State/yaw-eps-conv
+erted-to.pdf, id=1541, 387.4475pt x 209.78375pt>
+File: C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/State/yaw-eps
+-converted-to.pdf Graphic file (type pdf)
+
+<use C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/State/yaw-eps-
+converted-to.pdf>
+Package pdftex.def Info: C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleO
+utput/State/yaw-eps-converted-to.pdf used on input line 36.
+(pdftex.def)             Requested size: 328.82707pt x 178.04492pt.
+
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 38.
+
+Package epstopdf Info: Source file: <C:/Users/mufasa/Documents/Thesis/LaTex/fig
+ures/sampleOutput/State/rollRate.eps>
+(epstopdf)                    date: 2013-10-31 18:29:46
+(epstopdf)                    size: 9648 bytes
+(epstopdf)             Output file: <C:/Users/mufasa/Documents/Thesis/LaTex/fig
+ures/sampleOutput/State/rollRate-eps-converted-to.pdf>
+(epstopdf)                    date: 2013-10-31 18:30:44
+(epstopdf)                    size: 6484 bytes
+(epstopdf)             Command: <epstopdf --outfile=C:/Users/mufasa/Documents/T
+hesis/LaTex/figures/sampleOutput/State/rollRate-eps-converted-to.pdf C:/Users/m
+ufasa/Documents/Thesis/LaTex/figures/sampleOutput/State/rollRate.eps>
+(epstopdf)             \includegraphics on input line 41.
+Package epstopdf Info: Output file is already uptodate.
+
+<C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/State/rollRate-eps
+-converted-to.pdf, id=1542, 387.4475pt x 209.78375pt>
+File: C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/State/rollRat
+e-eps-converted-to.pdf Graphic file (type pdf)
+
+<use C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/State/rollRate
+-eps-converted-to.pdf>
+Package pdftex.def Info: C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleO
+utput/State/rollRate-eps-converted-to.pdf used on input line 41.
+(pdftex.def)             Requested size: 328.82707pt x 178.04492pt.
+
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 43.
+
+Package epstopdf Info: Source file: <C:/Users/mufasa/Documents/Thesis/LaTex/fig
+ures/sampleOutput/State/pitchRate.eps>
+(epstopdf)                    date: 2013-10-31 18:29:46
+(epstopdf)                    size: 9650 bytes
+(epstopdf)             Output file: <C:/Users/mufasa/Documents/Thesis/LaTex/fig
+ures/sampleOutput/State/pitchRate-eps-converted-to.pdf>
+(epstopdf)                    date: 2013-10-31 18:30:45
+(epstopdf)                    size: 6480 bytes
+(epstopdf)             Command: <epstopdf --outfile=C:/Users/mufasa/Documents/T
+hesis/LaTex/figures/sampleOutput/State/pitchRate-eps-converted-to.pdf C:/Users/
+mufasa/Documents/Thesis/LaTex/figures/sampleOutput/State/pitchRate.eps>
+(epstopdf)             \includegraphics on input line 46.
+Package epstopdf Info: Output file is already uptodate.
+
+<C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/State/pitchRate-ep
+s-converted-to.pdf, id=1543, 387.4475pt x 209.78375pt>
+File: C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/State/pitchRa
+te-eps-converted-to.pdf Graphic file (type pdf)
+
+<use C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/State/pitchRat
+e-eps-converted-to.pdf>
+Package pdftex.def Info: C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleO
+utput/State/pitchRate-eps-converted-to.pdf used on input line 46.
+(pdftex.def)             Requested size: 328.82707pt x 178.04492pt.
+
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 48.
+
+Package epstopdf Info: Source file: <C:/Users/mufasa/Documents/Thesis/LaTex/fig
+ures/sampleOutput/State/yawRate.eps>
+(epstopdf)                    date: 2013-10-31 18:29:46
+(epstopdf)                    size: 9646 bytes
+(epstopdf)             Output file: <C:/Users/mufasa/Documents/Thesis/LaTex/fig
+ures/sampleOutput/State/yawRate-eps-converted-to.pdf>
+(epstopdf)                    date: 2013-10-31 18:30:46
+(epstopdf)                    size: 6449 bytes
+(epstopdf)             Command: <epstopdf --outfile=C:/Users/mufasa/Documents/T
+hesis/LaTex/figures/sampleOutput/State/yawRate-eps-converted-to.pdf C:/Users/mu
+fasa/Documents/Thesis/LaTex/figures/sampleOutput/State/yawRate.eps>
+(epstopdf)             \includegraphics on input line 51.
+Package epstopdf Info: Output file is already uptodate.
+
+<C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/State/yawRate-eps-
+converted-to.pdf, id=1544, 387.4475pt x 209.78375pt>
+File: C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/State/yawRate
+-eps-converted-to.pdf Graphic file (type pdf)
+
+<use C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/State/yawRate-
+eps-converted-to.pdf>
+Package pdftex.def Info: C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleO
+utput/State/yawRate-eps-converted-to.pdf used on input line 51.
+(pdftex.def)             Requested size: 328.82707pt x 178.04492pt.
+
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 53.
+
+Package epstopdf Info: Source file: <C:/Users/mufasa/Documents/Thesis/LaTex/fig
+ures/sampleOutput/State/accelX.eps>
+(epstopdf)                    date: 2013-10-31 18:29:46
+(epstopdf)                    size: 10041 bytes
+(epstopdf)             Output file: <C:/Users/mufasa/Documents/Thesis/LaTex/fig
+ures/sampleOutput/State/accelX-eps-converted-to.pdf>
+(epstopdf)                    date: 2013-10-31 18:30:46
+(epstopdf)                    size: 6527 bytes
+(epstopdf)             Command: <epstopdf --outfile=C:/Users/mufasa/Documents/T
+hesis/LaTex/figures/sampleOutput/State/accelX-eps-converted-to.pdf C:/Users/muf
+asa/Documents/Thesis/LaTex/figures/sampleOutput/State/accelX.eps>
+(epstopdf)             \includegraphics on input line 56.
+Package epstopdf Info: Output file is already uptodate.
+
+<C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/State/accelX-eps-c
+onverted-to.pdf, id=1545, 390.45876pt x 209.78375pt>
+File: C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/State/accelX-
+eps-converted-to.pdf Graphic file (type pdf)
+
+<use C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/State/accelX-e
+ps-converted-to.pdf>
+Package pdftex.def Info: C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleO
+utput/State/accelX-eps-converted-to.pdf used on input line 56.
+(pdftex.def)             Requested size: 328.82707pt x 176.67807pt.
+
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 58.
+
+Package epstopdf Info: Source file: <C:/Users/mufasa/Documents/Thesis/LaTex/fig
+ures/sampleOutput/State/accelY.eps>
+(epstopdf)                    date: 2013-10-31 18:29:47
+(epstopdf)                    size: 9975 bytes
+(epstopdf)             Output file: <C:/Users/mufasa/Documents/Thesis/LaTex/fig
+ures/sampleOutput/State/accelY-eps-converted-to.pdf>
+(epstopdf)                    date: 2013-10-31 18:30:47
+(epstopdf)                    size: 6192 bytes
+(epstopdf)             Command: <epstopdf --outfile=C:/Users/mufasa/Documents/T
+hesis/LaTex/figures/sampleOutput/State/accelY-eps-converted-to.pdf C:/Users/muf
+asa/Documents/Thesis/LaTex/figures/sampleOutput/State/accelY.eps>
+(epstopdf)             \includegraphics on input line 61.
+Package epstopdf Info: Output file is already uptodate.
+
+<C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/State/accelY-eps-c
+onverted-to.pdf, id=1546, 384.43625pt x 209.78375pt>
+File: C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/State/accelY-
+eps-converted-to.pdf Graphic file (type pdf)
+
+<use C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/State/accelY-e
+ps-converted-to.pdf>
+Package pdftex.def Info: C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleO
+utput/State/accelY-eps-converted-to.pdf used on input line 61.
+(pdftex.def)             Requested size: 328.82707pt x 179.45018pt.
+
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 63.
+
+Package epstopdf Info: Source file: <C:/Users/mufasa/Documents/Thesis/LaTex/fig
+ures/sampleOutput/State/accelZ.eps>
+(epstopdf)                    date: 2013-10-31 18:29:47
+(epstopdf)                    size: 10130 bytes
+(epstopdf)             Output file: <C:/Users/mufasa/Documents/Thesis/LaTex/fig
+ures/sampleOutput/State/accelZ-eps-converted-to.pdf>
+(epstopdf)                    date: 2013-10-31 18:30:48
+(epstopdf)                    size: 6576 bytes
+(epstopdf)             Command: <epstopdf --outfile=C:/Users/mufasa/Documents/T
+hesis/LaTex/figures/sampleOutput/State/accelZ-eps-converted-to.pdf C:/Users/muf
+asa/Documents/Thesis/LaTex/figures/sampleOutput/State/accelZ.eps>
+(epstopdf)             \includegraphics on input line 66.
+Package epstopdf Info: Output file is already uptodate.
+
+<C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/State/accelZ-eps-c
+onverted-to.pdf, id=1547, 396.48125pt x 209.78375pt>
+File: C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/State/accelZ-
+eps-converted-to.pdf Graphic file (type pdf)
+
+<use C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/State/accelZ-e
+ps-converted-to.pdf>
+Package pdftex.def Info: C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleO
+utput/State/accelZ-eps-converted-to.pdf used on input line 66.
+(pdftex.def)             Requested size: 328.82707pt x 173.98921pt.
+) (./figures/sampleOutput/Filtered/sampleOutput.tex
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 2.
+
+Package epstopdf Info: Source file: <C:/Users/mufasa/Documents/Thesis/LaTex/fig
+ures/sampleOutput/Filtered/qbar.eps>
+(epstopdf)                    date: 2013-10-31 18:29:47
+(epstopdf)                    size: 10360 bytes
+(epstopdf)             Output file: <C:/Users/mufasa/Documents/Thesis/LaTex/fig
+ures/sampleOutput/Filtered/qbar-eps-converted-to.pdf>
+(epstopdf)                    date: 2013-10-31 18:30:48
+(epstopdf)                    size: 6924 bytes
+(epstopdf)             Command: <epstopdf --outfile=C:/Users/mufasa/Documents/T
+hesis/LaTex/figures/sampleOutput/Filtered/qbar-eps-converted-to.pdf C:/Users/mu
+fasa/Documents/Thesis/LaTex/figures/sampleOutput/Filtered/qbar.eps>
+(epstopdf)             \includegraphics on input line 5.
+Package epstopdf Info: Output file is already uptodate.
+
+<C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/Filtered/qbar-eps-
+converted-to.pdf, id=1548, 382.42876pt x 209.78375pt>
+File: C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/Filtered/qbar
+-eps-converted-to.pdf Graphic file (type pdf)
+
+<use C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/Filtered/qbar-
+eps-converted-to.pdf>
+Package pdftex.def Info: C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleO
+utput/Filtered/qbar-eps-converted-to.pdf used on input line 5.
+(pdftex.def)             Requested size: 328.82707pt x 180.38808pt.
+
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 7.
+
+Package epstopdf Info: Source file: <C:/Users/mufasa/Documents/Thesis/LaTex/fig
+ures/sampleOutput/Filtered/rho.eps>
+(epstopdf)                    date: 2013-10-31 18:29:47
+(epstopdf)                    size: 10116 bytes
+(epstopdf)             Output file: <C:/Users/mufasa/Documents/Thesis/LaTex/fig
+ures/sampleOutput/Filtered/rho-eps-converted-to.pdf>
+(epstopdf)                    date: 2013-10-31 18:30:49
+(epstopdf)                    size: 6424 bytes
+(epstopdf)             Command: <epstopdf --outfile=C:/Users/mufasa/Documents/T
+hesis/LaTex/figures/sampleOutput/Filtered/rho-eps-converted-to.pdf C:/Users/muf
+asa/Documents/Thesis/LaTex/figures/sampleOutput/Filtered/rho.eps>
+(epstopdf)             \includegraphics on input line 10.
+Package epstopdf Info: Output file is already uptodate.
+
+<C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/Filtered/rho-eps-c
+onverted-to.pdf, id=1549, 401.5pt x 220.825pt>
+File: C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/Filtered/rho-
+eps-converted-to.pdf Graphic file (type pdf)
+
+<use C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/Filtered/rho-e
+ps-converted-to.pdf>
+Package pdftex.def Info: C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleO
+utput/Filtered/rho-eps-converted-to.pdf used on input line 10.
+(pdftex.def)             Requested size: 328.82707pt x 180.86537pt.
+ [68
+
+ <c:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/State/alpha-eps-c
+onverted-to.pdf> <c:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/S
+tate/beta-eps-converted-to.pdf>] [69 <c:/Users/mufasa/Documents/Thesis/LaTex/fi
+gures/sampleOutput/State/roll-eps-converted-to.pdf> <c:/Users/mufasa/Documents/
+Thesis/LaTex/figures/sampleOutput/State/pitch-eps-converted-to.pdf> <c:/Users/m
+ufasa/Documents/Thesis/LaTex/figures/sampleOutput/State/yaw-eps-converted-to.pd
+f>] [70 <c:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/State/roll
+Rate-eps-converted-to.pdf> <c:/Users/mufasa/Documents/Thesis/LaTex/figures/samp
+leOutput/State/pitchRate-eps-converted-to.pdf> <c:/Users/mufasa/Documents/Thesi
+s/LaTex/figures/sampleOutput/State/yawRate-eps-converted-to.pdf>] [71 <c:/Users
+/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/State/accelX-eps-converted-
+to.pdf> <c:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/State/acce
+lY-eps-converted-to.pdf> <c:/Users/mufasa/Documents/Thesis/LaTex/figures/sample
+Output/State/accelZ-eps-converted-to.pdf>] [72 <c:/Users/mufasa/Documents/Thesi
+s/LaTex/figures/sampleOutput/Filtered/qbar-eps-converted-to.pdf> <c:/Users/mufa
+sa/Documents/Thesis/LaTex/figures/sampleOutput/Filtered/rho-eps-converted-to.pd
+f>]
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 13.
+
+Package epstopdf Info: Source file: <C:/Users/mufasa/Documents/Thesis/LaTex/fig
+ures/sampleOutput/Filtered/alpha.eps>
+(epstopdf)                    date: 2013-10-31 18:29:47
+(epstopdf)                    size: 9940 bytes
+(epstopdf)             Output file: <C:/Users/mufasa/Documents/Thesis/LaTex/fig
+ures/sampleOutput/Filtered/alpha-eps-converted-to.pdf>
+(epstopdf)                    date: 2013-10-31 18:30:50
+(epstopdf)                    size: 6344 bytes
+(epstopdf)             Command: <epstopdf --outfile=C:/Users/mufasa/Documents/T
+hesis/LaTex/figures/sampleOutput/Filtered/alpha-eps-converted-to.pdf C:/Users/m
+ufasa/Documents/Thesis/LaTex/figures/sampleOutput/Filtered/alpha.eps>
+(epstopdf)             \includegraphics on input line 16.
+Package epstopdf Info: Output file is already uptodate.
+
+<C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/Filtered/alpha-eps
+-converted-to.pdf, id=1646, 387.4475pt x 220.825pt>
+File: C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/Filtered/alph
+a-eps-converted-to.pdf Graphic file (type pdf)
+
+<use C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/Filtered/alpha
+-eps-converted-to.pdf>
+Package pdftex.def Info: C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleO
+utput/Filtered/alpha-eps-converted-to.pdf used on input line 16.
+(pdftex.def)             Requested size: 328.82707pt x 187.41571pt.
+
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 18.
+
+Package epstopdf Info: Source file: <C:/Users/mufasa/Documents/Thesis/LaTex/fig
+ures/sampleOutput/Filtered/beta.eps>
+(epstopdf)                    date: 2013-10-31 18:29:48
+(epstopdf)                    size: 9932 bytes
+(epstopdf)             Output file: <C:/Users/mufasa/Documents/Thesis/LaTex/fig
+ures/sampleOutput/Filtered/beta-eps-converted-to.pdf>
+(epstopdf)                    date: 2013-10-31 18:30:51
+(epstopdf)                    size: 6294 bytes
+(epstopdf)             Command: <epstopdf --outfile=C:/Users/mufasa/Documents/T
+hesis/LaTex/figures/sampleOutput/Filtered/beta-eps-converted-to.pdf C:/Users/mu
+fasa/Documents/Thesis/LaTex/figures/sampleOutput/Filtered/beta.eps>
+(epstopdf)             \includegraphics on input line 21.
+Package epstopdf Info: Output file is already uptodate.
+
+<C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/Filtered/beta-eps-
+converted-to.pdf, id=1647, 381.425pt x 220.825pt>
+File: C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/Filtered/beta
+-eps-converted-to.pdf Graphic file (type pdf)
+
+<use C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/Filtered/beta-
+eps-converted-to.pdf>
+Package pdftex.def Info: C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleO
+utput/Filtered/beta-eps-converted-to.pdf used on input line 21.
+(pdftex.def)             Requested size: 328.82707pt x 190.38089pt.
+
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 23.
+
+Package epstopdf Info: Source file: <C:/Users/mufasa/Documents/Thesis/LaTex/fig
+ures/sampleOutput/Filtered/roll.eps>
+(epstopdf)                    date: 2013-10-31 18:29:48
+(epstopdf)                    size: 9641 bytes
+(epstopdf)             Output file: <C:/Users/mufasa/Documents/Thesis/LaTex/fig
+ures/sampleOutput/Filtered/roll-eps-converted-to.pdf>
+(epstopdf)                    date: 2013-10-31 18:30:51
+(epstopdf)                    size: 6129 bytes
+(epstopdf)             Command: <epstopdf --outfile=C:/Users/mufasa/Documents/T
+hesis/LaTex/figures/sampleOutput/Filtered/roll-eps-converted-to.pdf C:/Users/mu
+fasa/Documents/Thesis/LaTex/figures/sampleOutput/Filtered/roll.eps>
+(epstopdf)             \includegraphics on input line 26.
+Package epstopdf Info: Output file is already uptodate.
+
+<C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/Filtered/roll-eps-
+converted-to.pdf, id=1648, 387.4475pt x 209.78375pt>
+File: C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/Filtered/roll
+-eps-converted-to.pdf Graphic file (type pdf)
+
+<use C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/Filtered/roll-
+eps-converted-to.pdf>
+Package pdftex.def Info: C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleO
+utput/Filtered/roll-eps-converted-to.pdf used on input line 26.
+(pdftex.def)             Requested size: 328.82707pt x 178.04492pt.
+
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 28.
+
+Package epstopdf Info: Source file: <C:/Users/mufasa/Documents/Thesis/LaTex/fig
+ures/sampleOutput/Filtered/pitch.eps>
+(epstopdf)                    date: 2013-10-31 18:29:48
+(epstopdf)                    size: 9643 bytes
+(epstopdf)             Output file: <C:/Users/mufasa/Documents/Thesis/LaTex/fig
+ures/sampleOutput/Filtered/pitch-eps-converted-to.pdf>
+(epstopdf)                    date: 2013-10-31 18:30:52
+(epstopdf)                    size: 6189 bytes
+(epstopdf)             Command: <epstopdf --outfile=C:/Users/mufasa/Documents/T
+hesis/LaTex/figures/sampleOutput/Filtered/pitch-eps-converted-to.pdf C:/Users/m
+ufasa/Documents/Thesis/LaTex/figures/sampleOutput/Filtered/pitch.eps>
+(epstopdf)             \includegraphics on input line 31.
+Package epstopdf Info: Output file is already uptodate.
+
+<C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/Filtered/pitch-eps
+-converted-to.pdf, id=1649, 387.4475pt x 209.78375pt>
+File: C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/Filtered/pitc
+h-eps-converted-to.pdf Graphic file (type pdf)
+
+<use C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/Filtered/pitch
+-eps-converted-to.pdf>
+Package pdftex.def Info: C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleO
+utput/Filtered/pitch-eps-converted-to.pdf used on input line 31.
+(pdftex.def)             Requested size: 328.82707pt x 178.04492pt.
+
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 33.
+
+Package epstopdf Info: Source file: <C:/Users/mufasa/Documents/Thesis/LaTex/fig
+ures/sampleOutput/Filtered/yaw.eps>
+(epstopdf)                    date: 2013-10-31 18:29:48
+(epstopdf)                    size: 9639 bytes
+(epstopdf)             Output file: <C:/Users/mufasa/Documents/Thesis/LaTex/fig
+ures/sampleOutput/Filtered/yaw-eps-converted-to.pdf>
+(epstopdf)                    date: 2013-10-31 18:30:53
+(epstopdf)                    size: 6243 bytes
+(epstopdf)             Command: <epstopdf --outfile=C:/Users/mufasa/Documents/T
+hesis/LaTex/figures/sampleOutput/Filtered/yaw-eps-converted-to.pdf C:/Users/muf
+asa/Documents/Thesis/LaTex/figures/sampleOutput/Filtered/yaw.eps>
+(epstopdf)             \includegraphics on input line 36.
+Package epstopdf Info: Output file is already uptodate.
+
+<C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/Filtered/yaw-eps-c
+onverted-to.pdf, id=1650, 387.4475pt x 209.78375pt>
+File: C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/Filtered/yaw-
+eps-converted-to.pdf Graphic file (type pdf)
+
+<use C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/Filtered/yaw-e
+ps-converted-to.pdf>
+Package pdftex.def Info: C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleO
+utput/Filtered/yaw-eps-converted-to.pdf used on input line 36.
+(pdftex.def)             Requested size: 328.82707pt x 178.04492pt.
+
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 38.
+
+Package epstopdf Info: Source file: <C:/Users/mufasa/Documents/Thesis/LaTex/fig
+ures/sampleOutput/Filtered/rollRate.eps>
+(epstopdf)                    date: 2013-10-31 18:29:48
+(epstopdf)                    size: 9651 bytes
+(epstopdf)             Output file: <C:/Users/mufasa/Documents/Thesis/LaTex/fig
+ures/sampleOutput/Filtered/rollRate-eps-converted-to.pdf>
+(epstopdf)                    date: 2013-10-31 18:30:54
+(epstopdf)                    size: 6490 bytes
+(epstopdf)             Command: <epstopdf --outfile=C:/Users/mufasa/Documents/T
+hesis/LaTex/figures/sampleOutput/Filtered/rollRate-eps-converted-to.pdf C:/User
+s/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/Filtered/rollRate.eps>
+(epstopdf)             \includegraphics on input line 41.
+Package epstopdf Info: Output file is already uptodate.
+
+<C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/Filtered/rollRate-
+eps-converted-to.pdf, id=1651, 387.4475pt x 209.78375pt>
+File: C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/Filtered/roll
+Rate-eps-converted-to.pdf Graphic file (type pdf)
+
+<use C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/Filtered/rollR
+ate-eps-converted-to.pdf>
+Package pdftex.def Info: C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleO
+utput/Filtered/rollRate-eps-converted-to.pdf used on input line 41.
+(pdftex.def)             Requested size: 328.82707pt x 178.04492pt.
+
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 43.
+
+Package epstopdf Info: Source file: <C:/Users/mufasa/Documents/Thesis/LaTex/fig
+ures/sampleOutput/Filtered/pitchRate.eps>
+(epstopdf)                    date: 2013-10-31 18:29:48
+(epstopdf)                    size: 9653 bytes
+(epstopdf)             Output file: <C:/Users/mufasa/Documents/Thesis/LaTex/fig
+ures/sampleOutput/Filtered/pitchRate-eps-converted-to.pdf>
+(epstopdf)                    date: 2013-10-31 18:30:54
+(epstopdf)                    size: 6486 bytes
+(epstopdf)             Command: <epstopdf --outfile=C:/Users/mufasa/Documents/T
+hesis/LaTex/figures/sampleOutput/Filtered/pitchRate-eps-converted-to.pdf C:/Use
+rs/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/Filtered/pitchRate.eps>
+(epstopdf)             \includegraphics on input line 46.
+Package epstopdf Info: Output file is already uptodate.
+
+<C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/Filtered/pitchRate
+-eps-converted-to.pdf, id=1652, 387.4475pt x 209.78375pt>
+File: C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/Filtered/pitc
+hRate-eps-converted-to.pdf Graphic file (type pdf)
+
+<use C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/Filtered/pitch
+Rate-eps-converted-to.pdf>
+Package pdftex.def Info: C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleO
+utput/Filtered/pitchRate-eps-converted-to.pdf used on input line 46.
+(pdftex.def)             Requested size: 328.82707pt x 178.04492pt.
+
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 48.
+
+Package epstopdf Info: Source file: <C:/Users/mufasa/Documents/Thesis/LaTex/fig
+ures/sampleOutput/Filtered/yawRate.eps>
+(epstopdf)                    date: 2013-10-31 18:29:49
+(epstopdf)                    size: 9649 bytes
+(epstopdf)             Output file: <C:/Users/mufasa/Documents/Thesis/LaTex/fig
+ures/sampleOutput/Filtered/yawRate-eps-converted-to.pdf>
+(epstopdf)                    date: 2013-10-31 18:30:55
+(epstopdf)                    size: 6455 bytes
+(epstopdf)             Command: <epstopdf --outfile=C:/Users/mufasa/Documents/T
+hesis/LaTex/figures/sampleOutput/Filtered/yawRate-eps-converted-to.pdf C:/Users
+/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/Filtered/yawRate.eps>
+(epstopdf)             \includegraphics on input line 51.
+Package epstopdf Info: Output file is already uptodate.
+
+<C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/Filtered/yawRate-e
+ps-converted-to.pdf, id=1653, 387.4475pt x 209.78375pt>
+File: C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/Filtered/yawR
+ate-eps-converted-to.pdf Graphic file (type pdf)
+
+<use C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/Filtered/yawRa
+te-eps-converted-to.pdf>
+Package pdftex.def Info: C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleO
+utput/Filtered/yawRate-eps-converted-to.pdf used on input line 51.
+(pdftex.def)             Requested size: 328.82707pt x 178.04492pt.
+
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 53.
+
+Package epstopdf Info: Source file: <C:/Users/mufasa/Documents/Thesis/LaTex/fig
+ures/sampleOutput/Filtered/accelX.eps>
+(epstopdf)                    date: 2013-10-31 18:29:49
+(epstopdf)                    size: 10044 bytes
+(epstopdf)             Output file: <C:/Users/mufasa/Documents/Thesis/LaTex/fig
+ures/sampleOutput/Filtered/accelX-eps-converted-to.pdf>
+(epstopdf)                    date: 2013-10-31 18:30:56
+(epstopdf)                    size: 6533 bytes
+(epstopdf)             Command: <epstopdf --outfile=C:/Users/mufasa/Documents/T
+hesis/LaTex/figures/sampleOutput/Filtered/accelX-eps-converted-to.pdf C:/Users/
+mufasa/Documents/Thesis/LaTex/figures/sampleOutput/Filtered/accelX.eps>
+(epstopdf)             \includegraphics on input line 56.
+Package epstopdf Info: Output file is already uptodate.
+
+<C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/Filtered/accelX-ep
+s-converted-to.pdf, id=1654, 390.45876pt x 209.78375pt>
+File: C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/Filtered/acce
+lX-eps-converted-to.pdf Graphic file (type pdf)
+
+<use C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/Filtered/accel
+X-eps-converted-to.pdf>
+Package pdftex.def Info: C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleO
+utput/Filtered/accelX-eps-converted-to.pdf used on input line 56.
+(pdftex.def)             Requested size: 328.82707pt x 176.67807pt.
+
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 58.
+
+Package epstopdf Info: Source file: <C:/Users/mufasa/Documents/Thesis/LaTex/fig
+ures/sampleOutput/Filtered/accelY.eps>
+(epstopdf)                    date: 2013-10-31 18:29:49
+(epstopdf)                    size: 9978 bytes
+(epstopdf)             Output file: <C:/Users/mufasa/Documents/Thesis/LaTex/fig
+ures/sampleOutput/Filtered/accelY-eps-converted-to.pdf>
+(epstopdf)                    date: 2013-10-31 18:30:56
+(epstopdf)                    size: 6198 bytes
+(epstopdf)             Command: <epstopdf --outfile=C:/Users/mufasa/Documents/T
+hesis/LaTex/figures/sampleOutput/Filtered/accelY-eps-converted-to.pdf C:/Users/
+mufasa/Documents/Thesis/LaTex/figures/sampleOutput/Filtered/accelY.eps>
+(epstopdf)             \includegraphics on input line 61.
+Package epstopdf Info: Output file is already uptodate.
+
+<C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/Filtered/accelY-ep
+s-converted-to.pdf, id=1655, 384.43625pt x 209.78375pt>
+File: C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/Filtered/acce
+lY-eps-converted-to.pdf Graphic file (type pdf)
+
+<use C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/Filtered/accel
+Y-eps-converted-to.pdf>
+Package pdftex.def Info: C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleO
+utput/Filtered/accelY-eps-converted-to.pdf used on input line 61.
+(pdftex.def)             Requested size: 328.82707pt x 179.45018pt.
+
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 63.
+
+Package epstopdf Info: Source file: <C:/Users/mufasa/Documents/Thesis/LaTex/fig
+ures/sampleOutput/Filtered/accelZ.eps>
+(epstopdf)                    date: 2013-10-31 18:29:49
+(epstopdf)                    size: 10133 bytes
+(epstopdf)             Output file: <C:/Users/mufasa/Documents/Thesis/LaTex/fig
+ures/sampleOutput/Filtered/accelZ-eps-converted-to.pdf>
+(epstopdf)                    date: 2013-10-31 18:30:57
+(epstopdf)                    size: 6582 bytes
+(epstopdf)             Command: <epstopdf --outfile=C:/Users/mufasa/Documents/T
+hesis/LaTex/figures/sampleOutput/Filtered/accelZ-eps-converted-to.pdf C:/Users/
+mufasa/Documents/Thesis/LaTex/figures/sampleOutput/Filtered/accelZ.eps>
+(epstopdf)             \includegraphics on input line 66.
+Package epstopdf Info: Output file is already uptodate.
+
+<C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/Filtered/accelZ-ep
+s-converted-to.pdf, id=1656, 396.48125pt x 209.78375pt>
+File: C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/Filtered/acce
+lZ-eps-converted-to.pdf Graphic file (type pdf)
+
+<use C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/Filtered/accel
+Z-eps-converted-to.pdf>
+Package pdftex.def Info: C:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleO
+utput/Filtered/accelZ-eps-converted-to.pdf used on input line 66.
+(pdftex.def)             Requested size: 328.82707pt x 173.98921pt.
+)) [73 <c:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/Filtered/al
+pha-eps-converted-to.pdf> <c:/Users/mufasa/Documents/Thesis/LaTex/figures/sampl
+eOutput/Filtered/beta-eps-converted-to.pdf> <c:/Users/mufasa/Documents/Thesis/L
+aTex/figures/sampleOutput/Filtered/roll-eps-converted-to.pdf>] [74 <c:/Users/mu
+fasa/Documents/Thesis/LaTex/figures/sampleOutput/Filtered/pitch-eps-converted-t
+o.pdf> <c:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/Filtered/ya
+w-eps-converted-to.pdf> <c:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleO
+utput/Filtered/rollRate-eps-converted-to.pdf>] [75 <c:/Users/mufasa/Documents/T
+hesis/LaTex/figures/sampleOutput/Filtered/pitchRate-eps-converted-to.pdf> <c:/U
+sers/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/Filtered/yawRate-eps-co
+nverted-to.pdf> <c:/Users/mufasa/Documents/Thesis/LaTex/figures/sampleOutput/Fi
+ltered/accelX-eps-converted-to.pdf>] [76 <c:/Users/mufasa/Documents/Thesis/LaTe
+x/figures/sampleOutput/Filtered/accelY-eps-converted-to.pdf> <c:/Users/mufasa/D
+ocuments/Thesis/LaTex/figures/sampleOutput/Filtered/accelZ-eps-converted-to.pdf
+>]
 \openout2 = `wiringSchematics.aux'.
 
  (./wiringSchematics.tex
-Appendix A.
+APPENDIX F.
 Package epstopdf Info: Source file: <figures/thesisSchematic.eps>
 (epstopdf)                    date: 2013-08-15 16:58:29
 (epstopdf)                    size: 1614226 bytes
@@ -1323,19 +3941,18 @@ Package epstopdf Info: Source file: <figures/thesisSchematic.eps>
 df>
 (epstopdf)                    date: 2013-08-15 17:00:08
 (epstopdf)                    size: 77279 bytes
-(epstopdf)             Command: <repstopdf --outfile=figures/thesisSchematic-ep
-s-converted-to.pdf figures/thesisSchematic.eps>
+(epstopdf)             Command: <epstopdf --outfile=figures/thesisSchematic-eps
+-converted-to.pdf figures/thesisSchematic.eps>
 (epstopdf)             \includegraphics on input line 6.
 Package epstopdf Info: Output file is already uptodate.
 
-<figures/thesisSchematic-eps-converted-to.pdf, id=629, 471.7625pt x 630.355pt>
+<figures/thesisSchematic-eps-converted-to.pdf, id=1740, 471.7625pt x 630.355pt>
 File: figures/thesisSchematic-eps-converted-to.pdf Graphic file (type pdf)
-
 <use figures/thesisSchematic-eps-converted-to.pdf>
 Package pdftex.def Info: figures/thesisSchematic-eps-converted-to.pdf used on i
 nput line 6.
 (pdftex.def)             Requested size: 375.80544pt x 502.14938pt.
- [37
+ [77
 
 
 
@@ -1347,27 +3964,27 @@ Package epstopdf Info: Source file: <figures/satellite.eps>
 (epstopdf)             Output file: <figures/satellite-eps-converted-to.pdf>
 (epstopdf)                    date: 2013-08-15 17:15:18
 (epstopdf)                    size: 45115 bytes
-(epstopdf)             Command: <repstopdf --outfile=figures/satellite-eps-conv
-erted-to.pdf figures/satellite.eps>
+(epstopdf)             Command: <epstopdf --outfile=figures/satellite-eps-conve
+rted-to.pdf figures/satellite.eps>
 (epstopdf)             \includegraphics on input line 12.
 Package epstopdf Info: Output file is already uptodate.
 
-<figures/satellite-eps-converted-to.pdf, id=636, 450.68375pt x 423.5825pt>
+<figures/satellite-eps-converted-to.pdf, id=1747, 450.68375pt x 423.5825pt>
 File: figures/satellite-eps-converted-to.pdf Graphic file (type pdf)
 
 <use figures/satellite-eps-converted-to.pdf>
 Package pdftex.def Info: figures/satellite-eps-converted-to.pdf used on input l
 ine 12.
 (pdftex.def)             Requested size: 375.80544pt x 353.22154pt.
- [38 <./figures/satellite-eps-converted-to.pdf>]
+ [78 <./figures/satellite-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <figures/magBoard.eps>
 (epstopdf)                    date: 2013-08-15 16:22:20
 (epstopdf)                    size: 727818 bytes
 (epstopdf)             Output file: <figures/magBoard-eps-converted-to.pdf>
 (epstopdf)                    date: 2013-08-15 16:22:30
 (epstopdf)                    size: 32538 bytes
-(epstopdf)             Command: <repstopdf --outfile=figures/magBoard-eps-conve
-rted-to.pdf figures/magBoard.eps>
+(epstopdf)             Command: <epstopdf --outfile=figures/magBoard-eps-conver
+ted-to.pdf figures/magBoard.eps>
 (epstopdf)             \includegraphics on input line 19.
 Package epstopdf Info: Output file is already uptodate.
 File: figures/magBoard-eps-converted-to.pdf Graphic file (type pdf)
@@ -1375,64 +3992,66 @@ File: figures/magBoard-eps-converted-to.pdf Graphic file (type pdf)
 Package pdftex.def Info: figures/magBoard-eps-converted-to.pdf used on input li
 ne 19.
 (pdftex.def)             Requested size: 375.80544pt x 399.35216pt.
-) [39] (./thesis.bbl
+) [79]
+\openout2 = `futureWork.aux'.
+
+
+(./futureWork.tex) [80
+
+
+] (./thesis.bbl
 Missing character: There is no – in font cmr12!
 Missing character: There is no – in font cmr12!
+ [81
+
+
+
+]
 Missing character: There is no – in font cmr12!
 Missing character: There is no – in font cmr12!
 Missing character: There is no ± in font cmr12!
 Missing character: There is no ± in font cmr12!
 Missing character: There is no ± in font cmr12!
-
-[40
-
-
-
-] [41])
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 106.
- [42]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 106.
- (./thesis.aux (./intro.aux) (./regression.aux) (./error.aux)
-(./simulation.aux) (./hardware.aux) (./flightTest.aux) (./results.aux)
-(./summary.aux) (./wiringSchematics.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 106.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 106.
+ [82])
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 124.
+ [83]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 124.
+ (./thesis.aux
+(./intro.aux) (./method.aux) (./regression.aux) (./error.aux) (./simulation.aux
+) (./hardware.aux) (./flightTest.aux) (./results.aux) (./summary.aux)
+(./systemManual.aux) (./flightTestDocs.aux) (./cd0FlightTest.aux)
+(./K2FlightTest.aux) (./dataGraphs.aux) (./wiringSchematics.aux)
+(./futureWork.aux))
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 124.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 124.
 Package rerunfilecheck Info: File `thesis.out' has not changed.
-(rerunfilecheck)             Checksum: 5DF9A8CDFFE3D825D80A3602259A8B17;2357.
-
-
-LaTeX Font Warning: Size substitutions with differences
-(Font)              up to 0.74pt have occurred.
-
-
-LaTeX Warning: There were undefined references.
-
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 106.
+(rerunfilecheck)             Checksum: 3D6C0F4A6F0D3098F23CDF8C8224C07A;3553.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 124.
  ) 
 Here is how much of TeX's memory you used:
- 17969 strings out of 493488
- 283014 string characters out of 3144749
- 415031 words of memory out of 3000000
- 20599 multiletter control sequences out of 15000+200000
- 18413 words of font info for 112 fonts, out of 3000000 for 9000
+ 18696 strings out of 493488
+ 320443 string characters out of 3144749
+ 423498 words of memory out of 3000000
+ 21001 multiletter control sequences out of 15000+200000
+ 14525 words of font info for 97 fonts, out of 3000000 for 9000
  957 hyphenation exceptions out of 8191
- 51i,16n,44p,1334b,538s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 51i,16n,44p,1382b,543s stack positions out of 5000i,500n,10000p,200000b,50000s
 <c:/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/tex
-live/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2012
-/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/texlive/2012/texmf-di
-st/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/texlive/2012/texmf-dist/fonts/
-type1/public/amsfonts/cm/cmmi6.pfb><c:/texlive/2012/texmf-dist/fonts/type1/publ
-ic/amsfonts/cm/cmmi8.pfb><c:/texlive/2012/texmf-dist/fonts/type1/public/amsfont
-s/cm/cmr10.pfb><c:/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12
-.pfb><c:/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb><c:/te
-xlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2012/
-texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2012/texmf-dis
-t/fonts/type1/public/amsfonts/cm/cmsy8.pfb><c:/texlive/2012/texmf-dist/fonts/ty
-pe1/public/amsfonts/cm/cmti12.pfb>
-Output written on thesis.pdf (51 pages, 6382017 bytes).
+live/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb><c:/texlive/2012/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2012/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmmi12.pfb><c:/texlive/2012/texmf-dist/fonts/t
+ype1/public/amsfonts/cm/cmmi6.pfb><c:/texlive/2012/texmf-dist/fonts/type1/publi
+c/amsfonts/cm/cmmi8.pfb><c:/texlive/2012/texmf-dist/fonts/type1/public/amsfonts
+/cm/cmr12.pfb><c:/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.p
+fb><c:/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texl
+ive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><c:/texlive/2012/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><c:/texlive/2012/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmti12.pfb><c:/texlive/2012/texmf-dist/fonts/ty
+pe1/public/amsfonts/cm/cmtt12.pfb>
+Output written on thesis.pdf (95 pages, 6763169 bytes).
 PDF statistics:
- 751 PDF objects out of 1000 (max. 8388607)
- 651 compressed objects within 7 object streams
- 205 named destinations out of 1000 (max. 500000)
- 16252 words of extra memory for PDF output out of 17280 (max. 10000000)
+ 1917 PDF objects out of 2073 (max. 8388607)
+ 1582 compressed objects within 16 object streams
+ 398 named destinations out of 1000 (max. 500000)
+ 13226 words of extra memory for PDF output out of 14400 (max. 10000000)
 

@@ -17,16 +17,6 @@ noise.qbar = .008; %psf
 noise.gravity = .01; %ft/s/s
 noise.W = 0.001;
 % noise.GPSSpeed=.1*3.28;
-
-noise.eulerAngles = .0; %deg
-noise.eulerRates = .0; %deg/s
-noise.windAngles = 0; %deg
-noise.accel = .0; %ft/s/s
-noise.qbar = 0; %psf
-noise.gravity = .0; %ft/s/s
-noise.W = 0.0;
-noise.GPSSpeed=.0*3.28;
-
 % errorBnd = errorProp(state,plane,noise);
 
 %% Estimate coefficients

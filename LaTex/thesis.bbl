@@ -6,25 +6,62 @@ Vladislav Klein and Eugene~A Morelli.
 \newblock American Institute of Aeronautics and Astronautics Reston, VA, USA,
   2006.
 
+\bibitem{nedAxes}
+Mike1024.
+\newblock Ecec enu longitude latitude relationships.
+\newblock Wikipedia, February 2010.
+
+\bibitem{hawkerThreeView}
+MLWatts.
+\newblock Hawker tempest mark ii three view.
+\newblock Wikipedia, September 2012.
+
 \bibitem{roskam2001airplane}
 Jan Roskam.
 \newblock Airplane flight dynamics and automatic flight controls, design.
 \newblock {\em Analysis and Research Corporation, Lawrence, KS}, 2001.
 
+\bibitem{kalman60}
+Rudolph~Emil Kalman.
+\newblock A new approach to linear filtering and prediction problems.
+\newblock {\em Transactions of the ASME--Journal of Basic Engineering},
+  82(Series D):35--45, 1960.
+
 \bibitem{welch1995introduction}
 Greg Welch and Gary Bishop.
 \newblock An introduction to the kalman filter, 1995.
+
+\bibitem{nicolaiWhitePaper}
+Leeland Nicolai.
+\newblock Estimating r/c model aerodynamics and performance.
+\newblock White paper, Society of Automotive Engineers, 2009.
+
+\bibitem{raymer}
+Daniel~P Raymer et~al.
+\newblock {\em Aircraft design: a conceptual approach}, volume~3.
+\newblock American Institute of Aeronautics and Astronautics, 1999.
+
+\bibitem{xfoil}
+Mark Drela.
+\newblock Xfoil: An analysis and design system for low reynolds number
+  airfoils.
+\newblock In {\em Low Reynolds number aerodynamics}, pages 1--12. Springer,
+  1989.
+
+\bibitem{737wingTipVortices}
+Olivier Clynen.
+\newblock 737 ng winglet effect simplified.
+\newblock Wikipedia, June 2012.
+
+\bibitem{prandtl1923applications}
+Ludwig Prandtl.
+\newblock {\em Applications of modern hydrodynamics to aeronautics}.
+\newblock National Advisory Committee for Aeronautics, 1923.
 
 \bibitem{stevens2003aircraft}
 Brian~L Stevens and Frank~L Lewis.
 \newblock Aircraft control and simulation.
 \newblock 2003.
-
-\bibitem{osborne2007transitions}
-Stephen~R Osborne.
-\newblock {\em Transitions between hover and level flight for a tailsitter
-  uav}.
-\newblock PhD thesis, Citeseer, 2007.
 
 \bibitem{Atmel2012}
 Atmel.
@@ -54,12 +91,12 @@ U-Line.
 
 \bibitem{hmr2300DataSheet}
 Honeywell~Magnetic Sensors.
-\newblock Smart digital magnetometer - hmr2300.
+\newblock Smart digital magnetometer hmr2300.
 \newblock Technical report, Honeywell, 2006.
 
 \bibitem{hmc5883LDatasheet}
 Honeywell.
-\newblock 3 axis digital compass ic hmc5883l.
+\newblock 3-axis digital compass ic hmc5883l.
 \newblock Technical report, Honeywell.
 
 \bibitem{hmc5883LSchematic}
@@ -85,7 +122,7 @@ InvenSense.
 
 \bibitem{itg3200BOBSchematic}
 Sparkfun.
-\newblock Itg-3200-v10.
+\newblock Itg 3200 v10.
 \newblock Schematic, Sparkfun, 2010.
 
 \bibitem{joseph1988}
@@ -109,6 +146,11 @@ F.~Adhika~Pradipta Lie and Demoz Gebre-Egziabher.
 All Sensors.
 \newblock Ds-0012 rev a.
 \newblock Technical report, All Sensors.
+
+\bibitem{pressureStandard}
+Paroscientific.
+\newblock Model 745 high accuracy portable pressure standard data sheet.
+\newblock Technical report, Paroscientific.
 
 \bibitem{ubloxDemo}
 Doug Weibel.
@@ -134,10 +176,5 @@ Finwing Hobby.
 Dahlke Auman and CW~Dahlke.
 \newblock Drag characteristics of ribbons.
 \newblock {\em AIAA Paper}, 2011, 2001.
-
-\bibitem{prandtl1923applications}
-Ludwig Prandtl.
-\newblock {\em Applications of modern hydrodynamics to aeronautics}.
-\newblock National Advisory Committee for Aeronautics, 1923.
 
 \end{thebibliography}

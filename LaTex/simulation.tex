@@ -1,25 +1,26 @@
 \chapter{Simulation}
 \label{simulation}
-A 6-DOF flight simulator was used to validated the drag prediction method before hardware was purchased. The main utility of the simulator was to provide simulated flight test data with signals that contained no noise. The actual sensors during a flight test will be noisy signals, and Gaussian white noise can be added to the clean simulator signals to check the method's sensitivity to sensor noise.
+A 6-DOF flight simulator was used to validated the drag prediction method before hardware was purchased. The main utility of the simulator was to provide simulated flight test data with signals that contained no errors. The actual sensors used for flight testing contain noise, and this noise can be added onto the pure simulator signals to test the sensitivity of the drag polar regression to sensor accuracy.
 
 \section{Simulation Environment}
-The flight simulator used was a model of the de Haviland Beaver that comes as a demo in the Aerospace Toolbox of Simulink. The Simulink model was modified to output required signals to the workspace, which essentially created a sensor with zero noise. The mass, moments of inertia, and reference lengths were then scaled to those of a Zagi R/C aircraft found in \cite{stevens2003aircraft}. The original Simulink model was already connected to a Flight Gear visualization engine, but the model was altered such that the indicators would function properly.
+The flight simulator used was a model of the de Haviland Beaver that comes as a demo in the Aerospace Toolbox of Simulink. The Simulink model was modified to output required signals to the workspace, which essentially created a sensor with zero noise. The mass, moments of inertia, and reference lengths were then scaled to those of a Zagi R/C aircraft found in \cite{stevens2003aircraft}. The original Simulink model was already connected to a Flight Gear visualization engine, but the model was slightly altered to make flight gauges function properly.
 
 \section{Simulation Inputs}
 The engine forces and moments were set to zero in the simulator, to match the assumption of a folding propeller.
 The drag force calculation built into the Beaver Simulink model were replaced with a parabolic drag polar of the form
 \begin{align}
-C_D &= C_{D_0} + K*(C_L(\alpha)-C_{L_{min}})
+C_D &= C_{D_0} + K_1(C_L(\alpha)-C_{L_{min}})^2+\frac{(C_L(\alpha))^2}{\pi eAR}
 \end{align}
-
-The lift coefficient $C_L(\alpha)$ was nonlinear aerodynamic data from a NACA 0012 taken from \cite{osborne2007transitions}. While this approximation to a nonlinear drag polar does not capture the parasitic drag rise due to stall, it does represent the limited lifting capability of a real wing, making it more realistic than assuming the wing does not stall.
+%todo:redo simulation to match this. Also, propagate noise properly and match sensors.
+Airfoil data, including $K_1$, $C_{L_{min}}$, and $C_L(\alpha)$, was taken from nonlinear aerodynamic data of a NACA 4412. While this approximation to a drag polar does not capture the nonlinear section of profile drag rise due to stall, it does represent the limited lifting capability of a real wing, making it more realistic than assuming the wing does not stall.
 \section{Simulation Results}
-The first goal of the simulation testing was a verification of the correct equations of motion, and that the data analysis routines developed in Matlab did in fact match inputs to outputs. The simulation was initialized with various initial states to ensure there was no dependency on initial conditions. The vehicle was then flown by an R/C aircraft pilot using a joystick attached the to simulation. It was noted early in the simulation testing that flying a sweep of speeds was beneficial, as a wider range of the drag polar was flown. This result was included in much of the flight test planning. After adequate data had been taken, the data was analyzed without adding simulated sensor noise. The results are shown in Figure \ref{dragPolarNoNoise}.
+The first goal of the simulation testing was a verification of the correct equations of motion, and that the data analysis routines developed in Matlab did in fact match inputs to outputs. The simulation was initialized with various initial states to ensure there was no dependency on initial conditions. The vehicle was then flown by an R/C aircraft pilot using a joystick attached to the simulation. It was noted early in the simulation testing that flying a sweep of speeds was beneficial, as a wider range of the drag polar was flown. This result was included in much of the flight test planning. After adequate data had been taken, the data was analyzed without adding simulated sensor noise. The results are shown in Figure \ref{dragPolarNoNoise}.
 
 \begin{figure}[h!]
-  \caption{Data Analysis Verification (No Noise)} \label{dragPolarNoNoise}
   \centering
+  \caption{Data Analysis Verification (No Noise)} 
     \includegraphics[width=0.5\textwidth]{figures/dragPolarNoNoise.eps}
+    \label{dragPolarNoNoise}
 \end{figure}
 
 Figure \ref{dragPolarNoNoise} shows that the equations of motion used in the data analysis functions properly calculate the coefficients being passed into the system. With this result, noise was added to the system to see how sensitive coefficient estimation was to noise in each sensor. This process was a balancing act between available sensor accuracy and the desired accuracy of the final solution. The final result guided sensor selection to those discussed in Section \ref{hardware}. To check if the final sensors chosen were acceptable, Gaussian noise was added to each state, with a mean of $0$ and a standard deviation equal to the root-mean-squared error listed in the manufacturer's data sheet for each sensor.
@@ -29,7 +30,7 @@ Figure \ref{dragPolarNoNoise} shows that the equations of motion used in the dat
     \includegraphics[width=0.5\textwidth]{figures/simDragPolarNoise.eps}
 \end{figure}
 
-%todo:redo the simulation with new sensors and update table
+%todo:redo the simulation with new sensors and update table. also update drag polar to be all 3 components. and update airfoil data
 For the particular simulated test flight shown in Figure \ref{dragPolarNoise}, the estimated drag polar coefficients had error coefficients outlined in Table \ref{simCoeffErrorTable}.
 
 \begin{table}[ht]
@@ -45,7 +46,7 @@ OLS Estimate & 0.0516 & -0.0056 & 0.0317 \\
 Robust LS Estimate & 0.0500 & -0.0035 & 0.0313 \\ [1ex] % [1ex] adds vertical space
 \hline %inserts single line
 \end{tabular}
-\label{table:nonlin} % is used to refer this table in the text
+\label{simCoeffErrorTable} % is used to refer this table in the text
 \end{table}
 
 The results of this simulated flight test showed that the measurement system outlined in Section \ref{hardware} predicted the simulated drag polar with a reasonable error.
