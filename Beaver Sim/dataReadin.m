@@ -1,10 +1,7 @@
 %% Calculate the current aircraft weight
 state.W=beaver_mass*2.204622622; %convert kg to lbf
 state.gravity=gravityTerm.signals.values(1)*3.28083989501312;
-
-%% Build eulerAngles and fix units
-state.eulerAngles=[eulerAngles.signals.values];
-state.eulerAngles(:,3) = unwrap(state.eulerAngles(:,3));
+state.accelerometer = (squeeze(gravityAccels.signals.values)' - bodyAccels.signals.values)*3.28083989501312;
 
 %% Build windAngles and fix units
 state.windAngles=[alphaBeta.signals.values];
@@ -24,17 +21,6 @@ state.GPSAccel = GPSAccel.signals.values*3.28084;
 % state.vBodyEarth = nan;
 state.hDot = hdot.signals.values;
 
-%% Build omega and fix units
-state.eulerRates=[eulerRates.signals.values];
-% state.eulerRates=nan;
-
-%% Build thrust (assume completely axial thrust)
-kk = length(engineForcesBody.signals.values);
-state.fThrust=[engineForcesBody.signals.values(:,1) zeros(kk,2)]*0.224808943; %convert to lbf
-
-%% Build qbar
-state.qbar = qbar.signals.values*0.020885434; %N/m^2 to psf
-state.rho = rho.signals.values*0.00194032; %kg/m^3 to slugs/ft^3
 
 %% Build sim output to comapare to
 state.drag=aeroForcesWind.signals.values(:,1)*0.224808943; %convert N to lbf

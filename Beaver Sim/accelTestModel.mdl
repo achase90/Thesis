@@ -1,12 +1,12 @@
 Model {
   Name			  "accelTestModel"
-  Version		  7.8
+  Version		  8.0
   MdlSubVersion		  0
   GraphicalInterface {
     NumRootInports	    0
     NumRootOutports	    0
     ParameterArgumentNames  ""
-    ComputedModelVersion    "1.2"
+    ComputedModelVersion    "1.3"
     NumModelReferences	    0
     NumTestPointedSignals   0
   }
@@ -21,15 +21,54 @@ Model {
   MinMaxOverflowArchiveMode "Overwrite"
   FPTRunName		  "Run 1"
   MaxMDLFileLineLength	  120
+  Object {
+    $PropName		    "BdWindowsInfo"
+    $ObjectID		    1
+    $ClassName		    "Simulink.BDWindowsInfo"
+    Object {
+      $PropName		      "WindowsInfo"
+      $ObjectID		      2
+      $ClassName	      "Simulink.WindowInfo"
+      IsActive		      [1]
+      Location		      [381.0, 39.0, 1378.0, 780.0]
+      Object {
+	$PropName		"ModelBrowserInfo"
+	$ObjectID		3
+	$ClassName		"Simulink.ModelBrowserInfo"
+	Visible			[0]
+	DockPosition		"Left"
+	Width			[50]
+	Height			[50]
+	Filter			[8]
+      }
+      Object {
+	$PropName		"ExplorerBarInfo"
+	$ObjectID		4
+	$ClassName		"Simulink.ExplorerBarInfo"
+	Visible			[1]
+      }
+      Object {
+	$PropName		"EditorsInfo"
+	$ObjectID		5
+	$ClassName		"Simulink.EditorInfo"
+	IsActive		[1]
+	ViewObjType		"SimulinkTopLevel"
+	LoadSaveID		"0"
+	Extents			[1326.0, 604.0]
+	ZoomFactor		[1.0]
+	Offset			[0.0, 0.0]
+      }
+    }
+  }
   Created		  "Sun Apr 14 16:57:30 2013"
   Creator		  "atchase"
   UpdateHistory		  "UpdateHistoryNever"
   ModifiedByFormat	  "%<Auto>"
-  LastModifiedBy	  "atchase"
+  LastModifiedBy	  "mufasa"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Sun Apr 14 16:59:39 2013"
-  RTWModifiedTimeStamp	  287859557
-  ModelVersionFormat	  "1.%<AutoIncrement:2>"
+  LastModifiedDate	  "Mon Nov 04 21:10:16 2013"
+  RTWModifiedTimeStamp	  305500126
+  ModelVersionFormat	  "1.%<AutoIncrement:3>"
   ConfigurationManager	  "None"
   SampleTimeColors	  off
   SampleTimeAnnotations	  off
@@ -64,11 +103,11 @@ Model {
   TryForcingSFcnDF	  off
   Object {
     $PropName		    "DataLoggingOverride"
-    $ObjectID		    1
+    $ObjectID		    6
     $ClassName		    "Simulink.SimulationData.ModelLoggingInfo"
     model_		    "accelTestModel"
     signals_		    []
-    overrideMode_	    [0U]
+    overrideMode_	    [0.0]
     Array {
       Type		      "Cell"
       Dimension		      1
@@ -124,14 +163,14 @@ Model {
     Type		    "Handle"
     Dimension		    1
     Simulink.ConfigSet {
-      $ObjectID		      2
-      Version		      "1.11.1"
+      $ObjectID		      7
+      Version		      "1.12.1"
       Array {
 	Type			"Handle"
 	Dimension		8
 	Simulink.SolverCC {
-	  $ObjectID		  3
-	  Version		  "1.11.1"
+	  $ObjectID		  8
+	  Version		  "1.12.1"
 	  StartTime		  "0.0"
 	  StopTime		  "10.0"
 	  AbsTol		  "auto"
@@ -149,6 +188,7 @@ Model {
 	  MaxConsecutiveMinStep	  "1"
 	  RelTol		  "1e-3"
 	  SolverMode		  "Auto"
+	  EnableConcurrentExecution off
 	  ConcurrentTasks	  off
 	  Solver		  "ode45"
 	  SolverName		  "ode45"
@@ -164,8 +204,8 @@ Model {
 	  InsertRTBMode		  "Whenever possible"
 	}
 	Simulink.DataIOCC {
-	  $ObjectID		  4
-	  Version		  "1.11.1"
+	  $ObjectID		  9
+	  Version		  "1.12.1"
 	  Decimation		  "1"
 	  ExternalInput		  "[t, u]"
 	  FinalStateName	  "xFinal"
@@ -196,8 +236,8 @@ Model {
 	  Refine		  "1"
 	}
 	Simulink.OptimizationCC {
-	  $ObjectID		  5
-	  Version		  "1.11.1"
+	  $ObjectID		  10
+	  Version		  "1.12.1"
 	  Array {
 	    Type		    "Cell"
 	    Dimension		    8
@@ -249,11 +289,11 @@ Model {
 	  BufferReusableBoundary  on
 	  SimCompilerOptimization "Off"
 	  AccelVerboseBuild	  off
-	  AccelParallelForEachSubsystem	on
+	  ParallelExecutionInRapidAccelerator on
 	}
 	Simulink.DebuggingCC {
-	  $ObjectID		  6
-	  Version		  "1.11.1"
+	  $ObjectID		  11
+	  Version		  "1.12.1"
 	  RTPrefix		  "error"
 	  ConsistencyChecking	  "none"
 	  ArrayBoundsChecking	  "none"
@@ -302,7 +342,7 @@ Model {
 	  UnnecessaryDatatypeConvMsg "none"
 	  VectorMatrixConversionMsg "none"
 	  InvalidFcnCallConnMsg	  "error"
-	  FcnCallInpInsideContextMsg "Enable All"
+	  FcnCallInpInsideContextMsg "EnableAllAsWarning"
 	  SignalLabelMismatchMsg  "none"
 	  UnconnectedInputMsg	  "warning"
 	  UnconnectedOutputMsg	  "warning"
@@ -338,10 +378,12 @@ Model {
 	  SFNoUnconditionalDefaultTransitionDiag "warning"
 	  SFTransitionOutsideNaturalParentDiag "warning"
 	  SFUnconditionalTransitionShadowingDiag "warning"
+	  SFUndirectedBroadcastEventsDiag "warning"
+	  SFTransitionActionBeforeConditionDiag	"warning"
 	}
 	Simulink.HardwareCC {
-	  $ObjectID		  7
-	  Version		  "1.11.1"
+	  $ObjectID		  12
+	  Version		  "1.12.1"
 	  ProdBitPerChar	  8
 	  ProdBitPerShort	  16
 	  ProdBitPerInt		  32
@@ -377,8 +419,8 @@ Model {
 	  ProdEqTarget		  on
 	}
 	Simulink.ModelReferenceCC {
-	  $ObjectID		  8
-	  Version		  "1.11.1"
+	  $ObjectID		  13
+	  Version		  "1.12.1"
 	  UpdateModelReferenceTargets "IfOutOfDateOrStructuralChange"
 	  CheckModelReferenceTargetMessage "error"
 	  EnableParallelModelReferenceBuilds off
@@ -392,8 +434,8 @@ Model {
 	  SupportModelReferenceSimTargetCustomCode off
 	}
 	Simulink.SFSimCC {
-	  $ObjectID		  9
-	  Version		  "1.11.1"
+	  $ObjectID		  14
+	  Version		  "1.12.1"
 	  SFSimEnableDebug	  on
 	  SFSimOverflowDetection  on
 	  SFSimEcho		  on
@@ -407,8 +449,8 @@ Model {
 	}
 	Simulink.RTWCC {
 	  $BackupClass		  "Simulink.RTWCC"
-	  $ObjectID		  10
-	  Version		  "1.11.1"
+	  $ObjectID		  15
+	  Version		  "1.12.1"
 	  Array {
 	    Type		    "Cell"
 	    Dimension		    8
@@ -426,6 +468,7 @@ Model {
 	  GenCodeOnly		  off
 	  MakeCommand		  "make_rtw"
 	  GenerateMakefile	  on
+	  PackageGeneratedCodeAndArtifacts off
 	  TemplateMakefile	  "grt_default_tmf"
 	  GenerateReport	  off
 	  SaveLog		  off
@@ -442,6 +485,13 @@ Model {
 	  RTWUseSimCustomCode	  off
 	  IncludeHyperlinkInReport off
 	  LaunchReport		  off
+	  PortableWordSizes	  off
+	  GenerateErtSFunction	  off
+	  CreateSILPILBlock	  "None"
+	  CodeExecutionProfiling  off
+	  CodeExecutionProfileVariable "executionProfile"
+	  CodeProfilingSaveOptions "SummaryOnly"
+	  CodeProfilingInstrumentation off
 	  TargetLang		  "C"
 	  IncludeBusHierarchyInRTWFileBlockHierarchyMap	off
 	  IncludeERTFirstTime	  off
@@ -451,8 +501,9 @@ Model {
 	  GenerateTraceReportSf	  off
 	  GenerateTraceReportEml  off
 	  GenerateCodeInfo	  off
-	  GenerateSLWebview	  off
+	  GenerateWebview	  off
 	  GenerateCodeMetricsReport off
+	  GenerateCodeReplacementReport	off
 	  RTWCompilerOptimization "Off"
 	  CheckMdlBeforeBuild	  "Off"
 	  CustomRebuildMode	  "OnUpdate"
@@ -460,8 +511,8 @@ Model {
 	    Type		    "Handle"
 	    Dimension		    2
 	    Simulink.CodeAppCC {
-	      $ObjectID		      11
-	      Version		      "1.11.1"
+	      $ObjectID		      16
+	      Version		      "1.12.1"
 	      Array {
 		Type			"Cell"
 		Dimension		21
@@ -497,6 +548,7 @@ Model {
 	      PreserveName	      off
 	      PreserveNameWithParent  off
 	      ShowEliminatedStatement off
+	      OperatorAnnotations     off
 	      IncAutoGenComments      off
 	      SimulinkDataObjDesc     off
 	      SFDataObjDesc	      off
@@ -519,14 +571,15 @@ Model {
 	      SimulinkBlockComments   on
 	      MATLABSourceComments    off
 	      EnableCustomComments    off
+	      InternalIdentifier      "Classic"
 	      InlinedPrmAccess	      "Literals"
 	      ReqsInCode	      off
 	      UseSimReservedNames     off
 	    }
 	    Simulink.GRTTargetCC {
 	      $BackupClass	      "Simulink.TargetCC"
-	      $ObjectID		      12
-	      Version		      "1.11.1"
+	      $ObjectID		      17
+	      Version		      "1.12.1"
 	      Array {
 		Type			"Cell"
 		Dimension		16
@@ -551,10 +604,9 @@ Model {
 	      TargetFcnLib	      "ansi_tfl_table_tmw.mat"
 	      TargetLibSuffix	      ""
 	      TargetPreCompLibLocation ""
-	      TargetFunctionLibrary   "ANSI_C"
+	      CodeReplacementLibrary  "ANSI_C"
 	      UtilityFuncGeneration   "Auto"
 	      ERTMultiwordTypeDef     "System defined"
-	      CodeExecutionProfiling  off
 	      ERTMultiwordLength      256
 	      MultiwordLength	      2048
 	      GenerateFullHeader      on
@@ -585,10 +637,10 @@ Model {
 	      SupportVariableSizeSignals off
 	      EnableShiftOperators    on
 	      ParenthesesLevel	      "Nominal"
-	      PortableWordSizes	      off
 	      ModelStepFunctionPrototypeControlCompliant off
 	      CPPClassGenCompliant    off
 	      AutosarCompliant	      off
+	      GRTInterface	      on
 	      UseMalloc		      off
 	      ExtMode		      off
 	      ExtModeStaticAlloc      off
@@ -616,8 +668,19 @@ Model {
   }
   Simulink.ConfigSet {
     $PropName		    "ActiveConfigurationSet"
-    $ObjectID		    2
+    $ObjectID		    7
   }
+  Object {
+    $PropName		    "DataTransfer"
+    $ObjectID		    18
+    $ClassName		    "Simulink.GlobalDataTransfer"
+    DefaultTransitionBetweenSyncTasks "Ensure deterministic transfer (maximum delay)"
+    DefaultTransitionBetweenAsyncTasks "Ensure data integrity only"
+    DefaultTransitionBetweenContTasks "Ensure deterministic transfer (minimum delay)"
+    DefaultExtrapolationMethodBetweenContTasks "None"
+    AutoInsertRateTranBlk   [0]
+  }
+  ExplicitPartitioning	  off
   BlockDefaults {
     ForegroundColor	    "black"
     BackgroundColor	    "white"
@@ -648,6 +711,25 @@ Model {
     FontSize		    9
     FontWeight		    "normal"
     FontAngle		    "normal"
+  }
+  MaskDefaults {
+    SelfModifiable	    "off"
+    IconFrame		    "on"
+    IconOpaque		    "on"
+    RunInitForIconRedraw    "off"
+    IconRotate		    "none"
+    PortRotate		    "default"
+    IconUnits		    "autoscale"
+  }
+  MaskParameterDefaults {
+    Evaluate		    "on"
+    Tunable		    "on"
+    NeverSave		    "off"
+    Internal		    "off"
+    ReadOnly		    "off"
+    Enabled		    "on"
+    Visible		    "on"
+    ToolTip		    "on"
   }
   BlockParameterDefaults {
     Block {
@@ -680,6 +762,7 @@ Model {
       YMax		      "5"
       SaveToWorkspace	      off
       SaveName		      "ScopeData"
+      DataFormat	      "Array"
       LimitDataPoints	      on
       MaxDataPoints	      "5000"
       Decimation	      "1"
@@ -689,7 +772,7 @@ Model {
   }
   System {
     Name		    "accelTestModel"
-    Location		    [1682, 74, 3598, 1019]
+    Location		    [381, 39, 1759, 819]
     Open		    on
     ModelBrowserVisibility  off
     ModelBrowserWidth	    200
@@ -703,15 +786,16 @@ Model {
     ShowPageBoundaries	    off
     ZoomFactor		    "100"
     ReportName		    "simulink-default.rpt"
-    SIDHighWatermark	    "5"
+    SIDHighWatermark	    "8"
     Block {
       BlockType		      Reference
       Name		      "6DoF (Quaternion)"
       SID		      "1"
       Ports		      [2, 8]
       Position		      [355, 101, 555, 339]
+      ZOrder		      -1
       BackgroundColor	      "[1.000000, 0.501961, 0.501961]"
-      LibraryVersion	      "1.247"
+      LibraryVersion	      "1.251"
       SourceBlock	      "aerolib6dof2/6DoF (Euler Angles)"
       SourceType	      "6DoF EoM (Body Axis)"
       units		      "Metric (MKS)"
@@ -746,6 +830,22 @@ Model {
       Value		      "[0 0 0]"
     }
     Block {
+      BlockType		      Constant
+      Name		      "Constant2"
+      SID		      "7"
+      Position		      [455, 475, 485, 505]
+      ZOrder		      3
+      Value		      "[0 0 0]"
+    }
+    Block {
+      BlockType		      Constant
+      Name		      "Constant3"
+      SID		      "8"
+      Position		      [525, 500, 555, 530]
+      ZOrder		      4
+      Value		      "[0 0 32.2]"
+    }
+    Block {
       BlockType		      Demux
       Name		      "Demux"
       SID		      "5"
@@ -764,7 +864,7 @@ Model {
       Position		      [835, 309, 865, 341]
       ZOrder		      -16
       Floating		      off
-      Location		      [3777, 209, 4350, 804]
+      Location		      [76, 115, 649, 710]
       Open		      on
       NumInputPorts	      "3"
       List {
@@ -783,11 +883,36 @@ Model {
 	LineWidths		"[0.5 0.5 0.5 0.5 0.5 0.5]"
 	MarkerStyles		"none|none|none|none|none|none"
       }
+      ShowLegends	      off
       TimeRange		      "10"
-      YMin		      "-1~-1~-1"
-      YMax		      "1~1~1"
+      YMin		      "-1~-1~-35"
+      YMax		      "1~1~35"
       DataFormat	      "StructureWithTime"
       SampleTime	      "0"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "Three-axis Accelerometer"
+      SID		      "6"
+      Ports		      [5, 1]
+      Position		      [685, 432, 820, 518]
+      ZOrder		      2
+      LibraryVersion	      "1.164"
+      SourceBlock	      "aerolibnav/Three-axis Accelerometer"
+      SourceType	      "Three-axis Accelerometer"
+      units		      "English"
+      acc		      "[0 0 0]"
+      gtype		      on
+      dtype_a		      on
+      w_a		      "190"
+      z_a		      "0.707"
+      a_sf_cc		      "[1 0 0; 0 1 0; 0 0 1]"
+      a_bias		      "[0 0 0]"
+      a_rand		      on
+      a_seeds		      "[23093 23094 23095]"
+      a_pow		      "[0.001 0.001 0.001]"
+      a_sat		      "[-inf  -inf  -inf  inf inf inf]"
+      a_Ts		      "0"
     }
     Line {
       SrcBlock		      "Constant"
@@ -804,7 +929,8 @@ Model {
     Line {
       SrcBlock		      "6DoF (Quaternion)"
       SrcPort		      8
-      DstBlock		      "Demux"
+      Points		      [24, 0; 0, 120]
+      DstBlock		      "Three-axis Accelerometer"
       DstPort		      1
     }
     Line {
@@ -824,6 +950,40 @@ Model {
       SrcPort		      3
       DstBlock		      "Scope"
       DstPort		      3
+    }
+    Line {
+      SrcBlock		      "6DoF (Quaternion)"
+      SrcPort		      6
+      Points		      [10, 0; 0, 195]
+      DstBlock		      "Three-axis Accelerometer"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "6DoF (Quaternion)"
+      SrcPort		      7
+      Points		      [0, 4; 50, 0; 0, 176]
+      DstBlock		      "Three-axis Accelerometer"
+      DstPort		      3
+    }
+    Line {
+      SrcBlock		      "Constant2"
+      SrcPort		      1
+      DstBlock		      "Three-axis Accelerometer"
+      DstPort		      4
+    }
+    Line {
+      SrcBlock		      "Three-axis Accelerometer"
+      SrcPort		      1
+      Points		      [4, 0; 0, -122; -149, 0]
+      DstBlock		      "Demux"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Constant3"
+      SrcPort		      1
+      Points		      [60, 0; 0, -10]
+      DstBlock		      "Three-axis Accelerometer"
+      DstPort		      5
     }
   }
 }

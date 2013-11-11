@@ -51,6 +51,6 @@ xme_0(3)=-3000;
 u0 = 100/3.28;
 v0 = 0;
 w0 = 0;
-sampleVec = [1/50 0];
+sampleVec = [1/1000 0];
 
 windSpeed = 4; %wind speed in m/s
