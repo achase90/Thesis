@@ -3,7 +3,7 @@
 
 void setup() {
 	Serial.begin(19200);
-	Serial2.begin(115200);
+	Serial2.begin(57600);
 	Serial2.flush();
 	while(Serial2.available())
 		Serial2.read();

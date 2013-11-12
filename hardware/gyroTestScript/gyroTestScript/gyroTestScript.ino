@@ -20,7 +20,7 @@ void setup(void) {
   gyro.init(ITG3200_ADDR_AD0_HIGH); 
   
   Serial.print("zeroCalibrating...");
- // gyro.zeroCalibrate(2500, 2);
+ gyro.zeroCalibrate(2500, 2);
   Serial.println("done.");
   //gyro.setOffsets(-65489,-37,-4);
   byte x = gyro.getFilterBW();

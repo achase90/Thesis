@@ -29,7 +29,7 @@
 // 53 on the Mega) must be left as an output or the SD library
 // functions will not work.
 
-const int chipSelect = 52;
+const int chipSelect = 53;
 boolean saveData = false;
 int nBytesIn = 4;
 

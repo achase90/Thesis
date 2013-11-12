@@ -9,9 +9,9 @@
 #include <DallasTemperature.h>
 
 #define profiling 0
-#define magInstalled 1
-#define gpsInstalled 1
-#define pressureInstalled 1
+#define magInstalled 0
+#define gpsInstalled 0
+#define pressureInstalled 0
 #define ONE_WIRE_BUS 49
 #define tempInstalled 0
 #define TEMPERATURE_PRECISION 9
