@@ -12,7 +12,7 @@ if binaryFile
     end
 else
     fid = fopen(handles.fullFilePath,'r');
-    input = textscan(fid,'%u %d %d %d %d %d %d %d %d %d %d %d %d %d %c %c %c %c %c %u %c %d %c %d %c %d %d %u %c %u %d %u %u','Delimiter','\t');
+    input = textscan(fid,'%u %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %d %c %c %c %c %c %u %c %d %c %d %c %d %d %u %c %u %d %u %u %u %u %u %u %u %u %u','Delimiter','\t');
     fclose(fid);
     [handles.data.Raw] = fileToStruct(input);
 end

@@ -41,6 +41,7 @@ extern "C" void __cxa_pure_virtual() {;}
 //
 //
 void readMagnetometer(USARTClass &magSerial,int16_t *magReading);
+void readHMC(int16_t *hmcReading);
 void readGyroData(int16_t &gyroX,int16_t &gyroY,int16_t &gyroZ);
 void readAccelData(int16_t &accelX,int16_t &accelY,int16_t &accelZ);
 void readAllPress (USARTClass &pressureSerial,char add0[], char add1[], char add2[], char add3[], int16_t *pressure);

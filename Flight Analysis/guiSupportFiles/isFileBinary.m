@@ -1,4 +1,5 @@
 function TF = isFileBinary(filename)
+asciiThresh = 6;
 fid = fopen(filename,'r');
 
 x = fread(fid,200,'char');
@@ -11,7 +12,7 @@ x = fread(fid,200,'char');
 
 %probablyAscii seems more reliable than probablyBinary
 probablyAscii = x==9; %if there are tabs, it's a delimited file, almost fersure
-if logical(max(probablyAscii))
+if sum(double(probablyAscii)) > asciiThresh
     TF = false;
 else
     TF = true;

@@ -9,18 +9,19 @@
 #include <DallasTemperature.h>
 
 #define profiling 0
-#define magInstalled 0
-#define gpsInstalled 0
-#define pressureInstalled 0
+#define magInstalled 1
+#define gpsInstalled 1
+#define pressureInstalled 1
 #define ONE_WIRE_BUS 49
 #define tempInstalled 0
 #define TEMPERATURE_PRECISION 9
+#define hmcAddress 0x1E //0011110b, I2C 7bit address of HMC5883
 
 #define serialBaud 19200
 #define magBaud 19200
 #define gpsBaud 57600
-#define pressBaud 9600
-#define sdChipSelect 52
+#define pressBaud 19200
+#define sdChipSelect 53
 #define pwmPin0 38
 #define pwmPin1 39
 #define pwmPin2 40
@@ -45,9 +46,9 @@ char pressSN1[13] = "R10F30-04-A1";
 char pressSN2[13] = "R11L07-20-A5";
 char pressSN3[13] = "4F15-01-A213";
 
-byte writeBuff[1028];
+byte writeBuff[2048];
 uint16_t writeBuffLoc=0;
-const uint8_t nBytesPerSample = 31; //todo:check if this is correct
+const uint8_t nBytesPerSample = 111; //todo:check if this is correct
 
 // set up communication with sensors
 USARTClass &magSerial = Serial1;
@@ -133,6 +134,12 @@ void setup() {
 	accel.begin();
 	accel.beginMeasure();
 
+	//set up HMC5883L magnetometer
+	Wire.beginTransmission(hmcAddress); //open communication with HMC5883
+	Wire.write(0x02); //select mode register
+	Wire.write(0x00); //continuous measurement mode
+	Wire.endTransmission();
+
 #if (tempInstalled)
 	//set up temp sensor
 	sensors.begin();
@@ -184,6 +191,7 @@ void loop() {
 	int16_t pressure[4]; //pressure sensor data
 	int16_t temperature=0;
 	int16_t magReading[3]; //magnetometer data
+	int16_t hmcReading[3]; //hmc5883L mag data
 	int16_t gyroX, gyroY, gyroZ;
 	int16_t accelX, accelY, accelZ, accelT;
 	char msgID[6]="?????";
@@ -202,6 +210,11 @@ void loop() {
 	readAccelData(accelX,accelY,accelZ);
 	//read gyro data
 	readGyroData(gyroX,gyroY,gyroZ);
+	//read HMC5883L magnetometer
+	readHMC(hmcReading);
+	Serial.println(hmcReading[0]);
+	Serial.println(hmcReading[1]);
+	Serial.println(hmcReading[2]);
 	//read magnetometer data
 #if (magInstalled)
 	readMagnetometer(magSerial,magReading);
@@ -239,7 +252,7 @@ void loop() {
 			int bytesWritten = dataFile.write(writeBuff,writeBuffLoc);
 			Serial.println();
 			if (bytesWritten>0)
-			Serial.println("Data buffer written to SD card.");
+				Serial.println("Data buffer written to SD card.");
 			else
 				Serial.println("Error : Data buffer NOT written to SD card.");
 			Serial.println();
@@ -256,6 +269,9 @@ void loop() {
 		parseToBinInt16(writeBuff,magReading[0],writeBuffLoc);
 		parseToBinInt16(writeBuff,magReading[1],writeBuffLoc);
 		parseToBinInt16(writeBuff,magReading[2],writeBuffLoc);
+		parseToBinInt16(writeBuff,hmcReading[0],writeBuffLoc);
+		parseToBinInt16(writeBuff,hmcReading[1],writeBuffLoc);
+		parseToBinInt16(writeBuff,hmcReading[2],writeBuffLoc);
 		parseToBinInt16(writeBuff,pressure[0],writeBuffLoc);
 		parseToBinInt16(writeBuff,pressure[1],writeBuffLoc);
 		parseToBinInt16(writeBuff,pressure[2],writeBuffLoc);
@@ -276,8 +292,15 @@ void loop() {
 		writeBuff[writeBuffLoc++] = (byte) *mode;
 		parseToBinUInt32(writeBuff,CS,writeBuffLoc);
 		parseToBinInt16(writeBuff,temperature,writeBuffLoc);
-		parseToBinUInt32(writeBuff,tDiff,writeBuffLoc);
+		parseToBinUInt32(writeBuff,pwm0,writeBuffLoc);
+		parseToBinUInt32(writeBuff,pwm1,writeBuffLoc);
+		parseToBinUInt32(writeBuff,pwm2,writeBuffLoc);
+		parseToBinUInt32(writeBuff,pwm3,writeBuffLoc);
+		parseToBinUInt32(writeBuff,pwm4,writeBuffLoc);
+		parseToBinUInt32(writeBuff,pwm5,writeBuffLoc);
+		parseToBinUInt32(writeBuff,pwm6,writeBuffLoc);
 		parseToBinUInt32(writeBuff,pwm7,writeBuffLoc);
+		parseToBinUInt32(writeBuff,tDiff,writeBuffLoc);
 #if (profiling)
 		Serial.print("parsing into binary : ");
 		Serial.print(micros()-profile);
@@ -338,6 +361,12 @@ void loop() {
 		Serial.print('\t');
 		Serial.print(magReading[2]);
 		Serial.print('\t');
+		Serial.print(hmcReading[0]);
+		Serial.print('\t');
+		Serial.print(hmcReading[1]);
+		Serial.print('\t');
+		Serial.print(hmcReading[2]);
+		Serial.print('\t');
 		Serial.print(pressure[0]);
 		Serial.print('\t');
 		Serial.print(pressure[1]);
@@ -393,13 +422,38 @@ void readMagnetometer(USARTClass &magSerial,int16_t *magReading)
 		magReading[1] = buff[3] + (buff[2] << 8);
 		magReading[2] = buff[5] + (buff[4]  << 8);
 		}
-	#if (profiling)
-		Serial.print("magnetometer : ");
+#if (profiling)
+	Serial.print("magnetometer : ");
 	Serial.print(micros()-profile);
 	Serial.println(" usec");
 #endif
 	}
+void readHMC(int16_t *hmcReading)
+	{
+	unsigned long profile = micros();
 
+	//Tell the HMC5883 where to begin reading data
+	Wire.beginTransmission(hmcAddress);
+	Wire.write(0x03); //select register 3, X MSB register
+	Wire.endTransmission();
+
+
+	//Read data from each axis, 2 registers per axis
+	Wire.requestFrom(hmcAddress, 6);
+	if(6<=Wire.available()){
+		hmcReading[0] = Wire.read()<<8; //X msb
+		hmcReading[0] |= Wire.read(); //X lsb
+		hmcReading[1] = Wire.read()<<8; //Z msb
+		hmcReading[1] |= Wire.read(); //Z lsb
+		hmcReading[2] = Wire.read()<<8; //Y msb
+		hmcReading[2] |= Wire.read(); //Y lsb
+		}
+#if (profiling)
+	Serial.print("HMC Mag : ");
+	Serial.print(micros()-profile);
+	Serial.println(" usec");
+#endif
+	}
 void readGyroData(int16_t &gyroX,int16_t &gyroY,int16_t &gyroZ)
 	{
 	unsigned long profile = micros();
@@ -413,7 +467,7 @@ void readGyroData(int16_t &gyroX,int16_t &gyroY,int16_t &gyroZ)
 		gyroZ = NAN;
 		}
 #if (profiling)
-		Serial.print("gyro : ");
+	Serial.print("gyro : ");
 	Serial.print(micros()-profile);
 	Serial.println(" usec");
 #endif
@@ -424,7 +478,7 @@ void readAccelData(int16_t &accelX,int16_t &accelY,int16_t &accelZ)
 	int16_t accelT = 0;
 	accel.readXYZTData(accelX,accelY,accelZ,accelT);
 #if (profiling)
-		Serial.print("accel : ");
+	Serial.print("accel : ");
 	Serial.print(micros()-profile);
 	Serial.println(" usec");
 #endif
@@ -665,7 +719,7 @@ void readGPS(USARTClass &gpsSerial,char *msgID,uint32_t &utcTime,char **gpsStatu
 	Serial.println(" usec");
 	profile = micros();	
 #endif
-}
+	}
 
 void serialDeviceInit(UARTClass& mainSerial, USARTClass& deviceSerial, int deviceBaud,char ID[])
 	{

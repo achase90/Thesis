@@ -4,6 +4,9 @@
 % shouldn't add any fields to the structure, so we can simply copy the old
 % to the new then replace.
 
+
+% todo: make sure the unit structure is correct. probably need to
+% completely update it
 function output = convertUnits(input)
 output = input;
 

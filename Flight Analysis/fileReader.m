@@ -124,7 +124,8 @@ if ischar(handles.fileName) && ischar(handles.filePath)
     [handles.data.Units] = convertUnits(handles.data.Raw);
     
     rpmThreshold = 1000;    
-    handles.hasThrust = handles.data.Units.rpmPwm.data > rpmThreshold;
+    %todo:actually fix this so you're not just adding a value to zero
+    handles.hasThrust = handles.data.Units.pwm7.data+1500 > rpmThreshold;
     
     % units to state
     [handles.data.State] = unitsToState(handles.data.Units);

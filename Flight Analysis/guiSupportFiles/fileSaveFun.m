@@ -10,7 +10,7 @@ dn = fieldnames(handles.data.(fn{1}));
         for i=1:length(handles.data.(fn{1}).(dn{1}).data)
 
             output = cellfun(@(x) x.data(i), cellData,'UniformOutput',false);
-            fprintf(fid,'%u\t%i\t%i\t%i\t%i\t%i\t%i\t%i\t%i\t%i\t%i\t%i\t%i\t%i\t%c\t%c\t%c\t%c\t%c\t%u\t%c\t%d\t%c\t%d\t%c\t%d\t%d\t%u\t%c\t%u\t%d\t%u\t%u\n',output{:});
+            fprintf(fid,'%u\t%i\t%i\t%i\t%i\t%i\t%i\t%i\t%i\t%i\t%i\t%i\t%i\t%i\t%i\t%i\t%i\t%c\t%c\t%c\t%c\t%c\t%u\t%c\t%d\t%c\t%d\t%c\t%d\t%d\t%u\t%c\t%u\t%d\t%u\t%u\t%u\t%u\t%u\t%u\t%u\t%u\t%u\n',output{:});
         end
         fclose(fid);
         
