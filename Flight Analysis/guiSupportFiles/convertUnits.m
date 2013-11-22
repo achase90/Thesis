@@ -8,95 +8,148 @@
 % todo: make sure the unit structure is correct. probably need to
 % completely update it
 function output = convertUnits(input)
-output = input;
+%convert all data to doubles
+[input] = dataToDouble(input);
+%todo:remove all conversions to double in every file except this one.
+output = input; %copy input structure to output, since it's largely the same
+output.time.data = output.time.data/1e3;
 
-rpmThreshold = 1000;
+%% Pressure and temperature
+scaleD = 10; %todo:calc this
+scaleB = 10; %todo:calc this
+barMeasured = 1000; %todo: add an input box for atmospheric pressure and temperature
+tMeasured = 70;
 
-zeroOffSet=0; %TEMPORARY
+[PressCalibFile,PressCalibPath] = uigetfile('*.clb','Select pressure calibration file');
+if ischar(PressCalibFile)
+    %read in calib file
+    M = dlmread([PressCalibPath PressCalibFile],'\t',2,0);
+    
+% calc zero offset
+zero1 = mean(M(:,1));
+zero2 = mean(M(:,2));
+zero3 = mean(M(:,3));
+barZero = mean(M(:,4));
+tZero = mean(M(:,5));
 
-%% Pressure
-% remove zero offset here
-%todo:calc this
-output.press0.noise = .1;
-output.press1.noise = .1;
-output.press2.noise = .1;
-output.press3.noise = .1;
+% scale and remove zero offset
+output.press0.data = scaleD*(input.press0.data-zero1);
+output.press1.data = scaleD*(input.press0.data-zero2);
+output.press2.data = scaleD*(input.press0.data-zero3);
+%scale barometric pressure then add zero offset to match known initial pressure
+output.press3.data = scaleB*input.press0.data-(barZero-barMeasured); 
+%scale temperature then add zero offset to match known initial temperature
+%todo: convert from 1000*degF to degF
+output.temperature.data = output.temperature.data-(tZero-tMeasured);
 
-% scale
-
-%% Gyro
-% remove zero offet here. while doing this, grab RMS of zero data for noise
-% settings.
-
-output.gyroX.noise = .01;
-output.gyroY.noise = .01;
-output.gyroZ.noise = .01;
-
-%now scale
-output.gyroX.data = (input.gyroX.data-zeroOffSet)/14.375; %todo:everywhere you convert to real units use calibration data
-output.gyroY.data = (input.gyroY.data-zeroOffSet)/14.375;
-output.gyroZ.data = (input.gyroZ.data-zeroOffSet)/14.375;
-
-% now rotate to match body axes
-
-%% Accel
-% remove zero offet here. while doing this, grab RMS of zero data for noise
-% settings.
-
-% now scale
-output.accelX.data = 0.1*input.accelX.data;
-output.accelY.data = 0.1*input.accelY.data;
-output.accelZ.data = 0.1*input.accelZ.data;
-
-output.accelX.noise = 0.1;
-output.accelY.noise = 0.1;
-output.accelZ.noise = 0.1;
-
-%% Mag hmr2300
-% calibrate magnetometer for hard iron and soft iron. while doing this, grab RMS of zero data for noise
-% settings.
-
-%translate bits to angles
-%todo: this is the cos of the angle, need to do acos
-for i=1:length(input.magX.data)
-    output.ang2300X.data(i) = input.magX.data(i)/norm(double([input.magX.data(i) input.magY.data(i) input.magZ.data(i)]));
-    output.ang2300Y.data(i) = input.magY.data(i)/norm(double([input.magX.data(i) input.magY.data(i) input.magZ.data(i)]));
-    output.ang2300Z.data(i) = input.magZ.data(i)/norm(double([input.magX.data(i) input.magY.data(i) input.magZ.data(i)]));
+% set noise values
+output.press0.noise = std(M(:,1)-zero1);
+output.press1.noise = std(M(:,2)-zero2);
+output.press2.noise = std(M(:,3)-zero3);
+output.press3.noise = std(M(:,4)-barZero);
+output.temperature.noise = std(M(:,5)-tZero);
+else
+        warning('No pressure calibration file selected. No calibration will be performed, and noise will be set to zero.');
+output.press0.noise = 0;
+output.press1.noise = 0;
+output.press2.noise = 0;
+output.press3.noise = 0;
+output.temperature.noise = 0;
 end
-output.ang2300X.units = 'deg';
-output.ang2300Y.units = 'deg';
-output.ang2300Z.units = 'deg';
 
-output.ang2300X.noise = .1;
-output.ang2300Y.noise = .1;
-output.ang2300Z.noise = .1;
+%% Accelerometer and Gyroscope
 
-%% Mag hmc5883L
-% calibrate magnetometer for hard iron and soft iron. while doing this, grab RMS of zero data for noise
-% settings.
+[accelGyroCalibFile,accelGyroCalibPath] = uigetfile('*.clb','Select accelerometer/gyroscope calibration file');
+if ischar(accelGyroCalibFile)
+    % find slope and zero offsets
+    M = dlmread([accelGyroCalibPath accelGyroCalibFile],'\t',2,0);
+    [bitsToFTSS,rmsAccel] = accelCalib(M);
+    
+% apply scale and zero offset corrections to accel
+output.accelX.data = input.accelX.data*bitsToFTSS(1)+bitsToFTSS(4);
+output.accelY.data = input.accelY.data*bitsToFTSS(2)+bitsToFTSS(5);
+output.accelZ.data = input.accelZ.data*bitsToFTSS(3)+bitsToFTSS(6);
 
-%translate bits to angles - todo:when working, change this to data from the
-%HMC5883L
+% apply scale and zero offset corrections to gyro
+scale = 1/14.375; %todo: calibrate this
+gyroXZero = mean(M(:,5));
+gyroYZero = mean(M(:,6));
+gyroZZero = mean(M(:,7));
+output.gyroX.data = scale*(input.gyroX.data-gyroXZero);
+output.gyroY.data = scale*(input.gyroY.data-gyroYZero);
+output.gyroZ.data = scale*(input.gyroZ.data-gyroZZero);
 
-%todo: this is the cos of the angle, need to do acos
+% set units
+output.accelX.units = 'ft/s^2';
+output.accelY.units = 'ft/s^2';
+output.accelZ.units = 'ft/s^2';
+output.gyroX.units = 'deg/s';
+output.gyroY.units = 'deg/s';
+output.gyroZ.units = 'deg/s';
 
-for i=1:length(input.magX.data)
-    output.ang5883X.data(i) = input.magX.data(i)/norm(double([input.magX.data(i) input.magY.data(i) input.magZ.data(i)]));
-    output.ang5883Y.data(i) = input.magY.data(i)/norm(double([input.magX.data(i) input.magY.data(i) input.magZ.data(i)]));
-    output.ang5883Z.data(i) = input.magZ.data(i)/norm(double([input.magX.data(i) input.magY.data(i) input.magZ.data(i)]));
+%set noise values %todo:what are units? what should they be?
+% can we take each section, after scaling, and take noise as
+% (sstd(x-mean(x)), which would give units of ft/s/s/
+output.accelX.noise = rmsAccel;
+output.accelY.noise = rmsAccel;
+output.accelZ.noise = rmsAccel;
+
+output.gyroX.noise = scale*std(M(:,5)); %gyro noise units are in deg/s, this should be correct
+output.gyroY.noise = scale*std(M(:,6));
+output.gyroZ.noise = scale*std(M(:,7));
+else
+    warning('No accelerometer/gyro calibration file selected. No calibration will be performed, and noise will be set to zero.');
+output.accelX.noise = 0;
+output.accelY.noise = 0;
+output.accelZ.noise = 0;
+output.gyroX.noise = 0;
+output.gyroY.noise = 0;
+output.gyroZ.noise = 0;
 end
-output.ang5883X.units = 'deg';
-output.ang5883Y.units = 'deg';
-output.ang5883Z.units = 'deg';
 
-output.ang5883X.noise = .1;
-output.ang5883Y.noise = .1;
-output.ang5883Z.noise = .1;
+%% Magnetometers
+%build matrices
+HMR2300 = [input.magX.data input.magY.data input.magZ.data];
+HMC5883 = [input.hmcX.data input.hmcY.data input.hmcZ.data];
+
+% load calibration file
+[magCalibFile,magCalibPath] = uigetfile('*.clb','Select magnetometer calibration file');
+if ischar(magCalibFile)
+[HMR2300,HMC5883,MHmrToHmc,rmsHMR2300,rmsHMC5883] = calibMags(HMR2300,HMC5883,[magCalibPath magCalibFile]);
+else
+    warning('No magnetometer calibration file selected. No calibration will be performed, and noise will be set to zero.');
+rmsHMR2300 = 0;
+rmsHMC5883 = 0;
+end
+    HMR2300 = bitsToAngs(HMR2300);
+output.magX.data = HMR2300(:,1);
+output.magY.data = HMR2300(:,2);
+output.magZ.data = HMR2300(:,3);
+output.magX.units = 'rad';
+output.magY.units = 'rad';
+output.magZ.units = 'rad';
+%todo:check units on noise. what should they be?
+output.magX.noise = rmsHMR2300;
+output.magY.noise = rmsHMR2300;
+output.magZ.noise = rmsHMR2300;
+
+HMC5883 = bitsToAngs(HMC5883);
+output.hmcX.data = HMC5883(:,1);
+output.hmcY.data = HMC5883(:,2);
+output.hmcZ.data = HMC5883(:,3);
+output.hmcX.units = 'rad';
+output.hmcY.units = 'rad';
+output.hmcZ.units = 'rad';
+output.hmcX.noise = rmsHMC5883;
+output.hmcY.noise = rmsHMC5883;
+output.hmcZ.noise = rmsHMC5883;
 
 %% GPS
-validGPS = input.gpsLat.data~=0;
+validGPS = input.gpsStatus.data=='A';
 gpsLat = double(input.gpsLat.data(validGPS))/10000000;
 gpsLong = double(input.gpsLong.data(validGPS))/10000000;
+nsInd = input.nsInd.data(validGPS);
+ewInd = input.ewInd.data(validGPS);
 degLat = floor(gpsLat);
 degLong = floor(gpsLong);
 minLat = 100*(gpsLat - degLat);
@@ -110,22 +163,22 @@ if minLongInt == 60
     minLongInt = zeros(size(minLongInt));
 end
 if max(validGPS) %check if there's any valid gps data. if there is, use it
-    if strcmpi(input.ewInd.data(1),'w') %assume we're not crossing prime meridian
-        output.gpsLong.data = dms2degrees([-degLong minLongInt secLong]);
-    else
+    for i=1:sum(validGPS)
+        if strcmpi(ewInd(i),'W') %assume we're not crossing prime meridian
+            degLong(i) = -degLong(i);
+        
+        end
+        
+        if strcmpi(nsInd(i),'S')
+            degLat(i) = -degLat(i);
+        end
         output.gpsLong.data = dms2degrees([degLong minLongInt secLong]);
-    end
-    
-    if strcmpi(input.nsInd.data(1),'n')
-        output.gpsLat.data = dms2degrees([degLat minLatInt secLat]);
-    else
         output.gpsLat.data = dms2degrees([degLat minLatInt secLat]);
     end
 else %if there isn't valid gps data, set gps equal to zero
     output.gpsLat.data = zeros(size(input.gpsLat.data));
     output.gpsLong.data = zeros(size(input.gpsLong.data));
 end
-
 % convert gps utcTime, gpsSpd and gpsCrs into real values
 output.utcTime.data = double(input.utcTime.data(validGPS))/100;
 output.gpsSpd.data = double(input.gpsSpd.data(validGPS))*1.68781/1000; %convert to ft/s from kts

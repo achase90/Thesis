@@ -1,6 +1,8 @@
 % the purpose of this function is to translate the measured, calibrated
 % values, with units, from the IMU, and to convert them to values
-% meaningful to the plant. This also includes translating the noise values.
+% meaningful to the plant. This also includes translating the noise values 
+% to plant values. This is where we align gyros/accels/mags/etc.
+
 function [output] = unitsToState(input)
 
 %don't blindly copy input to output since we don't want most of the data in

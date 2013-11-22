@@ -16,6 +16,7 @@
 #define tempInstalled 0
 #define TEMPERATURE_PRECISION 9
 #define hmcAddress 0x1E //0011110b, I2C 7bit address of HMC5883
+#define accelSlaveSelect 52
 
 #define serialBaud 19200
 #define magBaud 19200
@@ -57,7 +58,7 @@ USARTClass &pressureSerial = Serial3;
 
 //Constructors
 ITG3200 gyro = ITG3200(); //construct gyro object
-ADXL362 accel; //construct accel object
+ADXL362 accel = ADXL362(accelSlaveSelect); //construct accel object
 
 OneWire oneWire(ONE_WIRE_BUS);
 
@@ -182,6 +183,7 @@ void setup() {
 			}
 		}
 #endif
+		Serial.println("System initialized, ready for commands.");
 	}
 
 
@@ -212,9 +214,7 @@ void loop() {
 	readGyroData(gyroX,gyroY,gyroZ);
 	//read HMC5883L magnetometer
 	readHMC(hmcReading);
-	Serial.println(hmcReading[0]);
-	Serial.println(hmcReading[1]);
-	Serial.println(hmcReading[2]);
+
 	//read magnetometer data
 #if (magInstalled)
 	readMagnetometer(magSerial,magReading);
@@ -402,6 +402,20 @@ void loop() {
 		Serial.print(temperature);
 		Serial.print('\t');
 		Serial.print(tDiff);
+		Serial.print('\t');
+		Serial.print(pwm0);
+				Serial.print('\t');
+		Serial.print(pwm1);
+				Serial.print('\t');
+		Serial.print(pwm2);
+				Serial.print('\t');
+		Serial.print(pwm3);
+				Serial.print('\t');
+		Serial.print(pwm4);
+				Serial.print('\t');
+		Serial.print(pwm5);
+				Serial.print('\t');
+		Serial.print(pwm6);
 		Serial.print('\t');
 		Serial.println(pwm7);
 		}

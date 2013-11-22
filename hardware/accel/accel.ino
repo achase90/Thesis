@@ -2,7 +2,7 @@
 #include <ADXL362.h>
 
 
-ADXL362 xl;
+ADXL362 xl = ADXL362(52);
 
 int16_t XValue, YValue, ZValue, Temperature;
 
@@ -13,7 +13,7 @@ void setup(){
   xl.beginMeasure();            // Switch ADXL362 to measure mode  
   byte range = xl.SPIreadOneRegister(0x2c);
   range = (range >> 6) & 00000011;
-  Serial.println(range);
+  //Serial.println(range);
   switch (range)
   {
   case 0: 
@@ -26,11 +26,11 @@ void setup(){
     FS = 8;
     break;
   case 3: 
-    FS = 8; 
+    FS = 8;
     break;  
   }
   FS = 2;
-  Serial.print("\n\nBegin Loop Function:\n");
+ // Serial.print("\n\nBegin Loop Function:\n");
 }
 
 void loop(){
@@ -46,7 +46,7 @@ void loop(){
   Serial.print(ZValue);
   Serial.print('\t');
   Serial.println( Temperature);
-  delay(100);                // Arbitrary delay to make serial monitor easier to observe
+  //delay(100);                // Arbitrary delay to make serial monitor easier to observe
 }
 
 
