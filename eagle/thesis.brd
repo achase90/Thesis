@@ -2584,6 +2584,30 @@ We've spent an enormous amount of time creating and checking these footprints an
 </package>
 </packages>
 </library>
+<library name="ITG3200">
+<packages>
+<package name="ITG3200">
+<wire x1="0" y1="0" x2="0" y2="13.97" width="0.2032" layer="21"/>
+<wire x1="0" y1="13.97" x2="17.78" y2="13.97" width="0.2032" layer="21"/>
+<wire x1="17.78" y1="13.97" x2="17.78" y2="0" width="0.2032" layer="21"/>
+<wire x1="17.78" y1="0" x2="0" y2="0" width="0.2032" layer="21"/>
+<text x="0.762" y="11.43" size="1.016" layer="21" font="vector" ratio="15" rot="R270">VDD</text>
+<text x="3.302" y="11.43" size="1.016" layer="21" font="vector" ratio="15" rot="R270">VIO</text>
+<text x="5.842" y="11.43" size="1.016" layer="21" font="vector" ratio="15" rot="R270">GND</text>
+<text x="8.382" y="11.43" size="1.016" layer="21" font="vector" ratio="15" rot="R270">INT</text>
+<text x="10.922" y="11.43" size="1.016" layer="21" font="vector" ratio="15" rot="R270">CLK</text>
+<text x="13.462" y="11.43" size="1.016" layer="21" font="vector" ratio="15" rot="R270">SDA</text>
+<text x="16.002" y="11.43" size="1.016" layer="21" font="vector" ratio="15" rot="R270">SCL</text>
+<pad name="VDD" x="1.27" y="12.7" drill="1.016" diameter="1.8796"/>
+<pad name="VIO" x="3.81" y="12.7" drill="1.016" diameter="1.8796"/>
+<pad name="GND" x="6.35" y="12.7" drill="1.016" diameter="1.8796"/>
+<pad name="INT" x="8.89" y="12.7" drill="1.016" diameter="1.8796"/>
+<pad name="CLK" x="11.43" y="12.7" drill="1.016" diameter="1.8796"/>
+<pad name="SDA" x="13.97" y="12.7" drill="1.016" diameter="1.8796"/>
+<pad name="SCL" x="16.51" y="12.7" drill="1.016" diameter="1.8796"/>
+</package>
+</packages>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -2812,6 +2836,7 @@ design rules under a new name.</description>
 <attribute name="VALUE" x="31.369" y="19.812" size="0.6096" layer="21" rot="R90"/>
 </element>
 <element name="U$4" library="HMC5883L" package="HMC5883L" value="HMC5883L" x="-4.445" y="-18.796"/>
+<element name="U$7" library="ITG3200" package="ITG3200" value="ITG3200" x="-5.334" y="-33.909"/>
 </elements>
 <signals>
 <signal name="3V3">

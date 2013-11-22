@@ -5356,6 +5356,68 @@ High-power, low thermal resistance package.</description>
 </deviceset>
 </devicesets>
 </library>
+<library name="ITG3200">
+<packages>
+<package name="ITG3200">
+<wire x1="0" y1="0" x2="0" y2="13.97" width="0.2032" layer="21"/>
+<wire x1="0" y1="13.97" x2="17.78" y2="13.97" width="0.2032" layer="21"/>
+<wire x1="17.78" y1="13.97" x2="17.78" y2="0" width="0.2032" layer="21"/>
+<wire x1="17.78" y1="0" x2="0" y2="0" width="0.2032" layer="21"/>
+<text x="0.762" y="11.43" size="1.016" layer="21" font="vector" ratio="15" rot="R270">VDD</text>
+<text x="3.302" y="11.43" size="1.016" layer="21" font="vector" ratio="15" rot="R270">VIO</text>
+<text x="5.842" y="11.43" size="1.016" layer="21" font="vector" ratio="15" rot="R270">GND</text>
+<text x="8.382" y="11.43" size="1.016" layer="21" font="vector" ratio="15" rot="R270">INT</text>
+<text x="10.922" y="11.43" size="1.016" layer="21" font="vector" ratio="15" rot="R270">CLK</text>
+<text x="13.462" y="11.43" size="1.016" layer="21" font="vector" ratio="15" rot="R270">SDA</text>
+<text x="16.002" y="11.43" size="1.016" layer="21" font="vector" ratio="15" rot="R270">SCL</text>
+<pad name="VDD" x="1.27" y="12.7" drill="1.016" diameter="1.8796"/>
+<pad name="VIO" x="3.81" y="12.7" drill="1.016" diameter="1.8796"/>
+<pad name="GND" x="6.35" y="12.7" drill="1.016" diameter="1.8796"/>
+<pad name="INT" x="8.89" y="12.7" drill="1.016" diameter="1.8796"/>
+<pad name="CLK" x="11.43" y="12.7" drill="1.016" diameter="1.8796"/>
+<pad name="SDA" x="13.97" y="12.7" drill="1.016" diameter="1.8796"/>
+<pad name="SCL" x="16.51" y="12.7" drill="1.016" diameter="1.8796"/>
+</package>
+</packages>
+<symbols>
+<symbol name="ITG3200">
+<wire x1="0" y1="0" x2="22.86" y2="0" width="0.254" layer="94"/>
+<wire x1="22.86" y1="0" x2="22.86" y2="17.78" width="0.254" layer="94"/>
+<wire x1="22.86" y1="17.78" x2="0" y2="17.78" width="0.254" layer="94"/>
+<wire x1="0" y1="17.78" x2="0" y2="0" width="0.254" layer="94"/>
+<pin name="VDD" x="-5.08" y="15.24" length="middle"/>
+<pin name="VIO" x="-5.08" y="10.16" length="middle"/>
+<pin name="GND" x="-5.08" y="5.08" length="middle"/>
+<pin name="INT" x="-5.08" y="0" length="middle"/>
+<pin name="SDA" x="27.94" y="0" length="middle" rot="R180"/>
+<pin name="SCL" x="27.94" y="5.08" length="middle" rot="R180"/>
+<pin name="CLK" x="27.94" y="10.16" length="middle" rot="R180"/>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="ITG3200">
+<gates>
+<gate name="G$1" symbol="ITG3200" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="ITG3200">
+<connects>
+<connect gate="G$1" pin="CLK" pad="CLK"/>
+<connect gate="G$1" pin="GND" pad="GND"/>
+<connect gate="G$1" pin="INT" pad="INT"/>
+<connect gate="G$1" pin="SCL" pad="SCL"/>
+<connect gate="G$1" pin="SDA" pad="SDA"/>
+<connect gate="G$1" pin="VDD" pad="VDD"/>
+<connect gate="G$1" pin="VIO" pad="VIO"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -5384,6 +5446,7 @@ High-power, low thermal resistance package.</description>
 <part name="R11" library="rcl" deviceset="R-US_" device="R0603" value="10K"/>
 <part name="R12" library="rcl" deviceset="R-US_" device="R0603" value="20K"/>
 <part name="U$4" library="HMC5883L" deviceset="HMC5883L" device=""/>
+<part name="U$7" library="ITG3200" deviceset="ITG3200" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -5413,6 +5476,7 @@ High-power, low thermal resistance package.</description>
 <instance part="R11" gate="G$1" x="190.5" y="91.44" rot="R90"/>
 <instance part="R12" gate="G$1" x="190.5" y="76.2" rot="R90"/>
 <instance part="U$4" gate="G$1" x="-83.82" y="121.92"/>
+<instance part="U$7" gate="G$1" x="106.68" y="139.7"/>
 </instances>
 <busses>
 </busses>
