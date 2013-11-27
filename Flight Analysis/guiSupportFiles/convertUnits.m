@@ -15,8 +15,8 @@ output = input; %copy input structure to output, since it's largely the same
 output.time.data = output.time.data/1e3;
 
 %% Pressure and temperature
-scaleD = 10; %todo:calc this
-scaleB = 10; %todo:calc this
+scaleD = 5/8191; %todo:calc this (5"H20/(2^13-1))
+scaleB = (1100-600)/(8191); %todo:calc this
 barMeasured = 1000; %todo: add an input box for atmospheric pressure and temperature
 tMeasured = 70;
 
@@ -34,13 +34,13 @@ tZero = mean(M(:,5));
 
 % scale and remove zero offset
 output.press0.data = scaleD*(input.press0.data-zero1);
-output.press1.data = scaleD*(input.press0.data-zero2);
-output.press2.data = scaleD*(input.press0.data-zero3);
+output.press1.data = scaleD*(input.press1.data-zero2);
+output.press2.data = scaleD*(input.press2.data-zero3);
 %scale barometric pressure then add zero offset to match known initial pressure
-output.press3.data = scaleB*input.press0.data-(barZero-barMeasured); 
+output.press3.data = scaleB*(input.press3.data-barZero)+barMeasured; 
 %scale temperature then add zero offset to match known initial temperature
 %todo: convert from 1000*degF to degF
-output.temperature.data = output.temperature.data-(tZero-tMeasured);
+output.temperature.data = output.temperature.data/1000-tZero+tMeasured;
 
 % set noise values
 output.press0.noise = std(M(:,1)-zero1);

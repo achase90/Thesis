@@ -229,6 +229,8 @@ void loop() {
 #if (gpsInstalled)
 	if (gpsSerial.available()>0)
 		{
+  //check ascii write time and speed, it might be better to bite the bullet on them
+  //check if the gps message is a GPRMC message. If it isn't, don't write it.
 		readGPS(gpsSerial,msgID,utcTime,&gpsStatus, gpsLat,&nsInd,gpsLong,&ewInd,gpsSpd,gpsCrs,date,&mode,CS);
 		}
 #endif
