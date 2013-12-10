@@ -1,13 +1,20 @@
 %%
-% close all,clc
+close all,clc
 % clear all,clc
 
-load simData_11_4_2013.mat
+load simData_12_10_2013.mat
 
 run dataReadin
 
 CI = .05;
 %% Estimate coefficients
+noise.W = .001;
+noise.alpha = 0.25*pi/180; % calibrated accuracy of 1% FS (I have better) in degrees converted rads
+noise.beta = 0.25*pi/180; % calibrated accuracy of 1% FS (I have better) in degrees converted rads
+noise.accelerometer =  0.0214;
+noise.qbar = .26; % 0.5% of 10" H20 to psf
+
+state = addNoise(state,noise);
 
 [cAero,fAero,cAeroBody]=plant(state,plane);
 simDrag = -state.drag;
@@ -26,8 +33,9 @@ lift = -fAero(:,3);
 time=state.time;
 
 %% Fits
+errorBnd = errorProp(state,plane,noise);
 % [hHoriz,hVert,hPoints] = errorbar2(CD,CL,[errorBnd(:,1) errorBnd(:,3)]);
-
+% set(hPoints,'markerfacecolor','r','markeredgecolor','r');
 
 [pFit] = polyfit(CL,CD,2);
 [bRegress,bIntRegress]=regress(CD,[ones(length(CL),1) CL CL.^2],CI);
@@ -61,19 +69,20 @@ marktype='.';
 % clf(1)
 % catch
 % end
-f=figure(1);
+f = figure(1);
 set(f,'name','Polar Comp','numbertitle','off');
 hold on
 hSim = scatter(simCD,simCL,marksize,'or');
-hPoints=scatter(CD,CL,marksize,'xb');
-% hFit = plot(CDvec,CLvec,'--k','linewidth',2);
-% hFitRobust = plot(CDvecRobust,CLvec,'--g','linewidth',2);
+hPoints = scatter(CD,CL,marksize,'xb');
+hFit = plot(CDvec,CLvec,'--k','linewidth',2);
+hFitRobust = plot(CDvecRobust,CLvec,'--g','linewidth',2);
 xlabel('C_D [-]')
 ylabel('C_L [-]')
 % title('Drag Polar with Error Bounds')
 % title('Drag Polar with Zero Noise')
 legend([hSim hPoints],'Simulator Input','Output from EoMs','location','best')
 % legend([hSim hFit hPoints hVert],'Simulink','Curve Fit','EoMs','Error','location','southeast');
-% legend([hSim hPoints hFit hFitRobust],'System Input','Calculated','OLS Regression','Robust Regression','location','best');
-xlim([.0 .13])
+legend([hSim hPoints hFit hFitRobust],'System Input','Calculated','OLS Regression','Robust Regression','location','best');
+% legend([hPoints hHoriz],'Simulated Data','Error Bars');
+xlim([0 .13]);
 hold off

@@ -1,26 +1,17 @@
 %% Calculate the current aircraft weight
-state.W=beaver_mass*2.204622622; %convert kg to lbf
+state.W=beaver_mass*2.204622622*ones(length(bodyAccels.time),1); %convert kg to lbf
 state.gravity=gravityTerm.signals.values(1)*3.28083989501312;
-state.accelerometer = (squeeze(gravityAccels.signals.values)' - bodyAccels.signals.values)*3.28083989501312;
+state.accelerometer = (gravityAccels.signals.values - bodyAccels.signals.values)*3.28083989501312;
 
 %% Build windAngles and fix units
-state.windAngles=[alphaBeta.signals.values];
-state.flankAngle = atan(tan(state.windAngles(:,2))./cos(state.windAngles(:,1)));
-state.windAnglesDot = windAngleDerivs.signals.values;
+state.alpha=alphaBeta.signals.values(:,1);
+state.beta=alphaBeta.signals.values(:,2);
 
 %% Build time
 state.time=bodyAccels.time;
 
 %% Calculate accelerations and velocities
-state.accel=bodyAccels.signals.values*3.28084; %convert from m/s/s to ft/s/s
-state.vBody = bodySpeeds.signals.values*3.28084; %convert from m/s to ft/s
-% bod
-state.GPSSpeed = GPSSpeeds.signals.values*3.28084;
-state.GPSTime = GPSSpeeds.time;
-state.GPSAccel = GPSAccel.signals.values*3.28084;
-% state.vBodyEarth = nan;
-state.hDot = hdot.signals.values;
-
+state.qbar = qbar.signals.values*0.020885434; %convert N/m^2 to lb/ft^2
 
 %% Build sim output to comapare to
 state.drag=aeroForcesWind.signals.values(:,1)*0.224808943; %convert N to lbf
@@ -31,8 +22,8 @@ try
     state.cDrag=aeroForceCoeffsWind.signals.values(:,1);
     state.cSide=aeroForceCoeffsWind.signals.values(:,2);
     state.cLift=aeroForceCoeffsWind.signals.values(:,3);
-state.cDrag = CDFromSim.signals.values;
-state.cLift = CLFromSim.signals.values;
+    state.cDrag = CDFromSim.signals.values;
+    state.cLift = CLFromSim.signals.values;
 catch
 end
 

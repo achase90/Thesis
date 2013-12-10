@@ -1,11 +1,12 @@
 function [cAero,fAeroWind,cAeroBody]=plant(state,plane)
+windAngles = [state.alpha state.beta];
 
 g = state.gravity;
 m=state.W/g(1);
 
-fAeroBody = -m*state.accelerometer;
+fAeroBody = repmat(-m,1,3).*state.accelerometer;
 
-[fAeroWind] = bodyToWind(fAeroBody,state.windAngles);
+[fAeroWind] = bodyToWind(fAeroBody,windAngles);
 
 for i=1:length(fAeroWind)
     cAeroBody(i,:) = fAeroBody(i,:)/(state.qbar(i)*plane.Sref);
