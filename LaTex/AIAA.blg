@@ -1,0 +1,60 @@
+This is BibTeX, Version 0.99d (TeX Live 2012/W32TeX)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: AIAA.aux
+The style file: unsrt.bst
+Database file #1: bibliography.bib
+Warning--entry type for "ellipsoidFit" isn't style-file defined
+--line 665 of file bibliography.bib
+Warning--entry type for "ubloxDemo" isn't style-file defined
+--line 961 of file bibliography.bib
+Warning--empty journal in stevens2003aircraft
+Warning--empty institution in adxl362DataSheet
+Warning--empty year in U-Line
+Warning--empty year in hmc5883LDatasheet
+Warning--empty institution in itg3200DataSheet
+Warning--empty year in allsensorsDDO
+Warning--empty year in allSensorsBaroDatasheet
+Warning--empty year in pressureStandard
+Warning--empty journal in wvINSAirData
+You've used 29 entries,
+            1791 wiz_defined-function locations,
+            587 strings with 6668 characters,
+and the built_in function-call counts, 4068 in all, are:
+= -- 351
+> -- 144
+< -- 4
++ -- 65
+- -- 36
+* -- 135
+:= -- 724
+add.period$ -- 85
+call.type$ -- 29
+change.case$ -- 35
+chr.to.int$ -- 0
+cite$ -- 38
+duplicate$ -- 214
+empty$ -- 448
+format.name$ -- 36
+if$ -- 897
+int.to.chr$ -- 0
+int.to.str$ -- 29
+missing$ -- 17
+newline$ -- 146
+num.names$ -- 29
+pop$ -- 117
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 61
+stack$ -- 0
+substring$ -- 34
+swap$ -- 19
+text.length$ -- 4
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 9
+while$ -- 32
+width$ -- 31
+write$ -- 298
+(There were 11 warnings)

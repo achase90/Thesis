@@ -1,0 +1,33 @@
+\documentclass[]{aiaa-tc}% insert '[draft]' option to show overfull boxes
+\usepackage{nomencl}
+\usepackage{amsmath}
+\usepackage{float}
+\usepackage{multicol}
+
+ \title{Flight Testing Small UAVs for Aerodynamic Parameter Estimation}
+
+ \author{
+  Adam T. Chase%
+\thanks{Graduate Student, Aerospace Engineering, One Grand Avenue, achase90@gmail.com, Student Member AIAA}
+  \ and Robert A. McDonald    \thanks{Associate Professor, Aerospace Engineering, One Grand Avenue, Senior Member AIAA}\\
+  {\normalsize\itshape
+  California Polytechnic State University, San Luis Obispo, California, 93407}\\
+  {\normalsize\itshape}
+ }
+
+ % Data used by 'handcarry' option if invoked
+ \AIAApapernumber{2014}
+ \AIAAconference{SciTech 2014, Jan 13, 2014, National Harbor, MD}
+ \AIAAcopyright{\AIAAcopyrightD{YEAR}}
+
+ % Define commands to assure consistent treatment throughout document
+ \newcommand{\eqnref}[1]{(\ref{#1})}
+ \newcommand{\class}[1]{\texttt{#1}}
+ \newcommand{\package}[1]{\texttt{#1}}
+ \newcommand{\file}[1]{\texttt{#1}}
+ \newcommand{\BibTeX}{\textsc{Bib}\TeX}
+
+\renewcommand*\nompreamble{\begin{multicols}{2}}
+\renewcommand*\nompostamble{\end{multicols}}
+
+\makenomenclature

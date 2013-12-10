@@ -1,0 +1,53 @@
+\begin{thenomenclature} 
+
+ \nomgroup{A}
+
+  \item [{$\sigma$}]\begingroup Standard deviation\nomeqref {42}
+		\nompageref{7}
+  \item [{$AR$}]\begingroup Aspect ratio\nomeqref {44}\nompageref{8}
+  \item [{$C_D$}]\begingroup Drag coefficient\nomeqref {44}
+		\nompageref{8}
+  \item [{$C_L$}]\begingroup Lift coefficient\nomeqref {44}
+		\nompageref{8}
+  \item [{$C_{D_0}$}]\begingroup Parasite drag coefficient\nomeqref {44}
+		\nompageref{8}
+  \item [{$F_A$}]\begingroup Aerodynamic forces\nomeqref {4}
+		\nompageref{2}
+  \item [{$F_G$}]\begingroup Gravitational forces\nomeqref {4}
+		\nompageref{2}
+  \item [{CFD}]\begingroup Computational Fluid Dynamics\nomeqref {0}
+		\nompageref{1}
+  \item [{DOF}]\begingroup Degree of freedom\nomeqref {43}
+		\nompageref{7}
+  \item [{e}]\begingroup Wing lift distribution\nomeqref {44}
+		\nompageref{8}
+  \item [{FSO}]\begingroup Full scale output\nomeqref {49}
+		\nompageref{15}
+  \item [{I$^2$C}]\begingroup Inter-integrated circuit\nomeqref {49}
+		\nompageref{13}
+  \item [{I/O}]\begingroup Input-output\nomeqref {44}\nompageref{9}
+  \item [{IC}]\begingroup Integrated circuit\nomeqref {47}
+		\nompageref{11}
+  \item [{INS}]\begingroup Inertial navigation system\nomeqref {0}
+		\nompageref{1}
+  \item [{LCC}]\begingroup Leadless chip carrier\nomeqref {47}
+		\nompageref{12}
+  \item [{LGA}]\begingroup Land grid array\nomeqref {44}\nompageref{10}
+  \item [{LiPo}]\begingroup Lithium Polymer\nomeqref {44}
+		\nompageref{10}
+  \item [{PWM}]\begingroup Pulse width modulation\nomeqref {53}
+		\nompageref{16}
+  \item [{QFN}]\begingroup Quad-flats no-leads\nomeqref {49}
+		\nompageref{13}
+  \item [{RMS}]\begingroup root-mean-squared\nomeqref {47}
+		\nompageref{11}
+  \item [{RPM}]\begingroup Rotations per minute\nomeqref {49}
+		\nompageref{13}
+  \item [{SPI}]\begingroup Serial peripheral interface\nomeqref {44}
+		\nompageref{10}
+  \item [{UAS}]\begingroup Unmanned aerial system\nomeqref {0}
+		\nompageref{1}
+  \item [{UAV}]\begingroup Unmanned Aerial Vehicle\nomeqref {0}
+		\nompageref{1}
+
+\end{thenomenclature}

@@ -1,5 +1,5 @@
 //TODO: add checking if data is actually available for all sensors, especially serial sensors
-
+//todo:when initializing pressure, write to one and check if we get a response.
 #include <Wire.h>
 #include <ITG3200.h>
 #include <SPI.h>

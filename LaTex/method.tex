@@ -1,57 +1,18 @@
-\chapter{Method}
-
+%todo: add back in derivation of "drag polar"? Remove kalman filter section. Method section should be alright.
+\section{Method}
 \label{background-information}
-Some basic assumptions will apply throughout the modeling of dynamics in thesis. They are as follows:
+Some basic assumptions will apply throughout the modeling of dynamics in this paper. They are as follows:
 \begin{enumerate}
 \item The vehicle is a fixed mass.
 \item Coriolis effects are negligible.
 \item Thrust will be assumed to be 0.
 \end{enumerate}
-Note that a stationary atmosphere is not assumed. The fixed mass assumption is consistent with the electric aircraft used to test the system. At the altitude and speed at which the vehicles will be tested, Coriolis effects can be ignored\cite{klein2006aircraft}. The zero-thrust assumption is in place to minimize drag error. Any error in a measured state will decrease the accuracy of the drag measurement, and the accuracy of the drag measurement can be no better than the worst state measurement error. In-flight thrust is difficult to measure accurately, so a folding propeller will be used, and the motor will be turned off during data acquisition. This will allow the propeller to fold back, eliminating most of the wind-mill drag associated with a stalled propeller. 
+Note that a stationary atmosphere is not assumed. The fixed mass assumption is consistent with the electric aircraft used to test the system. At the altitude and speed at which the vehicles will be tested, Coriolis effects can be ignored\cite{klein2006aircraft}. The zero-thrust assumption is in place to minimize drag error. Any error in a measured state will decrease the accuracy of the drag measurement, and the accuracy of a given drag measurement can be no better than the worst state measurement error. In-flight thrust is difficult to measure accurately, so a folding propeller will be used, and the motor will be turned off during data acquisition. This will allow the propeller to fold back, eliminating most of the wind-mill drag associated with a stalled propeller. 
 
-\section{Reference Frames}
-For this thesis, the reference frames used will follow those described in \cite{klein2006aircraft}, and will be repeated here for clarity.
-%todo:make reference frame vector graphics
-\subsection*{North-East-Down (NED) Axes ($x_{ned}$, $y_{ned}$, $z_{ned}$)}
-The NED axis system defines a local tangent plane on the Earth's surface, with the origin coinciding with the vehicle's center of gravity. The $\hat{i}$ vector points due north, the $\hat{j}$ vector points due east, and the $\hat{k}$ vector points towards the center of the earth, in accordance with the right-hand rule. This coordinate system is vehicle carried, meaning the origin is fixed to the aircraft, but the axis directions are independent of vehicle orientation.
+\subsection*{Reference Frames}
+The reference frames used in this paper will follow standard convention\cite{klein2006aircraft}, but will be repeated for clarity. The NED frame is a vehicle carried frame, with the $+\hat{i}$ axis pointing due North, the $+\hat{j}$ axis pointing due East, and the $+\hat{k}$ axis pointing toward the center of the earth. The body axis system is defined by the body-mounted accelerometer, is a right handed coordinate system, with the $+\hat{i}$ axis roughly pointing out the nose of the aircraft, the $+\hat{j}$ axis roughly pointing out the right wing, and the $+\hat{k}$ axis roughly pointing out the bottom of the vehicle. The wind axes are a vehicle-carried coordinate system, with the origin at the same location as the Body reference frame. The $\hat{i}$ axis of the Wind reference frame points into the oncoming air, as seen from the vehicle. The $\hat{k}$ direction lies in the x-z plane of the body reference frame. The $\hat{j}$ direction is then defined to be out the right side of the vehicle, in order to follow the right hand rule. 
 
-\begin{figure}[h!]
-\label{nedAxesFig}
-  \centering
-    \includegraphics[width=0.4\textwidth]{figures/nedAxes.eps}
-      \caption{NED Frame of Reference\cite{nedAxes}} 
-\end{figure}
-
-\subsection*{Body Axes ($x_b$, $y_b$, $z_b$)}
-The body axis system has its origin at the vehicle's center of gravity, with the $\hat{i}$ direction pointing out the vehicle's nose, the $\hat{j}$ direction pointing out the right wing, and the $\hat{k}$ direction pointing out the belly of the aircraft, in accordance with the right-hand rule. This coordinate frame is fixed to the body, meaning the aircraft's spatial orientation does not change the direction of the axes.
-\begin{figure}[H]
-  \centering
-  \includegraphics[width=.9\linewidth]{figures/bodyAxes.eps}
-  \captionof{figure}{Body Axes Definition\cite{hawkerThreeView}}
-  \label{bodyAxesFig}
-\end{figure}
-
-\subsection*{Stability Axes ($x_s$, $y_s$, $z_s$)}
-The stability axes are defined with its origin coinciding with the center of gravity of the vehicle. This axis system has essentially the same directions as the body axes, except rotated about the body axis $\hat{j}$ through an initial angle-of-attack, $\alpha_{0}$. This inital angle-of-attack is defined at the beginning of a test maneuver and is then set for the remainder of the test, making it a body-fixed coordinate system. This system assumes no initial sideslip angle \cite{roskam2001airplane}. In Figure \ref{stabilityAxesFig}, only the $\vec{i}$ stability vector is shown, for clarity.
-
-\begin{figure}[H]
-  \centering
-  \includegraphics[width=.4\linewidth]{figures/pitchStability.eps}
-  \captionof{figure}{Stability Axes Definition}
-  \label{stabilityAxesFig}
-\end{figure}
-\subsection*{Wind Axes ($x_w$, $y_w$, $z_w$)}
-The wind axes are, again, a vehicle-carried coordinate system, meaning the origin of the wind axis also coincides with the center of gravity of the vehicle. However, the wind axes are not a body-fixed coordinate frame. The $\hat{i}$ direction points into the oncoming air, as seen from the vehicle. The $\hat{k}$ direction lies in the x-z plane of the body reference frame. The $\hat{j}$ direction is then defined to be out the right side of the vehicle, in order to follow the right hand rule. 
-
-\begin{figure}[H]
-  \centering
-  \includegraphics[width=.6\linewidth]{figures/windAxes.eps}
-  \captionof{figure}{Wind Axes Definition}
-  \label{windAxesFig}
-\end{figure}
-In Figure \ref{windAxesFig}, only the $\vec{i}$ wind vector is shown, for clarity.
-
-\section{Equations of Motion}
+\subsection*{Equations of Motion}
 \label{sys-desc}
 Newton's 2nd Law of Motion states
 \begin{align}
@@ -63,16 +24,17 @@ where $\vec{F}$ is the sum of all applied forces, $\vec{m}$ is the mass of the v
 &= m\vec{a}
 \end{align}
 
-The applied forces on the vehicle are 
+The applied forces on the vehicle for drag polar estimation are 
 \begin{align}
 \vec{F} &= \vec{F}_{A}+\vec{F}_{G}+\vec{F}_{T}
 \end{align}
-
-where $\vec{F_{A}}$ accounts for all aerodynamic forces acting on the vehicle, $\vec{F_{G}}$ is the force due to gravity, and $\vec{F_{T}}$ accounts for forces from the propulsion system.\\
-Aerodynamic forces are described in the stability reference frame. In general, they are defined as
+\nomenclature{$F_A$}{Aerodynamic forces}
+\nomenclature{$F_G$}{Gravitational forces}
+where $\vec{F_{A}}$ accounts for all aerodynamic forces acting on the vehicle, $\vec{F_{G}}$ is the force due to gravity, and $\vec{F_{T}}$ accounts for forces from the propulsion system, which are assumed to be zero.\\
+Aerodynamic forces can be described in the wind reference frame. In general, they are defined as
 
 \begin{align}
-\vec{F}_{A_S} &= D \hat{i}_s+Y \hat{j}_s+L \hat{k}_s
+\vec{F}_{A_w} &= D \hat{i}_w+Y \hat{j}_w+L \hat{k}_w
 \end{align}
 
 where $D$ is drag force, $Y$ is side force, and $L$ is lift force.\\
@@ -81,26 +43,37 @@ The gravitational force on the vehicle acts in the $+z_{ned}$ direction and is e
 \vec{F}_{G_{ned}} &= 0\hat{i}_{ned}+0\hat{j}_{ned}+W\hat{k}_{ned}
 \end{align}
 
-In general, propulsive forces are modeled as
-\begin{align}
-\vec{F}_{T_b} &= T_x \hat{i}_b+T_y \hat{j}_b +T_z \hat{k}_b
-\end{align}
-where $T_x$, $T_y$, and $T_z$ are components of thrust in their respective body axis directions. However, as previously mentioned, propulsive forces are assumed to be $\vec{0}$ for this thesis.\\
-
-The forces are combined and transformed into the body axes reference frame so that they align with the output of body mounted accelerometers. The combined equations of motion are then
+The aerodynamic and gravity forces can be combined and expressed in the body frame
 
 \begin{align}
-\label{equationsOfMotion}
-\vec{F}_{AERO_W} = DCM_{bw}^{-1}(m\vec{a} - DCM_{ib}\vec{F}_{G_{ned}})
+m\vec{a} &= \vec{F}_{G_b} + \vec{F}_{A_b}
 \end{align}
 
-The first term in Equation \ref{equationsOfMotion}, $DCM_{bw}$, is a rotation matrix that rotates a vector in body axes into wind axes, through the wind angles $\alpha$ and $\beta$. The vehicle mass and weight are $m$ and $\vec{F}_G$, respectfully. Accelerations are shown by the variable $\vec{a}$. The rotation matrix $DCM_{ib}$ requires the Euler angles between the NED frame and the body frame. These states, when taken together, are the minimum required states for drag polar estimation.
+which can then be expressed as 
+\begin{align}
+m\vec{a}_b - m\vec{g} &= \vec{F}_{A_b}\\
+m(\vec{a}_b - \vec{g}) &= \vec{F}_{A_b}
+\label{accelerometerEqn}
+\end{align}
 
-\section{Kalman Filter Usage}
+Then, it is noted that a body mounted accelerometer will not measure $\vec{a}_b$, but will instead measure the quantity $\vec{a}_b - \vec{g}$. This means Equation \ref{accelerometerEqn} is really
+
+\begin{align}
+\label{plantEqn1}
+\vec{F}_{A_b} &= -m\vec{r}_b
+\end{align}
+where $\vec{r}_b$ is the reading from a body mounted accelerometer. The aerodynamic forces in wind axes, which is the goal, can then be calculated using a rotation matrix
+\begin{align}
+\label{plantEqn2}
+\vec{F}_{A_w} &= R^b_w\vec{F}_{A_b}
+\end{align}
+Equations \ref{plantEqn1} and \ref{plantEqn2} are important, and show that the only sensors necessary for drag polar estimation during gliding flight are a body-mounted accelerometer and an air data system.
+
+\subsection*{Kalman Filter Usage}
 \label{kalman-filter}
-This thesis utilizes multiple Kalman filters to estimate both regression coefficients and improved states. As a brief overview, the Kalman filter combines the measured state with a predicted state to give an optimal\cite{kalman60} estimate of the actual system state.
+This paper utilizes multiple Kalman filters to estimate both regression coefficients and improved states. As a brief overview, the Kalman filter combines the measured state with a predicted state to give an optimal\cite{kalman60} estimate of the actual system state.
 
-\subsection{Linear Kalman Filter}
+\subsubsection*{Linear Kalman Filter}
 A linear Kalman filter can be applied\cite{welch1995introduction} where the system in question can be described in the form 
 
 \begin{align}
@@ -152,7 +125,7 @@ y_k &= H\hat{x}^-_k
 Note that Equation \ref{kalmanStateUpdate} is essentially a weighted average of a measured state and an expected state. The weighting is the Kalman gain, which is related to the ratio of confidence in the measured state and the expected state. For a 1-D case with equal confidence between the measured state and the expected state, the Kalman gain $K_k = 0.5$, and the Kalman Filter becomes a simple and straight-forward average.
 
 
-\subsection{Extended Kalman Filter}
+\subsection*{Extended Kalman Filter}
 \label{EKFTheory}
 The Extended Kalman filter is used for a non-linear system and is essentially a linearization of a nonlinear plant. A non-linear system can be described as \cite{welch1995introduction}
 

@@ -1,0 +1,55 @@
+\begin{thenomenclature} 
+
+ \nomgroup{A}
+
+  \item [{$\sigma$}]\begingroup Standard deviation\nomeqref {42}
+		\nompageref{8}
+  \item [{$AR$}]\begingroup Aspect ratio\nomeqref {44}\nompageref{8}
+  \item [{$C_D$}]\begingroup Drag coefficient\nomeqref {44}
+		\nompageref{8}
+  \item [{$C_L$}]\begingroup Lift coefficient\nomeqref {44}
+		\nompageref{8}
+  \item [{$C_{D_0}$}]\begingroup Parasite drag coefficient\nomeqref {44}
+		\nompageref{8}
+  \item [{$F_A$}]\begingroup Aerodynamic forces\nomeqref {4}
+		\nompageref{3}
+  \item [{$F_G$}]\begingroup Gravitational forces\nomeqref {4}
+		\nompageref{3}
+  \item [{CFD}]\begingroup Computational Fluid Dynamics\nomeqref {0}
+		\nompageref{1}
+  \item [{DOF}]\begingroup Degree of freedom\nomeqref {43}
+		\nompageref{8}
+  \item [{e}]\begingroup Wing lift distribution\nomeqref {44}
+		\nompageref{8}
+  \item [{FSO}]\begingroup Full scale output\nomeqref {48}
+		\nompageref{15}
+  \item [{G}]\begingroup Gravity\nomeqref {44}\nompageref{10}
+  \item [{I$^2$C}]\begingroup Inter-integrated circuit\nomeqref {48}
+		\nompageref{13}
+  \item [{I/O}]\begingroup Input-output\nomeqref {44}\nompageref{10}
+  \item [{IC}]\begingroup Integrated circuit\nomeqref {46}
+		\nompageref{12}
+  \item [{INS}]\begingroup Inertial navigation system\nomeqref {0}
+		\nompageref{2}
+  \item [{LCC}]\begingroup Leadless chip carrier\nomeqref {46}
+		\nompageref{12}
+  \item [{LGA}]\begingroup Land grid array\nomeqref {44}\nompageref{10}
+  \item [{LiPo}]\begingroup Lithium Polymer\nomeqref {44}
+		\nompageref{10}
+  \item [{PWM}]\begingroup Pulse width modulation\nomeqref {52}
+		\nompageref{16}
+  \item [{QFN}]\begingroup Quad-flats no-leads\nomeqref {48}
+		\nompageref{13}
+  \item [{R/C}]\begingroup Radio-controlled\nomeqref {0}\nompageref{1}
+  \item [{RMS}]\begingroup root-mean-squared\nomeqref {46}
+		\nompageref{12}
+  \item [{RPM}]\begingroup Rotations per minute\nomeqref {48}
+		\nompageref{14}
+  \item [{SPI}]\begingroup Serial peripheral interface\nomeqref {44}
+		\nompageref{10}
+  \item [{UAS}]\begingroup Unmanned aerial system\nomeqref {0}
+		\nompageref{1}
+  \item [{UAV}]\begingroup Unmanned aerial vehicle\nomeqref {0}
+		\nompageref{1}
+
+\end{thenomenclature}
