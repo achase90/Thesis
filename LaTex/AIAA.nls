@@ -15,6 +15,8 @@
 		\nompageref{3}
   \item [{$F_G$}]\begingroup Gravitational forces\nomeqref {4}
 		\nompageref{3}
+  \item [{$R^m_n$}]\begingroup Rotation matrix from m to n\nomeqref {11}
+		\nompageref{3}
   \item [{CFD}]\begingroup Computational Fluid Dynamics\nomeqref {0}
 		\nompageref{1}
   \item [{DOF}]\begingroup Degree of freedom\nomeqref {43}
@@ -36,6 +38,8 @@
   \item [{LGA}]\begingroup Land grid array\nomeqref {44}\nompageref{10}
   \item [{LiPo}]\begingroup Lithium Polymer\nomeqref {44}
 		\nompageref{10}
+  \item [{OLS}]\begingroup Ordinary least squares\nomeqref {44}
+		\nompageref{9}
   \item [{PWM}]\begingroup Pulse width modulation\nomeqref {52}
 		\nompageref{16}
   \item [{QFN}]\begingroup Quad-flats no-leads\nomeqref {48}

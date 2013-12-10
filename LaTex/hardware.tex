@@ -1,7 +1,7 @@
 \section{Hardware}
 \label{hardware}
 %todo:clean this up
-One of the main goals of this research was to give the designer flexibility in choosing the appropriate sensors for a given flight test. To this end, hardware that is available in breakout boards was given preference, since it gives the aircraft designer more flexibility. The aircraft designer could utilize surface mount components if vehicle integration space is extremely limited, or can use the available breakout boards to make circuit-level integration easier if vehicle space isn't limited.
+One of the main goals of this research was to give the designer flexibility in choosing the appropriate sensors for a given flight test. To this end, hardware that is available in breakout boards was given preference, since it gives the aircraft designer more flexibility. The aircraft designer could utilize surface mount components if vehicle integration space is extremely limited, or can use the available breakout boards to make circuit-level integration easier if vehicle space is not a driving flight test concern.
 \subsection*{Flight Computer}
 The flight computer chosen was an Arduino Due. This board has a 32-bit ARM processor, 54 digital I/O pins, 12 analog input pins, and 2 analog output pins. The main driver in the decision to use an Arduino-based platform was the vast support community, which allowed quicker code development. The Arduino also offers a package that integrates well into most of the available airframes, and the stackable header pins allowed for easy integration with other boards. The Due in particular was chosen as it is (at the time of writing) the most advanced Arduino available. The main advantages it has over the comparable Arduino Mega is its increased clock speed (84 MHz for the Due\cite{Atmel2012} vs 16 MHz for the Arduino Mega\cite{Atmel2012atmega}) and its 32-bit architecture (vs. 8-bit for the Arduino Mega).
 \nomenclature{I/O}{Input-output}
@@ -78,7 +78,7 @@ The HMR-2300 can be supplied with power between 6V and 15V, so the 3-cell 11.1V 
         \caption{HMR-2300 Logic Level Circuit} \label{magBoardSchematic}
  \end{figure}
  
- The second magnetometer is a Honeywell HMC-5883L, which comes in an LCC package that was surface mounted to the main sensor board. It was added to the system for two main reason: it is much smaller for applications where size is critical, and it is much less expensive for testing with unproven vehicles. It communicates with the Arduino using an I$^2$C interface and uses a 3.3V operating voltage\cite{hmc5883LDatasheet}. The circuit used was similar to that used by Sparkfun on their HMC-5583L breakout board\cite{hmc5883LSchematic}. The HMC-5883L has an accuracy of 2 milliGauss on each axis. \nomenclature{LCC}{Leadless chip carrier}
+ The second magnetometer is a Honeywell HMC-5883L, which comes in an LCC package that was surface mounted to the main sensor board. It was added to the system for two main reasons: it is much smaller for applications where size is critical, and it is much less expensive for testing with unproven vehicles. It communicates with the Arduino using an I$^2$C interface and uses a 3.3V operating voltage\cite{hmc5883LDatasheet}. The circuit used was similar to that used by Sparkfun on their HMC-5583L breakout board\cite{hmc5883LSchematic}. The HMC-5883L has an accuracy of 2 milliGauss on each axis. \nomenclature{LCC}{Leadless chip carrier}
  
  \begin{figure}[H]
 
@@ -88,9 +88,9 @@ The HMR-2300 can be supplied with power between 6V and 15V, so the 3-cell 11.1V 
  \end{figure}
 
  Both magnetometers were calibrated for both soft-iron and hard-iron effects\cite{magCalibration}. To do this, data was acquired for 10 seconds with the magnetometer being swept through all directions. An ellipsoid was fit to the data using a ordinary least squares method available from the MATLAB file exchange\cite{ellipsoidFit}.
- The least squares fit estimates the center and radius of each axis. The center values for each axis was subtracted from the readings to remove hard-iron effects. Each $i$-th axis is then scaled by $\frac{1}{R_i}$ to ``squish" the ellipse into a circle, which removes soft-iron effects.
+ The least squares fit estimates the center and radius of each axis. The center values for each axis was subtracted from the readings to remove hard-iron effects. Each $i$-th axis is then scaled by $\frac{1}{R_i}$ to reshape the ellipse into a circle, which removes soft-iron effects.
  
- The surface-mounted HMC-5883L was assumed to be aligned with the surface-mounted accelerometer. Since the two magnetometers both measured the North vector, a rotation matrix that goes from one sensor's orientation to the other can be calulcated by
+ The surface-mounted HMC-5883L was assumed to be aligned with the surface-mounted accelerometer. Since the two magnetometers both measured the North vector, a rotation matrix that describes the difference in alignment between the two sensors can be calculated by
  \begin{align}
 \vec{N}_{HMC5883} &= \vec{R}^{M_1}_b\vec{N}_{HMR2300}
  \end{align}
@@ -111,13 +111,13 @@ A three-axis gyroscope was also included in the system. The gyroscope chosen was
       \caption{ITG-3200 Eagle Schematic} \label{itg3200Schematic}
 \end{figure}
 
-The gyroscope was calibrated in the same manner as the accelerometer. The device was placed in six orientations on a turn table which turned at a constant 33 $\frac{1}{3}$ RPM. Slope and offset values for each axis were calculated using \texttt{fmincon}. Before each flight test, the offset values were re-calculated by taking 10 seconds of static readings.\\
+The gyroscope was calibrated in the same manner as the accelerometer. The device was placed in six orientations on a turn table which rotated at a constant 33 $\frac{1}{3}$ RPM. Slope and offset values for each axis were calculated using \texttt{fmincon}. Before each flight test, the offset values were re-calculated by taking 10 seconds of static readings.\\
 \nomenclature{RPM}{Rotations per minute}
 
 \subsection*{Air Data System}
-A five-hole probe was chosen to measure aerodynamic angles as they do not contain moving parts and can provide very accurate, repeatable data. The five-hole probe selected was the Aeroprobe Air Data probe. It is 6 inches long, has a diameter of 1/8 inch, and uses a 0.25" hexagonal section as it's mounting section. The probe comes factory calibrated from angles to pressure readings, and was calibrated at 70 ft/s.\\
+A five-hole probe was chosen to measure aerodynamic angles as they do not contain moving parts and can provide very accurate, repeatable data. The five-hole probe selected was the Aeroprobe Air Data probe. It is 6 inches long, has a diameter of 1/8 inch, and uses a 0.25" hexagonal section as it's mounting section. The probe comes factory calibrated from angles to pressure readings, and was calibrated at and airspeed of 70 ft/s.\\
 %todo:document calibration process
-The probe was extended in front of the leading edge of the wing by a 0.25" carbon fiber tube, which connected to the probe using set screws.
+The probe was extended roughly one chord length in front of the leading edge of the wing by a 0.25" carbon fiber tube, which connected to the probe using set screws.
 \begin{figure}[H]
 
   \centering

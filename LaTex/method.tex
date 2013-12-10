@@ -10,7 +10,7 @@ Some basic assumptions will apply throughout the modeling of dynamics in this pa
 Note that a stationary atmosphere is not assumed. The fixed mass assumption is consistent with the electric aircraft used to test the system. At the altitude and speed at which the vehicles will be tested, Coriolis effects can be ignored\cite{klein2006aircraft}. The zero-thrust assumption is in place to minimize drag error. Any error in a measured state will decrease the accuracy of the drag measurement, and the accuracy of a given drag measurement can be no better than the worst state measurement error. In-flight thrust is difficult to measure accurately, so a folding propeller will be used, and the motor will be turned off during data acquisition. This will allow the propeller to fold back, eliminating most of the wind-mill drag associated with a stalled propeller. 
 
 \subsection*{Reference Frames}
-The reference frames used in this paper will follow standard convention\cite{klein2006aircraft}, but will be repeated for clarity. The NED frame is a vehicle carried frame, with the $+\hat{i}$ axis pointing due North, the $+\hat{j}$ axis pointing due East, and the $+\hat{k}$ axis pointing toward the center of the earth. The body axis system is defined by the body-mounted accelerometer, is a right handed coordinate system, with the $+\hat{i}$ axis roughly pointing out the nose of the aircraft, the $+\hat{j}$ axis roughly pointing out the right wing, and the $+\hat{k}$ axis roughly pointing out the bottom of the vehicle. The wind axes are a vehicle-carried coordinate system, with the origin at the same location as the Body reference frame. The $\hat{i}$ axis of the Wind reference frame points into the oncoming air, as seen from the vehicle. The $\hat{k}$ direction lies in the x-z plane of the body reference frame. The $\hat{j}$ direction is then defined to be out the right side of the vehicle, in order to follow the right hand rule. 
+The reference frames used in this paper will follow standard convention\cite{klein2006aircraft}, but will be repeated for clarity. The NED frame is a vehicle carried frame, with the $+\hat{i}$ axis pointing due North, the $+\hat{j}$ axis pointing due East, and the $+\hat{k}$ axis pointing toward the center of the earth. The body axis system is defined by the body-mounted accelerometer, is a right handed coordinate system, with the $+\hat{i}$ axis roughly pointing out the nose of the aircraft, the $+\hat{j}$ axis roughly pointing out the right wing, and the $+\hat{k}$ axis roughly pointing out the bottom of the vehicle. The wind axes are a vehicle-carried coordinate system, with the origin at the same location as the Body reference frame. The $\hat{i}$ axis of the wind reference frame points in the direction of the free-stream velocity. The $\hat{k}$ direction lies in the x-z plane of the body reference frame. The $\hat{j}$ direction is then defined to be out the right side of the vehicle, in order to follow the right hand rule. 
 
 \subsection*{Equations of Motion}
 \label{sys-desc}
@@ -67,6 +67,7 @@ where $\vec{r}_b$ is the reading from a body mounted accelerometer. The aerodyna
 \label{plantEqn2}
 \vec{F}_{A_w} &= R^b_w\vec{F}_{A_b}
 \end{align}
+\nomenclature{$R^m_n$}{Rotation matrix from m to n}
 Equations \ref{plantEqn1} and \ref{plantEqn2} are important, and show that the only sensors necessary for drag polar estimation during gliding flight are a body-mounted accelerometer and an air data system.
 
 \subsection*{Kalman Filter Usage}
@@ -98,8 +99,7 @@ The \textit{a priori} estimate of the covariance matrix is projected in a simila
 \begin{align}
 P^-_k &= AP_{k-1}A^T+Q
 \end{align}
-
-where Q the process noise covariance matrix.
+where P is the covariance matrix and Q is the process noise matrix.
 
 The Kalman gain is calculated by combining the predicted, \textit{a priori} covariance matrix with the measurement noise covariance matrix $R$
 
@@ -122,7 +122,7 @@ where $y_k$ is the predicted value of $z_k$ found using the output matrix $H$ an
 \begin{align}
 y_k &= H\hat{x}^-_k
 \end{align}
-Note that Equation \ref{kalmanStateUpdate} is essentially a weighted average of a measured state and an expected state. The weighting is the Kalman gain, which is related to the ratio of confidence in the measured state and the expected state. For a 1-D case with equal confidence between the measured state and the expected state, the Kalman gain $K_k = 0.5$, and the Kalman Filter becomes a simple and straight-forward average.
+Note that Equation \ref{kalmanStateUpdate} is essentially a weighted average of a measured state and an expected state. The weighting is the Kalman gain, which is related to the ratio of confidence in the measured state and the expected state. For a 1-D case with equal confidence between the measured state and the expected state, the Kalman gain $K_k = 0.5$, and the Kalman Filter becomes a simple mean.
 
 
 \subsection*{Extended Kalman Filter}

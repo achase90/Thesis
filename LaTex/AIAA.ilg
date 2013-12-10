@@ -7,7 +7,7 @@ Scanning style file c:/texlive/2012/texmf-dist/makeindex/nomencl/nomencl.ist....
 ** Input style error (file = c:/texlive/2012/texmf-dist/makeindex/nomencl/nomencl.ist, line = 72):
    -- Unknown specifier lethead_flag.
 ...done (10 attributes redefined, 3 ignored).
-Scanning input file AIAA.nlo....done (27 entries accepted, 0 rejected).
+Scanning input file AIAA.nlo....done (29 entries accepted, 0 rejected).
 Scanning input file thesis.nls...
 !! Input index error (file = thesis.nls, line = 1):
    -- Unknown index keyword \begin.
@@ -110,8 +110,8 @@ Scanning input file thesis.nls...
 !! Input index error (file = thesis.nls, line = 53):
    -- Unknown index keyword \end.
 done (0 entries accepted, 50 rejected).
-Overall 2 files read (27 entries accepted, 50 rejected).
-Sorting entries....done (137 comparisons).
-Generating output file AIAA.nls....done (55 lines written, 0 warnings).
+Overall 2 files read (29 entries accepted, 50 rejected).
+Sorting entries....done (146 comparisons).
+Generating output file AIAA.nls....done (59 lines written, 0 warnings).
 Output written in AIAA.nls.
 Transcript written in AIAA.ilg.
