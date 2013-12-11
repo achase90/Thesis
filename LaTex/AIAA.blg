@@ -7,6 +7,7 @@ Warning--entry type for "ellipsoidFit" isn't style-file defined
 --line 665 of file bibliography.bib
 Warning--entry type for "ubloxDemo" isn't style-file defined
 --line 961 of file bibliography.bib
+Warning--I didn't find a database entry for "pressCalib"
 Warning--empty journal in stevens2003aircraft
 Warning--empty institution in adxl362DataSheet
 Warning--empty year in U-Line
@@ -18,7 +19,7 @@ Warning--empty year in pressureStandard
 Warning--empty journal in wvINSAirData
 You've used 29 entries,
             1791 wiz_defined-function locations,
-            587 strings with 6668 characters,
+            589 strings with 6688 characters,
 and the built_in function-call counts, 4068 in all, are:
 = -- 351
 > -- 144
@@ -57,4 +58,4 @@ warning$ -- 9
 while$ -- 32
 width$ -- 31
 write$ -- 298
-(There were 11 warnings)
+(There were 12 warnings)

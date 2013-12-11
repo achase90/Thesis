@@ -10,17 +10,18 @@ Some basic assumptions will apply throughout the modeling of dynamics in this pa
 Note that a stationary atmosphere is not assumed. The fixed mass assumption is consistent with the electric aircraft used to test the system. At the altitude and speed at which the vehicles will be tested, Coriolis effects can be ignored\cite{klein2006aircraft}. The zero-thrust assumption is in place to minimize drag error. Any error in a measured state will decrease the accuracy of the drag measurement, and the accuracy of a given drag measurement can be no better than the worst state measurement error. In-flight thrust is difficult to measure accurately, so a folding propeller will be used, and the motor will be turned off during data acquisition. This will allow the propeller to fold back, eliminating most of the wind-mill drag associated with a stalled propeller. 
 
 \subsection*{Reference Frames}
-The reference frames used in this paper will follow standard convention\cite{klein2006aircraft}, but will be repeated for clarity. The NED frame is a vehicle carried frame, with the $+\hat{i}$ axis pointing due North, the $+\hat{j}$ axis pointing due East, and the $+\hat{k}$ axis pointing toward the center of the earth. The body axis system is defined by the body-mounted accelerometer, is a right handed coordinate system, with the $+\hat{i}$ axis roughly pointing out the nose of the aircraft, the $+\hat{j}$ axis roughly pointing out the right wing, and the $+\hat{k}$ axis roughly pointing out the bottom of the vehicle. The wind axes are a vehicle-carried coordinate system, with the origin at the same location as the Body reference frame. The $\hat{i}$ axis of the wind reference frame points in the direction of the free-stream velocity. The $\hat{k}$ direction lies in the x-z plane of the body reference frame. The $\hat{j}$ direction is then defined to be out the right side of the vehicle, in order to follow the right hand rule. 
+The reference frames used in this paper will follow standard convention\cite{klein2006aircraft}, but will be repeated for clarity. The NED frame is a vehicle carried frame, with the $+\hat{i}$ axis pointing due North, the $+\hat{j}$ axis pointing due East, and the $+\hat{k}$ axis pointing toward the center of the earth. The body axis system, defined by the body-mounted accelerometer, is a right handed coordinate system, with the $+\hat{i}$ axis pointing out the nose of the aircraft, the $+\hat{j}$ axis pointing out the right wing, and the $+\hat{k}$ axis pointing out the bottom of the vehicle. The wind axes are a vehicle-carried coordinate system, with the origin at the same location as the Body reference frame. The $\hat{i}$ axis of the wind reference frame points in the direction of the free-stream velocity. The $\hat{k}$ direction lies in the x-z plane of the body reference frame. The $\hat{j}$ direction is then defined to be out the right side of the vehicle, in order to follow the right hand rule. 
 
 \subsection*{Equations of Motion}
 \label{sys-desc}
 Newton's 2nd Law of Motion states
 \begin{align}
-\vec{F} &= \frac{d}{dt}(m\vec{V})
+\vec{F} &= \frac{d}{dt}(\vec{mV})
 \end{align}
+\noindent
 where $\vec{F}$ is the sum of all applied forces, $\vec{m}$ is the mass of the vehicle, and $\vec{V}$ is the vehicle's velocity. Using the fixed mass assumption, this reduces to 
 \begin{align}
-\vec{F} &= m\frac{d\vec{v}}{dt}\\
+\vec{F} &= m\frac{d\vec{V}}{dt}\\
 &= m\vec{a}
 \end{align}
 
@@ -28,27 +29,28 @@ The applied forces on the vehicle for drag polar estimation are
 \begin{align}
 \vec{F} &= \vec{F}_{A}+\vec{F}_{G}+\vec{F}_{T}
 \end{align}
-\nomenclature{$F_A$}{Aerodynamic forces}
-\nomenclature{$F_G$}{Gravitational forces}
+\nomenclature{$\vec{F}_A$}{Aerodynamic forces}
+\nomenclature{$\vec{F}_G$}{Gravitational forces}
+\noindent
 where $\vec{F_{A}}$ accounts for all aerodynamic forces acting on the vehicle, $\vec{F_{G}}$ is the force due to gravity, and $\vec{F_{T}}$ accounts for forces from the propulsion system, which are assumed to be zero.\\
 Aerodynamic forces can be described in the wind reference frame. In general, they are defined as
 
 \begin{align}
 \vec{F}_{A_w} &= D \hat{i}_w+Y \hat{j}_w+L \hat{k}_w
 \end{align}
-
+\noindent
 where $D$ is drag force, $Y$ is side force, and $L$ is lift force.\\
-The gravitational force on the vehicle acts in the $+z_{ned}$ direction and is equal in magnitude to the vehicle's weight $W$, leading to
+The gravitational force on the vehicle acts in the $+z_{NED}$ direction and is equal in magnitude to the vehicle's weight $W$, leading to
 \begin{align}
-\vec{F}_{G_{ned}} &= 0\hat{i}_{ned}+0\hat{j}_{ned}+W\hat{k}_{ned}
+\vec{F}_{G_{NED}} &= 0\hat{i}_{NED}+0\hat{j}_{NED}+W\hat{k}_{NED}
 \end{align}
-
+\nomenclature{NED}{North east down frame}
 The aerodynamic and gravity forces can be combined and expressed in the body frame
 
 \begin{align}
 m\vec{a} &= \vec{F}_{G_b} + \vec{F}_{A_b}
 \end{align}
-
+\noindent
 which can then be expressed as 
 \begin{align}
 m\vec{a}_b - m\vec{g} &= \vec{F}_{A_b}\\
@@ -65,9 +67,9 @@ Then, it is noted that a body mounted accelerometer will not measure $\vec{a}_b$
 where $\vec{r}_b$ is the reading from a body mounted accelerometer. The aerodynamic forces in wind axes, which is the goal, can then be calculated using a rotation matrix
 \begin{align}
 \label{plantEqn2}
-\vec{F}_{A_w} &= R^b_w\vec{F}_{A_b}
+\vec{F}_{A_w} &= \bar{R}^b_w\vec{F}_{A_b}
 \end{align}
-\nomenclature{$R^m_n$}{Rotation matrix from m to n}
+\nomenclature{$\bar{R}^m_n$}{Rotation matrix from m to n}
 Equations \ref{plantEqn1} and \ref{plantEqn2} are important, and show that the only sensors necessary for drag polar estimation during gliding flight are a body-mounted accelerometer and an air data system.
 
 \subsection*{Kalman Filter Usage}
@@ -78,51 +80,53 @@ This paper utilizes multiple Kalman filters to estimate both regression coeffici
 A linear Kalman filter can be applied\cite{welch1995introduction} where the system in question can be described in the form 
 
 \begin{align}
-x_k &= Ax_{k-1} + Bu_{k-1}+w_{k-1}
+x_k &= \bar{A}x_{k-1} + \bar{B}u_{k-1}+w_{k-1}
 \end{align}
-where $A$ is the state transition matrix, $x_{k-1}$ is the previous state, $B$ is the input matrix, $u_{k-1}$ is the input vector, and $w_{k-1}$ is random process noise.
+\noindent
+where $\bar{A}$ is the state transition matrix, $x_{k-1}$ is the previous state, $\bar{B}$ is the input matrix, $u_{k-1}$ is the input vector, and $w_{k-1}$ is random process noise.
 
 The measured state is then 
 \begin{align}
-z_k &= Hx_k+v_k
+z_k &= \bar{H}x_k+v_k
 \end{align} 
-
+\noindent
 where $H$ is the output matrix and $v_k$ is measurement noise.\\
 The Kalman filter operates in a predictor-corrector manner, where the predictor step is often called the \textit{a priori} estimate, and the corrector step is often called the \textit{a posteriori} estimate. The \textit{a priori} state estimate is calculated using prior states and inputs, while assuming no process noise
 
 \begin{align}
-\hat{x}^-_k &= A\hat{x}_{k-1}+Bu_{k-1}
+\hat{x}^-_k &= \bar{A}\hat{x}_{k-1}+\bar{B}u_{k-1}
 \end{align}
 
 The \textit{a priori} estimate of the covariance matrix is projected in a similar manner
 
 \begin{align}
-P^-_k &= AP_{k-1}A^T+Q
+P^-_k &= \bar{A}\bar{P}_{k-1}\bar{A}^T+\bar{Q}
 \end{align}
-where P is the covariance matrix and Q is the process noise matrix.
+\noindent
+where $\bar{P}$ is the covariance matrix and $\bar{Q}$ is the process noise matrix.
 
-The Kalman gain is calculated by combining the predicted, \textit{a priori} covariance matrix with the measurement noise covariance matrix $R$
+The Kalman gain is calculated by combining the predicted, \textit{a priori} covariance matrix with the measurement noise covariance matrix $\bar{R}$
 
 \begin{align}
-K_k &=P^-_kH^T(HP^-_kH^T + R)^{-1}
+\bar{K}_k &=\bar{P}^-_k\bar{H}^T(\bar{H}\bar{P}^-_k\bar{H}^T + \bar{R})^{-1}
 \end{align}
 
 This optimal Kalman gain is then used to estimate the \textit{a posteriori} estimate of the state and covariance matrix
 
 \begin{align}
 \label{kalmanStateUpdate}
-\hat{x}_k &=\hat{x}^-_k+K_k(z_k-y_k)
+\hat{x}_k &=\hat{x}^-_k+\bar{K}_k(z_k-y_k)
 \end{align}
 
 \begin{align}
-P_k &= (I-K_kH)P^-_k
+\bar{P}_k &= (\bar{I}-\bar{K}_k\bar{H})\bar{P}^-_k
 \end{align}
-
-where $y_k$ is the predicted value of $z_k$ found using the output matrix $H$ and the \textit{a priori} state estimate
+\noindent
+where $y_k$ is the predicted value of $z_k$ found using the output matrix $\bar{H}$ and the \textit{a priori} state estimate
 \begin{align}
-y_k &= H\hat{x}^-_k
+y_k &= \bar{H}\hat{x}^-_k.
 \end{align}
-Note that Equation \ref{kalmanStateUpdate} is essentially a weighted average of a measured state and an expected state. The weighting is the Kalman gain, which is related to the ratio of confidence in the measured state and the expected state. For a 1-D case with equal confidence between the measured state and the expected state, the Kalman gain $K_k = 0.5$, and the Kalman Filter becomes a simple mean.
+Note that Equation \ref{kalmanStateUpdate} is essentially a weighted average of a measured state and an expected state. The weighting is the Kalman gain, which is related to the ratio of confidence in the measured state and the expected state. For a 1-D case with equal confidence between the measured state and the expected state, the Kalman gain $\bar{K}_k = 0.5$, and the Kalman Filter becomes a simple mean.
 
 
 \subsection*{Extended Kalman Filter}
@@ -135,7 +139,7 @@ z_k &= h(x_k,v_k)
 \end{align}
 
 The process noise $w_{k-1}$ and measurement noise $v_k$ are not known (or the Kalman filter would not be necessary), so the states are approximated assuming both noise sources are 0
-
+%todo:check periods after equations
 \begin{align}
 \tilde{x}_k &= f(\hat{x}_{k-1},u_{k-1},0)\\
 \tilde{z}_k &= h(\tilde{x}_k,0)
@@ -144,41 +148,41 @@ The process noise $w_{k-1}$ and measurement noise $v_k$ are not known (or the Ka
 The actual states are related to the approximate states by
 
 \begin{align}
-x_k &\approx\tilde{x}_k+A(x_k-\hat{x}_{k-1})+Ww_{k-1}\\
-z_k &\approx\tilde{z}_k+H(x_k-\tilde{x}_{k-1})+Vv_k
+x_k &\approx\tilde{x}_k+\bar{A}(x_k-\hat{x}_{k-1})+\bar{W}w_{k-1}\\
+z_k &\approx\tilde{z}_k+\bar{H}(x_k-\tilde{x}_{k-1})+\bar{V}v_k
 \end{align}
-
-where  the matrices $A$, $W$, $H$, and $V$ represent the different Jacobians matrices:
+\noindent
+where  the matrices $\bar{A}$, $\bar{W}$, $\bar{H}$, and $\bar{V}$ represent the different Jacobians matrices:
 \begin{align}
-A &= \frac{\partial f_i}{\partial x_j}(\hat{x}_{k-1},u_{k-1},0)\\
-W &= \frac{\partial f_i}{\partial w_j}(\hat{x}_{k-1},u_{k-1},0)\\
-H &= \frac{\partial h_i}{\partial x_j}(\hat{x}_{k},0)\\
-V &= \frac{\partial h_i}{\partial v_j}(\hat{x}_{k},0)
+\bar{A} &= \frac{\partial f_i}{\partial x_j}(\hat{x}_{k-1},u_{k-1},0)\\
+\bar{W} &= \frac{\partial f_i}{\partial w_j}(\hat{x}_{k-1},u_{k-1},0)\\
+\bar{H} &= \frac{\partial h_i}{\partial x_j}(\hat{x}_{k},0)\\
+\bar{V} &= \frac{\partial h_i}{\partial v_j}(\hat{x}_{k},0).
 \end{align}
 
 The Extended Kalman filter uses these linearized equations to perform the same process as the linear Kalman filter. Again, the first step is to calculate the \textit{a priori} estimate of the state and the covariance matrix
 \begin{align}
 \hat{x}^-_k &=f(\hat{x}_{k-1},u_{k-1},0)\\
-P^-_k  &= A_kP_{k-1}A^T_{k-1}+W_kQ_{k-1}W^T_k
+\bar{P}^-_k  &= \bar{A}_k\bar{P}_{k-1}\bar{A}^T_{k-1}+\bar{W}_k\bar{Q}_{k-1}\bar{W}^T_k.
 \end{align}
 
 Next, the Kalman gain is calculated
 \begin{align}
-K_k &=P^-_kH^T_k(H_kP^-_kH^T_k+V_kR_kV^T_k)^{-1}
+\bar{K}_k &=\bar{P}^-_k\bar{H}^T_k(\bar{H}_k\bar{P}^-_k\bar{H}^T_k+\bar{V}_k\bar{R}_k\bar{V}^T_k)^{-1}.
 \end{align}
 
 The Kalman gain is then used to calculate the \textit{a posteriori} estimate of the state and covariance matrix
 
 \begin{align}
-\hat{x}_k &=\hat{x}^-_{k}+K_k(z_k-y_k)\\
+\hat{x}_k &=\hat{x}^-_{k}+\bar{K}_k(z_k-y_k)\\
 \label{kalmanVariance}
-P_k &=(I-K_kH_k)P^-_k
+\bar{P}_k &=(\bar{I}-\bar{K}_k\bar{H}_k)\bar{P}^-_k
 \end{align}
-
+\noindent
 where $y_k$ is, as in the linear case, the predicted value of $z_k$, but calculated using the nonlinear output function and the \textit{a priori} state estimate
 
 \begin{align}
-y_k &= h(\hat{x}^-_k,0)
+y_k &= h(\hat{x}^-_k,0).
 \end{align}
 
 Unlike the linear Kalman filter, the Extended Kalman filter is not proven to be optimal. However, it has been utilized for a wide range of applications with excellent results.

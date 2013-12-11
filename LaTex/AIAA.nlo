@@ -3,9 +3,10 @@
 \nomenclatureentry{aR/C@[{R/C}]\begingroup Radio-controlled\nomeqref {0}|nompageref}{1}
 \nomenclatureentry{aCFD@[{CFD}]\begingroup Computational Fluid Dynamics\nomeqref {0}|nompageref}{2}
 \nomenclatureentry{aINS@[{INS}]\begingroup Inertial navigation system\nomeqref {0}|nompageref}{2}
-\nomenclatureentry{a$F_A$@[{$F_A$}]\begingroup Aerodynamic forces\nomeqref {4}|nompageref}{3}
-\nomenclatureentry{a$F_G$@[{$F_G$}]\begingroup Gravitational forces\nomeqref {4}|nompageref}{3}
-\nomenclatureentry{a$R^m_n$@[{$R^m_n$}]\begingroup Rotation matrix from m to n\nomeqref {11}|nompageref}{3}
+\nomenclatureentry{a$\vec{F}_A$@[{$\vec{F}_A$}]\begingroup Aerodynamic forces\nomeqref {4}|nompageref}{3}
+\nomenclatureentry{a$\vec{F}_G$@[{$\vec{F}_G$}]\begingroup Gravitational forces\nomeqref {4}|nompageref}{3}
+\nomenclatureentry{aNED@[{NED}]\begingroup North east down frame\nomeqref {6}|nompageref}{3}
+\nomenclatureentry{a$\bar{R}^m_n$@[{$\bar{R}^m_n$}]\begingroup Rotation matrix from m to n\nomeqref {11}|nompageref}{3}
 \nomenclatureentry{a$\sigma$@[{$\sigma$}]\begingroup Standard deviation\nomeqref {42}|nompageref}{8}
 \nomenclatureentry{aDOF@[{DOF}]\begingroup Degree of freedom\nomeqref {43}|nompageref}{8}
 \nomenclatureentry{a$AR$@[{$AR$}]\begingroup Aspect ratio\nomeqref {44}|nompageref}{8}
@@ -19,7 +20,7 @@
 \nomenclatureentry{aSPI@[{SPI}]\begingroup Serial peripheral interface\nomeqref {44}|nompageref}{10}
 \nomenclatureentry{aLGA@[{LGA}]\begingroup Land grid array\nomeqref {44}|nompageref}{10}
 \nomenclatureentry{aG@[{G}]\begingroup Gravity\nomeqref {44}|nompageref}{10}
-\nomenclatureentry{aRMS@[{RMS}]\begingroup root-mean-squared\nomeqref {46}|nompageref}{12}
+\nomenclatureentry{aRMS@[{RMS}]\begingroup Root mean squared\nomeqref {46}|nompageref}{12}
 \nomenclatureentry{aIC@[{IC}]\begingroup Integrated circuit\nomeqref {46}|nompageref}{12}
 \nomenclatureentry{aLCC@[{LCC}]\begingroup Leadless chip carrier\nomeqref {46}|nompageref}{12}
 \nomenclatureentry{aQFN@[{QFN}]\begingroup Quad-flats no-leads\nomeqref {48}|nompageref}{13}

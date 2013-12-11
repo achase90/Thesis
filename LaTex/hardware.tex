@@ -36,20 +36,24 @@ The accelerometer is calibrated in the field through an optimization routine usi
 \begin{align}
 \label{accelCalibFit}
 \begin{bmatrix}
-r_x & r_y & r_z & 1 & 1 & 1
+r_x & 0 & 0\\ 0 & r_y & 0\\ 0 & 0 & r_z
 \end{bmatrix} 
 \begin{bmatrix}
-m_x \\ m_y \\ m_z \\ b_x \\ b_y \\ b_z
-\end{bmatrix} &= \begin{bmatrix} a_x & a_y & a_z \end{bmatrix}
+m_x \\ m_y \\ m_z
+\end{bmatrix} 
++ \begin{bmatrix}
+b_x & b_y & b_z
+\end{bmatrix}&= \begin{bmatrix} (G_x-a_x) & (G_y - a_y) & (G_z - a_z) \end{bmatrix}
 \end{align}
-
+\noindent
 where the $r$ terms are the bit readings from the accelerometer for each axis, the $m$ terms are the slope of a linear fit for each axis, the $b$ terms are the zero offset of a linear fit for each axis, and the $a$ terms are the actual accelerations.
  
- The slope and offset terms can be found through field calibration and a nonlinear optimization routine. The algorithm uses the fact that, while in a static orientation, the magnitude of the measured vector should be exactly 1g. The minimization problem is then
+ The slope and offset terms can be found through field calibration and a nonlinear optimization routine. The algorithm uses the fact that, while in a static orientation, the magnitude of the measured vector should be exactly 1G. The minimization problem is then
 
 \begin{align}
 \underset{x}{\text{minimize }} f(x) &= \sqrt{(1G-|(\vec{a})|)^2}
 \end{align}
+\noindent
 where $\vec{a}$ is calculated according to Equation \ref{accelCalibFit}, and the variable of interest $x$ is the vector of slopes and offsets in Equation \ref{accelCalibFit}. The slope terms in $x$ are constrained to be positive. To be a deterministic system of equations, at least six static orientations are required. To avoid the noise of a single reading, the problem was expanded to take 100 data points in six different static orientations, and Equation \ref{accelCalibFit} was expanded to become a least squares problem. The main benefit of this technique is that field calibration can be accomplished without needing precise knowledge of the orientation of gravity with respect to the sensor during the calibration routine. When tested, the results of the calibration were consistent between this algorithm and using known orientations. For error propagation, the noise during calibration was taken as the sensor's noise level.
 %todo:include accelerometer calibration plots sent to McDonald. also, make plot of linear fits and the RMS noise to show noise levels. Histograms?
 
@@ -67,7 +71,7 @@ Two separate magnetometers were used for separate purposes. A Honeywell HMR-2300
 
 %todo:take gauss to angles
 This magnetometer provides a RMS error of 0.1 milliGauss for all axes, using the 1 Gauss full-scale setting\cite{hmr2300DataSheet}.
-\nomenclature{RMS}{root-mean-squared}
+\nomenclature{RMS}{Root mean squared}
 The HMR-2300 can be supplied with power between 6V and 15V, so the 3-cell 11.1V nominal LiPo battery that powers the Arduino also passes through to power the magnetometer. Additionally, the HMR-2300 operates using an RS-232 serial interface. To properly interface with the Arduino Due, which uses 3.3V TTL logic levels, a Max-3232 IC was used. This IC, when combined with charge pump capacitors, translates TTL levels between 3V and 5.5V to RS-232 logic levels of $\pm6$V.
 \nomenclature{IC}{Integrated circuit}
 %todo:update this schematic, and include a picture of board layout?
@@ -92,12 +96,12 @@ The HMR-2300 can be supplied with power between 6V and 15V, so the 3-cell 11.1V 
  
  The surface-mounted HMC-5883L was assumed to be aligned with the surface-mounted accelerometer. Since the two magnetometers both measured the North vector, a rotation matrix that describes the difference in alignment between the two sensors can be calculated by
  \begin{align}
-\vec{N}_{HMC5883} &= \vec{R}^{M_1}_b\vec{N}_{HMR2300}
+\vec{N}_{HMC5883} &= \bar{R}^{M_1}_b\vec{N}_{HMR2300}.
  \end{align}
  
- The rotation matrix $\vec{R}^{M_1}_b$ can then be used to align the HMR-2300's coordinate system with the body mounted accelerometers, using
+ The rotation matrix $\bar{R}^{M_1}_b$ can then be used to align the HMR-2300's coordinate system with the body mounted accelerometers, using
  \begin{align}
-\vec{N}_b &= \vec{R}^{M_1}_b\vec{N}_{HMR2300}
+\vec{N}_b &= \bar{R}^{M_1}_b\vec{N}_{HMR2300}.
  \end{align}
  
 \subsection*{Gyroscope}
@@ -135,7 +139,7 @@ The adapter was manufactured to be square to itself and to have the reference fl
       \caption{All Sensors 5-INCH-D-DO Pressure Sensor} \label{allsensorsPressurePic}
 \end{figure}
 
-The differential pressure sensors have a total error band of 0.25\% FSO, and the barometric pressure sensor has a nominal error of 1 mBar. They use a UART serial interface that operates on a 5V logic level, so the logic levels were converted to the 3.3V levels of the Arduino Due. The serial interface includes addressable read commands, which allows multiples devices on a single bus, and ensures all devices record pressure at the same time. The sensor can output both a 14-bit pressure reading and a 12-bit temperature reading, which the device uses to correct its pressure measurement.\\
+The differential pressure sensors have a total error band of 0.25\% FSO, and the barometric pressure sensor has a nominal error of 1 mBar. They use a UART serial interface that operates on a 5V logic level, so the logic levels were converted to the 3.3V levels of the Arduino Due. The serial interface includes addressable read commands, which allows multiple devices on a single bus, and ensures all devices record pressure at the same time. The sensor can output both a 14-bit pressure reading and a 12-bit temperature reading, which the device uses to correct its pressure measurement.\\
 
 A digital temperature sensor was combined with the barometric pressure sensor to estimate the air density, which allowed air speed to be calculated.
 
@@ -147,15 +151,14 @@ A digital temperature sensor was combined with the barometric pressure sensor to
 \end{figure}
  The DS18B20 from Dallas Semiconductors was chosen for its relatively simple One-Wire interface. The device can be powered with the communication line and has a $\pm$0.5$^\circ$C nominal accuracy\cite{DS18B20Datasheet}.
 
-%todo:cite what the calibration instrument was
-The differential pressure sensors were calibrated for slope using a  . The zero offset of each differential pressure sensor was removed before each flight by taking 100 data samples in a no-wind condition. The barometric pressure transducer and the temperature sensor were calibrated for offset using a Paroscientific Model 745 Pressure Standard, capable of $0.008\%$ FSO accuracy\cite{pressureStandard}. \nomenclature{FSO}{Full scale output}
+The differential pressure sensors were calibrated for slope using a Reference Pressure Recorder from Crystal Engineering\cite{pressCalib}. This calibration unit is capable of 0.025\% of reading. The zero offset of each differential pressure sensor was removed before each flight by taking 100 data samples in a no-wind condition. The barometric pressure transducer and the temperature sensor were calibrated for offset using a Paroscientific Model 745 Pressure Standard, capable of $0.008\%$ FSO accuracy\cite{pressureStandard}. \nomenclature{FSO}{Full scale output}
 
 \subsubsection*{Wind Angle Kalman Filter}
 
 To improve the accuracy of the wind angle estimation, a discrete Extended Kalman filter was used. The state transition functions are are
 \begin{align}
 \dot{\alpha} & = \frac{1}{V\cos\beta}(-a_x\sin\alpha+a_z\cos\alpha)+q-(p\cos\alpha+r\sin\alpha)\tan\beta\\
-\dot{\beta} &=\frac{1}{V}(-a_x\cos\alpha\sin\beta+a_y\cos\beta-a_z\sin\alpha\sin\beta)+p\sin\alpha-r\cos\alpha
+\dot{\beta} &=\frac{1}{V}(-a_x\cos\alpha\sin\beta+a_y\cos\beta-a_z\sin\alpha\sin\beta)+p\sin\alpha-r\cos\alpha.
 \end{align}
 
 These state transition equations come from solving for the vehicle forces in wind axes instead of body axes\cite{klein2006aircraft}. The equations for the Kalman filter for the wind angles are
@@ -176,7 +179,7 @@ z_k & = \begin{bmatrix}
 \end{bmatrix}\begin{bmatrix}
 \alpha_{k}\\
 \beta_{k}
-\end{bmatrix}+\hat{v}_{k-1}
+\end{bmatrix}+\hat{v}_{k-1}.
 \end{align}
 
 The process covariance matrix was calculated using the error propagation discussed in Section \ref{pointErrorSection} and the standard deviation data from the zero offset calibration of each of the applicable sensors. The measurement noise covariance matrix was calculated based on the standard deviation data for the zero offset of each pressure transducer connected to the five-hole probe.

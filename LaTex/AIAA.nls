@@ -2,8 +2,14 @@
 
  \nomgroup{A}
 
+  \item [{$\bar{R}^m_n$}]\begingroup Rotation matrix from m to n\nomeqref {11}
+		\nompageref{3}
   \item [{$\sigma$}]\begingroup Standard deviation\nomeqref {42}
 		\nompageref{8}
+  \item [{$\vec{F}_A$}]\begingroup Aerodynamic forces\nomeqref {4}
+		\nompageref{3}
+  \item [{$\vec{F}_G$}]\begingroup Gravitational forces\nomeqref {4}
+		\nompageref{3}
   \item [{$AR$}]\begingroup Aspect ratio\nomeqref {44}\nompageref{8}
   \item [{$C_D$}]\begingroup Drag coefficient\nomeqref {44}
 		\nompageref{8}
@@ -11,14 +17,8 @@
 		\nompageref{8}
   \item [{$C_{D_0}$}]\begingroup Parasite drag coefficient\nomeqref {44}
 		\nompageref{8}
-  \item [{$F_A$}]\begingroup Aerodynamic forces\nomeqref {4}
-		\nompageref{3}
-  \item [{$F_G$}]\begingroup Gravitational forces\nomeqref {4}
-		\nompageref{3}
-  \item [{$R^m_n$}]\begingroup Rotation matrix from m to n\nomeqref {11}
-		\nompageref{3}
   \item [{CFD}]\begingroup Computational Fluid Dynamics\nomeqref {0}
-		\nompageref{1}
+		\nompageref{2}
   \item [{DOF}]\begingroup Degree of freedom\nomeqref {43}
 		\nompageref{8}
   \item [{e}]\begingroup Wing lift distribution\nomeqref {44}
@@ -38,6 +38,8 @@
   \item [{LGA}]\begingroup Land grid array\nomeqref {44}\nompageref{10}
   \item [{LiPo}]\begingroup Lithium Polymer\nomeqref {44}
 		\nompageref{10}
+  \item [{NED}]\begingroup North east down frame\nomeqref {6}
+		\nompageref{3}
   \item [{OLS}]\begingroup Ordinary least squares\nomeqref {44}
 		\nompageref{9}
   \item [{PWM}]\begingroup Pulse width modulation\nomeqref {52}
@@ -45,7 +47,7 @@
   \item [{QFN}]\begingroup Quad-flats no-leads\nomeqref {48}
 		\nompageref{13}
   \item [{R/C}]\begingroup Radio-controlled\nomeqref {0}\nompageref{1}
-  \item [{RMS}]\begingroup root-mean-squared\nomeqref {46}
+  \item [{RMS}]\begingroup Root mean squared\nomeqref {46}
 		\nompageref{12}
   \item [{RPM}]\begingroup Rotations per minute\nomeqref {48}
 		\nompageref{14}
