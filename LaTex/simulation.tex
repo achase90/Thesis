@@ -19,10 +19,9 @@ C_D &= C_{D_0} + K_1(C_L(\alpha)-C_{L_{min}})^2+\frac{(C_L(\alpha))^2}{\pi eAR}
 \nomenclature{e}{Wing lift distribution}
 \nomenclature{$C_{D_0}$}{Parasite drag coefficient}
 
-%todo:redo simulation to match this. Also, propagate noise properly and match sensors. and cite NACA 4412 data
-Airfoil data, including $K_1$, $C_{L_{min}}$, and $C_L(\alpha)$, was taken from nonlinear aerodynamic data of a NACA 4412. While this approximation to a drag polar does not capture the nonlinear section of profile drag rise due to stall, it does represent the limited lifting capability of a real wing, making it more realistic than assuming the wing does not stall.
+Airfoil data, including $K_1$, $C_{L_{min}}$, and $C_L(\alpha)$, was taken from nonlinear aerodynamic data of a NACA 0012\cite{osborne2007transitions}. While this approximation to a drag polar does not capture the nonlinear section of profile drag rise due to stall, it does represent the limited lifting capability of a real wing, making it more realistic than assuming the wing does not stall.
 \subsection*{Simulation Results}
-The first goal of the simulation testing was a to verify the drag polar equations were correct, and that the data analysis routines developed in MATLAB did in fact match inputs to outputs. The simulation was initialized with various initial states to ensure there was no dependency on initial conditions. The vehicle was then flown by an R/C aircraft pilot using a joystick attached to the simulation. It was noted early in the simulation testing that flying a sweep of speeds was beneficial, as a wider range of the drag polar was flown. This result was included in much of the flight test planning. After adequate data had been taken, the data was analyzed without adding simulated sensor noise. The results in Figure \ref{dragPolarNoNoise} show that the equations of motion used in the data analysis functions properly calculate the coefficients being passed into the system.
+The first goal of the simulation testing was to verify the drag polar equations were correct, and that the data analysis routines developed in MATLAB did in fact match inputs to outputs. The simulation was initialized with various initial states to ensure there was no dependency on initial conditions. The vehicle was then flown by an R/C aircraft pilot using a joystick attached to the simulation. It was noted early in the simulation testing that flying a sweep of speeds was beneficial, as a wider range of the drag polar was flown. This result was included in much of the flight test planning. After adequate data had been taken, the data was analyzed without adding simulated sensor noise. The results in Figure \ref{dragPolarNoNoise} show that the equations of motion used in the data analysis functions properly calculate the coefficients being passed into the system.
 
 \begin{figure}[H]
   \centering
@@ -41,7 +40,7 @@ With this result, noise was added to the system to see how sensitive coefficient
 \end{figure}
 
 %todo:redo the simulation with new sensors and update table. also update drag polar to be all 3 components. and update airfoil data
-For the particular simulated test flight shown in Figure \ref{dragPolarNoise}, the estimated drag polar coefficients had error values outlined in Table \ref{simCoeffErrorTable}.
+For the particular simulated test flight shown in Figure \ref{dragPolarNoise}, the estimated drag polar coefficients are shown in Table \ref{simCoeffErrorTable}.
 
 \begin{table}[ht]
 \caption{Nonlinear Model Results} % title of Table
@@ -52,12 +51,13 @@ For the particular simulated test flight shown in Figure \ref{dragPolarNoise}, t
 %heading
 \hline % inserts single horizontal line
 System Inputs & 0.0493 & 0 & 0.03 \\ % inserting body of the table
-OLS Estimate & 0.0355 & -0.0136 & 0.0227 \\
+OLS Estimate & 0.0355 & -0.0136 & 0.0275 \\
 Robust LS Estimate & 0.0460 & -0.0037 & 0.0292 \\ [1ex] % [1ex] adds vertical space
 \hline %inserts single line
 \end{tabular}
 \label{simCoeffErrorTable} % is used to refer this table in the text
 \end{table}
 \nomenclature{OLS}{Ordinary least squares}
+\nomenclature{$K_2$}{Drag polar coefficient for $C^2_L$ terms}
 The results of this simulated flight test showed that the measurement system outlined in Section \ref{hardware} predicted the simulated drag polar with a reasonable error. It also demonstrates
- the necessity of the heteroskedasticity correction, as the OLS regression has a 38\% error on $K_2$ and a 9\% error on $C_{D_0}$, while the robust regression has a 7\% error on $K_2$ and a 3\% error on $C_{D_0}$.
+ the necessity of the heteroskedasticity correction, as the OLS regression has a 39\% error on $K_2$ and a 9\% error on $C_{D_0}$, while the robust regression has a 7\% error on $K_2$ and a 3\% error on $C_{D_0}$.

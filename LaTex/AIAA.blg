@@ -7,7 +7,6 @@ Warning--entry type for "ellipsoidFit" isn't style-file defined
 --line 665 of file bibliography.bib
 Warning--entry type for "ubloxDemo" isn't style-file defined
 --line 961 of file bibliography.bib
-Warning--I didn't find a database entry for "pressCalib"
 Warning--empty journal in stevens2003aircraft
 Warning--empty institution in adxl362DataSheet
 Warning--empty year in U-Line
@@ -17,45 +16,45 @@ Warning--empty year in allsensorsDDO
 Warning--empty year in allSensorsBaroDatasheet
 Warning--empty year in pressureStandard
 Warning--empty journal in wvINSAirData
-You've used 29 entries,
+You've used 28 entries,
             1791 wiz_defined-function locations,
-            589 strings with 6688 characters,
-and the built_in function-call counts, 4068 in all, are:
-= -- 351
-> -- 144
+            586 strings with 6756 characters,
+and the built_in function-call counts, 3920 in all, are:
+= -- 336
+> -- 137
 < -- 4
-+ -- 65
-- -- 36
-* -- 135
-:= -- 724
-add.period$ -- 85
-call.type$ -- 29
-change.case$ -- 35
++ -- 62
+- -- 34
+* -- 137
+:= -- 686
+add.period$ -- 81
+call.type$ -- 28
+change.case$ -- 29
 chr.to.int$ -- 0
-cite$ -- 38
-duplicate$ -- 214
-empty$ -- 448
-format.name$ -- 36
-if$ -- 897
+cite$ -- 37
+duplicate$ -- 209
+empty$ -- 436
+format.name$ -- 34
+if$ -- 867
 int.to.chr$ -- 0
-int.to.str$ -- 29
+int.to.str$ -- 28
 missing$ -- 17
-newline$ -- 146
-num.names$ -- 29
-pop$ -- 117
+newline$ -- 140
+num.names$ -- 27
+pop$ -- 115
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 61
+skip$ -- 62
 stack$ -- 0
 substring$ -- 34
-swap$ -- 19
+swap$ -- 21
 text.length$ -- 4
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 9
-while$ -- 32
-width$ -- 31
-write$ -- 298
-(There were 12 warnings)
+while$ -- 30
+width$ -- 30
+write$ -- 285
+(There were 11 warnings)
