@@ -1,7 +1,7 @@
 \nomenclatureentry{aUAV@[{UAV}]\begingroup Unmanned aerial vehicle\nomeqref {0}|nompageref}{1}
 \nomenclatureentry{aUAS@[{UAS}]\begingroup Unmanned aerial system\nomeqref {0}|nompageref}{1}
 \nomenclatureentry{aR/C@[{R/C}]\begingroup Radio-controlled\nomeqref {0}|nompageref}{1}
-\nomenclatureentry{aCFD@[{CFD}]\begingroup Computational Fluid Dynamics\nomeqref {0}|nompageref}{2}
+\nomenclatureentry{aCFD@[{CFD}]\begingroup Computational fluid dynamics\nomeqref {0}|nompageref}{2}
 \nomenclatureentry{aINS@[{INS}]\begingroup Inertial navigation system\nomeqref {0}|nompageref}{2}
 \nomenclatureentry{a$\vec{F}_A$@[{$\vec{F}_A$}]\begingroup Aerodynamic forces\nomeqref {4}|nompageref}{3}
 \nomenclatureentry{a$\vec{F}_G$@[{$\vec{F}_G$}]\begingroup Gravitational forces\nomeqref {4}|nompageref}{3}
@@ -15,11 +15,13 @@
 \nomenclatureentry{ae@[{e}]\begingroup Wing lift distribution\nomeqref {44}|nompageref}{8}
 \nomenclatureentry{a$C_{D_0}$@[{$C_{D_0}$}]\begingroup Parasite drag coefficient\nomeqref {44}|nompageref}{8}
 \nomenclatureentry{aOLS@[{OLS}]\begingroup Ordinary least squares\nomeqref {44}|nompageref}{9}
+\nomenclatureentry{a$K_2$@[{$K_2$}]\begingroup Drag polar coefficient for $C^2_L$ terms\nomeqref {44}|nompageref}{9}
 \nomenclatureentry{aI/O@[{I/O}]\begingroup Input-output\nomeqref {44}|nompageref}{10}
-\nomenclatureentry{aLiPo@[{LiPo}]\begingroup Lithium Polymer\nomeqref {44}|nompageref}{10}
+\nomenclatureentry{aLiPo@[{LiPo}]\begingroup Lithium polymer\nomeqref {44}|nompageref}{10}
 \nomenclatureentry{aSPI@[{SPI}]\begingroup Serial peripheral interface\nomeqref {44}|nompageref}{10}
 \nomenclatureentry{aLGA@[{LGA}]\begingroup Land grid array\nomeqref {44}|nompageref}{10}
 \nomenclatureentry{aG@[{G}]\begingroup Gravity\nomeqref {44}|nompageref}{10}
+\nomenclatureentry{aPCB@[{PCB}]\begingroup Printed circuit board\nomeqref {44}|nompageref}{10}
 \nomenclatureentry{aRMS@[{RMS}]\begingroup Root mean squared\nomeqref {46}|nompageref}{12}
 \nomenclatureentry{aIC@[{IC}]\begingroup Integrated circuit\nomeqref {46}|nompageref}{12}
 \nomenclatureentry{aLCC@[{LCC}]\begingroup Leadless chip carrier\nomeqref {46}|nompageref}{12}

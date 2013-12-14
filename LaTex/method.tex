@@ -10,24 +10,24 @@ Some basic assumptions will apply throughout the modeling of dynamics in this pa
 Note that a stationary atmosphere is not assumed. The fixed mass assumption is consistent with the electric aircraft used to test the system. At the altitude and speed at which the vehicles will be tested, Coriolis effects can be ignored\cite{klein2006aircraft}. The zero-thrust assumption is in place to minimize drag error. Any error in a measured state will decrease the accuracy of the drag measurement, and the accuracy of a given drag measurement can be no better than the worst state measurement error. In-flight thrust is difficult to measure accurately, so a folding propeller will be used, and the motor will be turned off during data acquisition. This will allow the propeller to fold back, eliminating most of the wind-mill drag associated with a stalled propeller. 
 
 \subsection*{Reference Frames}
-The reference frames used in this paper will follow standard convention\cite{klein2006aircraft}, but will be repeated for clarity. The NED frame is a vehicle carried frame, with the $+\hat{i}$ axis pointing due North, the $+\hat{j}$ axis pointing due East, and the $+\hat{k}$ axis pointing toward the center of the earth. The body axis system, defined by the body-mounted accelerometer, is a right handed coordinate system, with the $+\hat{i}$ axis pointing out the nose of the aircraft, the $+\hat{j}$ axis pointing out the right wing, and the $+\hat{k}$ axis pointing out the bottom of the vehicle. The wind axes are a vehicle-carried coordinate system, with the origin at the same location as the Body reference frame. The $\hat{i}$ axis of the wind reference frame points in the direction of the free-stream velocity. The $\hat{k}$ direction lies in the x-z plane of the body reference frame. The $\hat{j}$ direction is then defined to be out the right side of the vehicle, in order to follow the right hand rule. 
+The reference frames used in this paper will follow standard convention\cite{klein2006aircraft}, but will be repeated for clarity. The NED frame is a vehicle carried frame, with the $+\hat{i}$ axis pointing due North, the $+\hat{j}$ axis pointing due East, and the $+\hat{k}$ axis pointing toward the center of the earth. The body axis system, defined by the body-mounted accelerometer, is a right handed coordinate system, with the $+\hat{i}$ axis pointing out the nose of the aircraft, the $+\hat{j}$ axis pointing out the right wing, and the $+\hat{k}$ axis pointing out the bottom of the vehicle. The wind axes are a vehicle-carried coordinate system, with the origin at the same location as the body reference frame. The $\hat{i}$ axis of the wind reference frame points in the direction of the free-stream velocity. The $\hat{k}$ direction lies in the x-z plane of the body reference frame. The $\hat{j}$ direction is then defined to be out the right side of the vehicle, in order to follow the right hand rule. 
 
 \subsection*{Equations of Motion}
 \label{sys-desc}
 Newton's 2nd Law of Motion states
 \begin{align}
-\vec{F} &= \frac{d}{dt}(\vec{mV})
+\Sigma\vec{F} &= \frac{d}{dt}(\vec{mV})
 \end{align}
 \noindent
-where $\vec{F}$ is the sum of all applied forces, $\vec{m}$ is the mass of the vehicle, and $\vec{V}$ is the vehicle's velocity. Using the fixed mass assumption, this reduces to 
+where $\Sigma\vec{F}$ is the sum of all applied forces, $\vec{m}$ is the mass of the vehicle, and $\vec{V}$ is the vehicle's velocity. Using the fixed mass assumption, this reduces to 
 \begin{align}
-\vec{F} &= m\frac{d\vec{V}}{dt}\\
+\Sigma\vec{F} &= m\frac{d\vec{V}}{dt}\\
 &= m\vec{a}
 \end{align}
 
 The applied forces on the vehicle for drag polar estimation are 
 \begin{align}
-\vec{F} &= \vec{F}_{A}+\vec{F}_{G}+\vec{F}_{T}
+\Sigma\vec{F} &= \vec{F}_{A}+\vec{F}_{G}+\vec{F}_{T}
 \end{align}
 \nomenclature{$\vec{F}_A$}{Aerodynamic forces}
 \nomenclature{$\vec{F}_G$}{Gravitational forces}
@@ -48,7 +48,7 @@ The gravitational force on the vehicle acts in the $+z_{NED}$ direction and is e
 The aerodynamic and gravity forces can be combined and expressed in the body frame
 
 \begin{align}
-m\vec{a} &= \vec{F}_{G_b} + \vec{F}_{A_b}
+m\vec{a}_b &= \vec{F}_{G_b} + \vec{F}_{A_b}
 \end{align}
 \noindent
 which can then be expressed as 
@@ -90,7 +90,7 @@ The measured state is then
 z_k &= \bar{H}x_k+v_k
 \end{align} 
 \noindent
-where $H$ is the output matrix and $v_k$ is measurement noise.\\
+where $\bar{H}$ is the output matrix and $v_k$ is measurement noise.\\
 The Kalman filter operates in a predictor-corrector manner, where the predictor step is often called the \textit{a priori} estimate, and the corrector step is often called the \textit{a posteriori} estimate. The \textit{a priori} state estimate is calculated using prior states and inputs, while assuming no process noise
 
 \begin{align}
@@ -100,7 +100,7 @@ The Kalman filter operates in a predictor-corrector manner, where the predictor 
 The \textit{a priori} estimate of the covariance matrix is projected in a similar manner
 
 \begin{align}
-P^-_k &= \bar{A}\bar{P}_{k-1}\bar{A}^T+\bar{Q}
+\bar{P}^-_k &= \bar{A}\bar{P}_{k-1}\bar{A}^T+\bar{Q}
 \end{align}
 \noindent
 where $\bar{P}$ is the covariance matrix and $\bar{Q}$ is the process noise matrix.
@@ -126,12 +126,12 @@ where $y_k$ is the predicted value of $z_k$ found using the output matrix $\bar{
 \begin{align}
 y_k &= \bar{H}\hat{x}^-_k.
 \end{align}
-Note that Equation \ref{kalmanStateUpdate} is essentially a weighted average of a measured state and an expected state. The weighting is the Kalman gain, which is related to the ratio of confidence in the measured state and the expected state. For a 1-D case with equal confidence between the measured state and the expected state, the Kalman gain $\bar{K}_k = 0.5$, and the Kalman Filter becomes a simple mean.
+Note that Equation \ref{kalmanStateUpdate} is essentially a weighted average of a measured state and an expected state. The weighting is the Kalman gain, which is related to the ratio of confidence in the measured state and the expected state. For a 1-D case with equal confidence between the measured state and the expected state, the Kalman gain $\bar{K}_k = 0.5$, and the Kalman filter becomes a simple mean.
 
 
 \subsection*{Extended Kalman Filter}
 \label{EKFTheory}
-The Extended Kalman filter is used for a non-linear system and is essentially a linearization of a nonlinear plant. A non-linear system can be described as \cite{welch1995introduction}
+The Extended Kalman filter is used for a non-linear system and is essentially a linearization of a nonlinear plant. A nonlinear system can be described as \cite{welch1995introduction}
 
 \begin{align}
 x_k &= f(x_{k-1},u_{k-1},w_{k-1})\\
@@ -152,7 +152,7 @@ x_k &\approx\tilde{x}_k+\bar{A}(x_k-\hat{x}_{k-1})+\bar{W}w_{k-1}\\
 z_k &\approx\tilde{z}_k+\bar{H}(x_k-\tilde{x}_{k-1})+\bar{V}v_k
 \end{align}
 \noindent
-where  the matrices $\bar{A}$, $\bar{W}$, $\bar{H}$, and $\bar{V}$ represent the different Jacobians matrices:
+where  the matrices $\bar{A}$, $\bar{W}$, $\bar{H}$, and $\bar{V}$ represent the different Jacobian matrices:
 \begin{align}
 \bar{A} &= \frac{\partial f_i}{\partial x_j}(\hat{x}_{k-1},u_{k-1},0)\\
 \bar{W} &= \frac{\partial f_i}{\partial w_j}(\hat{x}_{k-1},u_{k-1},0)\\

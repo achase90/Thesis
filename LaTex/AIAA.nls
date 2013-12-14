@@ -17,7 +17,9 @@
 		\nompageref{8}
   \item [{$C_{D_0}$}]\begingroup Parasite drag coefficient\nomeqref {44}
 		\nompageref{8}
-  \item [{CFD}]\begingroup Computational Fluid Dynamics\nomeqref {0}
+  \item [{$K_2$}]\begingroup Drag polar coefficient for $C^2_L$ terms\nomeqref {44}
+		\nompageref{9}
+  \item [{CFD}]\begingroup Computational fluid dynamics\nomeqref {0}
 		\nompageref{2}
   \item [{DOF}]\begingroup Degree of freedom\nomeqref {43}
 		\nompageref{8}
@@ -36,12 +38,14 @@
   \item [{LCC}]\begingroup Leadless chip carrier\nomeqref {46}
 		\nompageref{12}
   \item [{LGA}]\begingroup Land grid array\nomeqref {44}\nompageref{10}
-  \item [{LiPo}]\begingroup Lithium Polymer\nomeqref {44}
+  \item [{LiPo}]\begingroup Lithium polymer\nomeqref {44}
 		\nompageref{10}
   \item [{NED}]\begingroup North east down frame\nomeqref {6}
 		\nompageref{3}
   \item [{OLS}]\begingroup Ordinary least squares\nomeqref {44}
 		\nompageref{9}
+  \item [{PCB}]\begingroup Printed circuit board\nomeqref {44}
+		\nompageref{10}
   \item [{PWM}]\begingroup Pulse width modulation\nomeqref {52}
 		\nompageref{16}
   \item [{QFN}]\begingroup Quad-flats no-leads\nomeqref {48}

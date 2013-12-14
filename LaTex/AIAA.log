@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/W32TeX) (format=pdflatex 2013.6.1)  10 DEC 2013 19:21
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/W32TeX) (format=pdflatex 2013.6.1)  12 DEC 2013 10:19
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -369,15 +369,15 @@ Package lastpage Info: Please have a look at the pageslts package at
 (c:/texlive/2012/texmf-dist/tex/latex/base/ifthen.sty
 Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
 ) (./abstract.tex)
-(./AIAA.nls) (./intro.tex
-Underfull \hbox (badness 10000) in paragraph at lines 4--5
+(./AIAA.nls) (./intro.tex [1
+
+{c:/texlive/2012/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+Underfull \hbox (badness 10000) in paragraph at lines 8--9
 
  []
 
-[1
 
-{c:/texlive/2012/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-Underfull \hbox (badness 10000) in paragraph at lines 6--7
+Underfull \hbox (badness 10000) in paragraph at lines 10--11
 
  []
 
@@ -411,7 +411,7 @@ pdf>
 (epstopdf)                    size: 120698 bytes
 (epstopdf)             Command: <epstopdf --outfile=figures/dragPolarNoNoise-ep
 s-converted-to.pdf figures/dragPolarNoNoise.eps>
-(epstopdf)             \includegraphics on input line 30.
+(epstopdf)             \includegraphics on input line 29.
 Package epstopdf Info: Output file is already uptodate.
 
 <figures/dragPolarNoNoise-eps-converted-to.pdf, id=51, 420.57124pt x 316.18124p
@@ -419,7 +419,7 @@ t>
 File: figures/dragPolarNoNoise-eps-converted-to.pdf Graphic file (type pdf)
  <use figures/dragPolarNoNoise-eps-converted-to.pdf>
 Package pdftex.def Info: figures/dragPolarNoNoise-eps-converted-to.pdf used on 
-input line 30.
+input line 29.
 (pdftex.def)             Requested size: 234.87656pt x 176.57784pt.
  [8]
 Package epstopdf Info: Source file: <figures/simDragPolarNoise.eps>
@@ -431,7 +431,7 @@ Package epstopdf Info: Source file: <figures/simDragPolarNoise.eps>
 (epstopdf)                    size: 123400 bytes
 (epstopdf)             Command: <epstopdf --outfile=figures/simDragPolarNoise-e
 ps-converted-to.pdf figures/simDragPolarNoise.eps>
-(epstopdf)             \includegraphics on input line 39.
+(epstopdf)             \includegraphics on input line 38.
 Package epstopdf Info: Output file is already uptodate.
 
 <figures/simDragPolarNoise-eps-converted-to.pdf, id=55, 418.56375pt x 314.17375
@@ -439,7 +439,7 @@ pt>
 File: figures/simDragPolarNoise-eps-converted-to.pdf Graphic file (type pdf)
  <use figures/simDragPolarNoise-eps-converted-to.pdf>
 Package pdftex.def Info: figures/simDragPolarNoise-eps-converted-to.pdf used on
- input line 39.
+ input line 38.
 (pdftex.def)             Requested size: 234.8731pt x 176.29564pt.
 ) (./hardware.tex
 [9 <./figures/dragPolarNoNoise-eps-converted-to.pdf> <./figures/simDragPolarNoi
@@ -451,108 +451,108 @@ File: figures/arduinoDue.jpg Graphic file (type jpg)
 Package pdftex.def Info: figures/arduinoDue.jpg used on input line 11.
 (pdftex.def)             Requested size: 140.91673pt x 75.13724pt.
 Package epstopdf Info: Source file: <figures/logicLevelConverterSchematic.eps>
-(epstopdf)                    date: 2013-12-09 21:30:02
-(epstopdf)                    size: 905602 bytes
+(epstopdf)                    date: 2013-12-10 19:54:51
+(epstopdf)                    size: 652802 bytes
 (epstopdf)             Output file: <figures/logicLevelConverterSchematic-eps-c
 onverted-to.pdf>
-(epstopdf)                    date: 2013-12-09 21:30:02
-(epstopdf)                    size: 39978 bytes
+(epstopdf)                    date: 2013-12-10 19:55:35
+(epstopdf)                    size: 35853 bytes
 (epstopdf)             Command: <epstopdf --outfile=figures/logicLevelConverter
 Schematic-eps-converted-to.pdf figures/logicLevelConverterSchematic.eps>
 (epstopdf)             \includegraphics on input line 19.
 Package epstopdf Info: Output file is already uptodate.
 
-<figures/logicLevelConverterSchematic-eps-converted-to.pdf, id=72, 423.5825pt x
- 277.035pt>
+<figures/logicLevelConverterSchematic-eps-converted-to.pdf, id=72, 153.57375pt 
+x 89.33376pt>
 File: figures/logicLevelConverterSchematic-eps-converted-to.pdf Graphic file (t
 ype pdf)
  <use figures/logicLevelConverterSchematic-eps-converted-to.pdf>
 Package pdftex.def Info: figures/logicLevelConverterSchematic-eps-converted-to.
 pdf used on input line 19.
-(pdftex.def)             Requested size: 140.92667pt x 92.17004pt.
+(pdftex.def)             Requested size: 140.9357pt x 81.98221pt.
 Package epstopdf Info: Source file: <figures/adxl362.eps>
-(epstopdf)                    date: 2013-08-15 14:19:31
-(epstopdf)                    size: 643978 bytes
+(epstopdf)                    date: 2013-12-10 19:54:25
+(epstopdf)                    size: 668398 bytes
 (epstopdf)             Output file: <figures/adxl362-eps-converted-to.pdf>
-(epstopdf)                    date: 2013-08-15 14:19:39
-(epstopdf)                    size: 17631 bytes
+(epstopdf)                    date: 2013-12-10 19:55:36
+(epstopdf)                    size: 43401 bytes
 (epstopdf)             Command: <epstopdf --outfile=figures/adxl362-eps-convert
 ed-to.pdf figures/adxl362.eps>
-(epstopdf)             \includegraphics on input line 31.
+(epstopdf)             \includegraphics on input line 32.
 Package epstopdf Info: Output file is already uptodate.
 
-<figures/adxl362-eps-converted-to.pdf, id=73, 347.2975pt x 147.55125pt>
+<figures/adxl362-eps-converted-to.pdf, id=73, 102.3825pt x 44.165pt>
 File: figures/adxl362-eps-converted-to.pdf Graphic file (type pdf)
 
 <use figures/adxl362-eps-converted-to.pdf>
 Package pdftex.def Info: figures/adxl362-eps-converted-to.pdf used on input lin
-e 31.
-(pdftex.def)             Requested size: 140.93028pt x 59.87498pt.
+e 32.
+(pdftex.def)             Requested size: 140.9365pt x 60.7961pt.
  [10 <./figures/arduinoDue.jpg> <./figures/logicLevelConverterSchematic-eps-con
 verted-to.pdf>]
 <figures/hmr2300.jpg, id=79, 298.11375pt x 255.95625pt>
 File: figures/hmr2300.jpg Graphic file (type jpg)
 
 <use figures/hmr2300.jpg>
-Package pdftex.def Info: figures/hmr2300.jpg used on input line 68.
+Package pdftex.def Info: figures/hmr2300.jpg used on input line 69.
 (pdftex.def)             Requested size: 140.92772pt x 120.99854pt.
  [11 <./figures/adxl362-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <figures/magBoard.eps>
-(epstopdf)                    date: 2013-08-15 15:22:20
-(epstopdf)                    size: 727818 bytes
+(epstopdf)                    date: 2013-12-10 19:57:42
+(epstopdf)                    size: 884806 bytes
 (epstopdf)             Output file: <figures/magBoard-eps-converted-to.pdf>
-(epstopdf)                    date: 2013-08-15 15:22:30
-(epstopdf)                    size: 32538 bytes
+(epstopdf)                    date: 2013-12-10 19:57:47
+(epstopdf)                    size: 96457 bytes
 (epstopdf)             Command: <epstopdf --outfile=figures/magBoard-eps-conver
 ted-to.pdf figures/magBoard.eps>
-(epstopdf)             \includegraphics on input line 81.
+(epstopdf)             \includegraphics on input line 82.
 Package epstopdf Info: Output file is already uptodate.
 
-<figures/magBoard-eps-converted-to.pdf, id=85, 368.37625pt x 391.4625pt>
+<figures/magBoard-eps-converted-to.pdf, id=85, 303.1325pt x 173.64874pt>
 File: figures/magBoard-eps-converted-to.pdf Graphic file (type pdf)
 
 <use figures/magBoard-eps-converted-to.pdf>
 Package pdftex.def Info: figures/magBoard-eps-converted-to.pdf used on input li
-ne 81.
-(pdftex.def)             Requested size: 234.87749pt x 249.59734pt.
+ne 82.
+(pdftex.def)             Requested size: 328.83061pt x 188.36984pt.
 Package epstopdf Info: Source file: <figures/hmc5883LSchematic.eps>
-(epstopdf)                    date: 2013-08-15 14:42:10
-(epstopdf)                    size: 644766 bytes
+(epstopdf)                    date: 2013-12-10 19:55:14
+(epstopdf)                    size: 955438 bytes
 (epstopdf)             Output file: <figures/hmc5883LSchematic-eps-converted-to
 .pdf>
-(epstopdf)                    date: 2013-08-15 15:02:49
-(epstopdf)                    size: 23783 bytes
+(epstopdf)                    date: 2013-12-10 19:55:37
+(epstopdf)                    size: 83610 bytes
 (epstopdf)             Command: <epstopdf --outfile=figures/hmc5883LSchematic-e
 ps-converted-to.pdf figures/hmc5883LSchematic.eps>
-(epstopdf)             \includegraphics on input line 90.
+(epstopdf)             \includegraphics on input line 91.
 Package epstopdf Info: Output file is already uptodate.
 
-<figures/hmc5883LSchematic-eps-converted-to.pdf, id=86, 243.91125pt x 128.48pt>
+<figures/hmc5883LSchematic-eps-converted-to.pdf, id=86, 200.75pt x 103.38625pt>
 File: figures/hmc5883LSchematic-eps-converted-to.pdf Graphic file (type pdf)
 <use figures/hmc5883LSchematic-eps-converted-to.pdf>
 Package pdftex.def Info: figures/hmc5883LSchematic-eps-converted-to.pdf used on
- input line 90.
-(pdftex.def)             Requested size: 234.88159pt x 123.72363pt.
+ input line 91.
+(pdftex.def)             Requested size: 234.89491pt x 120.97087pt.
  [12 <./figures/hmr2300.jpg> <./figures/magBoard-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <figures/itg3200Schematic.eps>
-(epstopdf)                    date: 2013-08-15 14:19:16
-(epstopdf)                    size: 1110930 bytes
+(epstopdf)                    date: 2013-12-10 19:54:02
+(epstopdf)                    size: 925330 bytes
 (epstopdf)             Output file: <figures/itg3200Schematic-eps-converted-to.
 pdf>
-(epstopdf)                    date: 2013-08-15 14:19:41
-(epstopdf)                    size: 27439 bytes
+(epstopdf)                    date: 2013-12-10 19:55:38
+(epstopdf)                    size: 79203 bytes
 (epstopdf)             Command: <epstopdf --outfile=figures/itg3200Schematic-ep
 s-converted-to.pdf figures/itg3200Schematic.eps>
-(epstopdf)             \includegraphics on input line 114.
+(epstopdf)             \includegraphics on input line 115.
 Package epstopdf Info: Output file is already uptodate.
 
-<figures/itg3200Schematic-eps-converted-to.pdf, id=92, 601.24625pt x 384.43625p
-t>
+<figures/itg3200Schematic-eps-converted-to.pdf, id=92, 175.65625pt x 126.4725pt
+>
 File: figures/itg3200Schematic-eps-converted-to.pdf Graphic file (type pdf)
  <use figures/itg3200Schematic-eps-converted-to.pdf>
 Package pdftex.def Info: figures/itg3200Schematic-eps-converted-to.pdf used on 
-input line 114.
-(pdftex.def)             Requested size: 281.861pt x 180.22163pt.
+input line 115.
+(pdftex.def)             Requested size: 234.89568pt x 169.1249pt.
  [13 <./figures/hmc5883LSchematic-eps-converted-to.pdf> <./figures/itg3200Schem
 atic-eps-converted-to.pdf>]
 Package epstopdf Info: Source file: <figures/probeAdapter.eps>
@@ -564,84 +564,80 @@ Package epstopdf Info: Source file: <figures/probeAdapter.eps>
 (epstopdf)                    size: 22140 bytes
 (epstopdf)             Command: <epstopdf --outfile=figures/probeAdapter-eps-co
 nverted-to.pdf figures/probeAdapter.eps>
-(epstopdf)             \includegraphics on input line 128.
+(epstopdf)             \includegraphics on input line 129.
 Package epstopdf Info: Output file is already uptodate.
- <figures/probeAdapter-eps-converted-to.pdf, id=103, 537.00626pt x 361.35pt>
+ <figures/probeAdapter-eps-converted-to.pdf, id=101, 537.00626pt x 361.35pt>
 File: figures/probeAdapter-eps-converted-to.pdf Graphic file (type pdf)
 
 <use figures/probeAdapter-eps-converted-to.pdf>
 Package pdftex.def Info: figures/probeAdapter-eps-converted-to.pdf used on inpu
-t line 128.
+t line 129.
 (pdftex.def)             Requested size: 234.8741pt x 158.04613pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 131--132
+Underfull \hbox (badness 10000) in paragraph at lines 132--133
 
  []
 
-<figures/allsensorsPressure.jpg, id=104, 213.79875pt x 213.79875pt>
+<figures/allsensorsPressure.jpg, id=102, 213.79875pt x 213.79875pt>
 File: figures/allsensorsPressure.jpg Graphic file (type jpg)
 
 <use figures/allsensorsPressure.jpg>
-Package pdftex.def Info: figures/allsensorsPressure.jpg used on input line 138.
+Package pdftex.def Info: figures/allsensorsPressure.jpg used on input line 139.
 
 (pdftex.def)             Requested size: 117.43634pt x 117.43634pt.
- [14 <./figures/probeAdapter-eps-converted-to.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 142--143
+
+Underfull \hbox (badness 10000) in paragraph at lines 143--144
 
  []
 
-<figures/ds18b20Picture.jpg, id=112, 200.75pt x 200.75pt>
+[14 <./figures/probeAdapter-eps-converted-to.pdf> <./figures/allsensorsPressure
+.jpg>] <figures/ds18b20Picture.jpg, id=110, 200.75pt x 200.75pt>
 File: figures/ds18b20Picture.jpg Graphic file (type jpg)
 
 <use figures/ds18b20Picture.jpg>
-Package pdftex.def Info: figures/ds18b20Picture.jpg used on input line 149.
+Package pdftex.def Info: figures/ds18b20Picture.jpg used on input line 150.
 (pdftex.def)             Requested size: 70.46265pt x 70.46265pt.
 
-
-LaTeX Warning: Citation `pressCalib' on page 15 undefined on input line 154.
-
-[15 <./figures/allsensorsPressure.jpg> <./figures/ds18b20Picture.jpg>]
-<figures/gpsNoBack.jpg, id=117, 808.35333pt x 564.77667pt>
+<figures/gpsNoBack.jpg, id=111, 808.35333pt x 564.77667pt>
 File: figures/gpsNoBack.jpg Graphic file (type jpg)
 
 <use figures/gpsNoBack.jpg>
 Package pdftex.def Info: figures/gpsNoBack.jpg used on input line 193.
 (pdftex.def)             Requested size: 234.87283pt x 164.09988pt.
-) (./results.tex
-<figures/sysInt1.jpg, id=118, 2569.6pt x 1927.2pt>
+ [15 <./figures/ds18b20Picture.jpg>]) (./results.tex <figures/sysInt1.jpg, id=1
+15, 2569.6pt x 1927.2pt>
 File: figures/sysInt1.jpg Graphic file (type jpg)
  <use figures/sysInt1.jpg>
 Package pdftex.def Info: figures/sysInt1.jpg used on input line 10.
 (pdftex.def)             Requested size: 190.24152pt x 142.68114pt.
 
-<figures/sysInt2.jpg, id=119, 2569.6pt x 1927.2pt>
+<figures/sysInt2.jpg, id=116, 2569.6pt x 1927.2pt>
 File: figures/sysInt2.jpg Graphic file (type jpg)
  <use figures/sysInt2.jpg>
 Package pdftex.def Info: figures/sysInt2.jpg used on input line 14.
 (pdftex.def)             Requested size: 190.24152pt x 142.68114pt.
 
-[16 <./figures/gpsNoBack.jpg>]
-<figures/preFlight.jpg, id=123, 2569.6pt x 1927.2pt>
+<figures/preFlight.jpg, id=117, 2569.6pt x 1927.2pt>
 File: figures/preFlight.jpg Graphic file (type jpg)
 
 <use figures/preFlight.jpg>
 Package pdftex.def Info: figures/preFlight.jpg used on input line 26.
 (pdftex.def)             Requested size: 169.10793pt x 126.83095pt.
 
-<figures/crash.jpg, id=124, 1087.81406pt x 1055.44313pt>
+<figures/crash.jpg, id=118, 1087.81406pt x 1055.44313pt>
 File: figures/crash.jpg Graphic file (type jpg)
 
 <use figures/crash.jpg>
 Package pdftex.def Info: figures/crash.jpg used on input line 31.
 (pdftex.def)             Requested size: 169.10739pt x 164.07513pt.
-) (./AIAA.bbl [17 <./figures/sysInt1.jpg> <./figures/sysInt2.jpg> <./figures/pr
-eFlight.jpg> <./figures/crash.jpg>]
+ [16 <./figures/gpsNoBack.jpg> <./figures/sysInt1.jpg> <./figures/sysInt2.jpg>]
+) (./AIAA.bbl
 Missing character: There is no – in font cmr8!
 Missing character: There is no – in font cmr8!
 Missing character: There is no – in font cmr8!
 Missing character: There is no – in font cmr8!
 
-Underfull \hbox (badness 2521) in paragraph at lines 57--61
+Underfull \hbox (badness 2521) in paragraph at lines 63--67
 []\OT1/cmr/m/n/8 Atmel.  8-bit at-mel mi-cro-con-troller with 64k/128k/256k byt
 es in-systemprogrammable flash.  Data Sheet
  []
@@ -649,48 +645,45 @@ es in-systemprogrammable flash.  Data Sheet
 Missing character: There is no ± in font cmr8!
 Missing character: There is no ± in font cmr8!
 Missing character: There is no ± in font cmr8!
-) 
+[17 <./figures/preFlight.jpg> <./figures/crash.jpg>])
+
 AED: lastpage setting LastPage
 [18] (./AIAA.aux)
-
-LaTeX Warning: There were undefined references.
-
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 3366 strings out of 493488
- 46821 string characters out of 3144749
- 122167 words of memory out of 3000000
- 6565 multiletter control sequences out of 15000+200000
- 10817 words of font info for 39 fonts, out of 3000000 for 9000
+ 3362 strings out of 493488
+ 46766 string characters out of 3144749
+ 123163 words of memory out of 3000000
+ 6562 multiletter control sequences out of 15000+200000
+ 10507 words of font info for 38 fonts, out of 3000000 for 9000
  957 hyphenation exceptions out of 8191
- 38i,16n,45p,2236b,371s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 38i,16n,45p,1369b,369s stack positions out of 5000i,500n,10000p,200000b,50000s
 <c:/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/tex
 live/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2012
-/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx7.pfb><c:/texlive/2012/texmf-dis
-t/fonts/type1/public/amsfonts/cm/cmbx8.pfb><c:/texlive/2012/texmf-dist/fonts/ty
-pe1/public/amsfonts/cm/cmbx9.pfb><c:/texlive/2012/texmf-dist/fonts/type1/public
-/amsfonts/cm/cmex10.pfb><c:/texlive/2012/texmf-dist/fonts/type1/public/amsfonts
-/cm/cmmi10.pfb><c:/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5
-.pfb><c:/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb><c:/t
-exlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/texlive/201
-2/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/2012/texmf-di
-st/fonts/type1/public/amsfonts/cm/cmr5.pfb><c:/texlive/2012/texmf-dist/fonts/ty
-pe1/public/amsfonts/cm/cmr6.pfb><c:/texlive/2012/texmf-dist/fonts/type1/public/
-amsfonts/cm/cmr7.pfb><c:/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm
-/cmr8.pfb><c:/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb
-><c:/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb><c:/texli
-ve/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><c:/texlive/2012/te
-xmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><c:/texlive/2012/texmf-dist/f
-onts/type1/public/amsfonts/cm/cmti10.pfb><c:/texlive/2012/texmf-dist/fonts/type
-1/public/amsfonts/cm/cmti8.pfb><c:/texlive/2012/texmf-dist/fonts/type1/public/a
-msfonts/cm/cmtt10.pfb>
-Output written on AIAA.pdf (18 pages, 3901853 bytes).
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb><c:/texlive/2012/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmbx9.pfb><c:/texlive/2012/texmf-dist/fonts/ty
+pe1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2012/texmf-dist/fonts/type1/publi
+c/amsfonts/cm/cmmi10.pfb><c:/texlive/2012/texmf-dist/fonts/type1/public/amsfont
+s/cm/cmmi5.pfb><c:/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7
+.pfb><c:/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><c:/t
+exlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive/201
+2/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb><c:/texlive/2012/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmr6.pfb><c:/texlive/2012/texmf-dist/fonts/typ
+e1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2012/texmf-dist/fonts/type1/public/a
+msfonts/cm/cmr8.pfb><c:/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmsy10.pfb><c:/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb
+><c:/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb><c:/texli
+ve/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><c:/texlive/2012/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb><c:/texlive/2012/texmf-dist/
+fonts/type1/public/amsfonts/cm/cmti8.pfb><c:/texlive/2012/texmf-dist/fonts/type
+1/public/amsfonts/cm/cmtt10.pfb>
+Output written on AIAA.pdf (18 pages, 4094410 bytes).
 PDF statistics:
- 203 PDF objects out of 1000 (max. 8388607)
- 136 compressed objects within 2 object streams
+ 197 PDF objects out of 1000 (max. 8388607)
+ 132 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  91 words of extra memory for PDF output out of 10000 (max. 10000000)
 

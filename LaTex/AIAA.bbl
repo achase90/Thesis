@@ -48,6 +48,12 @@ Brian~L Stevens and Frank~L Lewis.
 \newblock Aircraft control and simulation.
 \newblock 2003.
 
+\bibitem{osborne2007transitions}
+Stephen~R Osborne.
+\newblock {\em Transitions between hover and level flight for a tailsitter
+  uav}.
+\newblock PhD thesis, Citeseer, 2007.
+
 \bibitem{Atmel2012}
 Atmel.
 \newblock Sam3x-sam3a series summary.
@@ -64,11 +70,6 @@ Analog Devices.
 \newblock Micropower, 3-axis,±2 g/±4 g/±8 g digital output mems accelerometer.
 \newblock Technical report, 2012.
 
-\bibitem{Sparkfunadxl362BOB}
-Sparkfun.
-\newblock Adxl362 bob v01.
-\newblock Technical report, Sparkfun, 2012.
-
 \bibitem{U-Line}
 U-Line.
 \newblock Easy-count counting scale data sheet.
@@ -83,11 +84,6 @@ Honeywell~Magnetic Sensors.
 Honeywell.
 \newblock 3-axis digital compass ic hmc5883l.
 \newblock Technical report, Honeywell.
-
-\bibitem{hmc5883LSchematic}
-Sparkfun.
-\newblock Hmc5883l breakout v11.
-\newblock Technical report, Sparkfun, 2011.
 
 \bibitem{magCalibration}
 Talat Ozyagcilar.
@@ -105,11 +101,6 @@ InvenSense.
 \newblock Itg-3200 product specification revision 1.4.
 \newblock Technical report, 2010.
 
-\bibitem{itg3200BOBSchematic}
-Sparkfun.
-\newblock Itg 3200 v10.
-\newblock Schematic, Sparkfun, 2010.
-
 \bibitem{allsensorsDDO}
 All Sensors.
 \newblock Ds-0012 rev a.
@@ -124,6 +115,11 @@ All Sensors.
 Maxim Integrated.
 \newblock Ds18b20 programmable resolution 1-wire digital thermometer.
 \newblock Technical report, Maxim Integrated, 2008.
+
+\bibitem{pressCalib}
+Crystal Engineering, 708 Fiero Lane, Suite 9, San Luis Obispo, California
+  93401.
+\newblock {\em nVision Operation Manual for Reference Recorder}, 2013.
 
 \bibitem{pressureStandard}
 Paroscientific.
