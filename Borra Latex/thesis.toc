@@ -1,0 +1,78 @@
+\contentsline {chapter}{List of Tables}{ix}{chapter*.3}
+\contentsline {chapter}{List of Figures}{x}{chapter*.4}
+\contentsline {chapter}{Nomenclature}{xiii}{chapter*.5}
+\contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}
+\contentsline {section}{\numberline {1.1}Significance}{3}{section.1.1}
+\contentsline {section}{\numberline {1.2}Requirements and Outcomes}{4}{section.1.2}
+\contentsline {section}{\numberline {1.3}Thesis Outline}{4}{section.1.3}
+\contentsline {chapter}{\numberline {2}Nonlinear Theory}{7}{chapter.2}
+\contentsline {section}{\numberline {2.1}Modeling}{7}{section.2.1}
+\contentsline {subsection}{\numberline {2.1.1}Reference Frames}{10}{subsection.2.1.1}
+\contentsline {subsection}{\numberline {2.1.2}Direction Cosine Matrices}{13}{subsection.2.1.2}
+\contentsline {subsection}{\numberline {2.1.3}Aircraft Dynamics}{17}{subsection.2.1.3}
+\contentsline {subsubsection}{\numberline {2.1.3.1}Translational Acceleration}{18}{subsubsection.2.1.3.1}
+\contentsline {subsubsection}{\numberline {2.1.3.2}Rotational Acceleration}{20}{subsubsection.2.1.3.2}
+\contentsline {subsubsection}{\numberline {2.1.3.3}Attitude Rates}{22}{subsubsection.2.1.3.3}
+\contentsline {subsubsection}{\numberline {2.1.3.4}Equations of Motion}{24}{subsubsection.2.1.3.4}
+\contentsline {subsection}{\numberline {2.1.4}System Observations}{25}{subsection.2.1.4}
+\contentsline {section}{\numberline {2.2}Stability}{27}{section.2.2}
+\contentsline {subsection}{\numberline {2.2.1}Equilibrium and Operating Points}{29}{subsection.2.2.1}
+\contentsline {subsection}{\numberline {2.2.2}Lyapunov Stability Definitions}{31}{subsection.2.2.2}
+\contentsline {subsubsection}{\numberline {2.2.2.1}Perturbed Systems}{36}{subsubsection.2.2.2.1}
+\contentsline {subsection}{\numberline {2.2.3}Lyapunov Stability Theorems}{37}{subsection.2.2.3}
+\contentsline {section}{\numberline {2.3}Control}{46}{section.2.3}
+\contentsline {subsection}{\numberline {2.3.1}Requirements}{46}{subsection.2.3.1}
+\contentsline {subsection}{\numberline {2.3.2}Objective and Methods}{48}{subsection.2.3.2}
+\contentsline {subsection}{\numberline {2.3.3}Lyapunov Based Control Design}{51}{subsection.2.3.3}
+\contentsline {subsection}{\numberline {2.3.4}Backstepping}{52}{subsection.2.3.4}
+\contentsline {subsubsection}{\numberline {2.3.4.1}Second Order Systems}{54}{subsubsection.2.3.4.1}
+\contentsline {subsubsection}{\numberline {2.3.4.2}Higher Order Systems}{64}{subsubsection.2.3.4.2}
+\contentsline {subsubsection}{\numberline {2.3.4.3}Command Filtering}{69}{subsubsection.2.3.4.3}
+\contentsline {subsection}{\numberline {2.3.5}Command Filter}{73}{subsection.2.3.5}
+\contentsline {subsection}{\numberline {2.3.6}Control Allocation}{76}{subsection.2.3.6}
+\contentsline {chapter}{\numberline {3}Derivation of UAV Flight Path Controller}{80}{chapter.3}
+\contentsline {section}{\numberline {3.1}Outer Loop}{83}{section.3.1}
+\contentsline {subsection}{\numberline {3.1.1}Flight Path Angle Control}{85}{subsection.3.1.1}
+\contentsline {subsubsection}{\numberline {3.1.1.1}Selection of $\alpha ^o_c$ and $\mu ^o_c$ Commands}{87}{subsubsection.3.1.1.1}
+\contentsline {subsection}{\numberline {3.1.2}Airspeed Control}{88}{subsection.3.1.2}
+\contentsline {section}{\numberline {3.2}Middle Loop}{90}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}Wind-Axis Angle Control}{93}{subsection.3.2.1}
+\contentsline {section}{\numberline {3.3}Inner Loop}{95}{section.3.3}
+\contentsline {subsection}{\numberline {3.3.1}Body-Axis Angular Rate Control}{97}{subsection.3.3.1}
+\contentsline {section}{\numberline {3.4}Stability Proof}{100}{section.3.4}
+\contentsline {subsection}{\numberline {3.4.1}Tracking Error Dynamics}{101}{subsection.3.4.1}
+\contentsline {subsection}{\numberline {3.4.2}Stability and Convergence}{103}{subsection.3.4.2}
+\contentsline {chapter}{\numberline {4}Application}{111}{chapter.4}
+\contentsline {section}{\numberline {4.1}Simulation Modeling}{111}{section.4.1}
+\contentsline {subsection}{\numberline {4.1.1}Fury 1500 UAS}{111}{subsection.4.1.1}
+\contentsline {subsection}{\numberline {4.1.2}Simulink Models}{112}{subsection.4.1.2}
+\contentsline {section}{\numberline {4.2}Simulation Analysis and Results}{118}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.1}Nominal -- PINV}{120}{subsection.4.2.1}
+\contentsline {subsection}{\numberline {4.2.2}Effector Failure -- QCAT}{125}{subsection.4.2.2}
+\contentsline {chapter}{\numberline {5}Conclusion}{129}{chapter.5}
+\contentsline {chapter}{Appendices}{}{section*.61}
+\contentsline {chapter}{\numberline {A}Primary Subsystems Breakdown}{131}{appendix.A}
+\contentsline {section}{\numberline {A.1}Control Allocation (CA), \autoref {fig: cfbs_CA}}{131}{section.A.1}
+\contentsline {subsection}{\numberline {A.1.1}Solve -- $\alpha ^o_c$ and $\mu ^o_c$}{131}{subsection.A.1.1}
+\contentsline {subsubsection}{\numberline {A.1.1.1}X and Y}{131}{subsubsection.A.1.1.1}
+\contentsline {subsection}{\numberline {A.1.2}Solve -- $T^o_c$}{131}{subsection.A.1.2}
+\contentsline {subsection}{\numberline {A.1.3}Solve -- $P^o_c$, $Q^o_c$, and $R^o_c$}{132}{subsection.A.1.3}
+\contentsline {subsection}{\numberline {A.1.4}Solve -- $\delta ^o_c$, \autoref {fig: sim_ca}}{132}{subsection.A.1.4}
+\contentsline {section}{\numberline {A.2}Command Filters (CF), \autoref {fig: cfbs_CF}}{132}{section.A.2}
+\contentsline {subsection}{\numberline {A.2.1}Flight Path Angle \& Airspeed Filters}{132}{subsection.A.2.1}
+\contentsline {subsection}{\numberline {A.2.2}Wind Axis Angle Filters}{132}{subsection.A.2.2}
+\contentsline {subsection}{\numberline {A.2.3}Body Axis Rate Filters}{132}{subsection.A.2.3}
+\contentsline {subsection}{\numberline {A.2.4}Simple Deflection Filters}{133}{subsection.A.2.4}
+\contentsline {section}{\numberline {A.3}Virtual Control Laws (VCL), \autoref {fig: cfbs_VCL}}{133}{section.A.3}
+\contentsline {subsection}{\numberline {A.3.1}Loop Interactions}{133}{subsection.A.3.1}
+\contentsline {section}{\numberline {A.4}Vehicle Model \& Dynamics (FURY), \autoref {fig: cfbs_fury}}{133}{section.A.4}
+\contentsline {subsection}{\numberline {A.5.1}Euler Scope Transformations}{133}{subsection.A.5.1}
+\contentsline {subsection}{\numberline {A.2.5}Deflection Filters}{134}{subsection.A.2.5}
+\contentsline {subsection}{\numberline {A.4.1}System Dynamics}{135}{subsection.A.4.1}
+\contentsline {subsubsection}{\numberline {A.4.1.1}Flight Path Variables}{136}{subsubsection.A.4.1.1}
+\contentsline {subsubsection}{\numberline {A.4.1.2}Body Axis Angular Rates}{136}{subsubsection.A.4.1.2}
+\contentsline {subsubsection}{\numberline {A.4.1.3}Airspeed}{137}{subsubsection.A.4.1.3}
+\contentsline {subsubsection}{\numberline {A.4.1.4}Wind Axis Angles}{137}{subsubsection.A.4.1.4}
+\contentsline {subsubsection}{\numberline {A.4.1.5}Control Laws}{138}{subsubsection.A.4.1.5}
+\contentsline {subsubsection}{\numberline {A.4.1.6}Filtered Control Laws}{139}{subsubsection.A.4.1.6}
+\contentsline {section}{\numberline {A.5}Scopes}{140}{section.A.5}

@@ -1,0 +1,4 @@
+CFBundleName = "LaTable";
+CFBundleShortVersionString = "1.1";
+CFBundleGetInfoString = "LaTable version 1.1 Copyright 2008 Ram—n Manuel";
+NSHumanReadableCopyright = "Copyright 2008 Ram—n Manuel.";

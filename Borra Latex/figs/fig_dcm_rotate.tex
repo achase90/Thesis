@@ -1,0 +1,141 @@
+\documentclass[12pt]{article}
+\usepackage{amsmath,amsfonts,amssymb}
+\usepackage{tikz}
+\usepackage{tikz-3dplot}
+\usetikzlibrary{arrows}
+\usetikzlibrary{patterns}
+
+\begin{document}
+
+%http://en.wikipedia.org/wiki/Euler_angles
+% RH - ZYX (Roll Pitch Yaw)
+\newcommand{\tdseteulerzyx}{
+\renewcommand{\tdplotcalctransformrotmain}{%
+%perform some trig for the Euler transformation
+\tdplotsinandcos{\sinalpha}{\cosalpha}{\tdplotalpha} 
+\tdplotsinandcos{\sinbeta}{\cosbeta}{\tdplotbeta}
+\tdplotsinandcos{\singamma}{\cosgamma}{\tdplotgamma}
+%
+\tdplotmult{\sasb}{\sinalpha}{\sinbeta}
+\tdplotmult{\sasg}{\sinalpha}{\singamma}
+\tdplotmult{\sasbsg}{\sasb}{\singamma}
+%
+\tdplotmult{\sacb}{\sinalpha}{\cosbeta}
+\tdplotmult{\sacg}{\sinalpha}{\cosgamma}
+\tdplotmult{\sasbcg}{\sasb}{\cosgamma}
+%
+\tdplotmult{\casb}{\cosalpha}{\sinbeta}
+\tdplotmult{\cacb}{\cosalpha}{\cosbeta}
+\tdplotmult{\cacg}{\cosalpha}{\cosgamma}
+\tdplotmult{\casg}{\cosalpha}{\singamma}
+%
+\tdplotmult{\cbsg}{\cosbeta}{\singamma}
+\tdplotmult{\cbcg}{\cosbeta}{\cosgamma}
+%
+\tdplotmult{\casbsg}{\casb}{\singamma}
+\tdplotmult{\casbcg}{\casb}{\cosgamma}
+%
+%determine rotation matrix elements for Euler transformation
+\pgfmathsetmacro{\raaeul}{\cacb}
+\pgfmathsetmacro{\rabeul}{\casbsg - \sacg}
+\pgfmathsetmacro{\raceul}{\casbcg + \sasg}
+\pgfmathsetmacro{\rbaeul}{\sacb}
+\pgfmathsetmacro{\rbbeul}{\sasbsg + \cacg}
+\pgfmathsetmacro{\rbceul}{\sasbcg - \casg}
+\pgfmathsetmacro{\rcaeul}{-\sinbeta}
+\pgfmathsetmacro{\rcbeul}{\cbsg}
+\pgfmathsetmacro{\rcceul}{\cbcg}
+}
+}
+
+%\tdplotsetmaincoords{60}{110}
+%\tdseteulerzyx
+%\begin{tikzpicture}[scale=5,tdplot_main_coords]
+%\draw[thick,->] (0,0,0) -- (1,0,0) node[anchor=north east]{$x$};
+%\draw[thick,->] (0,0,0) -- (0,1,0) node[anchor=north west]{$y$};
+%\draw[thick,->] (0,0,0) -- (0,0,1) node[anchor=south]{$z$};
+%
+%\tdplotsetrotatedcoords{0}{0}{30}
+%\draw[thick,color=red,tdplot_rotated_coords,->] (0,0,0) -- (1,0,0) node[anchor=north]{$x'$};
+%\draw[thick,color=red,tdplot_rotated_coords,->] (0,0,0) -- (0,1,0) node[anchor=west]{$y'$};
+%\draw[thick,color=red,tdplot_rotated_coords,->] (0,0,0) -- (0,0,1) node[anchor=south]{$z'$};
+%
+%\tdplotsetrotatedcoords{0}{30}{30}
+%\draw[thick,color=blue,tdplot_rotated_coords,->] (0,0,0) -- (1,0,0) node[anchor=north]{$x''$};
+%\draw[thick,color=blue,tdplot_rotated_coords,->] (0,0,0) -- (0,1,0) node[anchor=west]{$y''$};
+%\draw[thick,color=blue,tdplot_rotated_coords,->] (0,0,0) -- (0,0,1) node[anchor=south]{$z''$};
+%
+%\tdplotsetrotatedcoords{30}{30}{30}
+%\draw[thick,color=green,tdplot_rotated_coords,->] (0,0,0) -- (1,0,0) node[anchor=north]{$x'''$};
+%\draw[thick,color=green,tdplot_rotated_coords,->] (0,0,0) -- (0,1,0) node[anchor=west]{$y'''$};
+%\draw[thick,color=green,tdplot_rotated_coords,->] (0,0,0) -- (0,0,1) node[anchor=south]{$z'''$};
+%\end{tikzpicture}
+%
+
+\tdplotsetmaincoords{50}{150}
+\tdseteulerzyx
+\begin{tikzpicture}[scale=5,tdplot_main_coords]
+
+%\pgfsetfillopacity{0.5}
+
+%\tikzstyle{trans} = [fill opacity=0.0]
+
+%main axes
+\coordinate (O) at (0,0,0);
+
+%draw circle
+%\draw[solid,color=gray!30!white,fill=gray!5!white] (O) circle (.8);
+
+
+%set default arrow type to 'triangle 45'
+\begin{scope}[>=triangle 45]
+	%draw main axes
+
+	\draw[thick,->] (0,0,0) -- (1.2,0,0) node[anchor=south]{$x_{b}$};
+	\draw[thick,->] (0,0,0) -- (0,1.2,0) node[anchor=west]{$y_{b}$};
+	\draw[thick,->] (0,0,0) -- (0,0,1.2) node[anchor=east]{$z_{b}$};
+	
+	%rotate 1
+	\tdplotsetrotatedcoords{30}{0}{0}
+	%draw rotated axes
+	\draw[thick,color=red!50!white,pattern=crosshatch dots,pattern color=red,very nearly transparent] (O) circle (.8);
+	\filldraw[color=red!30!white,fill=red!20!white] (0,0,0) -- (.8,0,0) arc (0:30:.8) -- cycle;
+
+	\draw[thick,->,color=red,tdplot_rotated_coords] (0,0,0) -- (1,0,0) node[anchor=west]{$x'$};
+	\draw[thick,->,color=red,tdplot_rotated_coords] (0,0,0) -- (0,1,0) node[anchor=west]{$y'$};
+	\draw[thick,->,color=red,tdplot_rotated_coords] (0,0,0) -- (0,0,1) node[anchor=west]{$z'$};
+
+	%dimension
+	%\tdplotdrawarc[coordinate system, draw styles]{center}{r}{angle start}{angle end}{label options}{label}
+	\tdplotdrawarc[thick,->]{(O)}{0.4}{0}{30}{anchor=north east}{$\Psi$}
+
+	%rotate 2
+	\tdplotsetrotatedcoords{30}{30}{0}
+	\draw[thick,->,color=blue,tdplot_rotated_coords] (0,0,0) -- (1,0,0) node[anchor=south east]{$x''$};
+	\draw[thick,->,color=blue,tdplot_rotated_coords] (0,0,0) -- (0,1,0) node[anchor=east]{$y''$};
+	\draw[thick,->,color=blue,tdplot_rotated_coords] (0,0,0) -- (0,0,1) node[anchor=south]{$z''$};
+
+	%dimension
+	\tdplotsetthetaplanecoords{30}
+	\draw[thick,tdplot_rotated_coords,color=blue,pattern=north west lines,pattern color=blue!50!white,very nearly transparent] (O) circle (.8);
+	\filldraw[tdplot_rotated_coords,color=blue!30!white,fill=blue!20!white] (0,0,0) -- (0.8,0,0) arc (0:30:.8) -- cycle;
+	\tdplotdrawarc[thick,->,tdplot_rotated_coords]{(O)}{0.4}{0}{30}{anchor=south}{$\Theta$}
+
+	%rotate 3
+	\tdplotsetrotatedcoords{30}{30}{30}
+	\draw[thick,tdplot_rotated_coords,color=green,pattern=north east lines,pattern color=green!50!white,very nearly transparent] (O) circle (.8);
+	\filldraw[tdplot_rotated_coords,color=green!30!white,fill=green!20!white] (0,0,0) -- (0.8,0,0) arc (0:-30:.8) -- cycle;
+	%draw 2nd rotated axes
+	\draw[thick,->,color=green,tdplot_rotated_coords] (0,0,0) -- (1,0,0) node[anchor=south east]{$x'''$};
+	\draw[thick,->,color=green,tdplot_rotated_coords] (0,0,0) -- (0,1,0) node[anchor=west]{$y'''$};
+	\draw[thick,->,color=green,tdplot_rotated_coords] (0,0,0) -- (0,0,1) node[anchor=east]{$z'''$};
+	
+	%dimension
+	%\tdplotdrawarc[coordinate system, draw styles]{center}{r}{angle start}{angle end}{label options}{label}
+	\tdplotdrawarc[thick,->,tdplot_rotated_coords]{(O)}{0.4}{-30}{0}{anchor=north}{$\Phi$}
+
+	
+\end{scope}
+\end{tikzpicture}
+
+\end{document}

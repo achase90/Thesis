@@ -1,0 +1,63 @@
+\documentclass{minimal}
+
+\usepackage{setspace}
+
+\usepackage[pdftex]{hyperref}
+\usepackage{amssymb,amsmath,booktabs,rotating,array,multirow}
+\usepackage{xparse}
+
+\DeclareDocumentCommand \manref { m m o } { % two mandatory commands, one optional command
+\IfNoValueTF{#3}
+   {\hyperref[#2]{ {#1}~\ref*{#2}     }} 	% Code without argument #3   * => without link!!!
+   {\hyperref[#2]{ {#1}~\ref*{#2}{#3} }} 	% Code with    argument #3
+}
+
+\begin{document}
+
+
+% This text has the original line spacing.
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean sed ante nisi.
+Nam accumsan, justo at hendrerit feugiat, urna diam elementum dolor, eu
+consectetur nunc magna eu ipsum. Praesent consequat magna et lectus convallis
+tempus. Nullam sed nunc augue. Vivamus a nisl vel risus condimentum posuere
+aliquet ac sapien. Vestibulum ultrices sollicitudin blandit. Morbi nec augue
+mauris. Praesent aliquam erat urna, condimentum semper nisi. Aenean a odio
+elit. Fusce eu justo nec odio consectetur bibendum.
+
+% This text will have 1.5 line spacing.
+\renewcommand{\baselinestretch}{1.50}\normalsize
+
+Ut vitae mauris neque, sed pellentesque urna. Mauris faucibus, augue eu
+feugiat mollis, dui metus fermentum nibh, eget ultrices ipsum tortor
+vehicula neque. Proin nec molestie nulla. Cras et odio in ante venenatis
+tincidunt sit amet eget felis. Maecenas pretium magna vitae nibh hendrerit
+nec lobortis sapien placerat. Proin diam lacus, vulputate ac commodo a,
+convallis ut nunc. Sed sit amet ante purus. Integer porttitor molestie orci
+ut adipiscing. Maecenas consequat turpis quis nunc fermentum cursus. Etiam
+commodo justo eu nunc eleifend fringilla. Nam in neque augue, at feugiat metus.
+Integer luctus risus et ipsum vulputate vulputate. Phasellus eget lectus dolor,
+a pellentesque nunc. In hac habitasse platea dictumst. Duis est lorem, placerat
+ut pharetra sed, sagittis at dui. Nam congue dui rhoncus urna mattis eget
+vestibulum tortor feugiat. Nullam mauris sapien, sodales non rutrum imperdiet,
+
+
+%\begin{equation}
+%\label{eq:1}
+%\end{equation}
+%
+%\begin{equation}
+%\label{eq:2}
+%\end{equation}
+%
+%\manref{Equation}{eq:1}
+%\manref{Equation}{eq:2}[a]
+%
+%\begin{equation}
+%	\begin{align}
+%		\label{eq: cfbs_filt_chi}	\dot{\filt}_\chi \quad &= \quad -k_\chi \filt_\chi + (u_{\chi c} - u^o_{\chi c}) \\
+%		\label{eq: cfbs_filt_gam}	\dot{\filt}_{\gam} \quad &= \quad -k_\gam \filt_{\gam} + (u_{\gam c} - u^o_{\gam c})
+%	\end{align}
+%\end{equation}
+
+\end{document}

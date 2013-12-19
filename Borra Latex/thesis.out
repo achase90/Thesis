@@ -1,0 +1,79 @@
+\BOOKMARK [0][]{abs.0}{Abstract}{}% 1
+\BOOKMARK [0][]{toc.0}{Table of Contents}{}% 2
+\BOOKMARK [0][]{chapter*.3}{List of Tables}{}% 3
+\BOOKMARK [0][]{chapter*.4}{List of Figures}{}% 4
+\BOOKMARK [0][]{chapter*.5}{Nomenclature}{}% 5
+\BOOKMARK [0][]{chapter.1}{1 Introduction}{}% 6
+\BOOKMARK [1][]{section.1.1}{1.1 Significance}{chapter.1}% 7
+\BOOKMARK [1][]{section.1.2}{1.2 Requirements and Outcomes}{chapter.1}% 8
+\BOOKMARK [1][]{section.1.3}{1.3 Thesis Outline}{chapter.1}% 9
+\BOOKMARK [0][]{chapter.2}{2 Nonlinear Theory}{}% 10
+\BOOKMARK [1][]{section.2.1}{2.1 Modeling}{chapter.2}% 11
+\BOOKMARK [2][-]{subsection.2.1.1}{2.1.1 Reference Frames}{section.2.1}% 12
+\BOOKMARK [2][-]{subsection.2.1.2}{2.1.2 Direction Cosine Matrices}{section.2.1}% 13
+\BOOKMARK [2][-]{subsection.2.1.3}{2.1.3 Aircraft Dynamics}{section.2.1}% 14
+\BOOKMARK [3][-]{subsubsection.2.1.3.1}{2.1.3.1 Translational Acceleration}{subsection.2.1.3}% 15
+\BOOKMARK [3][-]{subsubsection.2.1.3.2}{2.1.3.2 Rotational Acceleration}{subsection.2.1.3}% 16
+\BOOKMARK [3][-]{subsubsection.2.1.3.3}{2.1.3.3 Attitude Rates}{subsection.2.1.3}% 17
+\BOOKMARK [3][-]{subsubsection.2.1.3.4}{2.1.3.4 Equations of Motion}{subsection.2.1.3}% 18
+\BOOKMARK [2][-]{subsection.2.1.4}{2.1.4 System Observations}{section.2.1}% 19
+\BOOKMARK [1][]{section.2.2}{2.2 Stability}{chapter.2}% 20
+\BOOKMARK [2][-]{subsection.2.2.1}{2.2.1 Equilibrium and Operating Points}{section.2.2}% 21
+\BOOKMARK [2][-]{subsection.2.2.2}{2.2.2 Lyapunov Stability Definitions}{section.2.2}% 22
+\BOOKMARK [3][-]{subsubsection.2.2.2.1}{2.2.2.1 Perturbed Systems}{subsection.2.2.2}% 23
+\BOOKMARK [2][-]{subsection.2.2.3}{2.2.3 Lyapunov Stability Theorems}{section.2.2}% 24
+\BOOKMARK [1][]{section.2.3}{2.3 Control}{chapter.2}% 25
+\BOOKMARK [2][-]{subsection.2.3.1}{2.3.1 Requirements}{section.2.3}% 26
+\BOOKMARK [2][-]{subsection.2.3.2}{2.3.2 Objective and Methods}{section.2.3}% 27
+\BOOKMARK [2][-]{subsection.2.3.3}{2.3.3 Lyapunov Based Control Design}{section.2.3}% 28
+\BOOKMARK [2][-]{subsection.2.3.4}{2.3.4 Backstepping}{section.2.3}% 29
+\BOOKMARK [3][-]{subsubsection.2.3.4.1}{2.3.4.1 Second Order Systems}{subsection.2.3.4}% 30
+\BOOKMARK [3][-]{subsubsection.2.3.4.2}{2.3.4.2 Higher Order Systems}{subsection.2.3.4}% 31
+\BOOKMARK [3][-]{subsubsection.2.3.4.3}{2.3.4.3 Command Filtering}{subsection.2.3.4}% 32
+\BOOKMARK [2][-]{subsection.2.3.5}{2.3.5 Command Filter}{section.2.3}% 33
+\BOOKMARK [2][-]{subsection.2.3.6}{2.3.6 Control Allocation}{section.2.3}% 34
+\BOOKMARK [0][]{chapter.3}{3 Derivation of UAV Flight Path Controller}{}% 35
+\BOOKMARK [1][]{section.3.1}{3.1 Outer Loop}{chapter.3}% 36
+\BOOKMARK [2][-]{subsection.3.1.1}{3.1.1 Flight Path Angle Control}{section.3.1}% 37
+\BOOKMARK [3][-]{subsubsection.3.1.1.1}{3.1.1.1 Selection of Angle-of-Attack and Roll Commands}{subsection.3.1.1}% 38
+\BOOKMARK [2][-]{subsection.3.1.2}{3.1.2 Airspeed Control}{section.3.1}% 39
+\BOOKMARK [1][]{section.3.2}{3.2 Middle Loop}{chapter.3}% 40
+\BOOKMARK [2][-]{subsection.3.2.1}{3.2.1 Wind-Axis Angle Control}{section.3.2}% 41
+\BOOKMARK [1][]{section.3.3}{3.3 Inner Loop}{chapter.3}% 42
+\BOOKMARK [2][-]{subsection.3.3.1}{3.3.1 Body-Axis Angular Rate Control}{section.3.3}% 43
+\BOOKMARK [1][]{section.3.4}{3.4 Stability Proof}{chapter.3}% 44
+\BOOKMARK [2][-]{subsection.3.4.1}{3.4.1 Tracking Error Dynamics}{section.3.4}% 45
+\BOOKMARK [2][-]{subsection.3.4.2}{3.4.2 Stability and Convergence}{section.3.4}% 46
+\BOOKMARK [0][]{chapter.4}{4 Application}{}% 47
+\BOOKMARK [1][]{section.4.1}{4.1 Simulation Modeling}{chapter.4}% 48
+\BOOKMARK [2][-]{subsection.4.1.1}{4.1.1 Fury 1500 UAS}{section.4.1}% 49
+\BOOKMARK [2][-]{subsection.4.1.2}{4.1.2 Simulink Models}{section.4.1}% 50
+\BOOKMARK [1][]{section.4.2}{4.2 Simulation Analysis and Results}{chapter.4}% 51
+\BOOKMARK [2][-]{subsection.4.2.1}{4.2.1 Nominal \205 PINV}{section.4.2}% 52
+\BOOKMARK [2][-]{subsection.4.2.2}{4.2.2 Effector Failure \205 QCAT}{section.4.2}% 53
+\BOOKMARK [0][]{chapter.5}{5 Conclusion}{}% 54
+\BOOKMARK [0][]{appendix.A}{A Primary Subsystems Breakdown}{}% 55
+\BOOKMARK [1][]{section.A.1}{A.1 Control Allocation \(CA\), Figure 4.3}{appendix.A}% 56
+\BOOKMARK [2][-]{subsection.A.1.1}{A.1.1 Solve \205 Angle-of-Attack and Roll Commands}{section.A.1}% 57
+\BOOKMARK [3][-]{subsubsection.A.1.1.1}{A.1.1.1 X and Y}{subsection.A.1.1}% 58
+\BOOKMARK [2][-]{subsection.A.1.2}{A.1.2 Solve \205 Thrust Command}{section.A.1}% 59
+\BOOKMARK [2][-]{subsection.A.1.3}{A.1.3 Solve \205 Body Rate Commands}{section.A.1}% 60
+\BOOKMARK [2][-]{subsection.A.1.4}{A.1.4 Solve \205 Surface Commands, Figure 2.24}{section.A.1}% 61
+\BOOKMARK [1][]{section.A.2}{A.2 Command Filters \(CF\), Figure 4.4}{appendix.A}% 62
+\BOOKMARK [2][-]{subsection.A.2.1}{A.2.1 Flight Path Angle \046 Airspeed Filters}{section.A.2}% 63
+\BOOKMARK [2][-]{subsection.A.2.2}{A.2.2 Wind Axis Angle Filters}{section.A.2}% 64
+\BOOKMARK [2][-]{subsection.A.2.3}{A.2.3 Body Axis Rate Filters}{section.A.2}% 65
+\BOOKMARK [2][-]{subsection.A.2.4}{A.2.4 Simple Deflection Filters}{section.A.2}% 66
+\BOOKMARK [1][]{section.A.3}{A.3 Virtual Control Laws \(VCL\), Figure 4.5}{appendix.A}% 68
+\BOOKMARK [2][-]{subsection.A.3.1}{A.3.1 Loop Interactions}{section.A.3}% 69
+\BOOKMARK [1][]{section.A.4}{A.4 Vehicle Model \046 Dynamics \(FURY\), Figure 4.6}{appendix.A}% 70
+\BOOKMARK [2][-]{subsection.A.5.1}{A.5.1 Euler Scope Transformations}{section.A.5}% 79
+\BOOKMARK [2][-]{subsection.A.2.5}{A.2.5 Deflection Filters}{section.A.2}% 67
+\BOOKMARK [2][-]{subsection.A.4.1}{A.4.1 System Dynamics}{section.A.4}% 71
+\BOOKMARK [3][-]{subsubsection.A.4.1.1}{A.4.1.1 Flight Path Variables}{subsection.A.4.1}% 72
+\BOOKMARK [3][-]{subsubsection.A.4.1.2}{A.4.1.2 Body Axis Angular Rates}{subsection.A.4.1}% 73
+\BOOKMARK [3][-]{subsubsection.A.4.1.3}{A.4.1.3 Airspeed}{subsection.A.4.1}% 74
+\BOOKMARK [3][-]{subsubsection.A.4.1.4}{A.4.1.4 Wind Axis Angles}{subsection.A.4.1}% 75
+\BOOKMARK [3][-]{subsubsection.A.4.1.5}{A.4.1.5 Control Laws}{subsection.A.4.1}% 76
+\BOOKMARK [3][-]{subsubsection.A.4.1.6}{A.4.1.6 Filtered Control Laws}{subsection.A.4.1}% 77
+\BOOKMARK [1][]{section.A.5}{A.5 Scopes}{appendix.A}% 78

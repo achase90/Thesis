@@ -2,64 +2,61 @@
 
  \nomgroup{A}
 
-  \item [{$\bar{R}^m_n$}]\begingroup Rotation matrix from m to n\nomeqref {11}
-		\nompageref{3}
-  \item [{$\sigma$}]\begingroup Standard deviation\nomeqref {42}
-		\nompageref{8}
-  \item [{$\vec{F}_A$}]\begingroup Aerodynamic forces\nomeqref {4}
-		\nompageref{3}
-  \item [{$\vec{F}_G$}]\begingroup Gravitational forces\nomeqref {4}
-		\nompageref{3}
-  \item [{$AR$}]\begingroup Aspect ratio\nomeqref {44}\nompageref{8}
-  \item [{$C_D$}]\begingroup Drag coefficient\nomeqref {44}
-		\nompageref{8}
-  \item [{$C_L$}]\begingroup Lift coefficient\nomeqref {44}
-		\nompageref{8}
-  \item [{$C_{D_0}$}]\begingroup Parasite drag coefficient\nomeqref {44}
-		\nompageref{8}
-  \item [{$K_2$}]\begingroup Drag polar coefficient for $C^2_L$ terms\nomeqref {44}
-		\nompageref{9}
-  \item [{CFD}]\begingroup Computational fluid dynamics\nomeqref {0}
-		\nompageref{2}
-  \item [{DOF}]\begingroup Degree of freedom\nomeqref {43}
-		\nompageref{8}
-  \item [{e}]\begingroup Wing lift distribution\nomeqref {44}
-		\nompageref{8}
-  \item [{FSO}]\begingroup Full scale output\nomeqref {48}
-		\nompageref{15}
-  \item [{G}]\begingroup Gravity\nomeqref {44}\nompageref{10}
-  \item [{I$^2$C}]\begingroup Inter-integrated circuit\nomeqref {48}
-		\nompageref{13}
-  \item [{I/O}]\begingroup Input-output\nomeqref {44}\nompageref{10}
-  \item [{IC}]\begingroup Integrated circuit\nomeqref {46}
-		\nompageref{12}
-  \item [{INS}]\begingroup Inertial navigation system\nomeqref {0}
-		\nompageref{2}
-  \item [{LCC}]\begingroup Leadless chip carrier\nomeqref {46}
-		\nompageref{12}
-  \item [{LGA}]\begingroup Land grid array\nomeqref {44}\nompageref{10}
-  \item [{LiPo}]\begingroup Lithium polymer\nomeqref {44}
-		\nompageref{10}
-  \item [{NED}]\begingroup North east down frame\nomeqref {6}
-		\nompageref{3}
-  \item [{OLS}]\begingroup Ordinary least squares\nomeqref {44}
-		\nompageref{9}
-  \item [{PCB}]\begingroup Printed circuit board\nomeqref {44}
-		\nompageref{10}
-  \item [{PWM}]\begingroup Pulse width modulation\nomeqref {52}
-		\nompageref{16}
-  \item [{QFN}]\begingroup Quad-flats no-leads\nomeqref {48}
-		\nompageref{13}
-  \item [{R/C}]\begingroup Radio-controlled\nomeqref {0}\nompageref{1}
-  \item [{RMS}]\begingroup Root mean squared\nomeqref {46}
-		\nompageref{12}
-  \item [{RPM}]\begingroup Rotations per minute\nomeqref {48}
-		\nompageref{14}
-  \item [{SPI}]\begingroup Serial peripheral interface\nomeqref {44}
-		\nompageref{10}
-  \item [{UAS}]\begingroup Unmanned aerial system\nomeqref {0}
+  \item [{$\bar{R}^m_n$}]\begingroup Rotation matrix from m to n\nomeqref {0.2.11}
+		\nompageref{5}
+  \item [{$\sigma$}]\begingroup Standard deviation\nomeqref {1.3.7}
+		\nompageref{19}
+  \item [{$\vec{F}_A$}]\begingroup Aerodynamic forces\nomeqref {0.2.4}
+		\nompageref{4}
+  \item [{$\vec{F}_G$}]\begingroup Gravitational forces\nomeqref {0.2.4}
+		\nompageref{4}
+  \item [{$AR$}]\begingroup Aspect ratio\nomeqref {1.4.1}
+		\nompageref{20}
+  \item [{$C_D$}]\begingroup Drag coefficient\nomeqref {1.4.1}
+		\nompageref{20}
+  \item [{$C_L$}]\begingroup Lift coefficient\nomeqref {1.4.1}
+		\nompageref{20}
+  \item [{$C_{D_0}$}]\begingroup Parasite drag coefficient\nomeqref {1.4.1}
+		\nompageref{20}
+  \item [{$K_2$}]\begingroup Drag polar coefficient for $C^2_L$ terms\nomeqref {1.4.1}
+		\nompageref{22}
+  \item [{CFD}]\begingroup Computational fluid dynamics\nomeqref {0.1.0}
 		\nompageref{1}
-  \item [{UAV}]\begingroup Unmanned aerial vehicle\nomeqref {0}
-		\nompageref{1}
+  \item [{DOF}]\begingroup Degree of freedom\nomeqref {1.4.0}
+		\nompageref{20}
+  \item [{e}]\begingroup Wing lift distribution\nomeqref {1.4.1}
+		\nompageref{20}
+  \item [{FSO}]\begingroup Full scale output\nomeqref {1.5.4}
+		\nompageref{32}
+  \item [{G}]\begingroup Gravity\nomeqref {1.5.0}\nompageref{24}
+  \item [{I$^2$C}]\begingroup Inter-integrated circuit\nomeqref {1.5.4}
+		\nompageref{28}
+  \item [{I/O}]\begingroup Input-output\nomeqref {1.5.0}\nompageref{23}
+  \item [{IC}]\begingroup Integrated circuit\nomeqref {1.5.2}
+		\nompageref{26}
+  \item [{INS}]\begingroup Inertial navigation system\nomeqref {0.1.0}
+		\nompageref{2}
+  \item [{LCC}]\begingroup Leadless chip carrier\nomeqref {1.5.2}
+		\nompageref{27}
+  \item [{LGA}]\begingroup Land grid array\nomeqref {1.5.0}
+		\nompageref{24}
+  \item [{LiPo}]\begingroup Lithium polymer\nomeqref {1.5.0}
+		\nompageref{24}
+  \item [{NED}]\begingroup North east down frame\nomeqref {0.2.6}
+		\nompageref{5}
+  \item [{OLS}]\begingroup Ordinary least squares\nomeqref {1.4.1}
+		\nompageref{22}
+  \item [{PCB}]\begingroup Printed circuit board\nomeqref {1.5.0}
+		\nompageref{24}
+  \item [{PWM}]\begingroup Pulse width modulation\nomeqref {1.5.8}
+		\nompageref{34}
+  \item [{QFN}]\begingroup Quad-flats no-leads\nomeqref {1.5.4}
+		\nompageref{28}
+  \item [{RMS}]\begingroup Root mean squared\nomeqref {1.5.2}
+		\nompageref{26}
+  \item [{RPM}]\begingroup Rotations per minute\nomeqref {1.5.4}
+		\nompageref{29}
+  \item [{SPI}]\begingroup Serial peripheral interface\nomeqref {1.5.0}
+		\nompageref{24}
 
 \end{thenomenclature}

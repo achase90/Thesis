@@ -1,0 +1,36 @@
+\BOOKMARK [0][]{abs.0}{Abstract}{}% 1
+\BOOKMARK [0][]{figure.caption.1}{TABLE OF CONTENTS}{}% 2
+\BOOKMARK [0][]{chapter*.3}{LIST OF TABLES}{}% 3
+\BOOKMARK [0][]{chapter*.4}{LIST OF FIGURES}{}% 4
+\BOOKMARK [1][]{section.0.1}{0.1 Introduction}{chapter*.4}% 5
+\BOOKMARK [1][]{section.0.2}{0.2 Method}{chapter*.4}% 6
+\BOOKMARK [0][]{chapter.1}{1 Drag Meta-Modeling}{}% 7
+\BOOKMARK [1][]{section.1.1}{1.1 Regression Model - Least Squares Fit}{chapter.1}% 8
+\BOOKMARK [1][]{section.1.2}{1.2 Regression Model - Kalman Filter}{chapter.1}% 9
+\BOOKMARK [1][]{section.1.3}{1.3 Error Analysis}{chapter.1}% 10
+\BOOKMARK [1][]{section.1.4}{1.4 Simulation}{chapter.1}% 11
+\BOOKMARK [1][]{section.1.5}{1.5 Hardware}{chapter.1}% 12
+\BOOKMARK [0][]{chapter.2}{2 Flight Test}{}% 13
+\BOOKMARK [1][]{section.2.1}{2.1 CD0 Validation}{chapter.2}% 14
+\BOOKMARK [1][]{section.2.2}{2.2 K1 Validation}{chapter.2}% 15
+\BOOKMARK [1][]{section.2.3}{2.3 K2 Validation}{chapter.2}% 16
+\BOOKMARK [1][]{section.2.4}{2.4 Results and Future Work}{chapter.2}% 17
+\BOOKMARK [0][]{chapter.3}{3 Summary}{}% 18
+\BOOKMARK [0][]{APPENDIX.1.A}{A System Usage}{}% 19
+\BOOKMARK [1][]{section.1.A.1}{A.1 Zero Offset Calibration}{APPENDIX.1.A}% 20
+\BOOKMARK [1][]{section.1.A.2}{A.2 Post Flight Zero Offset Calibration}{APPENDIX.1.A}% 21
+\BOOKMARK [1][]{section.1.A.3}{A.3 Software Usage}{APPENDIX.1.A}% 22
+\BOOKMARK [0][]{APPENDIX.1.B}{B Flight Test Procedure}{}% 23
+\BOOKMARK [1][]{section.1.B.1}{B.1 Pre-Flight Preparation}{APPENDIX.1.B}% 24
+\BOOKMARK [2][-]{subsection.1.B.1.1}{B.1.1 Day Before Test}{section.1.B.1}% 25
+\BOOKMARK [2][-]{subsection.1.B.1.2}{B.1.2 Day Of Test}{section.1.B.1}% 26
+\BOOKMARK [1][]{section.1.B.2}{B.2 Flying Field Procedure}{APPENDIX.1.B}% 27
+\BOOKMARK [0][]{APPENDIX.1.C}{C CD0 Flight Test Card}{}% 28
+\BOOKMARK [0][]{APPENDIX.1.D}{D K2 Flight Test Card}{}% 29
+\BOOKMARK [0][]{APPENDIX.1.E}{E Sample System Ouput}{}% 30
+\BOOKMARK [1][]{section.1.E.1}{E.1 Sample System Ouput - Raw Data}{APPENDIX.1.E}% 31
+\BOOKMARK [1][]{section.1.E.2}{E.2 Sample System Ouput - Units Data}{APPENDIX.1.E}% 32
+\BOOKMARK [1][]{section.1.E.3}{E.3 Sample System Ouput - State Data}{APPENDIX.1.E}% 33
+\BOOKMARK [1][]{section.1.E.4}{E.4 Sample System Ouput - Filtered Data}{APPENDIX.1.E}% 34
+\BOOKMARK [0][]{APPENDIX.1.F}{F Wiring Schematics}{}% 35
+\BOOKMARK [1][]{section.1.F.1}{F.1 Future Work}{APPENDIX.1.F}% 36

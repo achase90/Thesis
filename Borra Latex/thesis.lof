@@ -1,0 +1,79 @@
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {1.1}{\ignorespaces Fury 1500 UAS on Launcher at Twilight [\href {http://www.prnewswire.com/news-releases/fury-1500-uas-achieves-14-hour-duration-flight-131211164.html}{http://www.prnewswire.com/news-releases/}]\relax }}{2}{figure.caption.6}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Air Vehicle Reference Frames\relax }}{11}{figure.caption.8}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Body to Stability Axes}}}{11}{subfigure.1.1}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Stability to Wind Axes}}}{11}{subfigure.1.2}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Axis Relationships: Body, Stability, and Wind Axes\relax }}{11}{figure.caption.9}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Earth Reference Frames\relax }}{13}{figure.caption.10}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Earth Centered Inertial (Fixed)}}}{13}{subfigure.3.1}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Earth Centered Earth Fixed (Rotates)}}}{13}{subfigure.3.2}
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Direction Cosine Matrix Visual\relax }}{16}{figure.caption.12}
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Body Axes, Forces, and Moments\relax }}{19}{figure.caption.13}
+\contentsline {figure}{\numberline {2.6}{\ignorespaces Orientation of Gravity Vector with Respect to Body Axes \citep {McRuer1973}\relax }}{19}{figure.caption.14}
+\contentsline {figure}{\numberline {2.7}{\ignorespaces Fury 1500 UAS on Launcher [\href {http://www.aviationweek.com/aw/blogs/defense/index.jsp?plckController=Blog\&plckBlogPage=BlogViewPost\&newspaperUserId=27ec4a53-dcc8-42d0-bd3a-01329aef79a7\&plckPostId=Blog\%3a27ec4a53-dcc8-42d0-bd3a-01329aef79a7Post\%3ad7b30f2c-a25b-4f47-90e5-46ff5606094c\&plckScript=blogScript\&plckElementId=blogDest}{www.aviationweek.com/aw/blogsmain/}]\relax }}{23}{figure.caption.15}
+\contentsline {figure}{\numberline {2.8}{\ignorespaces Operating Surface via Phase Portraits\relax }}{30}{figure.caption.16}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {$\boldsymbol {u_0}=-1,\hskip 1em\relax \boldsymbol {x_0}={[1,0]}^T $}}}{30}{subfigure.8.1}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {$\boldsymbol {u_0}=0,\hskip 1em\relax \boldsymbol {x_0}={[0,0]}^T$}}}{30}{subfigure.8.2}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {$\boldsymbol {u_0}=1,\hskip 1em\relax \boldsymbol {x_0}={[-1,0]}^T$}}}{30}{subfigure.8.3}
+\contentsline {figure}{\numberline {2.9}{\ignorespaces First Order Unstable Systems \citet [Online Lecture Notes]{Khalil1996}\relax }}{34}{figure.caption.17}
+\contentsline {figure}{\numberline {2.10}{\ignorespaces First Order Stable Systems \citet [Online Lecture Notes]{Khalil1996}\relax }}{34}{figure.caption.18}
+\contentsline {figure}{\numberline {2.11}{\ignorespaces First Order Asymptotically Stable Systems \citet [Online Lecture Notes]{Khalil1996}\relax }}{35}{figure.caption.19}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Asymptotically Stable}}}{35}{subfigure.11.1}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Globally Asymptotically Stable}}}{35}{subfigure.11.2}
+\contentsline {figure}{\numberline {2.12}{\ignorespaces Stability Concepts\relax }}{35}{figure.caption.20}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Stable}}}{35}{subfigure.12.1}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Asymptotically Stable}}}{35}{subfigure.12.2}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Unstable}}}{35}{subfigure.12.3}
+\contentsline {figure}{\numberline {2.13}{\ignorespaces Equilibrium Point Classification for $2^{nd}$ Order Linear Systems \cite {Slotine1991}\relax }}{36}{figure.caption.21}
+\contentsline {figure}{\numberline {2.14}{\ignorespaces Geometric Interpretation of Lyapunov Stability Thm. - Underlying image from \citep {Astrom2008}\relax }}{40}{figure.caption.23}
+\contentsline {figure}{\numberline {2.15}{\ignorespaces Asymptotic Property 1: $\mathaccentV {dot}05F{\boldsymbol {f}}(t) \rightarrow 0 \nRightarrow \boldsymbol {f} \rightarrow \text {constant}$\relax }}{44}{figure.caption.24}
+\contentsline {figure}{\numberline {2.16}{\ignorespaces Asymptotic Property 2: $\boldsymbol {f} \rightarrow \text {constant} \nRightarrow \mathaccentV {dot}05F{\boldsymbol {f}(t)} \rightarrow 0 $\relax }}{45}{figure.caption.25}
+\contentsline {figure}{\numberline {2.17}{\ignorespaces Backstepping Block Diagram Representation: \textit {a}) Integral augmented cascade system \textit {b}) introducing $\pm \alpha (x)$ \textit {c}) ``backstepping'' $-\alpha (x)$ through the integrator\relax }}{57}{figure.caption.28}
+\contentsline {figure}{\numberline {2.18}{\ignorespaces Composite Phase Portrait for \manref {System}{eq: bs_ex_sys} with $u=0$\relax }}{61}{figure.caption.29}
+\contentsline {figure}{\numberline {2.19}{\ignorespaces \autoref {eq: cf_filt1} Low Pass Filter\relax }}{71}{figure.caption.30}
+\contentsline {figure}{\numberline {2.20}{\ignorespaces Command Filter \citep {Farrell2006}\relax }}{71}{figure.caption.31}
+\contentsline {figure}{\numberline {2.21}{\ignorespaces Command Filter \citep {Farrell2005}\relax }}{75}{figure.caption.32}
+\contentsline {figure}{\numberline {2.22}{\ignorespaces Moment Control Derivative Dimensionalization \& Control Effectiveness Matrix Concatenation in Simulink\relax }}{76}{figure.caption.33}
+\contentsline {figure}{\numberline {2.23}{\ignorespaces Moment Control Derivative Look-up Tables for Control Effectiveness Matrix in Simulink\relax }}{76}{figure.caption.34}
+\contentsline {figure}{\numberline {2.24}{\ignorespaces Control Allocation Simulink Subsystem\relax }}{77}{figure.caption.35}
+\contentsline {figure}{\numberline {2.25}{\ignorespaces PINV Simulink Subsystem within CA Block \manref {Fig}{fig: sim_ca}\relax }}{78}{figure.caption.36}
+\contentsline {figure}{\numberline {2.26}{\ignorespaces QCAT Simulink Subsystem within CA Block \manref {Fig}{fig: sim_ca}\relax }}{78}{figure.caption.37}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Command Filtered Adaptive Backstepping, \citet {Sonneveldt2007}\relax }}{81}{figure.caption.40}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces High Level Control Architecture Overview\relax }}{107}{figure.caption.38}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Low Level, Block Vector, Control Architecture Overview \citep {Farrell2006}\relax }}{108}{figure.caption.39}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Command Filtered Backstepping Simulink Model\relax }}{109}{figure.caption.41}
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Two possible choices for $\mu ^o_c$ and $\alpha ^o_c$ to solve $(\chi ,\gamma )$ control. \citep {Farrell2006}\relax }}{110}{figure.caption.42}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Positive lift case}}}{110}{subfigure.5.1}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Negative lift case}}}{110}{subfigure.5.2}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Fury 1500 UAS - Rear Isometric View [\href {http://defense-update.com/20110621_fury-1500-uav.html}{www.defense-update.com/20110621$\_$fury-1500-uav.html}]\relax }}{112}{figure.caption.43}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Fury 1500 UAS - Specifications / Top-View [\href {http://www.ameuas.com/uas_fury.html}{www.ameuas.com/uas$\_$fury.html}]\relax }}{112}{figure.caption.44}
+\contentsline {figure}{\numberline {\ref {fig: cfbs}}{\ignorespaces Command Filtered Backstepping Simulink Model\relax }}{114}{figure.caption.45}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Control Allocation (CA) Primary Subsystem\relax }}{115}{figure.caption.46}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Command Filter (CF) Primary Subsystem\relax }}{116}{figure.caption.47}
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Virtual Control Law (VCL) Primary Subsystem\relax }}{117}{figure.caption.48}
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Vehicle Model \& System Dynamics (FURY) Primary Subsystem\relax }}{117}{figure.caption.48}
+\contentsline {figure}{\numberline {4.7}{\ignorespaces $\zeta _x$ Filter (LPF) Primary Subsystem\relax }}{117}{figure.caption.48}
+\contentsline {figure}{\numberline {4.8}{\ignorespaces Desired Tracking Commands, Dissected from CA Primary Subsystem Block in \autoref {fig: cfbs_CA}\relax }}{118}{figure.caption.49}
+\contentsline {figure}{\numberline {4.9}{\ignorespaces Nominal -- Forces and Moments\relax }}{120}{figure.caption.51}
+\contentsline {figure}{\numberline {4.10}{\ignorespaces Nominal -- Body Axis Velocities and Angles\relax }}{120}{figure.caption.51}
+\contentsline {figure}{\numberline {4.11}{\ignorespaces Nominal -- States\relax }}{121}{figure.caption.52}
+\contentsline {figure}{\numberline {4.12}{\ignorespaces Nominal -- Deflections\relax }}{121}{figure.caption.52}
+\contentsline {figure}{\numberline {4.13}{\ignorespaces Nominal -- Outer Loop Tracking\relax }}{122}{figure.caption.53}
+\contentsline {figure}{\numberline {4.14}{\ignorespaces Nominal -- Middle Loop Tracking\relax }}{122}{figure.caption.53}
+\contentsline {figure}{\numberline {4.15}{\ignorespaces Nominal -- Inner Loop Tracking\relax }}{123}{figure.caption.54}
+\contentsline {figure}{\numberline {4.16}{\ignorespaces Nominal -- Flightpath Angle Pseudo-Controls, see \manref {Sec.}{subsubsec: alph_mu}\relax }}{123}{figure.caption.54}
+\contentsline {figure}{\numberline {4.17}{\ignorespaces Nominal -- Tracking Errors\relax }}{124}{figure.caption.55}
+\contentsline {figure}{\numberline {4.18}{\ignorespaces Failure -- Forces and Moments\relax }}{125}{figure.caption.56}
+\contentsline {figure}{\numberline {4.19}{\ignorespaces Failure -- Body Axis Velocities and Angles\relax }}{125}{figure.caption.56}
+\contentsline {figure}{\numberline {4.20}{\ignorespaces Failure -- States\relax }}{126}{figure.caption.57}
+\contentsline {figure}{\numberline {4.21}{\ignorespaces Failure -- Deflections\relax }}{126}{figure.caption.57}
+\contentsline {figure}{\numberline {4.22}{\ignorespaces Failure -- Outer Loop Tracking\relax }}{127}{figure.caption.58}
+\contentsline {figure}{\numberline {4.23}{\ignorespaces Failure -- Middle Loop Tracking\relax }}{127}{figure.caption.58}
+\contentsline {figure}{\numberline {4.24}{\ignorespaces Failure -- Inner Loop Tracking\relax }}{128}{figure.caption.59}
+\contentsline {figure}{\numberline {4.25}{\ignorespaces Failure -- Flightpath Angle Pseudo-Controls\relax }}{128}{figure.caption.59}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Fury 1500 UAS Net Recovery [\href {http://youtu.be/tQ-RhrLlRLg?hd=1}{http://youtu.be/tQ-RhrLlRLg?hd=1}]\relax }}{130}{figure.caption.60}
+\addvspace {10\p@ }

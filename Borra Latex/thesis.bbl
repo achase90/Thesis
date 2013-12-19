@@ -1,0 +1,219 @@
+\begin{thebibliography}{25}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[McRuer et~al.(1973)McRuer, Ashkenas, and Graham]{McRuer1973}
+Duane~T. McRuer, Irving Ashkenas, and Dunstan Graham.
+\newblock \emph{{Aircraft Dynamics and Automatic Control}}.
+\newblock Princeton University Press, New Jersey, 1973.
+\newblock ISBN 0691080836.
+\newblock URL \url{http://www.worldcat.org/oclc/900904}.
+
+\bibitem[Khalil(1996)]{Khalil1996}
+Hassan~K. Khalil.
+\newblock \emph{{Nonlinear Systems}}.
+\newblock Prentice-Hall, Upper Saddle River, New Jersey, 2nd edition, 1996.
+\newblock ISBN 0132280248.
+\newblock URL \url{http://www.worldcat.org/oclc/757428832}.
+
+\bibitem[Slotine and Weiping(1991)]{Slotine1991}
+Jean-Jacques~E Slotine and Li~Weiping.
+\newblock \emph{{Applied Nonlinear Control}}.
+\newblock Prentice-Hall, Englewood Cliffs, NJ, 1st edition, 1991.
+\newblock ISBN 0130408905.
+\newblock URL \url{http://www.worldcat.org/oclc/636122876}.
+
+\bibitem[{\AA}str\"{o}m and Murray(2008)]{Astrom2008}
+Karl~Johan {\AA}str\"{o}m and Richard~M. Murray.
+\newblock \emph{{Feedback systems: an introduction for scientists and
+  engineers}}.
+\newblock 2008.
+\newblock ISBN 0691135762.
+\newblock URL
+  \url{http://www.cds.caltech.edu/~murray/amwiki/index.php/Main\_Page}.
+
+\bibitem[Farrell and Polycarpou(2006)]{Farrell2006}
+Jay~A. Farrell and Marios~M. Polycarpou.
+\newblock \emph{{Adaptive Approximation Based Control}}.
+\newblock Wiley-Interscience, Hoboken, NJ, 1st edition, 2006.
+\newblock ISBN 0471727881.
+\newblock URL \url{http://www.worldcat.org/oclc/61169767}.
+
+\bibitem[Farrell et~al.(2005)Farrell, Polycarpou, and Sharma]{Farrell2005}
+Jay~A. Farrell, Marios~M. Polycarpou, and Manu Sharma.
+\newblock {Backstepping-Based Flight Control with Adaptive Function
+  Approximation}.
+\newblock \emph{Journal of Guidance, Control, and Dynamics}, 28\penalty0
+  (6):\penalty0 1089--1102, November 2005.
+\newblock ISSN 0731-5090.
+\newblock \doi{10.2514/1.13030}.
+\newblock URL \url{http://doi.aiaa.org/10.2514/1.13030}.
+
+\bibitem[Sonneveldt et~al.(2007)Sonneveldt, Chu, and Mulder]{Sonneveldt2007}
+L.~Sonneveldt, Q.~P. Chu, and J.~A. Mulder.
+\newblock {Nonlinear Flight Control Design Using Constrained Adaptive
+  Backstepping}.
+\newblock \emph{Journal of Guidance, Control, and Dynamics}, 30\penalty0
+  (2):\penalty0 322--336, March 2007.
+\newblock ISSN 0731-5090.
+\newblock \doi{10.2514/1.25834}.
+\newblock URL \url{http://doi.aiaa.org/10.2514/1.25834}.
+
+\bibitem[Rahman et~al.(2003)Rahman, Vilathgamuwa, and Uddin]{Rahman2003}
+M.A. Rahman, D.M. Vilathgamuwa, and M.N. Uddin.
+\newblock {Nonlinear control of interior permanent-magnet synchronous motor}.
+\newblock \emph{IEEE Transactions on Industry Applications}, 39\penalty0
+  (2):\penalty0 408--416, March 2003.
+\newblock ISSN 0093-9994.
+\newblock \doi{10.1109/TIA.2003.808932}.
+\newblock URL
+  \url{http://ieeexplore.ieee.org/lpdocs/epic03/wrapper.htm?arnumber=1189217}.
+
+\bibitem[Krstic et~al.(1998)Krstic, Fontaine, Kokotovic, and
+  Paduano]{Krstic1998}
+Miroslav Krstic, D.~Fontaine, Petar~V. Kokotovic, and J.D. Paduano.
+\newblock {Useful nonlinearities and global stabilization of bifurcations in a
+  model of jet engine surge and stall}.
+\newblock \emph{IEEE Transactions on Automatic Control}, 43\penalty0
+  (12):\penalty0 1739--1745, 1998.
+\newblock ISSN 00189286.
+\newblock \doi{10.1109/9.736075}.
+\newblock URL
+  \url{http://ieeexplore.ieee.org/lpdocs/epic03/wrapper.htm?arnumber=736075}.
+
+\bibitem[Godhavn et~al.(1998)Godhavn, Fossen, and Berge]{Godhavn1998}
+J.-M. Godhavn, T.~I. Fossen, and S.~P. Berge.
+\newblock {Non-linear and adaptive backstepping designs for tracking control of
+  ships}.
+\newblock \emph{International Journal of Adaptive Control and Signal
+  Processing}, 12\penalty0 (8):\penalty0 649--670, December 1998.
+\newblock ISSN 08906327.
+\newblock \doi{10.1002/(SICI)1099-1115(199812)12:8<649::AID-ACS515>3.0.CO;2-P}.
+\newblock URL
+  \url{http://doi.wiley.com/10.1002/(SICI)1099-1115(199812)12:8<649::AID-ACS515>3.0.CO;2-P}.
+
+\bibitem[Farrell et~al.(2009)Farrell, Polycarpou, and Sharma]{Farrell2009}
+Jay~A. Farrell, Marios~M. Polycarpou, and Manu Sharma.
+\newblock {Command Filtered Backstepping}.
+\newblock \emph{IEEE Transactions on Automatic Control}, 54\penalty0
+  (6):\penalty0 1391--1395, June 2009.
+\newblock ISSN 0018-9286.
+\newblock \doi{10.1109/TAC.2009.2015562}.
+\newblock URL
+  \url{http://ieeexplore.ieee.org/lpdocs/epic03/wrapper.htm?arnumber=4982643}.
+
+\bibitem[{Honeywell Inc.} and {Lockheed Martin Skunk
+  Works}(1996)]{WL-TR-96-3099}
+{Honeywell Inc.} and {Lockheed Martin Skunk Works}.
+\newblock {Application of Multivariable Control Theory to Aircraft Control
+  Laws. Final Report: Multivariable Control Design Guideline}.
+\newblock Technical Report March 1993, Wright Laboratory, Palmdale, CA, 1996.
+\newblock URL
+  \url{http://oai.dtic.mil/oai/oai?verb=getRecord\&metadataPrefix=html\&identifier=ADA315259}.
+
+\bibitem[Perkins and Hage(1949)]{Perkins1949}
+Courtland~D. Perkins and Robert~E. Hage.
+\newblock \emph{{Airplane Performance, Stability, and Control}}.
+\newblock Wiley, New York, 1949.
+\newblock ISBN 047168046X.
+\newblock URL \url{http://www.worldcat.org/oclc/1650766}.
+
+\bibitem[Stevens and Lewis(1992)]{Stevens1992}
+Brian Stevens and Frank Lewis.
+\newblock \emph{{Aircraft Control and Simulation}}.
+\newblock Wiley, Hoboken, NJ, 1st edition, 1992.
+\newblock ISBN 0471613975.
+\newblock URL \url{http://www.worldcat.org/oclc/23356757}.
+
+\bibitem[Stevens and Lewis(2003)]{Stevens2003}
+Brian Stevens and Frank Lewis.
+\newblock \emph{{Aircraft Control and Simulation}}.
+\newblock Wiley, Hoboken, NJ, 2nd edition, 2003.
+\newblock ISBN 978-0-471-37145-8.
+\newblock URL \url{http://www.worldcat.org/oclc/51751879}.
+
+\bibitem[Duke et~al.(1988)Duke, Antoniewicz, and Krambeer]{Duke1988}
+Eugene~L Duke, Robert~F. Antoniewicz, and Keith~D. Krambeer.
+\newblock {Derivation and Definition of a Linear Aircraft Model}.
+\newblock Technical report, Dryden Flight Research Facility, Edwards, CA, 1988.
+\newblock URL
+  \url{http://ntrs.nasa.gov/search.jsp?R=160246\&id=1\&as=false\&or=false\&qs=Ntt=Derivation+and+Definition+of+a+Linear+Aircraft+Model\&Ntk=all\&Ntx=mode+matchall\&Ns=HarvestDate\%7c1\&N=0}.
+
+\bibitem[{H\"{a}rkeg{\aa}rd}(2003)]{Harkegard2003}
+Ola {H\"{a}rkeg{\aa}rd}.
+\newblock \emph{{Backstepping and Control Allocation with Applications to
+  Flight Control}}.
+\newblock Dissertation, Link\"{o}ping University, 2003.
+\newblock URL
+  \url{http://www.control.isy.liu.se/research/reports/Ph.D.Thesis/PhD820.pdf}.
+
+\bibitem[Krstic et~al.(1995)Krstic, Kanellakopoulos, and Kokotovic]{Krstic95}
+Miroslav Krstic, Ioannis Kanellakopoulos, and Petar~V. Kokotovic.
+\newblock \emph{{Nonlinear and adaptive control design}}.
+\newblock John Wiley \& Sons, Inc., New York, 1995.
+\newblock ISBN 0471127329.
+\newblock URL
+  \url{http://www.worldcat.org/title/nonlinear-and-adaptive-control-design/oclc/32166728?referer=di\&ht=edition}.
+
+\bibitem[Freeman and Kokotovic(1996)]{Freeman1996a}
+Randy~A. Freeman and Petar~V. Kokotovic.
+\newblock \emph{{Robust Nonlinear Control Design}}.
+\newblock Birkh\"{a}user Boston, Boston, MA, 2008 edition, 1996.
+\newblock ISBN 978-0-8176-4758-2.
+\newblock \doi{10.1007/978-0-8176-4759-9}.
+\newblock URL
+  \url{http://www.springerlink.com/index/10.1007/978-0-8176-4759-9}.
+
+\bibitem[Kokotovic(1992)]{Kokotovic1992}
+Petar~V. Kokotovic.
+\newblock {The joy of feedback: nonlinear and adaptive}.
+\newblock \emph{IEEE Control Systems Magazine}, 12\penalty0 (3):\penalty0
+  7--17, June 1992.
+\newblock ISSN 02721708.
+\newblock \doi{10.1109/37.165507}.
+\newblock URL
+  \url{http://ieeexplore.ieee.org/lpdocs/epic03/wrapper.htm?arnumber=165507}.
+
+\bibitem[Tsourdos and White(1999)]{Med99}
+Antonios Tsourdos and Brian~A White.
+\newblock {Flight Control Design for a Missle. An Approximate Feedback
+  Linearization Approach}.
+\newblock \emph{Control}, pages 593--602, 1999.
+
+\bibitem[Strogatz(1994)]{Strogatz1994}
+Steven~H. Strogatz.
+\newblock \emph{{Nonlinear Dynamics and Chaos: With Applications To Physics,
+  Biology, Chemistry, And Engineering}}.
+\newblock Perseus Books, Westview Press, Cambridge, MA, 1st edition, 1994.
+\newblock ISBN 0738204536.
+\newblock URL
+  \url{http://www.worldcat.org/title/nonlinear-dynamics-and-chaos-with-applications-to-physics-biology-chemistry-and-engineering/oclc/42140115}.
+
+\bibitem[Farrell et~al.(2004)Farrell, Polycarpou, and Sharma]{Farrell2004}
+Jay~A. Farrell, Marios~M. Polycarpou, and Manu Sharma.
+\newblock {On-Line Approximation Based Control of Uncertain Nonlinear Systems
+  with Magnitude , Rate and Bandwidth Constraints on the States and Actuators}.
+\newblock In \emph{Proc. of the American Control Conference}, pages 2557--2562,
+  Boston, MA, 2004. IEEE.
+\newblock \doi{0.1109/ACC.2004.182491}.
+
+\bibitem[Klein and Morelli(2006)]{Morelli06}
+Vladislav Klein and Eugene~A. Morelli.
+\newblock \emph{{Aircraft System Identification: Theory and Practice}}.
+\newblock American Institute of Aeronautics and Astronautics, Reston, VA, 2006.
+\newblock ISBN 1563478323.
+\newblock URL \url{https://www.aiaa.org/PubDetail.aspx?id=3960}.
+
+\bibitem[Farrell et~al.(2008)Farrell, Polycarpou, Sharma, and
+  Dong]{Farrell2008}
+Jay~A. Farrell, Marios~M. Polycarpou, Manu Sharma, and Wenjie Dong.
+\newblock {Command Filtered Backstepping}.
+\newblock \emph{2008 American Control Conference}, pages 1923--1928, June 2008.
+\newblock \doi{10.1109/ACC.2008.4586773}.
+\newblock URL
+  \url{http://ieeexplore.ieee.org/lpdocs/epic03/wrapper.htm?arnumber=4586773}.
+
+\end{thebibliography}

@@ -1,0 +1,37 @@
+\documentclass[12pt]{ucthesis}
+\usepackage[latin1]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{booktabs,rotating,multirow,array}
+
+
+\begin{document}
+
+\begin{tabular}{c c || m{1.75in} |>{\centering\arraybackslash}m{.25in}||m{1.75in}|>{\centering\arraybackslash}m{.25in}|}
+\cmidrule(r){3-6}
+ & & \multicolumn{2}{| >{\centering\arraybackslash}m{2in} ||}{\textbf{Body}} & \multicolumn{2}{ >{\centering\arraybackslash}m{2in} |}{\textbf{Flight-Path / Wind}} \\[.1in]
+
+\midrule
+
+\multicolumn{1}{c}{\multirow{6}[4]{*}{\begin{sideways}\parbox{2.5in}{\centering\textbf{Kinetic Energy}}\end{sideways}}} & \multicolumn{1}{c}{\multirow{3}[2]{*}{\begin{sideways}\textbf{Trans.}\end{sideways}}} & Longitudinal Velocity & $u$                  & Velocity             & $V$ \\[.1in]
+\multicolumn{1}{c}{} & \multicolumn{1}{c}{} & Lateral Velocity     & $v$                  & Angle of Attack      & $\alpha$ \\[.1in]
+\multicolumn{1}{c}{} & \multicolumn{1}{c}{} & Normal Velocity      & $w$                  & Sideslip Angle       & $\beta$ \\[.1in]
+\cmidrule(r){3-6}
+\multicolumn{1}{c}{} & \multicolumn{1}{c}{\multirow{3}[2]{*}{\begin{sideways}\textbf{Rot.}\end{sideways}}} & Roll Rate            & $p$                  & Roll Rate            & $p$ \\[.1in]
+\multicolumn{1}{c}{} & \multicolumn{1}{c}{} & Pitch Rate           & $q$                  & Pitch Rate           & $q$ \\[.1in]
+\multicolumn{1}{c}{} & \multicolumn{1}{c}{} & Yaw Rate             & $r$                  & Yaw Rate             & $r$ \\[.1in]
+\hline
+\multicolumn{1}{c}{\multirow{6}[4]{*}{\begin{sideways}\parbox{2.5in}{\centering \textbf{Potential Energy}}\end{sideways}}} & \multicolumn{1}{c}{\multirow{3}[2]{*}{\begin{sideways}\textbf{Attitudes}\end{sideways}}} & Euler Roll           & $\phi$               & Heading Angle        & $\chi$ \\[.1in]
+\multicolumn{1}{c}{} & \multicolumn{1}{c}{} & Euler Pitch          & $\theta$             & Flight-Path Angle    & $\gamma$ \\[.1in]
+\multicolumn{1}{c}{} & \multicolumn{1}{c}{} & Euler Yaw            & $\psi$               & Bank Angle (about V) & $\mu$ \\[.1in]
+\cmidrule(r){3-6}
+\multicolumn{1}{c}{} & \multicolumn{1}{c}{\multirow{3}[2]{*}{\begin{sideways}\textbf{Position}\end{sideways}}} & North Position       & $\xi$                & North Position       & $\xi$ \\[.1in]
+\multicolumn{1}{c}{} & \multicolumn{1}{c}{} & East Position        & $\eta$               & East Position        & $\eta$ \\[.1in]
+\multicolumn{1}{c}{} & \multicolumn{1}{c}{} & Altitude             & $h$                  & Altitude             & $h$ \\[.1in]
+
+\bottomrule
+\end{tabular}
+
+
+\end{document}

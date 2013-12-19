@@ -1,0 +1,36 @@
+%=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+% Math Shortcuts
+%=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+\newcommand{\pd}[2]{\frac{\partial#1}{\partial#2}}
+
+%=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+% Text Formatting
+%=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+\newcommand{\alignright}{\hspace*{\fill}} %shift text remaining on line to right
+
+%=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+% Equation Formatting
+%=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+\newcommand{\vect}[1]{\boldsymbol{#1}}		%bold notation	
+%\newcommand{\vect}[1]{\vec{#1}} 			%arrow notation
+
+%=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+% Equation Backstepping Notation
+%=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+\newcommand{\virt}{\xi}
+\newcommand{\filt}{\zeta}
+\newcommand{\stab}{\alpha}
+\newcommand{\err}{z}
+\newcommand{\etrk}[1]{\tilde{#1}}
+
+%=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+% Manual Reference - can't get autoref to work in some cases... \usepackage{aliascnt} is the fix somehow
+%=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+\usepackage{xparse}
+\DeclareDocumentCommand \manref { m m o } { % two mandatory commands, one optional command
+\IfNoValueTF{#3}
+   {\hyperref[#2]{{#1}~\ref*{#2}}}% 			% Code w/o  argument #3   * => without link!!!
+   {\hyperref[#2]{{#1}~\ref*{#2}~{#3}}}% 		% Code with argument #3
+}
+% Implementation: \manref{Figure}{fig:...} or \manref{Figure}{fig:...}[a)]
+% \newcommand\manref[2]{\hyperref[#2]{{#1}~\ref*{#2}}}

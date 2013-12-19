@@ -1,0 +1,128 @@
+\begin{thenomenclature} 
+
+ \nomgroup{Symbols}
+
+  \item [{$\alpha$}]\begingroup Angle of Attack\nomunit{deg}\nomeqref {2.1.13}
+		\nompageref{12}
+  \item [{$\alpha(x)$}]\begingroup Stabilizing Feedback Control Law \nomunit{BS}\nomeqref {2.3.24}
+		\nompageref{60}
+  \item [{$\beta$}]\begingroup Angle of Sideslip\nomunit{deg}\nomeqref {2.1.13}
+		\nompageref{12}
+  \item [{$\gamma$}]\begingroup Flight-Path Angle\nomunit{deg}\nomeqref {2.1.13}
+		\nompageref{12}
+  \item [{$\filt_x$}]\begingroup Filtered State\nomeqref {2.3.72}
+		\nompageref{70}
+  \item [{$\zeta$}]\begingroup Damping Frequency\nomunit{rad/s}\nomeqref {2.3.83}
+		\nompageref{74}
+  \item [{$\mu$}]\begingroup Bank Angle\nomunit{deg}\nomeqref {2.1.13}
+		\nompageref{12}
+  \item [{$\virt$}]\begingroup Virtual Control Law \nomunit{BS}\nomeqref {2.3.24}
+		\nompageref{60}
+  \item [{$\phi$, $\theta$, $\psi$}]\begingroup Roll, Pitch, and Yaw Angles\nomunit{deg}\nomeqref {2.1.7}
+		\nompageref{12}
+  \item [{$\chi$}]\begingroup Ground-Track Angle\nomunit{deg}\nomeqref {2.1.13}
+		\nompageref{12}
+  \item [{$\omega_n$}]\begingroup Natural Frequency\nomunit{rad/s}\nomeqref {2.3.83}
+		\nompageref{74}
+  \item [{$C$}]\begingroup Direction Cosine Matrix\nomeqref {2.1.13}
+		\nompageref{14}
+  \item [{$D$}]\begingroup Drag \nomunit{$\mathrm{lb_f}$}\nomeqref {2.1.39}
+		\nompageref{24}
+  \item [{$E$}]\begingroup Control Effectiveness Matrix \nomunit{$\mathrm{1/slug \cdot ft^2}$}\nomeqref {2.3.85}
+		\nompageref{76}
+  \item [{$F$}]\begingroup Known Sub-function \nomunit{BS}\nomeqref {3.1.0}
+		\nompageref{83}
+  \item [{$I$}]\begingroup Moment or Product of Inertia \nomunit{$\mathrm{slug \cdot ft^2}$}\nomeqref {2.1.36}
+		\nompageref{21}
+  \item [{$L$}]\begingroup Lift \nomunit{$\mathrm{lb_f}$}\nomeqref {2.1.39}
+		\nompageref{24}
+  \item [{$V$}]\begingroup Airspeed\nomunit{ft/s}\nomeqref {2.1.13}
+		\nompageref{12}
+  \item [{$W$}]\begingroup Positive (Semi-)Definite Function \nomunit{BS}\nomeqref {2.3.24}
+		\nompageref{60}
+  \item [{$X$}]\begingroup X-Coordinate for ($\alpha^o_c, \mu^o_c$) Solution \nomunit{BS}\nomeqref {3.1.29}
+		\nompageref{87}
+  \item [{$Y$}]\begingroup Sideforce \nomunit{$\mathrm{lb_f}$}\nomeqref {2.1.39}
+		\nompageref{24}
+  \item [{$Y$}]\begingroup Y-Coordinate for ($\alpha^o_c, \mu^o_c$) Solution \nomunit{BS}\nomeqref {3.1.29}
+		\nompageref{87}
+  \item [{$\bar{L}$, $\bar{M}$, $\bar{N}$}]\begingroup Roll, Pitch, and Yaw Moments \nomunit{$\mathrm{lb \cdot ft}$}\nomeqref {2.1.39}
+		\nompageref{24}
+  \item [{$\vect{F}$}]\begingroup Reference Frame; Force\nomeqref {2.1.13}
+		\nompageref{14}
+  \item [{$f$}]\begingroup Nominal System \nomunit{DE}\nomeqref {2.2.10}
+		\nompageref{36}
+  \item [{$f$}]\begingroup Unknown or Partially Known Sub-function \nomunit{BS}\nomeqref {3.1.0}
+		\nompageref{83}
+  \item [{$g$}]\begingroup Perturbed System \nomunit{DE}\nomeqref {2.2.10}
+		\nompageref{36}
+  \item [{$m$}]\begingroup Mass \nomunit{slug}\nomeqref {2.1.39}
+		\nompageref{24}
+  \item [{$u$}]\begingroup Control Law\nomeqref {3.1.0}\nompageref{83}
+  \item [{$u$, $v$, $w$}]\begingroup Longitudinal, Lateral, and Normal Velocities\nomunit{ft/s}\nomeqref {2.1.7}
+		\nompageref{12}
+  \item [{$v$}]\begingroup Virtual Control Input Vector \nomunit{$\mathrm{1/s^2}$}\nomeqref {2.3.85}
+		\nompageref{76}
+  \item [{$z$}]\begingroup Tracking Error \nomunit{BS}\nomeqref {2.3.24}
+		\nompageref{60}
+
+ \nomgroup{A}
+
+  \item [{(O)DE}]\begingroup (Ordinary) Differential Equation\nomeqref {2.2.10}
+		\nompageref{36}
+  \item [{AS}]\begingroup Asymptotically Stable\nomeqref {2.2.13}
+		\nompageref{39}
+  \item [{BS}]\begingroup Backstepping\nomeqref {2.3.24}\nompageref{60}
+  \item [{CA}]\begingroup Control Allocation\nomeqref {4.1.0}
+		\nompageref{113}
+  \item [{CF}]\begingroup Command Filter\nomeqref {4.1.0}
+		\nompageref{113}
+  \item [{CFBS}]\begingroup Command Filtered Backstepping\nomeqref {2.3.65}
+		\nompageref{69}
+  \item [{CLF}]\begingroup Control Lyapunov Function\nomeqref {2.3.0}
+		\nompageref{51}
+  \item [{CONV}]\begingroup Converges\nomeqref {2.2.18}\nompageref{45}
+  \item [{ECEF}]\begingroup Earth Centered Earth Fixed\nomeqref {2.1.13}
+		\nompageref{13}
+  \item [{ECI}]\begingroup Earth Centered Inertial\nomeqref {2.1.13}
+		\nompageref{13}
+  \item [{GAS}]\begingroup Globally Asymptotically Stable\nomeqref {2.2.14}
+		\nompageref{41}
+  \item [{GUAS}]\begingroup Globally Uniformly Asymptotically Stable\nomeqref {2.2.18}
+		\nompageref{44}
+  \item [{LPF}]\begingroup Low Pass Filter\nomeqref {4.1.0}
+		\nompageref{113}
+  \item [{PINV}]\begingroup Pseudo Inverse\nomeqref {2.3.86}
+		\nompageref{77}
+  \item [{QCAT}]\begingroup Quadratic Programming Control Allocation Toolbox\nomeqref {2.3.86}
+		\nompageref{77}
+  \item [{S}]\begingroup Stable\nomeqref {2.2.13}\nompageref{39}
+  \item [{UAS}]\begingroup Unmanned Aerial System\nomeqref {1.0.0}
+		\nompageref{1}
+  \item [{UAV}]\begingroup Unmanned Aerial Vehicle\nomeqref {3.0.0}
+		\nompageref{80}
+  \item [{VCL}]\begingroup Virtual Control Laws\nomeqref {4.1.0}
+		\nompageref{113}
+
+ \nomgroup{B}
+
+  \item [{$A$}]\begingroup Aerodynamic\nomeqref {2.1.22}\nompageref{18}
+  \item [{$c$}]\begingroup Commanded\nomeqref {2.3.67}\nompageref{70}
+  \item [{$des$}]\begingroup Desired\nomeqref {2.3.31}\nompageref{62}
+  \item [{$G$}]\begingroup Gravitational\nomeqref {2.1.22}
+		\nompageref{18}
+  \item [{$M$}]\begingroup Magnitude\nomeqref {2.3.84}\nompageref{74}
+  \item [{$R$}]\begingroup Rate\nomeqref {2.3.84}\nompageref{74}
+  \item [{$s$}]\begingroup Stability Axes\nomeqref {3.2.4}
+		\nompageref{91}
+  \item [{$T$}]\begingroup Thrust\nomeqref {2.1.22}\nompageref{18}
+
+ \nomgroup{T}
+
+  \item [{$-$}]\begingroup Compensated Tracking Error\nomeqref {3.1.18}
+		\nompageref{85}
+  \item [{$\sim$}]\begingroup Tracking Error\nomeqref {3.1.17}
+		\nompageref{85}
+  \item [{$o$}]\begingroup Unfiltered\nomeqref {2.3.83}\nompageref{74}
+
+\end{thenomenclature}

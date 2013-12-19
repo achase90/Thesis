@@ -1,0 +1,52 @@
+%=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+% http://ctan.mirrorcatalogs.com/macros/latex/contrib/nomencl/nomencl.pdf
+%=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+% http://www.freiheitsfreund.de/2010/10/24/automatically-run-makeindex-from-within-a-latex-document-with-write18/
+%=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+% http://www.latex-community.org/forum/viewtopic.php?f=51&t=5641
+%=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+% Load the package nomenclature
+% Add \nomenclature{$A$}{A is just a letter.} anywhere in your document
+% and create a nomenclature list with \printnomenclature where you want it to appear.
+%=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+% The options:
+% 	refpage 	for each entry in the list print the page on which the \nomenclature command is placed
+% 	refeq		for each entry in the list concerning a \nomenclature command directly after an eqn print the respective eqn's # in the list
+% 	intoc 		inserts the nomenclature in the Table of Contents
+%=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+\usepackage[intoc]{nomencl} %[refpage,refeq,noprefix]
+
+\RequirePackage{ifthen}
+\renewcommand{\nomgroup}[1]{%
+\ifthenelse{\equal{#1}{T}}{\item[\textbf{Superscript}]}{%
+  \ifthenelse{\equal{#1}{B}}{\item[\textbf{Subscript}]}{%{}}}
+      \ifthenelse{\equal{#1}{A}}{\item[\textbf{Acronyms}]}{}
+{}}}}
+
+%\renewcommand{\nomgroup}[1]{%
+%  \ifthenelse{\equal{#1}{G}}{\item[\textbf{Greek}]}{%
+%    \ifthenelse{\equal{#1}{A}}{\item[\textbf{Roman}]}{%{}}}
+%      \ifthenelse{\equal{#1}{T}}{\item[\textbf{Superscript}]}{%}}}}
+%        \ifthenelse{\equal{#1}{B}}{\item[\textbf{Subscript}]}
+%{}}}}} 
+
+%% Utilize the LaTeX \write18 command to execute code as if from the windows command line. Therefore first define a customized command
+\def\execute{%
+\begingroup
+\catcode`\%=12
+\catcode`\\=12
+\executeaux}
+\def\executeaux#1{\immediate\write18{#1}\endgroup}
+
+%% With this customized command execute the necessary command to run makeindex with the necessary parameters for the nomenclature package
+% During the first run of LaTeX by the package nomenclature a file, called YOURLATEXFILEMAME.nlo is generated.
+% During the second run of LaTeX, with this line makeindex generates a YOURLATEXFILENAME.nls of that.
+\execute{makeindex thesis.nlo -s nomencl.ist -o thesis.nls}
+
+%% The next commands during the first run of LaTex writes the .nlo file.
+% Do not change the order! Otherwise the file will be open aleady and the now first of the two commands fails silently!
+\makenomenclature
+
+%% Add units to right of description
+\newcommand{\nomunit}[1]{%
+\renewcommand{\nomentryend}{\hspace*{\fill}\upshape#1}}

@@ -1,0 +1,166 @@
+%=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+% Page Formatting
+%=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+\usepackage[letterpaper]{geometry}
+\usepackage[overload]{textcase} 						%required for ucthesis
+\usepackage[protrusion=true,expansion=true]{microtype} 	%cleaner typography
+\usepackage[pdftex,
+            plainpages=false, breaklinks=true,
+            colorlinks=true, urlcolor=blue, citecolor=blue, linkcolor=blue,
+            bookmarks=true, bookmarksnumbered, bookmarksopen=true,bookmarksopenlevel=2,
+            pdfstartview=FitH, %Options with pdfstartview are FitV, FitB and FitH 
+            pdfauthor={Brian M. Borra},
+            pdftitle={Nonlinear UAV Flight Control Using Command Filtered Backstepping}
+           ]{hyperref}
+\pdfcompresslevel=3
+
+\urlstyle{rm} %so it doesn?t use a typewriter font for url?s.
+
+% Margin and Page Layout Alterations
+\geometry{verbose,nohead,tmargin=1.0in,bmargin=1.0in,lmargin=1.0in,rmargin=1.0in}
+\setlength{\parindent}{0.25in}
+\setlength{\parskip}{6pt}
+
+\usepackage{chngpage} % allows for temporary adjustment of side margins like so
+%    \begin{adjustwidth}{-1in}{-1in}    % adjust the L and R margins by 1 inch
+
+\pdfinfo {
+	/Title (Nonlinear UAV Flight Control Using Command Filtered Backstepping)
+	/Author (Brian M. Borra)
+	/CreationDate (D:201203300000000) %D:YYYYMMDDHHmmss
+	/Subject (Unmanned Aircraft Control)
+	/Keywords (Backstepping, UAV, UAS, Lyapunov, Control Allocation, Command Filtering, Nonlinear, Flightpath, Cal Poly, California Polytechnic State University, Aerospace Engineering, Thesis) }
+
+\usepackage{xcolor} 	%more color options
+
+%=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+% Front Matter
+%=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+\usepackage{thesis_nomenclature} 							%write18 executable on run
+\renewcommand{\contentsname}{Table of Contents} 			%TOC name
+\setcounter{tocdepth}{3}									%TOC depth, {3} = subsubsection
+\setcounter{secnumdepth}{4}									%5 makes \paragraph subsubsubsec
+
+%=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+% Math
+%=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+\usepackage{amssymb, amsmath}
+\usepackage{cancel} 										%cross out math
+\numberwithin{equation}{section}							%section based equation numbering
+\usepackage{nccmath}										%fleqn - left align, align eqns
+
+%=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+% Floats: Figures, Tables, and Lists
+%=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+\usepackage[pdftex]{graphicx}								%picutre management (.eps)
+\graphicspath{{../../3_Media/}} 							%root location of images folder
+\usepackage{float}											%can use H in figure env opts
+\usepackage{paralist}										%inline lists
+\usepackage{enumitem}										%list positioning
+\usepackage{booktabs,rotating,array,multirow,bigdelim}		%tables
+\usepackage{wrapfig,subfig} 								%figures
+\usepackage[bottom,para]{footmisc}							%fix footnotes
+\usepackage[percent]{overpic}								%place tex atop graphics
+
+%=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+% Titles
+%=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+\usepackage[compact]{titlesec}
+\titleformat{\chapter}[display]
+{\normalfont\fontsize{20}{14}\bfseries}{\chaptertitlename\ \thechapter}{1em}{} 
+%\titleformat{\section}
+%{\normalfont\large\bfseries}{\thesection}{1em}{}
+%\titleformat{\subsection}
+%{\normalfont\large\bfseries}{\thesubsection}{1em}{}
+%\titleformat{\subsubsection}
+%{\normalfont\normalsize\bfseries}{\thesubsubsection}{1em}{}
+%\titleformat{\paragraph}[runin]
+%{\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
+%\titleformat{\subparagraph}[runin]
+%{\normalfont\normalsize\bfseries}{\thesubparagraph}{1em}{}
+\titlespacing*{\chapter} {0pt}{30pt}{20pt}
+%\titlespacing*{\section} {0pt}{3.5ex plus 1ex minus .2ex}{2.3ex plus .2ex}
+%\titlespacing*{\subsection} {0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+%\titlespacing*{\subsubsection}{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+%\titlespacing*{\paragraph} {0pt}{3.25ex plus 1ex minus .2ex}{1em}
+%\titlespacing*{\subparagraph} {\parindent}{3.25ex plus 1ex minus .2ex}{1em}
+
+%=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+% Floats: Captions
+%=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+% Different font in captions (single-spaced, bold)
+% http://dcwww.camd.dtu.dk/~schiotz/comp/LatexTips/LatexTips.html
+\newcommand{\captionfonts}{\centering\small\bf\ssp}
+\makeatletter  % Allow the use of @ in command names
+\long\def\@makecaption#1#2{%
+  \vskip\abovecaptionskip
+  \sbox\@tempboxa{{\captionfonts #1: #2}}%
+  \ifdim \wd\@tempboxa >\hsize
+    {\captionfonts #1: #2\par}
+  \else
+    \hbox to\hsize{\hfil\box\@tempboxa\hfil}%
+  \fi
+  \vskip\belowcaptionskip}
+\makeatother   % Cancel the effect of \makeatletter
+
+%=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+% Custom Commands
+%=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+\usepackage{xparse} 										%for if then with custom cmds
+\usepackage{thesis_commands} 								%custom latex style file
+
+%=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+% Theorems
+%=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+% http://tex.stackexchange.com/questions/5599/theorem-packages-which-to-use-which-conflict
+\usepackage{amsthm} 	% ftp://ftp.ams.org/pub/tex/doc/amscls/amsthdoc.pdf
+%\usepackage{thmtools} 	% ftp://ftp.tex.ac.uk/ctan/tex-archive/macros/latex/exptl/thmtools/thmtools.pdf
+%
+\theoremstyle{definition}
+\newtheorem{ass}{Assumption}[chapter]
+\newtheorem{defn}{Definition}[section]
+\newtheorem{eg}{Example}[section]
+%
+\theoremstyle{plain}
+\newtheorem{thm}{Theorem}[section]
+\def\theoremautorefname{Theorem}%
+\newtheorem{cor}{Corollary}[section]
+\newtheorem{lem}{Lemma}[section]
+%
+\theoremstyle{remark}
+\newtheorem*{rem}{Remark} %[section]
+\renewenvironment{rem}[1][\proofname]{\noindent{\bfseries #1}}{}
+\renewenvironment{proof}[1][\proofname]{\noindent{\bfseries Proof: #1}}{\qed}
+% 
+\newtheoremstyle{thm_contd} 
+{\topsep} {\topsep} 		% http://biggamac.blogspot.com/2009/03/continuing-example-in-latex.html
+{\itshape}					% Body font \upshape
+{}							% Indent amount (empty = no indent, \parindent = para indent)
+{\bfseries\sc}			% Thm head font
+{}							% Punctuation after thm head
+{1pt}						% Space after thm head (\newline = linebreak)
+{\thmname{#1}\,\thmnumber{#2}\thmnote{#3}\enspace(continued)}% Thm head spec
+\theoremstyle{thm_contd}
+\newtheorem*{thm_contd}{Theorem}
+
+%=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+% End Matter: Appendices and References
+%=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+\usepackage{appendix}
+
+\usepackage[numbers,square]{natbib}
+\def\newblock{} %required to use mendeley generated .bib
+% replace all: ~author = {H\"{a}rkeg\aa rd,~ for ~author = {{H\"{a}rkeg{\aa}rd},~   or H\"{a}rkeg\aa{}rd
+% http://consense-project.com/2011/01/package-natbib-error-bibliography-not-compatible-with-author-year-citation/
+
+%=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+% TESTING
+%=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+%\AtBeginDocument{%
+%  \addtolength\abovedisplayskip{-0.5\baselineskip}%
+%  \addtolength\belowdisplayskip{-0.5\baselineskip}%
+%  \addtolength\abovedisplayshortskip{-0.5\baselineskip}%
+%  \addtolength\belowdisplayshortskip{-0.5\baselineskip}%
+%}
+
+%\setlength{\intextsep}{-1ex} % remove extra space above and below in-line float

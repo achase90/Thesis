@@ -1,0 +1,63 @@
+#!/bin/sh
+
+# Make sure that Platypus has $1 set to path to application under the 
+# script parameters.
+
+location=$(dirname "$1")
+location="\"$location\""
+
+name=$(basename "$1" .app)
+
+if [ $# != 1 ]; then
+	newname=$(basename "$2" .exe)
+	newname=$(basename "$newname" .EXE)
+	command="cd $location && mv \"$name.app\" \"$newname.app\""
+	eval $command
+	wait
+else
+	echo "Launching \"${name}.exe\" in Wine"
+	echo ""
+	echo "---------------------------------"
+	echo ""
+		
+	#This robust code to find the wine executable is by Mike Kronenberg
+	#is wine in $PATH?
+	wine --version &> /dev/null || {
+		#is wine in /Applications/Darwine?
+		if test -f /Applications/Darwine/Wine.bundle/Contents/bin/wine; then
+			export PATH=$PATH:/Applications/Darwine/Wine.bundle/Contents/bin
+		else
+			#is wine in ~/Applications/Darwine?
+			if test -f ~/Applications/Darwine/Wine.bundle/Contents/bin/wine; then
+				export PATH=$PATH:~/Applications/Darwine/Wine.bundle/Contents/bin
+			else
+				#is wine in locate db?
+				if test $(locate wine | grep bin/wineserver); then
+					export PATH=$PATH:"$(dirname $(locate wine | grep bin/wineserver))"
+				fi
+			fi
+		fi
+	}
+	wine --version &> /dev/null || {
+		echo "Darwine not found. Terminating."
+		exit 1;
+	}
+	
+	# Also by Mike Kronenberg, we set DISPLAY in Tiger (untested by me)
+	if test $(echo $OSTYPE | grep darwin8); then
+		# set Display properties and start X11 on Tiger
+		export DISPLAY=:0.0
+		/usr/bin/open-x11 wine
+	fi
+	
+	command="cd ${location} && wine \"${name}.exe\" &"
+	#echo $command
+	eval $command
+	wait
+	echo ""
+	echo "---------------------------------"
+	echo ""
+	sleep 3
+	echo "Bye"
+	sleep 2
+fi
