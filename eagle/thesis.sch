@@ -1375,7 +1375,7 @@
 <pad name="RS232DI" x="24.13" y="2.54" drill="0.8128" shape="octagon"/>
 <pad name="RS232DO" x="26.67" y="2.54" drill="0.8128" shape="octagon" rot="R90"/>
 <pad name="TIMEOUT1" x="29.21" y="2.54" drill="0.8128" shape="octagon"/>
-<text x="1.27" y="1.27" size="1.27" layer="25">uBlox LEA-6T</text>
+<text x="1.27" y="1.27" size="1.016" layer="25">uBlox LEA-6T</text>
 <pad name="TIMEOUT2" x="31.75" y="2.54" drill="0.8128" shape="octagon"/>
 <hole x="38.1" y="27.94" drill="3.175"/>
 <wire x1="0" y1="0" x2="0" y2="30.48" width="0.127" layer="51"/>
@@ -2528,8 +2528,8 @@ type 0309, grid 12.5 mm</description>
 <wire x1="-1.473" y1="-0.983" x2="-1.473" y2="0.983" width="0.0508" layer="39"/>
 <smd name="1" x="-0.85" y="0" dx="1" dy="1.1" layer="1"/>
 <smd name="2" x="0.85" y="0" dx="1" dy="1.1" layer="1"/>
-<text x="-0.635" y="0.635" size="1.27" layer="25">&gt;NAME</text>
-<text x="-0.635" y="-1.905" size="1.27" layer="27">&gt;VALUE</text>
+<text x="-0.635" y="0.635" size="0.6096" layer="25">&gt;NAME</text>
+<text x="-0.635" y="-1.905" size="0.6096" layer="27">&gt;VALUE</text>
 <rectangle x1="0.4318" y1="-0.4318" x2="0.8382" y2="0.4318" layer="51"/>
 <rectangle x1="-0.8382" y1="-0.4318" x2="-0.4318" y2="0.4318" layer="51"/>
 <rectangle x1="-0.1999" y1="-0.4001" x2="0.1999" y2="0.4001" layer="35"/>
@@ -4069,8 +4069,8 @@ Source: http://www.murata.com .. GRM43DR72E224KW01.pdf</description>
 <wire x1="-0.356" y1="-0.419" x2="0.356" y2="-0.419" width="0.1016" layer="51"/>
 <smd name="1" x="-0.85" y="0" dx="1.1" dy="1" layer="1"/>
 <smd name="2" x="0.85" y="0" dx="1.1" dy="1" layer="1"/>
-<text x="-0.635" y="0.635" size="1.27" layer="25">&gt;NAME</text>
-<text x="-0.635" y="-1.905" size="1.27" layer="27">&gt;VALUE</text>
+<text x="-0.635" y="0.635" size="0.6096" layer="25">&gt;NAME</text>
+<text x="-0.635" y="-1.905" size="0.6096" layer="27">&gt;VALUE</text>
 <rectangle x1="-0.8382" y1="-0.4699" x2="-0.3381" y2="0.4801" layer="51"/>
 <rectangle x1="0.3302" y1="-0.4699" x2="0.8303" y2="0.4801" layer="51"/>
 <rectangle x1="-0.1999" y1="-0.3" x2="0.1999" y2="0.3" layer="35"/>
@@ -7341,8 +7341,8 @@ High-power, low thermal resistance package.</description>
 <smd name="3" x="0" y="1.1" dx="1" dy="1.4" layer="1"/>
 <smd name="2" x="0.95" y="-1.1" dx="1" dy="1.4" layer="1"/>
 <smd name="1" x="-0.95" y="-1.1" dx="1" dy="1.4" layer="1"/>
-<text x="-0.889" y="2.032" size="0.4064" layer="25">&gt;NAME</text>
-<text x="-1.016" y="-0.1905" size="0.4064" layer="27">&gt;VALUE</text>
+<text x="-0.889" y="2.032" size="0.6096" layer="25">&gt;NAME</text>
+<text x="-1.016" y="-2.7305" size="0.6096" layer="27">&gt;VALUE</text>
 <rectangle x1="-0.2286" y1="0.7112" x2="0.2286" y2="1.2954" layer="51"/>
 <rectangle x1="0.7112" y1="-1.2954" x2="1.1684" y2="-0.7112" layer="51"/>
 <rectangle x1="-1.1684" y1="-1.2954" x2="-0.7112" y2="-0.7112" layer="51"/>
@@ -7560,20 +7560,21 @@ High-power, low thermal resistance package.</description>
 <library name="HMC5883L">
 <packages>
 <package name="HMC5883L">
-<wire x1="0" y1="0" x2="17.76" y2="0" width="0.254" layer="20"/>
-<wire x1="17.76" y1="0" x2="17.78" y2="17.78" width="0.254" layer="20"/>
-<wire x1="17.78" y1="17.78" x2="0" y2="17.78" width="0.254" layer="20"/>
-<wire x1="0" y1="17.78" x2="0" y2="0" width="0.254" layer="20"/>
-<text x="9.525" y="2.794" size="1.27" layer="22" font="vector" ratio="15" rot="MR90">VCC</text>
-<text x="12.065" y="2.794" size="1.27" layer="22" font="vector" ratio="15" rot="MR90">GND</text>
-<text x="6.985" y="2.794" size="1.27" layer="22" font="vector" ratio="15" rot="MR90">SDA</text>
-<text x="4.445" y="2.921" size="1.27" layer="22" font="vector" ratio="15" rot="MR90">SCL</text>
-<pad name="SCL" x="5.08" y="1.27" drill="1.016" diameter="1.8796"/>
-<pad name="SDA" x="7.62" y="1.27" drill="1.016" diameter="1.8796"/>
-<pad name="VCC" x="10.16" y="1.27" drill="1.016" diameter="1.8796"/>
-<pad name="GND" x="12.7" y="1.27" drill="1.016" diameter="1.8796"/>
+<wire x1="0" y1="0" x2="17.76" y2="0" width="0.254" layer="21"/>
+<wire x1="17.76" y1="0" x2="17.78" y2="17.78" width="0.254" layer="21"/>
+<wire x1="17.78" y1="17.78" x2="0" y2="17.78" width="0.254" layer="21"/>
+<wire x1="0" y1="17.78" x2="0" y2="0" width="0.254" layer="21"/>
+<text x="8.255" y="2.794" size="1.016" layer="21" ratio="15" rot="R90">VCC</text>
+<text x="5.715" y="2.794" size="1.016" layer="21" ratio="15" rot="R90">GND</text>
+<text x="10.795" y="2.794" size="1.016" layer="21" ratio="15" rot="R90">SDA</text>
+<text x="13.335" y="2.921" size="1.016" layer="21" ratio="15" rot="R90">SCL</text>
+<pad name="SCL" x="12.7" y="1.27" drill="1.016" diameter="1.8796"/>
+<pad name="SDA" x="10.16" y="1.27" drill="1.016" diameter="1.8796"/>
+<pad name="VCC" x="7.62" y="1.27" drill="1.016" diameter="1.8796"/>
+<pad name="GND" x="5.08" y="1.27" drill="1.016" diameter="1.8796"/>
 <hole x="2.54" y="15.24" drill="3.048"/>
 <hole x="15.24" y="15.24" drill="3.048"/>
+<text x="5.08" y="8.89" size="1.016" layer="21">HMC5883L</text>
 </package>
 </packages>
 <symbols>
@@ -7617,13 +7618,13 @@ High-power, low thermal resistance package.</description>
 <wire x1="0" y1="13.97" x2="17.78" y2="13.97" width="0.2032" layer="21"/>
 <wire x1="17.78" y1="13.97" x2="17.78" y2="0" width="0.2032" layer="21"/>
 <wire x1="17.78" y1="0" x2="0" y2="0" width="0.2032" layer="21"/>
-<text x="0.762" y="11.43" size="1.016" layer="21" font="vector" ratio="15" rot="R270">VDD</text>
-<text x="3.302" y="11.43" size="1.016" layer="21" font="vector" ratio="15" rot="R270">VIO</text>
-<text x="5.842" y="11.43" size="1.016" layer="21" font="vector" ratio="15" rot="R270">GND</text>
-<text x="8.382" y="11.43" size="1.016" layer="21" font="vector" ratio="15" rot="R270">INT</text>
-<text x="10.922" y="11.43" size="1.016" layer="21" font="vector" ratio="15" rot="R270">CLK</text>
-<text x="13.462" y="11.43" size="1.016" layer="21" font="vector" ratio="15" rot="R270">SDA</text>
-<text x="16.002" y="11.43" size="1.016" layer="21" font="vector" ratio="15" rot="R270">SCL</text>
+<text x="0.762" y="11.43" size="1.016" layer="21" ratio="15" rot="R270">VDD</text>
+<text x="3.302" y="11.43" size="1.016" layer="21" ratio="15" rot="R270">VIO</text>
+<text x="5.842" y="11.43" size="1.016" layer="21" ratio="15" rot="R270">GND</text>
+<text x="8.382" y="11.43" size="1.016" layer="21" ratio="15" rot="R270">INT</text>
+<text x="10.922" y="11.43" size="1.016" layer="21" ratio="15" rot="R270">CLK</text>
+<text x="13.462" y="11.43" size="1.016" layer="21" ratio="15" rot="R270">SDA</text>
+<text x="16.002" y="11.43" size="1.016" layer="21" ratio="15" rot="R270">SCL</text>
 <pad name="VDD" x="1.27" y="12.7" drill="1.016" diameter="1.8796"/>
 <pad name="VIO" x="3.81" y="12.7" drill="1.016" diameter="1.8796"/>
 <pad name="GND" x="6.35" y="12.7" drill="1.016" diameter="1.8796"/>
@@ -7631,6 +7632,7 @@ High-power, low thermal resistance package.</description>
 <pad name="CLK" x="11.43" y="12.7" drill="1.016" diameter="1.8796"/>
 <pad name="SDA" x="13.97" y="12.7" drill="1.016" diameter="1.8796"/>
 <pad name="SCL" x="16.51" y="12.7" drill="1.016" diameter="1.8796"/>
+<text x="6.35" y="3.81" size="1.016" layer="21">ITG3200</text>
 </package>
 </packages>
 <symbols>
@@ -7680,14 +7682,14 @@ High-power, low thermal resistance package.</description>
 <wire x1="12.7" y1="0.0254" x2="12.7" y2="10.1854" width="0.2032" layer="21"/>
 <wire x1="12.7" y1="10.1854" x2="0" y2="10.1854" width="0.2032" layer="21"/>
 <wire x1="0" y1="10.1854" x2="0" y2="0.0254" width="0.2032" layer="21"/>
-<text x="9.779" y="8.4074" size="1.016" layer="21" font="vector" ratio="15" rot="MR0">V+</text>
-<text x="9.779" y="5.8674" size="1.016" layer="21" font="vector" ratio="15" rot="MR0">GND</text>
-<text x="9.779" y="3.3274" size="1.016" layer="21" font="vector" ratio="15" rot="MR0">INT1</text>
-<text x="9.779" y="0.7874" size="1.016" layer="21" font="vector" ratio="15" rot="MR0">INT2</text>
-<text x="4.445" y="0.7874" size="1.016" layer="21" font="vector" ratio="15" rot="MR0">!CS</text>
-<text x="5.842" y="3.3274" size="1.016" layer="21" font="vector" ratio="15" rot="MR0">MISO</text>
-<text x="5.715" y="5.8674" size="1.016" layer="21" font="vector" ratio="15" rot="MR0">MOSI</text>
-<text x="5.08" y="8.4074" size="1.016" layer="21" font="vector" ratio="15" rot="MR0">SCK</text>
+<text x="9.779" y="8.4074" size="1.016" layer="21" ratio="15" rot="MR0">V+</text>
+<text x="9.779" y="5.8674" size="1.016" layer="21" ratio="15" rot="MR0">GND</text>
+<text x="9.779" y="3.3274" size="1.016" layer="21" ratio="15" rot="MR0">INT1</text>
+<text x="9.779" y="0.7874" size="1.016" layer="21" ratio="15" rot="MR0">INT2</text>
+<text x="4.445" y="0.7874" size="1.016" layer="21" ratio="15" rot="MR0">!CS</text>
+<text x="5.842" y="3.3274" size="1.016" layer="21" ratio="15" rot="MR0">MISO</text>
+<text x="5.715" y="5.8674" size="1.016" layer="21" ratio="15" rot="MR0">MOSI</text>
+<text x="5.08" y="8.4074" size="1.016" layer="21" ratio="15" rot="MR0">SCK</text>
 <pad name="SCK" x="1.27" y="8.89" drill="1.016" diameter="1.8796"/>
 <pad name="MOSI" x="1.27" y="6.35" drill="1.016" diameter="1.8796"/>
 <pad name="MISO" x="1.27" y="3.81" drill="1.016" diameter="1.8796"/>
@@ -7696,6 +7698,7 @@ High-power, low thermal resistance package.</description>
 <pad name="GND" x="11.43" y="6.35" drill="1.016" diameter="1.8796"/>
 <pad name="INT1" x="11.43" y="3.81" drill="1.016" diameter="1.8796"/>
 <pad name="INT2" x="11.43" y="1.27" drill="1.016" diameter="1.8796"/>
+<text x="13.97" y="3.81" size="1.016" layer="21" rot="R90">ADXL362</text>
 </package>
 </packages>
 <symbols>
@@ -8004,75 +8007,6 @@ D = Direct mounting &lt;p&gt;
 </deviceset>
 </devicesets>
 </library>
-<library name="diode">
-<description>&lt;b&gt;Diodes&lt;/b&gt;&lt;p&gt;
-Based on the following sources:
-&lt;ul&gt;
-&lt;li&gt;Motorola : www.onsemi.com
-&lt;li&gt;Fairchild : www.fairchildsemi.com
-&lt;li&gt;Philips : www.semiconductors.com
-&lt;li&gt;Vishay : www.vishay.de
-&lt;/ul&gt;
-&lt;author&gt;Created by librarian@cadsoft.de&lt;/author&gt;</description>
-<packages>
-<package name="SOT23">
-<description>&lt;B&gt;DIODE&lt;/B&gt;</description>
-<wire x1="1.4224" y1="0.6604" x2="1.4224" y2="-0.6604" width="0.1524" layer="51"/>
-<wire x1="1.4224" y1="-0.6604" x2="-1.4224" y2="-0.6604" width="0.1524" layer="51"/>
-<wire x1="-1.4224" y1="-0.6604" x2="-1.4224" y2="0.6604" width="0.1524" layer="51"/>
-<wire x1="-1.4224" y1="0.6604" x2="1.4224" y2="0.6604" width="0.1524" layer="51"/>
-<wire x1="-1.4224" y1="-0.1524" x2="-1.4224" y2="0.6604" width="0.1524" layer="21"/>
-<wire x1="-1.4224" y1="0.6604" x2="-0.8636" y2="0.6604" width="0.1524" layer="21"/>
-<wire x1="1.4224" y1="0.6604" x2="1.4224" y2="-0.1524" width="0.1524" layer="21"/>
-<wire x1="0.8636" y1="0.6604" x2="1.4224" y2="0.6604" width="0.1524" layer="21"/>
-<smd name="3" x="0" y="1.1" dx="1" dy="1.4" layer="1"/>
-<smd name="2" x="0.95" y="-1.1" dx="1" dy="1.4" layer="1"/>
-<smd name="1" x="-0.95" y="-1.1" dx="1" dy="1.4" layer="1"/>
-<text x="-1.905" y="1.905" size="1.27" layer="25">&gt;NAME</text>
-<text x="-1.905" y="-3.175" size="1.27" layer="27">&gt;VALUE</text>
-<rectangle x1="-0.2286" y1="0.7112" x2="0.2286" y2="1.2954" layer="51"/>
-<rectangle x1="0.7112" y1="-1.2954" x2="1.1684" y2="-0.7112" layer="51"/>
-<rectangle x1="-1.1684" y1="-1.2954" x2="-0.7112" y2="-0.7112" layer="51"/>
-</package>
-</packages>
-<symbols>
-<symbol name="SCHOTTKY">
-<wire x1="-1.27" y1="-1.27" x2="1.27" y2="0" width="0.254" layer="94"/>
-<wire x1="1.27" y1="0" x2="-1.27" y2="1.27" width="0.254" layer="94"/>
-<wire x1="1.905" y1="1.27" x2="1.27" y2="1.27" width="0.254" layer="94"/>
-<wire x1="1.27" y1="1.27" x2="1.27" y2="0" width="0.254" layer="94"/>
-<wire x1="-1.27" y1="1.27" x2="-1.27" y2="-1.27" width="0.254" layer="94"/>
-<wire x1="1.27" y1="0" x2="1.27" y2="-1.27" width="0.254" layer="94"/>
-<wire x1="1.905" y1="1.27" x2="1.905" y2="1.016" width="0.254" layer="94"/>
-<wire x1="1.27" y1="-1.27" x2="0.635" y2="-1.27" width="0.254" layer="94"/>
-<wire x1="0.635" y1="-1.016" x2="0.635" y2="-1.27" width="0.254" layer="94"/>
-<text x="-2.286" y="1.905" size="1.778" layer="95">&gt;NAME</text>
-<text x="-2.286" y="-3.429" size="1.778" layer="96">&gt;VALUE</text>
-<pin name="A" x="-2.54" y="0" visible="off" length="short" direction="pas"/>
-<pin name="C" x="2.54" y="0" visible="off" length="short" direction="pas" rot="R180"/>
-</symbol>
-</symbols>
-<devicesets>
-<deviceset name="BAT54" prefix="D">
-<description>&lt;b&gt;Schottky Diodes&lt;/b&gt;&lt;p&gt;
-Source: Fairchild .. BAT54.pdf</description>
-<gates>
-<gate name="G$1" symbol="SCHOTTKY" x="0" y="0"/>
-</gates>
-<devices>
-<device name="" package="SOT23">
-<connects>
-<connect gate="G$1" pin="A" pad="1"/>
-<connect gate="G$1" pin="C" pad="3"/>
-</connects>
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
-</devicesets>
-</library>
 <library name="SparkFun-PowerIC">
 <description>&lt;h3&gt;SparkFun Electronics' preferred foot prints&lt;/h3&gt;
 In this library you'll find drivers, regulators, and amplifiers.&lt;br&gt;&lt;br&gt;
@@ -8203,14 +8137,10 @@ Resettable Fuse. Spark Fun Electronics SKU : COM-08357</description>
 <part name="X1" library="con-subd" deviceset="HF15" device="V"/>
 <part name="JP3" library="pinhead" deviceset="PINHD-1X3" device=""/>
 <part name="C1" library="rcl" deviceset="C-US" device="C0603" value="0.1uF"/>
-<part name="D9" library="diode" deviceset="BAT54" device=""/>
-<part name="D13" library="diode" deviceset="BAT54" device=""/>
-<part name="D14" library="diode" deviceset="BAT54" device=""/>
 <part name="C2" library="rcl" deviceset="C-US" device="C0603" value="0.1uF"/>
 <part name="PTC2" library="SparkFun-PowerIC" deviceset="PTC" device="PTH"/>
 <part name="PTC1" library="SparkFun-PowerIC" deviceset="PTC" device="PTH"/>
 <part name="PTC3" library="SparkFun-PowerIC" deviceset="PTC" device="PTH"/>
-<part name="D1" library="diode" deviceset="BAT54" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -8221,7 +8151,7 @@ Resettable Fuse. Spark Fun Electronics SKU : COM-08357</description>
 <instance part="U$2" gate="G$1" x="5.08" y="185.42" smashed="yes" rot="R180">
 <attribute name="VALUE" x="17.78" y="167.64" size="1.778" layer="96" rot="R180"/>
 </instance>
-<instance part="U$5" gate="G$1" x="91.44" y="25.4" smashed="yes"/>
+<instance part="U$5" gate="G$1" x="86.36" y="27.94" smashed="yes"/>
 <instance part="U$6" gate="G$1" x="99.06" y="109.22" smashed="yes" rot="R180"/>
 <instance part="Q3" gate="G$1" x="60.96" y="228.6" smashed="yes" rot="R270">
 <attribute name="NAME" x="66.04" y="218.44" size="1.778" layer="95"/>
@@ -8240,16 +8170,12 @@ Resettable Fuse. Spark Fun Electronics SKU : COM-08357</description>
 <instance part="U$7" gate="G$1" x="106.68" y="139.7"/>
 <instance part="U$8" gate="G$1" x="-43.18" y="220.98"/>
 <instance part="X1" gate="G$1" x="142.24" y="190.5"/>
-<instance part="JP3" gate="A" x="167.64" y="0"/>
+<instance part="JP3" gate="A" x="162.56" y="0"/>
 <instance part="C1" gate="G$1" x="-53.34" y="182.88"/>
-<instance part="D9" gate="G$1" x="-25.4" y="182.88"/>
-<instance part="D13" gate="G$1" x="-30.48" y="177.8"/>
-<instance part="D14" gate="G$1" x="-27.94" y="167.64"/>
 <instance part="C2" gate="G$1" x="68.58" y="149.86"/>
 <instance part="PTC2" gate="G$1" x="-33.02" y="17.78" rot="R180"/>
 <instance part="PTC1" gate="G$1" x="-25.4" y="5.08" rot="R180"/>
 <instance part="PTC3" gate="G$1" x="-35.56" y="-5.08" rot="R180"/>
-<instance part="D1" gate="G$1" x="144.78" y="40.64" rot="R180"/>
 </instances>
 <busses>
 </busses>
@@ -8282,32 +8208,28 @@ Resettable Fuse. Spark Fun Electronics SKU : COM-08357</description>
 </segment>
 <segment>
 <pinref part="U$4" gate="G$1" pin="VCC"/>
-<wire x1="53.34" y1="180.34" x2="40.64" y2="180.34" width="0.1524" layer="91"/>
+<wire x1="53.34" y1="180.34" x2="43.18" y2="180.34" width="0.1524" layer="91"/>
 <label x="43.18" y="180.34" size="1.778" layer="95"/>
 </segment>
 <segment>
 <pinref part="U$7" gate="G$1" pin="VDD"/>
 <wire x1="101.6" y1="157.48" x2="83.82" y2="157.48" width="0.1524" layer="91"/>
-<label x="86.36" y="154.94" size="1.778" layer="95"/>
+<label x="86.36" y="157.48" size="1.778" layer="95"/>
 </segment>
 <segment>
 <pinref part="U$7" gate="G$1" pin="VIO"/>
 <wire x1="101.6" y1="152.4" x2="83.82" y2="152.4" width="0.1524" layer="91"/>
-<label x="86.36" y="149.86" size="1.778" layer="95"/>
+<label x="86.36" y="152.4" size="1.778" layer="95"/>
 </segment>
 <segment>
 <pinref part="JP3" gate="A" pin="3"/>
-<wire x1="165.1" y1="-2.54" x2="152.4" y2="-2.54" width="0.1524" layer="91"/>
-<label x="152.4" y="-2.54" size="1.778" layer="95"/>
+<wire x1="160.02" y1="-2.54" x2="147.32" y2="-2.54" width="0.1524" layer="91"/>
+<label x="147.32" y="-2.54" size="1.778" layer="95"/>
 </segment>
 <segment>
 <pinref part="C1" gate="G$1" pin="1"/>
 <wire x1="-53.34" y1="185.42" x2="-53.34" y2="190.5" width="0.1524" layer="91"/>
 <label x="-53.34" y="187.96" size="1.778" layer="95"/>
-</segment>
-<segment>
-<wire x1="124.46" y1="198.12" x2="137.16" y2="198.12" width="0.1524" layer="91"/>
-<label x="124.46" y="198.12" size="1.778" layer="95"/>
 </segment>
 <segment>
 <pinref part="C2" gate="G$1" pin="1"/>
@@ -8323,6 +8245,11 @@ Resettable Fuse. Spark Fun Electronics SKU : COM-08357</description>
 <pinref part="U$8" gate="G$1" pin="VCC"/>
 <wire x1="-48.26" y1="246.38" x2="-66.04" y2="246.38" width="0.1524" layer="91"/>
 <label x="-63.5" y="246.38" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="X1" gate="G$1" pin="6"/>
+<wire x1="134.62" y1="198.12" x2="124.46" y2="198.12" width="0.1524" layer="91"/>
+<label x="124.46" y="198.12" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="5V" class="0">
@@ -8343,8 +8270,8 @@ Resettable Fuse. Spark Fun Electronics SKU : COM-08357</description>
 </segment>
 <segment>
 <pinref part="JP3" gate="A" pin="1"/>
-<wire x1="165.1" y1="2.54" x2="152.4" y2="2.54" width="0.1524" layer="91"/>
-<label x="152.4" y="2.54" size="1.778" layer="95"/>
+<wire x1="160.02" y1="2.54" x2="147.32" y2="2.54" width="0.1524" layer="91"/>
+<label x="147.32" y="2.54" size="1.778" layer="95"/>
 </segment>
 <segment>
 <pinref part="X1" gate="G$1" pin="1"/>
@@ -8404,9 +8331,9 @@ Resettable Fuse. Spark Fun Electronics SKU : COM-08357</description>
 <label x="-7.62" y="68.58" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="D13" gate="G$1" pin="A"/>
-<wire x1="-33.02" y1="177.8" x2="-38.1" y2="177.8" width="0.1524" layer="91"/>
-<label x="-38.1" y="177.8" size="1.778" layer="95"/>
+<label x="-12.7" y="177.8" size="1.778" layer="95" rot="R180"/>
+<pinref part="U$2" gate="G$1" pin="DI"/>
+<wire x1="-12.7" y1="177.8" x2="-7.62" y2="177.8" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="U$8" gate="G$1" pin="MOSI"/>
@@ -8432,20 +8359,6 @@ Resettable Fuse. Spark Fun Electronics SKU : COM-08357</description>
 <label x="190.5" y="83.82" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="TX1" class="0">
-<segment>
-<pinref part="U$1" gate="G$1" pin="TX1"/>
-<wire x1="-7.62" y1="45.72" x2="-2.54" y2="45.72" width="0.1524" layer="91"/>
-<label x="-7.62" y="45.72" size="1.778" layer="95"/>
-</segment>
-</net>
-<net name="RX1" class="0">
-<segment>
-<pinref part="U$1" gate="G$1" pin="RX1"/>
-<wire x1="-2.54" y1="43.18" x2="-7.62" y2="43.18" width="0.1524" layer="91"/>
-<label x="-7.62" y="43.18" size="1.778" layer="95"/>
-</segment>
-</net>
 <net name="SCLK" class="0">
 <segment>
 <pinref part="U$1" gate="G$1" pin="SCK_ICSP"/>
@@ -8453,9 +8366,9 @@ Resettable Fuse. Spark Fun Electronics SKU : COM-08357</description>
 <label x="-7.62" y="73.66" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="D9" gate="G$1" pin="A"/>
-<wire x1="-27.94" y1="182.88" x2="-35.56" y2="182.88" width="0.1524" layer="91"/>
-<label x="-38.1" y="182.88" size="1.778" layer="95"/>
+<label x="-12.7" y="182.88" size="1.778" layer="95" rot="R180"/>
+<pinref part="U$2" gate="G$1" pin="CLK"/>
+<wire x1="-12.7" y1="182.88" x2="-7.62" y2="182.88" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="U$8" gate="G$1" pin="SCK"/>
@@ -8484,84 +8397,16 @@ Resettable Fuse. Spark Fun Electronics SKU : COM-08357</description>
 <label x="132.08" y="68.58" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="D48" class="0">
+<net name="D47" class="0">
 <segment>
-<pinref part="U$1" gate="G$1" pin="48"/>
-<wire x1="68.58" y1="15.24" x2="86.36" y2="15.24" width="0.1524" layer="91"/>
-<label x="68.58" y="15.24" size="1.778" layer="95"/>
+<pinref part="U$1" gate="G$1" pin="47"/>
+<wire x1="68.58" y1="17.78" x2="81.28" y2="17.78" width="0.1524" layer="91"/>
+<label x="68.58" y="17.78" size="1.778" layer="95"/>
 </segment>
 <segment>
 <pinref part="X1" gate="G$1" pin="15"/>
 <wire x1="149.86" y1="180.34" x2="162.56" y2="180.34" width="0.1524" layer="91"/>
 <label x="149.86" y="180.34" size="1.778" layer="95"/>
-</segment>
-</net>
-<net name="D47" class="0">
-<segment>
-<pinref part="U$1" gate="G$1" pin="47"/>
-<wire x1="68.58" y1="17.78" x2="86.36" y2="17.78" width="0.1524" layer="91"/>
-<label x="68.58" y="17.78" size="1.778" layer="95"/>
-</segment>
-<segment>
-<pinref part="X1" gate="G$1" pin="14"/>
-<wire x1="149.86" y1="185.42" x2="162.56" y2="185.42" width="0.1524" layer="91"/>
-<label x="149.86" y="185.42" size="1.778" layer="95"/>
-</segment>
-</net>
-<net name="D38" class="0">
-<segment>
-<pinref part="U$5" gate="G$1" pin="PPM8"/>
-<pinref part="U$1" gate="G$1" pin="38"/>
-<wire x1="86.36" y1="40.64" x2="68.58" y2="40.64" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="D39" class="0">
-<segment>
-<pinref part="U$5" gate="G$1" pin="PPM7"/>
-<pinref part="U$1" gate="G$1" pin="39"/>
-<wire x1="86.36" y1="38.1" x2="68.58" y2="38.1" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="D40" class="0">
-<segment>
-<pinref part="U$5" gate="G$1" pin="PPM6"/>
-<pinref part="U$1" gate="G$1" pin="40"/>
-<wire x1="86.36" y1="35.56" x2="68.58" y2="35.56" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="D41" class="0">
-<segment>
-<pinref part="U$1" gate="G$1" pin="41"/>
-<pinref part="U$5" gate="G$1" pin="PPM5"/>
-<wire x1="68.58" y1="33.02" x2="86.36" y2="33.02" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="D42" class="0">
-<segment>
-<pinref part="U$5" gate="G$1" pin="PPM4"/>
-<pinref part="U$1" gate="G$1" pin="42"/>
-<wire x1="86.36" y1="30.48" x2="68.58" y2="30.48" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="D43" class="0">
-<segment>
-<pinref part="U$1" gate="G$1" pin="43"/>
-<pinref part="U$5" gate="G$1" pin="PPM3"/>
-<wire x1="68.58" y1="27.94" x2="86.36" y2="27.94" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="D44" class="0">
-<segment>
-<pinref part="U$5" gate="G$1" pin="PPM2"/>
-<pinref part="U$1" gate="G$1" pin="44"/>
-<wire x1="86.36" y1="25.4" x2="68.58" y2="25.4" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="D45" class="0">
-<segment>
-<pinref part="U$1" gate="G$1" pin="45"/>
-<pinref part="U$5" gate="G$1" pin="PPM1"/>
-<wire x1="68.58" y1="22.86" x2="86.36" y2="22.86" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="SCL1" class="0">
@@ -8577,13 +8422,13 @@ Resettable Fuse. Spark Fun Electronics SKU : COM-08357</description>
 </segment>
 <segment>
 <pinref part="U$4" gate="G$1" pin="SCL"/>
-<wire x1="93.98" y1="180.34" x2="78.74" y2="180.34" width="0.1524" layer="91"/>
-<label x="86.36" y="180.34" size="1.778" layer="95"/>
+<wire x1="91.44" y1="180.34" x2="78.74" y2="180.34" width="0.1524" layer="91"/>
+<label x="83.82" y="180.34" size="1.778" layer="95"/>
 </segment>
 <segment>
 <pinref part="U$7" gate="G$1" pin="SCL"/>
 <wire x1="134.62" y1="147.32" x2="149.86" y2="147.32" width="0.1524" layer="91"/>
-<label x="144.78" y="147.32" size="1.778" layer="95"/>
+<label x="142.24" y="147.32" size="1.778" layer="95"/>
 </segment>
 <segment>
 <pinref part="X1" gate="G$1" pin="12"/>
@@ -8610,7 +8455,7 @@ Resettable Fuse. Spark Fun Electronics SKU : COM-08357</description>
 <segment>
 <pinref part="U$7" gate="G$1" pin="SDA"/>
 <wire x1="134.62" y1="142.24" x2="147.32" y2="142.24" width="0.1524" layer="91"/>
-<label x="144.78" y="142.24" size="1.778" layer="95"/>
+<label x="142.24" y="142.24" size="1.778" layer="95"/>
 </segment>
 <segment>
 <pinref part="X1" gate="G$1" pin="11"/>
@@ -8658,29 +8503,29 @@ Resettable Fuse. Spark Fun Electronics SKU : COM-08357</description>
 <pinref part="U$5" gate="G$1" pin="GND3"/>
 <pinref part="U$5" gate="G$1" pin="GND2"/>
 <pinref part="U$5" gate="G$1" pin="GND1"/>
-<wire x1="99.06" y1="7.62" x2="99.06" y2="5.08" width="0.1524" layer="91"/>
+<wire x1="93.98" y1="10.16" x2="93.98" y2="5.08" width="0.1524" layer="91"/>
+<wire x1="93.98" y1="5.08" x2="96.52" y2="5.08" width="0.1524" layer="91"/>
+<wire x1="96.52" y1="5.08" x2="96.52" y2="10.16" width="0.1524" layer="91"/>
+<junction x="96.52" y="5.08"/>
+<wire x1="96.52" y1="5.08" x2="99.06" y2="5.08" width="0.1524" layer="91"/>
+<wire x1="99.06" y1="5.08" x2="99.06" y2="10.16" width="0.1524" layer="91"/>
+<junction x="99.06" y="5.08"/>
 <wire x1="99.06" y1="5.08" x2="101.6" y2="5.08" width="0.1524" layer="91"/>
-<wire x1="101.6" y1="5.08" x2="101.6" y2="7.62" width="0.1524" layer="91"/>
+<wire x1="101.6" y1="5.08" x2="101.6" y2="10.16" width="0.1524" layer="91"/>
 <junction x="101.6" y="5.08"/>
 <wire x1="101.6" y1="5.08" x2="104.14" y2="5.08" width="0.1524" layer="91"/>
-<wire x1="104.14" y1="5.08" x2="104.14" y2="7.62" width="0.1524" layer="91"/>
+<wire x1="104.14" y1="5.08" x2="104.14" y2="10.16" width="0.1524" layer="91"/>
 <junction x="104.14" y="5.08"/>
 <wire x1="104.14" y1="5.08" x2="106.68" y2="5.08" width="0.1524" layer="91"/>
-<wire x1="106.68" y1="5.08" x2="106.68" y2="7.62" width="0.1524" layer="91"/>
+<wire x1="106.68" y1="5.08" x2="106.68" y2="10.16" width="0.1524" layer="91"/>
 <junction x="106.68" y="5.08"/>
 <wire x1="106.68" y1="5.08" x2="109.22" y2="5.08" width="0.1524" layer="91"/>
-<wire x1="109.22" y1="5.08" x2="109.22" y2="7.62" width="0.1524" layer="91"/>
+<wire x1="109.22" y1="5.08" x2="109.22" y2="10.16" width="0.1524" layer="91"/>
 <junction x="109.22" y="5.08"/>
+<wire x1="109.22" y1="5.08" x2="109.22" y2="0" width="0.1524" layer="91"/>
 <wire x1="109.22" y1="5.08" x2="111.76" y2="5.08" width="0.1524" layer="91"/>
-<wire x1="111.76" y1="5.08" x2="111.76" y2="7.62" width="0.1524" layer="91"/>
-<junction x="111.76" y="5.08"/>
-<wire x1="111.76" y1="5.08" x2="114.3" y2="5.08" width="0.1524" layer="91"/>
-<wire x1="114.3" y1="5.08" x2="114.3" y2="7.62" width="0.1524" layer="91"/>
-<junction x="114.3" y="5.08"/>
-<wire x1="114.3" y1="5.08" x2="114.3" y2="0" width="0.1524" layer="91"/>
-<wire x1="114.3" y1="5.08" x2="116.84" y2="5.08" width="0.1524" layer="91"/>
-<wire x1="116.84" y1="5.08" x2="116.84" y2="7.62" width="0.1524" layer="91"/>
-<label x="111.76" y="2.54" size="1.778" layer="95" rot="R270"/>
+<wire x1="111.76" y1="5.08" x2="111.76" y2="10.16" width="0.1524" layer="91"/>
+<label x="106.68" y="2.54" size="1.778" layer="95" rot="R270"/>
 </segment>
 <segment>
 <pinref part="U$1" gate="G$1" pin="GND_2"/>
@@ -8704,8 +8549,8 @@ Resettable Fuse. Spark Fun Electronics SKU : COM-08357</description>
 </segment>
 <segment>
 <pinref part="U$4" gate="G$1" pin="GND"/>
-<wire x1="53.34" y1="185.42" x2="40.64" y2="185.42" width="0.1524" layer="91"/>
-<label x="40.64" y="185.42" size="1.778" layer="95"/>
+<wire x1="53.34" y1="185.42" x2="43.18" y2="185.42" width="0.1524" layer="91"/>
+<label x="43.18" y="185.42" size="1.778" layer="95"/>
 </segment>
 <segment>
 <pinref part="U$7" gate="G$1" pin="GND"/>
@@ -8736,13 +8581,42 @@ Resettable Fuse. Spark Fun Electronics SKU : COM-08357</description>
 <net name="VSENSE" class="0">
 <segment>
 <pinref part="JP3" gate="A" pin="2"/>
-<wire x1="165.1" y1="0" x2="152.4" y2="0" width="0.1524" layer="91"/>
-<label x="152.4" y="0" size="1.778" layer="95"/>
+<wire x1="160.02" y1="0" x2="147.32" y2="0" width="0.1524" layer="91"/>
+<label x="147.32" y="0" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="D1" gate="G$1" pin="A"/>
-<wire x1="162.56" y1="40.64" x2="147.32" y2="40.64" width="0.1524" layer="91"/>
-<label x="152.4" y="40.64" size="1.778" layer="95"/>
+<wire x1="137.16" y1="43.18" x2="127" y2="43.18" width="0.1524" layer="91"/>
+<label x="129.54" y="43.18" size="1.778" layer="95"/>
+<pinref part="U$5" gate="G$1" pin="33V4"/>
+<pinref part="U$5" gate="G$1" pin="33V6"/>
+<pinref part="U$5" gate="G$1" pin="33V8"/>
+<wire x1="127" y1="25.4" x2="121.92" y2="25.4" width="0.1524" layer="91"/>
+<wire x1="127" y1="27.94" x2="127" y2="25.4" width="0.1524" layer="91"/>
+<pinref part="U$5" gate="G$1" pin="33V7"/>
+<wire x1="121.92" y1="27.94" x2="127" y2="27.94" width="0.1524" layer="91"/>
+<junction x="127" y="27.94"/>
+<wire x1="127" y1="30.48" x2="127" y2="27.94" width="0.1524" layer="91"/>
+<wire x1="127" y1="30.48" x2="121.92" y2="30.48" width="0.1524" layer="91"/>
+<junction x="127" y="30.48"/>
+<wire x1="127" y1="33.02" x2="127" y2="30.48" width="0.1524" layer="91"/>
+<pinref part="U$5" gate="G$1" pin="33V5"/>
+<wire x1="121.92" y1="33.02" x2="127" y2="33.02" width="0.1524" layer="91"/>
+<junction x="127" y="33.02"/>
+<wire x1="127" y1="35.56" x2="127" y2="33.02" width="0.1524" layer="91"/>
+<wire x1="127" y1="35.56" x2="121.92" y2="35.56" width="0.1524" layer="91"/>
+<junction x="127" y="35.56"/>
+<wire x1="127" y1="38.1" x2="127" y2="35.56" width="0.1524" layer="91"/>
+<pinref part="U$5" gate="G$1" pin="33V3"/>
+<wire x1="121.92" y1="38.1" x2="127" y2="38.1" width="0.1524" layer="91"/>
+<junction x="127" y="38.1"/>
+<wire x1="127" y1="40.64" x2="127" y2="38.1" width="0.1524" layer="91"/>
+<pinref part="U$5" gate="G$1" pin="33V2"/>
+<wire x1="121.92" y1="40.64" x2="127" y2="40.64" width="0.1524" layer="91"/>
+<junction x="127" y="40.64"/>
+<pinref part="U$5" gate="G$1" pin="33V1"/>
+<wire x1="121.92" y1="43.18" x2="127" y2="43.18" width="0.1524" layer="91"/>
+<wire x1="127" y1="43.18" x2="127" y2="40.64" width="0.1524" layer="91"/>
+<junction x="127" y="43.18"/>
 </segment>
 </net>
 <net name="TX3H" class="0">
@@ -8792,7 +8666,7 @@ Resettable Fuse. Spark Fun Electronics SKU : COM-08357</description>
 <net name="TEMPBUS" class="0">
 <segment>
 <pinref part="U$1" gate="G$1" pin="49"/>
-<wire x1="68.58" y1="12.7" x2="86.36" y2="12.7" width="0.1524" layer="91"/>
+<wire x1="68.58" y1="12.7" x2="81.28" y2="12.7" width="0.1524" layer="91"/>
 <label x="68.58" y="12.7" size="1.778" layer="95"/>
 </segment>
 <segment>
@@ -8801,44 +8675,15 @@ Resettable Fuse. Spark Fun Electronics SKU : COM-08357</description>
 <label x="124.46" y="177.8" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="N$19" class="0">
-<segment>
-<pinref part="U$7" gate="G$1" pin="INT"/>
-<wire x1="83.82" y1="142.24" x2="101.6" y2="142.24" width="0.1524" layer="91"/>
-<label x="86.36" y="139.7" size="1.778" layer="95"/>
-</segment>
-</net>
-<net name="N$17" class="0">
-<segment>
-<pinref part="D9" gate="G$1" pin="C"/>
-<pinref part="U$2" gate="G$1" pin="CLK"/>
-<wire x1="-22.86" y1="182.88" x2="-7.62" y2="182.88" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$18" class="0">
-<segment>
-<pinref part="D13" gate="G$1" pin="C"/>
-<pinref part="U$2" gate="G$1" pin="DI"/>
-<wire x1="-27.94" y1="177.8" x2="-7.62" y2="177.8" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$16" class="0">
-<segment>
-<pinref part="U$2" gate="G$1" pin="/CS"/>
-<wire x1="-7.62" y1="175.26" x2="-17.78" y2="175.26" width="0.1524" layer="91"/>
-<wire x1="-17.78" y1="175.26" x2="-17.78" y2="167.64" width="0.1524" layer="91"/>
-<pinref part="D14" gate="G$1" pin="C"/>
-<wire x1="-17.78" y1="167.64" x2="-25.4" y2="167.64" width="0.1524" layer="91"/>
-</segment>
-</net>
 <net name="ACCELCS" class="0">
 <segment>
 <pinref part="U$8" gate="G$1" pin="CS"/>
 <wire x1="-7.62" y1="223.52" x2="7.62" y2="223.52" width="0.1524" layer="91"/>
+<label x="0" y="223.52" size="1.778" layer="95"/>
 </segment>
 <segment>
 <pinref part="U$1" gate="G$1" pin="50"/>
-<wire x1="68.58" y1="10.16" x2="86.36" y2="10.16" width="0.1524" layer="91"/>
+<wire x1="68.58" y1="10.16" x2="81.28" y2="10.16" width="0.1524" layer="91"/>
 <label x="68.58" y="10.16" size="1.778" layer="95"/>
 </segment>
 </net>
@@ -8848,23 +8693,30 @@ Resettable Fuse. Spark Fun Electronics SKU : COM-08357</description>
 <wire x1="124.46" y1="185.42" x2="134.62" y2="185.42" width="0.1524" layer="91"/>
 <label x="124.46" y="185.42" size="1.778" layer="95"/>
 </segment>
+<segment>
+<pinref part="U$1" gate="G$1" pin="48"/>
+<wire x1="68.58" y1="15.24" x2="81.28" y2="15.24" width="0.1524" layer="91"/>
+<label x="68.58" y="15.24" size="1.778" layer="95"/>
+</segment>
 </net>
-<net name="N$10" class="0">
+<net name="VINNF" class="0">
 <segment>
 <pinref part="U$1" gate="G$1" pin="VIN"/>
 <wire x1="-2.54" y1="2.54" x2="-12.7" y2="2.54" width="0.1524" layer="91"/>
 <wire x1="-12.7" y1="2.54" x2="-12.7" y2="-5.08" width="0.1524" layer="91"/>
 <pinref part="PTC3" gate="G$1" pin="1"/>
 <wire x1="-12.7" y1="-5.08" x2="-30.48" y2="-5.08" width="0.1524" layer="91"/>
+<label x="-22.86" y="-7.62" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="N$12" class="0">
+<net name="3V3NF" class="0">
 <segment>
 <pinref part="U$1" gate="G$1" pin="3V3"/>
 <wire x1="-2.54" y1="12.7" x2="-17.78" y2="12.7" width="0.1524" layer="91"/>
 <wire x1="-17.78" y1="12.7" x2="-17.78" y2="17.78" width="0.1524" layer="91"/>
 <pinref part="PTC2" gate="G$1" pin="1"/>
 <wire x1="-17.78" y1="17.78" x2="-27.94" y2="17.78" width="0.1524" layer="91"/>
+<label x="-15.24" y="12.7" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="VIN" class="0">
@@ -8901,14 +8753,14 @@ Resettable Fuse. Spark Fun Electronics SKU : COM-08357</description>
 </net>
 <net name="SDCARDCS" class="0">
 <segment>
-<pinref part="D14" gate="G$1" pin="A"/>
-<wire x1="-30.48" y1="167.64" x2="-33.02" y2="167.64" width="0.1524" layer="91"/>
-<label x="-38.1" y="167.64" size="1.778" layer="95"/>
+<pinref part="U$1" gate="G$1" pin="51"/>
+<wire x1="81.28" y1="7.62" x2="68.58" y2="7.62" width="0.1524" layer="91"/>
+<label x="68.58" y="7.62" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="U$1" gate="G$1" pin="51"/>
-<wire x1="86.36" y1="7.62" x2="68.58" y2="7.62" width="0.1524" layer="91"/>
-<label x="68.58" y="7.62" size="1.778" layer="95"/>
+<pinref part="U$2" gate="G$1" pin="/CS"/>
+<wire x1="-7.62" y1="175.26" x2="-12.7" y2="175.26" width="0.1524" layer="91"/>
+<label x="-12.7" y="175.26" size="1.778" layer="95" rot="R180"/>
 </segment>
 </net>
 <net name="RX3" class="0">
@@ -8939,8 +8791,32 @@ Resettable Fuse. Spark Fun Electronics SKU : COM-08357</description>
 <net name="D46" class="0">
 <segment>
 <pinref part="U$1" gate="G$1" pin="46"/>
-<wire x1="68.58" y1="20.32" x2="86.36" y2="20.32" width="0.1524" layer="91"/>
+<wire x1="68.58" y1="20.32" x2="81.28" y2="20.32" width="0.1524" layer="91"/>
 <label x="68.58" y="20.32" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="X1" gate="G$1" pin="14"/>
+<wire x1="149.86" y1="185.42" x2="162.56" y2="185.42" width="0.1524" layer="91"/>
+<label x="149.86" y="185.42" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="SDDETECT" class="0">
+<segment>
+<pinref part="U$2" gate="G$1" pin="CD(1)"/>
+<wire x1="-7.62" y1="195.58" x2="-12.7" y2="195.58" width="0.1524" layer="91"/>
+<label x="-12.7" y="195.58" size="1.778" layer="95" rot="R180"/>
+</segment>
+<segment>
+<pinref part="U$1" gate="G$1" pin="52"/>
+<wire x1="68.58" y1="5.08" x2="81.28" y2="5.08" width="0.1524" layer="91"/>
+<label x="68.58" y="5.08" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="D45" class="0">
+<segment>
+<pinref part="U$1" gate="G$1" pin="45"/>
+<wire x1="81.28" y1="22.86" x2="68.58" y2="22.86" width="0.1524" layer="91"/>
+<label x="68.58" y="22.86" size="1.778" layer="95"/>
 </segment>
 <segment>
 <pinref part="X1" gate="G$1" pin="13"/>
@@ -8948,57 +8824,78 @@ Resettable Fuse. Spark Fun Electronics SKU : COM-08357</description>
 <label x="149.86" y="190.5" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="VSENSED" class="0">
+<net name="D37" class="0">
 <segment>
-<pinref part="U$5" gate="G$1" pin="33V4"/>
-<pinref part="U$5" gate="G$1" pin="33V6"/>
-<pinref part="U$5" gate="G$1" pin="33V8"/>
-<wire x1="129.54" y1="22.86" x2="127" y2="22.86" width="0.1524" layer="91"/>
-<wire x1="129.54" y1="25.4" x2="129.54" y2="22.86" width="0.1524" layer="91"/>
-<pinref part="U$5" gate="G$1" pin="33V7"/>
-<wire x1="127" y1="25.4" x2="129.54" y2="25.4" width="0.1524" layer="91"/>
-<junction x="129.54" y="25.4"/>
-<wire x1="129.54" y1="27.94" x2="129.54" y2="25.4" width="0.1524" layer="91"/>
-<wire x1="129.54" y1="27.94" x2="127" y2="27.94" width="0.1524" layer="91"/>
-<junction x="129.54" y="27.94"/>
-<wire x1="129.54" y1="30.48" x2="129.54" y2="27.94" width="0.1524" layer="91"/>
-<pinref part="U$5" gate="G$1" pin="33V5"/>
-<wire x1="127" y1="30.48" x2="129.54" y2="30.48" width="0.1524" layer="91"/>
-<junction x="129.54" y="30.48"/>
-<wire x1="129.54" y1="33.02" x2="129.54" y2="30.48" width="0.1524" layer="91"/>
-<wire x1="129.54" y1="33.02" x2="127" y2="33.02" width="0.1524" layer="91"/>
-<junction x="129.54" y="33.02"/>
-<wire x1="129.54" y1="35.56" x2="129.54" y2="33.02" width="0.1524" layer="91"/>
-<pinref part="U$5" gate="G$1" pin="33V3"/>
-<wire x1="127" y1="35.56" x2="129.54" y2="35.56" width="0.1524" layer="91"/>
-<junction x="129.54" y="35.56"/>
-<wire x1="129.54" y1="38.1" x2="129.54" y2="35.56" width="0.1524" layer="91"/>
-<pinref part="U$5" gate="G$1" pin="33V2"/>
-<wire x1="127" y1="38.1" x2="129.54" y2="38.1" width="0.1524" layer="91"/>
-<junction x="129.54" y="38.1"/>
-<pinref part="U$5" gate="G$1" pin="33V1"/>
-<wire x1="127" y1="40.64" x2="129.54" y2="40.64" width="0.1524" layer="91"/>
-<wire x1="129.54" y1="40.64" x2="129.54" y2="38.1" width="0.1524" layer="91"/>
-<pinref part="D1" gate="G$1" pin="C"/>
-<wire x1="142.24" y1="40.64" x2="129.54" y2="40.64" width="0.1524" layer="91"/>
-<junction x="129.54" y="40.64"/>
+<pinref part="U$5" gate="G$1" pin="PPM8"/>
+<pinref part="U$1" gate="G$1" pin="37"/>
+<wire x1="81.28" y1="43.18" x2="68.58" y2="43.18" width="0.1524" layer="91"/>
+<label x="68.58" y="43.18" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="SDDETECT" class="0">
+<net name="D38" class="0">
 <segment>
-<pinref part="U$2" gate="G$1" pin="CD(1)"/>
-<wire x1="-7.62" y1="195.58" x2="-22.86" y2="195.58" width="0.1524" layer="91"/>
-<label x="-20.32" y="195.58" size="1.778" layer="95"/>
+<pinref part="U$5" gate="G$1" pin="PPM7"/>
+<pinref part="U$1" gate="G$1" pin="38"/>
+<wire x1="81.28" y1="40.64" x2="68.58" y2="40.64" width="0.1524" layer="91"/>
+<label x="68.58" y="40.64" size="1.778" layer="95"/>
 </segment>
+</net>
+<net name="D39" class="0">
 <segment>
-<pinref part="U$1" gate="G$1" pin="52"/>
-<wire x1="68.58" y1="5.08" x2="86.36" y2="5.08" width="0.1524" layer="91"/>
-<label x="68.58" y="5.08" size="1.778" layer="95"/>
+<pinref part="U$5" gate="G$1" pin="PPM6"/>
+<pinref part="U$1" gate="G$1" pin="39"/>
+<wire x1="81.28" y1="38.1" x2="68.58" y2="38.1" width="0.1524" layer="91"/>
+<label x="68.58" y="38.1" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="D40" class="0">
+<segment>
+<pinref part="U$1" gate="G$1" pin="40"/>
+<pinref part="U$5" gate="G$1" pin="PPM5"/>
+<wire x1="68.58" y1="35.56" x2="81.28" y2="35.56" width="0.1524" layer="91"/>
+<label x="68.58" y="35.56" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="D41" class="0">
+<segment>
+<pinref part="U$5" gate="G$1" pin="PPM4"/>
+<pinref part="U$1" gate="G$1" pin="41"/>
+<wire x1="81.28" y1="33.02" x2="68.58" y2="33.02" width="0.1524" layer="91"/>
+<label x="68.58" y="33.02" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="D42" class="0">
+<segment>
+<pinref part="U$5" gate="G$1" pin="PPM3"/>
+<pinref part="U$1" gate="G$1" pin="42"/>
+<wire x1="81.28" y1="30.48" x2="68.58" y2="30.48" width="0.1524" layer="91"/>
+<label x="68.58" y="30.48" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="D43" class="0">
+<segment>
+<pinref part="U$1" gate="G$1" pin="43"/>
+<pinref part="U$5" gate="G$1" pin="PPM2"/>
+<wire x1="68.58" y1="27.94" x2="81.28" y2="27.94" width="0.1524" layer="91"/>
+<label x="68.58" y="27.94" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="D44" class="0">
+<segment>
+<pinref part="U$5" gate="G$1" pin="PPM1"/>
+<pinref part="U$1" gate="G$1" pin="44"/>
+<wire x1="81.28" y1="25.4" x2="68.58" y2="25.4" width="0.1524" layer="91"/>
+<label x="68.58" y="25.4" size="1.778" layer="95"/>
 </segment>
 </net>
 </nets>
 </sheet>
 </sheets>
+<errors>
+<approved hash="106,1,-43.18,-5.08,VIN,,,,,"/>
+<approved hash="115,1,142.24,190.658,X1,,,,,"/>
+<approved hash="115,1,160.257,1.40123,JP3,,,,,"/>
+</errors>
 </schematic>
 </drawing>
 </eagle>
