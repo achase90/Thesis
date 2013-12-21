@@ -10,7 +10,46 @@ Some basic assumptions will apply throughout the modeling of dynamics in this pa
 Note that a stationary atmosphere is not assumed. The fixed mass assumption is consistent with the electric aircraft used to test the system. At the altitude and speed at which the vehicles will be tested, Coriolis effects can be ignored\cite{klein2006aircraft}. The zero-thrust assumption is in place to minimize drag error. Any error in a measured state will decrease the accuracy of the drag measurement, and the accuracy of a given drag measurement can be no better than the worst state measurement error. In-flight thrust is difficult to measure accurately, so a folding propeller will be used, and the motor will be turned off during data acquisition. This will allow the propeller to fold back, eliminating most of the wind-mill drag associated with a stalled propeller. 
 
 \section{Reference Frames}
-The reference frames used in this paper will follow standard convention\cite{klein2006aircraft}, but will be repeated for clarity. The NED frame is a vehicle carried frame, with the $+\hat{i}$ axis pointing due North, the $+\hat{j}$ axis pointing due East, and the $+\hat{k}$ axis pointing toward the center of the earth. The body axis system, defined by the body-mounted accelerometer, is a right handed coordinate system, with the $+\hat{i}$ axis pointing out the nose of the aircraft, the $+\hat{j}$ axis pointing out the right wing, and the $+\hat{k}$ axis pointing out the bottom of the vehicle. The wind axes are a vehicle-carried coordinate system, with the origin at the same location as the body reference frame. The $\hat{i}$ axis of the wind reference frame points in the direction of the free-stream velocity. The $\hat{k}$ direction lies in the x-z plane of the body reference frame. The $\hat{j}$ direction is then defined to be out the right side of the vehicle, in order to follow the right hand rule. 
+For this thesis, the reference frames used will follow standard convention,\cite{klein2006aircraft} which will be repeated here for clarity.
+
+\subsection*{North-East-Down (NED) Axes ($x_{ned}$, $y_{ned}$, $z_{ned}$)}
+The NED axis system defines a local tangent plane on the Earth's surface, with the origin coinciding with the vehicle's center of gravity. The $\hat{i}$ vector points due north, the $\hat{j}$ vector points due east, and the $\hat{k}$ vector points towards the center of the earth, in accordance with the right-hand rule. This coordinate system is vehicle carried, meaning the origin is fixed to the aircraft, but the axis directions are independent of vehicle orientation.
+
+\begin{figure}[h!]
+\label{nedAxesFig}
+  \centering
+    \includegraphics[width=0.4\textwidth]{figures/nedAxes.eps}
+      \caption{NED Frame of Reference\cite{nedAxes}} 
+\end{figure}
+
+\subsection*{Body Axes ($x_b$, $y_b$, $z_b$)}
+The body axis system has its origin at the vehicle's center of gravity, with the $\hat{i}$ direction pointing out the vehicle's nose, the $\hat{j}$ direction pointing out the right wing, and the $\hat{k}$ direction pointing out the belly of the aircraft, in accordance with the right-hand rule. This coordinate frame is fixed to the body, meaning the aircraft's spatial orientation does not change the direction of the axes.
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=.9\linewidth]{figures/bodyAxes.eps}
+  \captionof{figure}{Body Axes Definition\cite{hawkerThreeView}}
+  \label{bodyAxesFig}
+\end{figure}
+
+\subsection*{Stability Axes ($x_s$, $y_s$, $z_s$)}
+The stability axes are defined with its origin coinciding with the center of gravity of the vehicle. This axis system has essentially the same directions as the body axes, except rotated about the body axis $\hat{j}$ through an initial angle-of-attack, $\alpha_{0}$. This inital angle-of-attack is defined at the beginning of a test maneuver and is then set for the remainder of the test, making it a body-fixed coordinate system. This system assumes no initial sideslip angle \cite{roskam2001airplane}. In Figure \ref{stabilityAxesFig}, only the $\vec{i}$ stability vector is shown, for clarity.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=.4\linewidth]{figures/pitchStability.eps}
+  \captionof{figure}{Stability Axes Definition}
+  \label{stabilityAxesFig}
+\end{figure}
+\subsection*{Wind Axes ($x_w$, $y_w$, $z_w$)}
+The wind axes are, again, a vehicle-carried coordinate system, meaning the origin of the wind axis also coincides with the center of gravity of the vehicle. However, the wind axes are not a body-fixed coordinate frame. The $\hat{i}$ direction points into the oncoming air, as seen from the vehicle. The $\hat{k}$ direction lies in the x-z plane of the body reference frame. The $\hat{j}$ direction is then defined to be out the right side of the vehicle, in order to follow the right hand rule. 
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=.6\linewidth]{figures/windAxes.eps}
+  \captionof{figure}{Wind Axes Definition}
+  \label{windAxesFig}
+\end{figure}
+In Figure \ref{windAxesFig}, only the $\vec{i}$ wind vector is shown, for clarity. 
 
 \section{Equations of Motion}
 \label{sys-desc}
