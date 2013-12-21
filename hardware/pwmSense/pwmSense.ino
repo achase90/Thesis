@@ -150,5 +150,20 @@ void loop()
 {
 
   Serial.print("PWM = ");// I'm stuck in here! help me...	
-  Serial.println(pwm0);
+  Serial.print(pwm0);
+  Serial.print('\t');
+    Serial.print(pwm1);
+  Serial.print('\t');
+    Serial.print(pwm2);
+  Serial.print('\t');
+    Serial.print(pwm3);
+  Serial.print('\t');
+    Serial.print(pwm4);
+  Serial.print('\t');
+    Serial.print(pwm5);
+  Serial.print('\t');
+    Serial.print(pwm6);
+  Serial.print('\t');
+    Serial.print(pwm7);
+  Serial.print('\n');
 }

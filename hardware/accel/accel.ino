@@ -2,7 +2,7 @@
 #include <ADXL362.h>
 
 
-ADXL362 xl = ADXL362(50);
+ADXL362 xl = ADXL362(47);
 
 int16_t XValue, YValue, ZValue, Temperature;
 

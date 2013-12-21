@@ -1,6 +1,6 @@
-\section{Error Analysis}
+\chapter{Error Analysis}
 Without estimates of the error in data, the data itself is fairly meaningless. There are two main types of error in the system: model regression error and the error of a single data point. The error of a single data point comes from random noise in sensors, and can be decreased by improving the accuracy of the sensor or filtering the results. The model regression error comes from the fact that every aspect of the dynamics of the system are not precisely modeled. This type of error can be reduced by improving the accuracy of the dynamics being modeled, choosing a better regression model, or by increasing the number of data points collected, discussed later.
-\subsection*{Random Error}
+\section*{Random Error}
 \label{pointErrorSection}
  The equations of motion can be used to propagate uncertainty in a signal, and they allow the uncertainty in the coefficients to be estimated based on sensor noise. 
  
@@ -49,7 +49,7 @@ One of the key findings of this section is that the error of the coefficient dep
 While heteroskedasticity does not color the estimate of $\hat{\beta}_i$, it does color the confidence intervals. The method of dealing with this problem is discussed in the next section.
 
 
-\subsection*{Least Squares Model Error}
+\section*{Least Squares Regression Error}
 The error of a single data point is not the main driving factor in the accuracy of a regression model. The important factor in the model is how accurately the coefficients are known, which is a function of the accuracy of each point, as well as the number of points sampled. The main parameter that describes the accuracy of the regression coefficients are the confidence intervals. A confidence interval is a range of values such that, if the experiment were repeated, the parameter calculated would be within the range some percentage of the time. A parameter can be represented as an estimated value, with a confidence bound
 
 \begin{align}
@@ -60,7 +60,7 @@ The error of a single data point is not the main driving factor in the accuracy 
 where $\beta$ is the parameter in question, $\beta_{EST}$ is the estimated value of the parameter, $t$ is the Student's $t$ value based on the number of samples and the desired confidence interval, $\sigma$ is the standard deviation of the sample, and $n$ is the number of data points collected. Since the number of data points collected during flight will be large ($n>100$), the $t$ value will be taken as 1.96 for a 95\% confidence interval.\\
 As previously mentioned, one of the assumptions made in a Least Squares regression is homoskedasticity. However, the error using standard uncertainty propagation is heteroskedastic. This becomes a problem in estimating confidence intervals, because the standard error can be driven by outliers. If each data point had the same error, these outliers could be valid. However, if the data is heteroskedastic, the outlier may have larger error bounds (see Figure \ref{fig:errorBars},) meaning the data point is not as likely as it first appears. This fact can drive the standard error estimate to be larger than is appropriate, which leads to a larger confidence interval and possibly a false lack of rejection of the confidence interval's hypothesis test. To account for this, the \texttt{robustfit} function in MATLAB  was used to estimate both the coefficients and robust standard error estimates. The \texttt{robustfit} function calculates heteroskedastically-robust standard error estimates by doing a weighted average, where the weighting is based on a radial basis function. This means that the farther away a data point is from the estimated regression model, the less impact it has on the standard error of the model. The default weighting function used by \texttt{robustfit} is bisquare, and it was used for this research.
 
-\subsection*{Kalman Filter Error}
+\section*{Kalman Filter Regression Error}
 Kalman filters are often used to propagate states. The filter does this by combining the system dynamics with a measured state. The variance is propagated using Equation \ref{kalmanVariance}. When estimating coefficients using the Kalman filter, the $\bar{A}$ state transition matrix is an identity matrix, which is due to the fact that the coefficients stay constant. When propagated through the filter, this means the state estimate $x_k$ is essentially a variance-weighted-average of the coefficient estimates. The matrix $P_k$ contains the variance of the coefficient estimates. Equation \ref{confidenceInterval} calculates the confidence interval of regression coefficients and needs the standard deviation of the mean, also called the standard error. The matrix $P_k$ can be used  to calculate the confidence intervals by noting
 \nomenclature{$\sigma$}{Standard deviation}
 \begin{align}
