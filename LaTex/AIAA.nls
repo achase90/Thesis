@@ -21,11 +21,11 @@
   \item [{$K_2$}]\begingroup Drag polar coefficient for $C^2_L$ terms\nomeqref {5.3.0}
 		\nompageref{25}
   \item [{$P_S$}]\begingroup Static pressure\nomeqref {A.1.0}
-		\nompageref{44}
+		\nompageref{41}
   \item [{CFD}]\begingroup Computational fluid dynamics\nomeqref {1.0.0}
 		\nompageref{1}
   \item [{CG}]\begingroup Center of gravity\nomeqref {A.1.0}
-		\nompageref{43}
+		\nompageref{40}
   \item [{DOF}]\begingroup Degree of freedom\nomeqref {5.0.0}
 		\nompageref{23}
   \item [{e}]\begingroup Wing lift distribution\nomeqref {5.2.1}

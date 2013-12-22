@@ -27,5 +27,5 @@
 \nomenclatureentry{aRPM@[{RPM}]\begingroup Rotations per minute\nomeqref {6.5.0}|nompageref}{32}
 \nomenclatureentry{aFSO@[{FSO}]\begingroup Full scale output\nomeqref {6.6.0}|nompageref}{35}
 \nomenclatureentry{aPWM@[{PWM}]\begingroup Pulse width modulation\nomeqref {6.8.0}|nompageref}{37}
-\nomenclatureentry{ACG@[{CG}]\begingroup Center of gravity\nomeqref {A.1.0}|nompageref}{43}
-\nomenclatureentry{A$P_S$@[{$P_S$}]\begingroup Static pressure\nomeqref {A.1.0}|nompageref}{44}
+\nomenclatureentry{ACG@[{CG}]\begingroup Center of gravity\nomeqref {A.1.0}|nompageref}{40}
+\nomenclatureentry{A$P_S$@[{$P_S$}]\begingroup Static pressure\nomeqref {A.1.0}|nompageref}{41}

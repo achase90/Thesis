@@ -7,8 +7,6 @@
 \usepackage{listings}
 \usepackage{float}
 \usepackage{titlesec}
-\widowpenalty 10000
-\clubpenalty 10000
 
 \title{FLIGHT TESTING SMALL UAVS FOR AERODYNAMIC PARAMETER ESTIMATION}
 \author{Adam Chase}
@@ -57,9 +55,9 @@
 \end{abstract}
 
 \begin{acknowledgements}
-
-   Thank you...
-
+Friends
+Dr. McDonald
+Family and parents
 \end{acknowledgements}
 
 
@@ -83,35 +81,27 @@
 % ------------- Main chapters here --------------------
 
 
-\include{intro}
-
-\include{method}
-
-\include{regression}
-
-\include{error}
-
-\include{simulation}
-
-\include{hardware}
-
-\include{flightTest}
-
-\include{results}
-
-\include{summary}
+\input{intro}
+\input{method}
+\input{regression}
+\input{error}
+\input{simulation}
+\input{hardware}
+%\input{flightTest}
+\input{results}
+\input{summary}
 
 % ------------- End main chapters ----------------------
 \clearpage
 \begin{appendices}
-\include{systemManual}
-\include{flightTestDocs}
-\include{cd0FlightTest}
-\include{K2FlightTest}
-\include{dataGraphs}
-\include{wiringSchematics}
-\include{sourceCode}
-\include{futureWork}
+\input{systemManual}
+\input{flightTestDocs}
+%\input{cd0FlightTest}
+%\input{K2FlightTest}
+\input{dataGraphs}
+\input{wiringSchematics}
+%\input{sourceCode}
+\input{futureWork}
 \end{appendices}
 
 

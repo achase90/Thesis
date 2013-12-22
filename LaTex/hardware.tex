@@ -97,6 +97,7 @@ The HMR-2300 can be supplied with power between 6V and 15V, so the 3-cell 11.1V 
  
  The surface-mounted HMC-5883L was assumed to be aligned with the surface-mounted accelerometer. Since the two magnetometers both measured the North vector, a rotation matrix that describes the difference in alignment between the two sensors can be calculated by
  \begin{align}
+ \label{eqn:magAlign}
 \vec{N}_{HMC5883} &= \bar{R}^{M_1}_b\vec{N}_{HMR2300}.
  \end{align}
  
@@ -129,12 +130,11 @@ The probe was extended roughly one chord length in front of the leading edge of 
     \includegraphics[width=.5\textwidth]{figures/probeAdapter.eps}
       \caption{Five-Hole Probe Adapter} \label{fig:probeAdapter}
 \end{figure}
-The adapter was manufactured to be square to itself and to have the reference flat of the probe's hexagonal section be parallel to one side of the adapter. An accelerometer was then glued to a side of the adapter, and the accelerometer was calibrated to the block using a level surface and the flat sides of the adapter. Before each flight test, three static readings are taken of the adapter's accelerometer and the main body-mounted accelerometer. Since the probe's orientation with respect to the adapter's accelerometer is known, this allows the wind angles measured by the probe to be calculated with respect to the body axes, and gives an accurate alignment of the wind reference frame to the body reference frame.\\
+The adapter was manufactured to be square to itself and to have the reference flat of the probe's hexagonal section be parallel to one side of the adapter. An accelerometer was then glued to a side of the adapter, and the accelerometer was calibrated to the block using a level surface and the flat sides of the adapter. Before each flight test, three static readings are taken of the adapter's accelerometer and the main body-mounted accelerometer. Since the probe's orientation with respect to the adapter's accelerometer is known, this allows the wind angles measured by the probe to be calculated with respect to the body axes, and gives an accurate alignment of the wind reference frame to the body reference frame. The process is similar to how two magnetometers are aligned, using Equation \ref{eqn:magAlign}.
 
  Each pair of lines of the five-hole air data probe is connected to an All Sensors digital differential pressure sensor with a full scale range of $\pm$5 in-H$_2$O\cite{allsensorsDDO}. The static port of the five-hole probe was connected to an All Sensors BARO-DO digital barometric pressure sensor,which has a range of 600 to 1100 mBar\cite{allSensorsBaroDatasheet}. The barometric pressure sensor comes in the same package and uses the same communication protocol as the differential pressure sensors.
 
 \begin{figure}[H]
-
   \centering
     \includegraphics[width=0.25\textwidth]{figures/allsensorsPressure.jpg}
       \caption{All Sensors 5-INCH-D-DO Pressure Sensor} \label{allsensorsPressurePic}
