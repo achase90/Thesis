@@ -1,15 +1,15 @@
-\chapter{System Usage}
+\chapter{Data Acquisition System Usage}
 This section documents the steps required for correct usage of the data acquisition system.
 
 \section{Integration}
 The main data acquisition system should be integrated into the flight test vehicle near the vehicle's center of gravity.\nomenclature[A]{CG}{Center of gravity} The system should have one of its principal axes lined up roughly parallel to the vehicle's longitudinal axis. Servos should be connected to both the main board and the aircraft's receiver using a y-splitter with 2 male and one female connectors. If applicable, the servos should be connected according to the Table \ref{table:servoSetup}.
 \begin{table}[ht]
-\caption{Air Data System Setup} % title of Table
-\centering % used for centering table
-\begin{tabular}{c c} % centered columns (4 columns)
-\hline\hline %inserts double horizontal lines
+\caption{Air Data System Setup}
+\centering
+\begin{tabular}{c c}
+\hline\hline
  Servo & PWM Pinout\\
-\hline % inserts single horizontal line
+\hline
 Throttle & D37\\
 Elevator & D38\\
 Rudder & D39\\ 
@@ -23,27 +23,28 @@ Auxiliary (2/2)& D44\\
 \label{table:servoSetup}
 \end{table}
 
-If the additional digital pinouts are being use for measuring servo signals, the ``+V'' jumper should not have a jumper on it. If using the digital pinouts to run digital sensors or command servos, place the jumper on the appropriate voltage level setting.
+If the additional digital pin-outs are being use for measuring servo signals, the ``+V'' jumper should not have a jumper on it. If using the digital pin-outs to run digital sensors or command servos, place the jumper on the appropriate voltage level setting.
 
 The pressure board can be placed anywhere in the vehicle, as long as it can be connected to the main board. The pressure sensors should be attached to the five-hole probe as follows:
 
 \begin{table}[ht]
-\caption{Air Data System Setup} % title of Table
-\centering % used for centering table
-\begin{tabular}{c c c c} % centered columns (4 columns)
-\hline\hline %inserts double horizontal lines
+\caption{Air Data System Setup}
+\centering
+\begin{tabular}{c c c c}
+\hline\hline
  Pressure Sensor & Port A & Port B & Measurement\\
-\hline % inserts single horizontal line
+\hline
 0 & Tube 4 & Tube 5 & $\beta$ \\
 1 & Tube 1 & Tube 6 & $q_{\infty}$\\
 2 & Tube 2 & Tube 3 & $\alpha$\\ 
 3 & n/a & Tube 6 & $P_S$\\
-\nomenclature[A]{$P_S$}{Static pressure}\\
 \hline
 \end{tabular}
 \label{table:airDataSetup}
 \end{table}
-Port A and Port B refer to the ports as labeled in Figure \ref{fig:pressureLabels}, and the tube number refers to the five-hole probe tubes. These tube numbers increase as the tube legth decreases: Tube 1 refers to the longest tube, Tube 6 refers to the shortest tube.
+\nomenclature[A]{$P_S$}{Static pressure}
+
+Port A and Port B refer to the ports as labeled in Figure \ref{fig:pressureLabels}, and the tube number refers to the five-hole probe tubes. These tube numbers increase as the tube length decreases: Tube 1 refers to the longest tube, Tube 6 refers to the shortest tube.
 
 \begin{figure}[H]
   \centering
@@ -65,7 +66,7 @@ The pre-flight procedure in this section must be completed in addition to all pr
 \item Ensure the micro-SD card is empty and formatted as FAT32, then insert it into the main data acquisition board.
 \item Plug in the main data acquisition system's battery pack.
 \item Plug the pressure sensor board into the main data acquisition board.
-\item Plug in the air data system's RJ-25
+\item Plug in the air data system's RJ-25.
 \item Upload the calibration routine to the main board, and follow the prompts to calibrate the gyroscope, accelerometer, and magnetometers.
 \item Place a wind blocker (Daisy/Solo cups work) over the five-hole probe and calibrate the pressure sensors, using the calibration routine.
 \item Calibrate the air data system's orientation using the calibration routine.
@@ -75,21 +76,72 @@ The pre-flight procedure in this section must be completed in addition to all pr
 \item Turn off serial output.
 \item Turn on data logging and verify the system is saving data.
 \item Remove the micro-USB cable and the air data system's RJ-25 cable.
+\item Plug in the main propulsion battery pack.
 \end{enumerate}
-Talk about the pre-flight calibration process:
-air data boom orientation
-pressure offset calibration
-accel/gyro calibration
-magnetometer calibration
-
-
-After the flight is complete, a second round of zero offset calibration data should be acquired. This set ensures that any drift that occurred during the flight is accounted for. Repeat the steps outlined in Section \ref{preflightZeroCalib}.
+The data acquisition system is now ready for flight.
 
 \section{Flight test plan}
 Yo bro, glide around for a while. change speeds and stuff.
 
-\section{Post-flight}
-Let's talk about how to use that sweet GUI of yours.
+\section{Post-Flight}
+Immediately after the vehicle lands, the vehicle's propulsion pack should be unplugged. Next, unplug the data acquisition system's battery pack, remove the micro-SD card, and save the data to a computer. Optionally, after the flight is complete, a second round of zero offset calibration data may be acquired. This set ensures that any drift that occurred during the flight is accounted for.
 
-\section{Software protocol}
-List of commands available for the mainScript and calib scripts, along with how they work.
+%Let's talk about how to use that sweet GUI of yours.
+Once the data is saved to a computer, the data analysis GUI can be used to quickly process the data. \nomenclature[A]{GUI}{Graphical user interface} The user interface can estimate a drag polar using the following steps:
+\begin{enumerate}
+\item Run \texttt{fileReader.m}.
+\item Click the ``Load Data'' button to load flight data. If you'd like an ASCII data file, choose yes on the prompt.
+\item Select the pressure calibration file.
+\item Select the accelerometer/gyroscope calibration file.
+\item Select the magnetometer calibration file.
+\item Select the air data system alignment calibration file.
+\item Input the reference area in the $S_{REF}$ box and the weight in the Weight box.
+\item Click ``Ignore Data With Thrust.''
+\item Click ``Display'' in the Quadratic Fit box.
+\end{enumerate}
+
+Google Earth plots are also available by clicking the ``Google Earth'' button. The ``X Axis'' and ``Y Axis'' drop down menus are also available, which allows any signal to be plotted against any other signal.
+
+\section{Embedded Software Protocol}
+The main data acquisition code allows the user to interface with the Arduino through a serial text interface. A list of available commands for the main data acquisition script, along with their intended functions, is shown in Table \ref{table:mainScriptComms}.
+\begin{table}[H]
+\caption{Available Commands for \texttt{mainScript.ino}}
+\centering
+\begin{tabular}{|c | c|}
+\hline
+ Command & Utility\\
+ \hline\hline
+dataOn & Turn on data logging to SD card\\\hline
+dataOff & Turn off data logging to SD card\\\hline
+initSD & Initialize SD card\\\hline
+serialOn & Turn on serial output\\\hline
+serialOff & Turn off serial output\\\hline
+? & Help menu\\\hline
+\end{tabular}
+\label{table:mainScriptComms}
+\end{table}
+
+Note that all commands must be sent with a start character (`\texttt{\#}') and an end character (`\texttt{\&}'.) A proper command to turn on serial output would then be \texttt{`\#serialOn\&'}.
+
+The calibration code also interfaces with the Arduino using a text interface. The calibration script's commands are shown in Table \ref{table:calibComms}.
+\begin{table}[H]
+\caption{Available Commands for \texttt{calibration.ino}}
+\centering
+\begin{tabular}{|c | c|}
+\hline
+ Command & Utility\\
+ \hline\hline
+accelGyro & Calibrate accel for slope and offset, gyro for offset. 
+Saved to \texttt{ACCLGYRO.clb}.\\\hline
+pressure & Calibrate offset of pressure sensors. 
+Saved to \texttt{PRESSURE.clb}.\\\hline
+mag & Calibrate magnetometers for hard- and soft-iron effects. 
+Saved to \texttt{MGNTMTRS.clb}.\\\hline
+accelAlign & Calibrate air data system alignment.
+ Saved to \texttt{ACCLALGN.clb}.\\\hline
+? & Help menu\\\hline
+\end{tabular}
+\label{table:calibComms}
+\end{table}
+
+Note that, like the main script, all commands must be sent with a start character (`\texttt{\#}') and an end character (`\texttt{\&}'.) A proper command to calibrate the air data system alignment would then be \texttt{`\#accelAlign\&'}.

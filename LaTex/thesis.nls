@@ -2,9 +2,11 @@
 
  \nomgroup{A}
 
+  \item [{$\alpha$}]\begingroup Angle of attack\nomeqref {5.2.1}
+		\nompageref{23}
   \item [{$\bar{R}^m_n$}]\begingroup Rotation matrix from m to n\nomeqref {2.2.11}
 		\nompageref{8}
-  \item [{$\sigma$}]\begingroup Standard deviation\nomeqref {4.0.7}
+  \item [{$\sigma$}]\begingroup Standard deviation\nomeqref {4.2.1}
 		\nompageref{22}
   \item [{$\vec{F}_A$}]\begingroup Aerodynamic forces\nomeqref {2.2.4}
 		\nompageref{7}
@@ -21,11 +23,11 @@
   \item [{$K_2$}]\begingroup Drag polar coefficient for $C^2_L$ terms\nomeqref {5.3.0}
 		\nompageref{25}
   \item [{$P_S$}]\begingroup Static pressure\nomeqref {A.1.0}
-		\nompageref{41}
+		\nompageref{42}
   \item [{CFD}]\begingroup Computational fluid dynamics\nomeqref {1.0.0}
 		\nompageref{1}
   \item [{CG}]\begingroup Center of gravity\nomeqref {A.1.0}
-		\nompageref{40}
+		\nompageref{42}
   \item [{DOF}]\begingroup Degree of freedom\nomeqref {5.0.0}
 		\nompageref{23}
   \item [{e}]\begingroup Wing lift distribution\nomeqref {5.2.1}
@@ -33,6 +35,8 @@
   \item [{FSO}]\begingroup Full scale output\nomeqref {6.6.0}
 		\nompageref{35}
   \item [{G}]\begingroup Gravity\nomeqref {6.2.0}\nompageref{27}
+  \item [{GUI}]\begingroup Graphical user interface\nomeqref {A.4.0}
+		\nompageref{45}
   \item [{I$^2$C}]\begingroup Inter-integrated circuit\nomeqref {6.5.0}
 		\nompageref{31}
   \item [{I/O}]\begingroup Input-output\nomeqref {6.1.0}\nompageref{26}

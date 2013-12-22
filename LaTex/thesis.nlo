@@ -4,13 +4,14 @@
 \nomenclatureentry{a$\vec{F}_G$@[{$\vec{F}_G$}]\begingroup Gravitational forces\nomeqref {2.2.4}|nompageref}{7}
 \nomenclatureentry{aNED@[{NED}]\begingroup North east down frame\nomeqref {2.2.6}|nompageref}{7}
 \nomenclatureentry{a$\bar{R}^m_n$@[{$\bar{R}^m_n$}]\begingroup Rotation matrix from m to n\nomeqref {2.2.11}|nompageref}{8}
-\nomenclatureentry{a$\sigma$@[{$\sigma$}]\begingroup Standard deviation\nomeqref {4.0.7}|nompageref}{22}
+\nomenclatureentry{a$\sigma$@[{$\sigma$}]\begingroup Standard deviation\nomeqref {4.2.1}|nompageref}{22}
 \nomenclatureentry{aDOF@[{DOF}]\begingroup Degree of freedom\nomeqref {5.0.0}|nompageref}{23}
 \nomenclatureentry{a$AR$@[{$AR$}]\begingroup Aspect ratio\nomeqref {5.2.1}|nompageref}{23}
 \nomenclatureentry{a$C_L$@[{$C_L$}]\begingroup Lift coefficient\nomeqref {5.2.1}|nompageref}{23}
 \nomenclatureentry{a$C_D$@[{$C_D$}]\begingroup Drag coefficient\nomeqref {5.2.1}|nompageref}{23}
 \nomenclatureentry{ae@[{e}]\begingroup Wing lift distribution\nomeqref {5.2.1}|nompageref}{23}
 \nomenclatureentry{a$C_{D_0}$@[{$C_{D_0}$}]\begingroup Parasite drag coefficient\nomeqref {5.2.1}|nompageref}{23}
+\nomenclatureentry{A$\alpha$@[{$\alpha$}]\begingroup Angle of attack\nomeqref {5.2.1}|nompageref}{23}
 \nomenclatureentry{aOLS@[{OLS}]\begingroup Ordinary least squares\nomeqref {5.3.0}|nompageref}{25}
 \nomenclatureentry{a$K_2$@[{$K_2$}]\begingroup Drag polar coefficient for $C^2_L$ terms\nomeqref {5.3.0}|nompageref}{25}
 \nomenclatureentry{aI/O@[{I/O}]\begingroup Input-output\nomeqref {6.1.0}|nompageref}{26}
@@ -27,5 +28,6 @@
 \nomenclatureentry{aRPM@[{RPM}]\begingroup Rotations per minute\nomeqref {6.5.0}|nompageref}{32}
 \nomenclatureentry{aFSO@[{FSO}]\begingroup Full scale output\nomeqref {6.6.0}|nompageref}{35}
 \nomenclatureentry{aPWM@[{PWM}]\begingroup Pulse width modulation\nomeqref {6.8.0}|nompageref}{37}
-\nomenclatureentry{ACG@[{CG}]\begingroup Center of gravity\nomeqref {A.1.0}|nompageref}{40}
-\nomenclatureentry{A$P_S$@[{$P_S$}]\begingroup Static pressure\nomeqref {A.1.0}|nompageref}{41}
+\nomenclatureentry{ACG@[{CG}]\begingroup Center of gravity\nomeqref {A.1.0}|nompageref}{42}
+\nomenclatureentry{A$P_S$@[{$P_S$}]\begingroup Static pressure\nomeqref {A.1.0}|nompageref}{42}
+\nomenclatureentry{AGUI@[{GUI}]\begingroup Graphical user interface\nomeqref {A.4.0}|nompageref}{45}

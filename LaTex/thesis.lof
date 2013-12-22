@@ -28,92 +28,94 @@
 \contentsline {figure}{\numberline {6.9}{\ignorespaces All Sensors 5-INCH-D-DO Pressure Sensor\relax }}{34}{figure.caption.26}
 \contentsline {figure}{\numberline {6.10}{\ignorespaces Dallas Semiconductors' DS18B20 Digital Temperature Sensors\relax }}{34}{figure.caption.27}
 \contentsline {figure}{\numberline {6.11}{\ignorespaces CGS Shop Board for uBlox LEA-6T\relax }}{36}{figure.caption.28}
-\contentsline {figure}{\numberline {6.12}{\ignorespaces System Integration into 0.40-size R/C Piper Cub\relax }}{37}{figure.caption.29}
-\contentsline {figure}{\numberline {6.13}{\ignorespaces Pre-Flight System Checks\relax }}{38}{figure.caption.30}
-\contentsline {figure}{\numberline {6.14}{\ignorespaces Crashed Vehicle in Water\relax }}{38}{figure.caption.30}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {7.1}{\ignorespaces System Integration into 0.40-size R/C Piper Cub\relax }}{38}{figure.caption.29}
+\contentsline {figure}{\numberline {7.2}{\ignorespaces Pre-Flight System Checks\relax }}{38}{figure.caption.30}
+\contentsline {figure}{\numberline {7.3}{\ignorespaces Crashed Vehicle in Water\relax }}{38}{figure.caption.30}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {A.1}{\ignorespaces Port Description for Pressure Sensors\relax }}{41}{figure.caption.33}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {A.1}{\ignorespaces Port Description for Pressure Sensors\relax }}{43}{figure.caption.33}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {B.1}{\ignorespaces Arduino Due Flight Data Recorder v3.20BOB Schematic\relax }}{48}{figure.caption.36}
+\contentsline {figure}{\numberline {B.2}{\ignorespaces Arduino Due Flight Data Recorder v3.20BOB Layout\relax }}{49}{figure.caption.37}
+\contentsline {figure}{\numberline {B.3}{\ignorespaces Pressure Board v2.20 Schematic\relax }}{49}{figure.caption.38}
+\contentsline {figure}{\numberline {B.4}{\ignorespaces Pressure Board v2.20 Layout\relax }}{50}{figure.caption.39}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {C.1}{\ignorespaces accelX vs. Time\relax }}{49}{figure.caption.34}
-\contentsline {figure}{\numberline {C.2}{\ignorespaces accelY vs. Time\relax }}{49}{figure.caption.35}
-\contentsline {figure}{\numberline {C.3}{\ignorespaces accelZ vs. Time\relax }}{49}{figure.caption.36}
-\contentsline {figure}{\numberline {C.4}{\ignorespaces gyroX vs. Time\relax }}{50}{figure.caption.37}
-\contentsline {figure}{\numberline {C.5}{\ignorespaces gyroY vs. Time\relax }}{50}{figure.caption.38}
-\contentsline {figure}{\numberline {C.6}{\ignorespaces gyroZ vs. Time\relax }}{51}{figure.caption.39}
-\contentsline {figure}{\numberline {C.7}{\ignorespaces magX vs. Time\relax }}{51}{figure.caption.40}
-\contentsline {figure}{\numberline {C.8}{\ignorespaces magY vs. Time\relax }}{52}{figure.caption.41}
-\contentsline {figure}{\numberline {C.9}{\ignorespaces magZ vs. Time\relax }}{52}{figure.caption.42}
-\contentsline {figure}{\numberline {C.10}{\ignorespaces press0 vs. Time\relax }}{52}{figure.caption.43}
-\contentsline {figure}{\numberline {C.11}{\ignorespaces press1 vs. Time\relax }}{53}{figure.caption.44}
-\contentsline {figure}{\numberline {C.12}{\ignorespaces press2 vs. Time\relax }}{53}{figure.caption.45}
-\contentsline {figure}{\numberline {C.13}{\ignorespaces press3 vs. Time\relax }}{53}{figure.caption.46}
-\contentsline {figure}{\numberline {C.14}{\ignorespaces gpsLat vs. Time\relax }}{54}{figure.caption.47}
-\contentsline {figure}{\numberline {C.15}{\ignorespaces gpsLong vs. Time\relax }}{54}{figure.caption.48}
-\contentsline {figure}{\numberline {C.16}{\ignorespaces gpsSpd vs. Time\relax }}{54}{figure.caption.49}
-\contentsline {figure}{\numberline {C.17}{\ignorespaces gpsCrs vs. Time\relax }}{55}{figure.caption.50}
-\contentsline {figure}{\numberline {C.18}{\ignorespaces date vs. Time\relax }}{55}{figure.caption.51}
-\contentsline {figure}{\numberline {C.19}{\ignorespaces CS vs. Time\relax }}{55}{figure.caption.52}
-\contentsline {figure}{\numberline {C.20}{\ignorespaces temperature vs. Time\relax }}{56}{figure.caption.53}
-\contentsline {figure}{\numberline {C.21}{\ignorespaces deltaT vs. Time\relax }}{56}{figure.caption.54}
-\contentsline {figure}{\numberline {C.22}{\ignorespaces rpmPwm vs. Time\relax }}{56}{figure.caption.55}
-\contentsline {figure}{\numberline {C.23}{\ignorespaces accelX vs. Time\relax }}{57}{figure.caption.56}
-\contentsline {figure}{\numberline {C.24}{\ignorespaces accelY vs. Time\relax }}{57}{figure.caption.57}
-\contentsline {figure}{\numberline {C.25}{\ignorespaces accelZ vs. Time\relax }}{57}{figure.caption.58}
-\contentsline {figure}{\numberline {C.26}{\ignorespaces gyroX vs. Time\relax }}{58}{figure.caption.59}
-\contentsline {figure}{\numberline {C.27}{\ignorespaces gyroY vs. Time\relax }}{58}{figure.caption.60}
-\contentsline {figure}{\numberline {C.28}{\ignorespaces gyroZ vs. Time\relax }}{58}{figure.caption.61}
-\contentsline {figure}{\numberline {C.29}{\ignorespaces magX vs. Time\relax }}{59}{figure.caption.62}
-\contentsline {figure}{\numberline {C.30}{\ignorespaces magY vs. Time\relax }}{59}{figure.caption.63}
-\contentsline {figure}{\numberline {C.31}{\ignorespaces magZ vs. Time\relax }}{60}{figure.caption.64}
-\contentsline {figure}{\numberline {C.32}{\ignorespaces press0 vs. Time\relax }}{60}{figure.caption.65}
-\contentsline {figure}{\numberline {C.33}{\ignorespaces press1 vs. Time\relax }}{60}{figure.caption.66}
-\contentsline {figure}{\numberline {C.34}{\ignorespaces press2 vs. Time\relax }}{61}{figure.caption.67}
-\contentsline {figure}{\numberline {C.35}{\ignorespaces press3 vs. Time\relax }}{61}{figure.caption.68}
-\contentsline {figure}{\numberline {C.36}{\ignorespaces gpsLat vs. Time\relax }}{61}{figure.caption.69}
-\contentsline {figure}{\numberline {C.37}{\ignorespaces gpsLong vs. Time\relax }}{62}{figure.caption.70}
-\contentsline {figure}{\numberline {C.38}{\ignorespaces gpsSpd vs. Time\relax }}{62}{figure.caption.71}
-\contentsline {figure}{\numberline {C.39}{\ignorespaces gpsCrs vs. Time\relax }}{62}{figure.caption.72}
-\contentsline {figure}{\numberline {C.40}{\ignorespaces date vs. Time\relax }}{63}{figure.caption.73}
-\contentsline {figure}{\numberline {C.41}{\ignorespaces CS vs. Time\relax }}{63}{figure.caption.74}
-\contentsline {figure}{\numberline {C.42}{\ignorespaces temperature vs. Time\relax }}{63}{figure.caption.75}
-\contentsline {figure}{\numberline {C.43}{\ignorespaces deltaT vs. Time\relax }}{64}{figure.caption.76}
-\contentsline {figure}{\numberline {C.44}{\ignorespaces rpmPwm vs. Time\relax }}{64}{figure.caption.77}
-\contentsline {figure}{\numberline {C.45}{\ignorespaces ang2300X vs. Time\relax }}{64}{figure.caption.78}
-\contentsline {figure}{\numberline {C.46}{\ignorespaces ang2300Y vs. Time\relax }}{65}{figure.caption.79}
-\contentsline {figure}{\numberline {C.47}{\ignorespaces ang2300Z vs. Time\relax }}{65}{figure.caption.80}
-\contentsline {figure}{\numberline {C.48}{\ignorespaces ang5883X vs. Time\relax }}{65}{figure.caption.81}
-\contentsline {figure}{\numberline {C.49}{\ignorespaces ang5883Y vs. Time\relax }}{66}{figure.caption.82}
-\contentsline {figure}{\numberline {C.50}{\ignorespaces ang5883Z vs. Time\relax }}{66}{figure.caption.83}
-\contentsline {figure}{\numberline {C.51}{\ignorespaces qbar vs. Time\relax }}{66}{figure.caption.84}
-\contentsline {figure}{\numberline {C.52}{\ignorespaces rho vs. Time\relax }}{67}{figure.caption.85}
-\contentsline {figure}{\numberline {C.53}{\ignorespaces alpha vs. Time\relax }}{68}{figure.caption.86}
-\contentsline {figure}{\numberline {C.54}{\ignorespaces beta vs. Time\relax }}{68}{figure.caption.87}
-\contentsline {figure}{\numberline {C.55}{\ignorespaces roll vs. Time\relax }}{69}{figure.caption.88}
-\contentsline {figure}{\numberline {C.56}{\ignorespaces pitch vs. Time\relax }}{69}{figure.caption.89}
-\contentsline {figure}{\numberline {C.57}{\ignorespaces yaw vs. Time\relax }}{69}{figure.caption.90}
-\contentsline {figure}{\numberline {C.58}{\ignorespaces rollRate vs. Time\relax }}{70}{figure.caption.91}
-\contentsline {figure}{\numberline {C.59}{\ignorespaces pitchRate vs. Time\relax }}{70}{figure.caption.92}
-\contentsline {figure}{\numberline {C.60}{\ignorespaces yawRate vs. Time\relax }}{70}{figure.caption.93}
-\contentsline {figure}{\numberline {C.61}{\ignorespaces accelX vs. Time\relax }}{71}{figure.caption.94}
-\contentsline {figure}{\numberline {C.62}{\ignorespaces accelY vs. Time\relax }}{71}{figure.caption.95}
-\contentsline {figure}{\numberline {C.63}{\ignorespaces accelZ vs. Time\relax }}{71}{figure.caption.96}
-\contentsline {figure}{\numberline {C.64}{\ignorespaces qbar vs. Time\relax }}{72}{figure.caption.97}
-\contentsline {figure}{\numberline {C.65}{\ignorespaces rho vs. Time\relax }}{72}{figure.caption.98}
-\contentsline {figure}{\numberline {C.66}{\ignorespaces alpha vs. Time\relax }}{73}{figure.caption.99}
-\contentsline {figure}{\numberline {C.67}{\ignorespaces beta vs. Time\relax }}{73}{figure.caption.100}
-\contentsline {figure}{\numberline {C.68}{\ignorespaces roll vs. Time\relax }}{73}{figure.caption.101}
-\contentsline {figure}{\numberline {C.69}{\ignorespaces pitch vs. Time\relax }}{74}{figure.caption.102}
-\contentsline {figure}{\numberline {C.70}{\ignorespaces yaw vs. Time\relax }}{74}{figure.caption.103}
-\contentsline {figure}{\numberline {C.71}{\ignorespaces rollRate vs. Time\relax }}{74}{figure.caption.104}
-\contentsline {figure}{\numberline {C.72}{\ignorespaces pitchRate vs. Time\relax }}{75}{figure.caption.105}
-\contentsline {figure}{\numberline {C.73}{\ignorespaces yawRate vs. Time\relax }}{75}{figure.caption.106}
-\contentsline {figure}{\numberline {C.74}{\ignorespaces accelX vs. Time\relax }}{75}{figure.caption.107}
-\contentsline {figure}{\numberline {C.75}{\ignorespaces accelY vs. Time\relax }}{76}{figure.caption.108}
-\contentsline {figure}{\numberline {C.76}{\ignorespaces accelZ vs. Time\relax }}{76}{figure.caption.109}
-\addvspace {10\p@ }
-\contentsline {figure}{\numberline {D.1}{\ignorespaces Arduino Due Flight Data Recorder v3.20BOB Schematic\relax }}{77}{figure.caption.110}
-\contentsline {figure}{\numberline {D.2}{\ignorespaces Arduino Due Flight Data Recorder v3.20BOB Layout\relax }}{78}{figure.caption.111}
-\contentsline {figure}{\numberline {D.3}{\ignorespaces Pressure Board v2.20 Schematic\relax }}{78}{figure.caption.112}
-\contentsline {figure}{\numberline {D.4}{\ignorespaces Pressure Board v2.20 Layout\relax }}{79}{figure.caption.113}
+\contentsline {figure}{\numberline {D.1}{\ignorespaces accelX vs. Time\relax }}{56}{figure.caption.40}
+\contentsline {figure}{\numberline {D.2}{\ignorespaces accelY vs. Time\relax }}{56}{figure.caption.41}
+\contentsline {figure}{\numberline {D.3}{\ignorespaces accelZ vs. Time\relax }}{56}{figure.caption.42}
+\contentsline {figure}{\numberline {D.4}{\ignorespaces gyroX vs. Time\relax }}{57}{figure.caption.43}
+\contentsline {figure}{\numberline {D.5}{\ignorespaces gyroY vs. Time\relax }}{57}{figure.caption.44}
+\contentsline {figure}{\numberline {D.6}{\ignorespaces gyroZ vs. Time\relax }}{58}{figure.caption.45}
+\contentsline {figure}{\numberline {D.7}{\ignorespaces magX vs. Time\relax }}{58}{figure.caption.46}
+\contentsline {figure}{\numberline {D.8}{\ignorespaces magY vs. Time\relax }}{59}{figure.caption.47}
+\contentsline {figure}{\numberline {D.9}{\ignorespaces magZ vs. Time\relax }}{59}{figure.caption.48}
+\contentsline {figure}{\numberline {D.10}{\ignorespaces press0 vs. Time\relax }}{59}{figure.caption.49}
+\contentsline {figure}{\numberline {D.11}{\ignorespaces press1 vs. Time\relax }}{60}{figure.caption.50}
+\contentsline {figure}{\numberline {D.12}{\ignorespaces press2 vs. Time\relax }}{60}{figure.caption.51}
+\contentsline {figure}{\numberline {D.13}{\ignorespaces press3 vs. Time\relax }}{60}{figure.caption.52}
+\contentsline {figure}{\numberline {D.14}{\ignorespaces gpsLat vs. Time\relax }}{61}{figure.caption.53}
+\contentsline {figure}{\numberline {D.15}{\ignorespaces gpsLong vs. Time\relax }}{61}{figure.caption.54}
+\contentsline {figure}{\numberline {D.16}{\ignorespaces gpsSpd vs. Time\relax }}{61}{figure.caption.55}
+\contentsline {figure}{\numberline {D.17}{\ignorespaces gpsCrs vs. Time\relax }}{62}{figure.caption.56}
+\contentsline {figure}{\numberline {D.18}{\ignorespaces date vs. Time\relax }}{62}{figure.caption.57}
+\contentsline {figure}{\numberline {D.19}{\ignorespaces CS vs. Time\relax }}{62}{figure.caption.58}
+\contentsline {figure}{\numberline {D.20}{\ignorespaces temperature vs. Time\relax }}{63}{figure.caption.59}
+\contentsline {figure}{\numberline {D.21}{\ignorespaces deltaT vs. Time\relax }}{63}{figure.caption.60}
+\contentsline {figure}{\numberline {D.22}{\ignorespaces rpmPwm vs. Time\relax }}{63}{figure.caption.61}
+\contentsline {figure}{\numberline {D.23}{\ignorespaces accelX vs. Time\relax }}{64}{figure.caption.62}
+\contentsline {figure}{\numberline {D.24}{\ignorespaces accelY vs. Time\relax }}{64}{figure.caption.63}
+\contentsline {figure}{\numberline {D.25}{\ignorespaces accelZ vs. Time\relax }}{64}{figure.caption.64}
+\contentsline {figure}{\numberline {D.26}{\ignorespaces gyroX vs. Time\relax }}{65}{figure.caption.65}
+\contentsline {figure}{\numberline {D.27}{\ignorespaces gyroY vs. Time\relax }}{65}{figure.caption.66}
+\contentsline {figure}{\numberline {D.28}{\ignorespaces gyroZ vs. Time\relax }}{65}{figure.caption.67}
+\contentsline {figure}{\numberline {D.29}{\ignorespaces magX vs. Time\relax }}{66}{figure.caption.68}
+\contentsline {figure}{\numberline {D.30}{\ignorespaces magY vs. Time\relax }}{66}{figure.caption.69}
+\contentsline {figure}{\numberline {D.31}{\ignorespaces magZ vs. Time\relax }}{67}{figure.caption.70}
+\contentsline {figure}{\numberline {D.32}{\ignorespaces press0 vs. Time\relax }}{67}{figure.caption.71}
+\contentsline {figure}{\numberline {D.33}{\ignorespaces press1 vs. Time\relax }}{67}{figure.caption.72}
+\contentsline {figure}{\numberline {D.34}{\ignorespaces press2 vs. Time\relax }}{68}{figure.caption.73}
+\contentsline {figure}{\numberline {D.35}{\ignorespaces press3 vs. Time\relax }}{68}{figure.caption.74}
+\contentsline {figure}{\numberline {D.36}{\ignorespaces gpsLat vs. Time\relax }}{68}{figure.caption.75}
+\contentsline {figure}{\numberline {D.37}{\ignorespaces gpsLong vs. Time\relax }}{69}{figure.caption.76}
+\contentsline {figure}{\numberline {D.38}{\ignorespaces gpsSpd vs. Time\relax }}{69}{figure.caption.77}
+\contentsline {figure}{\numberline {D.39}{\ignorespaces gpsCrs vs. Time\relax }}{69}{figure.caption.78}
+\contentsline {figure}{\numberline {D.40}{\ignorespaces date vs. Time\relax }}{70}{figure.caption.79}
+\contentsline {figure}{\numberline {D.41}{\ignorespaces CS vs. Time\relax }}{70}{figure.caption.80}
+\contentsline {figure}{\numberline {D.42}{\ignorespaces temperature vs. Time\relax }}{70}{figure.caption.81}
+\contentsline {figure}{\numberline {D.43}{\ignorespaces deltaT vs. Time\relax }}{71}{figure.caption.82}
+\contentsline {figure}{\numberline {D.44}{\ignorespaces rpmPwm vs. Time\relax }}{71}{figure.caption.83}
+\contentsline {figure}{\numberline {D.45}{\ignorespaces ang2300X vs. Time\relax }}{71}{figure.caption.84}
+\contentsline {figure}{\numberline {D.46}{\ignorespaces ang2300Y vs. Time\relax }}{72}{figure.caption.85}
+\contentsline {figure}{\numberline {D.47}{\ignorespaces ang2300Z vs. Time\relax }}{72}{figure.caption.86}
+\contentsline {figure}{\numberline {D.48}{\ignorespaces ang5883X vs. Time\relax }}{72}{figure.caption.87}
+\contentsline {figure}{\numberline {D.49}{\ignorespaces ang5883Y vs. Time\relax }}{73}{figure.caption.88}
+\contentsline {figure}{\numberline {D.50}{\ignorespaces ang5883Z vs. Time\relax }}{73}{figure.caption.89}
+\contentsline {figure}{\numberline {D.51}{\ignorespaces qbar vs. Time\relax }}{73}{figure.caption.90}
+\contentsline {figure}{\numberline {D.52}{\ignorespaces rho vs. Time\relax }}{74}{figure.caption.91}
+\contentsline {figure}{\numberline {D.53}{\ignorespaces alpha vs. Time\relax }}{75}{figure.caption.92}
+\contentsline {figure}{\numberline {D.54}{\ignorespaces beta vs. Time\relax }}{75}{figure.caption.93}
+\contentsline {figure}{\numberline {D.55}{\ignorespaces roll vs. Time\relax }}{76}{figure.caption.94}
+\contentsline {figure}{\numberline {D.56}{\ignorespaces pitch vs. Time\relax }}{76}{figure.caption.95}
+\contentsline {figure}{\numberline {D.57}{\ignorespaces yaw vs. Time\relax }}{76}{figure.caption.96}
+\contentsline {figure}{\numberline {D.58}{\ignorespaces rollRate vs. Time\relax }}{77}{figure.caption.97}
+\contentsline {figure}{\numberline {D.59}{\ignorespaces pitchRate vs. Time\relax }}{77}{figure.caption.98}
+\contentsline {figure}{\numberline {D.60}{\ignorespaces yawRate vs. Time\relax }}{77}{figure.caption.99}
+\contentsline {figure}{\numberline {D.61}{\ignorespaces accelX vs. Time\relax }}{78}{figure.caption.100}
+\contentsline {figure}{\numberline {D.62}{\ignorespaces accelY vs. Time\relax }}{78}{figure.caption.101}
+\contentsline {figure}{\numberline {D.63}{\ignorespaces accelZ vs. Time\relax }}{78}{figure.caption.102}
+\contentsline {figure}{\numberline {D.64}{\ignorespaces qbar vs. Time\relax }}{79}{figure.caption.103}
+\contentsline {figure}{\numberline {D.65}{\ignorespaces rho vs. Time\relax }}{79}{figure.caption.104}
+\contentsline {figure}{\numberline {D.66}{\ignorespaces alpha vs. Time\relax }}{80}{figure.caption.105}
+\contentsline {figure}{\numberline {D.67}{\ignorespaces beta vs. Time\relax }}{80}{figure.caption.106}
+\contentsline {figure}{\numberline {D.68}{\ignorespaces roll vs. Time\relax }}{80}{figure.caption.107}
+\contentsline {figure}{\numberline {D.69}{\ignorespaces pitch vs. Time\relax }}{81}{figure.caption.108}
+\contentsline {figure}{\numberline {D.70}{\ignorespaces yaw vs. Time\relax }}{81}{figure.caption.109}
+\contentsline {figure}{\numberline {D.71}{\ignorespaces rollRate vs. Time\relax }}{81}{figure.caption.110}
+\contentsline {figure}{\numberline {D.72}{\ignorespaces pitchRate vs. Time\relax }}{82}{figure.caption.111}
+\contentsline {figure}{\numberline {D.73}{\ignorespaces yawRate vs. Time\relax }}{82}{figure.caption.112}
+\contentsline {figure}{\numberline {D.74}{\ignorespaces accelX vs. Time\relax }}{82}{figure.caption.113}
+\contentsline {figure}{\numberline {D.75}{\ignorespaces accelY vs. Time\relax }}{83}{figure.caption.114}
+\contentsline {figure}{\numberline {D.76}{\ignorespaces accelZ vs. Time\relax }}{83}{figure.caption.115}
