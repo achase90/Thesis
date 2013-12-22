@@ -1,5 +1,15 @@
 \begin{thebibliography}{10}
 
+\bibitem{nedAxes}
+Mike1024.
+\newblock Ecec enu longitude latitude relationships.
+\newblock Wikipedia, February 2010.
+
+\bibitem{hawkerThreeView}
+MLWatts.
+\newblock Hawker tempest mark ii three view.
+\newblock Wikipedia, September 2012.
+
 \bibitem{737wingTipVortices}
 Olivier Clynen.
 \newblock 737 ng winglet effect simplified.
@@ -37,6 +47,11 @@ Vladislav Klein and Eugene~A Morelli.
 \newblock {\em Aircraft system identification: theory and practice}.
 \newblock American Institute of Aeronautics and Astronautics Reston, VA, USA,
   2006.
+
+\bibitem{roskam2001airplane}
+Jan Roskam.
+\newblock Airplane flight dynamics and automatic flight controls, design.
+\newblock {\em Analysis and Research Corporation, Lawrence, KS}, 2001.
 
 \bibitem{kalman60}
 Rudolph~Emil Kalman.

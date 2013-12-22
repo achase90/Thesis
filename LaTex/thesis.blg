@@ -23,6 +23,10 @@ Warning--entry type for "737wingTipVortices" isn't style-file defined
 --line 79 of file bibliography.bib
 Warning--entry type for "penguinRC" isn't style-file defined
 --line 137 of file bibliography.bib
+Warning--entry type for "nedAxes" isn't style-file defined
+--line 435 of file bibliography.bib
+Warning--entry type for "hawkerThreeView" isn't style-file defined
+--line 457 of file bibliography.bib
 Warning--entry type for "ellipsoidFit" isn't style-file defined
 --line 665 of file bibliography.bib
 Warning--entry type for "ubloxDemo" isn't style-file defined
@@ -36,45 +40,45 @@ Warning--empty year in allsensorsDDO
 Warning--empty year in allSensorsBaroDatasheet
 Warning--empty year in pressureStandard
 Warning--empty journal in wvINSAirData
-You've used 33 entries,
+You've used 36 entries,
             1791 wiz_defined-function locations,
-            633 strings with 7519 characters,
-and the built_in function-call counts, 4740 in all, are:
-= -- 414
-> -- 161
+            644 strings with 7779 characters,
+and the built_in function-call counts, 5131 in all, are:
+= -- 447
+> -- 173
 < -- 5
-+ -- 73
-- -- 40
-* -- 162
-:= -- 818
-add.period$ -- 97
-call.type$ -- 33
-change.case$ -- 35
++ -- 79
+- -- 43
+* -- 171
+:= -- 882
+add.period$ -- 106
+call.type$ -- 36
+change.case$ -- 38
 chr.to.int$ -- 0
-cite$ -- 42
-duplicate$ -- 251
-empty$ -- 531
-format.name$ -- 40
-if$ -- 1061
+cite$ -- 45
+duplicate$ -- 269
+empty$ -- 581
+format.name$ -- 43
+if$ -- 1151
 int.to.chr$ -- 0
-int.to.str$ -- 33
-missing$ -- 19
-newline$ -- 165
-num.names$ -- 32
-pop$ -- 136
+int.to.str$ -- 36
+missing$ -- 20
+newline$ -- 180
+num.names$ -- 35
+pop$ -- 151
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 82
+skip$ -- 91
 stack$ -- 0
 substring$ -- 53
-swap$ -- 30
+swap$ -- 33
 text.length$ -- 5
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 9
-while$ -- 38
-width$ -- 35
-write$ -- 339
-(There were 13 warnings)
+while$ -- 41
+width$ -- 38
+write$ -- 369
+(There were 15 warnings)

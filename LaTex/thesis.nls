@@ -3,60 +3,64 @@
  \nomgroup{A}
 
   \item [{$\bar{R}^m_n$}]\begingroup Rotation matrix from m to n\nomeqref {2.2.11}
-		\nompageref{5}
+		\nompageref{8}
   \item [{$\sigma$}]\begingroup Standard deviation\nomeqref {4.0.7}
-		\nompageref{20}
+		\nompageref{22}
   \item [{$\vec{F}_A$}]\begingroup Aerodynamic forces\nomeqref {2.2.4}
-		\nompageref{4}
+		\nompageref{7}
   \item [{$\vec{F}_G$}]\begingroup Gravitational forces\nomeqref {2.2.4}
-		\nompageref{4}
+		\nompageref{7}
   \item [{$AR$}]\begingroup Aspect ratio\nomeqref {5.2.1}
-		\nompageref{21}
-  \item [{$C_D$}]\begingroup Drag coefficient\nomeqref {5.2.1}
-		\nompageref{21}
-  \item [{$C_L$}]\begingroup Lift coefficient\nomeqref {5.2.1}
-		\nompageref{21}
-  \item [{$C_{D_0}$}]\begingroup Parasite drag coefficient\nomeqref {5.2.1}
-		\nompageref{21}
-  \item [{$K_2$}]\begingroup Drag polar coefficient for $C^2_L$ terms\nomeqref {5.3.0}
 		\nompageref{23}
+  \item [{$C_D$}]\begingroup Drag coefficient\nomeqref {5.2.1}
+		\nompageref{23}
+  \item [{$C_L$}]\begingroup Lift coefficient\nomeqref {5.2.1}
+		\nompageref{23}
+  \item [{$C_{D_0}$}]\begingroup Parasite drag coefficient\nomeqref {5.2.1}
+		\nompageref{23}
+  \item [{$K_2$}]\begingroup Drag polar coefficient for $C^2_L$ terms\nomeqref {5.3.0}
+		\nompageref{25}
+  \item [{$P_S$}]\begingroup Static pressure\nomeqref {A.1.0}
+		\nompageref{44}
   \item [{CFD}]\begingroup Computational fluid dynamics\nomeqref {1.0.0}
 		\nompageref{1}
+  \item [{CG}]\begingroup Center of gravity\nomeqref {A.1.0}
+		\nompageref{43}
   \item [{DOF}]\begingroup Degree of freedom\nomeqref {5.0.0}
-		\nompageref{21}
+		\nompageref{23}
   \item [{e}]\begingroup Wing lift distribution\nomeqref {5.2.1}
-		\nompageref{21}
+		\nompageref{23}
   \item [{FSO}]\begingroup Full scale output\nomeqref {6.6.0}
-		\nompageref{33}
-  \item [{G}]\begingroup Gravity\nomeqref {6.2.0}\nompageref{25}
+		\nompageref{35}
+  \item [{G}]\begingroup Gravity\nomeqref {6.2.0}\nompageref{27}
   \item [{I$^2$C}]\begingroup Inter-integrated circuit\nomeqref {6.5.0}
-		\nompageref{29}
-  \item [{I/O}]\begingroup Input-output\nomeqref {6.1.0}\nompageref{24}
+		\nompageref{31}
+  \item [{I/O}]\begingroup Input-output\nomeqref {6.1.0}\nompageref{26}
   \item [{IC}]\begingroup Integrated circuit\nomeqref {6.4.0}
-		\nompageref{27}
+		\nompageref{29}
   \item [{INS}]\begingroup Inertial navigation system\nomeqref {1.0.0}
 		\nompageref{2}
   \item [{LCC}]\begingroup Leadless chip carrier\nomeqref {6.4.0}
-		\nompageref{28}
-  \item [{LGA}]\begingroup Land grid array\nomeqref {6.2.0}
-		\nompageref{25}
-  \item [{LiPo}]\begingroup Lithium polymer\nomeqref {6.1.0}
-		\nompageref{25}
-  \item [{NED}]\begingroup North east down frame\nomeqref {2.2.6}
-		\nompageref{5}
-  \item [{OLS}]\begingroup Ordinary least squares\nomeqref {5.3.0}
-		\nompageref{23}
-  \item [{PCB}]\begingroup Printed circuit board\nomeqref {6.2.0}
-		\nompageref{25}
-  \item [{PWM}]\begingroup Pulse width modulation\nomeqref {6.8.0}
-		\nompageref{35}
-  \item [{QFN}]\begingroup Quad-flats no-leads\nomeqref {6.5.0}
-		\nompageref{29}
-  \item [{RMS}]\begingroup Root mean squared\nomeqref {6.4.0}
-		\nompageref{27}
-  \item [{RPM}]\begingroup Rotations per minute\nomeqref {6.5.0}
 		\nompageref{30}
-  \item [{SPI}]\begingroup Serial peripheral interface\nomeqref {6.2.0}
+  \item [{LGA}]\begingroup Land grid array\nomeqref {6.2.0}
+		\nompageref{27}
+  \item [{LiPo}]\begingroup Lithium polymer\nomeqref {6.1.0}
+		\nompageref{27}
+  \item [{NED}]\begingroup North east down frame\nomeqref {2.2.6}
+		\nompageref{7}
+  \item [{OLS}]\begingroup Ordinary least squares\nomeqref {5.3.0}
 		\nompageref{25}
+  \item [{PCB}]\begingroup Printed circuit board\nomeqref {6.2.0}
+		\nompageref{27}
+  \item [{PWM}]\begingroup Pulse width modulation\nomeqref {6.8.0}
+		\nompageref{37}
+  \item [{QFN}]\begingroup Quad-flats no-leads\nomeqref {6.5.0}
+		\nompageref{31}
+  \item [{RMS}]\begingroup Root mean squared\nomeqref {6.4.0}
+		\nompageref{29}
+  \item [{RPM}]\begingroup Rotations per minute\nomeqref {6.5.0}
+		\nompageref{32}
+  \item [{SPI}]\begingroup Serial peripheral interface\nomeqref {6.2.0}
+		\nompageref{27}
 
 \end{thenomenclature}

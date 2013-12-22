@@ -33,7 +33,6 @@ The first goal of the simulation testing was to verify the drag polar equations 
 
 With this result, noise was added to the system to see how sensitive coefficient estimation was to noise in each sensor. This process was a balancing act between available sensor accuracy and the desired accuracy of the final solution. The final result guided sensor selection to those discussed in Section \ref{hardware}. To check if the final sensors chosen were acceptable, Gaussian noise was added to each state, with a mean of zero and a standard deviation equal to the RMS error listed in the manufacturer's data sheet for each sensor.
 \begin{figure}[H]
-
   \centering
     \includegraphics[width=0.5\textwidth]{figures/simDragPolarNoise.eps}
       \caption{Drag Polar Prediction of Simulated Test Flight} \label{dragPolarNoise}

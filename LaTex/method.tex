@@ -177,8 +177,8 @@ x_k &= f(x_{k-1},u_{k-1},w_{k-1})\\
 z_k &= h(x_k,v_k)
 \end{align}
 
-The process noise $w_{k-1}$ and measurement noise $v_k$ are not known (or the Kalman filter would not be necessary), so the states are approximated assuming both noise sources are 0
-%todo:check periods after equations
+The process noise $w_{k-1}$ and measurement noise $v_k$ are not known (or the Kalman filter would not be necessary), so the states are approximated assuming both noise sources are zero.
+
 \begin{align}
 \tilde{x}_k &= f(\hat{x}_{k-1},u_{k-1},0)\\
 \tilde{z}_k &= h(\tilde{x}_k,0)
