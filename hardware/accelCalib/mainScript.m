@@ -17,15 +17,17 @@ s1
 s2
 s3
 
-dataX = data(:,1)*s2(1)+s2(4);
-dataY = data(:,2)*s2(2)+s2(5);
-dataZ = data(:,3)*s2(3)+s2(6);
+dataX = data2(:,1)*s2(1)+s2(4);
+dataY = data2(:,2)*s2(2)+s2(5);
+dataZ = data2(:,3)*s2(3)+s2(6);
 figure(2)
 plot(dataX)
 hold all
 plot(dataY)
 plot(dataZ)
-
+xlabel('Sample [-]');
+ylabel('Accelerometer Reading [ft/{s^2}]');
+legend('X Axis','Y Axis','Z Axis','location','best');
 % Identify one orientation.
 % mask = ones(length(data),1);
 

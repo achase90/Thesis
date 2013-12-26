@@ -48,12 +48,15 @@ void loop(){
   }
   
   //Print out values of each axis
-  Serial.print("x: ");
+  //Serial.print("x: ");
   Serial.print(x);
-  Serial.print("  y: ");
+  Serial.print('\t');
+ // Serial.print("  y: ");
   Serial.print(y);
-  Serial.print("  z: ");
+    Serial.print('\t');
+  //Serial.print("  z: ");
   Serial.println(z);
-  
+    Serial.print('\n');
+
   ///delay(250);
 }
