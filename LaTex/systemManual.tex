@@ -71,7 +71,6 @@ The pre-flight procedure in this section must be completed in addition to all pr
 \item Plug in the air data system's RJ-25.
 \item Upload the calibration routine to the main board, and follow the prompts to calibrate the gyroscope, accelerometer, and magnetometers.
 \item Place a wind blocker (Daisy/Solo cups work) over the five-hole probe and calibrate the pressure sensors, using the calibration routine.
-\item Calibrate the air data system's orientation using the calibration routine.
 \item Load the main data acquisition script onto the main data acquisition board.
 \item Turn on serial output and check that all sensors are functioning properly.
 \item Initialize the micro-SD card.
@@ -134,14 +133,12 @@ The calibration code also interfaces with the Arduino using a text interface. Th
 \hline
  Command & Utility\\
  \hline\hline
-accelGyro & Calibrate accel for slope and offset, gyro for offset. 
+accelGyro & Calibrate accel for slope and offset, gyro for offset, and probe alignment. 
 Saved to \texttt{ACCLGYRO.clb}.\\\hline
 pressure & Calibrate offset of pressure sensors. 
 Saved to \texttt{PRESSURE.clb}.\\\hline
 mag & Calibrate magnetometers for hard- and soft-iron effects. 
 Saved to \texttt{MGNTMTRS.clb}.\\\hline
-accelAlign & Calibrate air data system alignment.
- Saved to \texttt{ACCLALGN.clb}.\\\hline
 ? & Help menu\\\hline
 \end{tabular}
 \label{table:calibComms}

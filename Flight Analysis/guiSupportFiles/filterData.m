@@ -1,8 +1,8 @@
 function [output] = filterData(input)
-output.time = input.time;
+output = input; %structs are generally the same so copy them
 
 % % filter the Euler Anglers
 % output = eulerKalman(input);
 
 % filter the wind angles
-output = windKalman(output);
+[output.alphaP.data,ouput.betaP.data] = windKalman(output);

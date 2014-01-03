@@ -1,7 +1,4 @@
 function output = eulerKalman(input)
-
-output = input; %structs are generally the same so copy them
-
 %%
 p = input.rollRate.data;
 q = input.pitchRate.data;

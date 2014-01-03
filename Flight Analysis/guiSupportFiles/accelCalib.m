@@ -1,5 +1,5 @@
-function [s1,fval] = accelCalib(MatrixIn)
-data = MatrixIn(:,2:4); %accelerometer is columns 2:4
+function [s1,fval] = accelCalib(accelData)
+data = accelData; %accelerometer is columns 2:4
 
 s0 = [.06 .06 .06 2 2 7];
 opts = optimset('maxFunEvals',2000,'TolX',1e-9);

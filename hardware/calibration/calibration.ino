@@ -304,10 +304,6 @@ delay(10);
 			}
 		else if (!strcmp(comm, "mag&"))
 			magMain();
-		else if (!strcmp(comm, "accelAlign&"))
-			{
-			readTwoAccel();
-			}
 		else if (!strcmp(comm, "?&"))
 			{
 			Serial.println("Help menu");
@@ -315,7 +311,6 @@ delay(10);
 			Serial.println("accelGyro :\tcalibate accel and gyro");
 			Serial.println("pressure :\tcalibrate pressure sensors.");
 			Serial.println("mag :\tcalibrate magnetometers.");
-			Serial.println("accelAlign :\tcalibrate alignment of air data system.");
 			Serial.println("? :\t help menu.");
 			}
 		}
@@ -468,6 +463,12 @@ void accelGyroMain()
 	dataFile.print("gyroY");
 	dataFile.print('\t');
 	dataFile.print("gyroZ");
+	dataFile.print('\t');
+	dataFile.print("accelX");
+	dataFile.print('\t');
+	dataFile.print("accelY");
+	dataFile.print('\t');
+	dataFile.print("accelZ");
 	dataFile.print('\n');
 
 	Serial.println("Place the system in an orientation and keep stationary. Type 'r' when ready.");
@@ -501,10 +502,12 @@ void accelGyroRead()
 	{
 	int16_t gyroX, gyroY, gyroZ;
 	int16_t accelX, accelY, accelZ, accelT;
+	int16_t accel2X, accel2Y, accel2Z;
 
 	for(int i=0;i<100;i++)
 		{
 		readAccelData(accelX,accelY,accelZ);
+		readSecondAccelData(accel2X,accel2Y,accel2Z);
 		readGyroData(gyroX,gyroY,gyroZ);
 		}
 	dataFile.print('\t');
@@ -519,66 +522,12 @@ void accelGyroRead()
 	dataFile.print(gyroY);
 	dataFile.print('\t');
 	dataFile.print(gyroZ);
+	dataFile.print('\t');
+	dataFile.print(accel2X);
+	dataFile.print('\t');
+	dataFile.print(accel2Y);
+	dataFile.print('\t');
+	dataFile.print(accel2Z);
 	dataFile.print('\n');
 	}
 
-void readTwoAccel()
-	{
-	int16_t accelX1, accelY1, accelZ1, accelT;
-	int16_t accelX2, accelY2, accelZ2;
-
-	for(int i=0;i<100;i++)
-		{
-		readAccelData(accelX1,accelY1,accelZ1);
-		readSecondAccelData(accelX2,accelY2,accelZ2);
-		}
-	dataFile.print('\t');
-	dataFile.print(accelX1);
-	dataFile.print('\t');
-	dataFile.print(accelY1);
-	dataFile.print('\t');
-	dataFile.print(accelZ1);
-	dataFile.print('\t');
-	dataFile.print(accelX2);
-	dataFile.print('\t');
-	dataFile.print(accelY2);
-	dataFile.print('\t');
-	dataFile.print(accelZ2);
-	dataFile.print('\n');
-	}
-void accelAlign()
-	{
-	//open SD card
-	SD.remove("ACCLALGN.clb");
-	dataFile = SD.open("ACCLALGN.clb",FILE_WRITE);
-
-	//write header line
-	dataFile.print('\t');
-	dataFile.print("accelX");
-	dataFile.print('\t');
-	dataFile.print("accelY");
-	dataFile.print('\t');
-	dataFile.print("accelZ");
-	dataFile.print('\t');
-	dataFile.print("gyroX");
-	dataFile.print('\t');
-	dataFile.print("gyroY");
-	dataFile.print('\t');
-	dataFile.print("gyroZ");
-	dataFile.print('\n');
-
-	Serial.println("Place the system in an orientation and keep stationary. Type 'r' when ready.");
-	while(Serial.read()!='r');
-	Serial.println("Collecting data...");
-	accelGyroRead();
-	Serial.println("Now change orientation, and type 'r' when ready.");
-	while(Serial.read()!='r');
-	Serial.println("Collecting data...");
-	accelGyroRead();
-	Serial.println("Now change orientation, and type 'r' when ready.");
-	while(Serial.read()!='r');
-	Serial.println("Collecting data...");
-	accelGyroRead();
-	dataFile.close();
-	Serial.println("Air data system alignment done.");
-	}

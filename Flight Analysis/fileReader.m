@@ -121,7 +121,7 @@ if ischar(handles.fileName) && ischar(handles.filePath)
     [handles] = readInFile(handles);
     
     %convert raw data to data with units
-    [handles.data.Units] = convertUnits(handles.data.Raw);
+    [handles.data.Units,handles.adsR] = convertUnits(handles.data.Raw);
     
     rpmThreshold = 1100;    
     %todo:actually fix this so you're not just adding a value to zero
@@ -197,6 +197,7 @@ elseif ~isfield(handles,'weight')
 else
     plane.W = handles.weight;
     plane.SRef = handles.SRef;
+    plane.adsR = handles.adsR;
     if strcmpi(type,'filtered')
         [handles.data.Filtered]=plant(handles.data.Filtered,plane); % only pass filtered data into the plant
     set(handles.outputText,'String','Forces calculated. To plot, use drop-down menus.');

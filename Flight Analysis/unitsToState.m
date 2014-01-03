@@ -20,19 +20,16 @@ R = 287; %universal gas constant %todo:check units on this, they're not right
 output.rho.data = input.press3.data./(R*input.temperature.data);
 %todo: do error propagation to propagate press4 and temp to rho, the below
 %is BS
-output.rho.noise = sqrt((input.press3.noise/(R*input.temperature.data))^2+((input.press3.data./R*input.temperature.data^2)*input.temperature.noise)^2);
+output.rho.noise = sqrt((input.press3.noise./(R*input.temperature.data)).^2+((input.press3.data./(R*input.temperature.data.^2)).*input.temperature.noise).^2);
 output.rho.units = 'lb/ft^3';
 
 output.vinf.data = sqrt(2*output.qbar.data./output.rho.data);
-output.vinf.noise = sqrt((1./(output.rho.data.*output.vinf.data^3)*output.rho.noise)^2+(output.qbar.data./(output.vinf.data^3*output.rho.data^2)*output.qbar.noise)^2);
+output.vinf.noise = sqrt((1./(output.rho.data.*output.vinf.data.^3).*output.rho.noise).^2+(output.qbar.data./(output.vinf.data.^3.*output.rho.data.^2).*output.qbar.noise).^2);
 %% Wind Angles
-% the same functions you replace the zeros with apply to both data and
-% noise
-[output.alpha.data,output.beta.data,output.alpha.noise,output.beta.noise] = pressureToAngles(input);
-output.alpha.units = 'deg';
-output.beta.units = 'deg';
-
-%todo:calc alignment calibration for air data system
+%assume probe noise is same as wind-to-body angle noise
+[output.alphaP.data,output.betaP.data,output.alpha.noise,output.beta.noise] = pressureToAngles(input);
+output.alphaP.units = 'deg';
+output.betaP.units = 'deg';
 
 %% Euler Angles
 % output.roll.data=zeros(size(input.accelX.data));

@@ -7,7 +7,7 @@
 
 % todo: make sure the unit structure is correct. probably need to
 % completely update it
-function output = convertUnits(input)
+function [output,adsR] = convertUnits(input)
 %convert all data to doubles
 [input] = dataToDouble(input);
 
@@ -67,14 +67,44 @@ end
 if ischar(accelGyroCalibFile)
     % find slope and zero offsets
     M = dlmread([accelGyroCalibPath accelGyroCalibFile],'\t',2,0);
-    [bitsToFTSS,rmsAccel] = accelCalib(M);
+    accelData = M(:,2:4);
+    [bitsToFTSS,rmsAccel] = accelCalib(accelData);
     
 % apply scale and zero offset corrections to accel
-% todo:check if scale factor applies before or after removing zero offset
-% todo:check if offset is positive or negative
-output.accelX.data = bitsToFTSS(1)*(input.accelX.data+bitsToFTSS(4));
-output.accelY.data = bitsToFTSS(2)*(input.accelY.data+bitsToFTSS(5));
-output.accelZ.data = bitsToFTSS(3)*(input.accelZ.data+bitsToFTSS(6));
+output.accelX.data = bitsToFTSS(1)*input.accelX.data+bitsToFTSS(4);
+output.accelY.data = bitsToFTSS(2)*input.accelY.data+bitsToFTSS(5);
+output.accelZ.data = bitsToFTSS(3)*input.accelZ.data+bitsToFTSS(6);
+
+% set units
+output.accelX.units = 'ft/s^2';
+output.accelY.units = 'ft/s^2';
+output.accelZ.units = 'ft/s^2';
+
+%set noise values %todo:what are units? what should they be?
+% can we take each section, after scaling, and take noise as
+% (std(x-mean(x)), which would give units of ft/s/s/
+output.accelX.noise = rmsAccel;
+output.accelY.noise = rmsAccel;
+output.accelZ.noise = rmsAccel;
+
+%apply calibration to alignment data
+accel(:,1) = bitsToFTSS(1)*accelData(:,1)+bitsToFTSS(4);
+accel(:,2) = bitsToFTSS(2)*accelData(:,2)+bitsToFTSS(5);
+accel(:,3) = bitsToFTSS(3)*accelData(:,3)+bitsToFTSS(6);
+
+% apply corrections to air data system accelerometer
+% accelData = M(:,8:10);
+accelData = M(:,2:4); %todo:when you get a new data set with a second accel, delete this
+
+[bitsToFTSS] = accelCalib(accelData);
+    
+% apply scale and zero offset corrections to air data system accel
+adsAccel(:,1) = bitsToFTSS(1)*accelData(:,1)+bitsToFTSS(4);
+adsAccel(:,2) = bitsToFTSS(2)*accelData(:,2)+bitsToFTSS(5);
+adsAccel(:,3) = bitsToFTSS(3)*accelData(:,3)+bitsToFTSS(6);
+
+%calculate rotation matrix
+[adsR] = alignCalib(accel,adsAccel);
 
 % apply scale and zero offset corrections to gyro
 scale = 1/14.375; %todo: calibrate this
@@ -85,33 +115,22 @@ output.gyroX.data = scale*(input.gyroX.data-gyroXZero);
 output.gyroY.data = scale*(input.gyroY.data-gyroYZero);
 output.gyroZ.data = scale*(input.gyroZ.data-gyroZZero);
 
-% set units
-output.accelX.units = 'ft/s^2';
-output.accelY.units = 'ft/s^2';
-output.accelZ.units = 'ft/s^2';
-
 output.gyroX.units = 'deg/s';
 output.gyroY.units = 'deg/s';
 output.gyroZ.units = 'deg/s';
-
-%set noise values %todo:what are units? what should they be?
-% can we take each section, after scaling, and take noise as
-% (std(x-mean(x)), which would give units of ft/s/s/
-output.accelX.noise = rmsAccel;
-output.accelY.noise = rmsAccel;
-output.accelZ.noise = rmsAccel;
 
 output.gyroX.noise = scale*std(M(:,5)); %gyro noise units are in deg/s, this should be correct
 output.gyroY.noise = scale*std(M(:,6));
 output.gyroZ.noise = scale*std(M(:,7));
 else
-    warning('No accelerometer/gyro calibration file selected. No calibration will be performed, and noise will be set to zero.');
+    warning('No accelerometer/gyro calibration file selected. No calibration will be performed, noise will be set to zero, and perfect alignment will be assumed.');
 output.accelX.noise = 0;
 output.accelY.noise = 0;
 output.accelZ.noise = 0;
 output.gyroX.noise = 0;
 output.gyroY.noise = 0;
 output.gyroZ.noise = 0;
+adsR = eye(3,3);
 end
 
 %% Magnetometers
