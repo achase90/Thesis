@@ -1,4 +1,3 @@
-%todo: add back in derivation of "drag polar"? Remove kalman filter section. Method section should be alright.
 \chapter{Method}
 \label{background-information}
 Some basic assumptions will apply throughout the modeling of dynamics in this paper. They are as follows:
@@ -71,14 +70,16 @@ The applied forces on the vehicle for drag polar estimation are
 \nomenclature{$\vec{F}_A$}{Aerodynamic forces}
 \nomenclature{$\vec{F}_G$}{Gravitational forces}
 \noindent
-where $\vec{F_{A}}$ accounts for all aerodynamic forces acting on the vehicle, $\vec{F_{G}}$ is the force due to gravity, and $\vec{F_{T}}$ accounts for forces from the propulsion system, which are assumed to be zero.\\
-Aerodynamic forces can be described in the wind reference frame. In general, they are defined as
+where $\vec{F_{A}}$ accounts for all aerodynamic forces acting on the vehicle, $\vec{F_{G}}$ is the force due to gravity, and $\vec{F_{T}}$ accounts for forces from the propulsion system, which are assumed to be zero.
+
+The aerodynamic forces lift and drag are described in the wind reference frame. In general, they are defined as
 
 \begin{align}
 \vec{F}_{A_w} &= D \hat{i}_w+Y \hat{j}_w+L \hat{k}_w
 \end{align}
 \noindent
-where $D$ is drag force, $Y$ is side force, and $L$ is lift force.\\
+where $D$ is drag force, $Y$ is side force, and $L$ is lift force.
+
 The gravitational force on the vehicle acts in the $+z_{NED}$ direction and is equal in magnitude to the vehicle's weight $W$, leading to
 \begin{align}
 \vec{F}_{G_{NED}} &= 0\hat{i}_{NED}+0\hat{j}_{NED}+W\hat{k}_{NED}
@@ -97,7 +98,7 @@ m(\vec{a}_b - \vec{g}) &= \vec{F}_{A_b}
 \label{accelerometerEqn}
 \end{align}
 
-Then, it is noted that a body mounted accelerometer will not measure $\vec{a}_b$, but will instead measure the quantity $\vec{a}_b - \vec{g}$. This means Equation \ref{accelerometerEqn} is really
+Then, it is noted that a body mounted accelerometer will not measure $\vec{a}_b$, but will instead measure the quantity $\vec{g} - \vec{a}_b$. This means Equation \ref{accelerometerEqn} is really
 
 \begin{align}
 \label{plantEqn1}
@@ -133,7 +134,7 @@ where $\bar{H}$ is the output matrix and $v_k$ is measurement noise.\\
 The Kalman filter operates in a predictor-corrector manner, where the predictor step is often called the \textit{a priori} estimate, and the corrector step is often called the \textit{a posteriori} estimate. The \textit{a priori} state estimate is calculated using prior states and inputs, while assuming no process noise
 
 \begin{align}
-\hat{x}^-_k &= \bar{A}\hat{x}_{k-1}+\bar{B}u_{k-1}
+x^-_k &= \bar{A}x_{k-1}+\bar{B}u_{k-1}
 \end{align}
 
 The \textit{a priori} estimate of the covariance matrix is projected in a similar manner
@@ -150,11 +151,11 @@ The Kalman gain is calculated by combining the predicted, \textit{a priori} cova
 \bar{K}_k &=\bar{P}^-_k\bar{H}^T(\bar{H}\bar{P}^-_k\bar{H}^T + \bar{R})^{-1}
 \end{align}
 
-This optimal Kalman gain is then used to estimate the \textit{a posteriori} estimate of the state and covariance matrix
+This optimal Kalman gain is then used to estimate the \textit{a posteriori} estimate of both the state and the covariance matrix
 
 \begin{align}
 \label{kalmanStateUpdate}
-\hat{x}_k &=\hat{x}^-_k+\bar{K}_k(z_k-y_k)
+x_k &=x^-_k+\bar{K}_k(z_k-y_k)
 \end{align}
 
 \begin{align}
@@ -163,7 +164,7 @@ This optimal Kalman gain is then used to estimate the \textit{a posteriori} esti
 \noindent
 where $y_k$ is the predicted value of $z_k$ found using the output matrix $\bar{H}$ and the \textit{a priori} state estimate
 \begin{align}
-y_k &= \bar{H}\hat{x}^-_k.
+y_k &= \bar{H}x^-_k.
 \end{align}
 Note that Equation \ref{kalmanStateUpdate} is essentially a weighted average of a measured state and an expected state. The weighting is the Kalman gain, which is related to the ratio of confidence in the measured state and the expected state. For a 1-D case with equal confidence between the measured state and the expected state, the Kalman gain $\bar{K}_k = 0.5$, and the Kalman filter becomes a simple mean.
 
@@ -177,31 +178,34 @@ x_k &= f(x_{k-1},u_{k-1},w_{k-1})\\
 z_k &= h(x_k,v_k)
 \end{align}
 
-The process noise $w_{k-1}$ and measurement noise $v_k$ are not known (or the Kalman filter would not be necessary), so the states are approximated assuming both noise sources are zero.
+The process noise $w_{k-1}$ and measurement noise $v_k$ are not known (or the Kalman filter would not be necessary), so the states are approximated assuming both noise sources are zero, as shown in Equation \ref{eqn:nonlinearApprox}
 
 \begin{align}
-\tilde{x}_k &= f(\hat{x}_{k-1},u_{k-1},0)\\
+\label{eqn:nonlinearApprox}
+\tilde{x}_k &= f(x_{k-1},u_{k-1},0)\\
 \tilde{z}_k &= h(\tilde{x}_k,0)
 \end{align}
+\noindent
+where $\tilde{x}_k$ is the approximate state vector and $\tilde{z}_k$ is the approximate measurement vector.
 
 The actual states are related to the approximate states by
 
 \begin{align}
-x_k &\approx\tilde{x}_k+\bar{A}(x_k-\hat{x}_{k-1})+\bar{W}w_{k-1}\\
-z_k &\approx\tilde{z}_k+\bar{H}(x_k-\tilde{x}_{k-1})+\bar{V}v_k
+x_k &\approx\tilde{x}_k+\bar{A}(x_k-x_{k-1})+\bar{W}w_{k-1}\\
+z_k &\approx\tilde{z}_k+\bar{H}(x_k-x_{k-1})+\bar{V}v_k
 \end{align}
 \noindent
 where  the matrices $\bar{A}$, $\bar{W}$, $\bar{H}$, and $\bar{V}$ represent the different Jacobian matrices:
 \begin{align}
-\bar{A} &= \frac{\partial f_i}{\partial x_j}(\hat{x}_{k-1},u_{k-1},0)\\
-\bar{W} &= \frac{\partial f_i}{\partial w_j}(\hat{x}_{k-1},u_{k-1},0)\\
-\bar{H} &= \frac{\partial h_i}{\partial x_j}(\hat{x}_{k},0)\\
-\bar{V} &= \frac{\partial h_i}{\partial v_j}(\hat{x}_{k},0).
+\bar{A} &= \frac{\partial f_i}{\partial x_j}(x_{k-1},u_{k-1},0)\\
+\bar{W} &= \frac{\partial f_i}{\partial w_j}(x_{k-1},u_{k-1},0)\\
+\bar{H} &= \frac{\partial h_i}{\partial x_j}(x_{k},0)\\
+\bar{V} &= \frac{\partial h_i}{\partial v_j}(x_{k},0).
 \end{align}
 
 The Extended Kalman filter uses these linearized equations to perform the same process as the linear Kalman filter. Again, the first step is to calculate the \textit{a priori} estimate of the state and the covariance matrix
 \begin{align}
-\hat{x}^-_k &=f(\hat{x}_{k-1},u_{k-1},0)\\
+x^-_k &=f(x_{k-1},u_{k-1},0)\\
 \bar{P}^-_k  &= \bar{A}_k\bar{P}_{k-1}\bar{A}^T_{k-1}+\bar{W}_k\bar{Q}_{k-1}\bar{W}^T_k.
 \end{align}
 
@@ -213,7 +217,7 @@ Next, the Kalman gain is calculated
 The Kalman gain is then used to calculate the \textit{a posteriori} estimate of the state and covariance matrix
 
 \begin{align}
-\hat{x}_k &=\hat{x}^-_{k}+\bar{K}_k(z_k-y_k)\\
+x_k &=x^-_{k}+\bar{K}_k(z_k-y_k)\\
 \label{kalmanVariance}
 \bar{P}_k &=(\bar{I}-\bar{K}_k\bar{H}_k)\bar{P}^-_k
 \end{align}
@@ -221,7 +225,7 @@ The Kalman gain is then used to calculate the \textit{a posteriori} estimate of 
 where $y_k$ is, as in the linear case, the predicted value of $z_k$, but calculated using the nonlinear output function and the \textit{a priori} state estimate
 
 \begin{align}
-y_k &= h(\hat{x}^-_k,0).
+y_k &= h(x^-_k,0).
 \end{align}
 
 Unlike the linear Kalman filter, the Extended Kalman filter is not proven to be optimal. However, it has been utilized for a wide range of applications with excellent results.

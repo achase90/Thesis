@@ -23,14 +23,14 @@
 #define gpsBaud 57600
 #define pressBaud 19200
 #define sdChipSelect 53
-#define pwmPin0 38
-#define pwmPin1 39
-#define pwmPin2 40
-#define pwmPin3 41
-#define pwmPin4 42
-#define pwmPin5 43
-#define pwmPin6 44
-#define pwmPin7 45
+#define pwmPin0 37
+#define pwmPin1 38
+#define pwmPin2 39
+#define pwmPin3 40
+#define pwmPin4 41
+#define pwmPin5 42
+#define pwmPin6 43
+#define pwmPin7 44
 
 volatile unsigned long trig0,trig1,trig2,trig3,trig4,trig5,trig6,trig7=0;
 volatile unsigned long pwm0,pwm1,pwm2,pwm3,pwm4,pwm5,pwm6,pwm7 = 0;

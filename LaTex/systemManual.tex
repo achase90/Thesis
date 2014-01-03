@@ -25,6 +25,8 @@ Auxiliary (2/2)& D44\\
 
 If the additional digital pin-outs are being use for measuring servo signals, the ``+V'' jumper should not have a jumper on it. If using the digital pin-outs to run digital sensors or command servos, place the jumper on the appropriate voltage level setting.
 
+The data acquisition system is powered through the barrel jack on the Arduino Due. The recommended operating voltage is between 7V and 12V, with an absolute maximum of 16V. The power can be supplied using either a battery dedicated to the data acquisition system, or through a BEC from the ESC. If using the ESC's BEC, set the BEC output somewhere between 7V and 12V. \textbf{CRITICAL:} ensure the red wire from the ESC does not pass to the receiver, as it is over-voltage for standard R/C equipment.\nomenclature[A]{ESC}{Electronic speed controller}\nomenclature[A]{BEC}{Battery elimination circuit}
+
 The pressure board can be placed anywhere in the vehicle, as long as it can be connected to the main board. The pressure sensors should be attached to the five-hole probe as follows:
 
 \begin{table}[ht]
@@ -34,9 +36,9 @@ The pressure board can be placed anywhere in the vehicle, as long as it can be c
 \hline\hline
  Pressure Sensor & Port A & Port B & Measurement\\
 \hline
-0 & Tube 4 & Tube 5 & $\beta$ \\
-1 & Tube 1 & Tube 6 & $q_{\infty}$\\
-2 & Tube 2 & Tube 3 & $\alpha$\\ 
+0 & Tube 5 & Tube 4 & $\beta$ \\
+1 & Tube 6 & Tube 1 & $q_{\infty}$\\
+2 & Tube 3 & Tube 2 & $\alpha$\\ 
 3 & n/a & Tube 6 & $P_S$\\
 \hline
 \end{tabular}
@@ -64,7 +66,7 @@ The pre-flight procedure in this section must be completed in addition to all pr
 \item With the transmitter turned on, power on the receiver.
 \item Plug in the micro-USB cable into the main data acquisition board.
 \item Ensure the micro-SD card is empty and formatted as FAT32, then insert it into the main data acquisition board.
-\item Plug in the main data acquisition system's battery pack.
+\item Plug in the main data acquisition system's battery pack or the BEC. \textbf{CRITICAL:} ensure the red wire does not connect the BEC to the receiver.
 \item Plug the pressure sensor board into the main data acquisition board.
 \item Plug in the air data system's RJ-25.
 \item Upload the calibration routine to the main board, and follow the prompts to calibrate the gyroscope, accelerometer, and magnetometers.
@@ -81,12 +83,13 @@ The pre-flight procedure in this section must be completed in addition to all pr
 The data acquisition system is now ready for flight.
 
 \section{Flight test plan}
-Yo bro, glide around for a while. change speeds and stuff.
+When using the data acquisition system for drag polar estimation, a better model estimate is possible with proper flight maneuvers. The main technique to improve the model is to vary speeds as much as possible, which allows more of the drag polar to be flown. Multiple glides that begin at the highest speed possible should be completed. To achieve the highest initial gliding speed, the aircraft should be put into a dive at full throttle, with plenty of available altitude. Throttle should then be cut, and the dive should briefly continue. After a few seconds of diving, the aircraft should be leveled off and altitude should be maintained, until the vehicle stalls. Repeating this process will provide a large sweep of the flight envelope.
+
+Inverted flight can also help fill out the section of the drag polar that occurs below $C_{L_{min}}$. However, inverted flight should occur at high speeds, to avoid the nonlinear section of the inverted airfoil.
 
 \section{Post-Flight}
 Immediately after the vehicle lands, the vehicle's propulsion pack should be unplugged. Next, unplug the data acquisition system's battery pack, remove the micro-SD card, and save the data to a computer. Optionally, after the flight is complete, a second round of zero offset calibration data may be acquired. This set ensures that any drift that occurred during the flight is accounted for.
 
-%Let's talk about how to use that sweet GUI of yours.
 Once the data is saved to a computer, the data analysis GUI can be used to quickly process the data. \nomenclature[A]{GUI}{Graphical user interface} The user interface can estimate a drag polar using the following steps:
 \begin{enumerate}
 \item Run \texttt{fileReader.m}.

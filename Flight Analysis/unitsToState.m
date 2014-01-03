@@ -5,55 +5,53 @@
 
 function [output] = unitsToState(input)
 
+%% copying
 %don't blindly copy input to output since we don't want most of the data in
 %the input struct.
-output.time.data = input.time.data;
-output.time.units = input.time.units;
+output.time = input.time;
 
-%% Pressures
+%% Qbar and rho
 
-output.qbar.data = input.press0.data; %todo:check if this is the correct pressure transducer
-output.qbar.units = input.press0.units;
-output.qbar.noise = input.press0.noise; %todo:check if this is the correct pressure transducer
+output.qbar.data = input.press1.data;
+output.qbar.units = input.press1.units;
+output.qbar.noise = input.press1.noise;
 
 R = 287; %universal gas constant %todo:check units on this, they're not right
 output.rho.data = input.press3.data./(R*input.temperature.data);
 %todo: do error propagation to propagate press4 and temp to rho, the below
 %is BS
-output.rho.noise = input.press3.noise;
+output.rho.noise = sqrt((input.press3.noise/(R*input.temperature.data))^2+((input.press3.data./R*input.temperature.data^2)*input.temperature.noise)^2);
 output.rho.units = 'lb/ft^3';
 
+output.vinf.data = sqrt(2*output.qbar.data./output.rho.data);
+output.vinf.noise = sqrt((1./(output.rho.data.*output.vinf.data^3)*output.rho.noise)^2+(output.qbar.data./(output.vinf.data^3*output.rho.data^2)*output.qbar.noise)^2);
 %% Wind Angles
 % the same functions you replace the zeros with apply to both data and
 % noise
-output.alpha.data = zeros(size(input.accelX.data));
-output.beta.data = zeros(size(input.accelX.data));
-
+[output.alpha.data,output.beta.data,output.alpha.noise,output.beta.noise] = pressureToAngles(input);
 output.alpha.units = 'deg';
 output.beta.units = 'deg';
 
-output.alpha.noise = 0;
-output.beta.noise = 0;
-
+%todo:calc alignment calibration for air data system
 
 %% Euler Angles
-output.roll.data=zeros(size(input.accelX.data));
-output.pitch.data=zeros(size(input.accelX.data));
-output.yaw.data=zeros(size(input.accelX.data));
-
-output.roll.units='deg';
-output.pitch.units='deg';
-output.yaw.units='deg';
-
-output.roll.noise=0;
-output.pitch.noise=0;
-output.yaw.noise=0;
+% output.roll.data=zeros(size(input.accelX.data));
+% output.pitch.data=zeros(size(input.accelX.data));
+% output.yaw.data=zeros(size(input.accelX.data));
+% 
+% output.roll.units='deg';
+% output.pitch.units='deg';
+% output.yaw.units='deg';
+% 
+% output.roll.noise=0;
+% output.pitch.noise=0;
+% output.yaw.noise=0;
 
 %% Angular Rates
 
-output.rollRate.data=zeros(size(input.accelX.data));
-output.pitchRate.data=zeros(size(input.accelX.data));
-output.yawRate.data=zeros(size(input.accelX.data));
+output.rollRate.data = -input.gyroY.data;
+output.pitchRate.data= -input.gyroX.data;
+output.yawRate.data = -input.gyroZ.data;
 
 output.rollRate.units='deg/s';
 output.pitchRate.units='deg/s';

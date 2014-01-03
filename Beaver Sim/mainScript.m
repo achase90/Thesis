@@ -40,11 +40,14 @@ errorBnd = errorProp(state,plane,noise);
 [pFit] = polyfit(CL,CD,2);
 [bRegress,bIntRegress]=regress(CD,[ones(length(CL),1) CL CL.^2],CI);
 [bRobust,statsRobust] = robustfit([CL CL.^2],CD);
+[bKalman,sigmaKalman] = polarKalman([CD CL],state,plane,noise);
 
 fprintf(' Actual coefficients : \n')
 fprintf('%15.4f %15.4f %15.4f\n\n',[KCL2 0 CD0]);
-fprintf(' Estimated coefficients : \n')
+fprintf(' Estimated coefficients using polyfit : \n')
 fprintf('%15.4f %15.4f %15.4f\n\n',[bRegress(3) bRegress(2) bRegress(1)]);
+fprintf(' Estimated coefficients using Kalman : \n')
+fprintf('%15.4f %15.4f %15.4f\n\n',[bKalman(3) bKalman(2) bKalman(1)]);
 fprintf(' Estimated coefficients using ''robustfit'' function: \n')
 fprintf('%15.4f %15.4f %15.4f\n\n',[bRobust(3) bRobust(2) bRobust(1)]);
 fprintf(' %3.1f%% CI from ''regress'' function : \n',100*(1-CI))
@@ -54,11 +57,15 @@ fprintf('%9.4f/%6.4f %15.4f/%6.4f %15.4f/%6.4f\n\n',[bRobust(3)+1.96*statsRobust
     bRobust(2)+1.96*statsRobust.se(2) bRobust(2)-1.96*statsRobust.se(2) bRobust(1)+1.96*statsRobust.se(1) bRobust(1)-1.96*statsRobust.se(1)]);
 fprintf(' Percent error in estimated coefficients: \n')
 fprintf('%15.4f %15.4f %15.4f\n\n',[100*(KCL2-pFit(1))/pFit(1) 100*pFit(2) 100*(CD0-pFit(3))/pFit(3)]);
+fprintf(' Percent error in estimated coefficients from Kalman: \n')
+fprintf('%15.4f %15.4f %15.4f\n\n',[100*(KCL2-bKalman(3))/bKalman(3) 100*bKalman(2) 100*(CD0-bKalman(1))/bKalman(1)]);
 fprintf(' Percent error in estimated coefficients from ''robustfit'': \n')
 fprintf('%15.4f %15.4f %15.4f\n\n',[100*(KCL2-bRobust(3))/bRobust(3) 100*bRobust(2) 100*(CD0-bRobust(1))/bRobust(1)]);
 CLvec = linspace(min(CL),max(CL));
 CDvec = polyval(pFit,CLvec);
 CDvecRobust = polyval(flipud(bRobust),CLvec);
+CDvecKalman = polyval(flipud(bKalman),CLvec);
+
 %% Plots
 
 marksize=100;
@@ -74,15 +81,18 @@ set(f,'name','Polar Comp','numbertitle','off');
 hold on
 hSim = scatter(simCD,simCL,marksize,'or');
 hPoints = scatter(CD,CL,marksize,'xb');
-hFit = plot(CDvec,CLvec,'--k','linewidth',2);
-hFitRobust = plot(CDvecRobust,CLvec,'--g','linewidth',2);
+hFit = plot(CDvec,CLvec,'--c','linewidth',2);
+hFitRobust = plot(CDvecRobust,CLvec,'--k','linewidth',2);
+hFitKalman = plot(CDvecKalman,CLvec,'--g','linewidth',2);
 xlabel('C_D [-]')
 ylabel('C_L [-]')
 % title('Drag Polar with Error Bounds')
 % title('Drag Polar with Zero Noise')
 % legend([hSim hPoints],'Simulator Input','Output from EoMs','location','best')
 % legend([hSim hFit hPoints hVert],'Simulink','Curve Fit','EoMs','Error','location','southeast');
-legend([hSim hPoints hFit hFitRobust],'System Input','Calculated','OLS Regression','Robust Regression','location','best');
+% legend([hSim hPoints hFit hFitRobust],'System Input','Calculated','OLS Regression','Robust Regression','location','best');
+legend([hSim hPoints hFit hFitRobust hFitKalman],'System Input','Calculated','OLS Regression','Robust Regression','Kalman','location','best');
+
 uistack(hSim,'up');
 % legend([hPoints hHoriz],'Simulated Data','Error Bars');
 xlim([0 .13]);

@@ -1,10 +1,10 @@
-function regCoeffs = polarKalman(coeffs,state,plane,noise)
+function [regCoeffs,covar] = polarKalman(coeffs,state,plane,noise)
 
 %%
 
-xHat(:,1) = [.04;.04];
+xHat(:,1) = [.04;.0;0.04];
 
-P = eye(2,2);
+P = eye(3,3);
 
 Q = zeros(size(P));
 
@@ -14,7 +14,7 @@ Q = zeros(size(P));
 
 for i = 2:length(coeffs)
 
-    A = eye(2,2);
+    A = eye(3,3);
     
     %% Estimate current state based on previous observed state
     xHat_ = A*xHat(:,i-1);
@@ -22,7 +22,7 @@ for i = 2:length(coeffs)
     %calculate current measurement noise estimate for state, based on
     R = 1e-2*eye(size(A));
     
-    R = [errorBnd(i,1) 0;0 errorBnd(i,3)];
+    R = [errorBnd(i,1) 0 ;0 errorBnd(i,3)];
     % Calculate variance propagation
     W = eye(size(A));
     
@@ -39,4 +39,5 @@ for i = 2:length(coeffs)
     P(:,:,i) = (eye(size(P_))-K*H)*P_;
 end
 
-regCoeffs = xHat;
+regCoeffs = xHat(:,end);
+covar = squeeze(P(:,:,end));

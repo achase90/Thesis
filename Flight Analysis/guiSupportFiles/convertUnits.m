@@ -10,15 +10,19 @@
 function output = convertUnits(input)
 %convert all data to doubles
 [input] = dataToDouble(input);
+
 %todo:remove all conversions to double in every file except this one.
 output = input; %copy input structure to output, since it's largely the same
-output.time.data = output.time.data/1e3;
+output.time.data = input.time.data/1e3;
 
 %% Pressure and temperature
-scaleD = 5/8191; %todo:calc this (5"H20/(2^13-1))
-scaleB = (1100-600)/(8191); %todo:calc this
-barMeasured = 1000; %todo: add an input box for atmospheric pressure and temperature
-tMeasured = 70;
+press0Scale = 5/8191; %todo:calibrate this (5"H20/(2^13-1))
+press1Scale = press0Scale; %todo:calibrate this
+press2Scale = press0Scale; %todo:calibrate this
+
+scaleBaro = (1100-600)/(8191); %todo:calc this
+baroMeasured = 1000; %todo: add an input box for atmospheric pressure and temperature
+tempMeasured = 70;
 
 [PressCalibFile,PressCalibPath] = uigetfile('*.clb','Select pressure calibration file');
 if ischar(PressCalibFile)
@@ -26,28 +30,28 @@ if ischar(PressCalibFile)
     M = dlmread([PressCalibPath PressCalibFile],'\t',2,0);
     
 % calc zero offset
-zero1 = mean(M(:,1));
-zero2 = mean(M(:,2));
-zero3 = mean(M(:,3));
-barZero = mean(M(:,4));
-tZero = mean(M(:,5));
+press0Zero = mean(M(:,1));
+press1Zero = mean(M(:,2));
+press2Zero = mean(M(:,3));
+baroCalib = mean(M(:,4));
+tempCalib = mean(M(:,5));
 
 % scale and remove zero offset
-output.press0.data = scaleD*(input.press0.data-zero1);
-output.press1.data = scaleD*(input.press1.data-zero2);
-output.press2.data = scaleD*(input.press2.data-zero3);
+output.press0.data = press0Scale*(input.press0.data-press0Zero);
+output.press1.data = press1Scale*(input.press1.data-press1Zero);
+output.press2.data = press2Scale*(input.press2.data-press2Zero);
 %scale barometric pressure then add zero offset to match known initial pressure
-output.press3.data = scaleB*(input.press3.data-barZero)+barMeasured; 
+output.press3.data = scaleBaro*(input.press3.data-baroCalib)+baroMeasured; 
 %scale temperature then add zero offset to match known initial temperature
-%todo: convert from 1000*degF to degF
-output.temperature.data = output.temperature.data/1000-tZero+tMeasured;
+%convert from 1000*degF to degF
+output.temperature.data = input.temperature.data/1000-tempCalib+tempMeasured;
 
 % set noise values
-output.press0.noise = std(M(:,1)-zero1);
-output.press1.noise = std(M(:,2)-zero2);
-output.press2.noise = std(M(:,3)-zero3);
-output.press3.noise = std(M(:,4)-barZero);
-output.temperature.noise = std(M(:,5)-tZero);
+output.press0.noise = std(M(:,1)-press0Zero);
+output.press1.noise = std(M(:,2)-press1Zero);
+output.press2.noise = std(M(:,3)-press2Zero);
+output.press3.noise = std(M(:,4)-baroCalib);
+output.temperature.noise = std(M(:,5)-tempCalib);
 else
         warning('No pressure calibration file selected. No calibration will be performed, and noise will be set to zero.');
 output.press0.noise = 0;
@@ -66,9 +70,11 @@ if ischar(accelGyroCalibFile)
     [bitsToFTSS,rmsAccel] = accelCalib(M);
     
 % apply scale and zero offset corrections to accel
-output.accelX.data = input.accelX.data*bitsToFTSS(1)+bitsToFTSS(4);
-output.accelY.data = input.accelY.data*bitsToFTSS(2)+bitsToFTSS(5);
-output.accelZ.data = input.accelZ.data*bitsToFTSS(3)+bitsToFTSS(6);
+% todo:check if scale factor applies before or after removing zero offset
+% todo:check if offset is positive or negative
+output.accelX.data = bitsToFTSS(1)*(input.accelX.data+bitsToFTSS(4));
+output.accelY.data = bitsToFTSS(2)*(input.accelY.data+bitsToFTSS(5));
+output.accelZ.data = bitsToFTSS(3)*(input.accelZ.data+bitsToFTSS(6));
 
 % apply scale and zero offset corrections to gyro
 scale = 1/14.375; %todo: calibrate this
@@ -83,13 +89,14 @@ output.gyroZ.data = scale*(input.gyroZ.data-gyroZZero);
 output.accelX.units = 'ft/s^2';
 output.accelY.units = 'ft/s^2';
 output.accelZ.units = 'ft/s^2';
+
 output.gyroX.units = 'deg/s';
 output.gyroY.units = 'deg/s';
 output.gyroZ.units = 'deg/s';
 
 %set noise values %todo:what are units? what should they be?
 % can we take each section, after scaling, and take noise as
-% (sstd(x-mean(x)), which would give units of ft/s/s/
+% (std(x-mean(x)), which would give units of ft/s/s/
 output.accelX.noise = rmsAccel;
 output.accelY.noise = rmsAccel;
 output.accelZ.noise = rmsAccel;
@@ -113,6 +120,7 @@ HMR2300 = [input.magX.data input.magY.data input.magZ.data];
 HMC5883 = [input.hmcX.data input.hmcY.data input.hmcZ.data];
 
 % load calibration file
+%todo:leave this as is or comment out and stick with bits?
 [magCalibFile,magCalibPath] = uigetfile('*.clb','Select magnetometer calibration file');
 if ischar(magCalibFile)
 [HMR2300,HMC5883,MHmrToHmc,rmsHMR2300,rmsHMC5883] = calibMags(HMR2300,HMC5883,[magCalibPath magCalibFile]);
@@ -125,6 +133,7 @@ end
 output.magX.data = HMR2300(:,1);
 output.magY.data = HMR2300(:,2);
 output.magZ.data = HMR2300(:,3);
+
 output.magX.units = 'rad';
 output.magY.units = 'rad';
 output.magZ.units = 'rad';

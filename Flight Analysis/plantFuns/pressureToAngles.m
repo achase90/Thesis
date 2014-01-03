@@ -1,17 +1,22 @@
-function [alpha,beta] = pressureToAngles(data)
+function [alpha,beta,alphaNoise,betaNoise] = pressureToAngles(data)
 
 load probeCalibData.mat
 
-% P16 = P1 - P6;
-% P23 = P2 - P6;
-% P45 = P3 - P6;
-%TODO: check if these are mapping to the correct pressure transducers
-%TEMPORARY
-cAlpha = data.press0.data./data.press1.data;
-cBeta = data.press0.data./data.press1.data;
-%TEMPORARY
-cAlpha = rand(size(data.press0.data));
-cBeta = rand(size(data.press0.data));
+%{
+Pressure 0 : beta
+Pressure 1 : q
+Pressure 2 : alpha
+Pressure 3 : static
+%}
 
-alpha = interp1(cAlphaCalib,alphaCalib,cAlpha);
+cAlpha = data.press2.data./data.press1.data; %pressure coefficients
+cBeta = data.press0.data./data.press1.data;
+
+alpha = interp1(cAlphaCalib,alphaCalib,cAlpha); %lookup table
 beta = interp1(cBetaCalib,betaCalib,cBeta);
+
+cAlphaNoise = sqrt((data.press2.noise./data.press1.data)^2+((data.press2.noise./data.press1.data.^2)*data.press1.noise)^2); %pressure coefficients
+cBetaNoise = sqrt((data.press0.noise./data.press1.data)^2+((data.press0.noise./data.press1.data.^2)*data.press1.noise)^2); %pressure coefficients
+
+alphaNoise = interp1(cAlphaCalib,alphaCalib,cAlphaNoise); %lookup table
+betaNoise = interp1(cBetaCalib,betaCalib,cBetaNoise);

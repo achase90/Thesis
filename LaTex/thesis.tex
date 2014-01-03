@@ -7,6 +7,8 @@
 \usepackage{listings}
 \usepackage{float}
 \usepackage{titlesec}
+\usepackage{nomencl}
+\usepackage{multicol}
 
 \title{FLIGHT TESTING SMALL UAVS FOR AERODYNAMIC PARAMETER ESTIMATION}
 \author{Adam Chase}
@@ -37,6 +39,8 @@
   \let\oldcite\cite
   \renewcommand{\cite}[1]{\textsuperscript{\oldcite{#1}}}
   
+\renewcommand*\nompreamble{\begin{multicols}{2}}
+\renewcommand*\nompostamble{\end{multicols}}
 
 \begin{document}
 
@@ -50,14 +54,11 @@
 
 	\pdfbookmark[0]{Abstract}{abs} % Sets a PDF bookmark for the abstract
 \begin{abstract}
-
-
+\input{abstract}
 \end{abstract}
 
 \begin{acknowledgements}
-Friends
-Dr. McDonald
-Family and parents
+\input{ack}
 \end{acknowledgements}
 
 
@@ -69,17 +70,17 @@ Family and parents
 
 \listoffigures
 
+\printnomenclature
+
 \end{frontmatter}
 
 \pagestyle{plain}
-
 
 \renewcommand{\baselinestretch}{1.66}
 
 
 
 % ------------- Main chapters here --------------------
-
 
 \input{intro}
 \input{method}

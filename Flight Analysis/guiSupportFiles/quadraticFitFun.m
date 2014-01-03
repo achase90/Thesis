@@ -37,6 +37,8 @@ function handles = quadraticFitFun(handles)
             %         xLimits = get(handles.dataAxis,'xlim');
             %         yLimits = get(handles.dataAxis,'ylim');
             set(handles.quadFormula,'String',regStr,'foregroundcolor',[1 1 1]);
+            %todo: redo this to use robustfit in gui window and all
+            %regressions and confidence intervals output to the command window
             end
         end
     end

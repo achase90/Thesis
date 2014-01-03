@@ -1,25 +1,15 @@
 clear all,close all,clc
 
-load simData_5_9_2013.mat
+load simData_12_10_2013.mat
 
 
 run dataReadin
 
 %% Noise settings
-% noise.eulerAngles = 2; %deg
-% noise.euleRates = .1; %deg/s
-% noise.windAngles = 2; %deg
-% noise.accel = 1; %ft/s/s
-% noise.qbar = .25; %psf
-% noise.gravity = -.01; %ft/s/s
-noise.eulerAngles = .01; %deg
-noise.eulerRates = .0875; %deg/s
-noise.windAngles = 2; %deg
-noise.accel = .0483; %ft/s/s
-noise.qbar = 0; %psf
-noise.gravity = .01; %ft/s/s
-noise.W = 0.001;
-noise.GPSSpeed=.1*3.28;
+noise.alpha = 0.25*pi/180; % calibrated accuracy of 1% FS (I have better) in degrees converted rads
+noise.beta = 0.25*pi/180; % calibrated accuracy of 1% FS (I have better) in degrees converted rads
+noise.accelerometer =  0.0214;
+noise.qbar = .26; % 0.5% of 10" H20 to psf
 
 % state.gravity = state.gravity+noise.gravity;
 state = addNoise(state,noise);

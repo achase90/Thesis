@@ -1,9 +1,12 @@
+\nomenclatureentry{aUAS@[{UAS}]\begingroup Unmanned aerial system\nomeqref {0.0.0}|nompageref}{iv}
+\nomenclatureentry{aR/C@[{R/C}]\begingroup Radio-controlled\nomeqref {0.0.0}|nompageref}{iv}
 \nomenclatureentry{aCFD@[{CFD}]\begingroup Computational fluid dynamics\nomeqref {1.0.0}|nompageref}{1}
 \nomenclatureentry{aINS@[{INS}]\begingroup Inertial navigation system\nomeqref {1.0.0}|nompageref}{2}
 \nomenclatureentry{a$\vec{F}_A$@[{$\vec{F}_A$}]\begingroup Aerodynamic forces\nomeqref {2.2.4}|nompageref}{7}
 \nomenclatureentry{a$\vec{F}_G$@[{$\vec{F}_G$}]\begingroup Gravitational forces\nomeqref {2.2.4}|nompageref}{7}
 \nomenclatureentry{aNED@[{NED}]\begingroup North east down frame\nomeqref {2.2.6}|nompageref}{7}
 \nomenclatureentry{a$\bar{R}^m_n$@[{$\bar{R}^m_n$}]\begingroup Rotation matrix from m to n\nomeqref {2.2.11}|nompageref}{8}
+\nomenclatureentry{AEKF@[{EKF}]\begingroup Extended Kalman filter\nomeqref {3.2.7}|nompageref}{17}
 \nomenclatureentry{a$\sigma$@[{$\sigma$}]\begingroup Standard deviation\nomeqref {4.2.1}|nompageref}{22}
 \nomenclatureentry{aDOF@[{DOF}]\begingroup Degree of freedom\nomeqref {5.0.0}|nompageref}{23}
 \nomenclatureentry{a$AR$@[{$AR$}]\begingroup Aspect ratio\nomeqref {5.2.1}|nompageref}{23}
@@ -11,23 +14,25 @@
 \nomenclatureentry{a$C_D$@[{$C_D$}]\begingroup Drag coefficient\nomeqref {5.2.1}|nompageref}{23}
 \nomenclatureentry{ae@[{e}]\begingroup Wing lift distribution\nomeqref {5.2.1}|nompageref}{23}
 \nomenclatureentry{a$C_{D_0}$@[{$C_{D_0}$}]\begingroup Parasite drag coefficient\nomeqref {5.2.1}|nompageref}{23}
-\nomenclatureentry{A$\alpha$@[{$\alpha$}]\begingroup Angle of attack\nomeqref {5.2.1}|nompageref}{23}
+\nomenclatureentry{G$\alpha$@[{$\alpha$}]\begingroup Angle of attack\nomeqref {5.2.1}|nompageref}{23}
 \nomenclatureentry{aOLS@[{OLS}]\begingroup Ordinary least squares\nomeqref {5.3.0}|nompageref}{25}
 \nomenclatureentry{a$K_2$@[{$K_2$}]\begingroup Drag polar coefficient for $C^2_L$ terms\nomeqref {5.3.0}|nompageref}{25}
-\nomenclatureentry{aI/O@[{I/O}]\begingroup Input-output\nomeqref {6.1.0}|nompageref}{26}
-\nomenclatureentry{aLiPo@[{LiPo}]\begingroup Lithium polymer\nomeqref {6.1.0}|nompageref}{27}
-\nomenclatureentry{aSPI@[{SPI}]\begingroup Serial peripheral interface\nomeqref {6.2.0}|nompageref}{27}
-\nomenclatureentry{aLGA@[{LGA}]\begingroup Land grid array\nomeqref {6.2.0}|nompageref}{27}
-\nomenclatureentry{aG@[{G}]\begingroup Gravity\nomeqref {6.2.0}|nompageref}{27}
-\nomenclatureentry{aPCB@[{PCB}]\begingroup Printed circuit board\nomeqref {6.2.0}|nompageref}{27}
-\nomenclatureentry{aRMS@[{RMS}]\begingroup Root mean squared\nomeqref {6.4.0}|nompageref}{29}
-\nomenclatureentry{aIC@[{IC}]\begingroup Integrated circuit\nomeqref {6.4.0}|nompageref}{29}
-\nomenclatureentry{aLCC@[{LCC}]\begingroup Leadless chip carrier\nomeqref {6.4.0}|nompageref}{30}
-\nomenclatureentry{aQFN@[{QFN}]\begingroup Quad-flats no-leads\nomeqref {6.5.0}|nompageref}{31}
-\nomenclatureentry{aI$^2$C@[{I$^2$C}]\begingroup Inter-integrated circuit\nomeqref {6.5.0}|nompageref}{31}
-\nomenclatureentry{aRPM@[{RPM}]\begingroup Rotations per minute\nomeqref {6.5.0}|nompageref}{32}
-\nomenclatureentry{aFSO@[{FSO}]\begingroup Full scale output\nomeqref {6.6.0}|nompageref}{35}
-\nomenclatureentry{aPWM@[{PWM}]\begingroup Pulse width modulation\nomeqref {6.8.0}|nompageref}{37}
-\nomenclatureentry{ACG@[{CG}]\begingroup Center of gravity\nomeqref {A.1.0}|nompageref}{42}
-\nomenclatureentry{A$P_S$@[{$P_S$}]\begingroup Static pressure\nomeqref {A.1.0}|nompageref}{42}
-\nomenclatureentry{AGUI@[{GUI}]\begingroup Graphical user interface\nomeqref {A.4.0}|nompageref}{45}
+\nomenclatureentry{aI/O@[{I/O}]\begingroup Input-output\nomeqref {6.1.0}|nompageref}{28}
+\nomenclatureentry{aLiPo@[{LiPo}]\begingroup Lithium polymer\nomeqref {6.1.0}|nompageref}{29}
+\nomenclatureentry{aSPI@[{SPI}]\begingroup Serial peripheral interface\nomeqref {6.2.0}|nompageref}{29}
+\nomenclatureentry{aLGA@[{LGA}]\begingroup Land grid array\nomeqref {6.2.0}|nompageref}{29}
+\nomenclatureentry{aG@[{G}]\begingroup Gravity\nomeqref {6.2.0}|nompageref}{29}
+\nomenclatureentry{aPCB@[{PCB}]\begingroup Printed circuit board\nomeqref {6.2.0}|nompageref}{29}
+\nomenclatureentry{aRMS@[{RMS}]\begingroup Root mean squared\nomeqref {6.4.0}|nompageref}{31}
+\nomenclatureentry{aIC@[{IC}]\begingroup Integrated circuit\nomeqref {6.4.0}|nompageref}{32}
+\nomenclatureentry{aLCC@[{LCC}]\begingroup Leadless chip carrier\nomeqref {6.4.0}|nompageref}{32}
+\nomenclatureentry{aQFN@[{QFN}]\begingroup Quad-flats no-leads\nomeqref {6.5.0}|nompageref}{34}
+\nomenclatureentry{aI$^2$C@[{I$^2$C}]\begingroup Inter-integrated circuit\nomeqref {6.5.0}|nompageref}{34}
+\nomenclatureentry{aRPM@[{RPM}]\begingroup Rotations per minute\nomeqref {6.5.0}|nompageref}{35}
+\nomenclatureentry{aFSO@[{FSO}]\begingroup Full scale output\nomeqref {6.6.0}|nompageref}{37}
+\nomenclatureentry{aPWM@[{PWM}]\begingroup Pulse width modulation\nomeqref {6.8.0}|nompageref}{38}
+\nomenclatureentry{ACG@[{CG}]\begingroup Center of gravity\nomeqref {A.1.0}|nompageref}{43}
+\nomenclatureentry{AESC@[{ESC}]\begingroup Electronic speed controller\nomeqref {A.1.0}|nompageref}{44}
+\nomenclatureentry{ABEC@[{BEC}]\begingroup Battery elimination circuit\nomeqref {A.1.0}|nompageref}{44}
+\nomenclatureentry{A$P_S$@[{$P_S$}]\begingroup Static pressure\nomeqref {A.1.0}|nompageref}{44}
+\nomenclatureentry{AGUI@[{GUI}]\begingroup Graphical user interface\nomeqref {A.4.0}|nompageref}{47}

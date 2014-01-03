@@ -1,9 +1,8 @@
 function [output] = filterData(input)
-output.time.data = input.time.data;
-output.time.units = input.time.units;
+output.time = input.time;
 
-% filter the Euler Anglers
-output = eulerKalman(input);
+% % filter the Euler Anglers
+% output = eulerKalman(input);
 
 % filter the wind angles
 output = windKalman(output);

@@ -168,16 +168,6 @@ Doug Weibel.
 \newblock Proof of concept test - extremely accurate 3d velocity measurement
   with a ublox 6t module., December 2012.
 
-\bibitem{penguinRC}
-Finwing Hobby.
-\newblock Finwing universal penguin fpv airplane.
-\newblock Website, 2012.
-
-\bibitem{Auman2001}
-Dahlke Auman and CW~Dahlke.
-\newblock Drag characteristics of ribbons.
-\newblock {\em AIAA Paper}, 2011, 2001.
-
 \bibitem{wvINSAirData}
 Matthew B. Rhudy; Trenton Larrabee; Haiyang Chao; Yu Gu;~Marcello Napolitano.
 \newblock Uav attitude, heading, and wind estimation using gps/ins and an air

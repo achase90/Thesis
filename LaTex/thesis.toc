@@ -1,6 +1,7 @@
 \contentsline {chapter}{TABLE OF CONTENTS}{vi}{figure.caption.1}
 \contentsline {chapter}{LIST OF TABLES}{viii}{chapter*.3}
 \contentsline {chapter}{LIST OF FIGURES}{ix}{chapter*.4}
+\contentsline {chapter}{Nomenclature}{xiii}{chapter*.5}
 \contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}
 \contentsline {chapter}{\numberline {2}Method}{3}{chapter.2}
 \contentsline {section}{\numberline {2.1}Reference Frames}{3}{section.2.1}
@@ -16,33 +17,33 @@
 \contentsline {section}{\numberline {5.1}Simulation Environment}{23}{section.5.1}
 \contentsline {section}{\numberline {5.2}Simulation Inputs}{23}{section.5.2}
 \contentsline {section}{\numberline {5.3}Simulation Results}{24}{section.5.3}
-\contentsline {chapter}{\numberline {6}Hardware}{26}{chapter.6}
-\contentsline {section}{\numberline {6.1}Flight Computer}{26}{section.6.1}
-\contentsline {section}{\numberline {6.2}Accelerometer}{27}{section.6.2}
-\contentsline {section}{\numberline {6.3}Vehicle Mass}{28}{section.6.3}
-\contentsline {section}{\numberline {6.4}Magnetometers}{29}{section.6.4}
-\contentsline {section}{\numberline {6.5}Gyroscope}{31}{section.6.5}
-\contentsline {section}{\numberline {6.6}Air Data System}{32}{section.6.6}
-\contentsline {section}{\numberline {6.7}GPS Receiver}{36}{section.6.7}
-\contentsline {section}{\numberline {6.8}Data Acquisition System Integration}{36}{section.6.8}
-\contentsline {chapter}{\numberline {7}Results}{38}{chapter.7}
-\contentsline {chapter}{\numberline {8}Summary}{40}{chapter.8}
-\contentsline {chapter}{\numberline {9}Future Work}{41}{chapter.9}
-\contentsline {chapter}{\numberline {A}Data Acquisition System Usage}{42}{APPENDIX.1.A}
-\contentsline {section}{\numberline {A.1}Integration}{42}{section.1.A.1}
-\contentsline {section}{\numberline {A.2}Pre-flight Procedure}{44}{section.1.A.2}
-\contentsline {section}{\numberline {A.3}Flight test plan}{45}{section.1.A.3}
-\contentsline {section}{\numberline {A.4}Post-Flight}{45}{section.1.A.4}
-\contentsline {section}{\numberline {A.5}Embedded Software Protocol}{46}{section.1.A.5}
-\contentsline {chapter}{\numberline {B}Wiring Schematics}{48}{APPENDIX.1.B}
-\contentsline {chapter}{\numberline {C}Flight Test Procedure}{51}{APPENDIX.1.C}
-\contentsline {section}{\numberline {C.1}Pre-Flight Preparation}{51}{section.1.C.1}
-\contentsline {subsection}{\numberline {C.1.1}Day Before Test}{51}{subsection.1.C.1.1}
-\contentsline {subsection}{\numberline {C.1.2}Day Of Test}{52}{subsection.1.C.1.2}
-\contentsline {section}{\numberline {C.2}Flying Field Procedure}{53}{section.1.C.2}
-\contentsline {section}{\numberline {C.3}Post-Flight}{54}{section.1.C.3}
-\contentsline {chapter}{\numberline {D}Sample System Ouput}{55}{APPENDIX.1.D}
-\contentsline {section}{\numberline {D.1}Sample System Ouput - Raw Data}{55}{section.1.D.1}
-\contentsline {section}{\numberline {D.2}Sample System Ouput - Units Data}{58}{section.1.D.2}
-\contentsline {section}{\numberline {D.3}Sample System Ouput - State Data}{66}{section.1.D.3}
-\contentsline {section}{\numberline {D.4}Sample System Ouput - Filtered Data}{75}{section.1.D.4}
+\contentsline {chapter}{\numberline {6}Hardware}{28}{chapter.6}
+\contentsline {section}{\numberline {6.1}Flight Computer}{28}{section.6.1}
+\contentsline {section}{\numberline {6.2}Accelerometer}{29}{section.6.2}
+\contentsline {section}{\numberline {6.3}Vehicle Mass}{31}{section.6.3}
+\contentsline {section}{\numberline {6.4}Magnetometers}{31}{section.6.4}
+\contentsline {section}{\numberline {6.5}Gyroscope}{34}{section.6.5}
+\contentsline {section}{\numberline {6.6}Air Data System}{35}{section.6.6}
+\contentsline {section}{\numberline {6.7}GPS Receiver}{37}{section.6.7}
+\contentsline {section}{\numberline {6.8}Data Acquisition System Integration}{38}{section.6.8}
+\contentsline {chapter}{\numberline {7}Results}{39}{chapter.7}
+\contentsline {chapter}{\numberline {8}Summary}{41}{chapter.8}
+\contentsline {chapter}{\numberline {9}Future Work}{42}{chapter.9}
+\contentsline {chapter}{\numberline {A}Data Acquisition System Usage}{43}{APPENDIX.1.A}
+\contentsline {section}{\numberline {A.1}Integration}{43}{section.1.A.1}
+\contentsline {section}{\numberline {A.2}Pre-flight Procedure}{46}{section.1.A.2}
+\contentsline {section}{\numberline {A.3}Flight test plan}{47}{section.1.A.3}
+\contentsline {section}{\numberline {A.4}Post-Flight}{47}{section.1.A.4}
+\contentsline {section}{\numberline {A.5}Embedded Software Protocol}{48}{section.1.A.5}
+\contentsline {chapter}{\numberline {B}Wiring Schematics}{50}{APPENDIX.1.B}
+\contentsline {chapter}{\numberline {C}Flight Test Procedure}{53}{APPENDIX.1.C}
+\contentsline {section}{\numberline {C.1}Pre-Flight Preparation}{53}{section.1.C.1}
+\contentsline {subsection}{\numberline {C.1.1}Day Before Test}{53}{subsection.1.C.1.1}
+\contentsline {subsection}{\numberline {C.1.2}Day Of Test}{54}{subsection.1.C.1.2}
+\contentsline {section}{\numberline {C.2}Flying Field Procedure}{55}{section.1.C.2}
+\contentsline {section}{\numberline {C.3}Post-Flight}{56}{section.1.C.3}
+\contentsline {chapter}{\numberline {D}Sample System Ouput}{57}{APPENDIX.1.D}
+\contentsline {section}{\numberline {D.1}Sample System Ouput - Raw Data}{57}{section.1.D.1}
+\contentsline {section}{\numberline {D.2}Sample System Ouput - Units Data}{60}{section.1.D.2}
+\contentsline {section}{\numberline {D.3}Sample System Ouput - State Data}{68}{section.1.D.3}
+\contentsline {section}{\numberline {D.4}Sample System Ouput - Filtered Data}{77}{section.1.D.4}
