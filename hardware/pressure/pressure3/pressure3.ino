@@ -36,7 +36,7 @@ Serial.print('\t');
 Serial.print('\t');
 
 	bytesIn = {0x00};
-	Serial3.print("U4F15-01-A213RC\r");
+	Serial3.print("UR13K01-04-A3RC\r");
 	nchars = Serial3.readBytesUntil('=',trash,80);
 	nchars = Serial3.readBytesUntil(0x20,bytesIn,20);
 	pressure = (int16_t)strtol(bytesIn,NULL,16);

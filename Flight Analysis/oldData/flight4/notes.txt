@@ -1,0 +1,4 @@
+Flight #4 on 1/24/14
+Temperature : 66.9 degF
+Pressure : 1013.6 mBar
+alpha offset : 7 deg

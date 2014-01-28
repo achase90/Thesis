@@ -1,0 +1,5 @@
+Second flight with succesful drag polar. 
+Temperature : 77.4 degF
+Pressure : 1005.8 mBar
+6:13 flight time
+alpha offset : 6 deg

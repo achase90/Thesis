@@ -7,13 +7,21 @@
 \contentsline {table}{\numberline {5.2}{\ignorespaces Monte Carlo Results\relax }}{27}{table.caption.22}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
+\contentsline {table}{\numberline {7.1}{\ignorespaces Clean Drag Polar Repeatability Testing : $C_{D_0}$ Regression Coefficient\relax }}{48}{table.caption.42}
+\contentsline {table}{\numberline {7.2}{\ignorespaces Clean Drag Polar Repeatability Testing : $C_1$ Regression Coefficient\relax }}{48}{table.caption.43}
+\contentsline {table}{\numberline {7.3}{\ignorespaces Clean Drag Polar Repeatability Testing : $C_2$ Regression Coefficient\relax }}{48}{table.caption.44}
+\contentsline {table}{\numberline {7.4}{\ignorespaces Lift Curve Model\relax }}{51}{table.caption.48}
+\contentsline {table}{\numberline {7.5}{\ignorespaces Lift Distribution with $C_1$ From Flight and XFOIL\relax }}{52}{table.caption.50}
+\contentsline {table}{\numberline {7.6}{\ignorespaces Lift Curve Slope with $C_1$ From Flight and XFOIL\relax }}{53}{table.caption.51}
+\contentsline {table}{\numberline {7.7}{\ignorespaces Dirty Drag Polar Repeatability Testing : $C_{D_0}$ Regression Coefficient\relax }}{55}{table.caption.54}
+\contentsline {table}{\numberline {7.8}{\ignorespaces Dirty Drag Polar Repeatability Testing : $C_1$ Regression Coefficient\relax }}{55}{table.caption.55}
+\contentsline {table}{\numberline {7.9}{\ignorespaces Dirty Drag Polar Repeatability Testing : $C_2$ Regression Coefficient\relax }}{55}{table.caption.56}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\addvspace {10\p@ }
-\contentsline {table}{\numberline {A.1}{\ignorespaces Air Data System Setup\relax }}{43}{table.caption.38}
-\contentsline {table}{\numberline {A.2}{\ignorespaces Air Data System Setup\relax }}{44}{table.caption.39}
-\contentsline {table}{\numberline {A.3}{\ignorespaces Available Commands for \texttt {mainScript.ino}\relax }}{49}{table.caption.41}
-\contentsline {table}{\numberline {A.4}{\ignorespaces Available Commands for \texttt {calibration.ino}\relax }}{49}{table.caption.42}
+\contentsline {table}{\numberline {A.1}{\ignorespaces Air Data System Setup\relax }}{59}{table.caption.59}
+\contentsline {table}{\numberline {A.2}{\ignorespaces Air Data System Setup\relax }}{60}{table.caption.60}
+\contentsline {table}{\numberline {A.3}{\ignorespaces Available Commands for \texttt {mainScript.ino}\relax }}{65}{table.caption.62}
+\contentsline {table}{\numberline {A.4}{\ignorespaces Available Commands for \texttt {calibration.ino}\relax }}{65}{table.caption.63}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

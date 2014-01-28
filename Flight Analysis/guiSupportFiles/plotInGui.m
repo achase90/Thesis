@@ -21,11 +21,15 @@ if xIsNumeric && yIsNumeric
                 set(handles.outputText,'string','All data has thrust. Please deselct "Ignore data with thrust" and plot again.')
             end
         end
-        plot(handles.dataAxis,xPlotVar,yPlotVar)
+        if strcmpi(xAxis,'time')
+            plot(handles.dataAxis,xPlotVar,yPlotVar)
+        else
+            scatter(handles.dataAxis,xPlotVar,yPlotVar,25,'.')
+        end
         set(handles.outputText,'String','');
         ylabel(handles.dataAxis,[yAxis ' [' yUnit ']']);
         xlabel(handles.dataAxis,[xAxis ' [' xUnit ']']);
-        set(handles.dataAxis,'YColor',[1 1 1],'XColor',[1 1 1]);
+        box(handles.dataAxis,'on');
     end
 else
     if ~xIsNumeric

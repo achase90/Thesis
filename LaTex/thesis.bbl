@@ -15,6 +15,12 @@ Olivier Clynen.
 \newblock 737 ng winglet effect simplified.
 \newblock Wikipedia, June 2012.
 
+\bibitem{hoernerDrag}
+Sighard~F Hoerner.
+\newblock {\em Fluid-dynamic drag: practical information on aerodynamic drag
+  and hydrodynamic resistance}.
+\newblock Hoerner Fluid Dynamics, 1965.
+
 \bibitem{raymer}
 Daniel~P Raymer et~al.
 \newblock {\em Aircraft design: a conceptual approach}, volume~3.
@@ -29,12 +35,6 @@ Leland~Malcolm Nicolai and Grant Carichner.
 Jan Roskam.
 \newblock {\em Airplane design}.
 \newblock DARcorporation, 1985.
-
-\bibitem{hoernerDrag}
-Sighard~F Hoerner.
-\newblock {\em Fluid-dynamic drag: practical information on aerodynamic drag
-  and hydrodynamic resistance}.
-\newblock Hoerner Fluid Dynamics, 1965.
 
 \bibitem{hoernerLift}
 Sighard~F Hoerner and Henry~V Borst.
@@ -179,5 +179,11 @@ Seung-Min Oh and Eric~N Johnson.
 \newblock Development of uav navigation system based on unscented kalman
   filter.
 \newblock In {\em AIAA Guidance, Navigation and Control Conference}, 2006.
+
+\bibitem{brandt2011propeller}
+John~B Brandt and Michael~S Selig.
+\newblock Propeller performance data at low reynolds numbers.
+\newblock In {\em AIAA Aerospace Sciences Meeting, AIAA 2011}, volume 1255,
+  2011.
 
 \end{thebibliography}

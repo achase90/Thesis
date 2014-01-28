@@ -160,8 +160,7 @@ A digital temperature sensor was combined with the barometric pressure sensor to
 \end{figure}
 
  The DS18B20 from Dallas Semiconductors was chosen for its relatively simple One-Wire interface. The device can be powered with the communication line and has a $\pm$0.5$^\circ$C nominal accuracy\cite{DS18B20Datasheet}.
-
-The differential pressure sensors were calibrated for slope using a Reference Pressure Recorder from Crystal Engineering\cite{pressCalib}. This calibration unit is capable of 0.025\% of reading. The zero offset of each differential pressure sensor was removed before each flight by taking 100 data samples in a no-wind condition. The barometric pressure transducer and the temperature sensor were calibrated for offset using a Paroscientific Model 745 Pressure Standard, capable of $0.008\%$ FSO accuracy\cite{pressureStandard}. \nomenclature{FSO}{Full scale output}
+\nomenclature{FSO}{Full scale output}
 
 %\subsection*{Wind Angle Kalman Filter}
 %To improve the accuracy of the wind angle estimation, a discrete Extended Kalman filter was used. The state transition functions are

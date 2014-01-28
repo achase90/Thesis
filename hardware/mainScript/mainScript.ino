@@ -2,27 +2,27 @@
 //todo:when initializing pressure, write to one and check if we get a response.
 #include <Wire.h>
 #include <ITG3200.h>
-#include <SPI.h>
+#include <SPI.h>cas
 #include <SD.h>
 #include <ADXL362.h>
 #include <OneWire.h>
 #include <DallasTemperature.h>
 
 #define profiling 0
-#define magInstalled 1
+#define magInstalled 0
 #define gpsInstalled 1
 #define pressureInstalled 1
 #define ONE_WIRE_BUS 49
 #define tempInstalled 0
 #define TEMPERATURE_PRECISION 9
 #define hmcAddress 0x1E //0011110b, I2C 7bit address of HMC5883
-#define accelSlaveSelect 52
+#define accelSlaveSelect 50
 
 #define serialBaud 19200
 #define magBaud 19200
 #define gpsBaud 57600
 #define pressBaud 19200
-#define sdChipSelect 53
+#define sdChipSelect 51
 #define pwmPin0 37
 #define pwmPin1 38
 #define pwmPin2 39
@@ -45,7 +45,7 @@ boolean logData=false;
 char pressSN0[13] = "R11L07-20-A4";
 char pressSN1[13] = "R10F30-04-A1";
 char pressSN2[13] = "R11L07-20-A5";
-char pressSN3[13] = "4F15-01-A213";
+char pressSN3[13] = "R13K01-04-A3";
 
 byte writeBuff[2048];
 uint16_t writeBuffLoc=0;
@@ -172,7 +172,7 @@ void setup() {
 	attachInterrupt(pwmPin4,intHandler4,CHANGE);
 	attachInterrupt(pwmPin5,intHandler5,CHANGE);
 	attachInterrupt(pwmPin6,intHandler6,CHANGE);
-	attachInterrupt(pwmPin7,intHandler7,CHANGE);
+	attachInterrupt(pwmPin7,intHandler7,FALLING);
 
 #if (gpsInstalled)
 	//flush any data that has accumulated between turning on the device and starting the main loop.
@@ -999,14 +999,9 @@ void intHandler6()
 
 void intHandler7()
 	{
-	if(digitalRead(pwmPin7))
-		{
-		trig7 = micros();
-		}
-	else
-		{
-		pwm7 = micros()-trig7;
-		}
+                volatile unsigned long time2 = micros();
+		pwm7 = time2-trig7;
+                trig7 = time2;
 	}
 
 // Calculates the checksum for a given string returns as integer

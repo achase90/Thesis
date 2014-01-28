@@ -1,0 +1,4 @@
+3rd flight with drag cone (4" radius, 8" tall)
+Temperature : 72.5 degF
+Pressure : 1012.5 mB
+33.3% humidity

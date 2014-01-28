@@ -1,6 +1,6 @@
 #include <SPI.h>
 #include "ADXL362.h"
-ADXL362 xl;
+ADXL362 xl(50);
 
 void setup() {
 
@@ -14,16 +14,16 @@ void setup() {
  // Serial.println("accelerometer on");
   Serial.println("Place system still, type 'r' when ready");
   calib();
-  //Serial.println("Now change orientation, place system still, type 'r' when ready");
+  Serial.println("Now change orientation, place system still, type 'r' when ready");
   calib();
- // Serial.println("Now change orientation, place system still, type 'r' when ready");
-  calib();
-  //Serial.println("Now change orientation, place system still, type 'r' when ready");
+  Serial.println("Now change orientation, place system still, type 'r' when ready");
   calib();
   //Serial.println("Now change orientation, place system still, type 'r' when ready");
-  calib();
+  //calib();
   //Serial.println("Now change orientation, place system still, type 'r' when ready");
-  calib();
+  //calib();
+  //Serial.println("Now change orientation, place system still, type 'r' when ready");
+  //calib();
   Serial.println("Calibration done.");
 }
 

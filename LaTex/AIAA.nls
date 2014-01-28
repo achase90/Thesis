@@ -12,35 +12,37 @@
 		\nompageref{7}
   \item [{$AR$}]\begingroup Aspect ratio\nomeqref {5.2.1}
 		\nompageref{23}
+  \item [{$C_2$}]\begingroup Drag polar coefficient for $C^2_L$ terms\nomeqref {5.3.0}
+		\nompageref{25}
   \item [{$C_D$}]\begingroup Drag coefficient\nomeqref {5.2.1}
 		\nompageref{23}
   \item [{$C_L$}]\begingroup Lift coefficient\nomeqref {5.2.1}
 		\nompageref{23}
   \item [{$C_{D_0}$}]\begingroup Parasite drag coefficient\nomeqref {5.2.1}
 		\nompageref{23}
-  \item [{$K_2$}]\begingroup Drag polar coefficient for $C^2_L$ terms\nomeqref {5.3.0}
-		\nompageref{25}
   \item [{$P_S$}]\begingroup Static pressure\nomeqref {A.1.0}
-		\nompageref{44}
+		\nompageref{60}
   \item [{BEC}]\begingroup Battery elimination circuit\nomeqref {A.1.0}
-		\nompageref{44}
+		\nompageref{60}
   \item [{CFD}]\begingroup Computational fluid dynamics\nomeqref {1.0.0}
 		\nompageref{1}
   \item [{CG}]\begingroup Center of gravity\nomeqref {A.1.0}
-		\nompageref{43}
+		\nompageref{59}
   \item [{DOF}]\begingroup Degree of freedom\nomeqref {5.0.0}
 		\nompageref{23}
   \item [{e}]\begingroup Wing lift distribution\nomeqref {5.2.1}
 		\nompageref{23}
+  \item [{EFR}]\begingroup Education Flight Range\nomeqref {7.0.0}
+		\nompageref{40}
   \item [{EKF}]\begingroup Extended Kalman filter\nomeqref {3.2.7}
 		\nompageref{17}
   \item [{ESC}]\begingroup Electronic speed controller\nomeqref {A.1.0}
-		\nompageref{44}
+		\nompageref{60}
   \item [{FSO}]\begingroup Full scale output\nomeqref {6.6.0}
 		\nompageref{37}
   \item [{G}]\begingroup Gravity\nomeqref {6.2.0}\nompageref{29}
   \item [{GUI}]\begingroup Graphical user interface\nomeqref {A.4.0}
-		\nompageref{47}
+		\nompageref{63}
   \item [{I$^2$C}]\begingroup Inter-integrated circuit\nomeqref {6.5.0}
 		\nompageref{34}
   \item [{I/O}]\begingroup Input-output\nomeqref {6.1.0}\nompageref{28}
@@ -49,7 +51,7 @@
   \item [{INS}]\begingroup Inertial navigation system\nomeqref {1.0.0}
 		\nompageref{2}
   \item [{LCC}]\begingroup Leadless chip carrier\nomeqref {6.4.0}
-		\nompageref{32}
+		\nompageref{33}
   \item [{LGA}]\begingroup Land grid array\nomeqref {6.2.0}
 		\nompageref{29}
   \item [{LiPo}]\begingroup Lithium polymer\nomeqref {6.1.0}
@@ -67,7 +69,7 @@
   \item [{R/C}]\begingroup Radio-controlled\nomeqref {0.0.0}
 		\nompageref{iv}
   \item [{RMS}]\begingroup Root mean squared\nomeqref {6.4.0}
-		\nompageref{31}
+		\nompageref{32}
   \item [{RPM}]\begingroup Rotations per minute\nomeqref {6.5.0}
 		\nompageref{35}
   \item [{SPI}]\begingroup Serial peripheral interface\nomeqref {6.2.0}

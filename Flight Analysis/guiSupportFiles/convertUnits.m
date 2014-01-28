@@ -7,22 +7,23 @@
 
 % todo: make sure the unit structure is correct. probably need to
 % completely update it
-function [output,adsR] = convertUnits(input)
+function [output,RBAdsAccel,RAdsAccelP] = convertUnits(input)
 %convert all data to doubles
 [input] = dataToDouble(input);
 
 %todo:remove all conversions to double in every file except this one.
 output = input; %copy input structure to output, since it's largely the same
 output.time.data = input.time.data/1e3;
+output.time.units = 'sec';
 
 %% Pressure and temperature
-press0Scale = 5/8191; %todo:calibrate this (5"H20/(2^13-1))
+press0Scale = 10/32768; %todo:calibrate this (10"H20/(2^16))
 press1Scale = press0Scale; %todo:calibrate this
 press2Scale = press0Scale; %todo:calibrate this
 
-scaleBaro = (1100-600)/(8191); %todo:calc this
-baroMeasured = 1000; %todo: add an input box for atmospheric pressure and temperature
-tempMeasured = 70;
+scaleBaro = (1100-600)/(32768); %todo:calc this
+baroMeasured = 1005.8; %todo: add an input box for atmospheric pressure and temperature
+tempMeasured = 77.4;
 
 [PressCalibFile,PressCalibPath] = uigetfile('*.clb','Select pressure calibration file');
 if ischar(PressCalibFile)
@@ -30,28 +31,36 @@ if ischar(PressCalibFile)
     M = dlmread([PressCalibPath PressCalibFile],'\t',2,0);
     
 % calc zero offset
-press0Zero = mean(M(:,1));
-press1Zero = mean(M(:,2));
-press2Zero = mean(M(:,3));
-baroCalib = mean(M(:,4));
-tempCalib = mean(M(:,5));
+press0Zero = mean(M(:,2));
+press1Zero = mean(M(:,3));
+press2Zero = mean(M(:,4));
+baroCalib = mean(M(:,5));
+tempCalib = mean(M(:,6));
 
 % scale and remove zero offset
-output.press0.data = press0Scale*(input.press0.data-press0Zero);
-output.press1.data = press1Scale*(input.press1.data-press1Zero);
-output.press2.data = press2Scale*(input.press2.data-press2Zero);
+output.press0.data = 2.088543423*(press0Scale*(input.press0.data-press0Zero));
+output.press1.data = 2.088543423*(press1Scale*(input.press1.data-press1Zero));
+output.press2.data = 2.088543423*(press2Scale*(input.press2.data-press2Zero));
 %scale barometric pressure then add zero offset to match known initial pressure
-output.press3.data = scaleBaro*(input.press3.data-baroCalib)+baroMeasured; 
+output.press3.data = 2.088543423*(scaleBaro*(input.press3.data-baroCalib)+baroMeasured); 
 %scale temperature then add zero offset to match known initial temperature
 %convert from 1000*degF to degF
-output.temperature.data = input.temperature.data/1000-tempCalib+tempMeasured;
+output.temperature.data = input.temperature.data/100-tempCalib+tempMeasured;
 
 % set noise values
-output.press0.noise = std(M(:,1)-press0Zero);
-output.press1.noise = std(M(:,2)-press1Zero);
-output.press2.noise = std(M(:,3)-press2Zero);
-output.press3.noise = std(M(:,4)-baroCalib);
+output.press0.noise = 2.088543423*(press0Scale*std(M(:,1)-press0Zero));
+output.press1.noise = 2.088543423*(press1Scale*std(M(:,2)-press1Zero));
+outliers = abs(M(:,3))>2*mean(abs(M(:,3))); %remove outliers
+M(outliers,3) = mean(M(~outliers,3));
+output.press2.noise = 2.088543423*(press2Scale*std(M(:,3)-press2Zero));
+output.press3.noise = 2.088543423*(scaleBaro*std(M(:,4)-baroCalib));
 output.temperature.noise = std(M(:,5)-tempCalib);
+% set units
+output.press0.units = 'lb/ft^2';
+output.press1.units = 'lb/ft^2';
+output.press2.units = 'lb/ft^2';
+output.press3.units = 'lb/ft^2';
+output.temperature.units = 'degF';
 else
         warning('No pressure calibration file selected. No calibration will be performed, and noise will be set to zero.');
 output.press0.noise = 0;
@@ -83,9 +92,9 @@ output.accelZ.units = 'ft/s^2';
 %set noise values %todo:what are units? what should they be?
 % can we take each section, after scaling, and take noise as
 % (std(x-mean(x)), which would give units of ft/s/s/
-output.accelX.noise = rmsAccel;
-output.accelY.noise = rmsAccel;
-output.accelZ.noise = rmsAccel;
+output.accelX.noise = rmsAccel*ones(size(output.accelX.data))/3; %assume evenly distributed error
+output.accelY.noise = rmsAccel*ones(size(output.accelY.data))/3;
+output.accelZ.noise = rmsAccel*ones(size(output.accelZ.data))/3;
 
 %apply calibration to alignment data
 accel(:,1) = bitsToFTSS(1)*accelData(:,1)+bitsToFTSS(4);
@@ -97,14 +106,23 @@ accel(:,3) = bitsToFTSS(3)*accelData(:,3)+bitsToFTSS(6);
 accelData = M(:,2:4); %todo:when you get a new data set with a second accel, delete this
 
 [bitsToFTSS] = accelCalib(accelData);
-    
+
 % apply scale and zero offset corrections to air data system accel
 adsAccel(:,1) = bitsToFTSS(1)*accelData(:,1)+bitsToFTSS(4);
 adsAccel(:,2) = bitsToFTSS(2)*accelData(:,2)+bitsToFTSS(5);
 adsAccel(:,3) = bitsToFTSS(3)*accelData(:,3)+bitsToFTSS(6);
 
-%calculate rotation matrix
-[adsR] = alignCalib(accel,adsAccel);
+%calculate rotation matrix from body to adsAccel
+[RBAdsAccel] = alignCalib(accel,adsAccel);
+
+%calculate rotation matrix from adsAccel to block
+data = 0;
+load blockToAdsAccelCalib
+adsAccel2(:,1) = bitsToFTSS(1)*data(:,1)+bitsToFTSS(4);
+adsAccel2(:,2) = bitsToFTSS(2)*data(:,2)+bitsToFTSS(5);
+adsAccel2(:,3) = bitsToFTSS(3)*data(:,3)+bitsToFTSS(6);
+[RAdsAccelP] = alignCalib(adsAccel2,data(:,4:6));
+RAdsAccelP = RAdsAccelP/norm(RAdsAccelP);
 
 % apply scale and zero offset corrections to gyro
 scale = 1/14.375; %todo: calibrate this
@@ -131,6 +149,7 @@ output.gyroX.noise = 0;
 output.gyroY.noise = 0;
 output.gyroZ.noise = 0;
 adsR = eye(3,3);
+RAdsAccelP = eye(3,3);
 end
 
 %% Magnetometers

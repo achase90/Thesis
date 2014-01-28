@@ -28,23 +28,31 @@
 \BOOKMARK [1][]{section.6.7}{6.7 GPS Receiver}{chapter.6}% 28
 \BOOKMARK [1][]{section.6.8}{6.8 Data Acquisition System Integration}{chapter.6}% 29
 \BOOKMARK [0][]{chapter.7}{7 Results}{}% 30
-\BOOKMARK [0][]{chapter.8}{8 Summary}{}% 31
-\BOOKMARK [0][]{chapter.9}{9 Future Work}{}% 32
-\BOOKMARK [0][]{APPENDIX.1.A}{A Data Acquisition System Usage}{}% 33
-\BOOKMARK [1][]{section.1.A.1}{A.1 Integration}{APPENDIX.1.A}% 34
-\BOOKMARK [1][]{section.1.A.2}{A.2 Pre-flight Procedure}{APPENDIX.1.A}% 35
-\BOOKMARK [1][]{section.1.A.3}{A.3 Flight test plan}{APPENDIX.1.A}% 36
-\BOOKMARK [1][]{section.1.A.4}{A.4 Post-Flight}{APPENDIX.1.A}% 37
-\BOOKMARK [1][]{section.1.A.5}{A.5 Embedded Software Protocol}{APPENDIX.1.A}% 38
-\BOOKMARK [0][]{APPENDIX.1.B}{B Wiring Schematics}{}% 39
-\BOOKMARK [0][]{APPENDIX.1.C}{C Flight Test Procedure}{}% 40
-\BOOKMARK [1][]{section.1.C.1}{C.1 Pre-Flight Preparation}{APPENDIX.1.C}% 41
-\BOOKMARK [2][-]{subsection.1.C.1.1}{C.1.1 Day Before Test}{section.1.C.1}% 42
-\BOOKMARK [2][-]{subsection.1.C.1.2}{C.1.2 Day Of Test}{section.1.C.1}% 43
-\BOOKMARK [1][]{section.1.C.2}{C.2 Flying Field Procedure}{APPENDIX.1.C}% 44
-\BOOKMARK [1][]{section.1.C.3}{C.3 Post-Flight}{APPENDIX.1.C}% 45
-\BOOKMARK [0][]{APPENDIX.1.D}{D Sample System Ouput}{}% 46
-\BOOKMARK [1][]{section.1.D.1}{D.1 Sample System Ouput - Raw Data}{APPENDIX.1.D}% 47
-\BOOKMARK [1][]{section.1.D.2}{D.2 Sample System Ouput - Units Data}{APPENDIX.1.D}% 48
-\BOOKMARK [1][]{section.1.D.3}{D.3 Sample System Ouput - State Data}{APPENDIX.1.D}% 49
-\BOOKMARK [1][]{section.1.D.4}{D.4 Sample System Ouput - Filtered Data}{APPENDIX.1.D}% 50
+\BOOKMARK [1][]{section.7.1}{7.1 Drag Polar}{chapter.7}% 31
+\BOOKMARK [2][-]{subsection.7.1.1}{7.1.1 C2 Coefficient}{section.7.1}% 32
+\BOOKMARK [2][-]{subsection.7.1.2}{7.1.2 Drag Break}{section.7.1}% 33
+\BOOKMARK [2][-]{subsection.7.1.3}{7.1.3 Error Estimation}{section.7.1}% 34
+\BOOKMARK [1][]{section.7.2}{7.2 Lift Curve}{chapter.7}% 35
+\BOOKMARK [2][-]{subsection.7.2.1}{7.2.1 CLMAX and Stall}{section.7.2}% 36
+\BOOKMARK [2][-]{subsection.7.2.2}{7.2.2 Lift Curve Slope}{section.7.2}% 37
+\BOOKMARK [2][-]{subsection.7.2.3}{7.2.3 Zero Lift Angle of Attack}{section.7.2}% 38
+\BOOKMARK [1][]{section.7.3}{7.3 System Repeatability}{chapter.7}% 39
+\BOOKMARK [1][]{section.7.4}{7.4 System Accuracy}{chapter.7}% 40
+\BOOKMARK [0][]{chapter.8}{8 Summary}{}% 41
+\BOOKMARK [0][]{APPENDIX.1.A}{A Data Acquisition System Usage}{}% 42
+\BOOKMARK [1][]{section.1.A.1}{A.1 Integration}{APPENDIX.1.A}% 43
+\BOOKMARK [1][]{section.1.A.2}{A.2 Pre-flight Procedure}{APPENDIX.1.A}% 44
+\BOOKMARK [1][]{section.1.A.3}{A.3 Flight test plan}{APPENDIX.1.A}% 45
+\BOOKMARK [1][]{section.1.A.4}{A.4 Post-Flight}{APPENDIX.1.A}% 46
+\BOOKMARK [1][]{section.1.A.5}{A.5 Embedded Software Protocol}{APPENDIX.1.A}% 47
+\BOOKMARK [0][]{APPENDIX.1.B}{B Wiring Schematics}{}% 48
+\BOOKMARK [0][]{APPENDIX.1.C}{C Flight Test Procedure}{}% 49
+\BOOKMARK [1][]{section.1.C.1}{C.1 Pre-Flight Preparation}{APPENDIX.1.C}% 50
+\BOOKMARK [2][-]{subsection.1.C.1.1}{C.1.1 Day Before Test}{section.1.C.1}% 51
+\BOOKMARK [2][-]{subsection.1.C.1.2}{C.1.2 Day Of Test}{section.1.C.1}% 52
+\BOOKMARK [1][]{section.1.C.2}{C.2 Flying Field Procedure}{APPENDIX.1.C}% 53
+\BOOKMARK [1][]{section.1.C.3}{C.3 Post-Flight}{APPENDIX.1.C}% 54
+\BOOKMARK [0][]{APPENDIX.1.D}{D Sample System Ouput}{}% 55
+\BOOKMARK [1][]{section.1.D.1}{D.1 Sample System Ouput - Raw Data}{APPENDIX.1.D}% 56
+\BOOKMARK [1][]{section.1.D.2}{D.2 Sample System Ouput - Units Data}{APPENDIX.1.D}% 57
+\BOOKMARK [1][]{section.1.D.3}{D.3 Sample System Ouput - State Data}{APPENDIX.1.D}% 58

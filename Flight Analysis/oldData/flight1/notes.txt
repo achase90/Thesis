@@ -1,0 +1,4 @@
+This flight was the first succesful flight that produced a drag polar.
+Temperature : 75 degF
+Pressure : 1012.5 mBar
+alpha offset : 6 deg

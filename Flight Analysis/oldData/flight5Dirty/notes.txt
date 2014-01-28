@@ -1,0 +1,5 @@
+First flight (#5) with trailing parasite drag cone, 1/24/2014
+Temperature : 63.4 degF
+Pressure : 1014.8 mBars
+alpha offset : 7 deg
+Cone dimensions : 8" tall, 4" radius base

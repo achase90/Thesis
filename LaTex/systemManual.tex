@@ -1,4 +1,5 @@
 \chapter{Data Acquisition System Usage}
+\label{sect:systemUsage}
 This section documents the steps required for correct usage of the data acquisition system.
 
 \section{Integration}
@@ -60,7 +61,7 @@ The air data boom itself should be integrated as far from aerodynamic effects as
 
 \section{Pre-flight Procedure}
 \label{sect:preFlightProc}
-The pre-flight procedure in this section must be completed in addition to all preparation listed in Section \ref{sect:flightTestDocs}.
+The pre-flight procedure in this section must be completed in addition to all preparation listed in Section \ref{sect:flightTestProc}.
 
 \begin{enumerate}
 \item With the transmitter turned on, power on the receiver.
@@ -144,4 +145,4 @@ Saved to \texttt{MGNTMTRS.clb}.\\\hline
 \label{table:calibComms}
 \end{table}
 
-Note that, like the main script, all commands must be sent with a start character (`\texttt{\#}') and an end character (`\texttt{\&}'.) A proper command to calibrate the air data system alignment would then be \texttt{`\#accelAlign\&'}.
+Note that, like the main script, all commands must be sent with a start character (`\texttt{\#}') and an end character (`\texttt{\&}'.) A proper command to calibrate the air data system alignment would then be \texttt{`\#pressure\&'}.

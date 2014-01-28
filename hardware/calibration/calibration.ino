@@ -8,20 +8,20 @@
 #include <OneWire.h>
 #include <DallasTemperature.h>
 
-#define magInstalled 1
+#define magInstalled 0
 #define pressureInstalled 1
 #define ONE_WIRE_BUS 49
 #define tempInstalled 0
 #define TEMPERATURE_PRECISION 9
 #define hmcAddress 0x1E //0011110b, I2C 7bit address of HMC5883
-#define accelSlaveSelect 52
+#define accelSlaveSelect 50
 #define accelSlaveSelect2 48
 
 
 #define serialBaud 19200
 #define magBaud 19200
 #define pressBaud 19200
-#define sdChipSelect 53
+#define sdChipSelect 51
 
 boolean sdCardClosed = true;
 
@@ -31,7 +31,7 @@ File dataFile;
 char pressSN0[13] = "R11L07-20-A4";
 char pressSN1[13] = "R10F30-04-A1";
 char pressSN2[13] = "R11L07-20-A5";
-char pressSN3[13] = "4F15-01-A213";
+char pressSN3[13] = "R13K01-04-A3";
 
 // set up communication with sensors
 USARTClass &magSerial = Serial1;
@@ -408,8 +408,9 @@ void magMain()
 	while(millis()<now+10000) //read for 10 seconds
 		{
 		//read magnetometer data
+#if (magInstalled)
 		readMagnetometer(magSerial,magReading);
-
+#endif
 		readHMC(hmcReading);
 
 		dataFile.print('\t');
@@ -426,7 +427,7 @@ void magMain()
 		dataFile.print(hmcReading[1]);
 		dataFile.print('\n');
 
-				Serial.print('\t');
+		/*Serial.print('\t');
 		Serial.print(magReading[0]);
 		Serial.print('\t');
 		Serial.print(magReading[1]);
@@ -438,7 +439,7 @@ void magMain()
 		Serial.print(hmcReading[2]); //switching order so it's X Y Z, not X Z Y
 		Serial.print('\t');
 		Serial.print(hmcReading[1]);
-		Serial.print('\n');
+		Serial.print('\n');*/
 
 		}
 	dataFile.close();
@@ -463,12 +464,6 @@ void accelGyroMain()
 	dataFile.print("gyroY");
 	dataFile.print('\t');
 	dataFile.print("gyroZ");
-	dataFile.print('\t');
-	dataFile.print("accelX");
-	dataFile.print('\t');
-	dataFile.print("accelY");
-	dataFile.print('\t');
-	dataFile.print("accelZ");
 	dataFile.print('\n');
 
 	Serial.println("Place the system in an orientation and keep stationary. Type 'r' when ready.");
@@ -502,14 +497,13 @@ void accelGyroRead()
 	{
 	int16_t gyroX, gyroY, gyroZ;
 	int16_t accelX, accelY, accelZ, accelT;
-	int16_t accel2X, accel2Y, accel2Z;
 
 	for(int i=0;i<100;i++)
 		{
 		readAccelData(accelX,accelY,accelZ);
-		readSecondAccelData(accel2X,accel2Y,accel2Z);
+		//readSecondAccelData(accel2X,accel2Y,accel2Z);
 		readGyroData(gyroX,gyroY,gyroZ);
-		}
+
 	dataFile.print('\t');
 	dataFile.print(accelX);
 	dataFile.print('\t');
@@ -522,12 +516,22 @@ void accelGyroRead()
 	dataFile.print(gyroY);
 	dataFile.print('\t');
 	dataFile.print(gyroZ);
-	dataFile.print('\t');
-	dataFile.print(accel2X);
-	dataFile.print('\t');
-	dataFile.print(accel2Y);
-	dataFile.print('\t');
-	dataFile.print(accel2Z);
 	dataFile.print('\n');
+/*
+	Serial.print('\t');
+	Serial.print(accelX);
+	Serial.print('\t');
+	Serial.print(accelY);
+	Serial.print('\t');
+	Serial.print(accelZ);
+	Serial.print('\t');
+	Serial.print(gyroX);
+	Serial.print('\t');
+	Serial.print(gyroY);
+	Serial.print('\t');
+	Serial.print(gyroZ);
+	Serial.print('\n');
+        Serial.println("looped");*/
+		}
 	}
 

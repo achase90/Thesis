@@ -22,7 +22,7 @@ function varargout = fileReader(varargin)
 
 % Edit the above text to modify the response to help fileReader
 
-% Last Modified by GUIDE v2.5 30-Oct-2013 21:21:33
+% Last Modified by GUIDE v2.5 22-Jan-2014 20:55:47
 
 % Begin initialization code - DO NOT EDIT
 gui_Singleton = 1;
@@ -63,6 +63,8 @@ handles.xAxisDefined = false;
 handles.yAxisDefined = false;
 handles.fileName = 0;
 handles.filePath = 0;
+
+% figure('CloseRequestFcn',@closeGui)
 
 guidata(hObject, handles);
 clc
@@ -123,15 +125,15 @@ if ischar(handles.fileName) && ischar(handles.filePath)
     %convert raw data to data with units
     [handles.data.Units,handles.adsR] = convertUnits(handles.data.Raw);
     
-    rpmThreshold = 1100;    
-    %todo:actually fix this so you're not just adding a value to zero
-    handles.hasThrust = handles.data.Units.pwm0.data > rpmThreshold;
-    
+    rpmThreshold = 4000;
+%     handles.hasThrust = handles.data.Units.press3.data > mean(handles.data.Units.press3.data(1:100))-.5; %remove data that is
+%     on the ground
+    handles.hasThrust = handles.data.Units.pwm7.data < rpmThreshold | handles.data.Units.press3.data > mean(handles.data.Units.press3.data(1:100))-.5;
     % units to state
-    [handles.data.State] = unitsToState(handles.data.Units);
+    [handles.data.State] = unitsToState(handles.data.Units,handles.adsR);
     
     %filter data
-    [handles.data.Filtered] = filterData(handles.data.State);
+%     [handles.data.Filtered] = filterData(handles.data.State);
        
     % set the data type options box to whatever we just called those
     % structures
@@ -195,27 +197,31 @@ if ~isfield(handles,'SRef')
 elseif ~isfield(handles,'weight')
     set(handles.outputText,'String','Please define Weight before calculating forces.');
 else
-    plane.W = handles.weight;
-    plane.SRef = handles.SRef;
-    plane.adsR = handles.adsR;
+    handles.plane.W.data = handles.weight;
+    handles.plane.W.noise = .001;
+    handles.plane.SRef = handles.SRef;
+%     plane.adsR = handles.adsR;
+%     plane.RAdsAccelP = handles.RAdsAccelP;
+    
     if strcmpi(type,'filtered')
-        [handles.data.Filtered]=plant(handles.data.Filtered,plane); % only pass filtered data into the plant
+        [handles.data.Filtered]=plant(handles.data.Filtered,handles.plane); % only pass state data into the plant
     set(handles.outputText,'String','Forces calculated. To plot, use drop-down menus.');
 
 handles = updateAxesOptions(handles);
     elseif strcmpi(type,'state')
-        [handles.data.State]=plant(handles.data.State,plane); % only pass filtered data into the plant
+        [handles.data.State]=plant(handles.data.State,handles.plane); % only pass filtered data into the plant
     set(handles.outputText,'String','Forces calculated. To plot, use drop-down menus.');
 handles = updateAxesOptions(handles);
     else
 %todo: the data axes don't seem to be updating when you press this.
-        set(handles.outputText,'String','Setting "Data Type" to filtered and passing data to plant.');
-        set(handles.plotDataType,'Value',4); %todo: when this is up and working,figure out how to query which one is "Filtered" and pass that instead of "4"
-        [handles.data.Filtered]=plant(handles.data.Filtered,plane); % only pass filtered data into the plant
+        set(handles.outputText,'String','Setting "Data Type" to state and passing data to plant.');
+        set(handles.plotDataType,'Value',3); %todo: when this is up and working,figure out how to query which one is "Filtered" and pass that instead of "4"
+        [handles.data.State]=plant(handles.data.State,handles.plane); % only pass state data into the plant
 handles = updateAxesOptions(handles);
-        set(handles.outputText,'String','Setting "Data Type" to filtered and passing data to plant. Forces calculated. To plot, use drop-down menus.');
+        set(handles.outputText,'String','Setting "Data Type" to state and passing data to plant. Forces calculated. To plot, use drop-down menus.');
 
     end
+%     handles.hasThrust = handles.hasThrust | handles.data.State.CL.data<-2 | handles.data.State.CL.data>2;
 end
 % update handles
 guidata(hObject,handles);
@@ -314,3 +320,49 @@ function plotDataType_CreateFcn(hObject, eventdata, handles)
 if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColor'))
     set(hObject,'BackgroundColor','white');
 end
+
+
+% --- Executes on button press in errorBarButton.
+function errorBarButton_Callback(hObject, eventdata, handles)
+% hObject    handle to errorBarButton (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+
+% Hint: get(hObject,'Value') returns toggle state of errorBarButton
+if (get(hObject,'Value'))
+if ~(handles.xAxisDefined)
+set(handles.outputText,'String','Please set X variable to CL first.');
+elseif ~(handles.yAxisDefined)
+    set(handles.outputText,'String','Please set Y variable to CD first.');
+else
+    [xVarName,yVarName] = getAxisNames(handles);
+    if ~strcmpi(xVarName,'CL')
+        set(handles.outputText,'String','Please set X variable to CL first.');
+    elseif ~strcmpi(yVarName,'CD')
+            set(handles.outputText,'String','Please set Y variable to CD first.');
+    else
+        set(handles.outputText,'String','Calculating error bars...');
+        guidata(hObject, handles);
+        %         plotErrorBars(handles)
+        errorBnd = errorProp(handles);
+        [hHoriz,hVert] = errorbar2(handles,errorBnd,hObject,eventdata);
+        % hold off
+        handles.errorBnd = errorBnd;
+        set(handles.outputText,'String','Error bars calculated and plotted.');
+        % set(handles.outputText,'String','Currently not working.');
+    end
+end
+else
+    plotInGui(hObject,eventdata,handles);
+end
+guidata(hObject, handles);
+
+% --- Executes when user attempts to close mainGuiWindow.
+function mainGuiWindow_CloseRequestFcn(hObject, eventdata, handles)
+% hObject    handle to mainGuiWindow (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+
+% Hint: delete(hObject) closes the figure
+assignin('base','handles',handles);
+delete(hObject);

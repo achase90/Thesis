@@ -3,17 +3,20 @@
 %=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 \documentclass[12pt]{ucthesis}
 \usepackage{thesis_preamble}
+\usepackage{cmap}
 \usepackage{verbatim}
 \usepackage{listings}
 \usepackage{float}
 \usepackage{titlesec}
 \usepackage{nomencl}
 \usepackage{multicol}
+\widowpenalty 10000
+\clubpenalty 10000
 
 \title{FLIGHT TESTING SMALL UAVS FOR AERODYNAMIC PARAMETER ESTIMATION}
-\author{Adam Chase}
-\degreemonth{September} \degreeyear{2014} \degree{Master of Science}
-\defensemonth{January} \defenseyear{2014}
+\author{Adam T. Chase}
+\degreemonth{February} \degreeyear{2014} \degree{Master of Science}
+\defensemonth{February} \defenseyear{2014}
 \numberofmembers{4} \chair{Robert McDonald, Ph.D.} \othermemberA{Eric Mehiel, Ph.D.} \othermemberB{Russell Westphal, Ph.D.} \othermemberC{Kurt Colvin, Ph.D.}
 \field{Aerospace Engineering} \campus{San Luis Obispo} \copyrightyears{seven}
 
@@ -81,7 +84,6 @@
 
 
 % ------------- Main chapters here --------------------
-
 \input{intro}
 \input{method}
 \input{regression}
@@ -91,7 +93,7 @@
 %\input{flightTest}
 \input{results}
 \input{summary}
-\input{futureWork}
+%\input{futureWork}
 % ------------- End main chapters ----------------------
 \clearpage
 \begin{appendices}

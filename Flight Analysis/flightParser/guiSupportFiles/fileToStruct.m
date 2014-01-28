@@ -1,0 +1,33 @@
+function [data] = fileToStruct(input)
+headers = {'time' 'accelX' 'accelY' 'accelZ' 'gyroX' 'gyroY' 'gyroZ' ...
+    'magX'   'magY'  'magZ' 'hmcX' 'hmcZ' 'hmcY' 'press0' 'press1' 'press2' 'press3' 'msgid1'...
+    'msgid2' 'msgid3' 'msgid4' 'msgid5' 'utcTime' 'gpsStatus' 'gpsLat' ...
+    'nsInd' 'gpsLong' 'ewInd' 'gpsSpd' 'gpsCrs' 'date'  'gpsMode'     'CS'  ...
+    'temperature'  'pwm0' 'pwm1' 'pwm2' 'pwm3' 'pwm4' 'pwm5' ...
+    'pwm6' 'pwm7' 'deltaT'};
+%todo:these should be right except for scalars (*10000). check if that's
+%right
+units = {'sec' 'bits' 'bits' 'bits' 'bits' 'bits' 'bits' ...
+    'bits'   'bits'  'bits' 'bits' 'bits' 'bits' 'bits' 'bits' 'bits' 'bits' '-'...
+    '-' '-' '-' '-' 'hhmmss.sss' '-' 'deg.mm' ...
+    '-' 'deg.mm' '-' 'KTS' 'deg' 'DDMMYY'  '-'   'bits'  ...
+    'degF'  'usec' 'usec' 'usec' 'usec' 'usec' 'usec' ...
+    'usec' 'usec' 'msec'};
+
+for i=1:length(headers)
+    data.(headers{i})=[];
+    data.(headers{i}).data=[];
+    data.(headers{i}).units=[];
+end
+
+if isstruct(input)
+    for i=1:length(headers)
+        data.(headers{i}) = input(:,i);
+        data.(headers{i}).units = units{i};
+    end
+elseif iscell(input);
+    for i=1:length(headers)
+        data.(headers{i}).data = cell2mat(input(:,i));
+        data.(headers{i}).units = units{i};
+    end
+end

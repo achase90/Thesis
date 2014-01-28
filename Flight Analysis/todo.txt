@@ -1,4 +1,0 @@
-How to separate into times with and without thrust?
-UI to operate Arduino
-write "collect zero offset" routine for Arduino
-dump sd card over serial to computer

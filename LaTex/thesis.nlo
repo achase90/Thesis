@@ -16,23 +16,24 @@
 \nomenclatureentry{a$C_{D_0}$@[{$C_{D_0}$}]\begingroup Parasite drag coefficient\nomeqref {5.2.1}|nompageref}{23}
 \nomenclatureentry{G$\alpha$@[{$\alpha$}]\begingroup Angle of attack\nomeqref {5.2.1}|nompageref}{23}
 \nomenclatureentry{aOLS@[{OLS}]\begingroup Ordinary least squares\nomeqref {5.3.0}|nompageref}{25}
-\nomenclatureentry{a$K_2$@[{$K_2$}]\begingroup Drag polar coefficient for $C^2_L$ terms\nomeqref {5.3.0}|nompageref}{25}
+\nomenclatureentry{a$C_2$@[{$C_2$}]\begingroup Drag polar coefficient for $C^2_L$ terms\nomeqref {5.3.0}|nompageref}{25}
 \nomenclatureentry{aI/O@[{I/O}]\begingroup Input-output\nomeqref {6.1.0}|nompageref}{28}
 \nomenclatureentry{aLiPo@[{LiPo}]\begingroup Lithium polymer\nomeqref {6.1.0}|nompageref}{29}
 \nomenclatureentry{aSPI@[{SPI}]\begingroup Serial peripheral interface\nomeqref {6.2.0}|nompageref}{29}
 \nomenclatureentry{aLGA@[{LGA}]\begingroup Land grid array\nomeqref {6.2.0}|nompageref}{29}
 \nomenclatureentry{aG@[{G}]\begingroup Gravity\nomeqref {6.2.0}|nompageref}{29}
 \nomenclatureentry{aPCB@[{PCB}]\begingroup Printed circuit board\nomeqref {6.2.0}|nompageref}{29}
-\nomenclatureentry{aRMS@[{RMS}]\begingroup Root mean squared\nomeqref {6.4.0}|nompageref}{31}
+\nomenclatureentry{aRMS@[{RMS}]\begingroup Root mean squared\nomeqref {6.4.0}|nompageref}{32}
 \nomenclatureentry{aIC@[{IC}]\begingroup Integrated circuit\nomeqref {6.4.0}|nompageref}{32}
-\nomenclatureentry{aLCC@[{LCC}]\begingroup Leadless chip carrier\nomeqref {6.4.0}|nompageref}{32}
+\nomenclatureentry{aLCC@[{LCC}]\begingroup Leadless chip carrier\nomeqref {6.4.0}|nompageref}{33}
 \nomenclatureentry{aQFN@[{QFN}]\begingroup Quad-flats no-leads\nomeqref {6.5.0}|nompageref}{34}
 \nomenclatureentry{aI$^2$C@[{I$^2$C}]\begingroup Inter-integrated circuit\nomeqref {6.5.0}|nompageref}{34}
 \nomenclatureentry{aRPM@[{RPM}]\begingroup Rotations per minute\nomeqref {6.5.0}|nompageref}{35}
 \nomenclatureentry{aFSO@[{FSO}]\begingroup Full scale output\nomeqref {6.6.0}|nompageref}{37}
 \nomenclatureentry{aPWM@[{PWM}]\begingroup Pulse width modulation\nomeqref {6.8.0}|nompageref}{38}
-\nomenclatureentry{ACG@[{CG}]\begingroup Center of gravity\nomeqref {A.1.0}|nompageref}{43}
-\nomenclatureentry{AESC@[{ESC}]\begingroup Electronic speed controller\nomeqref {A.1.0}|nompageref}{44}
-\nomenclatureentry{ABEC@[{BEC}]\begingroup Battery elimination circuit\nomeqref {A.1.0}|nompageref}{44}
-\nomenclatureentry{A$P_S$@[{$P_S$}]\begingroup Static pressure\nomeqref {A.1.0}|nompageref}{44}
-\nomenclatureentry{AGUI@[{GUI}]\begingroup Graphical user interface\nomeqref {A.4.0}|nompageref}{47}
+\nomenclatureentry{AEFR@[{EFR}]\begingroup Education Flight Range\nomeqref {7.0.0}|nompageref}{40}
+\nomenclatureentry{ACG@[{CG}]\begingroup Center of gravity\nomeqref {A.1.0}|nompageref}{59}
+\nomenclatureentry{AESC@[{ESC}]\begingroup Electronic speed controller\nomeqref {A.1.0}|nompageref}{60}
+\nomenclatureentry{ABEC@[{BEC}]\begingroup Battery elimination circuit\nomeqref {A.1.0}|nompageref}{60}
+\nomenclatureentry{A$P_S$@[{$P_S$}]\begingroup Static pressure\nomeqref {A.1.0}|nompageref}{60}
+\nomenclatureentry{AGUI@[{GUI}]\begingroup Graphical user interface\nomeqref {A.4.0}|nompageref}{63}

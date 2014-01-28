@@ -1,0 +1,5 @@
+Flight 3
+This data produces an anomalous K1 value
+Temperature : 64.9 degF
+Pressure : 1005.7 mBar
+alpha offset : 6 deg
